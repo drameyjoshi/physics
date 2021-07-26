@@ -135,4 +135,5 @@ dmypy.json
 **/*.dvi
 **/*.out
 **/*.swp
+**/*.toc
 

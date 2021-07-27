@@ -26,7 +26,19 @@ their measurements of accelaration will be related as
 where $\vec{a} = \ddot{\vec{r}}, \vec{a}^\prime = \ddot{\vec{r}}$ and $\vec{A}
 = \ddot{\vec{R}}$. If $O$ observes a body moving in a straight line with a
 uniform velocity then $O^\prime$ sees it accelarating. This is the origin of
-pseudo-forces.
+pseudo-forces. Equations \eqref{c1s1e1} are called Galilean transformations
+and they described the Galilean relativity.
+
+Galilean transformation does not explicitly mention that the mass of a body
+does not change across frames of references. It was assumed to be obvious and
+not worth mentioning. Likewise, it was also assumed that the time remains
+unaffected by relative motion. Therefore, we also have
+\begin{eqnarray}
+t^\prime &=& t \label{c1s1e4} \\
+m^\prime &=& m. \label{c1s1e5}
+\end{eqnarray}
+In the next section we will see that Einstein's theory proved that these tacit
+assumptions are untenable.
 
 \subsection{Problem set 1}\label{c1s1s1}
 \begin{enumerate}
@@ -73,34 +85,179 @@ on their accelarations. Newton's laws are valid in all inertial frames of
 reference. As an example, consider two space ships $S$ and $S^\prime$ observing
 the planets. Let $\vec{r}_1$ and $\vec{r}_2$ be their positions with respect
 to $S$. Then, the force between them is
-\begin{equation}\label{c1s1e4}
+\begin{equation}\label{c1s1e6}
 \vec{F} = -\frac{Gm_1m_2}{|\vec{r}_1 - \vec{r}_2|^3}(\vec{r}_1 - \vec{r}_2).
 \end{equation}
 Here $m_1$ and $m_2$ are the masses of the planets at positions $\vec{r}_1$
-and $\vec{r}_2$ with respect to the origin of $S$. The accelaration of mass 
+and $\vec{r}_2$ with respect to the origin of $S$ and $G$ is the universal
+gravitational constant. The accelaration of mass 
 $m_1$ is
-\begin{equation}\label{c1s1e5}
+\begin{equation}\label{c1s1e7}
 \vec{a}_1 = -\frac{Gm_2} {|\vec{r}_1 - \vec{r}_2|^3}(\vec{r}_1 - \vec{r}_2).
 \end{equation}
 Observer $O^\prime$ will express this force as
-\begin{equation}\label{c1s1e6}
+\begin{equation}\label{c1s1e8}
 \vec{F}^\prime = 
 -\frac{Gm_1m_2}{|\vec{r}_1^\prime - \vec{r}_2^\prime|^3}
 (\vec{r}_1^\prime - \vec{r}_2^\prime).
 \end{equation}
 and $m_1$'s acceleration as 
-\begin{equation}\label{c1s1e7}
+\begin{equation}\label{c1s1e9}
 \vec{a}_1^\prime = -\frac{Gm_2} {|\vec{r}_1^\prime - \vec{r}_2^\prime|^3}
 (\vec{r}_1^\prime - \vec{r}_2^\prime).
 \end{equation}
 Equation \eqref{c1s1e1} assures that the right hand sides of equations 
-\eqref{c1s1e4} and \eqref{c1s1e6} are the same. The inertial nature of the
+\eqref{c1s1e6} and \eqref{c1s1e8} are the same. The inertial nature of the
 frames $S$ and $S^\prime$ assures that the left hand sides are also the same.
 The law of motion, Newton's second law, is valid in both frames of reference.
 The governing equation are identical, albeit with different variables.
 
+Continuing with the example of the two planets, if $S^\prime$ was accelarating
+with respect to $S$ then $\vec{a}_1^\prime$ would have been $\vec{a} - \vec{A}$
+and equation \eqref{c1s1e9} would have been
+\begin{equation}\label{c1s1e10}
+\vec{a}_1^\prime = -\frac{Gm_2} {|\vec{r}_1^\prime - \vec{r}_2^\prime|^3}
+(\vec{r}_1^\prime - \vec{r}_2^\prime) + \vec{A}.
+\end{equation}
+The form of this equation is not the same as \eqref{c1s1e7}. 
 
+Laws of physics are expressed in a mathematical form. When we say that Newton's
+laws remain unchanged across inertial frames of reference we mean that their
+mathematical form remains unchanged. The variables in one frame are replaced
+with the variables in another frame but there are no extra or fewer terms. If
+one were to do an experiment in any of these frames one will get identical
+results.
 
+When the laws of physics change, one can devise experiments to observe the 
+change. For instance, in the accelarating frame in which we got \eqref{c1s1e10}
+we can do an experiment whose results will differ from those in the inertial
+frame $S$. The reason for the difference is the additional term on the right
+hand side of \eqref{c1s1e10}.
 
+We will illustrate how Newton's laws are affected in a non-inertial frame
+of reference. We will analyze the circular motion of a person sitting in a 
+merry-go-round. From the viewpoint of an observer $S$ on the ground - an 
+inertial frame of reference - the person in the merry-go-round, $S^\prime$ is 
+accelarating. Therefore, he expects that there is a net force acting on 
+$S^\prime$. He lists the forces on $S^\prime$.
+\begin{enumerate}
+\item $S^\prime$'s weight,
+\item The tension in the rod that bears $S^\prime$'s weight,
+\item The tension in the rod that connects $S^\prime$ to the merry-go-round's
+axis.
+\end{enumerate}
+$S$ concludes that the first two forces balance each other because $S^\prime$
+does not undergo a vertical motion. The third force is responsible for 
+$S^\prime$'s accelaration. He writes Newton's second law as
+\begin{equation}\label{c1s1e11}
+m\frac{v^2}{r} = T,
+\end{equation}
+where $m$ is $S^\prime$'s mass, $v$ is his speed, $r$ is the radius of the
+merry-go-round and $T$ is the tension in the rod that connects $S^\prime$ to
+the merry-go-round's axis.
 
+We can also confirm that Newton's third law is valid in $S$'s frame of 
+reference. For each of three forces on $S^\prime$ enumerated above, $S^\prime$
+also exerts a force of reaction. $S^\prime$ pulls the earth towards him and he
+also pulls the two rods, vertical and horizontal, towards him.
 
+Let us now analyze the same experiment from the non-inertial frame of 
+$S^\prime$. He includes the same forces acting on his body as $S$ and he
+realizes that the net force on him is the horizontal tension $T$. However, he 
+is at rest in his frame of reference. So concludes that Newton's first law has
+failed. That is why, he further concludes, he is in a non-inertial frame of
+reference. Newton's second law also fails because his accelaration is zero
+in spite of a horizontal force acting on him. In order to save Newton's second
+law he introduces a pseudo-force, the centrifugal force, that exactly balances
+the horizontal tension $T$. The horizontal tension pulls him towards the
+merry-go-round's axis and the centrifugal force pushes him away by an equal
+amount, keeping him at rest.
+
+\subsection{Problem set 3}\label{c1s1s3}
+\begin{enumerate}
+\item The introduction of centrifugal force allowed $S^\prime$ to extend
+Newton's second law to his non-inertial frame. Nevertheless, show that Newton's
+third law fails. (Hint: Find all action-reaction pairs.)
+\end{enumerate}
+
+For almost two hundred years, Newton's laws and the two types of frames of 
+reference sufficed to explain all mechanical phenomena. In the later half of
+the nineteenth century, Maxwell unified the fields of electricity and magnetism
+in his theory of classical electrodynamics. He predicted the existence of 
+electromagnetic waves and proposed that light is an electromagnetic wave. A
+wave in three dimensions is the solution of the partial differential equation
+of the form
+\begin{equation}\label{c1s1e12}
+\frac{\partial^2\phi}{\partial x^2} + \frac{\partial^2\phi}{\partial y^2} +
+\frac{\partial^2\phi}{\partial z^2} = 
+\frac{1}{c^2}\frac{\partial^2\phi}{\partial t^2},
+\end{equation}
+where the function $\phi = \phi(x, y, z, t)$ represents the oscillating 
+quantity and $c$ is the speed of the wave. We will now show that the wave
+equation does not retain its form across inertial frames of reference. Consider
+two inertial frames of reference $S$ and $S^\prime$. If $S^\prime$ moves at a
+speed $v$ along the $x$-axis of $S$ then coordinates in the two frames are
+related as
+\begin{eqnarray}
+x^\prime &=& x - vt \label{c1s1e13} \\
+y^\prime &=& y \label{c1s1e14} \\
+z^\prime &=& z \label{c1s1e15} \\
+t^\prime &=& t \label{c1s1e16}
+\end{eqnarray}
+We will show in the next problem set that the wave equation \eqref{c1s1e12}
+does not retain its form under the transformation of \eqref{c1s1e13} to
+\eqref{c1s1e15}. We can, therefore, devise an experiment that detects the
+motion of $S^\prime$.
+
+It was believed that there is a certain frame of reference of the fixed stars
+that is a true inertial frame and all motion can be measured with respect to it.
+The observation that the wave equation does not retain its form across inertial
+frames of reference suggested that we can experimentally detect the motion of
+the frame of reference in which light travels at a speed $c = 2.998 \times 10^8
+$ ms${}^{-1}$.
+
+\subsection{Problem set 4}
+\begin{enumerate}
+\item If equation \eqref{c1s1e16} is replaced by $t^\prime = t + \alpha$, where
+$\alpha$ is a constant, then show that time intervals are remain invariant.
+\item Show that distance between two points remains invariant under the 
+transformation of equations \eqref{c1s1e13} to \eqref{c1s1e16}. (Hint: Choose
+two points $(x_1, y_1, z_1)$ and $(x_2, y_2, z_2)$ in $S$. Find their 
+coordinates $(x_1^\prime, y_1^\prime, z_1^\prime)$ and $(x_2^\prime, 
+y_2^\prime, z_2^\prime)$ in $S^\prime$. Use the standard formula to compute the
+Euclidean distance between the points in the two frames.)
+\item We will now show that the wave equation \eqref{c1s1e12} is not invariant
+under the transformation defined by equations \eqref{c1s1e13} and 
+\eqref{c1s1e16}.
+\begin{enumerate}
+\item In the frame $S^\prime$, $\phi$ is a function of $x^\prime, y^\prime, 
+z^\prime, t^\prime$. Recall the definition of the 
+`differential' of $\phi$,
+\[
+d\phi = \frac{\partial\phi}{\partial x^\prime}dx^\prime + 
+\frac{\partial\phi}{\partial y^\prime}dy^\prime + 
+\frac{\partial\phi}{\partial z^\prime}dz^\prime + 
+\frac{\partial\phi}{\partial t^\prime}dt^\prime 
+\]
+Find
+\[
+\frac{\partial\phi}{\partial x} = \frac{\partial\phi}{\partial x^\prime}
+\frac{\partial x^\prime}{\partial x} + \frac{\partial\phi}{\partial y^\prime}
+\frac{\partial y^\prime}{\partial x} + \frac{\partial\phi}{\partial z^\prime}
+\frac{\partial z^\prime}{\partial x} + \frac{\partial\phi}{\partial t^\prime}
+\frac{\partial t^\prime}{\partial x}
+\]
+Hence find
+\[
+\frac{\partial^2\phi}{\partial {x}^2}.
+\]
+\item Get the expressions for
+\[
+\frac{\partial^2\phi}{\partial {y}^2}, \frac{\partial^2\phi}{\partial {z}^2},
+\frac{\partial^2\phi}{\partial {t}^2}
+\]
+using similar steps.
+\item Substitute the second partial derivatives obtained in the previous two
+steps in the wave equation \eqref{c1s1e12}.
+\end{enumerate}
+\end{enumerate}

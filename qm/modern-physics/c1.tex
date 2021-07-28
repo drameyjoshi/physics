@@ -6,28 +6,28 @@ If the axes of $S$ and $S^\prime$ are parallel to each other but the origin of
 $S^\prime$ is displaced by $\vec{R}$ from the origin of $S$ then a point 
 $\vec{r}$ in $S$ appears as 
 \begin{equation}\label{c1s1e1}
-\vec{r}^\prime = \vec{r} - \vec{R}
+\pvec{r}^\prime = \vec{r} - \vec{R}
 \end{equation}
 in $S^\prime$. The two observers will disagree on the coordinates of a point. 
 However, the disagreement will always be to the extent given in equation \eqref
 {c1s1e1}. If the observer $O$ finds $O^\prime$ moving then their measurements 
 of velocities of other bodies will not match. $O$ will measure $\vec{v} = 
-\dot{\vec{r}}$, $O^\prime$ will measure $\vec{v}^\prime = \dot{\vec{r}}^\prime$
-and the two will be related as
+\dot{\vec{r}}$, $O^\prime$ will measure $\pvec{v}^\prime = 
+\dot{\pvec{r}}^\prime$ and the two will be related as
 \begin{equation}\label{c1s1e2}
-\vec{v}^\prime = \vec{v} - \vec{V},
+\pvec{v}^\prime = \vec{v} - \vec{V},
 \end{equation}
 where $\vec{V} = \dot{\vec{R}}$ is the velocity of $O^\prime$ as measured by
 $O$. Likewise, if $O$ finds that $O^\prime$'s velocity changes with time then
-their measurements of accelaration will be related as
+their measurements of acceleration will be related as
 \begin{equation}\label{c1s1e3}
-\vec{a}^\prime = \vec{a} - \vec{A},
+\pvec{a}^\prime = \vec{a} - \vec{A},
 \end{equation}
-where $\vec{a} = \ddot{\vec{r}}, \vec{a}^\prime = \ddot{\vec{r}}$ and $\vec{A}
-= \ddot{\vec{R}}$. If $O$ observes a body moving in a straight line with a
-uniform velocity then $O^\prime$ sees it accelarating. This is the origin of
-pseudo-forces. Equations \eqref{c1s1e1} are called Galilean transformations
-and they described the Galilean relativity.
+where $\vec{a} = \ddot{\vec{r}}, \pvec{a}^\prime = \ddot{\pvec{r}}^\prime$ 
+and $\vec{A} = \ddot{\vec{R}}$. If $O$ observes a body moving in a straight 
+line with a uniform velocity then $O^\prime$ sees it accelerating. This is the 
+origin of pseudo-forces. Equations \eqref{c1s1e1} are called Galilean 
+transformations and they describe the Galilean relativity.
 
 Galilean transformation does not explicitly mention that the mass of a body
 does not change across frames of references. It was assumed to be obvious and
@@ -37,7 +37,7 @@ unaffected by relative motion. Therefore, we also have
 t^\prime &=& t \label{c1s1e4} \\
 m^\prime &=& m. \label{c1s1e5}
 \end{eqnarray}
-In the next section we will see that Einstein's theory proved that these tacit
+Einstein's theory, described in the next sections, proved that these tacit
 assumptions are untenable.
 
 \subsection{Problem set 1}\label{c1s1s1}
@@ -51,12 +51,15 @@ of the ball's speed if the ball moves (a) in the direction of the train,
 smooth and there is a ball placed on it. The train begins to move. Both Alice
 and Bob observe that the ball rolls in a direction opposite to that of the 
 train. How will Alice and Bob explain the motion of the ball?
+\item A fighter-pilot drops a bomb from an aircraft flying at a uniform speed. 
+How will his co-pilot see it descending? How will an observer on ground see it
+dropping? (Assume that the wind does not affect the motion of the bomb.)
 \end{enumerate}
 
 If the observer $O^\prime$ is moving at a uniform velocity with respect to $O$
-then $\vec{A} = 0$ and $\vec{a}^\prime = \vec{a}$. Therefore, if $O$ observes
+then $\vec{A} = 0$ and $\pvec{a}^\prime = \vec{a}$. Therefore, if $O$ observes
 a body at rest then $O^\prime$ observes it to be moving at a \emph{uniform}
-speed $\vec{v}^\prime = -\vec{V}$.
+velocity $\pvec{v}^\prime = -\vec{V}$.
 
 Newton's first law states that every body continues to be in a state of rest
 or of uniform motion in a straight line unless a force acts on it. A frame of
@@ -67,21 +70,17 @@ frame of reference}.
 \begin{enumerate}
 \item If $S$ is an inertial frame and if $S^\prime$ moves at a uniform velocity
 $\vec{V}$ then show that $S^\prime$ is also an inertial frame of reference.
-\item If you ignore the earth's motion around its axis and around the sun then
-the ground is an inertial frame of reference. An object at rest on the ground
-remains so even if the ground is very smooth. Suppose you are standing on the
-ground and observing a friend on a merry-go-round. You see the friend in a 
-uniform circular motion. Although your friend's speed is constant the direction
-of his motion changes at every moment. He is accelarating. (a) What force 
-causes the accelaration? (b) Your friend feels that he is being pushed out.
-Who is pushing him?
+\item A tractor is attached to three trailers, each of mass $m$. The tractor 
+itself has a mass $M$. The tractors starts to pull its consist with an 
+acceleration $a$. Find the tension in each of the couplings. (A coupling is a 
+device that connects one vehicle to another.)
 \end{enumerate}
 
 If a body does not feel a force in one inertial frame of reference then it
 does not feel it in any other frame of reference moving uniformly with respect
 to the first frame. All inertial frames of reference are equivalent. Observers
 in inertial frames may disagree on position and velocities of bodies but never
-on their accelarations. Newton's laws are valid in all inertial frames of 
+on their accelerations. Newton's laws are valid in all inertial frames of 
 reference. As an example, consider two space ships $S$ and $S^\prime$ observing
 the planets. Let $\vec{r}_1$ and $\vec{r}_2$ be their positions with respect
 to $S$. Then, the force between them is
@@ -90,21 +89,21 @@ to $S$. Then, the force between them is
 \end{equation}
 Here $m_1$ and $m_2$ are the masses of the planets at positions $\vec{r}_1$
 and $\vec{r}_2$ with respect to the origin of $S$ and $G$ is the universal
-gravitational constant. The accelaration of mass 
+gravitational constant. The acceleration of mass 
 $m_1$ is
 \begin{equation}\label{c1s1e7}
 \vec{a}_1 = -\frac{Gm_2} {|\vec{r}_1 - \vec{r}_2|^3}(\vec{r}_1 - \vec{r}_2).
 \end{equation}
 Observer $O^\prime$ will express this force as
 \begin{equation}\label{c1s1e8}
-\vec{F}^\prime = 
--\frac{Gm_1m_2}{|\vec{r}_1^\prime - \vec{r}_2^\prime|^3}
-(\vec{r}_1^\prime - \vec{r}_2^\prime).
+\pvec{F}^\prime = 
+-\frac{Gm_1m_2}{|\pvec{r}_1^\prime - \pvec{r}_2^\prime|^3}
+(\pvec{r}_1^\prime - \pvec{r}_2^\prime).
 \end{equation}
 and $m_1$'s acceleration as 
 \begin{equation}\label{c1s1e9}
-\vec{a}_1^\prime = -\frac{Gm_2} {|\vec{r}_1^\prime - \vec{r}_2^\prime|^3}
-(\vec{r}_1^\prime - \vec{r}_2^\prime).
+\pvec{a}_1^\prime = -\frac{Gm_2} {|\pvec{r}_1^\prime - \pvec{r}_2^\prime|^3}
+(\pvec{r}_1^\prime - \pvec{r}_2^\prime).
 \end{equation}
 Equation \eqref{c1s1e1} assures that the right hand sides of equations 
 \eqref{c1s1e6} and \eqref{c1s1e8} are the same. The inertial nature of the
@@ -112,12 +111,12 @@ frames $S$ and $S^\prime$ assures that the left hand sides are also the same.
 The law of motion, Newton's second law, is valid in both frames of reference.
 The governing equation are identical, albeit with different variables.
 
-Continuing with the example of the two planets, if $S^\prime$ was accelarating
-with respect to $S$ then $\vec{a}_1^\prime$ would have been $\vec{a} - \vec{A}$
+Continuing with the example of the two planets, if $S^\prime$ was accelerating
+with respect to $S$ then $\pvec{a}_1^\prime$ would have been $\vec{a} - \vec{A}$
 and equation \eqref{c1s1e9} would have been
 \begin{equation}\label{c1s1e10}
-\vec{a}_1^\prime = -\frac{Gm_2} {|\vec{r}_1^\prime - \vec{r}_2^\prime|^3}
-(\vec{r}_1^\prime - \vec{r}_2^\prime) + \vec{A}.
+\pvec{a}_1^\prime = -\frac{Gm_2} {|\pvec{r}_1^\prime - \pvec{r}_2^\prime|^3}
+(\pvec{r}_1^\prime - \pvec{r}_2^\prime) + \vec{A}.
 \end{equation}
 The form of this equation is not the same as \eqref{c1s1e7}. 
 
@@ -129,7 +128,7 @@ one were to do an experiment in any of these frames one will get identical
 results.
 
 When the laws of physics change, one can devise experiments to observe the 
-change. For instance, in the accelarating frame in which we got \eqref{c1s1e10}
+change. For instance, in the accelerating frame in which we got \eqref{c1s1e10}
 we can do an experiment whose results will differ from those in the inertial
 frame $S$. The reason for the difference is the additional term on the right
 hand side of \eqref{c1s1e10}.
@@ -138,7 +137,7 @@ We will illustrate how Newton's laws are affected in a non-inertial frame
 of reference. We will analyze the circular motion of a person sitting in a 
 merry-go-round. From the viewpoint of an observer $S$ on the ground - an 
 inertial frame of reference - the person in the merry-go-round, $S^\prime$ is 
-accelarating. Therefore, he expects that there is a net force acting on 
+accelerating. Therefore, he expects that there is a net force acting on 
 $S^\prime$. He lists the forces on $S^\prime$.
 \begin{enumerate}
 \item $S^\prime$'s weight,
@@ -148,7 +147,7 @@ axis.
 \end{enumerate}
 $S$ concludes that the first two forces balance each other because $S^\prime$
 does not undergo a vertical motion. The third force is responsible for 
-$S^\prime$'s accelaration. He writes Newton's second law as
+$S^\prime$'s acceleration. He writes Newton's second law as
 \begin{equation}\label{c1s1e11}
 m\frac{v^2}{r} = T,
 \end{equation}
@@ -166,7 +165,7 @@ $S^\prime$. He includes the same forces acting on his body as $S$ and he
 realizes that the net force on him is the horizontal tension $T$. However, he 
 is at rest in his frame of reference. So concludes that Newton's first law has
 failed. That is why, he further concludes, he is in a non-inertial frame of
-reference. Newton's second law also fails because his accelaration is zero
+reference. Newton's second law also fails because his acceleration is zero
 in spite of a horizontal force acting on him. In order to save Newton's second
 law he introduces a pseudo-force, the centrifugal force, that exactly balances
 the horizontal tension $T$. The horizontal tension pulls him towards the
@@ -179,6 +178,22 @@ amount, keeping him at rest.
 Newton's second law to his non-inertial frame. Nevertheless, show that Newton's
 third law fails. (Hint: Find all action-reaction pairs.)
 \end{enumerate}
+
+Since Newton's laws are valid in all inertial frames of reference we cannot 
+conduct a mechanical experiment in a frame of reference to find out if it is
+at rest or in motion. It was believed that there is a frame of reference, with
+respect to the fixed stars, that is at rest and everything else in the universe
+moves. If there is a space ship floating in the space with its engines turned 
+off and if it is away from the gravitational influence of the stars then it is 
+an example of an inertial frame of reference. But nothing in the world is a true
+inertial frame because nothing is completely isolated from its surroundings. 
+
+We know that the earth goes around the sun and rotates about its axis. Therefore
+it is \emph{not} an inertial frame of reference. One can detect its motion
+using mechanical experiments alone. For example, Focault's pendulum shows the
+accelerated motion of the earth. However, the acceleration is quite small for
+experiments at the laboratory scale and one often approximates the earth to be
+an inertial frame of reference.
 
 For almost two hundred years, Newton's laws and the two types of frames of 
 reference sufficed to explain all mechanical phenomena. In the later half of
@@ -193,11 +208,9 @@ of the form
 \frac{1}{c^2}\frac{\partial^2\phi}{\partial t^2},
 \end{equation}
 where the function $\phi = \phi(x, y, z, t)$ represents the oscillating 
-quantity and $c$ is the speed of the wave. We will now show that the wave
-equation does not retain its form across inertial frames of reference. Consider
-two inertial frames of reference $S$ and $S^\prime$. If $S^\prime$ moves at a
-speed $v$ along the $x$-axis of $S$ then coordinates in the two frames are
-related as
+quantity and $c$ is the speed of the wave. Consider two inertial frames of 
+reference $S$ and $S^\prime$. If $S^\prime$ moves at a speed $v$ along the 
+$x$-axis of $S$ then coordinates in the two frames are related as
 \begin{eqnarray}
 x^\prime &=& x - vt \label{c1s1e13} \\
 y^\prime &=& y \label{c1s1e14} \\
@@ -209,13 +222,18 @@ does not retain its form under the transformation of \eqref{c1s1e13} to
 \eqref{c1s1e15}. We can, therefore, devise an experiment that detects the
 motion of $S^\prime$.
 
-It was believed that there is a certain frame of reference of the fixed stars
-that is a true inertial frame and all motion can be measured with respect to it.
-The observation that the wave equation does not retain its form across inertial
-frames of reference suggested that we can experimentally detect the motion of
-the frame of reference in which light travels at a speed $c = 2.998 \times 10^8
-$ ms${}^{-1}$.
-
+Several ingenious experiments were conducted to detect the earth's motion using
+optical phenomena. None succeeded in its goals. We are, therefore, left with
+two alternatives,
+\begin{enumerate}
+\item Galilean transformations are the correct but Maxwell's electrodynamics is
+not.
+\item Maxwell's electrodynamics is right but Galilean transformations and 
+Newton's need a modification.
+\end{enumerate}
+There was no experimental evidence in support of the first alternative
+\cite{panofsky2005classical}. The second alternative was proposed by Einstein 
+\cite{einstein1905electrodynamics} in 1905.
 \subsection{Problem set 4}
 \begin{enumerate}
 \item If equation \eqref{c1s1e16} is replaced by $t^\prime = t + \alpha$, where
@@ -261,3 +279,150 @@ using similar steps.
 steps in the wave equation \eqref{c1s1e12}.
 \end{enumerate}
 \end{enumerate}
+
+\section{Postulates of the special theory of relativity}\label{c2s2}
+Einstein proposed a new theory of relativity based on the two postulates
+\begin{enumerate}
+\item the laws of physics are the same in all frames of reference and 
+\item the speed of light is the same in all frames of reference.
+\end{enumerate}
+The speed of light is thus a universal constant. The second postulate has a 
+profund impact on our ideas of distances and time intervals. It asserts that
+the speed of a pulse of light starting from a vehicle moving with speed $v$
+and going in same direction as the vehicle is not $c + v$ but $c$. We will now
+show that keeping $c$ constant makes time intervals to expand and lengths to 
+contract.
+
+\subsection{Time dilation}
+To that end we consider a simple clock that has a light source and detector
+at one end of a rigid rod of length $L_0$ and a mirror at the other end. A light
+pulse emitted by the source travels up the length of the rod, gets reflected
+by the mirror and is detected after a time 
+\begin{equation}\label{c1s2e1}
+t_0 = 2L_0/c.
+\end{equation}
+We will now observe the same clock in an inertial frame moving with velocity 
+$\vec{v} = v\hat{i}$.  The clock itself is aligned along the $y$ axis, 
+transverse to the motion.  In this frame, the pulse of light does not take the 
+same path in its onward and return journey. If $t$ is the time taken for it to 
+be detected, then $t/2$ is the time it takes to reach the mirror. However, in 
+that time, the clock has moved a distance $vt/2$. The light pulse, therefore, 
+travels along the hypotenuse of the triangle whose other two sides have lengths $vt/2$ along the horizontal direction and $L_0$ along the vertical one. 
+Therefore, its onward path length is $\sqrt{L_0^2 + v^2t^2/4}$. It is easy to 
+check that the path length of its return journey is also the same. As seen 
+from a frame at rest, the pulse travels a distance $2\sqrt{L_0^2 + v^2t^2/4}$ 
+in time $t$. Therefore,
+\begin{equation}\label{c1s2e2}
+c = \frac{2\sqrt{L_0^2 + v^2t^2/4}}{t}.
+\end{equation}
+Upon rearranging,
+\[
+c^2t^2 = 4L_0^2 + v^2t^2 \Rightarrow \left(1 - \frac{v^2}{c^2}\right)t^2 = 
+\frac{4L_0^2}{c^2}.
+\]
+Using equation \eqref{c1s2e1} we get
+\begin{equation}\label{c1s2e3}
+t = \frac{t_0}{\sqrt{1 - \beta^2}},
+\end{equation}
+where
+\begin{equation}\label{c1s2e4}
+\beta = \frac{v}{c}.
+\end{equation}
+Equation \eqref{c1s2e3} tells that the time taken for a pulse to start from
+one of the clock, get reflected at the other and return depends on the frame 
+of reference. For an observer at rest with respect to the clock the time is 
+$t_0$. An observer who sees the clock in motion measures it as $t$ and the two
+are not equal.
+
+Note that in this derivation we have assumed that the length $L_0$ of the 
+moving clock did not change. We will justify this assumption at the end of the
+next subsection.
+
+\subsection{Length contraction}
+Now suppose that we are given a rod of length $L_0$ as measured in a frame of
+reference in which the rod is at rest. We will find out its length when it is
+moving with a velocity $\vec{v} = v\hat{i}$. Once again we use a pulse of light
+for our measurement. The rod is fitted with a source of light and a detector
+at one end and a mirror at the other end. As seen by an observer at rest,
+if $t_1$ is the time taken by a pulse of light in its onward journey then
+\begin{equation}\label{c1s2e5}
+t_1 = \frac{L + vt_1}{c}.
+\end{equation}
+If $L$ is the length of the rod measured by the observer at rest, then the pulse
+has to travel an additional distance $vt_1$ in its onward journey because the
+mirror moved by that distance. In its reverse journey, however, its has to
+cover a path of length $L - vt_2$ because the detector approached it by the
+distance $vt_2$. Thus,
+\begin{equation}\label{c1s2e6}
+t_2 = \frac{L - vt_2}{c}.
+\end{equation}
+From equations \eqref{c1s1e5} and \eqref{c1s2e6} we get
+\begin{eqnarray*}
+t_1 &=& \frac{L/c}{1 - \beta} \\
+t_2 &=& \frac{L/c}{1 + \beta}
+\end{eqnarray*}
+and the total time 
+\begin{equation}\label{c1s2e7}
+t = t_1 + t_2 = \frac{2L/c}{1 - \beta^2}.
+\end{equation}
+Now $t$ is the time measured by the observer who sees the rod moving. It is 
+related to the time measured by an oberver at rest with respect to the rod by
+equation \eqref{c1s2e3}. We can write \eqref{c1s2e7} in terms of $t_0$ to get
+\begin{equation}\label{c1s2e8}
+t_0 = \frac{2L/c}{\sqrt{1 - \beta^2}}.
+\end{equation}
+In the frame in which the rod is at rest, $t_0 = 2L_0/c$ so that
+\begin{equation}\label{c1s2e9}
+L = L_0\sqrt{1 - \beta^2}.
+\end{equation}
+Since $\beta < 1$, $L < L_0$. Moving bodies appear shorter.
+If $v < c, \beta < 1$ and hence $t > t_0$. Time intervals between events appear
+to be dilated. Events in moving frame appear to be happening at a slower pace. 
+
+We will now show that transverse length is unaffected by motion. Consider an 
+experiment in which two 
+identical rings, $R_1$ and $R_2$, of radius $L_0$ are travelling along their 
+symmetry axis at a speed $v$ in opposite direction. With respect to $R_1$, 
+$R_2$'s has shrunk and it passes through $R_1$ when the come together. The 
+same thing happens from the point of view of $R_2$. From the point of view of 
+an observer at rest, the rings collide. An experiment cannot give different 
+results in different frames of reference. Therefore we rule out the possibility 
+of transverse contraction. The idea of length contraction is a bit subtle as
+Penrose \cite{penrose1959apparent} explained in the case of the observation of
+a moving sphere and Micheal Weiss \cite{weiss1995} explained in an article.
+
+\subsection{Classical Doppler effect}
+We instinctively know whether a vehicle sounding a siren is approaching us or
+receeding from us. The apparent change in the frequency of sound when there is
+a relative motion between the source and receiver of sound is called Doppler
+effect. 
+
+Let a source $S$ of sound emit waves at frequency $\nu_0$ and a detector $D$
+approach it with a uniform velocity $\vec{v}$. If $D$ were still, it would
+see the compressions of the wave pass by with a speed $c_s$. However, because
+it is approaching the source with a velocity $v$, it sees compressions passing
+by with speed $c_s + v$. The wavelength of the wave is seen to be unchanged.
+Therefore, the apparent frequency is
+\[
+\nu = \frac{c_s + v}{\lambda} = \frac{c_s}{\lambda}
+\left(1 + \frac{v}{c_s}\right).
+\]
+Now, $c_s/\lambda - \nu_0$ so that
+\begin{equation}\label{c1s2e10}
+\nu = \nu_0\left(1 + \frac{v}{c_s}\right).
+\end{equation}
+
+Now consider the situation when the detector is stationary but the source
+approaches it with a uniform velocity $\vec{v}$. If $S$ were still the detector
+will notice a compression every $\lambda$ m apart. However, because $S$ is
+approaching $D$ with a speed $v$ the distance is reduced by $v/\nu_0$. The 
+apparent wavelength is
+\[
+\lambda = \lambda_0 - \frac{v}{\nu_0} = \frac{c_s}{\nu_0} - \frac{v}{\nu_0}.
+\]
+Since $\lambda = c_s/\nu$, $\nu$ being the apparent frequency, we have
+\begin{equation}\label{c1s2e11}
+\nu = \frac{\nu_0}{1 - v/c_s}.
+\end{equation}
+
+

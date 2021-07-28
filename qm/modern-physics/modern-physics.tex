@@ -1,16 +1,16 @@
 \documentclass{report}
 \usepackage{amsmath, amsfonts, amssymb, amsthm}
-\usepackage{bm, xcolor}
+\usepackage{bm, xcolor, hyperref}
 
 \numberwithin{equation}{section}
-\renewcommand{\vec}{\bm}
+\newcommand{\pvec}[1]{\vec{#1}\mkern2mu\vphantom{#1}}
+
 \newcommand{\ket}[1]{\left|#1\right\rangle}
 \newcommand{\bra}[1]{\left\langle #1\right|}
 
 \begin{document}
 \tableofcontents
 \include{c1}
-\end{document}
 
 \nocite{*}
 \bibliographystyle{plain}

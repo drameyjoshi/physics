@@ -640,4 +640,149 @@ E = pc
 for photons.
 
 \section{Lorentz transformation}\label{c1s4}
+Equations \eqref{c1s1e1}, \eqref{c1s1e4} and \eqref{c1s1e5} describe the
+relation between the coordinates of events in two frames of reference in the
+classical world of Galilean relativity. In this section we will get similar
+expressions for Einstein's special theory of relativity. The general 
+expressions of such transformations is
+\begin{eqnarray}
+x^\prime &=& f_x(x, y, z, t) \\
+y^\prime &=& f_y(x, y, z, t) \\
+z^\prime &=& f_z(x, y, z, t) \\
+t^\prime &=& f_t(x, y, z, t) 
+\end{eqnarray}
+We want a 1-1 relationship between the coordinates in the two frames. We can
+guarantee that only if we assume that the functions $f_x, f_y, f_z, f_t$ are
+linear. If the $S^\prime$ frame moves with a velocity $\vec{v} = v\hat{i}$ with
+respect to $S$ then we do not expect the $y$ and $z$ coordinates to be affected.
+Therefore, the above set of equations is simplified to
+\begin{eqnarray}
+x^\prime &=& f_x(x, y, z, t) \\
+y^\prime &=& y \\
+z^\prime &=& z \\
+t^\prime &=& f_t(x, y, z, t).
+\end{eqnarray}
+The way there is no preferred frame of reference in the world, there is neither
+a preferred direction. The world is isotropic. Therefore, we do not expect
+$x^\prime$ and $t^\prime$ to depend on $y$ and $z$ when the relative motion is
+along the $x$ axis. As a result, the equations further simplify to
+\begin{eqnarray}
+x^\prime &=& f_x(x, t) \\
+y^\prime &=& y \label{c1s4e10} \\
+z^\prime &=& z \label{c1s4e11} \\
+t^\prime &=& f_t(x, t).
+\end{eqnarray}
+Since $f_x$ is a linear function, it is of the form $a_xx + a_tt$, where $a_x$
+and $a_t$ are constants. We would like them to be dimensionless. So we write
+the linear function as $a_xx - a_tvt = k(x - vt)$. Thus,
+\begin{equation}\label{c1s4e13}
+x^\prime = k(x - vt).
+\end{equation}
+If the equations of physics should be identical in all inertial frames of 
+reference then the inverse relation should be
+\begin{equation}\label{c1s4e14}
+x = k(x^\prime + vt^\prime).
+\end{equation}
+We now use the fact that the velocity of light is the same in both frames of
+reference. That is
+\begin{eqnarray}
+x &=& ct \label{c1s4e15} \\
+x^\prime &=& ct^\prime. \label{c1s4e16}
+\end{eqnarray}
+In order to use these equations we would like and equation analogous to 
+\eqref{c1s4e13} that expresses $t^\prime$ in terms of $x$ and $t$. We can get
+it if we substitute \eqref{c1s4e13} in \eqref{c1s4e14}. Thus,
+\[
+x = k^2x - k^2vt + kvt^\prime
+\]
+or
+\begin{equation}\label{c1s4e17}
+t^\prime = kt + \frac{1 - k^2}{kv}x.
+\end{equation}
+Substitute \eqref{c1s4e13} and \eqref{c1s4e17} into \eqref{c1s4e16} to get
+\begin{equation}\label{c1s4e18}
+kx - kvt = ckt + c\frac{1 - k^2}{kv}x.
+\end{equation}
+Rearranging it,
+\[
+\left(k - c\frac{1 - k^2}{kv}\right)x = kc(1 + \beta)t \Rightarrow
+kc\left(\frac{1}{c} - \frac{1 - k^2}{k^2v}\right)x = kc(1 + \beta)t
+\]
+or
+\[
+x = \frac{1 + \beta}{1/c - (1 - k^2)/(k^2v)}t,
+\]
+where $\beta$ is defined in \eqref{c1s2e4}. Comparing this with equation 
+\eqref{c1s4e15} we get
+\[
+c = \frac{1 + \beta}{1/c - (1 - k^2)/(k^2v)} \Rightarrow
+\frac{1}{c} - \frac{1 - k^2}{k^2v} = \frac{1 + \beta}{c} \Rightarrow
+k^2(1 + \beta) - 1 = k^2\beta(1 + \beta)
+\]
+Continuing further,
+\[
+k^2(1 + \beta)(1 - \beta) = 1
+\]
+or
+\begin{equation}\label{c1s4e19}
+k = \frac{1}{\sqrt{1 - \beta^2}}.
+\end{equation}
+Substituting \eqref{c1s4e19} in \eqref{c1s4e13} and \eqref{c1s4e17} we get
+\begin{eqnarray}
+x^\prime &=& \frac{x - vt}{\sqrt{1 - \beta^2}} \label{c1s4e20} \\
+t^\prime &=& \frac{t - vx/c^2}{\sqrt{1 - \beta^2}}. \label{c1s4e21}
+\end{eqnarray}
+We can write these equations in a more symmetrical form as
+\begin{eqnarray}
+x^\prime &=& \gamma(x - \beta ct) \label{c1s4e22} \\
+ct^\prime &=& \gamma(ct - \beta x) \label{c1s4e23}
+\end{eqnarray}
+where $\gamma$ is defined by equation \eqref{c1s3e3}. These two equations, along
+with \eqref{c1s4e10} and \eqref{c1s4e11} define the transformations between two
+inertial frames of reference in Einstein's relativity. They are called \emph{
+Lorentz transformations}.
+
+\subsection{Problem set}
+\begin{enumerate}
+\item Derive the expressions for length contraction and time dilation using
+Lorentz transformations.
+\item Show that the inverse Lorentz transformations are
+\begin{eqnarray}
+x &=& \gamma(x^\prime + \beta ct^\prime) \label{c1s4e24} \\
+y &=& y^\prime \label{c1s4e25} \\
+z &=& z^\prime \label{c1s4e26} \\
+ct &=& \gamma(ct^\prime + \beta x^\prime) \label{c1s4e27}
+\end{eqnarray}
+\end{enumerate}
+
+Using the inverse Lorentz transformations, we have
+\begin{eqnarray}
+dx &=& \gamma(dx^\prime + \beta cdt^\prime) \label{c1s4e28} \\
+dy &=& dy^\prime \\
+dz &=& dz^\prime \\
+cdt &=& \gamma(cdt^\prime + \beta dx^\prime) \label{c1s4e29}
+\end{eqnarray}
+If a particle moves with a velocity
+\[
+\vec{u} = \frac{dx}{dt}\hat{i} + \frac{dy}{dt}\hat{j} + \frac{dz}{dt}\hat{k}
+\]
+then we want to find out how it transforms itself to the $S^\prime$ frame of 
+reference where
+\[
+\pvec{u}^\prime = \frac{dx^\prime}{dt^\prime}\hat{i} + 
+\frac{dy^\prime}{dt^\prime}\hat{j} + \frac{dz^\prime}{dt^\prime}\hat{k}
+\]
+From equations \eqref{c1s4e28} and \eqref{c1s4e29},
+\begin{equation}\label{c1s4e30}
+u_x = \frac{dx}{dt} = \frac{\beta c^2 + cu_x^\prime}{c + \beta u_x^\prime}
+= \frac{v + u_x^\prime}{1 + (vu_x^\prime)/c^2}.
+\end{equation} 
+Similarly,
+\begin{equation}\label{c1s4e31}
+u_y=\frac{dy}{dt} = \frac{u_y^\prime \sqrt{1 - \beta^2}}{1 + (vu_x^\prime)/c^2}
+\end{equation}
+and
+\begin{equation}\label{c1s4e32}
+u_z=\frac{dz}{dt} = \frac{u_z^\prime \sqrt{1 - \beta^2}}{1 + (vu_x^\prime)/c^2}.
+\end{equation}
 

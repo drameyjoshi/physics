@@ -1,0 +1,117 @@
+\chapter{Particle properties of waves}\label{c2}
+A particle is a material body whose dimensions are insignificant in comparison
+with the typical dimensions of its motion. A pebble can be considered to be a
+particle when one considers its projectile motion but not so when one considers
+its rotation. At a more extreme level, the earth is treated like a particle when
+one studies it as a part of solar system but not when we study ocean currents.
+A wave, on the other hand, is a periodic disturbance. In the case of material
+waves the disturbance is felt in properties of the materials. For example, the
+passage of a sound waves leads to periodic compressions and rarefactions in the
+material. They are detected as changes in the pressure in the case of fluids and
+internal stresses in the case of solids. Electromagnetic waves do not need 
+materials for their propagation and their passage is manifested in the periodic
+variations in electric and magnetic field intensities at a point. Although this
+distinction between particles and waves seems quite natural it is not so when 
+one observes nature beyond the human senses. Newton considered light to be
+particulate and it took more than two centuries to suspect that it is probably
+a wave. The interference experiments of Young could be explained only by 
+treating light as a wave. Maxwell predicted the existence of electromagnetic
+waves and Hertz confirmed their existence. Maxwell also derived the speed of
+electromagnetic waves and it was the same as the speed of light. As a result,
+light was suspected to be an electromagnetic wave and was indeed shown to be so.
+However, at the turn of the century other experiments were conducted whose 
+outcome could not be explained by assuming that light is a wave. We shall 
+consider a few of them in this chapter.
+
+\section{Black body radiation}\label{c2s1}
+Material bodies absorb and emit electromagnetic radiation. When they are in
+thermal equilibrium the net absorbtion of radiation matches the net emission.
+Most bodies do not absorb all radiation. They reflect or transmit it. Further,
+their absorption depends on the angle of incidence. A black body is the one 
+that absorbs all radiation irrespective of its wavelength and angle of 
+incidence. If a blackbody is at thermal equilibrium then it should emit the
+energy it absorbs. The emitted energy is called \emph{black body radiation}.
+An approximately black body is a large cavity enclosed in an opaque material 
+and with a small hole for radiation to get in. It is only an approximation 
+because waves with wavelength greater than the hole's diameter will be 
+partially reflected. Further, a finite size cavity cannot hold radiation of all
+wavelengths.
+
+Since a black body absorbs radiation of all wavelengths it also emits radiation
+of all wavelengths. If $U_\lambda$ is the amount of energy in the form of 
+radiation of wavelength $\lambda$ and if $V$ is it volume then 
+\begin{equation}\label{c2s1e1}
+u_\lambda = \frac{U_\lambda}{V}
+\end{equation}
+is called the `spectral energy density'. The black body radiation experiment
+consists in plotting $u_\lambda$ against $\lambda$. The results of the 
+experiment are shown in figure \ref{c2f1}. 
+\begin{figure}
+\includegraphics[scale=0.5]{Black_body}
+\caption{Blackbody radiation. By Darth Kule - Own work, Public Domain, 
+https://commons.wikimedia.org/w/index.php?curid=10555337}
+\label{c2f1}
+\end{figure}
+
+The plot shows that as temperature
+rises the dominant wavelength decreases. It agrees with the observation that
+hot bodies successively appear redish to bluish to white as their temperature
+increases. Lord Rayleigh and Sir James Jeans first tried to understand the
+black body spectrum assuming that radiation is in the form of electromagnetic
+waves. Radiation is trapped inside a black body in the form of standing waves.
+If we the black body is in the form a cube of length $L$ then radiation of 
+wavelength $\lambda$ will stay as a standing wave only if an integral number of
+half wavelengths are accommodated in the extent $L$. If $n_x, n_y, n_z$ are the
+number of half-wavelengths along the $x, y, z$ axes then
+\begin{eqnarray}
+n_x &=& \frac{L}{\lambda/2} = \frac{2L}{\lambda} \\
+n_y &=& \frac{2L}{\lambda} \\
+n_z &=& \frac{2L}{\lambda}
+\end{eqnarray}
+For a standing wave to form in an arbitrary direction we must have
+\begin{equation}\label{c2s1e5}
+n^2 = n_x^2 + n_y^2 + n_z^2 = \left(\frac{2L}{\lambda}\right)^2.
+\end{equation}
+In this equation we no longer require $n_x, n_y, n_z$ to be integers.
+The number of waves with wavelengths between $\lambda$ and $\lambda + d\lambda$
+is the number of points with positive coordinates $n_x, n_y, n_z$ in the region
+between the first octant of the spheres with radii $n$ and $n + dn$. This number
+is proportional to the volume of the region,
+\[
+\frac{1}{8} \times 4\pi n^2dn.
+\]
+Since there are two polarisations for each mode, the number of standing waves is
+\begin{equation}\label{c2s1e6}
+G(n)dn = \pi n^2 dn.
+\end{equation}
+From equation \eqref{c2s1e5} we have
+\begin{equation}\label{c2s1e7}
+n = \frac{2L}{\lambda} = \frac{2L}{c}\nu
+\end{equation}
+so that equation \eqref{c2s1e6} becomes
+\begin{equation}\label{c2s1e8}
+G(\nu)d\nu = \pi \cdot \frac{8L^3}{c^3}\nu^2d\nu.
+\end{equation}
+If $g(\nu)$ is the number of waves per unit volume, also called the density of
+`states', then
+\begin{equation}\label{c2e1e9}
+g(\nu)d\nu = \frac{8\pi}{c^3}\nu^2 d\nu.
+\end{equation}
+Finally, in order to get the energy density, Rayleigh and Jeans used the 
+classical equipartition theorem that allocates an energy of $kT/2$ to each
+degree of freedom. In the case of a single standing wave, there are two degrees
+of freedom and hence the energy density is
+\begin{equation}\label{c2e1e10}
+u(\nu)d\nu = \frac{8\pi kT}{c^3}\nu^2 d\nu.
+\end{equation}
+One can as well express the energy density $u$ as a function of wavelength and
+write
+\begin{equation}\label{c2e1e11}
+u(\lambda)d\lambda = \frac{8\pi kT}{\lambda^2}d\lambda.
+\end{equation}
+The experimentally observed energy density spectrum of a black body does not
+follow these equations. In particular, when $\lambda \rightarrow 0$, or 
+equivalently, $\nu \rightarrow \infty$, $u$ blows up. This feature of the 
+function $u$ defined in \eqref{c2e1e10} and \eqref{c2e1e11} is called the
+`ultraviolet catastrophe' and it was one of the first evidences to indicate 
+that certain experiments cannot be explained by classical physics.

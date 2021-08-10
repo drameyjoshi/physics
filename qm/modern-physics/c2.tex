@@ -100,13 +100,18 @@ g(\nu)d\nu = \frac{8\pi}{c^3}\nu^2 d\nu.
 Finally, in order to get the energy density, Rayleigh and Jeans used the 
 classical equipartition theorem that allocates an energy of $kT/2$ to each
 degree of freedom. In the case of a single standing wave, there are two degrees
-of freedom and hence the energy density is
+of freedom so that the energy of each mode is
 \begin{equation}\label{c2e1e10}
+U = kT,
+\end{equation}
+where $k = 1.38 \time 10^{-23}$ JK${}^{-1}$ is the Boltzmann constant and $T$
+is the absolute temperature. The energy density is, therefore,
+\begin{equation}\label{c2e1e11}
 u(\nu)d\nu = \frac{8\pi kT}{c^3}\nu^2 d\nu.
 \end{equation}
 One can as well express the energy density $u$ as a function of wavelength and
 write
-\begin{equation}\label{c2e1e11}
+\begin{equation}\label{c2e1e12}
 u(\lambda)d\lambda = \frac{8\pi kT}{\lambda^2}d\lambda.
 \end{equation}
 The experimentally observed energy density spectrum of a black body does not
@@ -115,3 +120,21 @@ equivalently, $\nu \rightarrow \infty$, $u$ blows up. This feature of the
 function $u$ defined in \eqref{c2e1e10} and \eqref{c2e1e11} is called the
 `ultraviolet catastrophe' and it was one of the first evidences to indicate 
 that certain experiments cannot be explained by classical physics.
+
+Max Planck's correction to this formula lay in replacing the energy given by
+equation \eqref{c2e1e10} with
+\begin{equation}\label{c2e1e13}
+U = \frac{h\nu}{\exp(\frac{h\nu}{kT}) - 1}
+\end{equation}
+where $h = 6.626 \times 10^{-34}$ Js is a universal constant, now called the
+Planck's constant. The expression for energy density becomes
+\begin{equation}\label{c2e1e14}
+u(\nu)d\nu = \frac{8\pi h\nu^3}{c^3}\frac{d\nu}{\exp(\frac{h\nu}{kT}) - 1}.
+\end{equation}
+This is Planck's formula for black body radiation spectrum. 
+
+\subsection{Planck's expression for $U$}
+There are many ways to derive Planck's expression in equation \eqref{c2e1e13}
+for the energy of radiation. We will follow the one used originally by Planck
+\cite{planck1901law}.
+

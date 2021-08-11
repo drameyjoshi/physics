@@ -94,41 +94,41 @@ G(\nu)d\nu = \pi \cdot \frac{8L^3}{c^3}\nu^2d\nu.
 \end{equation}
 If $g(\nu)$ is the number of waves per unit volume, also called the density of
 `states', then
-\begin{equation}\label{c2e1e9}
+\begin{equation}\label{c2s1e9}
 g(\nu)d\nu = \frac{8\pi}{c^3}\nu^2 d\nu.
 \end{equation}
 Finally, in order to get the energy density, Rayleigh and Jeans used the 
 classical equipartition theorem that allocates an energy of $kT/2$ to each
 degree of freedom. In the case of a single standing wave, there are two degrees
 of freedom so that the energy of each mode is
-\begin{equation}\label{c2e1e10}
+\begin{equation}\label{c2s1e10}
 U = kT,
 \end{equation}
 where $k = 1.38 \time 10^{-23}$ JK${}^{-1}$ is the Boltzmann constant and $T$
 is the absolute temperature. The energy density is, therefore,
-\begin{equation}\label{c2e1e11}
+\begin{equation}\label{c2s1e11}
 u(\nu)d\nu = \frac{8\pi kT}{c^3}\nu^2 d\nu.
 \end{equation}
 One can as well express the energy density $u$ as a function of wavelength and
 write
-\begin{equation}\label{c2e1e12}
+\begin{equation}\label{c2s1e12}
 u(\lambda)d\lambda = \frac{8\pi kT}{\lambda^2}d\lambda.
 \end{equation}
 The experimentally observed energy density spectrum of a black body does not
 follow these equations. In particular, when $\lambda \rightarrow 0$, or 
 equivalently, $\nu \rightarrow \infty$, $u$ blows up. This feature of the 
-function $u$ defined in \eqref{c2e1e10} and \eqref{c2e1e11} is called the
+function $u$ defined in \eqref{c2s1e10} and \eqref{c2s1e11} is called the
 `ultraviolet catastrophe' and it was one of the first evidences to indicate 
 that certain experiments cannot be explained by classical physics.
 
 Max Planck's correction to this formula lay in replacing the energy given by
 equation \eqref{c2e1e10} with
-\begin{equation}\label{c2e1e13}
+\begin{equation}\label{c2s1e13}
 U = \frac{h\nu}{\exp(\frac{h\nu}{kT}) - 1}
 \end{equation}
 where $h = 6.626 \times 10^{-34}$ Js is a universal constant, now called the
 Planck's constant. The expression for energy density becomes
-\begin{equation}\label{c2e1e14}
+\begin{equation}\label{c2s1e14}
 u(\nu)d\nu = \frac{8\pi h\nu^3}{c^3}\frac{d\nu}{\exp(\frac{h\nu}{kT}) - 1}.
 \end{equation}
 This is Planck's formula for black body radiation spectrum. 
@@ -136,5 +136,84 @@ This is Planck's formula for black body radiation spectrum.
 \subsection{Planck's expression for $U$}
 There are many ways to derive Planck's expression in equation \eqref{c2e1e13}
 for the energy of radiation. We will follow the one used originally by Planck
-\cite{planck1901law}.
+\cite{planck1901law}. It assumes
+\begin{enumerate}
+\item The relation between entropy $S$ and internal energy $U$
+\begin{equation}\label{c2s1e15}
+\left(\frac{\partial S}{\partial U}\right)_{V, N} = \frac{1}{T}.
+\end{equation}
+Here $T$ us the (absolute) temperature and $N$ is the number of particles.
+\item The relation between entropy and the number of states in which a system
+can be. If $\Omega$ is the number of states then
+\begin{equation}\label{c2s1e16}
+S = k\log\Omega
+\end{equation}
+where $k$ is another universal Boltzmann constant.
+\item Electromagnetic energy is transferred in the units of $h\nu$, where $\nu$
+is the frequency of the radiation and $h$ is a universal constant, now named 
+after Planck.
+\end{enumerate}
+Of these assumptions, the first one is a result in thermodynamics, known since 
+the 1850s. The second one was proposed by Ludwig Boltzmann in the 1870s when he
+laid the foundations of statistical mechanics while the last one was Planck's 
+contribution for which he was to receive a Nobel prize in Physics in 1918.
 
+Let the black body cavity have an energy $U_0$ at the frequency $\nu$. If there 
+are $N$ modes of radiation, we want to find out the number of ways in which we 
+can  distribute the energy $U$ among them. The third assumption listed above 
+tells  that the energy $U$ is available as $P=U_0/(h\nu)$ packets, called quanta. 
+Therefore, the problem of distribution of energy $U_0$ among the radiation modes
+is the same as counting the number of ways in which $P$ quanta can be 
+distributed among $N$ modes. This is an easy combinatorial problem whose 
+solution is
+\begin{equation}\label{c2s1e17}
+\Omega = \frac{(P + N - 1)!}{P!(N - 1)!}.
+\end{equation}
+Usually, the number $N$ is so large that $(N - 1)! \approx N!$ so that we can
+as well write \eqref{c2s1e17} as
+\begin{equation}\label{c2e1e18}
+\Omega = \frac{(P + N)!}{P!N!}.
+\end{equation}
+so that
+\[
+\log\Omega = \log[(P + N)!] - \log P! - \log N!.
+\]
+When $n$ is large, we can approximate $\log n! \approx n\log n$ (this is called
+Stirling's approximation. It is quite accurate even for $n = 10$) to get
+\[
+\log\Omega = (P + N)\log(P + N) - P\log P - N\log N
+\]
+so that the entropy of the electromagnetic radiation is
+\begin{eqnarray*}
+S &=& k\log\Omega \\
+  &=& kN\left\{\left(1 + \frac{P}{N}\right)\log(P + N) - \frac{P}{N}
+      \log P - \log N\right\} \\
+ &=& kN\left\{\left(1 + \frac{P}{N}\right)\log(P+N) - \frac{P}{N}
+     \left(\log\frac{P}{N} + \log N\right) - \log N\right\} \\
+ &=& kN\left\{\left(1 + \frac{P}{N}\right)\left(\log(P+N)-\log N\right)
+     - \frac{P}{N}\log\frac{P}{N}\right\} \\
+ &=& kN\left\{\left(1 + \frac{P}{N}\right)\log\left(1+\frac{P}{N}\right)
+     - \frac{P}{N}\log\frac{P}{N}\right\}
+\end{eqnarray*}
+Since $P$ was defined as $U_0/(h\nu)$, we can write
+\[
+\frac{U_0}{Nh\nu} = \frac{U}{h\nu}
+\]
+where
+\begin{equation}\label{c2s1e19}
+U = \frac{U_0}{N}
+\end{equation}
+is the average energy per mode. We now have
+\begin{equation}\label{c2s1e20}
+S = kN\left\{\left(1 + \frac{U}{h\nu}\right)\log\left(1+\frac{U}{h\nu}\right)
+     - \frac{U}{h\nu}\log\frac{U}{h\nu}\right\}.
+\end{equation}     
+From equations \eqref{c2s1e15} and \eqref{c2s1e19} one can readily show that
+\begin{equation}\label{c2s1e21}
+\frac{1}{T} = \frac{k}{h\nu}\left(1 + \frac{h\nu}{U}\right).
+\end{equation}
+This equation can be rearranged to get
+\begin{equation}\label{c2s1e22}
+U = \frac{h\nu}{\exp\left(\frac{h\nu}{kT}\right) - 1}
+\end{equation}
+which is identical with \eqref{c2s1e13}.

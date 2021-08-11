@@ -217,3 +217,70 @@ This equation can be rearranged to get
 U = \frac{h\nu}{\exp\left(\frac{h\nu}{kT}\right) - 1}
 \end{equation}
 which is identical with \eqref{c2s1e13}.
+
+\subsection{Additional notes on Planck's derivation}
+Planck deduced the relation $E = h\nu$ first on the basis of thermodynamic
+arguments (section 2 of \cite{planck1901law}). Later on (sixth lecture in 
+\cite{planck2012eight}) he gave an explanation using the mathematical 
+properties of electromagnetic radiation. Chang \cite{chang2017physical} gives 
+an account of Planck's theory in modern terms.
+
+Entropy is usually introduced as a quantity measuring the disorder in a system.
+The molecules of a vapour have more freedom of movement than the molecules of a
+liquid. As a result we say the vapour has more entropy than a liquid. What could
+entropy mean in the case of radiation? Radiation is characterised by frequency 
+(or wavelength), phase and amplitude. The entropy of radiation consists in 
+random fluctuations of phase and amplitude.
+
+Although Planck introduced the idea of a quantum of energy he did not consider it
+as seriously as others like Einstein, Ehrenfest and Lorentz (preface of 
+\cite{planck2012eight}). In the remaining sections we will see how the idea 
+turned out to have a profound and far-reaching impact on physics.
+
+\subsection{Problem set 1}
+\begin{enumerate}
+\item Physics is an experimental science. We should supplement the theoretical
+development of black body radiation spectrum of \eqref{c2s1e14} with an 
+understanding of how it is measured. Refer to 
+\url{https://physicsopenlab.org/2015/12/04/black-body-emission/} for one way to
+measure the spectrum.
+\item When the voltage drops an incandescent bulb gives a reddish glow. When the
+voltage reaches its normal level the bulb glows bright. Can you explain the 
+change in appearance based on your understanding of \eqref{c2s1e14}?
+\item It is safer to use a touchless thermometer when a large number of people
+have to be examined. Can you design a touchless thermometer using 
+\eqref{c2s1e14}?
+\item Consider the function
+\begin{equation}\label{c2e1e23}
+B(\nu, T) = \frac{2h\nu^3}{c^2}\frac{1}{\exp\left(\frac{h\nu}{kT}\right) - 1}.
+\end{equation}
+Show that it reaches an extremum at a frequency $\nu_0$ such that
+\begin{equation}\label{c2e1e24}
+3 + \left(\frac{h\nu_0}{kT} - 3\right)\exp\left(\frac{h\nu_0}{kT}\right) = 0.
+\end{equation}
+If you measure the radiation spectrum of a body using the procedure outlined
+in the first problem and read the frequency $\nu_0$ at which the spectral energy 
+density peaks then you can use equation \eqref{c2e1e24} to determine the 
+temperature.
+\item If 
+\begin{equation}\label{c2e1e25}
+x = \frac{h\nu_0}{kT}
+\end{equation}
+then equation \eqref{c2e1e24} can be written as $3 + (x - 3)e^x = 0$. You can
+solve this equation using Newton's method to get $x \approx 2.821440$. Thus,
+the relation between temperature of the black body and its peak frequency is
+\begin{equation}\label{c2s1e26}
+\frac{h\nu_0}{kT} \approx 2.821440.
+\end{equation}
+Using equation \eqref{c2s1e26} find the peak frequency when you measure the
+radiation spectrum of
+\begin{enumerate}
+\item Sun whose surface temperature is approximately $6000$ K?
+\item human body with temperature of $310$K? (Do you now see the usefulness
+of infrared cameras?)
+\end{enumerate}
+On the other hand the peak frequency of the outer space is around $160$ GHz.
+What is the space's temperature? (The ambient radiation in the outer space 
+is called the cosmic microwave background. Can you relate it to the relativistic
+Doppler effect you studied in the previous chapter?)
+\end{enumerate}

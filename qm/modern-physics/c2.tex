@@ -284,3 +284,104 @@ What is the space's temperature? (The ambient radiation in the outer space
 is called the cosmic microwave background. Can you relate it to the relativistic
 Doppler effect you studied in the previous chapter?)
 \end{enumerate}
+
+\section{Photoelectric effect and X-ray generation}\label{c2s2}
+When light of suitable frequency is shone on a clean metal surface, the metal
+emits electrons. This is called the photoelectric effect. Experiments reported
+that
+\begin{itemize}
+\item The electrons are emitted only if the light exceeds a certain frequency
+, called the threshold frequency, which is characteristic of the metal.
+\item As long as the light exceeds the threshold frequency the energy of the 
+emitted electrons increases with frequency.
+\item The number of electrons emitted is proportional to the intensity of light
+if its frequency exceeds the threshold. If its frequency is below the threshold
+the increasing intensity of light does not result in emission of electrons.
+\item There is no lag between turning on the light and the emission of electrons.
+\end{itemize}
+
+None of these observations could be satisfactorily explained if one assumes that
+light is a classical electromagnetic wave. A classical wave can transfer energy
+to an electron in a continuous manner so that eventually the electron has enough
+energy to free itself from the metal and escape.
+
+Einstein used Planck's idea of an energy quantum to explain the experimental 
+facts mentioned above (see section 8 of \cite{einstein1905heuristic}). He 
+proposed that an electron in a metal has to overcome a certain energy barrier,
+called the `work function' $\phi$ of the metal, before it can escape it. The
+minimum frequency that a photon must have for it to eject an electron is
+\begin{equation}\label{c2s2e1}
+h\nu_0 = \phi.
+\end{equation}
+If a photon has a frequency $\nu > \nu_0$ then the energy $h\nu - \phi =
+h(\nu - \nu_0)$ beyond the metal's work function is transferred to the
+electron as its kinetic energy.
+
+\subsection{Problem set 2}
+\begin{enumerate}
+\item The (first) ionization energy of an atom is the energy needed to remove
+an electron from its outermost shell. Caesium atom has an ionization energy of
+$3.9$ eV. However the work function of Caesium metal is only $1.9$ eV. Why are
+the two different? Why is the work function lower than the ionization energy?
+\item Visible light's frequency ranges from $400$ to $800$ THz. If you want 
+to build a device to detect visible light using photoelectric effect, which 
+metals would you use? You can consult the Wikipedia for values of work function
+(\url{https://en.wikipedia.org/wiki/Work_function#Work_functions_of_elements})
+of common metals. Which metals can you use to detect red light? Which ones will
+suffice if you are interested only in blue and violet?
+\item You have probably studied thermionic emission in the context of vacuum
+tube diode. In thermionic emission electrons are ejected from a metal surface
+by heating the metal. Will the thermionic work function be different from the
+photoelectric work function?
+\end{enumerate}
+
+In photoelectric effect, a photon transfers its energy to an electron giving it
+enough energy to escape from a metal. The inverse process in which a fast moving
+electron is stopped by a solid releasing its energy as photons is also possible.
+A sharp deceleration of an electron gives rise to `bremsstrahlung', the German
+word for radiation as a result of stopping (applying brakes) a charged particle.
+Figure \ref{c2f1} shows the X-ray spectrum of Rhodium metal downloaded from
+Wikipedia (\url{https://commons.wikimedia.org/wiki/File:TubeSpectrum.jpg#/media/
+File:TubeSpectrum.jpg}).The $x$-axis has the wavelength of X-rays in picometre
+($1$ pm = $10^{-12}$ m) while the $y$-axis has a quantity proportional to the
+intensity of the radiation. It is observed that the spectrum is largely smooth
+except for two sharp peaks and that it abruptly drops at a certain minimum
+wavelength. The smooth part of the spectrum is due to bremsstrahlung while the
+sharp peaks are because of transition of electrons in Rhodium atoms from higher 
+energy levels to lower ones. We will understand these transitions better when we
+study atomic structure in greater details in the chapters to follow.
+\begin{figure}
+\includegraphics[scale=0.5]{Tubespectrum}
+\caption{X-ray spectrum of Rh downloaded from Wikipedia}\label{c2f2}
+\end{figure}
+
+\subsection{Problem set 3}
+\begin{enumerate}
+\item Figure \ref{c2f2} shows that there are no X-rays detected with a 
+wavelength lesser than a certain cut-off. What does the cut-off depend on? Is 
+it a characteristic of the metal or the fast moving electrons?
+\item The cut-off wavelength is approximately $20$ pm. Can you estimate the 
+energy of the fast moving electrons?
+\item How will the cut-off wavelength change when you use faster electrons?
+\item When an electron is accelerated from rest by a potential difference 
+$V$ then it acquires an energy $eV$, where $e$ is the charge on the electron.
+Suppose that this electron loses all its energy when it hits the metal in the
+form of a single photon of frequency $\nu_0$. Show that
+\begin{equation}\label{c2s2e2}
+\nu_0 = \frac{eV}{h}.
+\end{equation}
+Show that the corresponding wavelength is
+\begin{equation}\label{c2s2e3}
+\lambda_0 = \frac{hc}{eV}.
+\end{equation}
+The quantities $h, c$ and $e$ on the right hand side of \eqref{c2s2e3} are 
+universal constants. Use their values in SI units to derive
+\begin{equation}\label{c2s2e4}
+\lambda_0 = \frac{1.2398 \times 10^{-6}}{V}.
+\end{equation}
+Equation \eqref{c2s2e4} is called Duane-Hunt law. It was derived from empirical
+data before the theory of X-ray production was understood.
+
+Does \eqref{c2s2e4} help you answer the previous two questions better?
+\end{enumerate}
+

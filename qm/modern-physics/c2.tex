@@ -526,3 +526,333 @@ subtle and how physicists sometime get it wrong, refer to Willis Lamb's article
 acoustic counterpart of photons, which we will study the specific heat of 
 solids.
 
+\section{de Broglie waves}\label{c2s4}
+Experimental evidence forced Max Planck, Albert Einstein and Arthur Compton to
+propose and accept that idea that electromagnetic waves show particle-like
+properties. The proposal was tortuous and the acceptance reluctant. If
+waves can behave like particle, might particles behave like waves? There was
+no experimental evidence to suspect this possibility in 1924 when the French
+physicist Louis de Broglie proposed it. It was firmly in the realm of 
+speculation. However within a matter of three years the speculation was put to
+rest by an experiment that demonstrated that electrons do get diffracted. In
+this section, we will review de Broglie's ideas and describe the experiments
+that proved them right.
+
+We learnt in chapter \ref{c1} that photons of energy $E = h\nu$ have a momentum
+\begin{equation}\label{c2s4e1}
+p = \frac{E}{c} = \frac{h\nu}{c} = \frac{h}{\lambda}.
+\end{equation}
+de Broglie proposed that a particle with momentum $p$ has a wavelength
+\begin{equation}\label{c2s4e2}
+\lambda = \frac{h}{p}.
+\end{equation}
+Let us understand the profound implications of this mathematically innocuous
+rearrangement of the terms of equation \eqref{c2s4e1}. We know that the momentum
+of a particle of mass $m$ moving with a velocity $\vec{v}$ is
+\begin{equation}\label{c2s4e3}
+\vec{p} = \gamma m\vec{v},
+\end{equation}
+where 
+\begin{eqnarray*}
+\gamma &=& \frac{1}{\sqrt{1 - \beta^2}} \\
+\vec{\beta} &=& \frac{\vec{v}}{c} 
+\end{eqnarray*}
+Therefore, the wavelength of the particle is
+\begin{equation}\label{c2s4e4}
+\lambda = \frac{h}{\gamma mv}.
+\end{equation}
+The energy of a body is $E = \gamma mc^2$. Therefore, its frequency is
+\begin{equation}\label{c2s4e5}
+\nu = \frac{E}{h} = \frac{\gamma mc^2}{h}
+\end{equation}
+and the velocity of its wave is
+\begin{equation}\label{c2s4e6}
+v_p = \nu\lambda = \frac{\gamma mc^2}{h}\frac{h}{\gamma mv} = \frac{c^2}{v}.
+\end{equation}
+We learnt in chapter \ref{c1} that material bodies always travel slower than
+light. That is $v < c$. As a result, from equation \eqref{c2s4e6}, it is
+evident that
+\begin{equation}\label{c2s4e7}
+v_p > c.
+\end{equation}
+The theory of relativity proposed that no information can travel faster than
+light. So what kind of information is contained in a wave whose speed is given
+by \eqref{c2s4e6}? To understand that, we need a brief interlude to refresh
+our ideas about waves.
+
+\subsection{The equation of a wave}
+Any wave can be expressed with the equation
+\begin{equation}\label{c2s4e8}
+y = A\cos\left(2\pi\left(\frac{x}{\lambda} - \nu t\right)\right).
+\end{equation}
+The wave travels along the positive $x$ axis causing a displacement along the
+$y$ axis. Its crest, or trough, or any other point with a fixed phase, travels
+at a speed $v_p = \nu\lambda$. The subscript $p$ emphasizes that this is the
+velocity of a point of a fixed phase. It is called the phase velocity. We saw
+in equation \eqref{c2s4e7} that the phase velocity of de Broglie waves is
+greater than the speed of light. Is there something else associated with a 
+wave whose velocity matches the velocity of the particle?
+
+To do that, we introduce the angular frequency
+\begin{equation}\label{c2s4e9}
+\omega = 2\pi\nu
+\end{equation}
+and the wave number
+\begin{equation}\label{c2s4e10}
+k = \frac{2\pi}{\lambda}
+\end{equation}
+to rewrite the equation of wave motion as
+\begin{equation}\label{c2s4e11} 
+y = A\cos(kx - \omega t)
+\end{equation}
+so that the phase velocity can also be written as
+\begin{equation}\label{c2s4e12}
+v_p = \frac{\omega}{k}.
+\end{equation}
+
+Now consider a superposition of two waves
+\begin{eqnarray}
+y_1 &=& A\cos(kx - \omega t) \label{c2s4e13} \\ 
+y_2 &=& A\cos((k + \delta k)x - (\omega + \delta\omega)t). \label{c2s4e14}
+\end{eqnarray}
+The net displacement of any point on the $x$ axis is
+\begin{equation}\label{c2s4e15}
+y = y_1 + y_2 = A\left[\cos(kx-\omega t) + 
+  \cos((k + \delta k)x - (\omega + \delta\omega)t)\right].
+\end{equation}
+Using standard trignometric identities, one can write the above equation as
+\begin{equation}\label{c2s4e16}
+y = 2A\cos\left[\left(k+\frac{\delta k}{2}\right)x - \left(\omega + 
+\frac{\delta\omega}{2}\right)t\right]\cos\left(\frac{\delta k}{2}x - 
+\frac{\delta\omega}{2} t\right).
+\end{equation}
+Now assume that $\delta k \ll k$ and $\delta\omega \ll \omega$ so that $k + 
+\delta k/2 \approx k$ and $\omega + \delta\omega/2 \approx \omega$ and hence
+\begin{equation}\label{c2s4e17}
+y = 2A\cos\left(\frac{\delta k}{2}x - \frac{\delta\omega}{2}t\right)
+    \cos(kx - \omega t)
+\end{equation}
+The superposition of the two waves \eqref{c2s4e13} and \eqref{c2s4e14} is thus
+another wave with its amplitude modulated by the first cosine factor in
+\eqref{c2s4e17}. The velocity of the modulation is
+\begin{equation}\label{c2s4e18}
+v_g = \frac{\delta\omega}{\delta k},
+\end{equation}
+which in the limit $\delta k \rightarrow 0, \delta\omega \rightarrow 0$ becomes
+\begin{equation}\label{c2s4e19}
+v_g = \frac{d\omega}{dk}.
+\end{equation}
+$v_g$ is called the group velocity of thewave $y$.
+
+\subsection{Group velocity of de Broglie waves}
+From equation \eqref{c2s4e4}
+\begin{equation}\label{c2s4e20}
+k = \frac{2\pi}{\lambda} = \frac{2\pi}{h}\gamma mv
+\end{equation}
+so that
+\begin{equation}\label{c2s4e21}
+\frac{dk}{dv} = \frac{2\pi}{h}\frac{m}{(1 - \beta^2)^{3/2}}.
+\end{equation}
+Likewise, from \eqref{c2s4e5}
+\begin{equation}\label{c2s4e22}
+\omega = 2\pi\nu = \frac{2\pi}{h}\gamma mc^2
+\end{equation}
+so that
+\begin{equation}\label{c2s4e23}
+\frac{d\omega}{dv} = \frac{2\pi}{h}\frac{mv}{(1 - \beta^2)^{3/2}}.
+\end{equation}
+From equations \eqref{c2s4e23} and \eqref{c2s4e21} we readily get
+\begin{equation}\label{c2s4e24}
+v_g = \frac{d\omega}{dk} = \frac{d\omega/dv}{dk/dv} = v.
+\end{equation}
+It is not the phase velocity but the group velocity of the de Broglie waves
+that is physically significant. In fact, the group velocity is \emph{the}
+velocity of the particle.
+
+\subsection{Problem set 5}
+\begin{enumerate}
+\item Waves for which $\omega$ and $k$ have are proportional are called
+non-dispersive waves. Show that for non-dispersive waves the group velocity is
+identical with the phase velocity.
+\item Are electromagnetic waves in vacuum dispersive or non-dispersive?
+\item Derive equations \eqref{c2s4e21} and \eqref{c2s4e23}.
+\item Mention the word `wave' and most people think of waves on water. Waves
+in fluids are some of the most complicated waves one can come across. Read 
+the article \url{https://en.wikipedia.org/wiki/Dispersion_(water_waves)} for a
+glimpse of their complexity and an understanding of what dispersion means.
+\item The equation
+\begin{equation}\label{c2s4e25}
+y = A\cos(kx + \omega t)
+\end{equation}
+also represents a wave. What is the difference between the waves represented
+by \eqref{c2s4e25} and \eqref{c2s4e8}?
+\end{enumerate}
+
+\section{Davisson-Germer experiment}\label{c2s5}
+`Light travels in a straight line' is what everyone learns first in optics. If
+this were strictly true then all objects would cast a sharp shadow. If you hold
+your hand in front of a light source and observe its shadow on a wall you will
+observe that there is a central dark shadow of your palm is surrounded by a 
+less darker outline of the palm. It happens because light rays bend as they go
+past your palm. This phenomenon in which waves past a sharp edge bend is called
+diffraction. Diffraction is a characteristic of waves.
+
+Diffraction happens when light is made to pass through one or more narrow slits.
+A grating is an optical instrument with a very large number of slits. It is
+made by etching corrugations on a glass plate. Any regular, periodic arrangement
+of a transparent material is a grating. 
+
+Visible light is diffracted by grating made of glass. Electromagnetic waves of
+much shorter wavelengths like X-rays need gratings whose `slits' are far more
+closely etched. It is hard to manufacture such grating but nature provides an
+alternative in the form of crystals. When X-rays are shone on a crystal the
+diffracted rays form a series of intensity peaks which depend on the geometry
+and symmetry of the crystal. Observing a diffraction pattern of X-rays is not
+surprising. Davisson and Germer observed a diffraction pattern when they
+replaced X-rays with electrons giving the first evidence in support of de
+Broglie's speculation that particles have wave-like features.
+
+Electrons being charged particles interact strongly with the crystals. As a 
+result they undergo significant accelaration in the crystal. A change in their
+momentum is accompanied with a change in their wavelength. It makes an analysis
+of electron diffraction rather challenging. In modern times neutrons are used
+in the place of electrons. They are neutral and do not interact with the crystal
+as much as electrons do. They too result in a diffraction pattern further
+corroborating de Broglie's hypothesis.
+
+\subsection{Problem set 6}
+\begin{enumerate}
+\item The molecular weight of N$_2$ gas is $28$ g per mole. That is, $N_A$ 
+number of N$_2$ molecules weigh $28$ g, where $N_A$ is the Avogadro number.
+\begin{enumerate}
+\item Find the mass of one N$_2$ molecule.
+\item The root mean square speed of a gas molecule of mass $m$ at temperature
+$T$ is
+\begin{equation}
+u = \sqrt{\frac{3kT}{m}}.
+\end{equation}
+Find the root mean square of a Nitrogen molecule at $300$ K. Hence compute its
+mometum.
+\item What is the de Broglie wavelength of the Nitrogen molecule? Compare it 
+with the typical mean free path which is of the order of $10^{-6}$ m.
+\end{enumerate}
+
+\item A typical cricket ball weighs $160$ g and typical fast bowler gives it a
+speed of $130$ kmph. What is the ball's de Broglie wavelength after it 
+leaves the bowler.
+\end{enumerate}
+
+\section{Towards uncertainty relation}\label{c2s6}
+We understand what waves are physically. Water waves are undulations on the
+surface of water, sound waves are a succession of rarefactions and compressions
+in air, electromagnetic waves are fluctuations of electric and magnetic fields
+at a point. What are electrons waves? What undulates when an electron wave 
+passes by?
+
+Electron waves, or de Broglie waves in general, are represented mathematically
+by a wave function $\psi$. It is a function of position $\vec{r}$ and time $t$.
+In general, $\psi$ is a complex valued function. That is, for a given $\vec{r}$
+and $t$, $\psi(\vec{r}, t)$ is a complex number. The quantity $|\psi|^2 = \psi
+\psi^\ast$ is a real quantity. It is proportional to the probability of finding
+a particle at a point $\vec{r}$ and time $t$. This statement is not accurate
+because the probability of finding a particle exactly at $\vec{r}$ and exactly
+at time $t$ is always zero. The correct interpretation of $\psi^2$ is that
+it is the probability of finding the particle in a small volume $dV$ around
+$\vec{r}$ between times $t$ and $t + dt$. 
+
+de Broglie waves are thus waves of a function $\psi$ whose squared modulus has
+is the probability density function of finding the particle in a neighbourhood
+of a point and in an interval of time.
+
+A probabilistic interpretation of $|\psi|^2$ indicates that there is never a 
+certainty of finding a particle in a small enough region around a point 
+$\vec{r}$. The standard deviation of $|\psi|^2$ at $\vec{r}$ is a measure of
+uncertainty of finding the particle in the neighbourhood. If we restrict 
+ourselves to one dimension, that is if $\psi$ is function of $x$ and $t$ then
+the uncertainty of finding a particle in the neighbourhood of a point $x_0$ is
+denoted by $\Delta x$. 
+
+Armed with this understanding of $\psi$ let us consider a wave whose wavelength
+is known precisely. If $\lambda$ is known then so is $k = 2\pi/\lambda$. Such
+a wave looks like the one in figure \ref{c2f3}. Its squared modulus is shown in
+figure \ref{c2f4}. How can one tell where the particle is? It seems like the
+particle can be just about anywhere where $|\psi|^2$ is not close to zero. The
+uncertainty of finding it is fairly large.
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.5]{one-wave}
+\caption{A wave with precise $k$.}\label{c2f3}
+\includegraphics[scale=0.5]{one-wave-sq}
+\caption{Squared modulus of a wave with precise $k$.}\label{c2f4}
+\end{center}
+\end{figure}
+Figures \ref{c2f5} and \ref{c2f6} show a plots for a wave formed by 
+superposition of two sinusoidal waves. Now we do not know the precise $k$, for 
+we have mixed two of them, but we get a slightly improved localisation of the
+particle.
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.5]{two-waves}
+\caption{Superposition of two cosine waves.}\label{c2f5}
+\includegraphics[scale=0.5]{two-waves-sq}
+\caption{Squared modulus of superposition of waves.}\label{c2f6}
+\end{center}
+\end{figure}
+
+If we repeat the exercise by mixing ten sinusoidal waves, we get the pair of
+images \ref{c2f7} and \ref{c2f8}. We observe a much better knowledge of the
+particle's position at the cost of losing information of $k$. We can now say
+with a great confidence that the particle is likely to be in a small 
+neighbourhood of the origin. 
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.5]{ten-waves}
+\caption{Superposition of ten cosine waves.}\label{c2f7}
+\includegraphics[scale=0.5]{ten-waves-sq}
+\caption{Squared modulus of superposition of ten waves.}\label{c2f8}
+\end{center}
+\end{figure}
+
+These pictures indicate that there is always a trade-off in knowing $k$ and
+knowing $x$. If you think this is just the mathematical property of sinusoids
+you are absolutely correct. It is indeed a mathematical property that
+\begin{equation}\label{c2s6e1}
+\Delta x \Delta k \ge \frac{1}{2}.
+\end{equation}
+Physics connects momentum with $k$ through the equation
+\begin{equation}\label{c2s6e2}
+p = \frac{h}{\lambda} = \frac{h}{2\pi}k
+\end{equation}
+so that we can write equation \eqref{c2s6e1} as
+\begin{equation}\label{c2s6e3}
+\Delta x \Delta p \ge \frac{h}{4\pi}.
+\end{equation}
+This is the celebrated `Heisenberg uncertainty relation'. It tells us that
+we cannot \emph{simultaneously} know the position and momentum of a particle.
+We illustrate the uncertainty relation by considering a particle in one 
+dimension. As a result, its position and momentum had just one component. 
+However, in general, a particle will have three position components $(x, y, z)$
+and three momentum components $(p_x, p_y, p_z)$. The complete set of uncertainty
+relations is
+\begin{eqnarray}
+\Delta x \Delta p_x &\ge& \frac{h}{4\pi} \label{c2s6e4} \\
+\Delta y \Delta p_y &\ge& \frac{h}{4\pi} \label{c2s6e5} \\
+\Delta z \Delta p_z &\ge& \frac{h}{4\pi}. \label{c2s6e6}
+\end{eqnarray}
+However,
+\begin{eqnarray}
+\Delta x \Delta p_y &=& 0 \label{c2s6e7} \\
+\Delta x \Delta p_z &=& 0 \label{c2s6e8} \\
+\Delta y \Delta p_x &=& 0 \label{c2s6e9} \\
+\Delta y \Delta p_z &=& 0 \label{c2s6e10} \\
+\Delta z \Delta p_x &=& 0 \label{c2s6e11} \\
+\Delta z \Delta p_y &=& 0 \label{c2s6e12}
+\end{eqnarray}
+Equations \eqref{c2s6e7} to \eqref{c2s6e12} guarantee that one can measure the
+$x$ component of a particle and $p_y$ or $p_z$ components of its momentum with
+arbitrary precision. Why is $\Delta x \Delta p_x \ge h/(4\pi)$ but $\Delta x
+\Delta p_y = 0$? This question cannot be answered informally using the pictures
+of superposed waves and their square modulii. The answer will be partly clear
+when we study quantum mechanics later in this course.
+
+

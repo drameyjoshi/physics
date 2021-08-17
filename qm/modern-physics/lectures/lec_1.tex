@@ -2,6 +2,9 @@
 \usefonttheme[onlymath]{serif}
 \usepackage{graphicx}
 \usetheme{Boadilla}
+
+\newcommand{\pvec}[1]{\vec{#1}\mkern2mu\vphantom{#1}}
+
 \title{Quantum Physics - dance of the atoms}
 \author{Amey Joshi}
 \date{\today}
@@ -138,11 +141,104 @@ Can you explain what you see using Newton's laws?
 \frametitle{Frame of reference}
 \begin{enumerate}
 \item Newton's first law is surely not valid when the train decelerates.
-\item How about Newton's second law? 
-\item How about the third law?
-\item So you see that Newton's framework requires an inertial frame of 
-reference. There are other ways to look at classical mechanics where frames of
-reference are not as important. But let's stick to Newton's laws.
+\item How about Newton's second law? The third law?
+\item So you see that Newton's framework does not work in non-inertial frames
+of reference.
+\item Does it work in an inertial frame of reference? Can we look a simple
+example, say a simple pendulum or a mass suspended from the ceiling with an
+ideal spring? 
+\item If you are in an enclosed railway carriage, you can determine if you are
+accelarating by conducting a simple mechanical experiment in the carriage 
+\emph{without having to peep outside}. Focault detected the earth's rotation 
+sitting in Paris in 1851.
+\item But you cannot detect uniform motion by conducting a mechanical 
+experiment.
 \end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Relative motion}
+When you are riding a bus, vehicles moving in the same direction appear
+to move slower, while going in the opposite direction seem to move much faster.
+Why? Consider two frames of reference - one fixed on the ground and the other
+travelling with you. Let $O$ and $O^\prime$ be their origins. At any instant of
+time, your position with respect to $O$ is given by $\vec{R}(t)$. If 
+$\vec{r}(t)$ is the position of any other vehicle with respect to $O$, it is
+\begin{equation}\label{e1}
+\pvec{r}^\prime(t) = \vec{r}(t) - \vec{R}(t).
+\end{equation}
+This is the relative position. The relative velocity is
+\begin{equation}\label{e2}
+\pvec{v}^\prime(t) = \vec{v}(t) - \vec{V}(t).
+\end{equation}
+$\vec{V}$ is your velocity with respect to the ground and $\vec{v}$ is the other
+vehicle's. Can you now explain why vehicles approaching you seem to be moving
+faster?
+\end{frame}
+
+\begin{frame}
+\frametitle{Relative accelaration}
+Differentiating \eqref{e2}, we get the relative accelaration as
+\begin{equation}\label{e3}
+\pvec{a}^\prime(t) = \vec{a}(t) - \vec{A}(t).
+\end{equation}
+If you're moving with a uniform velocity $\vec{A} = 0$ and $\vec{F} = m\vec{a}
+= m\pvec{a}^\prime$, unless $\vec{F}$ and $m$ are different when measured in 
+the two frames. In the 17th century people did not know of forces that changed
+across inertial frames of reference. Neither did they imagine that mass could
+vary. Things changed in the next 200 years. Physicists discovered
+\begin{itemize}
+\item Sound waves,
+\item Electricity
+\end{itemize}
+both of which hinted that laws of physics are perhaps not staying the same
+across inertial frames of reference.
+\end{frame}
+
+\begin{frame}
+\frametitle{Back to inertial frames}
+\begin{itemize}
+\item Go back to the `closed railway carriage'. Suppose you hear the sound of 
+a siren. Can you now tell if you are moving or stationary?
+\item Suppose you are in a space ship floating in the outer space. The sky looks
+the same all across. If you measure the speed of light from one of the stars. 
+Can you now detect your motion? (The light is permitted to get in from a small
+aperture, you don't peep out!)
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Why the obsession with frames of reference?}
+We have to study the world as it is. We cannot always control the experiments -
+we cannot stop the planets or make an electron stand still. We want to apply
+the laws of physics to objects in arbitrary motion. But to do that, we must 
+know 
+\begin{itemize}
+\item if the laws of physics remain the same or
+\item if they don't in what way we should change them. Recall how we introduced
+`pseudo-forces' to save Newton's second law.
+\item how to measurements change across frames of reference. 
+\end{itemize}
+A theory which answers these questions is a theory of relativity.
+\end{frame}
+
+\begin{frame}
+\frametitle{Galileo's theory of relativity}
+\begin{itemize}
+\item Newton's laws remain the same across all inertial frames of reference.
+\item Quantities between two inertial frames are related as
+\begin{eqnarray}
+\pvec{r}^\prime &=& \vec{r} - \vec{R} \label{4} \\
+\pvec{v}^\prime &=& \vec{v} - \vec{V} \label{5} \\
+\pvec{a}^\prime &=& \vec{a}           \label{6} 
+\end{eqnarray}
+It was understood that 
+\begin{eqnarray}
+m^\prime &=& m \label{e7} \\
+t^\prime &=& t \label{e8}
+\end{eqnarray}
+\item Einstein's theory showed that the last two equations are not correct. 
+That was the first shock to the classical world.
+\end{itemize}
 \end{frame}
 \end{document}

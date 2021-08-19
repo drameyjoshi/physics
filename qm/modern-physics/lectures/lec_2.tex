@@ -22,17 +22,58 @@ of it was the existence of electromagnetic waves which could travel at the
 speed of $3 \times 10^8$ ms${}^{-1}$ in vacuum. Hertz demonstrated the 
 existence of these waves in 1884.
 \item Physicists did not accept the idea of waves travelling in vacuum. After 
-all, the undulations of a wave must be of some material. Therefore, they 
+all, the undulations of a wave must be in some material. Therefore, they 
 proposed the existence of a substance called aether. It was supposed to have
 zero density and perfect transparency.
 \item Recall from previous lecture that Newton's laws had the same mathematical
 form in all inertial frames of reference. However, this quality was found to
 be lacking in Maxwell's equation and the equation of electromagnetic waves.
 \item This means that one can use electromagnetic phenomena to detect uniform
-motion. Michelson and Morley designed an ingenious experiment to measure earth's
-speed around the sun.
+motion. 
 \end{itemize}
 \end{frame}
 
+\begin{frame}
+\frametitle{How swift is a river? - 1}
+Consider a river basin of width $D$ and assume that water flows at a speed $u$.
+How will you measure $u$? You have a boat with a speedometer and an odometer. 
+You can
+\begin{enumerate}
+\item Sail downstream for a distance $D$ and return. If $v$ is the boat's speed,
+the total time is
+\begin{equation}\label{e1}
+t_1 = \frac{D}{v + u} + \frac{D}{v - u} = \frac{2Dv}{v^2 - u^2} = 
+\frac{2D/v}{1 - u^2/v^2}.
+\end{equation}
+\item If you want to land on the opposite shore, you must sail with a velocity
+$\vec{v} = v^\prime\hat{j} - u\hat{i}$ on onward journey. $v$ is the speed you 
+measure on the speedometer. But the time taken to cross the river is determined 
+by $v^\prime$. Since $v^2 = {v^\prime}^2 + u^2 \Rightarrow v^\prime = 
+\sqrt{v^2 - u^2}$ and time taken for onward journey is $D/v^\prime = 
+D/\sqrt{v^2 - u^2}$. The same time is taken by the return journey so that the 
+total time is
+\begin{equation}\label{e2}
+t_2 = \frac{2D}{\sqrt{v^2 - u^2}} = \frac{2D/v}{\sqrt{1 - u^2/v^2}}.
+\end{equation}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{How swift is a river? - 2}
+From equations \eqref{e1} and \eqref{e2}
+\begin{equation}\label{e3}
+\frac{t_2}{t_1} = \sqrt{1 - \frac{u^2}{v^2}}.
+\end{equation}
+You can get $u$ if you measure $v, t_1$ and $t_2$. 
+\begin{enumerate}
+\item Now substitute the river with the mythical aether and the boat with a 
+beam of light and you can find the speed of aether.
+\item Is the aether flowing? Yes, relatively speaking. The earth moves through
+it at a speed of $3 \times 10^4$ ms${}^{-1}$ so that we see the aether going
+past at the same speed.
+\item This idea is not fanciful. This is exactly what Michelson's interferometer
+does.
+\end{enumerate}
+\end{frame}
 \end{document}
 

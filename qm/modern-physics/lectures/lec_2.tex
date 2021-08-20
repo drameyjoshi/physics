@@ -1,6 +1,6 @@
 \documentclass{beamer}
 \usefonttheme[onlymath]{serif}
-\usepackage{graphicx}
+\usepackage{graphicx,hyperref}
 \usetheme{Boadilla}
 
 \newcommand{\pvec}[1]{\vec{#1}\mkern2mu\vphantom{#1}}
@@ -73,6 +73,167 @@ it at a speed of $3 \times 10^4$ ms${}^{-1}$ so that we see the aether going
 past at the same speed.
 \item This idea is not fanciful. This is exactly what Michelson's interferometer
 does.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Michelson interferometer}
+A schematic diagram is available on 
+\href{https://en.wikipedia.org/wiki/Michelson_interferometer}{the internet}.
+Formulae in equations \eqref{e1} and \eqref{e2} hold good except with the 
+replacement of $v$ by $c$ so that
+\begin{equation}\label{e4}
+t_2 - t_1 = \frac{2D}{c}\left(\frac{1}{\sqrt{1 - u^2/c^2}} - 
+                              \frac{1}{1-u^2/c^2}\right)
+\end{equation}
+Since the two light beams take a different time to reach the detector from the
+source, they end up having a path difference of $c(t_2 - t_1)$ leading to a 
+fringe shift of 
+\begin{equation}\label{e5}
+n = \frac{c(t_2 - t_1)}{\lambda} = 
+  \frac{2D}{\lambda}\left(\frac{1}{\sqrt{1 - u^2/c^2}} - 
+                          \frac{1}{1-u^2/c^2}\right)
+\end{equation}
+If you rotate the interferometer by $90^\circ$ the net fringe shift is $2n$.
+\end{frame}
+
+\begin{frame}
+\frametitle{Special theory of relativity}
+\begin{enumerate}
+\item No fringe shift was observed. There is no `river' and the speed of light
+is the same in both directions.
+\item Michelson got a Nobel prize in 1907 for this discovery.
+\item The constancy of the speed of light in spite of the earth's motion 
+suggested that the Galilean relativity is not applicable to electromagnetic 
+phenomena.
+\item Einstein proposed a new theory of relativity in 1905 based on the two 
+postulates
+\begin{enumerate}
+\item The laws of physics remain the same in all \emph{inertial} frames of
+reference and
+\item The speed of light is a universal constant for all observers.
+\end{enumerate}
+\item It is called the special theory of relativity because it specialises to
+the inertial frame. In 1916 Einstein built a theory of relativity for all
+frames of reference. It is now called the general theory of relativity.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Time dilation - 1}
+\begin{enumerate}
+\item Einstein's postulates have stunning consequences.
+\item Construct a clock based on constancy of $c$. Fix a rigid rod of length
+$L_0$ with a source and detector of light at one end and a mirror at another 
+end.
+\item Light travels a distance $2L_0$ before getting detected. The time for 
+travel is $t_0 = 2L_0/c$.
+\item Align the clock along the $y$ axis and let it move along the $x$ axis
+with speed $v$. The path length from source to detector is now
+\[
+2\sqrt{L_0^2 + \frac{v^2t^2}{4}}
+\]
+so that the elapsed time is
+\begin{equation}\label{e6}
+t = \frac{2}{c}\sqrt{L_0^2 + \frac{v^2t^2}{4}} \Rightarrow 
+t^2 = 4\frac{L_0^2}{c^2} + \frac{v^2}{c^2}t^2.
+\end{equation}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Time dilation - 2}
+\begin{enumerate}
+\item Introduce the quantity $\beta = v/c$ so that equation \eqref{e6} can be
+rewritten as
+\[
+(1 - \beta^2)t^2 = \left(\frac{2L_0}{c}\right)^2 
+\]
+or
+\begin{equation}\label{e7}
+t = \frac{t_0}{\sqrt{1 - \beta^2}}.
+\end{equation}
+\item If $v < c$, $\beta < 1$ and hence $t > t_0$. A pulse of light that took
+ a time $t_0$ when the clock was at rest took a longer time when it was moving.
+\item Moving clocks appear to go slow! This was not the case in Galilean
+relativity
+\item Note the presence of $\beta^2$.
+\item If time interval changed how can we be sure that length of the rod didn't
+change? Wait for a few slides to get an answer. 
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Length contraction - 1}
+\begin{enumerate}
+\item Measure length in terms of time taken for a light pulse to travel up and
+down the length of an object, say a rod. When the rod is at rest, if $t_0$ is
+the time for up and down journey of a light source 
+\begin{equation}\label{e8}
+L_0 = ct_0.
+\end{equation}
+\item Set the rod in motion with velocity $\vec{v} = v\hat{i}$ and measure its
+length in the `lab frame'. Fire a light pulse from one end in the direction of
+motion.
+\item If $t_1$ is the time for onward journey then
+\begin{equation}\label{e9}
+t_1 = \frac{L + vt_1}{c} \Rightarrow t_1 = \frac{L}{1 - \beta}.
+\end{equation}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Length contraction - 2}
+\begin{enumerate}
+\item If $t_2$ is the time for return journey then
+\begin{equation}\label{e10}
+t_1 = \frac{L - vt_1}{c} \Rightarrow t_1 = \frac{L/c}{1 + \beta}.
+\end{equation}
+so that the total time is
+\begin{equation}\label{e11}
+t = t_1 + t_2 = \frac{L/c}{1 - \beta^2}.
+\end{equation}
+Using equation \eqref{e7}
+\begin{equation}\label{e12}
+t_0 = \frac{L}{c}\sqrt{1 - \beta^2} \Rightarrow ct_0 = L_0 = L\sqrt{1 - \beta^2}
+\end{equation}
+\item If $v < c$, $\beta < 1$ and hence $L < L_0$.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Are these effects real?}
+\begin{enumerate}
+\item $\mu$ mesons are produced in the upper atmosphere, approximately $10$ km
+above the sea level. They are found to reach the sea level in great numbers.
+\item They have a half-life of $2$ $\mu$s and a speed of $0.998c$. Half of them
+will vanish in $2 \times 10^{-6} \times 0.996c = 600$m. How come so many make it
+to the sea level? 
+\item For an observer on ground, $\mu$ meson's half life is dilated to 
+\[
+\frac{2 \times 10^{-6}}{1 - 0.998^2} = 31.7 \times 10^{-6},
+\]
+roughly a $16$ fold increase. Therefore, they travel $600m \times 16 = 9.6$ km
+before half of them disintegrate.
+\item Analyze the situation in the $\mu$ meson's frame of reference.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Length contraction in transverse directions?}
+\begin{enumerate}
+\item A body appears shrunk in the direction of motion. Are its other dimensions
+affected?
+\item Consider two rings R$_{1}$ and R$_{2}$ moving at speed $v$ with respect
+to the ground in opposite directions along their axis of symmetry. Assume that
+the two axes coincide.
+\item The ground observer will see them collide.
+\item If transverse lengths are also shrunk then R$_{1}$ will see R$_{2}$ shrunk
+and therefore will cross it without collision finding it passing through its
+inside.
+\item Likewise R$_{2}$ will find R$_{1}$ pass through its inside.
+\item The same experiment gives three different outcomes in three inertial
+frames of reference, violating Einstein's first postulate.
 \end{enumerate}
 \end{frame}
 \end{document}

@@ -1,0 +1,242 @@
+\chapter{Early models of an atom}\label{c3}
+We will review the models of an atom proposed before the development of quantum
+mechanics. The purpose of this chapter is less to give an account of the 
+historical development and more to illustrate how conceptually simple 
+experiments and relatively straightforward application of the laws of physics 
+proved these models to be inadequate.
+
+\section{Thomson's model}\label{c3s1}
+Sir J. J. Thomson proposed a model of an atom as a uniformly distributed 
+positive charge in which negatively charged electrons are studded. The atom as
+a whole was thought to be impenetrable. This was very much in line with the 
+ideas of continuous solids and fluids of the late nineteenth century. The only
+way to find out if matter was indeed continuous was to bombard it with high
+energy particles and check how many of them make it to the other side. This
+is exactly what Geiger and Marsden in a series of experiments between 1908 and
+1913. Geiger's first experimenti \cite{geiger1908scattering} consisted of 
+bombarding alpha particles on a thin gold foil and checking how many of them 
+reach the detector at the end of a $2$ m long evacuated glass tube. The alpha 
+particles are collimated before they enter the tube. In the absence of the foil 
+they create a sharply defined image of the slit. When a little air was admitted 
+the alpha particles collided with the air molecules and caused the image to 
+blur. When the tube was evacuated again and a gold foil fitted midway between 
+the collimating slit and the detector, a blurred image was formed. If the matter
+were indeed continuous then no alpha particle should have made it to the other
+side. Further, there was no qualitative difference between the image caused by a
+few gas particles and a solid foil indicating that the `solid' foil was 
+probably full of pores. Geiger collaborated with Marsden in his next experiment,
+published \cite{gegier1909diffuse} in 1909, to prove that some alpha particles,
+roughly $1$ ind $8000$ were scattered by the gold foil by an angle more than
+$90^\circ$. This suggested that although the `solid' gold foil was largely 
+porous, it did have a few very strong scattering centres. Since the alpha
+particles are positively charged, the scattering centres too must have a 
+positive charge. Geiger did another experiment \cite{geiger1910scattering} in 
+the following year from which he concluded that the most probable angle of
+deflection is directly proportional to the foil's thickness, atomic mass of
+the foil's metal and with the speed of alpha particles. He also found that the
+only a very few particles are scattered by more than $90^\circ$. These 
+experiments proved that the Thomson's model was not correct and Rutherford 
+proposed \cite{rutherform1911scattering} the nuclear model of an atom. It 
+consisted of a tiny, positively charge nucleus and the electrons are in the 
+rest of region, largely vacuous.
+
+Sir J. J. Thomson, the originator of the eponymous model, was also the 
+discoverer of electrons, which he called `corpuscules'. He was aware that 
+they are far lighter than the hydrogen atom. Before we discuss the Rutherford
+model in greater details let us analyse Thomson's model to show that it cannot
+explain the large scattering observed in Geiger and Marsden's experiments. 
+Consider the collision between two particles of mass $m_1$ and $m_2$. Let their
+initial velocities be $v_1$ and $v_2 = 0$ and their final velocities be 
+$v_1^\prime$ and $v_2^\prime$. Assume a head-on elastic collision. The 
+conservation of momentum requires
+\begin{equation}\label{c3s1e1}
+m_1v_1 + 0 = m_1v_1^\prime + m_2v_2^\prime.
+\end{equation}
+Conservation of kinetic energy gives
+\begin{equation}\label{c3s1e2}
+m_1v_1^2 + 0 = m_1{v_1^\prime}^2 + m_2{v_2^\prime}^2.
+\end{equation}
+In these equations, $v_1$ is known and we want to express the final velocities
+in terms of it. From \eqref{c2s1e1},
+\begin{equation}\label{c3s1e3}
+v_2^\prime = \frac{m_1}{m_2}(v_1 - v_1^\prime).
+\end{equation}
+Substituting this in \eqref{c3s1e2} we get the quadratic
+\begin{equation}\label{c3s1e4}
+(m_1 + m_2){v_1^\prime}^2 - 2m_1v_1v_1^\prime + (m_1 - m_2)v_1^2 = 0
+\end{equation}
+whose solutions are
+\begin{equation}\label{c3s1e5}
+v_1^\prime = \frac{m_1 \pm m_2}{m_1 + m_2}v_1.
+\end{equation}
+The solution with the plus sign indicates a situation in which the collision
+has not happened for the final velocity is identical with the initial one. That
+is not true. Therefore,
+\begin{equation}\label{c3s1e6}
+v_1^\prime = \frac{m_1 - m_2}{m_1 + m_2}v_1
+\end{equation}
+and hence
+\begin{equation}\label{c3s1e7}
+v_2^\prime = \frac{2m_1}{m_1 + m_2}v_1.
+\end{equation}
+It was known that the alpha particle was far more heavier than the electron.
+That is $m_1 \gg m_2$ so that $v_2^\prime \approx 2v_1$. The alpha particle
+loses a momentum $\Delta p_1 = 2m_2v_1$. If this loss is accompanied by a 
+deflection by an angle $\theta$ then
+\begin{equation}\label{c3s1e8}
+\tan\theta = \frac{\Delta p_1}{p_1} = \frac{2m_2}{m_1}.
+\end{equation}
+Since $m_2$ is far smaller than $m_1$, $\theta$ is very close to zero. Thus,
+a collision with an electron cannot explain the large-angle deflection of an
+alpha particle.
+
+If the electrons cannot deflect alpha particles can the uniform positive
+charge distribution of the rest of the atom? The electric field of a uniformly
+distributed charge distribution is found using Gauss's law,
+\begin{equation}\label{c3s1e9}
+\oint_S \vec{E}.\hat{n}da = \frac{\epsilon_0}{Q},
+\end{equation}
+where $Q$ is the charge enclosed by the surface $S$ and $\epsilon_0$ is the 
+permittivity of free space. Let $R$ be the radius of an atom, assumed spherical.
+If $r < R$,
+\[
+E\cdot 4\pi r^2 = \frac{1}{\epsilon_0} \rho_e \frac{4\pi}{3}r^3
+\]
+where $\rho_e$ is the charge density so that
+\[
+E = \frac{1}{3\epsilon_0}\rho_e r.
+\]
+If there are $Z$ electrons then to keep the atom electrically neutral we need
+a charge $Ze$ distributed uniformly in a volume $4\pi R^3/3$ or
+\begin{equation}\label{c3s1e10}
+\rho_e = \frac{3Ze}{4\pi R^3}
+\end{equation}
+so that the electric field is
+\begin{equation}\label{c3s1e11}
+\vec{E} = \frac{Ze}{4\pi\epsilon_0}\frac{r}{R^3}\hat{r},
+\end{equation}
+$\hat{r}$ being the unit vector in the radial direction. This expression is
+true for all points $r \le R$. Clearly, the field is maximum at the surface of
+the atom and the maximum force experienced by the alpha particle is when it is
+just that the surface. Since the charge on the alpha particle is $2e$, it is
+\begin{equation}\label{c3s1e12}
+\vec{F} = \frac{2Ze^2}{4\pi\epsilon_0}\frac{1}{R^2}\hat{r}.
+\end{equation}
+Let us further assume that the force makes is most impact when the alpha 
+particle is in a segment of length $L = 2R$ of the tangent at the point it
+touches the spherical atom. Since the collision is assumed to be elastic, the
+magnitude of velocity does not change, only its direction changes. A particle
+with initial speed $v_1$ takes a time $\delta t = L/v_1$ to cross the segment of
+maximum impact. Therefore, the impulse felt by the alpha particle is $F\delta t$
+, which is also the change in its momentum. Thus,
+\begin{equation}\label{c3s1e13}
+\Delta p =\frac{2Ze^2}{4\pi\epsilon_0}\frac{1}{R^2}\frac{2R}{v_1}
+\end{equation}
+where we have used the fact that $L = 2R$. The angle of deflection is again
+estimated using \eqref{c3s1e8} as
+\begin{equation}\label{c3s1e14}
+\tan\theta = \frac{Ze^2}{\pi\epsilon_0 R m_1v_1^2}.
+\end{equation}
+For a gold foil $Z = 79$. If we assume that the speed of the incident alpha
+particles if $2 \times 10^7$ ms${}^{-1}$ then once again we get the same result 
+that $\theta$ is very close to zero.
+
+\section{Rutherford's model}\label{c3e2}
+We mentioned about Geiger and Marsden's experiments that gave an experimental
+proof against the Thomson's model. The large-angle scattering of a few alpha
+particles led Rutherford to conjecture that the positive charge of the atom
+is concentrated in a tiny nucleus. We will describe his model first proposed in
+1911 \cite{rutherform1911scattering}. The scattering process is depicted in
+figure \ref{c3f1} taken from \cite{rutherform1911scattering}. An alpha particle
+approaches an atom in the direction $PO$ and is deflected in the direction 
+$OP^\prime$.
+\begin{figure}
+\begin{center}
+\includegraphics{rutherford-scattering}
+\caption{Schematic diagram of Rutherford scattering}\label{c3f1}
+\end{center}
+\end{figure}
+Rutherford assumed that the entire positive charge is concentrated in a point-
+like nucleus at point $S$. Since the interaction between the nucleus and the
+alpha particle is electrostatic, the trajectory is a hyperbola $PAP^\prime$ with
+$S$ as its external focus. The point $O$ is chosen as the origin and the lines
+$OP$ and $OP^\prime$ are its asymptotes. The line $SN$ is prependicular to the
+asymptote and let its length be $p$. Let us further assume that the length of
+the segment $OA$ is $q$. Then the equation of the hyperbola is
+\begin{equation}\label{c3s2e1}
+\frac{x^2}{q^2} - \frac{y^2}{p^2} = 1.
+\end{equation}
+This is because of the property of the hyperbola that the perpendicular distance
+from a focus to either asymptote is the semi-minor axis $p$. Therefore, the
+eccentricity is
+\begin{equation}\label{c3s2e2}
+\varepsilon = \sec\theta.
+\end{equation}
+Refer to the figure \ref{c3f2} taken from Wikipedia.
+\begin{figure}
+\begin{center}
+\includegraphics{hyperbola}
+\caption{$x^2/a^2 - y^2/b^2 = 1$ from Wikipedia}\label{c3f2}
+\end{center}
+\end{figure}
+Let $\vec{V}$ be the velocity of the alpha particle at $P$ and $\vec{v}$ be the
+velocity at point $A$. Since the angular momentum is conserved in an 
+electrostatic interaction,
+\begin{equation}\label{c3s2e3}
+pV = rv,
+\end{equation}
+where $r$ is the length of the segment $SA$. Note that both angular momenta are
+taken around the point $S$ and \emph{not} the origin $O$. If the nucleus at $S$
+carries a charge $Ze$ then the potential energy of the alpha particle with
+charge $2e$ at point $A$ is
+\[
+\frac{2Ze^2}{r}
+\]
+so that by energy conservation we have
+\begin{equation}\label{c3s2e4}
+\frac{1}{2}mV^2 = \frac{1}{2}mv^2 + \frac{2Ze^2}{r}.
+\end{equation}
+Therefore,
+\[
+v^2 = V^2 - \frac{4Ze^2}{mr}
+\]
+or
+\begin{equation}\label{c3s2e5}
+v^2 = V^2\left(1 - \frac{b}{r}\right),
+\end{equation}
+where
+\begin{equation}\label{c3s2e6}
+b = \frac{4Ze^2}{mv^2}.
+\end{equation}
+$b$ is the closest distance at which an alpha-particle with energy $mV^2/2$
+can approach a point nucleus with charge $Ze$. At this distance its entire 
+kinetic energy is converted to electrostatic potential energy. From figures
+\ref{c3f1} and \ref{c3f2} it is clear that the length of the segment $OA$ is
+$p\cot\theta$ so that the length of $SA$ is
+\begin{equation}\label{c3s2e7}
+r = p\csc\theta + p\cot\theta = p\frac{1 + \cos\theta}{\sin\theta} =
+p\frac{\cos\theta/2}{\sin\theta/2} = p\cot\frac{\theta}{2}.
+\end{equation}
+From equation \eqref{c3s2e3}
+\[
+V = \frac{rv}{p}.
+\]
+Substitute it in \eqref{c3s2e5} to get
+\begin{equation}\label{c3s2e8}
+v^2 = \frac{r^2v^2}{p^2}\frac{r - b}{r} \Rightarrow p^2 = r(r - b).
+\end{equation}
+Use \eqref{c3s2e7} for $r$ to get
+\begin{equation}\label{c3s2e9}
+p^2 = p\cot\frac{\theta}{2}\left(p\cot\frac{\theta}{2} - b\right)
+\end{equation}
+from which we get
+\[
+p^2 = p^2\cot^2\frac{\theta}{2} - bp\cot\frac{\theta}{2} \Rightarrow
+bp\cot\frac{\theta}{2} = p^2\frac{cos\theta}{\sin^2(\theta/2)} \Rightarrow
+b = 2p\frac{\cos\theta}{\sin\theta}
+\]
+or
+\begin{equation}\label{c2s2e10}
+b = 2p\cot\theta.
+\end{equation}
+

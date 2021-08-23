@@ -236,7 +236,97 @@ bp\cot\frac{\theta}{2} = p^2\frac{cos\theta}{\sin^2(\theta/2)} \Rightarrow
 b = 2p\frac{\cos\theta}{\sin\theta}
 \]
 or
-\begin{equation}\label{c2s2e10}
+\begin{equation}\label{c3s2e10}
 b = 2p\cot\theta.
 \end{equation}
+The angle of deviation $\phi$ is the angle $POP^\prime$ in figure \ref{c3f1}.
+$\angle POA = \angle AOP^\prime = \angle SON = \theta$ so that
+\begin{equation}\label{c2s2e11}
+\phi = \pi - 2\theta
+\end{equation}
+so that equation \eqref{c3s2e10} can be written as
+\begin{equation}\label{c3s2e12}
+\cot\left(\frac{\phi}{2}\right) = \frac{2p}{b}.
+\end{equation}
+Consider a pencil of alpha particles falling normally on the metal foil of
+thickness $t$. Let $n$ be the number of atoms per unit volume of the material.
+If the radius of an atom is $R$ then `cross sectional area' of the atom is
+$\pi R^2$. A cylinder of this `base area' and height $h$ will have $nt\pi R^2$
+number of sites where collisions can happen. The probability $P$ of an alpha
+particle entering an atom within distance $p$ of its centre is
+\begin{equation}\label{c3s2e13}
+P = nt \pi p^2
+\end{equation}
+and the probability that it enters in an annulus of radii $p$ and $p + dp$ is
+\begin{equation}\label{c3s2e14}
+dP = 2nt\pi pdp.
+\end{equation}
+From equation \eqref{c3s2e12}
+\begin{equation}\label{c3s2e15}
+dp=-\frac{b}{4}\csc^2\left(\frac{\phi}{2}\right).
+\end{equation}
+Substituting \eqref{c3s2e12} and \eqref{c3s2e15} in \eqref{c3s2e14}, we get
+\begin{equation}\label{c3s2e16}
+dP = -nt\pi \frac{b^2}{4}\csc^2\left(\frac{\phi}{2}\right)
+\cot\left(\frac{\phi}{2}\right).
+\end{equation}
+The probability of finding an alpha particle deflected between angles $\phi_1$
+and $\phi_2$ is
+\begin{equation}\label{c3s2e17}
+P(\phi_1, \phi_2) = \int_{\phi_1}^{\phi_2}dP = \frac{\pi}{4}ntb^2\left(
+\cot^2\left(\frac{\phi_1}{2}\right) - \cot^2\left(\frac{\phi_2}{2}\right)\right)
+\end{equation}
+If $F$ is the incident flux of the alpha particles then the number of particles
+deflected between $\phi$ and $\phi + d\phi$ are $|FdP|$, where $dP$ is given 
+by \eqref{c3s2e16} and we have used the modulus to ensure that the number of
+particles is always a positive quantity. These particles land on the detector in
+an annular region. The inner radius of this region is $s\sin\phi$ where $s$ is
+the distance of any point on it from the centre of the incident pencil. The
+circumference of the annulus is $2\pi r\sin\phi$ and the area of the annular
+ring is $2\pi r\sin\phi d\phi$. Therefore, the number of particles deflected
+between angles $\phi$ and $\phi + d\phi$ and and landing \emph{per unit area of 
+the detector} is
+\begin{equation}\label{c3s2e18}
+N(\phi) = \Big|\frac{FdP}{2\pi s^2\sin\phi d\phi}\Big| = 
+\frac{Fnt b^2\csc^2(\phi/2)\cot(\phi/2)}{8s^2\sin\phi}.
+\end{equation}
+Writing the denominator in terms of half angles we get
+\begin{equation}\label{c3s2e19}
+N(\phi) = \frac{Fntb^2}{16s^2}\csc^4\left(\frac{\phi}{2}\right).
+\end{equation}
+From equation \eqref{c3s2e6} we have
+\begin{equation}\label{c3s2e20}
+N(\phi) = \frac{FntZ^2e^4}{m^2v^4s^2}\csc^4\left(\frac{\phi}{2}\right).
+\end{equation}
+Thus, $N(\phi)$ is
+\begin{enumerate}
+\item directly proportional to $\csc^4(\phi/2)$;
+\item directly proportional to the thickness $t$ of the foil;
+\item directly proportional to the square of the atomic number $Z$ of the 
+scatterer;
+\item inversely proportional to the square of the kinetic energy of the incident
+alpha particles. 
+\end{enumerate}
+Geiger and Marsden's experiments \cite{geiger1913lxi} showed that these
+predictions are correct thereby putting the nuclear model of an atom on a firm
+footing.
+
+Rutherford's model and Geiger-Marsden's experiments showed that the atoms have
+a very small nucleus where all the positive charge resides. It did not tell 
+anything about the electrons. Either the electrons are smeared as a continuous
+distrubution throughout the atom or that the electrons move around the nucleus
+like planets around the sun. The former was ruled out because the even the
+Thomson model had them as `corpuscules'. Since the entire positive charge is
+concentrated in the nucleus, it is impossible for the electrons to remain
+stationary as in Thomson's model. Therefore, the only option left was to assume
+them to go aroud the nucleus. However, a charge going around a nucleus undergoes
+an accelerated motion and radiates energy at the rate \cite[equation (20-44)]{
+reitz2009foundations}
+\begin{equation}\label{c3s2e21}
+P_r = \frac{2}{3}\frac{e^2}{4\pi\epsilon_0}\frac{a^2}{c^3},
+\end{equation}
+where $a$ is its acceleration and $c$ is the velocity of light. This continuous
+loss of energy will force the electron to spiral down and fall into the nucleus.
+Thus, although Rutherford's model conclusively showed the existence of a nucleus
+it could not account for the motion of electrons.
 

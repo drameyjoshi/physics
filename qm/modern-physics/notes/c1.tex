@@ -616,15 +616,15 @@ The factor $mc^2$ is independent of the motion of $m$ and can therefore be
 called the \emph{rest energy}. The energy of a body of mass $m$ moving at a 
 velocity $\vec{v}$ is thus,
 \begin{equation}\label{c1s3e7}
-E = T = \gamma mc^2.
+E = \gamma mc^2.
 \end{equation}
 From equations \eqref{c1s3e1} and \eqref{c1s3e7} we observe that
 \begin{equation}\label{c1s3e8}
 E^2 - p^2c^2 = \frac{m^2c^4}{1 - v^2/c^2} - \frac{m^2v^2c^2}{1 - v^2/c^2} = 
 m^2c^4.
 \end{equation}
-We observe that the quantity $E^2 - p^2c^2$. Written in another way, the 
-quantity
+We observe that the quantity $E^2 - p^2c^2$ is a constant. Written in another 
+way, the quantity
 \begin{equation}\label{c1s3e9}
 p^2 - \frac{E^2}{c^2} = p_x^2 + p_y^2 + p_z^2 - \frac{E^2}{c^2}
 \end{equation}
@@ -746,6 +746,9 @@ Lorentz transformations}.
 \begin{enumerate}
 \item Derive the expressions for length contraction and time dilation using
 Lorentz transformations.
+\item Show that $x^2 + y^2 + z^2 - c^2t^2 = {x^\prime}^2 + {y^\prime}^2 +
+{z^\prime}^2 - c^2{t^\prime}^2$ where the two sets of coordinates are related
+by Lorentz transformation.
 \item Show that the inverse Lorentz transformations are
 \begin{eqnarray}
 x &=& \gamma(x^\prime + \beta ct^\prime) \label{c1s4e24} \\
@@ -753,9 +756,7 @@ y &=& y^\prime \label{c1s4e25} \\
 z &=& z^\prime \label{c1s4e26} \\
 ct &=& \gamma(ct^\prime + \beta x^\prime) \label{c1s4e27}
 \end{eqnarray}
-\end{enumerate}
-
-Using the inverse Lorentz transformations, we have
+\item Using the inverse Lorentz transformations, show that
 \begin{eqnarray}
 dx &=& \gamma(dx^\prime + \beta cdt^\prime) \label{c1s4e28} \\
 dy &=& dy^\prime \\
@@ -772,17 +773,13 @@ reference where
 \pvec{u}^\prime = \frac{dx^\prime}{dt^\prime}\hat{i} + 
 \frac{dy^\prime}{dt^\prime}\hat{j} + \frac{dz^\prime}{dt^\prime}\hat{k}
 \]
-From equations \eqref{c1s4e28} and \eqref{c1s4e29},
-\begin{equation}\label{c1s4e30}
-u_x = \frac{dx}{dt} = \frac{\beta c^2 + cu_x^\prime}{c + \beta u_x^\prime}
-= \frac{v + u_x^\prime}{1 + (vu_x^\prime)/c^2}.
-\end{equation} 
-Similarly,
-\begin{equation}\label{c1s4e31}
-u_y=\frac{dy}{dt} = \frac{u_y^\prime \sqrt{1 - \beta^2}}{1 + (vu_x^\prime)/c^2}
-\end{equation}
-and
-\begin{equation}\label{c1s4e32}
-u_z=\frac{dz}{dt} = \frac{u_z^\prime \sqrt{1 - \beta^2}}{1 + (vu_x^\prime)/c^2}.
-\end{equation}
+Now show that the velocities transform as
+\begin{eqnarray}
+u_x &=& \frac{v + u_x^\prime}{1 + (vu_x^\prime)/c^2} \label{c1s4e30} \\
+u_y &=& \frac{u_y^\prime \sqrt{1 - \beta^2}}{1 + (vu_x^\prime)/c^2} \label{c1s4e31} \\
+u_z &=& \frac{u_z^\prime \sqrt{1 - \beta^2}}{1 + (vu_x^\prime)/c^2} \label{c1s4e32}
+\end{eqnarray}
+\end{enumerate}
+
+
 

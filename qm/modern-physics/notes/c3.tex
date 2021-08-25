@@ -349,4 +349,178 @@ Now place a beaker of water on the side from which we are seeing the spectrum.
 The spectrum will be undisturbed, all seven colours will be seen. However, when
 you add potassium permanganate to the beaker, the water turns purple and 
 simultanuously the green line disappears. The `green' light is absorbed and that
-is why the water appears purple. This is an absorption spectrum
+is why the water appears purple. This is an absorption spectrum. 
+
+Spectra of both kinds are signatures of the atoms or molecules that cause them.
+In fact, the element Helium was first observed in the solar spectrum and then 
+discovered on the earth.
+
+The spectrum of Hydrogen atom is in the form of sharp lines and the greatest
+triumph of Bohr model was in explaining why it is so.
+
+\subsection{Bohr's postulates}
+Bohr postulated \cite{bohr1913constitution} that the electron in a Hydrogen 
+atom  revolves around its nucleus in a circular orbit under the influence of 
+the electrostatic attraction between the two. He further, postulated that if the
+angular momentum of the electron is an integral multiple of $h/(2\pi)$ then
+the electron does not radiates. This assumption has no basis in classical
+electrodynamics and it is the first indication of things being different in the
+microscopic world of atoms. At this stage, we will not ask why this assumption
+is sensible. We will just use it.
+
+Since the electron is known to be much lighter than the nucleus, let us assume
+that the latter is stationary. Newton's second law applied to the circular 
+motion of the electron gives
+\begin{equation}\label{c3s3e1}
+\frac{mv^2}{r} = \frac{1}{4\pi\epsilon_0}\frac{e^2}{r^2},
+\end{equation}
+where $e$ is the charge on the electron, $m$ is its mass, $v$ its velocity, $r$
+the radius of the orbit and $\epsilon_0$ the permittivity of free space. Bohr's
+second condition restricts the values of the electron's angular momentum. It is
+\begin{equation}\label{c3s3e2}
+mvr = n\frac{h}{2\pi},
+\end{equation}
+where $m, v, r$ mean the same things as in equation \eqref{c3s3e1} and $n$ is a
+positive integer. The quantity $h/(2\pi)$ occurs so frequently in quantum physics
+that many people call it as `the Planck constant'. It is denoted by the symbol
+$\hslash$. We will use both the quantities, depending on which one makes the 
+equations look neater. Thus, Bohr's quantisation condition
+is
+\begin{equation}\label{c3s3e3}
+mvr = n\hslash.
+\end{equation}
+From equations \eqref{c3s3e2} and \eqref{c3s3e1} we get
+\begin{equation}\label{c3s3e4}
+r = \frac{n^2 h^2 \epsilon_0}{\pi me^2}.
+\end{equation}
+Thus, the radius of the electron takes only discrete values for each one of $n =
+1, 2, \ldots$. This is yet another signature of quantisation. Not only is energy
+exchanged in discrete chunks even the radius and the angular momentum take only
+a discrete set of values.
+
+From equation \eqref{c3s3e1} we get an expression for the electron's kinetic
+energy
+\begin{equation}\label{c3s3e5}
+T = \frac{1}{2}mv^2 = \frac{1}{2}\frac{1}{4\pi\epsilon_0}\frac{e^2}{r}.
+\end{equation}
+We know that its potential energy is
+\begin{equation}\label{c3s3e6}
+V = -\frac{1}{4\pi\epsilon_0}\frac{e^2}{r}
+\end{equation}
+so that is total energy is
+\begin{equation}\label{c3s3e7}
+E = T + V = -\frac{1}{2}\frac{1}{4\pi\epsilon_0}\frac{e^2}{r}.
+\end{equation}
+Using the expression for $r$ obtained in equation \eqref{c3s3e4} we get
+\begin{equation}\label{c3s3e8}
+E = -\frac{me^4}{8\pi\epsilon_0^2 n^2h^2}.
+\end{equation}
+Even energy of the electron takes only certain discrete values. It is quantised.
+In order to make the dependence of $r$ and $E$ on $n$ explicity, it is common to
+write them as
+\begin{eqnarray}
+r_n &=& \frac{n^2 h^2 \epsilon_0}{\pi me^2} \label{c3s3e9} \\
+E_n &=& -\frac{me^4}{8 n^2h^2\epsilon_0^2}. \label{c3s3e10}
+\end{eqnarray}
+A few observations:
+\begin{enumerate}
+\item As $n$ increases, so does $r_n$. We can call $n = 1$ the first orbit, 
+$n = 2$ the second orbit and so on.
+\item The energy is always negative. Therefore, we have to supply energy to the
+electron in order to eject it out of the atom.
+\item As $n$ increases, $E_n$ decreases. Electrons are loosely held in higher 
+orbits than they are in the lower ones.
+\end{enumerate}
+Bohr's third postulate is that when an electron makes a transition from an orbit
+$n_1$ to an orbit $n_2 < n_1$, it emits a photon of frequency $E_{n_1}-E_{n_2}$.
+Likewise, when an electron makes a transition in the opposite direction, it 
+absorbs a photon of the same energy. Thus, the energy exchange between the atom
+and the rest of the world happens in discrete units. When the initial orbit is
+$n > 1$ and the final orbit is $1$ then the only possible values of energy are
+\begin{equation}\label{c3s3e11}
+E=h\nu=\frac{me^4}{8\epsilon_0^2h^2}\left(1 - \frac{1}{n^2}\right).
+\end{equation}
+
+\subsection{Problem set 1}
+\begin{enumerate}
+\item The electron volt, abbreviated as eV, is a convenient unit if energy in 
+atomic physics. One electron volt is the energy needed to bring a charge $e =
+1.6 \times 10^{-19}$ C up a potential of $1$ V. Thus $1 eV=1.6\times 10^{-19}$
+J. Find the energy of an electron in the first Bohr orbit and convert it into
+$eV$.
+
+An amount of this energy is also called one rydberg.
+
+\item The energy $E_1$ of an electron in the first orbit is also the energy that
+must be supplied to the electron to allow it to escape from the influence of the
+nucleus. Equivalently, when an electron from afar is brought close to the 
+nucleus and made to occupy the first orbit it emits a photon of energy $E_1$. 
+Show that frequency of this photon is twice that of the frequency of rotation of
+the electron in the first orbit. Bohr had used this as a postulate in this paper
+\cite{bohr1913constitution} and shown it to be equivalent to the angular 
+momentum quantisation of equation \eqref{c3s3e2}.
+
+\item Modify the formulae in equations \eqref{c3s3e9} and \eqref{c3s3e10} for
+singly ionised He atom and double ionised Lithum atom. Before you derive the
+formulae can you predict if $E_n$ and $r_n$ are going to more or less than that
+for hydrogen atom.
+
+\item Strictly speaking, we cannot assume the nucleus to be at rest. Let $m_n$
+be its mass and $\vec{r}_n$ be its position vector. Let $m_e$ and $\vec{r}_e$ be 
+the corresponding quantities for the electron. If $\vec{F}_e$ is the force on 
+the electron and $\vec{F}_n$ is that on the nucleus then the Newton's second 
+law for each on of them is
+\begin{eqnarray}
+m_e\frac{d^2\vec{r}_e}{dt^2} &=& \vec{F}_e \label{c3s3e12} \\
+m_n\frac{d^2\vec{r}_n}{dt^2} &=& \vec{F}_n \label{c3s3e13}
+\end{eqnarray}
+The forces $\vec{F}_n$ and $\vec{F}_e$ for an action reaction pair. Therefore
+show that
+\begin{equation}\label{c3s3e14}
+m_e\frac{d^2\vec{r}_e}{dt^2} + m_n\frac{d^2\vec{r}_n}{dt^2} = 0.
+\end{equation}
+Define the vector
+\begin{equation}\label{c3s3e15}
+\vec{R} = \frac{m_e\vec{r}_e + m_n\vec{r}_n}{m + m_n}.
+\end{equation}
+It is the position vector of the centre of mass of the system. Show that
+\begin{equation}\label{c3s3e16}
+\frac{d^2\vec{R}}{dt^2} = 0.
+\end{equation}
+The vector $\vec{r} = \vec{r}_e - \vec{r}_n$ is the relative position of
+the electron with respect to the nucleus. From equations \eqref{c3s3e12} 
+and \eqref{c3s3e13} show that
+\begin{equation}\label{c3s3e17}
+\frac{d^2\vec{r}}{dt^2} = \left(\frac{1}{m_e} + \frac{1}{m_n}\right)\vec{F}_e.
+\end{equation}
+Define,
+\begin{equation}\label{c3s3e18}
+\frac{1}{\mu} = \left(\frac{1}{m_e} + \frac{1}{m_n}\right)
+\end{equation}
+so that we can write \eqref{c2s3e17} as
+\begin{equation}\label{c3s3e19}
+\mu\frac{d^2\vec{r}}{dt^2} = \vec{F}_e.
+\end{equation}
+Thus, we have shown that the motion of two bodies can be simplified to the
+uniform motion of the centre of mass and an equivalent single body problem 
+of a body of `reduced mass' $\mu$. Thus, all formulae in section \ref{c3s3}
+must be altered to replace $m$ with $\mu$. Does it make a great difference?
+
+\item If we were to extend Bohr's model to atoms with multiple electrons, we
+can imagine all of them moving in a single orbit but equally apart from each
+other. If there are $N$ electrons then the angular separation between them is
+$2\pi/N$. Each electron will experience and attractive force of the nucleus and
+the repulsive force of the other electrons. Show that the potential energy of 
+the electrons alone is
+\begin{equation}\label{c3s3e20}
+V_e = \frac{Ne^2}{16\pi\epsilon_0 r}
+      \sum_{k=1}^{N-1}\csc\left(\frac{k\pi}{N}\right)
+\end{equation}
+The proof is quite straightforward in spite of the rather formidable appearance
+of the expression. Calculate the repulsive force using
+\begin{equation}\label{c3s3e21}
+F_r = -\frac{dV_e}{dr}.
+\end{equation}
+Bohr used these expressions in his treatment of multi-electron atoms 
+\cite{bohr1913constitution}.
+\end{enumerate}

@@ -1,0 +1,240 @@
+\documentclass{beamer}
+\usefonttheme[onlymath]{serif}
+\usepackage{graphicx,hyperref}
+\usetheme{Boadilla}
+
+\newcommand{\pvec}[1]{\vec{#1}\mkern2mu\vphantom{#1}}
+
+\title{Special Theory of Relativity - 2}
+\author{Amey Joshi}
+\date{\today}
+\begin{document}
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}
+\frametitle{Classical Doppler effect}
+\begin{itemize}
+\item You can tell whether a siren is approaching you or receding from you.
+\item Let a source $S$ emit sound at frequency $\nu_0$ and a detector $D$ 
+approach it with speed $v$. $D$ sees the wave approaching at speed $v+c_s$, 
+$c_s$ being the speed of sound. The distance between crests is still $\lambda$,
+therefore the apparent frequency is
+\begin{equation}\label{c1}
+\nu = \frac{c_s+v}{\lambda} = \nu_0\left(1 + \frac{v}{c_s}\right).
+\end{equation}
+\item If $D$ is stationary and $S$ approaches $D$ with speed $v$ then the
+crests which used to be a distance $\lambda$ apart are now closer by an amount
+$v/\nu_0$. The apparent frequenct is
+\begin{equation}\label{c2}
+\nu = \frac{c_s}{\lambda - v/\nu_0} = \frac{nu_0}{1 - v/c_s}.
+\end{equation}
+\item Equations \eqref{c1} and \eqref{c2} are not identical. Is Galileo's 
+relativity violated? (Read the notes to assure yourself that it isn't).
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Relativistic Doppler effect}
+\begin{itemize}
+\item Let a source $S$ emit radiation of frequency $\nu_0$. If a detector $D$
+is travelling perpendicular to the direction of radiation, then it detects a 
+crest every $\nu^{-1}$ s. In the frame of reference where $S$ is at rest, a 
+crest is seen every $\nu_0^{-1}$ s. The two times are related as
+\begin{equation}\label{e3}
+\nu^{-1} = \frac{\nu_0^{-1}}{\sqrt{1 - \beta^2}} \Rightarrow
+\nu = \nu_0\sqrt{1 - \beta^2}.
+\end{equation}
+\item $\nu < \nu_0$, the apparent frequency is lower than the actual. Appears
+red-shifted.
+\item One piece of evidence for the expanding universe.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Relativistic Doppler effect - Longitudnal}
+\begin{itemize}
+\item If $D$ travels away from $S$ with speed $v$ in the direction of radiation,
+the time between crests is $\nu_0^{-1}/\sqrt{1-\beta^2}$ and the crests lags
+behind by a distance $\nu^{-1}/\sqrt{1-\beta^2}$. Apparent period of the wave is
+\begin{equation}\label{e4}
+\nu^{-1} = \frac{\nu_0^{-1}}{\sqrt{1-\beta^2}} + 
+           \frac{\nu_0^{-1}}{\sqrt{1-\beta^2}}\frac{v}{c} = 
+           \nu_0^{-1}\frac{1+\beta}{\sqrt{1-\beta^2}}.
+\end{equation}
+\item A simple rearrangement gives
+\begin{equation}\label{e5}
+\nu = \nu_0\sqrt{\frac{1 - \beta}{1 + \beta}}.
+\end{equation}
+\item Once again $\nu < \nu_0$, a red shift.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Synchronization of clocks}
+\begin{itemize}
+\item There are two clocks $C_1$ and $C_2$ at either ends of a platform. Both
+show the same time. You pass by in a uniformly moving train. You set your clock 
+to $C_1$. When you reach the other end, will your clock agree with $C_2$?
+\item Not so in the relativistic world. You travel a distance $L_0$ in your
+frame at speed $v$ taking time $L_0/v$, which in the stationary frame is
+\[
+\frac{L_0}{v\sqrt{1-\beta^2}}.
+\]
+\item You measure the distance between the clocks to be $L_0\sqrt{1-\beta^2}$
+and therefore the time elapsed is
+\[
+\frac{L_0\sqrt{1 - \beta^2}}{v}
+\]
+\item Your clock is no longer in sync with $C_2$.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{A pedagogical note}
+\begin{itemize}
+\item I don't want you to memorize derivations and formulae.
+\item The mathematics is very simple; the physics is subtle.
+\item So enjoy and take time to understand why they are true.
+\item I am not going to ask you to reproduce these in your exams.
+\item You will be given the relevant formulae and asked to use them to solve
+problems. Make sure you understand what they mean.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Galilean transformation}
+\begin{itemize}
+\item 
+Recall the first lecture. If $x, y, z$ are the coordinates of a point in an
+inertial frame of reference $S$ and $x^\prime, y^\prime, z^\prime$ are the
+coordinates in another inertial frame $S^\prime$ moving at a velocity $\vec{v}
+= v\hat{i}$ with respect to $S$ then
+\begin{eqnarray}
+x^\prime &=& x - vt \label{e6} \\
+y^\prime &=& y \label{e7} \\
+z^\prime &=& z. \label{e8}
+\end{eqnarray}
+It was implicitly accepted that $t^\prime = t$. We now know that this is not
+true if $v$ is close to the speed of light.
+\item What is the replacement?
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Lorentz transformation}
+\begin{itemize}
+\item $S$ and $S^\prime$ are the same as before. The transformation equations 
+are
+\begin{eqnarray}
+x^\prime &=& \frac{x - vt}{\sqrt{1 - \beta^2}} \label{e9} \\
+y^\prime &=& y \label{e10} \\
+z^\prime &=& z \label{e11} \\
+t^\prime &=& \frac{t - vx/c^2}{\sqrt{1 - \beta^2}} \label{e12}
+\end{eqnarray}
+\item Suppose $\tau = ct$. Then \eqref{e9} and \eqref{e12} can be written as
+\begin{eqnarray}
+x^\prime &=& \gamma(x - \beta\tau) \label{e13} \\
+\tau^\prime &=& \gamma(\tau - \beta x) \label{e14}
+\end{eqnarray}
+where $\gamma = 1/\sqrt{1 - \beta^2}$.
+\item Do you see the symmetry between space and time?
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item In the Galilean world, the velocities measured in the two frames are
+\begin{eqnarray}
+\frac{dx^\prime}{dt} &=& \frac{dx}{dt} - v \label{e15} \\
+\frac{dy^\prime}{dt} &=& \frac{dy}{dt} \label{e16} \\
+\frac{dz^\prime}{dt} &=& \frac{dz}{dt} \label{e17}
+\end{eqnarray}
+\item In Einstein's world, you would expect the $x$-component of the velocity
+to change. What about the $y$ and $z$ components? Can you infer anything without
+doing any derivation?
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Does mass get affected by motion? - 1}
+\begin{enumerate}
+\item Distance and time intervals depend on who measures them. What about mass?
+\item Consider two inertial frames of reference $S$ and $S^\prime$ such that 
+$S^\prime$ travels with respect to $S$ at a uniform velocity $\vec{v}=v\hat{i}$.
+Let there be two identical bodies of mass $m$ and $m^\prime = m$ at `heights' 
+$y_1$ and $y_2$ such that the first particle is at rest in $S$ and the other 
+is at rest in $S^\prime$. Assume that $y_1 > y_2$.
+\item How does the trajectory of the two particles appear in the two frames?
+\item When their $x$ coordinates are such that $x_2 = x_1 - vt$, they are both 
+given a velocity $u = 2(y_1 - y_2)/t$ so that they collide in time $t$ at a
+height midway between $y_2$ and $y_1$.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Does mass get affected by motion? - 2}
+\begin{enumerate}
+\item An observer in $S$ sees a body initially at rest descend with a speed 
+$u = 2(y_1 - y_2)/t$ before it collides with another identical body that has
+ascended.
+\item The ascending body covered the distance $(y_1 - y_2)/2$ in time 
+$t/\sqrt{1 - \beta^2}$. 
+\item Momentum of the ascending body is $m^\prime u\sqrt{1 - \beta^2}$. That of 
+the descending body is $mu$. Since the system of the two bodies is isolated, 
+momentum if conserved. That is $mu = m^\prime u\sqrt{1 - \beta^2}$.
+\item Assume that $u \ll v$ so that the vertical velocities are very small the
+bodies suffer a `grazing collision'. That way, $m$ is almost unaffected by 
+motion and the effect on $m^\prime$ is only because of the horizontal motion.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Does mass get affected by motion? - 3}
+\begin{enumerate}
+\item Momentum is conserved if we define it as
+\begin{equation}\label{e13}
+p = \frac{mv}{\sqrt{1 - \beta^2}} = \frac{mv}{\sqrt{1 - v^2/c^2}} .
+\end{equation}
+Note that in a grazing collision, the velocity of the ascending body, as seen
+in $S$ is approximately $\vec{v}$.
+\item It is tempting to conclude that mass is affected by motion such that
+\begin{equation}\label{e14}
+m(v) = \frac{m(0)}{\sqrt{1 - v^2/c^2}}.
+\end{equation}
+However, we will resist that temptation and rather redefine momentum as in
+equation \eqref{e13}
+\item $p \rightarrow \infty$ as $v \rightarrow c$. Thus, it takes an infinite
+energy to accelerate a material body to the speed of light. That is why we
+always say that $v \le c$. 
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Before we leave relativity}
+\begin{enumerate}
+\item The finite speed of light implies that when we see a far away object we 
+see it the way it was when the light left it. 
+\item That is why telescope that see farthest objects are also seeing the 
+universe as it was a very long time ago.
+\item The intimate relation between `farness' and `oldness' gives rise to 
+space and time being on an equal footing.
+\item How does a point charge at rest in your frame appear to your friend
+in another intertial frame? Do you now see why we speak of an `electromagnetic'
+field and not just an electric or a magentic field?
+\item We had only a glimpse of relativity. But we must move on to other 
+shocking discoveries.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Homework}
+\begin{itemize}
+\item Problem sets 4 and 5 in chapter 1 of the accompanying notes.
+\item Read section 1.3 in the notes to understand where $E = mc^2$ comes from.
+\item Submit your assignments within one week of this lecture. Upload your 
+files with the name \begin{verbatim}<your-name><hw2>.pdf\end{verbatim}
+\end{itemize}
+\end{frame}
+\end{document}

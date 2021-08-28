@@ -1,0 +1,154 @@
+\chapter{Schr\"{o}dinger Wave Equation}\label{c4}
+Bohr's model explained the spectrum of the Hydrogen atom quite well. But not
+too well. When a Hydrogen atom is subjected to an electric field, the spectral
+lines split. This is called the `Stark effect' after the name of its discoverer.
+Similarly, `Zeeman effect' is the splitting of spectral lines when the atom is
+subjected to a magnetic field. By splitting we mean that in the place of a 
+single line in the absence of a field we now see more than one. A spectral line
+indicates the energy level of an electron. A splitting of a spectral line tells
+us that electrons which used to have the same energies in the absence of a 
+field have different energies when the field is turned on. The Bohr model 
+could not explain why this happens. Arnold Sommerfeld tried to extend the Bohr
+model by allowing the orbits to be elliptical and by using certain concepts in
+advanced classical mechanics. However, it was clear that the theory was getting
+\emph{ad hoc} and that a better explanation was needed.
+
+Werner Heisenberg, a German physicist, first came up with a new theory to
+explain quantum phenomena \cite{heisenberg1925quantum}. His paper is quite
+hard to follow. People of Steven Weinberg's \cite{aitchison2004understanding}
+stature have admitted that while they understand what Heisenberg wrote they 
+cannot fathom what inspired him to write it. He also found out that the 
+equations of quantum mechanics are best written in terms of matrices. As a 
+result, his formulation of quantum mechanics is called `matrix mechanics'.
+
+A year later, the Austrian physicist Erwin Schr\"{o}dinger proposed an 
+alternative formalism to solve atomic problems. His `equation of motion' was 
+conceived using certain optical analogies and is called the wave equation. A
+function satisfying the equation is called the wave function and it describes
+the matter waves we studied in chapter \ref{c2}. Schr\"{o}dinger's paper
+\cite{schrodinger1926undulatory} is remarkably lucid and it offers an insight
+into how he came up with his equation. The Schr\"{o}dinger wave equation
+is a linear partial differential equation and the physicists of 
+Schr\"{o}dinger' time had a expertise and comfort in dealing with them. As a 
+result, a first introduction to quantum mechanics is almost always using the
+Schr\"{o}dinger equation. Schr\"{o}dinger showed \cite{schrodinger1926relation}
+that his approach is equivalent to the one proposed by Heisenberg and developed
+by Born and Jordan. The equivalence was put on a firm mathematical footing by
+John von Neumann \cite{von2018mathematical}.
+
+In this chapter, we will state Schr\"{o}dinger's equation, interpret its
+solution and show how to use it in a few very simple situations. Schr\"{o}dinger
+derived \cite{schrodinger1926undulatory} his equation using variational 
+principles. However, we shall take it as a starting point of our discussion.
+The way we accepted Newton's laws as `correct' because they explained a few
+natural phenomena, we will also accept Schr\"{o}dinger's equation because it
+explains a lot many phenomena in the atomic world.
+
+\section{Schr\"{o}dinger equation}\label{c4s1}
+Before stating and understanding Schr\"{o}dinger's equation that describes
+the unfamiliar matter waves, let us consider start in the more familiar world
+of sound waves. We know that sound waves travel through the air as a succession
+of compressions and rarefactions. We can detect and measure the compression and
+rarefaction using a pressure gauge. If $p(x, t)$ is the air pressure at a point
+$x$ and at time $t$ then the equation of sound waves is
+\begin{equation}\label{c4s1e1}
+\frac{\partial^2 p}{\partial x^2} = \frac{1}{c_s^2}
+\frac{\partial^2 p}{\partial t^2}
+\end{equation}
+where $c_s$ is the speed of sound. It is easy to check that any function of 
+the form $p(x \pm c_st)$ is a solution of \eqref{c4s1e1}. In particular,
+\begin{equation}\label{c4s1e2}
+p(x, t) = \cos(x - c_st)
+\end{equation}
+is a solution. A solution of a wave equation tells us how pressure varys with
+position and time. 
+
+Equation \eqref{c4s1e1} described waves in one dimension. If the pressure varies
+in all three dimensions then the equation becomes
+\begin{equation}\label{c4s1e3}
+\frac{\partial^2 p}{\partial x^2} + \frac{\partial^2 p}{\partial y^2} + 
+\frac{\partial^2 p}{\partial z^2} = 
+\frac{1}{c_s^2} \frac{\partial^2 p}{\partial t^2}
+\end{equation}
+We can check that
+\begin{equation}\label{c4s1e4}
+p(x, y, z, t) = \cos(x + y + z - \sqrt{3} c_st)
+\end{equation}
+is a solution of \eqref{c4s1e4}.
+
+\subsection{Problem set 1}
+\begin{enumerate}
+\item Verify that \eqref{c4s1e2} is a solution of \eqref{c4s1e1}.
+\item Verify that \eqref{c4s1e4} is a solution of \eqref{c4s1e3}.
+\item If $p_1(x, t)$ and $p_2(x, t)$ are two solutions of \eqref{c4s1e1} then
+show that $\alpha_1 p_1 + \alpha_2 p_2$, where $\alpha_1, \alpha_2$ are real
+numbers is also a solution of \eqref{c4s1e1}.
+This fact is called the principle of linear superposition. The expression, 
+$\alpha_1 p_1 + \alpha_2 p_2$ is called a \emph{linear combination} of $p_1$
+and $p_2$.
+\end{enumerate}
+
+A sound wave is described by the pressure fluctations it causes. de Broglie
+waves are described by the variations of a wave function $\Psi$. It could be a
+complex-valued function and therefore it does not have a physical interpretation
+by itself. However, its squared modulus $|\Psi|^2 = \Psi\Psi^\ast$ is the 
+probability density of finding at a particle at a point $(x, y, z)$ at time $t$.In particular, $|\Psi|^2 dV$ is the probability of finding a particle in a 
+small volume element $dV$ around the point $(x,y,z)$ at time $t$. The way the
+air pressure $p$ satisfies the equation \eqref{c4s1e3}, the wave function 
+$\Psi$ satisfies 
+\begin{equation}\label{c4s1e5}
+-\frac{\hslash^2}{2m}\left(\frac{\partial^2\Psi}{\partial x^2} + 
+\frac{\partial^2\Psi}{\partial y^2} + \frac{\partial^2\Psi}{\partial z^2}
+\right) + V(x,y,z,t)\Psi = -i\hslash\frac{\partial\Psi}{\partial t}.
+\end{equation}
+This is called the Schr\"{o}dinger equation. In this equation,
+\begin{enumerate}
+\item $\hslash = h/(2\pi)$; we first introduced this quantity when we wrote
+\eqref{c3s3e2}.
+\item $m$ is the mass of the particle.
+\item $V(x, y, z, t)$ is the potential function. It describes the force acting
+on the particle. We will describe it more a little later.
+\item $i$ is the imaginary number.
+\end{enumerate}
+A few remarks are in order.
+\begin{enumerate}
+\item A wave equation always has a second order partial derivative in time.
+Equation \eqref{c4s1e5} has just the first order partial derivative in time.
+Therefore, strictly speaking, \eqref{c4s1e5} is not a wave equation although
+the name `wave function' persists for its solution $\Psi$. It is closer to the
+heat equation than it is to a wave equation.
+\item The coefficient on the right hand side is an imaginary number. Therefore,
+it is not surprising that its solution $\Psi$ is complex valued.
+\item The only term in \eqref{c4s1e5} that is specific to a problem is the
+potential function $V$. The other terms never change.
+\item We remarked that $|\Psi|^2$ has an interpretation of a probability
+density function. Therefore, if we want to find the probability of finding
+a particle a region of volume $V$ then it is
+\begin{equation}\label{c4s1e6}
+P(V) = \int_V |\Psi|^2 dV.
+\end{equation}
+This statement is accurate only when 
+\begin{equation}\label{c4s1e7}
+\int_{-\infty}^\infty |\Psi|^2dV = 1.
+\end{equation}
+Such a function is said to be `normalised'. If a wave function is not normalised
+, that is, if
+\begin{equation}\label{c4s1e8}
+\int_{-\infty}^\infty |\Psi|^2dV = N,
+\end{equation}
+then we can alway consider the function
+\begin{equation}\label{c4s1e9}
+\Psi_1 = \frac{1}{\sqrt{N}}\Psi.
+\end{equation}
+We will show in the next problem set that $\Psi_1$ is also a solution of 
+\eqref{c4s1e5}. $\Psi_1$ is called the \emph{normalised} wave function and
+the number $1/\sqrt{N}$ is called the \emph{normalisation constant}.
+\end{enumerate}
+
+\subsection{Problem set 2}
+\begin{enumerate}
+\item Show that is $\Psi_1$ and $\Psi_2$ are two solutions of \eqref{c4s1e5} 
+then $\alpha_1\Psi_1 + \alpha_2\Psi_2$, where $\alpha_1$ and $\alpha_2$ are
+complex numbers, is also a solution. Therefore, show that \eqref{c4s1e9} is
+also a solution of \eqref{c4s1e5}.
+\end{enumerate}

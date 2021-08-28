@@ -136,4 +136,8 @@ dmypy.json
 **/*.out
 **/*.swp
 **/*.toc
+**/*.nav
+**/*.pdf
+**/*.snm
+**/*.vrb
 

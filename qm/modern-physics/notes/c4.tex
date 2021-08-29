@@ -99,7 +99,7 @@ $\Psi$ satisfies
 \begin{equation}\label{c4s1e5}
 -\frac{\hslash^2}{2m}\left(\frac{\partial^2\Psi}{\partial x^2} + 
 \frac{\partial^2\Psi}{\partial y^2} + \frac{\partial^2\Psi}{\partial z^2}
-\right) + V(x,y,z,t)\Psi = -i\hslash\frac{\partial\Psi}{\partial t}.
+\right) + V(x,y,z,t)\Psi = i\hslash\frac{\partial\Psi}{\partial t}.
 \end{equation}
 This is called the Schr\"{o}dinger equation. In this equation,
 \begin{enumerate}
@@ -152,3 +152,72 @@ then $\alpha_1\Psi_1 + \alpha_2\Psi_2$, where $\alpha_1$ and $\alpha_2$ are
 complex numbers, is also a solution. Therefore, show that \eqref{c4s1e9} is
 also a solution of \eqref{c4s1e5}.
 \end{enumerate}
+
+\section{Some solutions of Schr\"{o}dinger equation}\label{c4s2}
+Partial differential equations are, in general, much more difficult to solve 
+than ordinary differential equations. Schr\"{o}dinger equation is no exception.
+We will consider a few situations where an explicit, closed-form solution is
+available. In the previous section we remarked that the physics of a problem
+is in the choice of the potential function $V$. The situations we alluded to 
+are really the different choices of $V$.
+
+\subsection{The free particle}
+A free particle is the one not subject to any forces. Therefore, a convenient
+choice of $V$ is to set it to zero. Schr\"{o}dinger equation now becomes
+\begin{equation}\label{c4s2e1}
+-\frac{\hslash^2}{2m}\left(\frac{\partial^2\Psi}{\partial x^2} + 
+\frac{\partial^2\Psi}{\partial y^2} + \frac{\partial^2\Psi}{\partial z^2}
+\right) = i\hslash\frac{\partial\Psi}{\partial t}.
+\end{equation}
+Since the particle has no force acting on it, its energy does not change. If
+$E$ is its energy then we can write
+\begin{equation}\label{c4s2e2}
+\Psi(\vec{r}, t) = \psi(\vec{r})e^{-iEt/\hslash}.
+\end{equation}
+Substituting it in \eqref{c4s2e1} we get
+\begin{equation}\label{c4s2e3}
+-\frac{\hslash^2}{2m}e^{-iEt/\hslash}\left(\frac{\partial^2\psi}{\partial x^2} 
++ \frac{\partial^2\psi}{\partial y^2} + \frac{\partial^2\psi}{\partial z^2}
+\right) = E\psi(\vec{r})e^{-iEt/\hslash}.
+\end{equation}
+Cancelling the factor $e^{-iEt/\hslash}$ and rearranging a bit, we get
+\begin{equation}\label{c4s2e4}
+\frac{\partial^2\psi}{\partial x^2} 
++ \frac{\partial^2\psi}{\partial y^2} + \frac{\partial^2\psi}{\partial z^2} =
+-\frac{2mE}{\hslash^2}\psi.
+\end{equation}
+Since we chose $V = 0$, the particle has no potential energy. Its energy is 
+entirely kinetic. If $E$ is the kinetic energy then we know that the quantity
+$2mE$ is the square of momentum. The coefficient on the right hand side is
+\begin{equation}\label{c4s2e5}
+-\frac{2mE}{\hslash^2} = -\frac{p^2}{\hslash^2} = -k^2,
+\end{equation}
+where we have use the de Broglie relation,
+\begin{equation}\label{c4s2e6}
+p = \frac{h}{\lambda} = \frac{\hslash}{k}.
+\end{equation}
+Thus, the Schr\"{o}dinger equation simplifies to
+\begin{equation}\label{c4s2e7}
+\frac{\partial^2\psi}{\partial x^2} 
++ \frac{\partial^2\psi}{\partial y^2} + \frac{\partial^2\psi}{\partial z^2} =
+-k^2\psi.
+\end{equation}
+If we define the vector
+\begin{equation}\label{c4s2e8}
+\vec{k} = k_x\hat{i} + k_y\hat{j} + k_z\hat{k},
+\end{equation}
+and let
+\begin{equation}\label{c4s2e9}
+\psi(\vec{r}) = e^{i\vec{k}\cdot\vec{r}} = e^{i(k_xx+k_yy+k_zz)},
+\end{equation}
+then we can readily verify that $\psi$ defined in \eqref{c4s2e9} satisfies
+\eqref{c4s2e7}. Thus, the complete solution of equation \eqref{c4s2e1} is
+\begin{equation}\label{c4s2e10}
+\Psi(\vec{r}, t) = e^{i(\vec{k}\cdot\vec{r} - \omega t)},
+\end{equation}
+where we have used the relation
+\begin{equation}\label{c4s2e11}
+E = \hslash\omega.
+\end{equation}
+The solution of \eqref{c4s2e10} is called a plane wave solution. It can have 
+any value for its energy $E$.

@@ -92,7 +92,8 @@ A sound wave is described by the pressure fluctations it causes. de Broglie
 waves are described by the variations of a wave function $\Psi$. It could be a
 complex-valued function and therefore it does not have a physical interpretation
 by itself. However, its squared modulus $|\Psi|^2 = \Psi\Psi^\ast$ is the 
-probability density of finding at a particle at a point $(x, y, z)$ at time $t$.In particular, $|\Psi|^2 dV$ is the probability of finding a particle in a 
+probability density of finding at a particle at a point $(x, y, z)$ at time $t$.
+In particular, $|\Psi|^2 dV$ is the probability of finding a particle in a 
 small volume element $dV$ around the point $(x,y,z)$ at time $t$. The way the
 air pressure $p$ satisfies the equation \eqref{c4s1e3}, the wave function 
 $\Psi$ satisfies 
@@ -221,3 +222,200 @@ E = \hslash\omega.
 \end{equation}
 The solution of \eqref{c4s2e10} is called a plane wave solution. It can have 
 any value for its energy $E$.
+
+\subsection{Time-independent potentials}
+When $V$ is independent of time we can write
+\begin{equation}\label{c4s2e12}
+\Psi(\vec{r}, t) = \psi(\vec{r})\tau(t),
+\end{equation}
+where $\tau$ is a function of time alone. Equation \eqref{c4s1e5} becomes
+\begin{equation}\label{c4s2e13}
+\tau(t)\left[-\frac{\hslash^2}{2m}\left(\frac{\partial^2\psi}{\partial x^2} + 
+\frac{\partial^2\psi}{\partial y^2} + \frac{\partial^2\psi}{\partial z^2}
+\right) + V(x,y,z)\psi\right] = i\psi(\vec{r})\hslash\frac{d\tau}{dt}
+\end{equation}
+Divide both sides by $\Psi = \psi\tau$ to get
+\begin{equation}\label{c4s2e14}
+\frac{1}{\psi(\vec{r})}\left[-\frac{\hslash^2}{2m}\left(
+\frac{\partial^2\psi}{\partial x^2} + 
+\frac{\partial^2\psi}{\partial y^2} + \frac{\partial^2\psi}{\partial z^2}
+\right) + V(x,y,z)\psi\right] = \frac{i\hslash}{\tau(t)}\frac{d\tau}{dt}
+\end{equation}
+The left hand side of this equation depends on $\vec{r}$ alone and the 
+right hand side on $t$ alone. Therefore, each side must be a constant, say $E$.
+Thus, we get two equations
+\begin{equation}\label{c4s2e15}
+-\frac{\hslash^2}{2m}\left(\frac{\partial^2\psi}{\partial x^2} + 
+\frac{\partial^2\psi}{\partial y^2} + \frac{\partial^2\psi}{\partial z^2}
+\right) + V(x,y,z)\psi = E\psi
+\end{equation}
+and
+\begin{equation}\label{c4s2e16}
+\frac{1}{\tau}\frac{d\tau}{dt} = -i\frac{E}{\hslash}.
+\end{equation}
+Since $E$ is a constant, equation \eqref{c4s2e16} is particularly easy to
+solve. We see that
+\begin{equation}\label{c4s2e17}
+\tau(t) = \alpha e^{-iEt/\hslash},
+\end{equation}
+where $\alpha$ is a constant of integration that can be chosen while normalising
+the wavefunction.
+
+Equation \eqref{c4s2e15} is called  Schr\"{o}dinger time independent equation. 
+In this course, we will deal only with the situation when $V$ is independent of 
+$t$ and therefore we will focus on solving \eqref{c4s2e15}.
+
+\subsection{Particle in an infinite potential well}
+The free particle is a rather uninteresting. It does not have any features that
+are peculiar to a quantum system. We now consider a particles in a box. The box 
+prevents the particle from escaping and therefore one can consider it be 
+represented by an infinitely high potential wall. That is, it takes an infinte
+energy for the particle to escape it. Let us start with a one-dimensional case
+where the potential is defined by
+\begin{equation}\label{c4s2e18}
+V(x) = \begin{cases}
+0 \text{ if } -\frac{L}{2} \le x \le \frac{L}{2} \\
+\infty \text{ otherwise.}
+\end{cases}
+\end{equation}
+Within the confines of the box, the particle is free. Without, it cannot even 
+get. Therefore, we must solve  Schr\"{o}dinger's time independent equation only
+in the region
+\[
+-\frac{L}{2} \le x \le \frac{L}{2}.
+\]
+Since we are considering a one dimensional box, \eqref{c4s2e15} becomes
+\begin{equation}\label{c4s2e19}
+-\frac{\hslash^2}{2m}\frac{d^2\psi(x)}{dx^2} = E\psi(x).
+\end{equation}
+Let
+\begin{equation}\label{c4s2e20}
+k^2 = \frac{2mE}{\hslash^2}.
+\end{equation}
+$k$ is called the wave number and it is related to the momentum by the equation
+\begin{equation}\label{c4s2e21}
+p = \hslash k.
+\end{equation}
+In terms of $k$, equation \eqref{c4s2e19} becomes
+\begin{equation}\label{c4s2e22}
+\frac{d^2\psi(x)}{dx^2} + k^2\psi(x) = 0.
+\end{equation}
+One can check that the general solution of this ordinary differential equation 
+is
+\begin{equation}\label{c4s2e23}
+\psi(x) = \alpha e^{-ikx} + \beta e^{ikx},
+\end{equation}
+where $\alpha$ and $\beta$ are constants of integration. The infinite potential
+barrier of the box prevents the particle from escaping. Therefore, at the walls,
+the function $\psi$ must be zero. That is
+\begin{eqnarray}
+\psi\left(-\frac{L}{2}\right) &=& 0 \label{c4s2e24} \\
+\psi\left(\frac{L}{2}\right) &=& 0 \label{c4s2e25}
+\end{eqnarray}
+From \eqref{c4s2e23} and \eqref{c4s2e24} we have
+\[
+\alpha e^{ikL/2} + \beta e^{-ikL/2} = 0
+\]
+or that
+\begin{equation}\label{c4s2e26}
+\alpha = -\beta e^{-ikL}
+\end{equation}
+and hence equation \eqref{c4s2e23} becomes
+\begin{equation}\label{c4s2e27}
+\psi(x) = -\beta e^{-ikL}e^{-ikx} + \beta e^{ikx}.
+\end{equation}
+From \eqref{c4s2e25} and \eqref{c4s2e27},
+\[
+\psi\left(\frac{L}{2}\right) = -\beta e^{-3ikL/2} + \beta e^{ikL/2} = 
+-\beta e^{-ikL/2}(e^{-ikL} - e^{ikL}) = 0
+\]
+or
+\begin{equation}\label{c4s2e28}
+-2i\beta e^{ikL/2}\sin(kL) = 0
+\end{equation}
+which can be true only if
+\begin{equation}\label{c4s2e29}
+kL = n\pi, n = 0, \pm 1, \pm 2, \ldots.
+\end{equation}
+If $n = 0$ then $k = 0$ and from \eqref{c4s2e23} $\psi(x) = \alpha + \beta$. 
+Such a solution will not obey the boundary conditions \eqref{c4s2e24} and
+\eqref{c4s2e25} unless $\alpha = \beta = 0$. But this is a trivial solution
+indicating that there is no particle. Therefore, the only physically interesting
+values of $k$ are
+\begin{equation}\label{c4s2e30}
+k_n = \frac{n\pi}{L}, n = \pm 1, \pm 2, \ldots.
+\end{equation}
+As a result of this condition, we see that the momentum of the particle is
+restricted to
+\begin{equation}\label{c4s2e31}
+p_n = \frac{n\pi\hslash}{L}, n = \pm 1, \pm 2, \ldots.
+\end{equation}
+Thus, the particle's momentum is quantised. So is energy, as seen from
+\eqref{c4s2e20},
+\begin{equation}\label{c4s2e32}
+E_n = \frac{n^2\pi^2\hslash^2}{2mL^2}, n = \pm 1, \pm 2, \ldots.
+\end{equation}
+The different values of $n$ are the energy levels of the particle. If the 
+particle has to be pushed from a lower energy then it must be supplied with an
+energy equal to the difference between the two energy levels. On the other hand,
+when a particle makes a transition from a higher energy level to a lower on it
+emits a photon of frequency $\nu$ such that $\Delta E = h\nu$.
+
+Equations \eqref{c4s2e31} and \eqref{c4s2e32} indicate that both $p_n$ and
+$E_n$ increase with $n$. The lowest energy of the particle is
+\begin{equation}\label{c4s2e33}
+E_1 = \frac{\pi^2\hslash^2}{2mL^2}.
+\end{equation}
+The lowest energy of a classical particle is zero. It remains at rest in the 
+box. However, a quantum particle cannot be at rest because that would violate
+the uncertainty principle. 
+
+We still have not written the complete solution of the Schr\"{o}dinger equation
+\eqref{c4s2e22}. From \eqref{c4s2e27} and \eqref{c4s2e30}, we have
+\begin{equation}\label{c4s2e34}
+\psi_n(x) = \beta(e^{in\pi x/L} + (-1)^n e^{-in\pi x/L}).
+\end{equation} 
+We can write it in a simpler form
+\begin{equation}\label{c4s2e35}
+\psi_n(x) = \begin{cases}
+2\beta\cos\left(\frac{n\pi x}{L}\right) & \text{ if } n = \pm 2, \pm 4, \ldots\\
+2\beta\sin\left(\frac{n\pi x}{L}\right) & \text{ if } n = \pm 1, \pm 3, \ldots.
+\end{cases}
+\end{equation}
+The constant $\beta$ can be found using the normalisation condition
+\begin{equation}\label{c4s2e36}
+\int_{-L/2}^{L/2} |\psi_n(x)|^2dx = 1.
+\end{equation}
+The integration is quite straigtforward and we get
+\begin{equation}\label{c4s2e37}
+\beta = \frac{1}{\sqrt{2L}}.
+\end{equation}
+Thus, the complete solution is
+\begin{equation}\label{c4s2e38}
+\psi_n(x) = \begin{cases}
+\sqrt{\frac{2}{L}}\cos\left(\frac{n\pi x}{L}\right) & 
+   \text{ if } n = \pm 2, \pm 4, \ldots \\
+\sqrt{\frac{2}{L}}\sin\left(\frac{n\pi x}{L}\right) & 
+   \text{ if } n = \pm 1, \pm 3, \ldots.
+\end{cases}
+\end{equation}
+
+\subsection{Problem set 3}
+\begin{enumerate}
+\item Energy is indendepent of the sign of $n$, but momemtum is not. What is 
+the physical significance of the this observation?
+\item Choose any $n$, say $n = 4$, for which
+\[
+\psi_4(x) = \sqrt{\frac{2}{L}}\cos\left(\frac{4\pi x}{L}\right).
+\]
+At what $x$ is $\psi_4(x) = 0$? Points at which $\psi$ vanishes are called nodes.
+Thus, there are some points at which the particle just cannot be. This is another
+stark difference between the classical and the quantum particles.
+\item The normalisation condition is defined by \eqref{c4s1e7}. Why did we change
+the limits of integration from $\pm\infty$ to $\pm L/2$?
+\end{enumerate}
+
+\section{Operators and eigenvalues}\label{c4s3}
+The wavefunction $\Psi$ has the entire information about the quantum particle.
+If we know $\Psi$, we can find the particle's position, momentum, angular 
+momentum and energy. 

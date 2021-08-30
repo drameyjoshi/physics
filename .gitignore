@@ -140,4 +140,5 @@ dmypy.json
 **/*.pdf
 **/*.snm
 **/*.vrb
+**/*.synctex.gz
 

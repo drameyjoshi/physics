@@ -408,14 +408,70 @@ the physical significance of the this observation?
 \[
 \psi_4(x) = \sqrt{\frac{2}{L}}\cos\left(\frac{4\pi x}{L}\right).
 \]
-At what $x$ is $\psi_4(x) = 0$? Points at which $\psi$ vanishes are called nodes.
-Thus, there are some points at which the particle just cannot be. This is another
-stark difference between the classical and the quantum particles.
-\item The normalisation condition is defined by \eqref{c4s1e7}. Why did we change
-the limits of integration from $\pm\infty$ to $\pm L/2$?
+At what $x$ is $\psi_4(x) = 0$? Points at which $\psi$ vanishes are called 
+nodes.  Thus, there are some points at which the particle just cannot be. This 
+is another stark difference between the classical and the quantum particles.
+\item The normalisation condition is defined by \eqref{c4s1e7}. Why did we 
+change the limits of integration from $\pm\infty$ to $\pm L/2$?
 \end{enumerate}
 
 \section{Operators and eigenvalues}\label{c4s3}
 The wavefunction $\Psi$ has the entire information about the quantum particle.
 If we know $\Psi$, we can find the particle's position, momentum, angular 
-momentum and energy. 
+momentum and energy, up to a certain extent. We have learnt that 
+\begin{itemize}
+\item At an atomic scale, particles have a wavelike character and therefore
+do not have a precise position or momentum.
+\item Therefore, they cannot have precise angular momentum.
+\item Under some situations, they do have definite values of energy.
+\end{itemize}
+How to extract this information from the wavefunction $\Psi$? Dynamical 
+variables are represented by operators in quantum mechanics. An operator is
+something that maps one function to another. Some examples of operators in
+quantum mechanics are
+\begin{enumerate}
+\item The position operator is just $\hat{r}$. Its action on the wavefunction is
+\begin{equation}\label{c4e3e1}
+\hat{r}(\Psi) = \vec{r}\Psi.
+\end{equation}
+\item The momentum operator $\hat{p}$ is
+\begin{equation}\label{c4s3e2}
+\hat{p}(\Psi) = (i\hslash)\left(\vec{i}\frac{\partial}{\partial x} + 
+\vec{j}\frac{\partial}{\partial y} + \vec{k}\frac{\partial}{\partial z}
+\right)\Psi
+= i\hslash\nabla\Psi.
+\end{equation}
+\item The energy operator $\hat{E}$ is
+\begin{equation}\label{c4s3e3}
+\hat{E}(\psi) = i\hslash\frac{\partial\Psi}{\partial t}.
+\end{equation}
+\end{enumerate}
+When the potential energy is a function of $\vec{r}$ alone then the potential
+energy operator $\hat{V}(\vec{r})$ is
+\begin{equation}\label{c4s3e4}
+\hat{V}(\vec{r})(\Psi) = V(\vec{r})\Psi.
+\end{equation}
+The relation between kinetic energy and momentum is $T = p^2/(2m)$. Therefore,
+we can infer that the relationship between the operators is
+\begin{equation}\label{c4s3e5}
+\hat{T}(\Psi) = \frac{\hat{p}^2}{2m}(\Psi).
+\end{equation}
+Using \eqref{c4s3e2} we can easily infer that
+\begin{equation}\label{c4s3e6}
+\hat{T}(\Psi) = -\frac{\hslash^2}{2m}\left(\frac{\partial^2}{\partial x^2} 
++ \frac{\partial^2}{\partial y^2} + \frac{\partial^2}{\partial x^2}\right)
+(\Psi)
+\end{equation}
+The fact that total energy is the sum of kinetic and potential energies can be
+expressed in terms of operators are
+\begin{equation}\label{c4s3e7}
+\hat{E}(\Psi) = \hat{T}(\Psi) + \hat{V}(\Psi).
+\end{equation}
+Using equations \eqref{c4s3e3}, \eqref{c4s3e4} and \eqref{c4s3e6} we get
+\begin{equation}\label{c4s3e8}
+i\hslash\frac{\partial\Psi}{\partial t} = -\frac{\hslash^2}{2m}
+\left(\frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2} +
+ \frac{\partial^2}{\partial z^2}\right)\Psi + V(\vec{r})\Psi.
+\end{equation} 
+This is Schr\"{o}dinger equation. It is just an expression of the fact that the
+total energy is the sum of kinetic and potential energies.

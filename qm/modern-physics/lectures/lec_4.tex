@@ -1,0 +1,120 @@
+\documentclass{beamer}
+\usefonttheme[onlymath]{serif}
+\usepackage{graphicx,hyperref}
+\hypersetup{colorlinks,urlcolor=blue}
+\usetheme{Boadilla}
+
+\newcommand{\pvec}[1]{\vec{#1}\mkern2mu\vphantom{#1}}
+
+\title{Particle Properties of Waves}
+\author{Amey Joshi}
+\date{\today}
+
+\begin{document}
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}
+\frametitle{Particles and Waves}
+\begin{enumerate}
+\item A particle is a point mass with a precisely defined position and momentum.
+\item The dimensions of a particle are small compared to the other dimensions of
+the problem. The earth is a particle when one studies the solar system; not so
+when we study ocean currents.
+\item Waves are periodic changes in a physical quantity like the pressure, the
+strain, the position of fluid particles or electric/magnetic field strengths
+at a point.
+\item The two were known to be starkly different. Almost ...
+\item Light was thought to travel like particles in geometric optics but like
+a wave when one studies interference and diffraction.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Black body radiation - 1}
+\begin{enumerate}
+\item An ideal black body absorbs all radiation incident on it. It emits all
+radiation to maintain thermal equilibrium.
+\item We consider the spectral energy density of radiation emitted from a black
+body. Spectral energy density is the energy of radiation with wavelength between
+$\lambda$ and $\lambda + d\lambda$ per unit volume.
+\item The peak of the spectral energy density depends on the temperature of the
+black body. 
+\item The spectral density looks like 
+\href{https://www.britannica.com/science/blackbody}{this}.
+\item Read the temperatures, spot the maxima. Can you build a thermometer from
+ this plot?
+\item Classical physics could not explain the shape of the spectrum.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Black body radiation - 2}
+Radiation is trapped in the cavity in the form of standing waves. In a cubical
+cavity of length $L$, a standing wave will be formed parallel to $x$-axis if
+\begin{equation}\label{e1}
+L = n_x\frac{\lambda}{2}, n_x = 1, 2, \ldots
+\end{equation}
+In general, an arbitrary standing wave must obey 
+\begin{equation}\label{e2}
+n^2 = n_x^2 + n_y^2 + n_z^2 = \left(\frac{2L}{\lambda}\right)^2.
+\end{equation}
+The number of standing waves with wavelengths between $\lambda$ and $\lambda + 
+d\lambda$ in the first octant between radii $n$ and $n + dn$ is proportional to
+the volume of the region.
+\[
+\frac{1}{8} \times 4\pi n^2 dn = \frac{1}{2} \pi n^2 dn.
+\]
+But there are two polarisation modes. Therefore, the number of standing waves
+is twice this quantity,
+\begin{equation}\label{e3}
+G(n)dn = \pi n^2dn
+\end{equation}
+\end{frame}
+
+\begin{frame}
+\frametitle{Black body radiation - 3}
+From \eqref{e2} $n = 2L/\lambda = 2L\nu/c$. Therefore, equation \eqref{e3} 
+becomes
+\begin{equation}\label{e4}
+G(\nu)d\nu = \pi \frac{8L^3}{c^3}\nu^2 d\nu.
+\end{equation}
+The number of standing waves per unit volume, also called `density of states'
+is
+\begin{equation}\label{e5}
+g(\nu)d\nu = \frac{8\pi}{c^3}\nu^2 d\nu.
+\end{equation}
+Equivalently, since $g(\lambda)d\lambda = -g(\nu)d\nu$,
+\begin{equation}\label{e6}
+g(\lambda)d\lambda = \frac{8\pi}{\lambda^4} d\lambda.
+\end{equation}
+Nothing controversial so far. These calculations were done by Lord Rayleigh
+and Sir James Jeans.
+\end{frame}
+
+\begin{frame}
+\frametitle{Black body radiation - 4}
+\begin{enumerate}
+\item Lord Rayleigh assumed the classical equipartition theorem to conclude that
+the energy per mode is $kT$ and hence the spectral density is
+\begin{equation}\label{e7}
+u(\nu)d\nu = \frac{8\pi}{c^3} kT \nu^2 d\nu.
+\end{equation}
+\item $u(\nu) \Rightarrow \infty$ as $\nu \rightarrow \infty$. Not what you 
+saw experimentally.
+\item Max Planck proposed that energy can be exchanged only in packets of
+$h\nu$ and showed that the average energy should be
+\[
+\frac{h\nu}{\exp\left(\frac{h\nu}{kT}\right) - 1}
+\] 
+and hence the spectral density should be
+\begin{equation}\label{e8}
+u(\nu)d\nu = 
+   \frac{8\pi h\nu^3}{c^3}\frac{d\nu}{\exp\left(\frac{h\nu}{kT}\right) - 1}
+\end{equation}
+\end{enumerate}
+\end{frame}
+
+\end{document}
+

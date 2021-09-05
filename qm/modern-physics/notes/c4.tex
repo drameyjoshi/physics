@@ -475,3 +475,53 @@ i\hslash\frac{\partial\Psi}{\partial t} = -\frac{\hslash^2}{2m}
 \end{equation} 
 This is Schr\"{o}dinger equation. It is just an expression of the fact that the
 total energy is the sum of kinetic and potential energies.
+
+If $\hat{O}$ is an operator then an equation of the form
+\begin{equation}\label{c4s3e9}
+\hat{O}\Psi = \lambda\Psi,
+\end{equation}
+where $\lambda$ is a number, is called an `eigenvalue' equation. The number 
+$\lambda$ is an `eigenvalue` of the operator $\hat{O}$ and the function $\Psi$
+is its `eigenfunction'. An example of an eigenvalue equation is
+\begin{equation}\label{c4s3e10}
+-i\hslash \frac{d}{dx} e^{ikx} = \hslash k e^{ikx}.
+\end{equation}
+
+The total energy operator is called the Hamiltonian and is denoted by $\hat{H}$.
+It is named after the Irish physicist William Rowan Hamilton who gave an 
+alternative formulation of classical mechanics. Thus,
+\begin{equation}\label{c4s3e11}
+\hat{H} = \hat{T} + \hat{V} = -\frac{\hslash^2}{2m}\nabla^2 + V,
+\end{equation}
+where the symbol $\nabla^2$ stands for the Laplacian and is defined as
+\begin{equation}\label{c4s3e12}
+\nabla^2 = \frac{\partial^2}{\partial x^2} + 
+\frac{\partial^2}{\partial y^2} +  \frac{\partial^2}{\partial z^2}.
+\end{equation}
+
+\section{Postulates of quantum mechanics}\label{c4s5}
+Non-relativistic quantum mechanics of a single is based on the following 
+postulates.
+\begin{enumerate}
+\item The state of a quantum mechanical system of one particle is given by a
+wavefunction $\Psi(\vec{r}, t)$.
+\item A dynamical variable of classical mechanics is represented by a 
+(Hermitian) operator in quantum mechanics.
+\item The only values of an operator in a measurement are its eigenvalues.
+\item The state of a quantum mechanical system can be expressed as a linear
+combination of all the eigenfunctions of an operator. If $\hat{O}$ is an 
+operator with eigenvalue equations
+\begin{equation}\label{c4s3e11}
+\hat{O}\Psi_i = \lambda_i\Psi, i = 1, \ldots, n,
+\end{equation}
+and if $\Phi = c_1\Psi_1 + \cdots + c_n\Psi_n$ is an arbitrary normalised state
+then the probability of an experiment giving an eigenvalue $\lambda_i$ is
+\begin{equation}\label{c4s3e12}
+P(\lambda_i) = |c_i|^2.
+\end{equation}
+\item The wavefunction evolves according to the Schr\"{o}dinger equation.
+\end{enumerate}
+
+Note that we have chosen to restrict our attention to systems with just one
+particle. For some time to come, we will restrict ourselves only to these 
+systems.

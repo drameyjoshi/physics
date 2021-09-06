@@ -1,0 +1,206 @@
+\documentclass{beamer}
+\usefonttheme[onlymath]{serif}
+\usepackage{graphicx, hyperref}
+\hypersetup{colorlinks, urlcolor=blue}
+\usepackage{subcaption}
+\usetheme{Boadilla}
+
+\newcommand{\pvec}[1]{\vec{#1}\mkern2mu\vphantom{#1}}
+
+\title{Early Models of an Atom}
+\author{Amey Joshi}
+\date{\today}
+
+\begin{document}
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}
+\frametitle{Why bother to know them?}
+\begin{enumerate}
+\item They are chronicles of human's imagination to understand stuff beyond the
+senses.
+\item The imagination was subject to theoretical analysis and experimental 
+confirmation. This is what sets science apart from religion.
+\item As a bonus, we will get a glimpse of those parts of classical physics that 
+are too advanced to be studied in depth.
+\item Studying how models were proposed and discarded helps us understand how
+great science progresses.
+\item In the modern times, Sir J. J. Thomson was the first one to describe an 
+atom. He imagined it to be a continuous distribution of positive charge in which
+electrons were studded like plum pieces in a pudding.
+\item The ultimate arbiter of a theory/model is an experiment. Geiger and 
+Marsden performed a series of experiments between 1908 and 1913 which gave 
+strong evidence against Thomson's model. 
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{How to test Thomson's model?}
+\begin{enumerate}
+\item Thomson's atom was a continuous distribution of positive charge. 
+Therefore, if it were bombarded with another positive charge, that charge would
+be strongly repulsed.
+\item A collimated beam of $\alpha$-particles was let in an evacuated glass tube 
+at one end and detected at the opposite one. A sharp image of the slit was seen.
+\item Admission of a little air blurred the image; indicating scattering of 
+$\alpha$-particles.
+\item The tube was evacuated again and a very thin gold foil was fitted midway.
+The expectation was that no image should be formed. But a blurred image of the
+slit was seen on the detector. Some $\alpha$-particles were deflected at large
+angles.
+\item Qualitatively, a solid gold foil is no different from little air in the 
+tube.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Can that happen?}
+\begin{enumerate}
+\item An incident $\alpha$ particle can be scattered either by the electrons
+or the continuously smeared positive charge density.
+\item It was known that an $\alpha$ particle was much heavier than the electron.
+Therefore, by a rather elementary analysis of collisions, it can be shown that
+the angle of deflection of an $\alpha$ particle is close to zero. (Study the
+derivation of equation (3.1.8) in the notes.)
+\item If the number of electrons in an atom is $Z$ then the nucleus has a charge
+$Ze$. If the atom's radius is $R$ and the atom is spherical then using Gauss' 
+law we can show that the electric field at a point at a distance $r \le R$ from
+the atom's centre is (equation (3.1.11) in then notes)
+\begin{equation}\label{e1}
+\vec{E} = \frac{Ze}{4\pi\epsilon_0}\frac{r}{R^3}\hat{r}.
+\end{equation}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Can that happen? Continued ...}
+\begin{enumerate}
+\item The angle of deflection of an $\alpha$-particle with mass $m_1$ and 
+initial speed $v_1$ is (equation (3.1.14) in then notes)
+\begin{equation}\label{e2}
+\tan\theta = \frac{Ze^2}{\pi\epsilon_0 Rm_1v_1^2}.
+\end{equation}
+\item The $\alpha$-particles were let in at $v_1 = 2 \times 10^7$ ms${}^{-1}$.
+$Z = 79$ for gold. After plugging the rest of the constants we once again get
+a rather small value of $\theta$.
+\item If so many $\alpha$-particles made it to the other end then the gold 
+foil was largely porous. If so, what held the atoms together and why did not
+come closer still?
+\item If we ignore this objection and let the pores be, how come some $\alpha$
+particles were so strongly deflected?
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Rutherford's model}
+\begin{enumerate}
+\item Lord Rutherford proposed that an atom's positive charge is not smeared
+in a continuous distribution but is concentrated in a tiny nucleus.
+\item The electrons were thought to be moving around the nucleus like planets
+around the sun.
+\item Two very strong objections against this idea:
+\begin{enumerate}
+\item What holds so many positive charges together in such a tiny nucleus? 
+\item Why don't the electrons drop in the nucleus when they lose energy 
+continuously and quickly by radiation?
+\end{enumerate}
+\item Perhaps there is just a single positive charge $Ze$ that makes up the 
+nucleus. So we can ignore the first objection.
+\item Can we explain the large deflection of $\alpha$-particles by assuming that
+the entire positive charge is concentrated in a tiny nucleus?
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Rutherford's scattering formula}
+\begin{enumerate}
+\item Rutherford derived a formula to estimate the number $N$ of $\alpha$-
+particles scattered in a small interval around an angle $\phi$ when the flux
+of particles is $F$. The particles are detected a distance $s$ from incident 
+pencil of $\alpha$-particles. It is (equation (3.2.20) of the notes)
+\begin{equation}\label{e3}
+N(\phi) = \frac{FntZ^2e^4}{m^2v^4s^2}\csc^4\left(\frac{\phi}{2}\right).
+\end{equation}
+\item Here $t$ is the thickness of the gold foil, $n$ is the number of atoms
+per unit volume, $m$ is the mass of $\alpha$ particle, $v$ is the speed of an
+$\alpha$ particle and $Z = 79$ is the number of electron in a gold atom.
+\item Geiger and Marsden's experiments could be explained perfectly by equation
+\eqref{e3}.
+\item The experiments proved that an atom is largely void with almost all of its
+mass concentrated in a tiny nucleus.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{What about the electrons?}
+\begin{enumerate}
+\item An accelerated charge $e$ emits radiation at the rate
+\begin{equation}\label{e4}
+P_r = \frac{2}{3}\frac{e^2}{4\pi\epsilon_0}\frac{a^2}{c^3},
+\end{equation}
+where $a$ is the acceleration and $c$ is the speed of light in vacuum.
+\item Equation \eqref{e4} follows from classical electrodynamics and is verified
+by experiments.
+\item Electrons circling around the nucleus will soon lose energy and will be
+drawn to the positively charge nucleus, once again bringing back Thomson's model!
+\item Equation \eqref{e4} is a serious hurdle and there is absolutely nothing in
+classical physics hinting a way around.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Bohr model}
+Originally proposed for the simplest of all atoms, H. Based on two postulates:
+\begin{enumerate}
+\item An electron moves in circular orbits aroud the nucleus with the 
+centripetal acceleration caused by the electrostatic of the nucleus.
+\begin{equation}\label{e5}
+\frac{mv^2}{r_n} = \frac{1}{4\pi\epsilon_0}\frac{e^2}{r_n^2}.
+\end{equation} 
+\item An electron \emph{does not} radiate if its angular momentum is an integral
+multiple of $\hslash = h/(2\pi)$. That is,
+\begin{equation}\label{e6}
+mvr_n = n\frac{h}{2\pi}, n = 1, 2, \ldots
+\end{equation}
+\end{enumerate}
+The second postulate is outright arbitrary, awe-inspiring and fully justified by
+quantum mechanics to be developed 13 years later. Not only energy, but even 
+angular momentum is quantised.
+\end{frame}
+
+\begin{frame}
+\frametitle{Consequences of Bohr model}
+From equations \eqref{e5} and \eqref{e6} it is immediately evident that
+\begin{equation}\label{e7}
+r_n = \frac{n^2h^2\epsilon}{\pi me^2}.
+\end{equation}
+One can now compute the potential energy of the electron in the $n$th orbit and 
+hence get the total energy as
+\begin{equation}\label{e8}
+E_n = -\frac{me^4}{8n^2h^2\epsilon_0^2}.
+\end{equation}
+When an electron `falls' to an orbit $n_1$ from another orbit $n_2 > n_1$, it 
+emits a photon of energy $E = E_{n_2} - E_{n_1}$. The frequency of the emitted
+photon can be found using Planck's relation. Perfect explanation of the H-atom
+spectrum.
+\end{frame}
+
+\begin{frame}
+\frametitle{But ...}
+\begin{enumerate}
+\item Does not explain Zeeman and Stark effects.
+\item Does not tell anything about atoms with more than one electron.
+\item More disturbingly, the quantisation of angular momentum is hard to 
+understand.
+\item Arnold Sommerfeld tried to extend the Bohr model by allowing elliptical
+orbits and introducing newer conditions like quantisation of angular momentum
+but it was getting clear that the models were getting increasingly arbitrary.
+\item The final breakthrough came in 1925 and 1926. Heisenberg published the
+first paper on quantum mechanics in 1925. His techniques are now called `matrix
+mechanics'. Schr\"{o}dinger proposed yet another formulation in 1926, now called
+`wave mechanics'.
+\end{enumerate}
+\end{frame}
+\end{document}

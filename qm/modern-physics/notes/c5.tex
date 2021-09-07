@@ -1,0 +1,122 @@
+\chapter{Some more one dimensional problems}\label{c5}
+In the previous chapter we solved the Schr\"{o}dinger equation for two extreme
+situations, the free particle and a particle in an infinite potential well. In
+this chapter, we shall restrict ourselves to one dimensional problems so that
+Schr\"{o}dinger's time independent equation remains an ordinary differential
+equation. We will further consider only those problems where it is possible to
+obtain an exact, analytical solution.
+
+\section{Particle in a finite potential well}\label{c5s1}
+This problem is a minor, but an interesting, modification of the problem we
+considered in section \ref{c4s2}. The only change in the problem is the 
+potential,
+\begin{equation}\label{c5s1e1}
+V(x) = \begin{cases}
+0 & \text{ if } -L/2 \le x \le L/2 \\
+V & \text{ otherwise.}
+\end{cases}
+\end{equation}
+Schr\"{o}dinger's time independent equation in one dimension is
+\begin{equation}\label{c5s1e2}
+-\frac{\hslash^2}{2m}\frac{d^2\psi}{dx^2} + V(x)\psi = E\psi.
+\end{equation}
+In the region $-L/2 \le x \le L/2$, which is in the interior of the well,
+the equation becomes
+\begin{equation}\label{c5s1e3}
+-\frac{\hslash^2}{2m}\frac{d^2\psi}{dx^2} = E\psi
+\end{equation}
+while outside the well it is
+\begin{equation}\label{c5s1e4}
+-\frac{\hslash^2}{2m}\frac{d^2\psi}{dx^2} + V\psi = E\psi.
+\end{equation}
+We can rearrange \eqref{c5s1e3} as
+\begin{equation}\label{c5s1e5}
+\frac{d^2\psi}{dx^2} + k^2\psi = 0,
+\end{equation}
+where
+\begin{equation}\label{c5s1e6}
+k^2 = \frac{2mE}{\hslash^2}.
+\end{equation}
+The general solution of this equation is, 
+\begin{equation}\label{c5s1e7}
+\psi(x) = \alpha e^{-ikx} + \beta e^{ikx},
+\end{equation}
+where $\alpha$ and $\beta$ are constants of integration. Unlike the case of 
+an infinitely deep well, we do not have the boundary conditions like 
+\eqref{c4s2e24} and \eqref{c4s2e25}. In order to get an appropriate boundary
+condition we must solve the Schr\"{o}dinger equation \eqref{c5s1e4} in the 
+region outside the well. It can be rearranged as
+\begin{equation}\label{c5s1e8}
+\frac{d^2\psi}{dx^2} + \frac{2m(E - V)}{\hslash^2}\psi = 0.
+\end{equation}
+Let us consider the case $E < V$ in which the particle does not have enough
+energy to cross the potential well. Define
+\begin{equation}\label{c5s1e9}
+k_o^2 = \frac{2m(V - E)}{\hslash^2} > 0
+\end{equation}
+so that we can write \eqref{c5s1e8} as
+\begin{equation}\label{c5s1e10}
+\frac{d^2\psi}{dx^2} - k_o^2\psi = 0.
+\end{equation}
+The general solution of this equation is
+\begin{equation}\label{c5s1e11}
+\psi_o(x) = \alpha_0 e^{-k_ox} + \beta_o e^{k_ox}
+\end{equation}
+where $\alpha_o$ and $\beta_o$ are constants of integration. This solution
+indicates that the wavefunction of the particle is \emph{not zero} outside the
+potential well. It means that there is a non-zero probability of finding the
+particle outside the well in spite of the fact that the particle lacks the 
+energy to cross the potential barrier. This is one example of `quantum
+tunnelling', a phenonemon in which a particle appears in a position where no
+classical particle would.
+
+We would want the wave function of the particle to be continuous all 
+throughtout. Therefore, we insist that
+\begin{eqnarray}
+\psi_o\left(-\frac{L}{2}\right) &=& \psi\left(-\frac{L}{2}\right) 
+  \label{c5s1e12} \\
+\psi_o\left(\frac{L}{2}\right) &=& \psi\left(\frac{L}{2}\right) 
+  \label{c5s1e13} 
+\end{eqnarray}
+Further, we also want the solution to converge to zero as $x \rightarrow \pm
+\infty$. Therefore, the solution outside the box must be
+\begin{equation}\label{c5s1e14}
+\psi_o(x) = \begin{cases}
+\beta_o e^{k_ox} & \text{ if } x \le -L/2 \\
+\alpha_o e^{-k_ox} & \text{ if } x \ge L/2.
+\end{cases}
+\end{equation}
+From equations \eqref{c5s1e12}, \eqref{c5s1e13} and \eqref{c5s1e14} we get
+\begin{eqnarray}
+\beta_o e^{-k_oL/2} &=& \alpha e^{ikL/2} + \beta e^{-ikL/2} \label{c5s1e15} \\
+\alpha_o e^{-k_oL/2} &=& \alpha e^{-ikL/2} + \beta e^{ikL/2} \label{c5s1e16}
+\end{eqnarray}
+Equation \eqref{c5s1e2} is a second order equation. Therefore, we also insist
+on the continuity of the first derivative of $\psi$. We then get the pair of
+equations
+\begin{eqnarray}
+k_o\beta_o e^{-k_oL/2} &=& -ik\alpha e^{ikL/2} + ik\beta e^{-ikL/2} 
+   \label{c5s1e17} \\
+-k_o\alpha_o e^{-k_oL/2} &=& -ik\alpha e^{-ikL/2} + ik\beta e^{ikL/2}.
+   \label{c5s1e18}
+\end{eqnarray}
+Adding equations \eqref{c5s1e15} and \eqref{c5s1e16} we get
+\begin{equation}\label{c5s1e19}
+(\alpha_o + \beta_o)e^{-k_oL/2} = 2\cos\left(\frac{kL}{2}\right)(\alpha + \beta)
+\end{equation}
+while subtracting \eqref{c5s1e18} from \eqref{c5s1e17} gives
+\begin{equation}\label{c5s1e20}
+k_o(\alpha_o + \beta_o)e^{-k_oL/2} = -2\sin\left(\frac{kL}{2}\right)(\alpha +
+\beta).
+\end{equation}
+From equations \eqref{c5s1e19} and \eqref{c5s1e20} we get
+\begin{equation}\label{c5s1e21}
+k_o + \tan\left(\frac{kL}{2}\right) = 0.
+\end{equation}
+From equations \eqref{c5s1e6} and \eqref{c5s1e9} it is clear that the above
+equation is really a condition on the energy $E$, since the `depth' $V$ of the
+potential is a given quantity. Once again we observe that $E$ cannot take 
+arbitrary values but only those permitted by equation \eqref{c5s1e21}.
+
+\section{The harmonic oscillator}\label{c5s2}
+

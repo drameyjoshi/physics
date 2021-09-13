@@ -20,16 +20,158 @@
 \frametitle{Two formulations of Quantum Mechanics}
 \begin{enumerate}
 \item Werner Heisenberg gave the first formulation of a new mechanics in 1925 
-forelectrons in which dynamical variables were represented as matrices. It is 
+for electrons in which dynamical variables were represented as matrices. It is 
 called matrix mechanics.
 \item Erwin Schr\"{o}dinger gave an alternative formulation in 1926 in which
 the dynamical variables were represented as operators acting on a `wave 
 function'. The `wave function' itself obeyed a `wave equation'. It is called
 wave mechanics. He further showed that matrix mechanics and wave mechanics are
 equivalent.
-\item 
+\item We will study wave mechanics, that is, the wave equation, the wave 
+function and its consequences. For most practical calculations, wave mechanics
+is preferred over matrix mechanics.
+\item We will restrict ourselves to non-relativitistic quantum mechanics.
 \end{enumerate}
 \end{frame}
 
+\begin{frame}
+\frametitle{Schr\"{o}dinger equation - 1}
+\begin{enumerate}
+\item Matrix mechanics is largely a flash of insight; it is hard to imagine how
+Heisenberg must have thought about it. Schr\"{o}dinger, on the other hand, gave
+a plausible argument for his equation. Yet, we will take his equation as our
+postulate.
+\item The `unknown' in his equation is the wave function $\Psi(\vec{r}, t)$.
+\item The equation is
+\begin{equation}\label{e1}
+-\frac{\hslash^2}{2m}\nabla^2\Psi + V(\vec{t},t)\Psi(\vec{r}, t) = 
+i\hslash\frac{\partial\Psi}{\partial t},
+\end{equation}
+where
+\begin{equation}\label{e2}
+\nabla^2 = \frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2} + 
+\frac{\partial^2\Psi}{\partial z^2} 
+\end{equation}
+is called the Laplacian operator.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Schr\"{o}dinger equation - 2}
+\begin{enumerate}
+\item It is a linear partial differential equation. Linear means that if 
+$\Psi_1$ and $\Psi_2$ are any two solutions then so is $\alpha_1\Psi_1 + 
+\alpha_2\Psi_2$, where $\alpha_1, \alpha_2$ are complex constants.
+\item Note the presence if $i$ on the right hand side. In general, a solution
+of the Schr\"{o}dinger equation will be a complex-valued function.
+\item The equation in the form \eqref{e1} describes the time evolution of a 
+single particle system. When there a more particles, it is a bit different.
+\item Neither does the equation fit in the framework of the special theory of
+relativity. Yet, it suffices to a very large extent in molecular and solid
+state physics.
+\item The equation is usually solved using numerical techniques although exact, 
+analytical solutions can be found for a few simple situations.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{The wavefunction}
+\begin{enumerate}
+\item In equation \eqref{e1}, $V$ is the potential energy. This is the only term
+that changes from problem to problem.
+\item The solution $\Psi$ is expected to have a few properties like continuity,
+continuity of the first derivative and going to zero at infinity.
+\item The entire physics of the system is in the wave function. If you know it,
+you can calculate anything that can be measured about the system.
+\item Recall that $|\Psi(\vec{r}, t)|^2dV$ is the probability of finding the
+particle in a small volume element $dV$ around the point $\vec{r}$. In order
+to make this happen
+\begin{equation}\label{e3}
+\int_{-\infty}^\infty |\Psi|^2dV = 1
+\end{equation}
+must always be true. Supposing the right hand side was $N$ then use the wave
+function $\Psi/\sqrt{N}$. This is called a `normalised' wavefunction.
+\item We will always assume a normalised wavefunction.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Operators - 1}
+\begin{enumerate}
+\item An operator is something that takes a function and produces another one.
+If $\hat{O}$ is an operator then $\hat{O}f = g$, where $f$ and $g$ are 
+functions.
+\item If $f = \Psi(\vec{r},t)$, a few operators are
+\begin{eqnarray}
+\hat{O} &=& \alpha \in \mathbb{C} \label{e4} \\
+\hat{O} &=& x \label{e5} \\
+\hat{O} &=& \vec{r} \label{e6} \\
+\hat{O} &=& \frac{\partial}{\partial x} \label{e7} \\
+\hat{O} &=& -i\hslash\nabla \label{e8} \\
+\hat{O} &=& i\hslash\frac{\partial}{\partial t} \label{e9} \\
+\hat{O} &=& -\frac{\hslash^2}{2m}\nabla^2 \label{e10}
+\end{eqnarray}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Operators - 2}
+\begin{enumerate}
+\item Dynamical variables are represented as operators in quantum mechanics.
+Many operators in equations \eqref{e4} to \eqref{e10} represent important 
+dynamical variables.
+\item Do you understand the term dynamical variables?
+\item An equation of the form
+\begin{equation}\label{e11}
+\hat{O} f = \lambda f, \lambda \in \mathbb{C}
+\end{equation}
+is called an eigenvalue equation. $\lambda$ is the eigenvalue and $f$ is the
+eigenfunction. In general, there is a set (finite, countable or uncountable) of
+$\lambda$s.
+\item If $\hat{O}$ is a dynamical variable and if it satisfies \eqref{e11} then
+an experiment measuring the dynamical variable will record one of the 
+eigenvalues and nothing else.
+\item Operators and their eigenvalues have a great amount of physics in them.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Operators - 3}
+\begin{enumerate}
+\item Position is represented by $\vec{r}$, momentum by $-i\hslash\nabla$,
+energy by $i\hslash\partial/\partial t$.
+\item The operator representation of potential energy is same as itself.
+\item Kinetic energy is $T = p^2/2m$. Therefore, the corresponding operator is
+\begin{equation}\label{e12}
+\hat{T} = -\frac{\hslash^2}{2m}\nabla^2.
+\end{equation}
+\item The fact that total energy is the sum of kinetic and potential energies,
+that is $E = T + V$ is represented as
+\begin{equation}\label{e13}
+i\hslash\frac{\partial}{\partial t} = -\frac{\hslash^2}{2m}\nabla^2 + V.
+\end{equation} 
+\item The operator $\hat{T} + \hat{V}$ is denoted by $\hat{H}$, the Hamiltonian
+operator. Equation \eqref{e14} thus is
+\begin{equation}\label{e14}
+i\hslash\frac{\partial\Psi}{\partial t} = \hat{H}\Psi = 
+-\frac{\hslash^2}{2m}\nabla^2\Psi + V\Psi.
+\end{equation}
+Does this look familiar? 
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Operators - 4}
+\begin{enumerate}
+\item Operators do not always commute. $\hat{A}\hat{B} f \ne \hat{B}\hat{A} f$.
+\item The commutator is defined as $[\hat{A}, \hat{B}] = \hat{A}\hat{B} -
+\hat{B}\hat{A}$.
+\item Does the remind you of another mathematical object? Does it give you a
+hint of why Schr\"{o}dinger's and Heisenberg's formulations could be equivalent?
+\item The lack of commutativity has a very important relation with the 
+simultaneous measurement of the dynamical variables.
+\item This is another way to understand uncertainty relations.
+\end{enumerate}
+\end{frame}
 \end{document}
 

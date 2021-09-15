@@ -501,7 +501,7 @@ where the symbol $\nabla^2$ stands for the Laplacian and is defined as
 \frac{\partial^2}{\partial y^2} +  \frac{\partial^2}{\partial z^2}.
 \end{equation}
 
-\section{Postulates of quantum mechanics}\label{c4s5}
+\section{Postulates of quantum mechanics}\label{c4s4}
 Non-relativistic quantum mechanics of a single is based on the following 
 postulates.
 \begin{enumerate}
@@ -513,12 +513,12 @@ wavefunction $\Psi(\vec{r}, t)$.
 \item The state of a quantum mechanical system can be expressed as a linear
 combination of all the eigenfunctions of an operator. If $\hat{O}$ is an 
 operator with eigenvalue equations
-\begin{equation}\label{c4s3e13}
+\begin{equation}\label{c4s4e1}
 \hat{O}\Psi_i = \lambda_i\Psi, i = 1, \ldots, n,
 \end{equation}
 and if $\Phi = c_1\Psi_1 + \cdots + c_n\Psi_n$ is an arbitrary normalised state
 then the probability of an experiment giving an eigenvalue $\lambda_i$ is
-\begin{equation}\label{c4s3e14}
+\begin{equation}\label{c4s4e2}
 P(\lambda_i) = |c_i|^2.
 \end{equation}
 \item The wavefunction evolves according to the Schr\"{o}dinger equation.
@@ -528,3 +528,23 @@ Note that we have chosen to restrict our attention to systems with just one
 particle. For some time to come, we will restrict ourselves only to these 
 systems.
 
+\subsection{Problem set 4}
+\begin{enumerate}
+\item Many dynamical variables have a classical analogue. The operator for such
+variables is found by expressing these variables in terms of classical position
+and momentum and then replacing them by their operator representations. Using 
+this technique find the operators for the three coordinates of angular momentum.
+Recall that the angular momentum is defined as $\vec{L}=\vec{r}\times\vec{p}$.
+\item Using the expressions for $\hat{L}_x, \hat{L}_y$ and $\hat{L}_z$ obtained
+in the previous problem, show that
+\begin{eqnarray}
+{[}\hat{L}_x, \hat{L}_y] &=& i\hslash \hat{L}_z \label{c4s4e3} \\
+{[}\hat{L}_y, \hat{L}_z] &=& i\hslash \hat{L}_x \label{c4s4e4} \\
+{[}\hat{L}_z, \hat{L}_x] &=& i\hslash \hat{L}_y \label{c4s4e5}
+\end{eqnarray}
+\item The square magnitude of the angular momentum operator is represented by 
+the operator $\hat{L}^2 = \hat{L}_x^2 + \hat{L}_y^2 + \hat{L}_z^2$. Show that
+\begin{equation}\label{c4s4e6}
+[\hat{L}^2, \hat{L}_z] = 0.
+\end{equation}
+\end{enumerate}

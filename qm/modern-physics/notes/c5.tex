@@ -202,7 +202,165 @@ so that
 \end{equation}
 and hence the Schr\"{o}dinger's time independent equation $\hat{H}\psi = E\psi$
 is
-\begin{equation}\label{c5e2e12}
--\frac{\hslash^2}{2m}\frac{d^2\psi}{dx^2} + \frac{1}{2}m\omega^2\psi = E\psi.
+\begin{equation}\label{c5s2e12}
+-\frac{\hslash^2}{2m}\frac{d^2\psi}{dx^2} + \frac{1}{2}m\omega^2x^2\psi = E\psi.
 \end{equation}
+We can rearrange it as
+\begin{equation}\label{c5s2e13}
+\frac{d^2\psi}{dx^2} + \left(\frac{2mE}{\hslash^2} - \frac{m^2\omega^2x^2}{\hslash^2}\right)\psi = 0.
+\end{equation}
+Introduce a dimensionless variable
+\begin{equation}\label{c5s2e14}
+\xi = \sqrt{\frac{m\omega}{\hslash}}x
+\end{equation}
+so that
+\[
+\frac{d\psi}{dx} = \frac{d\psi}{d\xi}\frac{d\xi}{dx} = \sqrt{\frac{m\omega}{\hslash}}\frac{d\psi}{d\xi}
+\]
+and
+\[
+\frac{d^2\psi}{dx^2} = \frac{m\omega}{\hslash}\frac{d^2\psi}{d\xi^2}
+\]
+so that equation \eqref{c5s2e13} becomes
+\begin{equation}\label{c5s2e15}
+\frac{d^2\psi}{d\xi^2} + \left(\frac{2E}{\hslash\omega} - \xi^2\right)\psi = 0.
+\end{equation}
+Let
+\begin{equation}\label{c5s2e16}
+\alpha = \frac{2E}{\hslash\omega}
+\end{equation}
+so that equation \eqref{c5s2e15} becomes
+\begin{equation}\label{c5s2e17}
+\frac{d^2\psi}{d\xi^2} + (\alpha - \xi^2)\psi = 0.
+\end{equation}
+A standard way to solve equations like \eqref{c5s2e17} is to use Frobenius 
+method. It consists in expressing $\psi$ as a power series and finding a 
+recurrence relation among the series' coefficients. If we use it for 
+\eqref{c5s2e17} we get a three term recurrence relation, which is hard to solve.
+Instead we first try to guess the asymptotic form of the solution, that is, the
+form of the solution as $\xi \rightarrow \pm\infty$. In this limit, the equation
+\eqref{c5s2e17} can be approximated to
+\[
+\frac{d^2\psi}{d\xi^2} - \xi^2\psi = 0
+\]
+or, more conveniently,
+\[
+\frac{d^2\psi}{d\xi^2} - (\xi^2 - 1)\psi = 0.
+\]
+One can readily verify that the solution of this equation is $\psi(\xi) =
+e^{-\xi^2/2}$. Therefore, we express the solution of the original equation as
+\begin{equation}\label{c5s2e18}
+\psi(\xi) = e^{-\xi^2/2}H(\xi),
+\end{equation}
+where the function $H$ satisfies the equation
+\begin{equation}\label{c5s2e19}
+\frac{d^2H}{d\xi^2} - 2\xi\frac{dH}{d\xi} + (\alpha - 1)H(\xi) = 0.
+\end{equation}
+This equation is called as Hermite's differential equation and its solutions are
+called as Hermite polynomials. We will solve \eqref{c5s2e19} using Frobenius 
+method. Let
+\begin{equation}\label{c5s2e20}
+H(\xi) = \sum_{n \ge 0}a_n\xi^n
+\end{equation}
+so that
+\begin{eqnarray}
+H^\prime(\xi) &=& \sum_{n \ge 1}na_n \xi^{n-1} \label{c5s2e21} \\
+H^{\prime\prime}(\xi) &=& \sum_{n \ge 2}n(n-1)a_n \xi^{n-2} \label{c5s2e22}
+\end{eqnarray}
+Substituting \eqref{c5s2e20} to \eqref{c5s2e22} in \eqref{c5s2e19} we get
+\begin{equation}\label{c5s2e23}
+\sum_{n \ge 2}n(n-1)a_n \xi^{n-2} - 2\sum_{n \ge 1}na_n \xi^n + (\alpha - 1)
+\sum_{n \ge 0}a_n\xi^n = 0
+\end{equation}
+Writing all sums so that their indices start from $0$,
+\begin{equation}\label{c5s2e24}
+\sum_{n \ge 0}(n+2)(n+1)a_{n+2} \xi^n - 2\sum_{n \ge 0}(n+1)a_{n+1} \xi^{n+1} + 
+(\alpha - 1)\sum_{n \ge 0}a_n\xi^n = 0
+\end{equation}
+or
+\begin{equation}\label{c5s2e25}
+\sum_{n \ge 0}\left[(n+2)(n+1)a_{n+2} + (\alpha - 1)a_n\right]\xi^n - 
+2\sum_{n \ge 0}(n+1)a_{n+1} \xi^{n+1} = 0.
+\end{equation}
+If this equation has to be valid for all values of $\xi$ then the coefficient of
+every power of $\xi$ must vanish. In particular,
+\begin{equation}\label{c5s2e26}
+(n+2)(n+1)a_{n+2} + (\alpha - 1)a_n - 2na_n = 0
+\end{equation}
+or
+\begin{equation}\label{c5s2e27}
+a_{n+2} = \frac{2n - \alpha + 1}{(n+2)(n+1)}a_n.
+\end{equation}
+The recurrence relation terminates when
+\begin{equation}\label{c5s2e28}
+\alpha = 2n + 1
+\end{equation}
+or, using equation \eqref{c5s2e16}
+\begin{equation}\label{c5s2e29}
+E = \left(n + \frac{1}{2}\right)\hslash\omega.
+\end{equation}
+The only solutions that are physically permissible are the ones for which the
+recurrence terminates. For in this case, the series of \eqref{c5s2e20} becomes
+a polynomial and the complete solution \eqref{c5s2e18} does indeed assume the
+asymptotic form of $\psi(\xi) = e^{-\xi^2/2}$. The energy of the physically
+permissible solutions is restricted to the discrete set of values in equation
+\eqref{c5s2e29}. For a particular $n$, we distingush the energy eigenvalue by
+denoting it as $E_n$ and the corresponding polynomial as $H_n$. Thus, the 
+eigenfunctions of the Hamiltonian \eqref{c5s2e11} are
+\begin{equation}\label{c5s2e30}
+\psi_n(\xi) = e^{-\xi^2/2}H_n(\xi)
+\end{equation}
+and the corresponding eigenvalues are
+\begin{equation}\label{c5s3e31}
+E_n = \left(n + \frac{1}{2}\right)\hslash\omega,
+\end{equation}
+where $n = 0, 1, 2, \ldots$. The lowest energy of a harmonic oscillator is
+\begin{equation}\label{c5s3e32}
+E_0 = \frac{1}{2}\hslash\omega.
+\end{equation}
+It is \emph{not} zero. Thus, a quantum harmonic oscillator is never at rest. If 
+it were then it would have violated Heisenberg's uncertainty relation. We also 
+note that
+\begin{equation}\label{c5s2e33}
+E_{n+1} - E_n = \hslash\omega.
+\end{equation}
+Thus, when a harmonic oscillator goes from the ground state of $n = 0$ to the 
+first excited state of $n = 1$, it absorbs an energy $\hslash\omega$. When it
+goes to the second exsited state, it would have absorbed two quanta, each one 
+of energy $\hslash\omega$. In general, when the harmonic oscillator is in the
+$m$th excited state, it would have absorbed $m$ quanta of energy $\hslash
+\omega$.
 
+It is possible to consider a crystal as an ensemble (the French word for a 
+collection) of harmonic oscillators of various frequencies. An individual
+harmonic oscillator corresponds to energy quanta of a specific frequency. In
+the case of a vibrating crystal, the energy quanta are called \emph{phonons}.
+A crystal has $m_1$ phonons of frequency $\omega_1$ if the harmonic oscillator
+with frequency $\omega_1$ is in the energy state $E_{m_1} = (m_1 + 1/2)\hslash
+\omega_1$.
+
+The harmonic oscillator we considered so far was a mass $m$ that was subject to
+a force $-kx$ and we showed that its Hamiltonian is given by equation 
+\eqref{c5s2e7}
+\[
+H = \frac{p^2}{2m} + \frac{1}{2}kx^2.
+\]
+If we choose our units such that $m = 1$ and $k = 1$ and we start calling the 
+coordinate $x$ as $q$ then the Hamiltonian can be written as
+\begin{equation}\label{c5s2e34}
+H = \frac{p^2}{2} + \frac{q^2}{2}.
+\end{equation}
+Any system whose Hamiltonian can be written in this form is called a harmonic
+oscillator. The quantities $p$ and $q$ are called generalised momentum and 
+generalised coordinate. It is possible to write the Hamiltonian of 
+electromagnetic radiation in a black body as a sum of terms of the form 
+\eqref{c5s2e34}. Analogous to a vibrating crystal, the electromagnetic radiation
+in a black body can also be considered to be an ensemble of harmonic oscillators
+of various frequencies. The energy quanta of these oscillators are called
+\emph{photons}. If an oscillator of frequency $\omega_1$ is in the $m_1$th
+excited state then we say that there are $m_1$ photons of frequency $\omega_1$
+in the black body. 
+
+When one utters the word  `photon' or a `phonon' we should interpret it in terms
+of the excited state of an ensemble of oscillators. We should not visualise them 
+as `particles' of light or sound.

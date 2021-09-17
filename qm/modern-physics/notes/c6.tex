@@ -224,9 +224,23 @@ The squared modulus solution of \eqref{c6s1e6} is the probability density
 function of finding an electron in the atom. Although the mathematical forms 
 of the wave-function and its modulus are quite formidable their plots are quite
 familiar to us. The figure \ref{c6f1} labels the probability densities by the
-tripe $(n, l, m_l)$ of the quantum numbers. Wave functions with different values
-of $l$ are called orbitals. The orbitals with $l = 0$ have a spherical symmetry.
-They are called s-orbitals. The ones with $l = 1$ are called the p-orbitals. 
+triple $(n, l, m_l)$ of the quantum numbers. Wave functions with different 
+values of $l$ are called orbitals. The orbitals with $l = 0$ have a spherical 
+symmetry.  They are called s-orbitals. Observe the one with $n=2$. The orbital 
+has minumum, between two maxima of unequal sizes. The surfaces in which the 
+orbitals are zero are called nodal surfaces. Thus, the $2s$ orbital has a nodal 
+surface between the two maxima. The orbitals with $l = 1$ are called the p-
+orbitals. They have two lobes separated by a nodal plane. The orbitals with 
+$l = 2$ are called d-orbitals and those with $l = 3$ are called f-orbitals. 
+They have far more complicated shapes. Their shapes play an important role in 
+inorganic chemistry, especially of the transition elements.
+
+The diagram in figure \ref{c6f1} also gives an expression for the wavefunction.
+The variable $\rho$ in it is the ratio $r/a_0$, where $a_0$ is the radius of the
+first Bohr orbit. The factor $e^{-\rho}$ ensures that the wavefunction goes to
+zero away from the nucleus. The angular distribution of the orbitals is 
+determined solely by the spherical harmonics and the radial distribution by the
+associated Laguerre polynomials (and $e^{-\rho}$).
 \begin{figure}
 \begin{center}
 \includegraphics[scale=0.20]{Hydrogen_Density_Plots}
@@ -234,3 +248,25 @@ They are called s-orbitals. The ones with $l = 1$ are called the p-orbitals.
 \label{c6f1}
 \end{center}
 \end{figure}
+
+\subsection{Problem set 2}
+\begin{enumerate}
+\item Based on your understanding of the solutions of the $r, \theta$ and 
+$\phi$ equations show that the $|\psi|^2$ is independent of the azimuthal angle
+$\phi$. How do you decide where the $z$-axis is?
+\item The wavefunction for the $n=1, l=0, m_l=0$ is
+\begin{equation}\label{c6s3e6}
+\psi_{1,0,0}(r,\theta,\phi) = \frac{e^{-r/a_0}}{\sqrt{pi}a_0^{3/2}}.
+\end{equation}
+Let $P(r)$ be the probability density of finding an electron in the thin 
+spherical shell with radii $r$ and $r + dr$. Then,
+\begin{equation}\label{c6s3e7}
+P(r) = \int_0^{\pi}\int_0^{2\pi}|\psi_{1,0,0}^2|^2r^2\sin\theta d\theta d\phi.
+\end{equation}
+Show that
+\begin{equation}\label{c6s3e8}
+P(r) = \frac{4r^2 e^{-r/a_0}}{a_0^3}.
+\end{equation}
+Hence show that $P$ has a maximum at $r = a_0$, where $a_0$ is the radius of the
+first Bohr orbit.
+\end{enumerate}

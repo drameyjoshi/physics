@@ -379,7 +379,7 @@ We can write it in a simpler form
 \begin{equation}\label{c4s2e35}
 \psi_n(x) = \begin{cases}
 2\beta\cos\left(\frac{n\pi x}{L}\right) & \text{ if } n = \pm 2, \pm 4, \ldots\\
-2\beta\sin\left(\frac{n\pi x}{L}\right) & \text{ if } n = \pm 1, \pm 3, \ldots.
+2i\beta\sin\left(\frac{n\pi x}{L}\right) & \text{ if } n = \pm 1, \pm 3, \ldots.
 \end{cases}
 \end{equation}
 The constant $\beta$ can be found using the normalisation condition
@@ -395,7 +395,7 @@ Thus, the complete solution is
 \psi_n(x) = \begin{cases}
 \sqrt{\frac{2}{L}}\cos\left(\frac{n\pi x}{L}\right) & 
    \text{ if } n = \pm 2, \pm 4, \ldots \\
-\sqrt{\frac{2}{L}}\sin\left(\frac{n\pi x}{L}\right) & 
+\sqrt{\frac{2}{L}}i\sin\left(\frac{n\pi x}{L}\right) & 
    \text{ if } n = \pm 1, \pm 3, \ldots.
 \end{cases}
 \end{equation}
@@ -501,6 +501,18 @@ where the symbol $\nabla^2$ stands for the Laplacian and is defined as
 \frac{\partial^2}{\partial y^2} +  \frac{\partial^2}{\partial z^2}.
 \end{equation}
 
+\subsection{Problem set 4}
+\begin{enumerate}
+\item Let $\hat{A}$ and $\hat{B}$ be commute. That is, let $\hat{A}\hat{B} =
+\hat{B}\hat{A}$. Show that if $f$ is an eigenfunction of $A$ then it is also an
+eigenfunction of $\hat{B}$.
+\item Eigenvalues of an operator are the only possible outcomes of an experiment
+measuring the dynamical variable that the operator represents. From this fact 
+and the previous problem conclude that if two operators commute then they can
+be measured simultaneously.
+\item Find $[\hat{x}, \hat{p}_x]$. Can they be measured simultaneously?
+\end{enumerate}
+
 \section{Postulates of quantum mechanics}\label{c4s4}
 Non-relativistic quantum mechanics of a single is based on the following 
 postulates.
@@ -528,7 +540,7 @@ Note that we have chosen to restrict our attention to systems with just one
 particle. For some time to come, we will restrict ourselves only to these 
 systems.
 
-\subsection{Problem set 4}
+\subsection{Problem set 5}
 \begin{enumerate}
 \item Many dynamical variables have a classical analogue. The operator for such
 variables is found by expressing these variables in terms of classical position

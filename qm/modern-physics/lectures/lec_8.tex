@@ -1,0 +1,200 @@
+\documentclass{beamer}
+\usefonttheme[onlymath]{serif}
+\usepackage{graphicx, hyperref}
+\hypersetup{colorlinks, urlcolor=blue}
+\usepackage{subcaption}
+\usetheme{Boadilla}
+
+\newcommand{\pvec}[1]{\vec{#1}\mkern2mu\vphantom{#1}}
+
+\title{1-d problems}
+\author{Amey Joshi}
+\date{\today}
+
+\begin{document}
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}
+\frametitle{Schr\"{o}dinger's time independent equation}
+\begin{enumerate}
+\item Schr\"{o}dinger's equation is
+\begin{equation}\label{e1}
+-\frac{\hslash^2}{2m}\nabla^2\Psi + V(\vec{r},t)\Psi = i\hslash
+\frac{\partial\Psi}{\partial t}.
+\end{equation}
+\item When $V$ is independent of $t$, one can write $ \Psi(\vec{r}, t) = 
+\psi(\vec{r})e^{iEt/\hslash}$ where the function $\psi$ satisfies the 
+Schr\"{o}dinger's time independent equation
+\begin{equation}\label{e2}
+-\frac{\hslash^2}{2m}\nabla^2\psi + V(\vec{r})\psi = E\psi.
+\end{equation}
+\item In terms of the Hamiltonian, we can write \eqref{e3} as
+\begin{equation}\label{e3}
+\hat{H}\psi = E\psi.
+\end{equation}
+\item Equation \eqref{e3} is an eigenvalue equation. $E$ is the eigenvalue of
+the Hamiltonian. From now on, we shall mean \eqref{e3} when we refer to 
+Schr\"{o}dinger equation.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{What are 1-d problems}
+\begin{enumerate}
+\item $\psi$ and $V$  depend on only $x$. Equation \eqref{e2} simplifies to
+\begin{equation}\label{e4}
+-\frac{\hslash^2}{2m}\frac{d^2\psi}{dx^2} + V(x)\psi = E\psi.
+\end{equation}
+\item This is a second order ordinary differential equation. It is easier to
+solve than the partial differential equation \eqref{e2}.
+\item $\psi$ is required to satisfy:
+\begin{enumerate}
+\item Continuity and continnuity of the first derivative. Technically, a member
+of the class $C^1$.
+\item $\psi \rightarrow 0$ as $x \rightarrow \pm\infty$. We expect the particle
+to be in a finite region.
+\end{enumerate}
+Usually, these conditions suffice to solve the problem.
+\item We will solve \eqref{e4} for a few simple cases.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Particle in a 1-d box}
+\begin{enumerate}
+\item The potential is defined by
+\begin{equation}\label{e5}
+V(x) = \begin{cases} 0 & \text{ if } -L/2 \le x \le L/2 \\
+\infty & \text{ otherwise.}
+\end{cases}
+\end{equation}
+\item Particle cannot escape from the box.
+\item In the box's interior, the Schr\"{o}dinger's equation takes a simple
+form
+\begin{equation}\label{e6}
+\psi^{\prime\prime} + k^2\psi = 0,
+\end{equation}
+where
+\begin{equation}\label{e7}
+k^2 = \frac{2mE}{\hslash^2}.
+\end{equation}
+\item Can you quickly solve this equation?
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Particle in a 1-d box}
+\begin{enumerate}
+\item General solution is $\psi(x) = \alpha e^{-ikx} + \beta e^{ikx}$.
+\item Boundary conditions $\psi(-L/2) = \psi(L/2) - 0$. Why?
+\item Boundary conditions require that $2i\beta e^{ikL/2}\sin(kL) = 0$, which is
+true if and only if
+\begin{equation}\label{e8}
+kL = n\pi, n = 0, \pm 1, \pm 2, \ldots.
+\end{equation}
+\item If $n = 0, k = 0$ and $\psi(x) = \alpha + \beta$. What does this result 
+in?
+\item Exclude $k = 0$. That gives us
+\begin{equation}\label{e9}
+p = \frac{nh}{2L}, n = \pm 1, \pm 2, \ldots.
+\end{equation}
+Momentum is quantised. So is energy $E = p^2/2m$ or
+\begin{equation}\label{e10}
+E = \frac{n^2h^2}{8mL^2}, n = \pm 1, \pm 2, \ldots.
+\end{equation}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Particle in a 1-d box}
+\begin{enumerate}
+\item This is not an artificial problem. Semiconductor quantum wells are 
+modelled as particles in a box.
+\item Electrons in long chained molecules are sometimes treated as particles in
+a box, although the model is not great because there is never a single electron.
+\item Contrast the quantum mechanical situation with the classical one. In
+the classical case, all energies and momenta a permitted.
+\item Note that in equations \eqref{e9} and \eqref{e10}, $n \ne 0$. The energy
+and momentum of a particle is never zero. Can you interpret this fact from the
+point of view of the uncertainty principle?
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Particle in a finite potential well}
+\begin{enumerate}
+\item Let's make the problem a little more realistic and express the potential
+as
+\begin{equation}\label{e11}
+V(x) = \begin{cases} 0 \text{ if } -L/2 \le x \le L/2 \\
+ V \text{ otherwise.}
+\end{cases}
+\end{equation}
+\item The Schr\"{o}dinger equation is
+\begin{equation}\label{e12}
+-\frac{\hslash^2}{2m}\frac{d^2\psi}{dx^2} = E\psi
+\end{equation}
+inside the well and
+\begin{equation}\label{e13}
+-\frac{\hslash^2}{2m}\frac{d^2\psi}{dx^2} + V\psi = E\psi.
+\end{equation}
+outside the well.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Particle in a finite potential well}
+\begin{enumerate}
+\item The solution in the well is
+\begin{equation}\label{e14}
+\psi(x) = \alpha e^{-ikx} + \beta e^{ikx} 
+\end{equation}
+where $\alpha$ and $\beta$ are constants of integration and 
+\begin{equation}\label{e15}
+k^2 = \frac{2mE}{\hslash^2}.
+\end{equation}
+\item Assume $E < V$, that is, the particle does not have enough energy to cross
+the barrier. Then, the equation outside the box is
+\begin{equation}\label{e16}
+k_o^2 = \frac{2m(V - E)}{\hslash^2} > 0
+\end{equation}
+and Schr\"{o}dinger equation is
+\begin{equation}\label{e17}
+\psi_o(x) = \alpha_o e^{-k_ox} + \beta_o e^{k_ox},
+\end{equation}
+$\alpha_o, \beta_o$ being constants of integration.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Particle in a finite potential well}
+\begin{enumerate}
+\item The wave function is \emph{not} zero outside the box. 
+\item The particle has a non-zero probability of being found in a region where
+$E < V$.
+\item If the potential barrier were a narrow region, the particle would pierce
+through the barrier and emerge out of the box. This is the phenomenon of
+quantum tunnelling.
+\item The tunnel diode exploits the tunneling phenomenon in the lower voltage
+region when forward biased. Beyond a certain point, as the forward voltage
+increases, tunneling ceases to happen and the current drops despite a rise
+in voltage giving rise to a `negative resistance'.
+\item Also used in scanning tunnelling microscope which can produce images of
+atomic sized features.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Particle in a finite potential well}
+A few points to ponder upon
+\begin{enumerate}
+\item In equation \eqref{e16}, we assumed $E < V$. What will happen if $V > E$.
+\item Do you expect the energy and momentum to be quantized?
+\item How will you ensure the continuity of the wave function?
+\item How will you solve the problem of a particle in a three dimensional box?
+\end{enumerate}
+\end{frame}
+
+\end{document}

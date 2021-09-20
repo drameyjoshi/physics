@@ -1,0 +1,177 @@
+\documentclass{beamer}
+\usefonttheme[onlymath]{serif}
+\usepackage{graphicx, hyperref}
+\hypersetup{colorlinks, urlcolor=blue}
+\usepackage{subcaption}
+\usetheme{Boadilla}
+
+\newcommand{\pvec}[1]{\vec{#1}\mkern2mu\vphantom{#1}}
+
+\title{The Harmonic Oscillator}
+\author{Amey Joshi}
+\date{\today}
+
+\begin{document}
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}
+\frametitle{The Classical Harmonic Oscillator}
+\begin{enumerate}
+\item A mass $m$ is attached to a spring whose one end is fixed. It is pulled
+slightly from its equilibrium position. The restoring force is proportional to
+the extension and is directed against the extension.
+\item Thus, $F = -kx$, $k$ is a constant of proportionality, called the spring
+constant.
+\item Newton's second law is $m\ddot{x} = -kx$ or $\ddot{x} + \omega^2 x = 0$
+where
+\begin{equation}\label{e1}
+\omega^2 = \frac{k}{m}.
+\end{equation}
+\item The solution of the equation of motion is
+\begin{equation}\label{e2}
+x(t) = \alpha e^{i\omega t} + \beta e^{-i\omega t}
+\end{equation}
+where $\alpha, \beta$ are constants of integration, determined from the initial
+conditions. $\omega$ is the angular frequency.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{The Classical Harmonic Oscillator}
+\begin{enumerate}
+\item One can as well write \eqref{e2} as
+\begin{equation}\label{e3}
+x(t) = (\alpha + \beta)\cos\omega t + i(\alpha - \beta)\sin\omega t.
+\end{equation}
+The displacement $x$ thus varies sinusoidally.
+\item The potential energy of the oscillator is $kx^2/2$ and the kinetic energy
+is, as usual, $p^2/(2m)$. It can be shown that
+\begin{equation}\label{e4}
+\frac{1}{2}kx^2 + \frac{p^2}{2m} = E,
+\end{equation}
+is a constant. $E$ is called the total energy of the system.
+\item The energy $E$ can take any non-negative value, that is, $E \ge 0$.
+\item If $E = 0$ then $x = 0$ and $p = 0$. That is, the particle is at rest.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{The Quantum Harmonic Oscillator}
+\begin{enumerate}
+\item Equation \eqref{e4} suggests that the Hamiltonian is
+\begin{equation}\label{e5}
+\hat{H} = \frac{1}{2}k\hat{x}^2 + \frac{\hat{p}^2}{2m}.
+\end{equation}
+so that the Schr\"{o}dinger equation $\hat{H}\psi = E\psi$ is
+\begin{equation}\label{e6}
+-\frac{\hslash^2}{2m}\frac{d^2\psi}{dx^2} + \frac{1}{2}kx^2\psi = E\psi.
+\end{equation}
+\item We rearrange this equation to get
+\begin{equation}\label{e7}
+\frac{d^2\psi}{dx^2} + \left(\frac{2mE}{\hslash^2} - 
+\frac{m^2\omega^2 x^2}{\hslash^2}\right)\psi = 0.
+\end{equation}
+\item Solving this equation is not a trivial affair, but neither is it very 
+hard. 
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{The Quantum Harmonic Oscillator}
+\begin{enumerate}
+\item In the Lagrangian and the Hamiltonian formulation of classical mechanics
+it is customary to denote the coordinate as $q$. Therefore, the expression for
+the total energy, \eqref{e4}, is written as
+\begin{equation}\label{e8}
+\frac{1}{2}kq^2 + \frac{p^2}{2m} = E.
+\end{equation}
+\item The total energy of many systems can be written as 
+\begin{equation}\label{e9}
+aq^2 + bp^2 = E,
+\end{equation}
+where $a$ and $b$ are constants specific to the system. Any system whose energy
+can be written in the form of \eqref{e9} is called a harmonic oscillator. If
+the energy is written as a sum of terms, each of the form \eqref{e9}, the system
+can be considered as an \emph{ensemble} of harmonic oscillators.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{The Quantum Harmonic Oscillator}
+\begin{enumerate}
+\item A harmonic oscillator is not a `toy' example in quantum mechanics. 
+\item Sidney Coleman, an American theoretical physicist, one remarked that 
+``Quantum field theory is harmonic motion taken to increasing levels of 
+abstraction''. We are not even scratching the surface in this course.
+\item Standing electromagnetic waves in a cavity and a lattice of nuclei in a
+crystal can both be considered as an ensemble of quantum harmonic oscillators.
+\item There are two ways of solving this very important problem in quantum 
+mechanics. The traditional way is to solve the differential equation \eqref{e7}
+using the Frobenius series solution method. We will follow that one.
+\item The modern method expresses the Schr\"{o}dinger equation as an expression
+of `creation' and `annihilation' operators. These quantum mechanical operators
+do not have classical analogues.
+\item The modern method is algebraically easy but conceptually harder.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{The solution}
+\begin{enumerate}
+\item The solution of \eqref{e7} is
+\begin{equation}\label{e10}
+\psi_n(\xi) = N_ne^{-\xi^2/2}H_n(\xi),
+\end{equation}
+where $N_n$ is the normalisation constant,
+\begin{equation}\label{e11}
+\xi = \sqrt{\frac{m\omega}{\hslash}}x.
+\end{equation}
+and $n = 0, 1, 2, \ldots.$.
+\item Unsurprisingly, the energy cannot take any positive value but is 
+restricted to
+\begin{equation}\label{e12}
+E_n = \left(n + \frac{1}{2}\right)\hslash\omega.
+\end{equation}
+\item The lowest energy state is $n = 0$ with energy $E_0 = \hslash\omega/2$.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Photons}
+\begin{enumerate}
+\item $E_{n+1} - E_n = \hslash\omega/2$ for all $n$. The energy levels are 
+equally spaced.
+\item Recall our discussion on blackbody radiation. The cavity of the blackbody
+had standing waves of all possible wavelengths. A standing wave of a particular
+wavelength corresponds to a single harmonic oscillator. If there are $N$ photons
+of this wavelength then the corresponding oscillator has energy $(N + 1/2)
+\hslash\omega$. It is said to have $N$ photons.
+\item Electromagnetic radiation can always be written as a Fourier series of
+pure sine waves. Each sine wave can be looked upon as an oscillator of that
+frequency. 
+\item An oscillator corresponds to the state of a photon; the state is described
+in terms of the frequency. It \emph{does not} correspond to the photon. Its
+energy state tells how many photons are there.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Phonons}
+\begin{enumerate}
+\item A crystal lattice is a set of ions/radicals bound together by chemical
+bonds. The ions/radicals vibrate about their mean positions. The lattice is
+thus a large number of coupled oscillators.
+\item It is possible to consider them as an ensemble of uncoupled oscillators
+of various frequencies. We once again have a large number of harmonic 
+oscillators. 
+\item If the harmonic oscillator of a frequency $\omega$ is in the energy state
+$E_N = (N + 1/2)\hslash\omega$ then we say that there are $N$ phonons.
+\item Phonons are quanta of acoustic radiation the way photons are quanta of 
+electromagnetic radiation.
+\item In either cases, the energy is exchanged only in quanta of $h\nu = 
+\hslash\omega$.
+\end{enumerate}
+\end{frame}
+\end{document}

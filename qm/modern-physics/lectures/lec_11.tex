@@ -1,0 +1,63 @@
+\documentclass{beamer}
+\usefonttheme[onlymath]{serif}
+\usepackage{graphicx, hyperref}
+\hypersetup{colorlinks, urlcolor=blue}
+\usepackage{subcaption}
+\usetheme{Boadilla}
+
+\newcommand{\pvec}[1]{\vec{#1}\mkern2mu\vphantom{#1}}
+
+\title{The Atomic Spectra}
+\author{Amey Joshi}
+\date{\today}
+
+\begin{document}
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}
+\frametitle{The spin}
+\begin{enumerate}
+\item Consider a problem in classical physics. A point charge $q$ is moving in a
+circle of radius $r$ with a frequency $f$. It makes a current $I = qf$.
+\item A current carrying loop has a magnetic moment $\mu = IA$ where $A$ is the
+area of the loop. In this case, $\mu = \pi qfr^2$ or
+\begin{equation}\label{e1}
+\mu = \frac{q}{2}\omega r^2.
+\end{equation}
+\item If the mass of the charged particle is $m$ then its angular momentum is
+\begin{equation}\label{e2}
+L = m\omega r^2.
+\end{equation}
+\item From equations \eqref{e1} and \eqref{e2} it is clear that $\mu=\gamma L$,
+where
+\begin{equation}\label{e3}
+\gamma = \frac{q}{2m}
+\end{equation}
+is called the gyromagnetic ratio of the charged particle.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{The spin}
+\begin{enumerate}
+\item There is a close relationship between magnetic moment and angular momentum
+in classical physics. It is much deeper in quantum physics.
+\item Some particles have an intrinsic magnetic moment. It is their fundamental
+property the way their mass and electric charge are.
+\item Particles with an intrinsic magnetic moment can be considered to also have
+an intrinsic angular momentum. Intrinsic angular momentum is called the spin.
+\item The quantum mechanical generalisation of the classical relation $\mu = 
+\gamma L$ is
+\begin{equation}\label{e1}
+\mu = g\gamma S,
+\end{equation}
+where $\gamma$ is given by \eqref{e3} and the constant $g$ is called the $g$-
+factor. It is (very close to) $2$ for an electron. $S$ is the spin angular 
+momentum.
+\item Uncharged particles like the photon and the neutrino also have a spin that 
+is unrelated to magnetic moment.
+\end{enumerate}
+\end{frame}
+\end{document}

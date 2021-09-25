@@ -1,0 +1,120 @@
+\documentclass{beamer}
+\usefonttheme[onlymath]{serif}
+\usepackage{graphicx, hyperref}
+\hypersetup{colorlinks, urlcolor=blue}
+\usepackage{subcaption}
+\usetheme{Boadilla}
+
+\newcommand{\pvec}[1]{\vec{#1}\mkern2mu\vphantom{#1}}
+
+\title{The Hydrogen Atom}
+\author{Amey Joshi}
+\date{\today}
+
+\begin{document}
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}
+\frametitle{The Hamiltonian}
+\begin{enumerate}
+\item We consider the simplest Hamiltonian by ignoring
+\begin{enumerate}
+\item the nuclear motion
+\item the magnetic field of the nucleus
+\item relativistic effects
+\end{enumerate}
+and include only the electrostatic potential between the proton and the 
+electron
+\begin{equation}\label{e1}
+V(r) = -\frac{1}{4\pi\epsilon_0}\frac{e^2}{r}.
+\end{equation}
+\item Therefore, the Hamiltonian is
+\begin{equation}\label{e2}
+\hat{H} = -\frac{\hslash^2}{2m}\nabla^2 - 
+\frac{1}{4\pi\epsilon_0}\frac{e^2}{r}
+\end{equation}
+\item The Schr\"{o}dinger equation is
+\begin{equation}\label{e3}
+-\frac{\hslash^2}{2m}\nabla^2\psi - 
+\frac{1}{4\pi\epsilon_0}\frac{e^2}{r}\psi = E\psi
+\end{equation}
+where $\psi$ is a function of $x, y, z$.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{How to solve it?}
+\begin{enumerate}
+\item The problem has a spherical symmetry. The potential $V$ depens on $r$ and
+not the angles.
+\item Easier to solve in spherical polar coordinates.
+\item The boundary condition now becomes $\psi \rightarrow 0$ as $r \rightarrow 
+\infty$. It depends on only the distance, not the angles.
+\item The differential operator now becomes
+\begin{equation}\label{e4}
+\nabla^2 = \frac{1}{r^2}
+\frac{\partial}{\partial r}\left(r^2\frac{\partial}{\partial r}\right) +
+\frac{1}{r^2\sin\theta}\frac{\partial}{\partial\theta}\left(\sin\theta\frac{
+\partial}{\partial\theta}\right) + \frac{1}{r^2\sin\theta}\frac{\partial^2}
+{\partial\phi^2}.
+\end{equation}
+\item Looks far more complicated than in Cartesian coordinates. It is 
+deceptively complicated.
+\item Allows the technique of `separation of variables'.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{How to solve it?}
+\begin{enumerate}
+\item $\psi$ is now a function of $r, \theta, \phi$.
+\item Write $\psi(r, \theta, \phi) = R(r)\Theta(\theta)\Phi(\phi)$.
+\item The partial differential equations gives three ordinary differential 
+equations
+\begin{eqnarray}
+\frac{d^2\Phi}{d\phi^2} + m_l^2\Phi &=& 0 \label{e5} \\
+-\frac{1}{\Theta\sin\theta}\frac{d}{d\theta}
+\left(\sin\theta\frac{d\Theta}{d\theta}\right) +\frac{m_l^2}{\sin^2\theta} &=& 
+\beta \label{e6} \\
+\frac{1}{R}\frac{d}{dr}\left(r^2\frac{dR}{dr}\right) +
+\frac{2m}{\hslash^2}\left(E + \frac{1}{4\pi\epsilon_0}\frac{e^2}{r}\right)r^2&=&
+\beta, \label{e7}
+\end{eqnarray}
+where $m_l^2$ and $\beta$ are constants.
+\item For the solution to be finite, $\beta = l(l+1)$ where $l$ is a non-negative
+integer.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{The solution}
+\begin{enumerate}
+\item The $\theta$ and $\phi$ equations are independent of the potential energy.
+\item $\Theta$ is an associated Legendre polynomial, $R$ is an associated 
+Laguerre polynomial and $\Phi = e^{im_l\phi}/\sqrt{2\pi}$.
+\item $E$ is a part of the $r$ equation alone. All spherically symmetric 
+potentials have the same structure.
+\item A solution exists for all $E \ge 0$ but if $E < 0$ then it exists only if
+\begin{equation}\label{e8}
+E = E_n = -\frac{me^4}{8n^2h^2\epsilon_0^2},
+\end{equation}
+where the positive integer $n$ is called the principal quantum number. This is 
+same as the Bohr model.
+\item The probability density is independent of $\phi$.
+
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{The quantum numbers}
+\begin{enumerate}
+\item The number $l$ is called the orbital quantum number and it is restricted
+to be less then $n$.
+\item The number $m_l$ is called the magnetic quantum number and it is restricted
+to $-l \le m_l \le l$.
+\item This equation does not give us information about the spin quantum number.
+\end{enumerate}
+\end{frame}
+\end{document}

@@ -24,7 +24,7 @@ The spherical symmetry of the problem suggests that we should work in the
 spherical polar coordinate system. The Laplacian in these coordinates is
 \begin{equation}\label{c6s1e4}
 \nabla^2 = \frac{1}{r^2}\frac{\partial}{\partial r}
-\left(r\frac{\partial}{\partial r}\right) + 
+\left(r^2\frac{\partial}{\partial r}\right) + 
 \frac{1}{r^2\sin\theta}\frac{\partial}{\partial\theta}
 \left(\sin\theta\frac{\partial}{\partial\theta}\right) + 
 \frac{1}{r^2\sin^2\theta}\frac{\partial^2}{\partial\phi^2}
@@ -37,7 +37,7 @@ variables'. We write
 so that equation \eqref{c6s1e3} becomes
 \begin{eqnarray}
 -\frac{\hslash^2}{2m}\left[
-\frac{\Theta\Phi}{r^2}\frac{d}{dr}\left(r\frac{dR}{dr}\right) +
+\frac{\Theta\Phi}{r^2}\frac{d}{dr}\left(r^2\frac{dR}{dr}\right) +
 \frac{R\Phi}{r^2\sin\theta}\frac{d}{d\theta}
 \left(\sin\theta\frac{d\Theta}{d\theta}\right) + 
 \frac{R\Theta}{r^2\sin^2\theta}\frac{d^2\Phi}{d\phi^2}\right] &=& \nonumber \\ 
@@ -50,7 +50,7 @@ Multiplying both sides by
 \]
 and rearranging a bit, we get
 \begin{equation}\label{c6s1e7}
-\frac{\sin^2\theta}{R}\frac{d}{dr}\left(r\frac{dR}{dr}\right) +
+\frac{\sin^2\theta}{R}\frac{d}{dr}\left(r^2\frac{dR}{dr}\right) +
 \frac{\sin\theta}{\Theta}\frac{d}{d\theta}
 \left(\sin\theta\frac{d\Theta}{d\theta}\right) +
 \frac{2m}{\hslash^2}\left(E + \frac{e^2}{4\pi\epsilon_0 r}\right)
@@ -79,7 +79,7 @@ so that we get
 \end{equation}
 and
 \begin{equation}\label{c6s1e12}
-\frac{\sin^2\theta}{R}\frac{d}{dr}\left(r\frac{dR}{dr}\right) +
+\frac{\sin^2\theta}{R}\frac{d}{dr}\left(r^2\frac{dR}{dr}\right) +
 \frac{\sin\theta}{\Theta}\frac{d}{d\theta}
 \left(\sin\theta\frac{d\Theta}{d\theta}\right) +
 \frac{2m}{\hslash^2}\left(E + \frac{e^2}{4\pi\epsilon_0r}\right)
@@ -92,15 +92,15 @@ The solution of the equation \eqref{c6s1e11} is
 where $\alpha_1$ and $\alpha_2$ are constants of integration. Since $\Phi(\phi)
 = \Phi(\phi + 2\pi)$ $m_l$ must be an integer. We can therefore write the 
 solution \eqref{c6s1e13} as just
-\begin{equation}\label{c6s1e13}
+\begin{equation}\label{c6s1e14}
 \Phi_{m_l}(\phi) = \alpha_1 e^{im_l\phi}
 \end{equation}
 as the other factor is automatically included in the first one. $m_l$ is called
 the \emph{magnetic quantum number} and it is an integer. In order to separate 
 equation \eqref{c6s1e12}, divide both sides by $\sin^2\theta$ and rearrange a 
 bit to get
-\begin{equation}\label{c6s1e14}
-\frac{1}{R}\frac{d}{dr}\left(r\frac{dR}{dr}\right) +
+\begin{equation}\label{c6s1e15}
+\frac{1}{R}\frac{d}{dr}\left(r^2\frac{dR}{dr}\right) +
 \frac{2m}{\hslash^2}\left(E + \frac{1}{4\pi\epsilon_0}\frac{e^2}{r}\right)r^2 =
 -\frac{1}{\Theta\sin\theta}\left(\sin\theta\frac{d\Theta}{d\theta}\right) +
 \frac{m_l^2}{\sin^2\theta}.
@@ -115,7 +115,7 @@ so that each side is a constant, say $\beta$. Thus, we have
 \end{equation}
 and
 \begin{equation}\label{c6s1e17}
-\frac{1}{R}\frac{d}{dr}\left(r\frac{dR}{dr}\right) +
+\frac{1}{R}\frac{d}{dr}\left(r^2\frac{dR}{dr}\right) +
 \frac{2m}{\hslash^2}\left(E + \frac{1}{4\pi\epsilon_0}\frac{e^2}{r}\right)r^2 =
 \beta.
 \end{equation}
@@ -188,8 +188,8 @@ in quantum mechanics with a rich theory which explains its quantization in a
 very natural way. We will not discuss it in this course and instead restrict
 our analysis to hydrogen atom alone.
 
-Since $\beta = l(l+1)$, we can rearrange equations \eqref{c6s1e6} and \eqref{
-c6s1e7} as 
+Since $\beta = l(l+1)$, we can rearrange equations \eqref{c6s1e6} and 
+\eqref{c6s1e7} as 
 \begin{eqnarray}
 \frac{1}{\sin\theta}\frac{d}{d\theta}
 \left(\sin\theta\frac{d\Theta}{d\theta}\right) + 
@@ -256,7 +256,7 @@ $\phi$ equations show that the $|\psi|^2$ is independent of the azimuthal angle
 $\phi$. How do you decide where the $z$-axis is?
 \item The wavefunction for the $n=1, l=0, m_l=0$ is
 \begin{equation}\label{c6s3e6}
-\psi_{1,0,0}(r,\theta,\phi) = \frac{e^{-r/a_0}}{\sqrt{pi}a_0^{3/2}}.
+\psi_{1,0,0}(r,\theta,\phi) = \frac{e^{-r/a_0}}{\sqrt{\pi}a_0^{3/2}}.
 \end{equation}
 Let $P(r)$ be the probability density of finding an electron in the thin 
 spherical shell with radii $r$ and $r + dr$. Then,

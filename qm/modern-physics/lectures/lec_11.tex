@@ -138,8 +138,60 @@ in a hydrogen atom is also quantised.
 \end{frame}
 
 \begin{frame}
+\frametitle{The magnetic quantum number}
+\begin{enumerate}
+\item The orbital quantum number gives the magnitude of the electron's angular
+momentum. Thus, $L = \sqrt{l(l + 1)}\hslash$.
+\item The magnetic quantum number gives the z-component of the angular momentum.
+That is, $L_z = m_l\hslash$. 
+\item Since $L_z = L\cos\theta$, we see that
+\begin{equation}\label{e10}
+\cos\theta = \frac{m_l}{\sqrt{l(l + 1)}}.
+\end{equation}
+Thus, the angle $\theta$ between $L_z$ and $L$ can take only a certain values. 
+This is sometimes called `space quantisation'.
+\item The same is true for $\mu$ and $\mu_z$.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Magnetic dipole in a magnetic field}
+\begin{enumerate}
+\item A magnetic dipole of moment $\vec{\mu}$ in a magnetic field $\vec{B}$ 
+experiences a torque $\vec{\mu} \times \vec{B}$ and has a potential energy
+$U_m = -\vec{\mu}\cdot\vec{B}$.
+\item The z-axis is aligned parallel to $\vec{B}$ so that $U_m=-\mu\cos\theta B
+= -\mu_z B$.
+\item For an electron $\gamma = -e/(2m)$ so that $\mu_z = \gamma L_z$ or
+\begin{equation}\label{e11}
+U_m = -\frac{e}{2m}m_l\hslash.
+\end{equation}
+\item In (an electric dipole) radiative transition $\Delta m_l = 0, \pm 1$.
+Therefore, the change in energy only because of change in $m_l$ is
+\begin{equation}\label{e12}
+\Delta U_m = -\frac{e}{2m}\Delta m_l\hslash.
+\end{equation}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
 \frametitle{Zeeman effect}
 \begin{enumerate}
+\item A single line corresponding to an energy difference $E$ now splits into 
+three, corresponding to energies 
+\[
+E - \frac{e}{2m}m_l\hslash, E, E + \frac{e}{2m}m_l\hslash.
+\]
+\item This is the `normal' Zeeman effect. While it is observed for some 
+transitions, more often than not, it a single line is observed to split into
+more than three lines.
+\item Often times, a single line is observed to consist of two closely spaced
+lines. This was observed by Michelson in the late 1800s and is called the 
+`fine structure' of the hydrogen spectrum.
+\item It can be partially explained by the electron's spin. The electron is in
+the magnetic field (?) of the nucleus. Having a magnetic moment of its own, it 
+itself can exist in two closely separated energy levels depending on whether it
+aligns with or against the magnetic field.
 \end{enumerate}
 \end{frame}
 \end{document}

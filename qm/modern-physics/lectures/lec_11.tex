@@ -17,22 +17,82 @@
 \end{frame}
 
 \begin{frame}
+\frametitle{Radiative transitions}
+\begin{enumerate}
+\item The eigenfunctions of the hydrogen's Hamiltonian are stationary states.
+They do not radiate.
+\item Consider a transition between state $\psi_1$ with energy $E_1$ to another
+state $\psi_2$ with energy $E_2$. During the transition, the electron is in the
+superposed state $\psi = \alpha\psi_1 + \beta\psi_2$.
+\item The time dependent wavefunction is $\Psi = \alpha\psi_1 e^{-iE_1t/\hslash}
++ \beta\psi_2 e^{-iE_2t/\hslash}$
+\item The expectation value of the position in the superposed state is
+\begin{equation}\label{e1}
+\langle\vec{r}\rangle = \int_{-\infty}^\infty \Psi\vec{r}\Psi^\ast dV.
+\end{equation}
+\item As $\psi_1$ and $\psi_2$ are normalised,
+\begin{equation}\label{e2}
+\langle\vec{r}\rangle = |\alpha|^2 + |\beta|^2 + 2\Re\left[\alpha\beta^\ast
+\int_{-\infty}^\infty\psi_1^\ast\psi_2 dV\right]e^{-i(E_1 - E_2)t/\hslash}.
+\end{equation}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Radiative transitions}
+\begin{enumerate}
+\item This is an oscillatory motion with frequency $\omega = (E_1-E_2)/\hslash$.
+\item The energy is radiated as a photon of energy $E_1 - E_2$.
+\item This argument is semi-classical. The assumption that a charged particle
+oscillating at frequency $\omega$ emits radiation of the same frequency follows
+from classical electrodynamics.
+\item Quantum electrodynamics provides the full explanation of radiative 
+transitions.
+\item The amplitude of the emitted radiation depends on the factor
+\begin{equation}\label{e3}
+\int_{-\infty}^\infty\psi_1^\ast\psi_2 dV.
+\end{equation}
+\item It is zero unless $\Delta l = \pm 1$ and $\Delta m_l = 0, \pm 1$. These
+equations are called \emph{selection rules}.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Radiative transitions}
+\begin{enumerate}
+\item Transitions between states that do not follow the selection rules are 
+forbidden.
+\item The rule $\delta l = \pm 1$ follows from the conservation of angular
+momentum. The change in electron's angular momentum is accounted by the
+emitted photon's angular momentum.
+\item Electronic transition that are analysed by considering the integral in
+equation \eqref{e2} are called electric dipole transitions. The selection rules
+$\Delta l = \pm 1$ and $\Delta m_l = 0, \pm 1$ are applicable only to these 
+transitions.
+\item There are magnetic dipole, electric and magnetic quadrupole, electric
+and magnetic octupole transitions as well. They have their own selection rules.
+\item We have had just a glimpse of the fascinating subject of spectroscopy - an
+extremely valuable experimental tool to characterize materials.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
 \frametitle{The spin}
 \begin{enumerate}
 \item Consider a problem in classical physics. A point charge $q$ is moving in a
 circle of radius $r$ with a frequency $f$. It makes a current $I = qf$.
 \item A current carrying loop has a magnetic moment $\mu = IA$ where $A$ is the
 area of the loop. In this case, $\mu = \pi qfr^2$ or
-\begin{equation}\label{e1}
+\begin{equation}\label{e4}
 \mu = \frac{q}{2}\omega r^2.
 \end{equation}
 \item If the mass of the charged particle is $m$ then its angular momentum is
-\begin{equation}\label{e2}
+\begin{equation}\label{e5}
 L = m\omega r^2.
 \end{equation}
-\item From equations \eqref{e1} and \eqref{e2} it is clear that $\mu=\gamma L$,
+\item From equations \eqref{e4} and \eqref{e5} it is clear that $\mu=\gamma L$,
 where
-\begin{equation}\label{e3}
+\begin{equation}\label{e6}
 \gamma = \frac{q}{2m}
 \end{equation}
 is called the gyromagnetic ratio of the charged particle.
@@ -50,14 +110,36 @@ property the way their mass and electric charge are.
 an intrinsic angular momentum. Intrinsic angular momentum is called the spin.
 \item The quantum mechanical generalisation of the classical relation $\mu = 
 \gamma L$ is
-\begin{equation}\label{e1}
+\begin{equation}\label{e7}
 \mu = g\gamma S,
 \end{equation}
 where $\gamma$ is given by \eqref{e3} and the constant $g$ is called the $g$-
 factor. It is (very close to) $2$ for an electron. $S$ is the spin angular 
 momentum.
-\item Uncharged particles like the photon and the neutrino also have a spin that 
-is unrelated to magnetic moment.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{The spin}
+\begin{enumerate}
+\item Uncharged particles like the photon and the neutrino also have a spin 
+without having a magnetic moment.
+\item The classical relation $\mu = \gamma L$ is valid for orbital angular 
+momentum. Note that magnetic moment and angular momentum are both vectors.
+Therefore, we should be using
+\begin{eqnarray}
+\vec{\mu} &=& \gamma\vec{L} \label{e8} \\
+\vec{\mu} &=& g\gamma\vec{S} \label{e9}
+\end{eqnarray}
+\item An electron's spin is always quantised. The angular momentum of an 
+electron in a hydrogen atom is also quantised. Therefore, $\mu$ of an electron
+in a hydrogen atom is also quantised.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Zeeman effect}
+\begin{enumerate}
 \end{enumerate}
 \end{frame}
 \end{document}

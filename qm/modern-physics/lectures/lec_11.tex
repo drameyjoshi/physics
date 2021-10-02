@@ -31,10 +31,13 @@ superposed state $\psi = \alpha\psi_1 + \beta\psi_2$.
 \langle\vec{r}\rangle = \int_{-\infty}^\infty \Psi\vec{r}\Psi^\ast dV.
 \end{equation}
 \item As $\psi_1$ and $\psi_2$ are normalised,
-\begin{equation}\label{e2}
-\langle\vec{r}\rangle = |\alpha|^2 + |\beta|^2 + 2\Re\left[\alpha\beta^\ast
-\int_{-\infty}^\infty\psi_1^\ast\psi_2 dV\right]e^{-i(E_1 - E_2)t/\hslash}.
-\end{equation}
+\begin{eqnarray}
+\langle\vec{r}\rangle &=& |\alpha|^2\int_{-\infty}^{\infty}\vec{r}|\psi_1|^2dV +
+|\beta|^2\int_{-\infty}^{\infty}\vec{r}|\psi_2|^2dV + \nonumber \\
+ & & 2\Re\left[\alpha\beta^\ast
+\int_{-\infty}^\infty\vec{r}\psi_1^\ast\psi_2 dV\right]e^{-i(E_1 - E_2)t/\hslash} 
+\label{e2}.
+\end{eqnarray}
 \end{enumerate}
 \end{frame}
 
@@ -164,12 +167,12 @@ $U_m = -\vec{\mu}\cdot\vec{B}$.
 = -\mu_z B$.
 \item For an electron $\gamma = -e/(2m)$ so that $\mu_z = \gamma L_z$ or
 \begin{equation}\label{e11}
-U_m = -\frac{e}{2m}m_l\hslash.
+U_m = \frac{e}{2m}m_l\hslash B.
 \end{equation}
 \item In (an electric dipole) radiative transition $\Delta m_l = 0, \pm 1$.
 Therefore, the change in energy only because of change in $m_l$ is
 \begin{equation}\label{e12}
-\Delta U_m = -\frac{e}{2m}\Delta m_l\hslash.
+\Delta U_m = \frac{e}{2m}\Delta m_l\hslash B.
 \end{equation}
 \end{enumerate}
 \end{frame}

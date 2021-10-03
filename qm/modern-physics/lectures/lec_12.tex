@@ -1,0 +1,113 @@
+\documentclass{beamer}
+\usefonttheme[onlymath]{serif}
+\usepackage{graphicx, hyperref}
+\hypersetup{colorlinks, urlcolor=blue}
+\usepackage{subcaption}
+\usetheme{Boadilla}
+
+\newcommand{\pvec}[1]{\vec{#1}\mkern2mu\vphantom{#1}}
+
+\title{The Molecules}
+\author{Amey Joshi}
+\date{\today}
+
+\begin{document}
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}
+\begin{enumerate}
+\frametitle{Many-electron systems}
+\item The spin is a separate degree of freedom. The wavefunction $\psi$ depends
+on $\vec{r}$ alone. We need another function $s$ to denote spin. It is a 2-row
+column matrix in non-relativistic quantum mechanics. The complete, time 
+independent wave function is, therefore, $\psi(\vec{r})s$.
+\item When there are two electrons, the wavefunction of the system is 
+\begin{equation}\label{e1}
+\psi = \psi_a(\vec{r}_1)s_a\psi_b(\vec{r}_2)s_b,
+\end{equation}
+which expresses the fact that one electron is in the state `a' and the other in 
+the state `b'.
+\item A shorthand to the express the same thing is
+\begin{equation}\label{e2}
+\psi = \psi_a(1)\psi_b(2),
+\end{equation}
+where the arguments `1' and `2' include both space and spin degrees of freedom 
+of an electron.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Indistingushable particles}
+\begin{enumerate}
+\item When the wavefunctions of two particles overlap, it is impossible to tell
+one particle from the other. Therefore, the state $\psi_a(1)\psi_b(2)$ cannot be
+told from $\psi_a(2)\psi_b(1)$. Such a state is therefore expressed as a linear
+combination of the two,
+\begin{equation}\label{e3}
+\psi = \alpha\psi_a(1)\psi_b(2) + \beta\psi_a(2)\psi_b(1).
+\end{equation}
+\item It is a \emph{law of nature} that particles with integral spins have a 
+symmetric wavefunction while those with half-integral spins have anti-symmetric
+wavefunction.
+\item A symmetric combination is
+\begin{equation}\label{e4}
+\psi = \psi_a(1)\psi_b(2) + \psi_a(2)\psi_b(1)
+\end{equation}
+while an anti-symmetric combination is
+\begin{equation}\label{e5}
+\psi = \psi_a(1)\psi_b(2) - \psi_a(2)\psi_b(1)
+\end{equation}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Indistingushable particles}
+\begin{enumerate}
+\item Now let the two states coincide. Then $\psi = 2\psi_a(1)\psi_a(2)$ in the
+symmetric case but $\psi = 0$ in the anti-symmetric case.
+\item It is impossible for two particles with half-integral spins to be in the 
+same state.
+\item Recall that, in the context of the hydrogen atom, a stationary state of
+and electron is completely satisfied by four quantum numbers. The previous point
+therefore means that no two electron can have the same set of quantum numbers.
+This is Pauli exclusion principle and it is an immediate consequence of the fact
+that electrons have a spin $1/2$.
+\item Indistingushable particles means that all permutations of the electrons 
+are equivalent.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Odd and even permutations}
+\begin{enumerate}
+\item Every permutation can be achieved by a finite number of `exchanges' of the
+objects.
+\item The sign of a permutation is `$+$' if it needs and even number of `exchanges'
+starting from the arrangement $\{1, \ldots, n\}$. Otherwise, the sign is `$-$'. 
+\item If $p$ denotes a permutation of $\{1, \ldots, n\}$ then $p(1)$ is the 
+position of $1$ in the rearrangement, $p(2)$ is the position of $2$ in the 
+rearrangement, ...
+\item If there are $n$ electrons then the anti-symmetric wavefunction of a system
+of all of them is
+\begin{equation}\label{e6}
+\psi(1, \ldots, n) = \frac{1}{\sqrt{n!}}
+ \sum_{p}\text{sgn}(p)\psi_{p(1)}(1)\ldots\psi_{p(n)}(n)
+\end{equation}
+Here the sum is over all partitions.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Bosons and Fermions}
+\begin{enumerate}
+\item The symmetry or anti-symmetry of wavefunctions has a profound implication.
+\item Particles with spins $0, 1, \ldots$ are called Bosons. Examples are - a
+photon, a phonon, Deuterium nuclues, $\alpha$-particle.
+\item Particles with spins $1/2. 3/2, \ldots$ are called Fermions. Examples are
+- an electron, a proton, a neutron, a neutrino.
+\item Bosons and Fermions have drastically different statistical properties.
+\end{enumerate}
+\end{frame}
+\end{document}

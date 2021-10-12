@@ -1,0 +1,169 @@
+\documentclass{beamer}
+\usefonttheme[onlymath]{serif}
+\usepackage{graphicx, hyperref}
+\hypersetup{colorlinks, urlcolor=blue}
+\usepackage{subcaption}
+\usetheme{Boadilla}
+
+\newcommand{\pvec}[1]{\vec{#1}\mkern2mu\vphantom{#1}}
+
+\title{Statistical Mechanics}
+\author{Amey Joshi}
+\date{\today}
+
+\begin{document}
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}
+\frametitle{Why Statistical Mechanics?}
+\begin{enumerate}
+\item There is no analytical solution of the three body problem in classical
+mechanics. 
+\item Neil Armstrong's mission to the moon was extremely risky because of the
+complexity of the three body problem - that involving the earth, the moon and
+the spaceship - and the \href{https://galileo-unbound.blog/tag/three-body-problem/}{chaotic}
+nature of some of the trajectories.
+\item The problem is tougher in quantum mechanics. The only three body 
+Schr\"{o}dinger equation is that of H$_2^+$ ion but it assumes that the nuclei
+are at rest.
+\item Barring a few exceptions, almost all solutions to the Schr\"{o}dinger 
+equation for practically important problems are numerical.
+\item The numerical solutions too are an approximation. Many ignore the 
+interactions between the electrons and the nuclear motion.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{The Nature of Statistical Mechanics}
+\begin{enumerate}
+\item Consider an ideal gas in a container. We are not interested in the 
+position or velocity of an individual molecule. Knowing about it is impossible
+but also futile.
+\item We are interested in the average speed, the pressure and the energy.
+\item If we have a crystal of radioactive element, we do not want to know when a
+given nucleus will decay but in a certain time interval how many will decay.
+\item A crystal has a very large number of electrons, we want to know how many
+are in a given energy level (band).
+\item Thermodynamics is a phenomenological theory of macroscopic systems.
+Statistical mechanics provides the foundation of thermodynamics.
+\item It has very wide applicability but we will study it in rather simplest
+situations.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Ideal ``gases''}
+\begin{enumerate}
+\item Any system of a large number of weakly interacting entities is considered
+a gas.
+\begin{enumerate}
+\item Air at room temperature and atmospheric pressure.
+\item Photons in a blackbody.
+\item Electrons in a crystals.
+\item Galaxies in a cluster.
+\end{enumerate}
+\item Consider a system of $N$ weakly interacting particles which can have 
+energies $\epsilon_1, \epsilon_2, \ldots$. Given that the total energy of the 
+system is $E$, find the most probable distribution of numbers $n_1, n_2, \ldots$
+such that
+\begin{equation}\label{e1}
+n_1\epsilon_1 + n_2\epsilon_2 + \cdots = E.
+\end{equation}
+\item The interaction is weak but not zero. It is needed to establish a thermal
+equilibrium.
+\item We assume that a particle can be each energy state with an equal 
+likelihood. It is an axiom that is justified only by an experimental 
+confirmation of its conclusions.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Ideal ``gases''}
+\begin{enumerate}
+\item The solution to the problem is of the form
+\begin{equation}\label{e2}
+n(\epsilon) = g(\epsilon)f(\epsilon),
+\end{equation}
+where
+\begin{enumerate}
+\item $n(\epsilon)$ is the number of particles in energy state $\epsilon$,
+\item $g(\epsilon)$ is the number of states with energy $\epsilon$. Recall that 
+in a hydrogen atom multiple values of the triple $(n, l, m_l)$ may correspond
+to the same energy. This is called `degeneracy'.
+\item $f(\epsilon)$ is the probability of occupancy of a state with energy
+$\epsilon$.
+\end{enumerate}
+\item If the energy is not quantised then we have
+\begin{equation}\label{e3}
+n(\epsilon)d\epsilon = g(\epsilon)f(\epsilon)d\epsilon.
+\end{equation}
+$g$ is the number of states with energy between $\epsilon$ and $\epsilon + 
+d\epsilon$. Likewise, $n$ is the number of particles with energy between 
+$\epsilon$ and $\epsilon + d\epsilon$.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Maxwell-Boltzmann statistics}
+\begin{enumerate}
+\item The form of $f$ in equation \eqref{e3} depends on the nature of particles
+in the ``gas''.
+\item If the particles are identical but so far apart that their wavefunctions 
+do not overlap then they can be distinguished from each other. For them,
+\begin{equation}\label{e4}
+f(\epsilon) = Ae^{-\epsilon/kT},
+\end{equation}
+where the constant $A$ depends on the number of particles, $k$ is the Boltzmann
+constant and $T$ is the temperature.
+\item An example of an ideal ``Maxwell gas'' is air at room temperature and 
+atmospheric pressure. The total energy $E$ is distributed among the continuous
+translational energy states.
+\item A slightly non-trivial example is the rotational states of a diatomic gas
+molecules. We consider energy distributed among the discrete rotational energy
+states. 
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Bose-Einstein statistics}
+\begin{enumerate}
+\item Identical, indistingushable particles with an integral spin.
+\item The wavefunction of the entire system is symmetrical under exchange of 
+particles.
+\item It is possible for a single energy state to have more than one particle.
+Even all of them can be in a single state.
+\item Examples are photons in a black body cavity, phonons in a crystal, 
+electron-pair (Cooper pair) in superconductors, He nuclei etc.
+\item The distribution function is
+\begin{equation}\label{e5}
+f(\epsilon) = \frac{1}{e^\alpha e^{\epsilon/kT} - 1},
+\end{equation}
+where $k$ is the Boltzmann constant, $T$ is the temperature and $\alpha$ is a 
+quantity that depends on the number of particles and temperature.
+\item When the number of particles is not conserved $\alpha = 0$.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Fermi-Dirac statistics}
+\begin{enumerate}
+\item Identical, indistingushable particles with a half-integral spin.
+\item The wavefunction of the entire system is anti-symmetrical under exchange
+of particles.
+\item It is not possible for a single energy state to have more than one 
+particle. Pauli exclusion principle must be obeyed.
+\item Examples are electrons in a crystal, nucleons in a nucleus, neutrons in
+a neutron star, electrons in a white-dwarf.
+\item The distribution function is
+\begin{equation}\label{e6}
+f(\epsilon) = \frac{1}{e^{(\epsilon - \epsilon_F)/kT} + 1},
+\end{equation}
+where $k$ is the Boltzmann constant, $T$ is the temperature and $\epsilon_F$
+is called the Fermi-energy of the system. It is defined as that energy for which
+the distribution function is $1/2$.
+\end{enumerate}
+\end{frame}
+
+\end{document}

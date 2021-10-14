@@ -1,0 +1,178 @@
+\documentclass{beamer}
+\usefonttheme[onlymath]{serif}
+\usepackage{graphicx, hyperref}
+\hypersetup{colorlinks, urlcolor=blue}
+\usepackage{subcaption}
+\usetheme{Boadilla}
+
+\newcommand{\pvec}[1]{\vec{#1}\mkern2mu\vphantom{#1}}
+
+\title{Statistical Mechanics - Some Applications}
+\author{Amey Joshi}
+\date{\today}
+
+\begin{document}
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}
+\frametitle{A brief recap}
+\begin{enumerate}
+\item Statistical methods are needed when the system consists of a very large
+number of entities. We are not interested in position and momentum of every one
+of them but only certain gross, experimentally verifiable quantities.
+\item We confine our attention to ``ideal gases''.
+\item Suppose that the entities in the gas can have energy $\epsilon_1, 
+\epsilon_2, \ldots$ and that it is known that the system has an energy $E$ then
+if we have $n_i$ particles with energy $\epsilon_i$ then we must have
+\begin{equation}\label{e1}
+n_1\epsilon_1 + n_2\epsilon_2 + \cdots = E.
+\end{equation}
+\item The goal is to find the most probable distribution of $n_1, n_2, \ldots$
+in the form
+\begin{equation}\label{e2}
+n(\epsilon) = g(\epsilon)f(\epsilon),
+\end{equation}
+where $g$ is the number of states and $f$ is the probability of occupancy of the
+state with energy $\epsilon$.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Maxwell-Boltzmann statistics - 1}
+\begin{enumerate}
+\item Applicable to a gas of identical but distingushable particles.
+\item The probability of occupancy is
+\begin{equation}\label{e3}
+f(\epsilon) = A\exp\left(\frac{-\epsilon}{kT}\right),
+\end{equation}
+where $A$ is a constant that depends on the number of particles.
+\item Therefore, the most probable distribution of gas atoms among the energy 
+states is
+\begin{equation}\label{e4}
+n(\epsilon) = Ag(\epsilon)\exp\left(\frac{-\epsilon}{kT}\right).
+\end{equation}
+\item An immediate consequence is
+\begin{equation}\label{e5}
+\frac{n(\epsilon_2)}{n(\epsilon_1)} = \frac{g(\epsilon_2)}{g(\epsilon_1)}
+\exp\left(-\frac{(\epsilon_2 - \epsilon_1)}{kT}\right).
+\end{equation}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Maxwell-Boltzmann statistics - 2}
+\begin{enumerate}
+\item The ratio $g(\epsilon_2)/g(\epsilon_1)$ depends only on the nature of the
+gas. It does not depend on the temperature.
+\item If $\epsilon_2 > \epsilon_1$ then the exponential is less than 1; since 
+$k$ is very small, we almost always have $n(\epsilon_2) < n(\epsilon_1)$.
+\item Generally, most gas atoms prefer to be in lower energy states.
+\item If, by some way, $\epsilon_2>\epsilon_1$ and $n(\epsilon_2)>n(\epsilon_1)$
+then we say that the system has gone in the state of `population inversion'. The
+temperature of the system then has to be negative on the absolute scale.
+\item Systems with negative temperatures are ``hotter'' than those with positive
+temperatures in the sense that when they are in contact, heat flows from the
+former to the latter.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Bose-Einstein statistics - 1}
+\begin{enumerate}
+\item Applicable to identical, indistinguishable particles with integral spins.
+\item The wave function of the system is symmetric under the exchange of 
+particles.
+\item The probability of occupancy is
+\begin{equation}\label{e6}
+f(\epsilon) = \frac{1}{e^\alpha e^{\epsilon/kT} - 1},
+\end{equation}
+where the constant $\alpha$ depends on the number of particles and temparature.
+\item If the number of particles is not conserved, $\alpha = 0$ and the we have
+\begin{equation}\label{e7}
+f(\epsilon) = \frac{1}{e^{\epsilon/kT} - 1}.
+\end{equation}
+\item More particles per state than Maxwell-Boltzmann statistics at low enough
+energies.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Bose-Einstein statistics - 2}
+\begin{enumerate}
+\item Photons are bosons. The energy distribution of photons in a cavity at a
+temperature $T$ is given by the Bose-Einstein statistics. 
+\item It immediately gives the Planck's radiation formula
+\item Phonons in a crystal are also bosons. Einstein applied his statistics to 
+the problem of specific heat of solids and explained why it goes to zero as
+$T \rightarrow 0$ and why it is $3R$ at high temperatures (more than 273 K).
+Here, $R$ is the universal gas constant.
+\item Einstein assumed that each atom in a crystal vibrated with a frequency
+$\nu$ with a probability
+\begin{equation}\label{e8}
+f(\nu) = \frac{1}{e^{h\nu/kT} - 1}.
+\end{equation}
+\item Einstein's theory was later on improved by Debye who assumed that 
+vibrations in solids are best understood as an assembly of phonons.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Fermi-Dirac statistics - 1}
+\begin{enumerate}
+\item Applicable to identical, indistinguishable particles with half-integral 
+spins.
+\item The wave function of the system is anti-symmetric under the exchange of 
+particles.
+\item The probability of occupancy is
+\begin{equation}\label{e9}
+f(\epsilon) = \frac{1}{e^\alpha e^{\epsilon/kT} + 1},
+\end{equation}
+where the constant $\alpha$ depends on the number of particles and temparature.
+\item Define the Fermi energy $\epsilon_F$ by the equation
+\begin{equation}\label{e10}
+f(\epsilon_F) = \frac{1}{2}.
+\end{equation}
+\item From equations \eqref{e9} and \eqref{e10} one readily gets $\alpha = 
+-\epsilon_F$.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Fermi-Dirac statistics - 2}
+\begin{enumerate}
+\item In terms of Fermi energy, the probability of occupancy is
+\begin{equation}\label{e11}
+f(\epsilon) = \frac{1}{e^{(\epsilon - \epsilon_F)/kT} + 1},
+\end{equation}
+\item At $T = 0$, $f(\epsilon) = 0$ if $\epsilon > \epsilon_F$ and $f(\epsilon)
+= 1$ if $\epsilon < \epsilon_F$. All energy levels up to $\epsilon_F$ are 
+filled.
+\item Fewer particles per state than Maxwell-Boltzmann statistics at low enough
+energies - an immediate consequence of Pauli exclusion principle.
+\item At room temperature $kT \approx 0.025$ eV. Fermi energy of electrons in
+metals is of the order of a few eV, at least $40$ times greater!
+\item When a solid metal is heated at room temperature, very few electrons with
+energy levels close to $\epsilon_F$ get excited to higher states. Therefore,
+the electrons make only a tiny contribution to the specific heat of solids.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Fermi-Dirac statistics - 3}
+\begin{enumerate}
+\item Gives rise to electron degeneracy pressure because of which ordinary 
+matter remains stable.
+\item Electron degeneracy pressure also prevents gravitational collapse in 
+white dwarfs.
+\item In heavier stars, electron degeneracy pressure can be overcome by 
+gravity leading to a neutron star. The neutron star remains stable because 
+of the neutron degeneracy pressure.
+\item In the heaviest stars, the gravitational force can overcome neutron
+degeneracy pressure as well leading to a black hole.
+\item Fermi-Dirac statistics of electrons in solids give rise to their band 
+structure, explaining most their physical properties.
+\end{enumerate}
+\end{frame}
+\end{document}

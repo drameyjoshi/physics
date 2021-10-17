@@ -1,0 +1,188 @@
+\documentclass{beamer}
+\usefonttheme[onlymath]{serif}
+\usepackage{graphicx, hyperref}
+\hypersetup{colorlinks, urlcolor=blue}
+\usepackage{subcaption}
+\usetheme{Boadilla}
+
+\newcommand{\pvec}[1]{\vec{#1}\mkern2mu\vphantom{#1}}
+
+\title{Solid State Physics - 1}
+\author{Amey Joshi}
+\date{\today}
+
+\begin{document}
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}
+\frametitle{States of matter}
+\begin{enumerate}
+\item At an elementary level, we are told that there are three states of matter
+- solid, liquid and gas.
+\item The plasma state is introduced at a little later state.
+\item The world is complicated even at the elementary level. Sometimes it is not
+easy to tell a solid from a liquid. Ketchup, dough, honey, coal-tar, sand, mud 
+are all in a state that has properties of both solids and liquids. They are some 
+of the most complicated materials to study.
+\item We will restrict our attention to materials that are unequivocally solids.
+\item Among solids some are crystalline and others are amorphous or glassy. We
+will study crystals.
+\item There is a great similarity between the structure of liquids and amorphous
+materials. Both have a short range order. Gases have no order.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Why are crystals interesting?}
+\begin{enumerate}
+\item The constituents of a crystal, atoms/ions/molecules, are packed 
+sufficiently closely for the wavefunctions of their outermost electrons to 
+overlap. Solids are quantum mechanical in nature.
+\item They show a vast number of very interesting properties
+\begin{enumerate}
+\item The ratio of resistivity of quartz to that of silver is $10^{25}$.
+\item Some solids are transparent others are not.
+\item Some solids are coloured, others are not.
+\item Some solids are magnetic, others are not.
+\item The resistivity of some solids drop to exactly zero at sufficiently low
+temperatures.
+\item All semiconductor and photonic devices are crystals with carefully 
+controlled properties.
+\end{enumerate}
+\item Crystals exhibit a vast number of exotic quantum phenomena. Nano physics, 
+spintronics, photonics, plasmonics all happen in crystals.
+\item Very deep connection with quantum field theory as well.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{What is a crystal?}
+\begin{enumerate}
+\item A lattice is a regular arrangement of points in space. There are 
+\href{https://en.wikipedia.org/wiki/Bravais_lattice}{14 types} of lattices in
+three dimensions. A lattice extends in three dimensions infinitely.
+\item There is an atom, ion or a group of atoms at every point in the lattics. 
+It is called a basis.
+\item A crystal is a lattice plus the basis.
+\item An ideal crystal extends infinitely in all directions. There are no ideal
+crystals. Most solids are polycrystalline.
+\item Yet, crystals have a long-range order that amorphous materials and liquids
+lack.
+\item Some materials exist in crystalline as well as amorphous (also called 
+glassy or vitreous) states. Example B$_{2}$O$_{3}$.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{What binds a crystal? Ionic bonds}
+\begin{enumerate}
+\item Formed when basis is made up of positive and negative ions. The binding is
+through electrical attraction. Collapse is prevented by exclusion principle.
+\item Ionic solids tend to be hard, with high melting point owing to the 
+strength of the ionic bond.
+\item They tend to be brittle because slipping of a crystal plane against 
+another is prevented by the nature of the bond.
+\item They dissolve in polar solvants like water but not in non-polar solvents
+like benzene.
+\item Most ionic bonds found in nature are in the ionic crystals. 
+\item Examples: NaCl (face centred cubic), CsCl (body centered cubic), Po (simple
+cubic).
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{What binds a crystal? Covalent bonds}
+\begin{enumerate}
+\item Formed when there is a chemical bond between the basis.
+\item Strong bonds make the crystals hard and have high melting points. Many are
+insoluble in most common solvents.
+\item The pronounced directional nature of covalent bonds prevent these solids
+from being ductile.
+\item One way to find out if a crystal is ionic or covalent is to check its
+dielectric constant, $\kappa$. It is related to refractive index as $n = 
+\sqrt{\kappa}$. At low frequencies, both ions and electrons move while at high
+frequencies only electrons respond. As a result, ionic crystals have frequency
+dependent dielectric constant. That is not so for a covalent crystal.
+\item Examples: Diamond, SiC, Si, Ge, semiconductor alloys.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{What binds a crystal? Van der Waals forces}
+\begin{enumerate}
+\item A polar molecule has an electric dipole moment $\vec{p}$ and it creates an
+electric field
+\begin{equation}\label{e1}
+\vec{E} = \frac{1}{4\pi\epsilon_0}
+\left(\frac{\vec{p}}{r^3}-\frac{3(\vec{p}\cdot\vec{r})}{r^5}\vec{r}\right)
+\end{equation}
+\item It polarizes other molecules. They too get a dipole moment
+\begin{equation}\label{e2}
+\pvec{p}^\prime = \alpha \vec{E},
+\end{equation}
+where $\alpha$ is the molecular polarizability. Two electric dipoles attract 
+each other the way to magnets do. The energy of the dipole is $U = 
+-\pvec{p}^\prime \cdot \vec{E}$. It can be shown that it depends on $p^2$.
+\item Non polar molecules have $\langle\vec{p}\rangle = 0$ but fluctuations of
+electron density makes $\langle p^2 \rangle \ne 0$. As a result, there is Van
+der Waals attraction even between non-polar molecules.
+\item The bonding is very weak. Crystals have low melting points.
+\item Examples: Solid H, Ar, CH$_{4}$.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{What binds a crystal? Hydrogen bonds}
+\begin{enumerate}
+\item Non-polar molecules are attracted to each other by Van der Waals forces.
+Polar molecules align with each other via hydrogen bonds.
+\item Permanent dipole moment of molecules makes hydrogen bonds stronger than
+Van der Waals attraction but they are much weaker than covalent bonds. 
+\item Hydrogen bonds remain even in liquid state and give water its peculiar
+properties.
+\item Ice crystals are formed by hydrogen bonding. Crystal structures are 
+usually with lot of open spaces making ice less dense than water. Some of these
+bonds are retained even after melting so that water contracts between 273 and 
+277 K.
+\item Examples: HF, DNA.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{What binds a crystal? Metallic bonds}
+\begin{enumerate}
+\item Metallic bonds are found only in solids.
+\item The valence electrons are common to the entire solid. They are considered
+to be free if their interactions with ions can be neglected. They are considered
+to be independent if their interactions with each other can be neglected.
+\item Free and independent electrons form an ideal Fermi gas. Electrons end up
+having high kinetic energies.
+\item Metallic bond is formed if the increase in kinetic energy of electrons is
+more than compensated by a drop in their potential energy due to ion cores.
+\item Valence electrons are free to move throughout the crystals. That makes 
+them good conductors of electricity.
+\item Metallic bonds are not directional. That makes metals malleable and 
+ductile.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Is that all?}
+\begin{enumerate}
+\item Solid state physics would be uninteresting if all crystals fell in these
+categories.
+\item Tin forms a covalent crystal which is semiconducting below 286.2K (grey
+tin). It favours metallic bonds at higher temperatures (white tin) and has
+high electrical conductivity.
+\item Graphite crystals have sheets of hexagonal arrangements of covalently 
+bound carbon atoms. The sheets themselves are bond together with unsaturated 
+bonds of a metallic character.
+\item Carbon forms many more exotic structures C$_{60}$ bucky balls which are
+held together as a solid by Van der Waals forces. They also form nanotubes whose
+geometry decides whether they are semiconductors or good conductors.
+\item This is just the start. The real fun is in the electronic properties.
+\end{enumerate}
+\end{frame}
+\end{document}

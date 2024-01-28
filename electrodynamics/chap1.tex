@@ -1,0 +1,111 @@
+\documentclass{report}
+\usepackage{amsmath}
+\begin{document}
+\begin{enumerate}
+\item[1.1] Levi-Civita tensor.
+\begin{enumerate}
+\item[(a)] $\hat{e}_1, \hat{e}_2, \hat{e}_3$ are unit vectors along three 
+Cartesian axes. Show that
+\[
+\epsilon_{ijk} = \hat{e}_i\cdot(\hat{e}_j \times \hat{e}_k).
+\]
+If $j = k$ or $i = j$ the triple product vanishes. The magnitude of the
+triple product is $\pm 1$. Its sign depends on whether $i, j, k$ are in
+even or odd permutation. Thus, the properties of rhs are the same as that of
+the Levi-Civita tensor.
+
+\item[(b)] Quite straightforward.
+
+\item[(c)] Show that $\epsilon_{ijk}\epsilon_{ist} = \delta_{js}\delta{kt} 
+- \delta_{jt}\delta_{ks}$.
+We start from lhs,
+\begin{equation}\label{e1}
+\epsilon_{ijk}\epsilon{ist} = \epsilon_{1jk}\epsilon_{1st} +
+                              \epsilon_{2jk}\epsilon_{2st} +
+                              \epsilon_{3jk}\epsilon_{3st} 
+\end{equation}
+In the first term on the rhs, $j, k$ can be either $2, 3$ or $3, 2$ for it
+to be non-zero. Thus, there are four possibilities:
+\begin{itemize}
+\item $j = 2, k = 3, s = 2, t = 3$ when the term is $1$.
+\item $j = 3, k = 2, s = 2, t = 3$ when the term is $-1$.
+\item $j = 3, k = 2, s = 3, t = 2$ when the term is $1$.
+\item $j = 2, k = 3, s = 3, t = 2$ when the term is $-1$.
+\end{itemize}
+These are also the possible values of $\delta_{js}\delta_{kt} - \delta_{jt}
+\delta_{ks}$. Further, when $j, k$ take these values, the other terms on
+the rhs of equation \eqref{e1} are zero.
+
+Identical analysis can be used to evaluate the remaining terms.
+
+\item[(d)] Given that $\vec{a}$ and $\vec{b}$ are constant vectors. If
+$\vec{L}^{op}$ is the angular momentum operator then show that
+\[
+[\vec{L}^{op}\cdot\vec{a}, \vec{L}^{op}\cdot\vec{b}] = i\hbar\vec{L}^{op}
+\cdot (\vec{a} \times \vec{b}).
+\]
+We start with the left hand side,
+\begin{eqnarray*}
+[\vec{L}^{op}\cdot\vec{a}, \vec{L}^{op}\cdot\vec{b}] 
+    &=& [L^{op}_i a_i, L^{op}_j b_j] \\
+    &=& L^{op}_i a_i L^{op}_j b_j - L^{op}_j b_i L^{op}_i a_i \\
+    &=& a_ib_j(L^{op}_i L^{op}_j - L^{op}_j L^{op}_i) i\\
+    &=& a_ib_j[L^{op}_i, L^{op}_j] \\
+    &=& a_ib_j\epsilon_{ij}L^{op}_k \\
+    &=& \vec{L}^{op}\cdot(\vec{a} \times \vec{b}).
+\end{eqnarray*}
+\end{enumerate}
+
+\item[1.2] Levi-Civita tensor.
+\begin{enumerate}
+\item[(a)] $\delta_{ii} = \delta_{11} + \delta_{22} + \delta_{33} = 3$.
+\item[(b)] $\delta_{ij}\epsilon_{ijk} = 0$ because when $i = j$ the first
+term is $1$ but the second term is $0$ and when $i \ne j$ it is the other
+way round.
+\item[(c)] $\epsilon_{ijk}\epsilon_{ljk} = \delta_{il}$. Note that $j$ and
+$k$ must be different for the two terms on the lhs to be non-zero. That
+leaves only one possibility for both $i$ and $l$. Further, the product will
+be $1$ irrespective of the sign of the individual terms because they are
+identical when they are non-zero.
+\item[(d)] $\epsilon_{ijk}\epsilon_{ijk} = 1$.
+\end{enumerate}
+
+\item[1.3] Vector identities.
+\begin{enumerate}
+\item[(a)] $\vec{A} \times \vec{B} = \epsilon_{ijk}\hat{e}_iA_jB_k$ and
+$\vec{C} \times \vec{D} = \epsilon_{lmn}\hat{e}_lC_mD_n$ so that
+$(\vec{A} \times \vec{B})\cdot(\vec{C} \times \vec{D}) = \epsilon_{ijk}
+\hat{e}_iA_jB_k \cdot \epsilon_{lmn}\hat{e}_lC_mD_n = \epsilon_{ijk}
+\epsilon_{lmn}A_jB_kC_mD_n\hat{e}_i\cdot\hat{e}_l = \epsilon_{ijk}
+\epsilon_{lmn}A_jB_kC_mD_n\delta_{il} = \epsilon_{ijk}\epsilon_{imn}
+A_jB_kC_mD_n = (\delta_{jm}\delta_{kn} - \delta_{jn}\delta_{km})A_jB_kC_m
+D_n = A_jC_j B_kD_k - A_jD_j - B_kC_k = \vec{A}\cdot\vec{C}\vec{B}\cdot
+\vec{D} - \vec{A}\cdot\vec{D}\vec{B}\cdot\vec{C}$.
+
+\item[(b)] $\nabla\cdot(\vec{f}\times\vec{g}) = (\hat{e}_l\partial_l)
+\cdot(\epsilon_{ijk}\hat{e}_if_jg_k) = \delta_{il}\partial_l\epsilon_{ijk}
+f_jg_k = \epsilon_{ijk}\partial_i(f_jg_k) = \epsilon_{ijk}(g_k\partial_if_j 
++ f_j\partial_ig_k) = g_k\epsilon_{ijk}\partial_if_j + f_j\epsilon_{ijk}
+\partial_i g_k = g_k\epsilon_{kij}\partial_i f_j + f_j\epsilon_{jki}
+\partial_i g_k = g_k\epsilon_{kij}\partial_if_j - f_j\epsilon_{jik}
+\partial_i g_k = \vec{g}\cdot\nabla\times\vec{f} - \vec{f}\cdot\nabla\times
+\vec{g}$
+
+\item[(c)] Let $\vec{A} \times \vec{B} = \vec{E}$ and $\vec{C} \times 
+\vec{D} = \vec{F}$ so that  $(\vec{A} \times \vec{B}) \times (\vec{C} 
+\times \vec{D}) = \vec{E} \times \vec{F} = \epsilon_{ijk}\hat{e}_iE_jF_k
+= \epsilon_{ijk}\hat{e}_i\epsilon_{jlm}A_lB_m\epsilon_{krs}C_rD_s$. Now,
+\begin{eqnarray*}
+\epsilon_{ijk}\epsilon_{jlm} &=& -\epsilon_{jki}\epsilon_{jlm} \\
+ &=& -(\delta_{kl}\delta_{im} - \delta_{km}\delta_{li}) \\
+ &=& \delta_{km}\delta_{li} - \delta_{kl}\delta_{im}
+\end{eqnarray*}
+so that $\vec{E} \times \vec{F} = \hat{e}_i(\delta_{km}\delta_{li} - 
+\delta_{kl}\delta_{im})A_lB_m\epsilon_{krs}C_rD_s = \hat{e}_i(A_iB_k
+\epsilon_{krs}C_rD_S - A_kB_i\epsilon_{krs}C_rD_s = 
+(\epsilon_{krs}B_kC_rD_S)A_i\hat{e}_i - (\epsilon_{krs}A_kC_rD_s)B_i
+\hat{e}_i = (\vec{B}\cdot(\vec{C} \times \vec{D}))\vec{A} - (\vec{A}\cdot
+(\vec{C} \times \vec{D}))\vec{B}$.
+\end{enumerate}
+\end{enumerate}
+\end{document}

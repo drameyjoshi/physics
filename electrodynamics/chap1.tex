@@ -152,7 +152,75 @@ f\nabla\times\vec{g} - \vec{g}\times\nabla f$.
  &=& \vec{r}\cdot\nabla\vec{g} + 3\vec{g} - \vec{r}\nabla\cdot{g} - \vec{g} \\
  &=& \vec{r}\cdot\nabla\vec{g} + 2\vec{g} - \vec{r}\nabla\cdot{g}
 \end{eqnarray*}
+\end{enumerate}
 
+\item[(1.11)] Some integral identities.
+\begin{enumerate}
+\item[(a)] Since $\nabla\cdot\vec{G} = 0$, $\nabla\cdot(\phi\vec{G}) = 
+\nabla\phi\cdot\vec{G} + \phi\nabla\cdot\vec{G} = \nabla\phi\cdot\vec{G}$. Thus,
+\begin{eqnarray*}
+\int d^3r \vec{F}\cdot\vec{G} &=& \int d^3r \nabla\phi\cdot\vec{G} \\
+ &=& \int d^3r \nabla\cdot(\phi\vec{G})  \\
+ &=& \int d^2r \hat{n}\cdot \phi\vec{G}
+\end{eqnarray*}
+If we choose the volume of integration sufficiently large so that the surface
+integral is evaluated over a surface very far away from the origin. The area
+of the surface goes as $O(r^2)$ but the integrand goes as $O(1/r^{2 + \alpha})$
+for some $\alpha > 0$. Therefore, the surface integral vanishes as $r 
+\rightarrow \infty$.
+
+\item[(b)] Since $\nabla\times\vec{G} = 0$, $\nabla\times(\phi\vec{G}) = 
+\nabla\phi\times\vec{G} + \phi\nabla\times\vec{G} = \nabla\phi\times\vec{G}$. 
+In equation (1.81) of the book, let $\vec{P}$ be a constant and $\vec{R} =
+\nabla\times\vec{Q}$. Then we get
+\[
+\int_V d^3r (-\vec{P}\cdot\nabla\times\vec{R}) = 
+\int_Sd\vec{S}\cdot(\vec{P} \times \vec{R}) \Rightarrow
+-\vec{P}\cdot\int_V d^3r \nabla\times\vec{R} = 
+\int_S\vec{P}\cdot(\vec{R}\times d\vec{S})
+\]
+or
+\[
+-\vec{P}\cdot\int_V d^3r \nabla\times\vec{R} = 
+-\vec{P}\cdot\int_S d\vec{S} \times \vec{R}
+\]
+or, since $\vec{P}$ is arbitrary,
+\begin{equation}\label{e2}
+\int_V d^3r \nabla\times\vec{R} = \int_S d\vec{S} \times \vec{R}.
+\end{equation}
+If $\vec{R} = \phi\vec{G}$ then as $\nabla\times\vec{G} = 0$,
+\[
+\int_V d^3r\nabla\phi\times\vec{G} = \int_S d\vec{S} \times (\phi\vec{G}).
+\]
+The integral on the left vanishes for the same reason as the previous case.
+
+\item[(c)] We first show that 
+\begin{equation}\label{e3}
+\int_V d^3r \partial_j(P_j\vec{G}) = \int_S dS\hat{n}\cdot\vec{P}\vec{G}.
+\end{equation}
+Expanding the integral on the left hand side,
+\begin{eqnarray*}
+\int_V d^3r \partial_j(P_j\vec{G}) &=& \int_V dx_1dx_2dx_3\partial_1(P_1\vec{G}) + \\
+ & & \int_V dx_1dx_2dx_3\partial_2(P_2\vec{G}) + \\
+ & & \int_V dx_1dx_2dx_3\partial_3(P_3\vec{G}) + \\
+ &=& \int_Sdx_2dx_3 P_1\vec{G} + \int_Sdx_1dx_3 P_2\vec{G} + \int_Sdx_1dx_2 P_3\vec{G} \\
+ &=& \int_S dS\hat{n}\cdot\vec{P}\vec{G}.
+\end{eqnarray*}
+We also have
+\[
+\partial_i(P_i\vec{G}) = (\nabla\cdot\vec{P})\vec{G} + \vec{P}\cdot\nabla\vec{G}.
+\]
+Therefore,
+\[
+\int_V d^3r \left((\nabla\cdot\vec{P})\vec{G} + \vec{P}\cdot\nabla\vec{G}\right) =
+\int_S dS\hat{n}\cdot\vec{P}\vec{G}.
+\]
+If $\vec{G} = \vec{r}$, as $\vec{P}\cdot\nabla\vec{r} = \vec{P}$, we get
+\[
+\int_V d^3r (\nabla\cdot\vec{P})\vec{r} + \int_V d^3r \vec{P} =
+\int_S dS\hat{n}\cdot\vec{P}\vec{r}.
+\]
 \end{enumerate}
 \end{enumerate}
 \end{document}
+

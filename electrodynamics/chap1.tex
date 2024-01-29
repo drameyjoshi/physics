@@ -82,14 +82,17 @@ A_jB_kC_mD_n = (\delta_{jm}\delta_{kn} - \delta_{jn}\delta_{km})A_jB_kC_m
 D_n = A_jC_j B_kD_k - A_jD_j - B_kC_k = \vec{A}\cdot\vec{C}\vec{B}\cdot
 \vec{D} - \vec{A}\cdot\vec{D}\vec{B}\cdot\vec{C}$.
 
-\item[(b)] $\nabla\cdot(\vec{f}\times\vec{g}) = (\hat{e}_l\partial_l)
-\cdot(\epsilon_{ijk}\hat{e}_if_jg_k) = \delta_{il}\partial_l\epsilon_{ijk}
-f_jg_k = \epsilon_{ijk}\partial_i(f_jg_k) = \epsilon_{ijk}(g_k\partial_if_j 
-+ f_j\partial_ig_k) = g_k\epsilon_{ijk}\partial_if_j + f_j\epsilon_{ijk}
-\partial_i g_k = g_k\epsilon_{kij}\partial_i f_j + f_j\epsilon_{jki}
-\partial_i g_k = g_k\epsilon_{kij}\partial_if_j - f_j\epsilon_{jik}
-\partial_i g_k = \vec{g}\cdot\nabla\times\vec{f} - \vec{f}\cdot\nabla\times
-\vec{g}$
+\item[(b)] \begin{eqnarray*}
+\nabla\cdot(\vec{f}\times\vec{g}) &=& (\hat{e}_l\partial_l)
+\cdot(\epsilon_{ijk}\hat{e}_if_jg_k) \\
+ &=& \delta_{il}\partial_l\epsilon_{ijk}f_jg_k \\
+ &=& \epsilon_{ijk}\partial_i(f_jg_k) \\
+ &=& \epsilon_{ijk}(g_k\partial_if_j + f_j\partial_ig_k) \\
+ &=& g_k\epsilon_{ijk}\partial_if_j + f_j\epsilon_{ijk}\partial_i g_k \\
+ &=& g_k\epsilon_{kij}\partial_i f_j + f_j\epsilon_{jki}\partial_i g_k \\
+ &=& g_k\epsilon_{kij}\partial_if_j - f_j\epsilon_{jik}\partial_i g_k \\
+ &=&\vec{g}\cdot\nabla\times\vec{f} - \vec{f}\cdot\nabla\times\vec{g}
+\end{eqnarray*}
 
 \item[(c)] Let $\vec{A} \times \vec{B} = \vec{E}$ and $\vec{C} \times 
 \vec{D} = \vec{F}$ so that  $(\vec{A} \times \vec{B}) \times (\vec{C} 
@@ -100,12 +103,52 @@ f_jg_k = \epsilon_{ijk}\partial_i(f_jg_k) = \epsilon_{ijk}(g_k\partial_if_j
  &=& -(\delta_{kl}\delta_{im} - \delta_{km}\delta_{li}) \\
  &=& \delta_{km}\delta_{li} - \delta_{kl}\delta_{im}
 \end{eqnarray*}
-so that $\vec{E} \times \vec{F} = \hat{e}_i(\delta_{km}\delta_{li} - 
-\delta_{kl}\delta_{im})A_lB_m\epsilon_{krs}C_rD_s = \hat{e}_i(A_iB_k
-\epsilon_{krs}C_rD_S - A_kB_i\epsilon_{krs}C_rD_s = 
-(\epsilon_{krs}B_kC_rD_S)A_i\hat{e}_i - (\epsilon_{krs}A_kC_rD_s)B_i
-\hat{e}_i = (\vec{B}\cdot(\vec{C} \times \vec{D}))\vec{A} - (\vec{A}\cdot
-(\vec{C} \times \vec{D}))\vec{B}$.
+so that 
+\begin{eqnarray*}
+\vec{E} \times \vec{F} &=& lB_m\epsilon_{krs}C_rD_s \\
+ &=& \hat{e}_i(A_iB_k\epsilon_{krs}C_rD_S - A_kB_i\epsilon_{krs}C_rD_s\\
+ &=& (\epsilon_{krs}B_kC_rD_S)A_i\hat{e}_i - 
+     (\epsilon_{krs}A_kC_rD_s)B_i\hat{e}_i \\
+ &=& (\vec{B}\cdot(\vec{C} \times \vec{D}))\vec{A} - 
+     (\vec{A}\cdot(\vec{C} \times \vec{D}))\vec{B}.
+\end{eqnarray*}
+
+\item[(d)] Show that $(\vec{\sigma}\cdot\vec{a})(\vec{\sigma}\cdot\vec{b}) = 
+\vec{a}\cdot\vec{b} + i\vec{\sigma}\cdot(\vec{a}\times\vec{b})$.
+$(\vec{\sigma}\cdot\vec{a})(\vec{\sigma}\cdot\vec{b}) = \sigma_i a_i \sigma_jb_j
+= a_ib_j\sigma_i\sigma_j = a_ib_j(\delta_{ij} + i\epsilon_{ijk}\sigma_k)
+= a_ib_i + i\epsilon_{ijk}a_ib_j\sigma_k = \vec{a}\cdot\vec{b} + i\epsilon_{kij}
+\sigma_ka_ib_j = \vec{a}\cdot\vec{b} + i\vec{\sigma}\cdot(\vec{a}\times\vec{b})$.
+\end{enumerate}
+
+\item[(1.4)] Vector derivative identities.
+\begin{enumerate}
+\item[(a)] $\nabla\cdot(f\vec{g}) = \hat{e}_i\partial_i(f\hat{e}_jg_j) =
+\hat{e}_i\cdot\hat{e}_j\partial_i(fg_j) = \delta_{ij}\partial_i(fg_j) =
+\partial_i(fg_i) = \nabla f \cdot\vec{g} + f\nabla\cdot\vec{g}$.
+
+\item[(b)] $\nabla\times(f\vec{g}) = \hat{e}_i\epsilon_{ijk}\partial_j(fg_k)
+= \hat{e}_i\epsilon_{ijk}(\partial_j f)g_k + \hat{e}_i\epsilon_{ijk}f
+(\partial_jg_k) = \nabla f\times \vec{g} + f\nabla\times\vec{g} = 
+f\nabla\times\vec{g} - \vec{g}\times\nabla f$.
+
+\item[(c)] 
+\begin{eqnarray*}
+\nabla\times(\vec{g}\times\vec{r}) &=& 
+    \hat{e}_i\epsilon_{ijk}\partial_j(\epsilon_{klm}g_lr_m) \\
+ &=& \hat{e}_i\epsilon_{ijk}\epsilon_{klm}\partial_j(g_lr_m) \\
+ &=& \hat{e}_i\epsilon_{kij}\epsilon_{klm}\partial_j(g_lr_m) \\
+ &=& \hat{e}_i(\delta_{il}\delta_{jm} - \delta_{im}\delta_{jl})
+     \partial_j(g_lr_m) \\
+ &=& \hat{e}_i(\partial_j(g_ir_j) - \partial_j(g_jr_i)) \\
+ &=& \hat{e}_i(r_j\partial_j g_i + g_i\partial_jr_j) -
+     \hat{e}_i(r_i\partial_jg_j + g_j\partial_jr_i) \\
+ &=& \vec{r}\cdot\nabla\vec{g} + 3\vec{g} - \vec{r}\nabla\cdot{g} 
+     - \hat{e}_ig_j\delta_{ij} \\
+ &=& \vec{r}\cdot\nabla\vec{g} + 3\vec{g} - \vec{r}\nabla\cdot{g} - \vec{g} \\
+ &=& \vec{r}\cdot\nabla\vec{g} + 2\vec{g} - \vec{r}\nabla\cdot{g}
+\end{eqnarray*}
+
 \end{enumerate}
 \end{enumerate}
 \end{document}

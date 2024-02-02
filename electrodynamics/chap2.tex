@@ -1,0 +1,55 @@
+\documentclass{article}
+\usepackage{amsmath}
+\title{The Maxwell Equations}\label{c2}
+\author{Amey Joshi}
+\date{02-Feb-2024}
+\begin{document}
+\maketitle
+\begin{enumerate}
+\item[(2.3)] The force between current loops.
+\begin{enumerate}
+\item[(a)] Note that,
+\[
+\nabla_1\left(\frac{1}{|\vec{r}_1 - \vec{r}_2|}\right) = -\frac{\vec{r}_1 - \vec{r}_2}{|\vec{r}_1 - \vec{r}_2|^3}
+\]
+so that
+\begin{eqnarray*}
+\oint_C d\vec{s}_1\cdot\frac{\vec{r}_1 - \vec{r}_2}{|\vec{r}_1 - \vec{r}_2|^3}
+ &=& -\oint_C d\vec{s}_1\cdot\nabla_1\left(\frac{1}{|\vec{r}_1 - \vec{r}_2|}\right) \\
+ &=& -\int_S d\vec{S}_1\cdot\nabla_1\times\left(\nabla_1\left(\frac{1}{|\vec{r}_1 - \vec{r}_2|}\right)\right)\\
+ &=& 0.
+\end{eqnarray*}
+
+\item[(b)] We use the fact that
+\[
+\vec{B}_2(\vec{r}_1) = \frac{\mu_0}{4\pi}\oint_{C_2} I_2d\vec{s}_2 \times \frac{\vec{r}_1 - \vec{r}_2}{|\vec{r}_1 - \vec{r}_2|^3}
+\]
+in the expression
+\begin{eqnarray*}
+\vec{F} &=& \oint_{C_1}d\vec{s}_1 I_1 \times \vec{B}_2(\vec{r}_1) \\
+ &=& \oint_{C_1}d\vec{s}_1I_1 \times \frac{\mu_0}{4\pi}\oint_{C_2} 
+ 	I_2d\vec{s}_2 \times \frac{\vec{r}_1 - \vec{r}_2}{|\vec{r}_1 - \vec{r}_2|^3} \\
+ &=& \frac{\mu_0}{4\pi}\oint_{C_1}\oint_{C_2}d\vec{s}_1\times\left(d\vec{s}_s\times
+        \frac{\vec{r}_1 - \vec{r}_2}{|\vec{r}_1 - \vec{r}_2|^3}\right)I_1I_2 \\
+ &=& \frac{\mu_0}{4\pi}\oint_{C_1}\oint_{C_2}d\vec{s}_2\left(d\vec{s}_1\cdot
+        \frac{\vec{r}_1 - \vec{r}_2}{|\vec{r}_1 - \vec{r}_2|^3}\right)I_1I_2  - \\
+ & &  \frac{\mu_0}{4\pi}\oint_{C_1}\oint_{C_2}\frac{\vec{r}_1 - \vec{r}_2}{|\vec{r}_1 - \vec{r}_2|^3}
+      d\vec{s}_1 \cdot d\vec{s}_2 I_1I_2
+\end{eqnarray*}
+The currents are constant in their loops. Therefore, the quantities $I_1, I_2$ 
+can be pulled out of the integrals.
+\begin{eqnarray*}
+\vec{F} &=& \frac{\mu_0}{4\pi}I_1I_2\oint_{C_2}d\vec{s}_2\oint_{C_1}d\vec{s}_1\cdot
+        \frac{\vec{r}_1 - \vec{r}_2}{|\vec{r}_1 - \vec{r}_2|^3} \\
+ & & -\frac{\mu_0}{4\pi}\oint_{C_1}d\vec{s}_1I_1\oint_{C_2}d\vec{s}_2 I_2\frac{\vec{r}_1 - \vec{r}_2}{|\vec{r}_1 - \vec{r}_2|^3}
+\end{eqnarray*}
+The integral in the first term is zero according to part (a). The result
+follows immediately from part (b).
+\end{enumerate}
+
+\item[(2.4)] If $\nabla\times\vec{B} = \mu_0\vec{j}$ then 
+$\nabla\cdot\nabla\times\vec{B} = \mu_0\nabla\cdot\vec{j} \Rightarrow 
+\nabla\cdot\vec{j} = 0$. This is true only for steady currents for which 
+$\partial_t\rho = 0$.
+\end{enumerate}
+\end{document}

@@ -88,9 +88,9 @@ If it accelerates (decelerates) then the world line will be a curve turning towa
 \end{figure}
 
 \item Consider an experiment in an inertial frame in which light took time 
-$\delta t$ to travel between points $(x, y, z)$ and $x + \delta x, y + 
+$\delta t$ to travel between points $(x, y, z)$ and $(x + \delta x, y + 
 \delta y, z + \delta z)$. The same experiment was observed from another inertial 
-frame in which the light pulse travelled from $(x^\op, y^\op, z^\op)$ to $x^\op 
+frame in which the light pulse travelled from $(x^\op, y^\op, z^\op)$ to $(x^\op 
 + \delta x^\op, y^\op + \delta y^\op, z^\op + \delta z^\op)$ in time $\delta t^\op$.
 Since the speed of light is the same in two frames,
 \begin{eqnarray}
@@ -151,4 +151,114 @@ their time coordinates will be non-zero. Likewise, if they were outside the cone
 then in every inertial frame their space coordinates will not all be the same.
 The part of the cone above (below) the origin is called the absolute future 
 (past) of the origin.
+
+\item A time interval measured with a single clock is called
+\emph{proper time}. Let an interval $\delta t$ be measured in an inertial frame
+$K$ with a clock at point $(x, y, z)$. In another inertial frame, $K^\op$ it will
+be measured by two (synchronised) clocks at two different locations. One of the
+clocks will measure start of the interval and by the time the event at the end 
+of the interval happens, a different clock will go past what is $(x, y, z)$ in
+$K$. The relation between the two measurements follow from equation \eqref{c1e4}
+with $\delta x = \delta y = \delta z = 0$. Thus,
+\begin{equation}\label{c1e7}
+\delta t^2 = \delta {t^\op}^2 - \frac{\delta {x^\op}^2 + \delta {y^\op}^2 + \delta {z^\op}^2}{c^2}
+= \delta {t^\op}^2\left(1 - \frac{1}{c^2}\left(\frac{\delta r^\op}{\delta t^\op}\right)^2\right),
+\end{equation}
+where
+\begin{equation}\label{c1e8}
+\delta {r^\op}^2 = \delta {x^\op}^2 + \delta {y^\op}^2 + \delta {z^\op}^2.
+\end{equation}
+Now $\delta r^\op/\delta t^\op$ is the speed at which and observer in $K^\op$
+moves with respect to the point $(x, y, z)$ in $K$. It is precisely the relative
+speed of $K^\op$ with respect to $K$. If we call it $u$, we can write equation
+\eqref{c1e7} as
+\begin{equation}\label{c1e9}
+\delta t^2 = \delta {t^\op}^2\left(1 - \frac{u^2}{c^2}\right).
+\end{equation}
+Since $u < c$, $\delta t < \delta t^\op$. Thus, the proper time interval is the
+smallest among the intervals measured in all inertial frames.
+
+\item In the previous point, an observer in $K^\op$ will notice that the clock
+in $K$ is moving relative to him and it reports an interval $\delta t$ while his
+clocks reported $\delta t^\op$. From equation \eqref{c1e9} the moving clock
+reported a shorter time interval. That is why we say that moving clocks go slow.
+
+\item Among all clocks travelling between world points $A$ and $B$ that differ 
+only in their $t$-coordinate, the clock that is stationary measures the maximum
+time. Consider two clocks, one of which remains stationary and the other whose
+world line curves arbitrarily between $A$ and $B$. The time measured by each of
+them is their proper time. For the stationary clock, the time interval is
+\begin{equation}\label{c1e10}
+\delta t_1 = \frac{1}{c}\int_A^B ds_1
+\end{equation}
+while that measured by the other clock is
+\begin{equation}\label{c1e11}
+\delta t_2 = \frac{1}{c}\int_A^B ds_2.
+\end{equation}
+Now, $ds_1 = cdt_1$ while $ds_2 = \sqrt{c^2dt_2^2 - dx_2^2 - dy_2^2 - dz_2^2}$.
+If all intervals along the second clock's path, $ds_1$ will be greater
+than or equal to $ds_2$, then $t_1 \ge t_2$.
+
+\item We will now derive the transformation between the coordinates of world
+points in two inertial frames of reference. Let $(x, y, z, t)$ be the coordinates
+of a world point in $K$. Let the coordinates of the same points be $(x^\op, y^\op,
+z^\op, t^\op)$ in $K^\op$. If we consider a pulse of light travelling from the 
+origin to the point being considere then from \eqref{c1e4} we have
+\begin{equation}\label{c1e12}
+c^2t^2 - x^2 - y^2 - z^2 = c^2{t^\op}^2 - {x^\op}^2 - {y^\op}^2 - {z^\op}^2.
+\end{equation}
+We can consider each side of \eqref{c1e12} the ``distance'' of the two world 
+points from the origin in the respective inertial frame. 
+
+One way in which equation \eqref{c1e12} will be valid is when the two inertial
+frames have their origins displaced by a constant. However, this is not what
+happens when the frames are moving relative to each other.
+
+We next check if we can treat the motion as a ``rotation'' in the four-dimensional
+space. There are six mutually orthogonal planes in four dimensions. If $K$ and
+$K^\op$ are such that their $x$-axes coincide while $y$ and $z$ axes remain parallel
+then the ``rotation'' can happen only in the $xt$-plane. Further, $y = y^\op$ and
+$z = z^\op$ so that
+\begin{equation}\label{c1e13}
+c^2t^2 - x^2 = c^2{t^\op}^2 - {x^\op}^2.
+\end{equation}
+We can readily verify that a transformation of the form
+\begin{eqnarray}
+ x  &=&  x^\op\cosh\psi + c t^\op\sinh\psi \label{c1e14} \\
+c t &=&  x^\op\sinh\psi + c t^\op\cosh\psi \label{c1e15}
+\end{eqnarray}
+satisfies \eqref{c1e12}. If we focus only on the motion of the origin of $K^\op$
+in $K$ then we have $x^\op = 0$ and equations \eqref{c1e14} and \eqref{c1e15}
+give
+\begin{equation}\label{c1e16}
+\frac{x}{ct} = \tanh\psi.
+\end{equation}
+If the relative speed of $K^\op$ with respect to $K$ is $u$ then $u = x/t$ and
+hence
+\begin{equation}\label{c1e17}
+\tanh\psi = \frac{u}{c}.
+\end{equation}
+The factor $u/c$ occurs quite frequently in the theory of relativity. We denote 
+it by
+\begin{equation}\label{c1e18}
+\frac{u}{c} = \beta.
+\end{equation}
+Since $1 - \tanh^2\psi = \sech^2\psi$ we have
+\begin{eqnarray}
+\cosh\psi &=& \frac{1}{\sqrt{1 - \beta^2}} \label{c1e19} \\
+\sinh\psi &=& \frac{\beta}{\sqrt{1 - \beta^2}} \label{c1e20}
+\end{eqnarray}
+Substituting these in \eqref{c1e14} and \eqref{c1e15} we get 
+\begin{eqnarray}
+x &=& \frac{x^\op + ut^\op}{\sqrt{1 - \beta^2}} \label{c1e21} \\
+t &=& \frac{t^\op + ux^\op/c^2}{\sqrt{1 - \beta^2}}. \label{c1e22} 
+\end{eqnarray}
+We get a more symmetrical form if we define $\tau = ct$ so that
+\begin{eqnarray}
+x &=& \frac{x^\op + ut^\op}{\sqrt{1 - \beta^2}} \label{c1e23} \\
+\tau &=& \frac{\tau^\op + \beta x^\op}{\sqrt{1 - \beta^2}}. \label{c1e24} 
+\end{eqnarray}
+Equations \eqref{c1e21} and \eqref{c1e22} (or equivalently \eqref{c1e23}
+and \eqref{c1e24}) are called \emph{Lorentz transformation}.
+
 \end{enumerate}

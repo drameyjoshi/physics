@@ -20,11 +20,11 @@ the Levi-Civita tensor.
 
 \item[(b)] Quite straightforward.
 
-\item[(c)] Show that $\epsilon_{ijk}\epsilon_{ist} = \delta_{js}\delta{kt} 
+\item[(c)] Show that $\epsilon_{ijk}\epsilon_{ist} = \delta_{js}\delta_{kt} 
 - \delta_{jt}\delta_{ks}$.
 We start from lhs,
 \begin{equation}\label{e1}
-\epsilon_{ijk}\epsilon{ist} = \epsilon_{1jk}\epsilon_{1st} +
+\epsilon_{ijk}\epsilon_{ist} = \epsilon_{1jk}\epsilon_{1st} +
                               \epsilon_{2jk}\epsilon_{2st} +
                               \epsilon_{3jk}\epsilon_{3st} 
 \end{equation}
@@ -53,10 +53,10 @@ We start with the left hand side,
 [\vec{L}^{op}\cdot\vec{a}, \vec{L}^{op}\cdot\vec{b}] 
     &=& [L^{op}_i a_i, L^{op}_j b_j] \\
     &=& L^{op}_i a_i L^{op}_j b_j - L^{op}_j b_i L^{op}_i a_i \\
-    &=& a_ib_j(L^{op}_i L^{op}_j - L^{op}_j L^{op}_i) i\\
+    &=& a_ib_j(L^{op}_i L^{op}_j - L^{op}_j L^{op}_i) \\
     &=& a_ib_j[L^{op}_i, L^{op}_j] \\
-    &=& a_ib_j\epsilon_{ij}L^{op}_k \\
-    &=& \vec{L}^{op}\cdot(\vec{a} \times \vec{b}).
+    &=& a_ib_j\epsilon_{ijk}L^{op}_k \\
+    &=& i\hbar\vec{L}^{op}\cdot(\vec{a} \times \vec{b}).
 \end{eqnarray*}
 \end{enumerate}
 

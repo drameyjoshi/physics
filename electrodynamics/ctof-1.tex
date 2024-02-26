@@ -16,13 +16,13 @@ $\vec{a}$, and at time $t$ and another one at a point $\vec{b}$ and at time
 $t + \delta t$. When viewed from another inertial frame $K^\op$ moving at a 
 velocity $\vec{v}$ with respect to $K$, the events occured at points $\vec{r}_0 
 + \vec{a} + \vec{v}t$ and $\vec{r}_0 + \vec{b} +\vec{v}(t + \delta t)$. Here 
-$\vec{r}_0$ is the point where the origin of $K$ and $K^\op$ coincided. An observer 
+$\vec{r}_0$ is the point in $K$ where $K^\op$'s origin was at $t=0$. An observer 
 in $K$ reports that the two events occured at times $\delta t$ apart and at points 
 $\vec{b} - \vec{a}$ apart. An observer in $K^\op$ reports that the two events 
 happened at a distance $\vec{b} - \vec{a} + \vec{v}\delta t$ apart. However, 
 he does not dispute that the same time $\delta t$ elapsed between the two events. 
 If $\delta t$ were zero then the two events will be simultaneous in \emph{all} 
-inertial frames of reference although they could have happend at different 
+inertial frames of reference although they could have happened at different 
 points as seen by different observers. This is a consequence of the implicit 
 assumption of an absolute time in classical physics.
 
@@ -72,8 +72,9 @@ Events that are simultaneous in $K$ are not so in $K^\op$.
 
 \item An event is described by the point at which occurred and the time when it
 occurred. The four numbers describing an event can be interpreted as points in a
-four-dimensional space. They are called the \emph{world points}. They move along
-curves in the four-dimensional space called the \emph{world lines}.
+four-dimensional space. They are called the \emph{world points}. World points of
+a system move along curves in the four-dimensional space called the \emph{world 
+lines}.
 
 \item A material body at a point $\vec{r}$ to which nothing happens travels along
 a world line that is parallel to the $t$ axis. In the four-dimensional space, nothing
@@ -132,8 +133,8 @@ an inertial frame in which the events occur at the same time.
 \item An interval for which $\delta s = 0$ is called ``light-like''.
 
 \item Since the nature of an interval depends on an invariant quantity like
-$\delta s^2$, an interval that is space-like (or time-like or null-like) in one
-inertial frame is space-like (or time-like or null-like) in all inertial frames.
+$\delta s^2$, an interval that is space-like (or time-like or light-like) in one
+inertial frame is space-like (or time-like or light-like) in all inertial frames.
 
 \item A causal relationship between events can exists only their world-points
 are separated by a time-like interval.
@@ -191,19 +192,19 @@ them is their proper time. For the stationary clock, the time interval is
 \begin{equation}\label{c1e10}
 \delta t_1 = \frac{1}{c}\int_A^B ds_1
 \end{equation}
-while that measured by the other clock is
+while that measured by the moving clock is
 \begin{equation}\label{c1e11}
 \delta t_2 = \frac{1}{c}\int_A^B ds_2.
 \end{equation}
 Now, $ds_1 = cdt_1$ while $ds_2 = \sqrt{c^2dt_2^2 - dx_2^2 - dy_2^2 - dz_2^2}$.
-If all intervals along the second clock's path, $ds_1$ will be greater
+If for all intervals along the second clock's path, $ds_1$ will be greater
 than or equal to $ds_2$, then $t_1 \ge t_2$.
 
 \item We will now derive the transformation between the coordinates of world
 points in two inertial frames of reference. Let $(x, y, z, t)$ be the coordinates
 of a world point in $K$. Let the coordinates of the same points be $(x^\op, y^\op,
 z^\op, t^\op)$ in $K^\op$. If we consider a pulse of light travelling from the 
-origin to the point being considere then from \eqref{c1e4} we have
+origin to the point being considered then from \eqref{c1e4} we have
 \begin{equation}\label{c1e12}
 c^2t^2 - x^2 - y^2 - z^2 = c^2{t^\op}^2 - {x^\op}^2 - {y^\op}^2 - {z^\op}^2.
 \end{equation}
@@ -255,10 +256,98 @@ t &=& \frac{t^\op + ux^\op/c^2}{\sqrt{1 - \beta^2}}. \label{c1e22}
 \end{eqnarray}
 We get a more symmetrical form if we define $\tau = ct$ so that
 \begin{eqnarray}
-x &=& \frac{x^\op + ut^\op}{\sqrt{1 - \beta^2}} \label{c1e23} \\
+x &=& \frac{x^\op + \beta\tau^\op}{\sqrt{1 - \beta^2}} \label{c1e23} \\
 \tau &=& \frac{\tau^\op + \beta x^\op}{\sqrt{1 - \beta^2}}. \label{c1e24} 
 \end{eqnarray}
 Equations \eqref{c1e21} and \eqref{c1e22} (or equivalently \eqref{c1e23}
 and \eqref{c1e24}) are called \emph{Lorentz transformation}.
+
+\item It is not clear from the above analysis why a Lorentz transformation is
+called a ``rotation'' in the 4-dimensional space-time. We can write equations 
+\eqref{c1e14} and \eqref{c1e15} in matrix form as
+\begin{equation}\label{c1e25}
+\begin{bmatrix}x \\ ct \end{bmatrix} = \begin{bmatrix} \cosh\psi & \sinh\psi \\
+\sinh\psi & \cosh\psi \end{bmatrix}\begin{bmatrix}x^\op \\ ct^\op \end{bmatrix}.
+\end{equation}
+We can as well write it as
+\begin{equation}\label{c1e26}
+\begin{bmatrix}x \\ ict \end{bmatrix} = \begin{bmatrix} \cosh\psi & -i\sinh\psi \\
+i\sinh\psi & \cosh\psi \end{bmatrix}\begin{bmatrix}x^\op \\ ict^\op \end{bmatrix}.
+\end{equation}
+Since $\cos(i\psi) = \cosh\psi$ and $\sin(i\psi) = i\sinh\psi$, we have
+\begin{equation}\label{c1e27}
+\begin{bmatrix}x \\ ict \end{bmatrix} = \begin{bmatrix} \cos(i\psi) & -\sin(i\psi) \\
+\sin(i\psi) & \cos(i\psi) \end{bmatrix}\begin{bmatrix}x^\op \\ ict^\op \end{bmatrix}.
+\end{equation}
+In the early years of special relativity, the world points were considered to have
+coordinates $(x, y, z, ict)$ and the distance between two world points mimicked the
+usual Euclidean formula. In such a space, a Lorentz transformation did indeed look
+like a ``rotation'' by an imaginary angle in the $tx$ plane.
+
+\item From equation \eqref{c1e24}
+\begin{eqnarray}
+\tau_1 &=& \frac{\tau_1^\op + \beta x_1^\op}{\sqrt{1 - \beta^2}} \label{c1e28} \\
+\tau_2 &=& \frac{\tau_2^\op + \beta x_2^\op}{\sqrt{1 - \beta^2}} \label{c1e29}
+\end{eqnarray}
+so that
+\begin{equation}\label{c1e30}
+\tau_2 - \tau_1 = \frac{\tau_2^\op - \tau_1^\op + \beta(x_2^\op - x_1^\op)}{\sqrt{1 - \beta^2}}.
+\end{equation}
+If $x_2^\op = x_1^\op$ then $\delta\tau^\op = \tau_2^\op - \tau_1^\op$ is the 
+proper time. Equation \eqref{c1e30} becomes
+\begin{equation}\label{c1e31}
+\delta\tau = \frac{\delta\tau^\op}{\sqrt{1 - \beta^2}}.
+\end{equation}
+Thus, $\delta\tau^\op < \delta\tau$ as we could have expected.
+
+\item Likewise, from equation \eqref{c1e23},
+\begin{eqnarray}
+x_1 &=& \frac{x^\op_1 + u\tau^\op_1}{\sqrt{1 - \beta^2}} \label{c1e32} \\
+x_2 &=& \frac{x^\op_2 + u\tau^\op_2}{\sqrt{1 - \beta^2}} \label{c1e33}
+\end{eqnarray}
+so that
+\begin{equation}\label{c1e34}
+x_2 - x_1 = \frac{x^\op_2 - x^\op_1 + u(\tau^\op_2 - \tau^\op_1)}{\sqrt{1 - \beta^2}}.
+\end{equation}
+If a rod with ends at $x_1$ and $x_2$ is at rest in a frame $K$ then to
+measure its length in the moving frame we have to measure its ends at the same
+time. That is $\tau^\op_2 = \tau^\op_1$ so that equation \eqref{c1e34} becomes
+\begin{equation}\label{c1e35}
+\delta x = \frac{\delta x^\op}{\sqrt{1 - \beta^2}}.
+\end{equation}
+The length $\delta x$ of the rod measured in the frame in which it was at rest
+is called its \emph{proper length}. From \eqref{c1e35} we conclude that $\delta x^\op
+< \delta x$. The rod was at rest in $K$ but appeared to move in $K^\op$. Since
+$\delta x^\op < \delta x$ we conclude that moving rods appear to be shortened.
+
+\item From equations \eqref{c1e21} and \eqref{c1e22}, along with the fact that
+$y = y^\op$ and $z = z^\op$, we get
+\begin{eqnarray}
+dx &=& \frac{dx^\op + udt^\op}{\sqrt{1 - \beta^2}} \label{c1e36} \\
+dy &=& dy^\op \label{c1e37} \\
+dz &=& dz^\op \label{c1e38} \\
+dt &=& \frac{dt^\op + udx^\op/c^2}{\sqrt{1 - \beta^2}} \label{c1e39}
+\end{eqnarray}
+so that
+\begin{eqnarray}
+\frac{dx}{dt} &=& \frac{dx^\op + udt^\op}{dt^\op + udx^\op/c^2} \label{c1e40} \\
+\frac{dy}{dt} &=& \frac{dy^\op}{dt^\op + udx^\op/c^2} \label{c1e41} \\
+\frac{dz}{dt} &=& \frac{dz^\op}{dt^\op + udx^\op/c^2}. \label{c1e42}
+\end{eqnarray}
+We also have
+\[
+v_x = \frac{dx}{dt}\;;\;v_y = \frac{dy}{dt}\;;\;v_z = \frac{dz}{dt}\;;\;
+v_x^\op = \frac{dx^\op}{dt^\op}\;;\;v_y^\op = \frac{dy^\op}{dt^\op}
+\;;\;v_z^\op = \frac{dz^\op}{dt^\op}
+\]
+so that equations \eqref{c1e40} to \eqref{c1e42} can be written as
+\begin{eqnarray}
+v_x &=& \frac{v_x^\op + u}{1 + uv_x^\op/c^2} \label{c1e43} \\
+v_y &=& \frac{v_y^\op}{1 + uv_x^\op/c^2} \label{c1e44} \\
+v_z &=& \frac{v_z^\op}{1 + uv_x^\op/c^2}. \label{c1e45} 
+\end{eqnarray}
+These are the formulae for transformation of velocity components. We
+quickly confirm that if $(v_x^\op, v_y^\op, v_z^\op) = (c, 0, 0)$ then
+equations \eqref{c1e43} to \eqref{c1e44} give $(v_x, v_y, v_z) = (c, 0, 0)$.
 
 \end{enumerate}

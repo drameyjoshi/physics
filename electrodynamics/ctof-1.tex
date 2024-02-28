@@ -63,7 +63,7 @@ measured.
 \item Consider a frame $K$ with a source of light at its origin and two detectors at
 points $(-a, 0)$ and $(a, 0)$. A spherical light front will reach the two 
 detectors simultaneously when observed from $K$. Let us consider the experiment
-replicated in another frame $K^\op$ that moves with a velocity $v\hat{e}_x$ with
+replicated in another frame $K^\op$ that moves with a velocity $v\uv{x}$ with
 respect to $K$. Suppose that their origins coincided then the light signal was 
 emitted in $K$. Since the speed of light is the same in $K$ and $K^\op$ an observer
 in $K^\op$ also sees a spherical wavefront propagating isotropically. However, he
@@ -350,4 +350,93 @@ These are the formulae for transformation of velocity components. We
 quickly confirm that if $(v_x^\op, v_y^\op, v_z^\op) = (c, 0, 0)$ then
 equations \eqref{c1e43} to \eqref{c1e44} give $(v_x, v_y, v_z) = (c, 0, 0)$.
 
+\item The coordinates of an event $(ct, x, y, z)$ can be considered to be
+components of a four-dimensional vector, or a 4-vector. The components are
+denoted by $x^i$ and we have $x^0 = ct, x^1 = x, x^2 = y, x^3 = z$. The 
+components of the same vector in another inertial frame travelling with a 
+relative velocity $u\uv{x}$ are, by equations \eqref{c1e23} and \eqref{c1e24},
+\[
+x^0 = \frac{\bar{x}^0 + \beta\bar{x}^1}{\sqrt{1 - \beta^2}};\;
+x^1 = \frac{\bar{x}^1 + \beta\bar{x}^0}{\sqrt{1 - \beta^2}};\;
+x^2 = \bar{x}^2; x^3 = \bar{x}^3.
+\]
+Any set of four quantities $A^0, A^1, A^2, A^3$ which transform in a similar
+way form a 4-vector. Thus, the transformation equations for these components
+are
+\begin{equation}\label{c1e46}
+A^0 = \frac{\bar{A}^0 + \beta\bar{A}^1}{\sqrt{1 - \beta^2}};\;
+A^1 = \frac{\bar{A}^1 + \beta\bar{A}^0}{\sqrt{1 - \beta^2}};\;
+A^2 = \bar{A}^2; A^3 = \bar{A}^3.
+\end{equation}
+The numbers $A^0, A^1, A^2, A^3$ are called the \emph{contravariant} components
+of the vector. The four related quantities
+\begin{equation}\label{c1e47}
+A_0 = A^0; A_1 = -A^1; A_2 = -A^2; A_3 = -A^3
+\end{equation}
+are called the \emph{covariant} components of the same vector. The magnitude of
+the vector is $A^\mu A_\mu$, where we have used the summation convention. We will 
+sometimes write a 4-vector as $A^\mu = (A^0, \vec{A})$ and $A_\mu = (A^0, -\vec{A})$.
+
+\item If $A^\mu$ and $B^\mu$ are two 4-vectors then their scalar product is $A^\mu 
+B_\mu$, which is same as $A_\mu B^\mu$. The resulting quantity is called a 4-scalar. 
+
+\item The relation between contravariant and covariant components of a tensor
+can be expressed as
+\begin{equation}\label{c1e48}
+A^\mu = g^{\mu\nu}A_\nu\;\text{ and }\; A_\mu = g_{\mu\nu}A^\nu,
+\end{equation}
+where $g^{\mu\nu}$ and $g_{\mu\nu}$ are components of the \emph{metric tensor}. 
+They are identical and are given by
+\begin{equation}\label{c1e49}
+g^{\mu\nu} = g_{\mu\nu} = \begin{bmatrix}1 & 0 & 0 & 0 \\
+0 & -1 & 0 & 0 \\
+0 & 0 & -1 & 0 \\
+0 & 0 & 0 & -1
+\end{bmatrix}.
+\end{equation}
+
+\item Right now we will only introduce 4-tensors of second order in terms of their
+contravariant components $\tensor{T}{^{\mu\nu}}$ or covariant components 
+$\tensor{T}{_{\mu\nu}}$ or mixed components $\tensor{T}{^\mu_\nu}$ or 
+$\tensor{T}{_\mu^\nu}$. We will not bother to specify their transformation properties.
+These components are related to each other through the multiplication by the metric
+tensor. Thus, 
+\begin{equation}\label{c1e50}
+\tensor{T}{_{\mu\nu}} = g_{\mu\alpha}\tensor{T}{^\alpha_\nu} =
+g_{\mu\alpha}\tensor{T}{_\nu^\alpha} = g_{\mu\alpha}g_{\nu\beta}T^{\alpha\beta}.
+\end{equation}
+Note that the components $\tensor{T}{^\mu_\nu}$ and $\tensor{T}{_\mu^\nu}$ are 
+different.
+
+\item A unit 4-tensor is defined as
+\begin{equation}\label{c1e51}
+\tensor{\delta}{^\mu_\nu} = \tensor{\delta}{_\mu^\nu} = \begin{cases}
+1 \text{  if  } \mu = \nu \\
+0 \text{  if  } \mu \ne \nu.
+\end{cases}
+\end{equation}
+
+\item The tensors $g_{\mu\nu}, g^{\mu\nu}, \tensor{\delta}{^\mu_\nu}$ and 
+$\tensor{\delta}{_\mu^\nu}$ have the same components in all inertial frames. The 
+competely asymmetric unit tensor of rank 4 also has the same property. It is
+defined as
+\begin{equation}\label{c1e52}
+e^{\mu\nu\rho\sigma} = \begin{cases}
+1 \text{  if  } \mu\nu\rho\sigma \text{  is an even permutation.} \\
+-1 \text{  if  } \mu\nu\rho\sigma \text{  is an odd permutation.} \\
+0 \text {  otherwise.}
+\end{cases}
+\end{equation}
+If we set
+\begin{equation}\label{c1e53}
+e_{\mu\nu\rho\sigma} = -e^{\mu\nu\rho\sigma}
+\end{equation}
+then $e_{\mu\nu\rho\sigma}e^{\mu\nu\rho\sigma}$ is just the negative of the total 
+number of non-zero components of $e_{\mu\nu\rho\sigma}$, which is the same as the
+number of permutation of the four indices. Thus,
+\begin{equation}\label{c1e54}
+e_{\mu\nu\rho\sigma}e^{\mu\nu\rho\sigma} = -4! = -24.
+\end{equation}
+We get negative sign becaue $e^{0123} = 1, e_{0123} = -1$ so that their product 
+is $-1$.
 \end{enumerate}

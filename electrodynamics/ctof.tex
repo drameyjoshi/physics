@@ -1,12 +1,15 @@
 \documentclass{report}
 \usepackage{amsmath}
 \usepackage{graphicx}
+\usepackage{tensor}
+%\usepackage{eulervm, newpxtext}
 %\usepackage{xcolor}
-
 \newcommand{\abs}[1]{\left\vert{#1}\right\vert}
 \newcommand{\op}{\prime}
 \newcommand{\tp}{\prime\prime}
-%\renewcommand{\vec}[1]{\boldsymbol{#1}}
+\renewcommand{\vec}[1]{\boldsymbol{#1}}
+\newcommand{\uv}[1]{\vec{e}_{#1}}
+\newcommand{\un}{\vec{n}}
 \DeclareMathOperator{\grad}{grad}
 \DeclareMathOperator{\dive}{div}
 \DeclareMathOperator{\curl}{curl}
@@ -15,7 +18,7 @@
 \DeclareMathOperator{\im}{Im}
 \DeclareMathOperator{\sech}{sech}
 
-\newcommand{\fint}{\mbox{--}\mkern-16mu\int}
+%\newcommand{\fint}{\mbox{--}\mkern-16mu\int}
 
 \begin{document}
 \tableofcontents

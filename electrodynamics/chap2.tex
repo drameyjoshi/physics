@@ -1,5 +1,6 @@
 \documentclass{article}
 \usepackage{amsmath}
+\newcommand{\un}{\hat{n}}
 \title{The Maxwell Equations}\label{c2}
 \author{Amey Joshi}
 \date{02-Feb-2024}
@@ -51,5 +52,136 @@ follows immediately from part (b).
 $\nabla\cdot\nabla\times\vec{B} = \mu_0\nabla\cdot\vec{j} \Rightarrow 
 \nabla\cdot\vec{j} = 0$. This is true only for steady currents for which 
 $\partial_t\rho = 0$.
+
+\item[(2.5)] A charge is placed at $(x, y)$ in the plane. At $t = 0$ a magnetic field $\vec{B} = \Phi\delta(x)\delta(y)$ is
+turned on. We want to find the angular momentum of the charge. A changing magnetic field induces an electric field. It is hard
+to compute it from the differential form of Faraday's law. However, much like Gauss's law, it is convenient to use the integral
+form,
+\[
+\oint_C \vec{E}\cdot d\vec{l} = -\frac{d}{dt}\int_S\vec{B}\cdot\hat{n}da.
+\]
+Since $\vec{B}$ points along the $z$ axis, by Lenz's law, $\vec{E}$ is azimuthal. If we take $C$ to be a circle of radius
+$r$ centred at $(x, y)$, then the integral evaluates to $2\pi r E$. The integral on the right hand side is easy to evaluate
+because of the $\delta$-function. It is just $\Phi$. Thus, we have
+\[
+E = -\frac{1}{2\pi r}\frac{d\Phi}{dt}.
+\]
+Being azimuthal, we can write the electric field vector as
+\begin{equation}
+\vec{E} = -\frac{1}{2\pi r}\frac{d\Phi}{dt}\hat{\phi}.
+\end{equation}
+The force acting on the charge is $q(\vec{E} + \vec{v} \times \vec{B})$ and the torque acting on it is
+\[
+\vec{N} = q\vec{r} \times \vec{E} + q\vec{r} \times (\vec{v} \times \vec{B})
+= q\vec{r} \times \vec{E} + q\vec{v}(\vec{r}\cdot\vec{B}) - \vec{B}(\vec{r}\cdot\vec{v}).
+\]
+Since the motion is confined to the plane, ($\vec{E}$ being in the plane), $\vec{r}\cdot\vec{B} = 0$. The effect of a magnetic
+field is to turn trajectory of the particle. Therefore, $\vec{v}$ too will be azimuthal, as a result $\vec{r}\cdot\vec{v} = 0$.
+Thus, we have
+\begin{equation}
+\frac{d\vec{L}}{dt} = \vec{N} = q\vec{r}\times\vec{E} = -\frac{1}{2\pi}\frac{d\Phi}{dt}\hat{z},
+\end{equation}
+so that
+\begin{equation}
+\frac{d}{dt}\left(\vec{L} + \frac{\Phi}{2\pi}\right) = 0.
+\end{equation}
+
+\item[(2.7)] The source-free Maxwell equations are
+\begin{eqnarray*}
+\nabla\cdot\vec{E} &=& 0 \\
+\nabla\cdot\vec{B} &=& 0 \\
+\nabla\times\vec{E} &=& -\frac{\partial\vec{B}}{\partial t} \\
+\nabla\times\vec{B} &=& \mu_0\epsilon_0\frac{\partial\vec{E}}{\partial t}
+\end{eqnarray*}
+Since
+\[
+c = \frac{1}{\sqrt{\epsilon_0\mu_0}},
+\]
+Ampere's law can be written as
+\[
+\nabla\times\vec{B} = \frac{1}{c^2}\frac{\partial\vec{E}}{\partial t}.
+\]
+Since $\vec{E}^\prime = \vec{E}\cos\theta + c\vec{B}\sin\theta$, we immediately infer that $\nabla\cdot\vec{E}^\prime=0$. Now
+\[
+\nabla\times\vec{E}^\prime = -\frac{\partial\vec{B}}{\partial t}\cos\theta + \frac{1}{c}\frac{\partial\vec{E}}{\partial t}
+\sin\theta = -\frac{\partial\vec{B}^\prime}{\partial t}.
+\]
+Since $c\vec{B}^\prime = -\vec{E}\sin\theta + c\vec{B}\cos\theta$, we immediately get $\nabla\cdot\vec{B}^\prime = 0$.
+\[
+\nabla\times \vec{B}^\prime = -\frac{\sin\theta}{c}\nabla\times\vec{E} + \nabla\times\vec{B}\cos\theta = 
+\frac{\sin\theta}{c}\frac{\partial\vec{B}}{\partial t} + \frac{1}{c^2}\frac{\partial\vec{E}}{\partial t}\cos\theta
+\]
+or
+\[
+\nabla\times \vec{B}^\prime = \frac{1}{c^2}\frac{\partial}{\partial t}(\vec{E}\cos\theta + c\vec{B}\sin\theta)
+= \frac{1}{c^2}\frac{\partial B^\prime}{\partial t}.
+\]
+The parameter $\theta$ is the angle of polarization. If $\vec{E}$ and $\vec{B}$ are solutions of Maxwell equations in free
+space then so are the corresponding primed fields.
+
+\item[(2.8)] Consider Ampere's law in vacuum, $\nabla\times\vec{H} = \vec{J}_f + \partial_t\vec{D}$. In terms of $\vec{E}$
+and $\vec{B}$, it reads $\nabla\times\vec{B} = \mu_0\vec{J}_j + c^{-2}\partial_t\vec{E}$. In integral form,
+\[
+\oint_C\vec{B}\cdot d\vec{l} = \mu_0\int_S\vec{J}_f\cdot\un da + \frac{1}{c^2}\frac{\partial}{\partial t}\int_S\vec{E}\cdot\un da.
+\]
+If the loop $C$ is entirely outside the infinite solenoid, it will not enclose any current density. So if $\vec{E}$ is
+independent of time then $\vec{B}$ will vanish outside the solenoid. We are given that the surface current density varies
+as $\vec{K} = K_0(t/\tau)$. It has no spatial dependence and therefore its divergence will be zero. As a result, the current
+is steady and the electric field is independent of time.
+
+Since the magnetic field is confined only to the interior of the solenoid, by symmetry it will be along the axis of the 
+solenoid. In the case of surface currents, the second term will be replaced by
+\[
+\oint_C \vec{K}\cdot d\vec{l}.
+\]
+Thus, we have
+\[
+\oint_C\vec{B}\cdot d\vec{l} = \mu_0\oint_C \vec{K}\cdot d\vec{l} \Rightarrow 2\pi rB = 2\pi\mu_0 r K
+\]
+or
+\begin{equation}
+\vec{B} = \mu_0 K \hat{z}.
+\end{equation}
+
+In order to find the electric field, we use Faraday's law in integral form,
+\[
+\oint_C \vec{E}\cdot d\vec{l} = -\frac{d}{dt}\int_S \vec{B}\cdot\un da.
+\]
+If $C$ is entirely inside the solenoid, 
+\[
+2\pi r E = -\frac{d}{dt}\mu_0 K \pi r^2 \Rightarrow E = -\frac{\mu_0}{2}r \frac{dK}{dt}.
+\]
+If $C$ is outside the solenoid,
+\[
+2\pi r E = -\frac{d}{dt}\mu_0 K \pi R^2 \Rightarrow E = -\frac{\mu_0}{2}\frac{R^2}{r} \frac{dK}{dt},
+\]
+where $R$ is the radius of the solenoid.
+
+\item[(2.14)] Given that
+\[
+\varphi(\vec{r}) = \frac{q}{4\pi\epsilon_0}\frac{1}{r^{1+\eta}}.
+\]
+Let the origin be chosen to coincide with the centre of the sphere whose radius is $R$. We can take advantage of the
+spherical symmetry if we also align the $z$-axis along the line joining $O$ and $P$ where we want to find the potential. If $P$
+is inside the sphere and if $OP = s$ then $PR = r = \sqrt{R^2 + s^2 - 2sR\cos\theta}$ where $\theta$ is the polar coordinate of
+the point $Q$ on the sphere such that $\angle OPQ = 90^\circ$. Then
+\begin{eqnarray*}
+\varphi(P) &=& \frac{1}{4\pi\epsilon_0}\int_0^{2\pi}d\phi \int_0^\pi d\theta \sin\theta\frac{\sigma R^2}{r^{1+\eta}} \\
+ &=& \frac{\sigma R^2}{4\pi\epsilon_0} 2\pi \int_0^\pi \frac{d\theta \sin\theta}{(R^2 + s^2 - 2sR\cos\theta)^{(1 + \eta)/2}} \\
+ &=& \frac{\sigma R^2}{2\epsilon_0} \int_0^\pi \frac{\sin\theta}{(R^2 + s^2 - 2sR\cos\theta)^{(1 + \eta)/2}}d\theta
+\end{eqnarray*}
+Put $x = \cos\theta$ so that
+\[
+\varphi(P) = \frac{\sigma R^2}{2\epsilon_0}\int_{-1}^1 \frac{dx}{(R^2 + s^2 - 2sRx)^{(1 + \eta)/2}}.
+\]
+Put $u = R^2 + s^2 - 2Rsx$ so that
+\[
+\varphi(P) = \frac{\sigma R}{4s\epsilon_0}\int_{(R-s)^2}^{(R+s)^2} u^{-(1 + \eta)/2}du = 
+\frac{\sigma R}{4s\epsilon_0}\frac{2}{1 - \eta}u^{(1 - \eta)/2}\Big|_{(R-s)^2}^{(R+s)^2}
+\]
+or
+\[
+\varphi(P) = \frac{\sigma R}{2s\epsilon_0(1 - \eta)}\left(\frac{1}{(R+s)^{(\eta - 1)}} - \frac{1}{(R-s)^{(\eta - 1)}}\right).
+\]
 \end{enumerate}
 \end{document}

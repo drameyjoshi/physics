@@ -665,5 +665,29 @@ Differentiating \eqref{c1e83} with respect to $s$ we get
 w^\mu u_\mu + u^\mu w_\mu = 0 \Rightarrow w^\mu u_\mu + u_\mu w^\mu = 0 \Rightarrow w^\mu u_\mu = 0.
 \end{equation}
 Thus, the 4-acceleration is always perpendicular to the 4-velocity.
+\end{enumerate}
 
+\section{Problems}
+\begin{enumerate}
+\item Lorentz transformation of a symmetric tensor. 
+\item[Solution:] Let $(C^{\mu\nu})$ be a symmetric tensor. We can consider it to
+be a 4-dyad of the form $C^{\mu\nu} = A^\mu B^\nu$ for two 4-vectors $(A^\mu)$ 
+and $(B^\nu)$. Written in matric form
+\begin{equation}\label{c1e87}
+(C^{\mu\nu}) = \begin{bmatrix}A^0 \\ A^1 \\ A^2 \\ A^3\end{bmatrix}
+\begin{bmatrix}B^0 & B^1 & B^2 & B^3 \end{bmatrix}
+\end{equation}
+so that $C^{\mu\nu} = A^\mu B^\nu$. Symmetry of the tensor requires $C^{\mu\nu}
+= C^{\nu\mu}$. The Lorentz transformation of the vectors $(A^\mu)$ and $(B^\nu)$
+is given by equations \eqref{c1e46}. Therefore,
+\begin{eqnarray*}
+C^{00} &=& A^0 B^0 \\
+ &=& \frac{(\bar{A}^0 + \beta\bar{A}^1)(\bar{B}^0 + \beta\bar{B}^1)}{1 - \beta^2} \\
+ &=& \frac{(\bar{A}^0\bar{B}^0 + \beta(\bar{A}^1\bar{B}^0 + \bar{A}^0\bar{B}^1) + \beta^2\bar{A}^1\bar{B}^1}{1 - \beta^2} \\
+ &=& \frac{\bar{C}^{00} + \beta(\bar{C}^{10} + \bar{C}^{01}) + \beta^2\bar{C}^{11}}{1 - \beta^2}
+\end{eqnarray*}
+Using the symmetry of the tensor,
+\begin{equation}\label{c1e88}
+C^{00} = \frac{\bar{C}^{00} + 2\beta\bar{C}^{10} + \beta^2\bar{C}^{11}}{1 - \beta^2}.
+\end{equation}
 \end{enumerate}

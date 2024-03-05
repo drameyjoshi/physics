@@ -749,6 +749,60 @@ C^{01} = \bar{C}^{01}.
 \end{equation}
 Expressions \eqref{c1e90} for $C^{02}$ and \eqref{c1e91} for $C^{03}$ remain
 unchanged. Same is the case wth expressions \eqref{c1e93} for $C^{12}$, 
-\eqref{c1e94} for $C^{13}$ and \eqref{c1e96} for $C^{23}$
+\eqref{c1e94} for $C^{13}$ and \eqref{c1e96} for $C^{23}$.
+
+\item Motion of a uniformly accelerated particle.
+\item[Solution:] Let an observer in an inertial frame of reference see a particle 
+move with a uniform acceleration. Let the axes be such that the motion happens along
+the common $x$ axis. Let $\delta u$ be the change in speed in time $\delta t$ as 
+measured by the observer. We can attach an inertial frame to the particle momentarily. 
+It travels with a uniform velocity $\vec{u} = u\uv{x}$. In that frame, the particle 
+is at rest. Its velocity, as seen in the observer's frame is $u$. (Refer to 
+\eqref{c1e43}, put $v_x^\op = 0$.) A time $\delta t$ measured by our observer is 
+$\delta t\sqrt{1 - u^2/c^2}$ in the particle's frame. Therefore, the expression for 
+acceleration is
+\begin{equation}\label{c1e99}
+\frac{d}{dt}\frac{u}{\sqrt{1 - u^2/c^2}} = a
+\end{equation}
+Integrating it once gives,
+\begin{equation}\label{c1e100}
+\frac{u}{\sqrt{1 - u^2/c^2}} = at + \alpha_0,
+\end{equation}
+where $\alpha$ is the constant of integration. If $u = 0$ at $t = 0$, $\alpha_0 = 0$
+and
+\[
+\frac{u}{\sqrt{1 - u^2/c^2}} = at \Rightarrow \frac{u^2}{1 - u^2/c^2} = a^2t^2
+\Rightarrow u^2 = \frac{a^2t^2}{1 + a^2t^2/c^2}.
+\]
+Therefore,
+\begin{equation}\label{c1e101}
+u = \frac{at}{\sqrt{1 + a^2t^2/c^2}}.
+\end{equation}
+If $a \ll c$, that is in the non-relativistic limit, $u = at$. On the other hand,
+if we remain in the relativistic regime, as $t \rightarrow \infty$, $u = c$.
+
+In the frame of reference moving with velocity $u\uv{x}$ with respect to the 
+observer, in which the particle is momentarily at rest, $u = dx/dt$. Thus,
+\[
+\td{x}{t} = \frac{at}{\sqrt{1 + a^2t^2/c^2}} = \frac{cat}{\sqrt{c^2 + a^2t^2}}.
+\]
+Therefore,
+\[
+x = \int \frac{cat}{\sqrt{c^2 + a^2t^2}}dt.
+\]
+Put $s = a^2t^2 + c^2$ so that $ds = 2a^2tdt$ and hence,
+\[
+x = \frac{ca}{2a^2} \int \frac{ds}{\sqrt{s}} = \frac{c}{2a}\frac{\sqrt{s}}{1/2} + x_0
+= \frac{c}{a}\sqrt{a^2t^2 + c^2} + x_0.
+\] 
+If $x = 0$ at $t = 0$, $x_0 = -c^2/a^2$ and 
+\begin{equation}\label{c1e102}
+x = \frac{c^2}{a}\left(\sqrt{1 + \frac{a^2t^2}{c^2}} - 1\right).
+\end{equation}
+In the non-relativistic limit, we can write the square-root as 
+\[
+1 + \frac{1}{2}\frac{a^2t^2}{c^2}
+\]
+so that $x = at/2$.
 
 \end{enumerate}

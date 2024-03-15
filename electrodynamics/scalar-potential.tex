@@ -1,0 +1,114 @@
+\documentclass{article}
+\usepackage{amsmath}
+\newcommand{\un}{\hat{n}}
+\newcommand{\uv}[1]{\hat{e}_{#1}}
+\newcommand{\grad}[1]{\nabla{#1}}
+\newcommand{\dive}[1]{\nabla\cdot\vec{#1}}
+\newcommand{\curl}[1]{\nabla\times\vec{#1}}
+\newcommand{\op}{\prime}
+\newcommand{\pdt}[2]{\frac{\partial{#1}}{\partial{#2}}}
+\newcommand{\ke}{\frac{1}{4\pi\epsilon_0}}
+\title{The Scalar Potential}
+\author{Amey Joshi}
+\date{15-Mar-2024}
+\begin{document}
+\maketitle
+\begin{enumerate}
+\item For a static electric field, $\curl{E} = 0$. Since curl of a gradient is
+always zero, we can write
+\begin{equation}\label{e1}
+\vec{E} = -\grad\varphi,
+\end{equation}
+for a scalar function $\varphi$. 
+
+\item The force on a charged particle depends on $\vec{E}$ and not $\varphi$. 
+One can add a constant to $\varphi$ to get a different potential that gives 
+the same field. Thus, the potential is determined to within a constant.
+
+\item $\curl{E} = 0$ guarantees that
+\begin{equation}\label{e2}
+\oint\vec{E}\cdot d\vec{l} = 0
+\end{equation}
+so that the line integral,
+\[
+\int_A^B \vec{E}\cdot d\vec{l}
+\]
+is independent of the path along which the integral is taken. Using equation 
+\eqref{e1}
+\begin{equation}\label{e3}
+\int_A^B \vec{E}\cdot d\vec{l} = -\int_A^B\grad{\varphi}\cdot d\vec{l} = 
+-(\varphi(B) - \varphi(A)).
+\end{equation}
+
+\item It is often easier to compute $\varphi$ and then use \eqref{e1} to compute
+the field. 
+
+\item Consider a static electric field produced by a immobile charges. Let a
+charge $q$ be moved in the electrostatic field of the immobile charges from a 
+point $A$ to a point $B$. Furthermore, assume that the motion is quasi-static
+so that the charge $q$ never accelerates. The force $\vec{F}$ that can cause
+this motion should just balance the electric force $q\vec{E}$. That is,
+\[
+\vec{F} = -q\vec{E}.
+\]
+Work done by $\vec{F}$ is
+\begin{equation}\label{e4}
+W(B; A) = \int_A^B\vec{F}\cdot d\vec{l} = -q\int_A^B\vec{E}\cdot d\vec{l} = 
+q\int_A^B\grad{\varphi}\cdot d\vec{l} = q\varphi(B) - q\varphi(A).
+\end{equation}
+The terms $q\varphi(B)$ and $q\varphi(A)$ are often interpreted as values of the
+potential energy of the charged particle at points $B$ and $A$ respectively.
+
+\item Oftentimes, the point $A$ is at infinity when the charges creating the
+electric field are confined to a finite volume in space. In that case, it is 
+convenient to let $\varphi(A) = 0$.
+
+\item Since $\vec{E} = -\grad\varphi$, Gauss' law becomes
+\begin{equation}\label{e5}
+\nabla^2\varphi = -\frac{\rho}{\epsilon_0}.
+\end{equation}
+This is Poisson's equation. If there is no charge density in a region, it reduces 
+to
+\begin{equation}\label{e6}
+\nabla^2\varphi = 0.
+\end{equation}
+This is Laplace's equation. Unlike ordinary differential equations, solutions of
+partial differential equations show a great variety in their form. For example,
+the real and imaginary part of every analytic function is a solution of Laplace's
+equation in two dimensions.
+
+\item Complex analytic functions are the smoothest of all. They have derivatives of
+all orders. This is a property of the solutions of Laplace's equation in any number
+of dimensions.
+
+\item Another property of the solutions of Laplace's equation is that they do not
+have a local extremum. For supposing they did at a point $\vec{r}_0$ then 
+\[
+\nabla^2\varphi(\vec{r}_0) \ne 0
+\]
+and since $\varphi$ is a smooth function, there is a neighbourhood around 
+$\vec{r}_0$ where the function is non zero. If $V$ is such a neighbourhood, then
+\[
+\nabla^2\varphi \ne 0
+\]
+for all points in $V$. This is a contradiction if $\varphi$ is a solution to
+Laplace's equation. This mathematical property has an important physical
+consequence when $U(\vec{r}) = q\varphi(\vec{r})$ is interpreted as the potential
+energy of a charged particle in an electric field $\vec{E} = -\grad{\varphi}$. 
+If $\varphi$ does not have a local extremum then it means that $U$ too cannot 
+have it. In particular, $U$ cannot have a local minimum. Therefore, a charged
+particle cannot be in a stable equilibrium in a static electric field. This
+results is called \emph{Earnshaw's theorem}.
+
+\item Lines of electric fields are defined analogously to the streamlines in a
+fluid. At each point in space, the element of the curve is proportional to the
+electric field at the point. Thus, $d\vec{l} = \lambda\vec{E}$ or
+\begin{equation}\label{e7}
+\frac{dx}{E_x} = \frac{dy}{E_y} = \frac{dz}{E_z} = \lambda.
+\end{equation}
+This is the equation for electric lines of force. The constant $\lambda$ is
+usually taken to be positive so that the line of force is the trajectory of
+a positively charged particle in an electric field.
+
+\end{enumerate}
+\end{document}

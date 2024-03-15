@@ -1,6 +1,7 @@
 \chapter{The Special Theory of Relativity}\label{c1}
 \begin{enumerate}
-\item A frame of reference is a set of cartesian coordinate axes and a clock.
+\item A frame of reference is a set of cartesian coordinate axes and 
+synchronised clocks at each point in the space.
 
 \item An inertial frame is the one in which Newton's first law is valid. The 
 existence of such frames was inferred from the experimental observations of the
@@ -8,7 +9,7 @@ seventeenth and the eighteenth centuries.
 
 \item Experiments also showed that a frame fixed to the earth is not inertial
 but the one fixed with respect to the distant stars was. If $K$ is an inertial
-frame then so is $K^\op$ if it moves at a constant relative velocity with respect
+frame then so is $K^\op$ if it moves at a constant velocity relative
 to $K$. Thus, there are an infinite number of inertial frames.
 
 \item Suppose that two events happen in an inertial frame $K$: one at a point
@@ -70,7 +71,7 @@ in $K^\op$ also sees a spherical wavefront propagating isotropically. However, h
 will observe the wavefront reaching $(a, 0)$ sooner than it reaches $(-a, 0)$.
 Events that are simultaneous in $K$ are not so in $K^\op$.
 
-\item An event is described by the point at which occurred and the time when it
+\item An event is described by the point at which it occurred and the time when it
 occurred. The four numbers describing an event can be interpreted as points in a
 four-dimensional space. They are called the \emph{world points}. World points of
 a system move along curves in the four-dimensional space called the \emph{world 
@@ -117,7 +118,7 @@ $\delta s^2 < 0$ are called \emph{space like}. Two points separated by a space-
 like interval will always have different ``space'' coordinates.
 
 \item If $\delta x^2 + \delta y^2 + \delta z^2 = 0$ then $\delta s^2 > 0$. In this
-case $\delta t$ can never be zero. Intervals between world points for which 
+case $\delta t^\op$ can never be zero. Intervals between world points for which 
 $\delta s^2 > 0$ are called \emph{time like}. Two points separated by a time-
 like interval will always have different ``time'' coordinates.
 
@@ -136,7 +137,7 @@ an inertial frame in which the events occur at the same time.
 $\delta s^2$, an interval that is space-like (or time-like or light-like) in one
 inertial frame is space-like (or time-like or light-like) in all inertial frames.
 
-\item A causal relationship between events can exists only their world-points
+\item A causal relationship between events can exists only if their world-points
 are separated by a time-like interval.
 
 \item In the four-dimensional space with coordinates $x, y, z$ and $t$, the equation
@@ -179,10 +180,10 @@ speed of $K^\op$ with respect to $K$. If we call it $u$, we can write equation
 Since $u < c$, $\delta t < \delta t^\op$. Thus, the proper time interval is the
 smallest among the intervals measured in all inertial frames.
 
-\item In the previous point, an observer in $K^\op$ will notice that the clock
-in $K$ is moving relative to him and it reports an interval $\delta t$ while his
-clocks reported $\delta t^\op$. From equation \eqref{c1e9} the moving clock
-reported a shorter time interval. That is why we say that moving clocks go slow.
+\item A clock is slower than another if it takes longer to cover the duration
+between events. If the event is the hand moving from one point to another on
+the dial, a slower clock will take longer to do so. Since $\delta t < \delta
+t^\op$, the observer in $K$ will conclude that clocks in $K^\op$ are slow.
 
 \item Among all clocks travelling between world points $A$ and $B$ that differ 
 only in their $t$-coordinate, the clock that is stationary measures the maximum
@@ -522,7 +523,7 @@ Its covariant form is $(A_{ij}) = (-\vec{p}, \vec{a})$.
 
 \item The gradient operator in space-time is defined by
 \begin{equation}\label{c1e65}
-\frac{\partial\phi}{\partial x^i} = 
+\frac{\partial\phi}{\partial x^\mu} = 
 \left(\frac{1}{c}\frac{\partial\phi}{\partial t}, \grad\phi\right).
 \end{equation}
 These components are to be taken as covariant components of the gradient vector.
@@ -653,7 +654,7 @@ u^\mu = \left(\frac{1}{\sqrt{1 - v^2/c^2}}, \frac{\vec{v}}{c\sqrt{1 - v^2/c^2}}\
 \end{equation}
 It is interesting to note that the 4-velocity is a dimensionless quantity. Furthermore,
 \begin{equation}\label{c1e84}
-u^\mu u_\mu = \td{x^\mu}{s}\td{x_mu}{s} = \frac{dx^\mu dx_\mu}{ds^2} = 1,
+u^\mu u_\mu = \td{x^\mu}{s}\td{x_\mu}{s} = \frac{dx^\mu dx_\mu}{ds^2} = 1,
 \end{equation}
 because by definition $ds^2 = dx^\mu dx_\mu$. The magnitude of $u^\mu$ is always
 unity. We also define the 4-acceleration as

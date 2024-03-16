@@ -195,5 +195,62 @@ Potential due to all shells will be
 \varphi = \ke\frac{4\pi\rho}{r_0}\frac{r_0^3}{3} = \ke\frac{Q_{\text{enc}}}{r_0}
 \]
 The field derived from this potential is the same as derived from Gauss' law.
+
+\item[4] We need Gauss' law in integral form:
+\[
+\oint\vec{E}\cdot\un da = \frac{1}{\epsilon_0}\int_V \rho dv.
+\]
+If the charge distribution is radial then $\vec{E}$ too has a radial symmetry,
+\begin{enumerate}
+\item[(a)] This is a one dimensional problem with charge density symmetric about
+the origin. To find the electric field at $x = R$ we just need,
+\[
+\int_{-R}^R \rho dx = -\frac{\rho_0}{\kappa}(e^{-\kappa R} - e^{\kappa R})
+= \frac{2\rho_0}{\kappa}\sinh(R).
+\]
+The surface integral is just $2E(R)$. Therefore,
+\[
+E(R) = \frac{2\rho_0}{\kappa\epsilon_0}\sinh(R).
+\]
+
+\item[(b)] In two dimensions, a spherical ``surface'' is just a circle of radius
+$r$ and centre at the origin. The ``surface integral'' evaluates to $2\pi RE(R)$.
+The charge enclosed in the surface is
+\[
+\iint_S e^{-kr}rdrd\theta = 
+2\rho_0\pi\left(\frac{1}{\kappa^2} - \frac{(\kappa R + 1)e^{-\kappa R}}{\kappa^2}\right)
+\]
+so that
+\[
+E(R) = \frac{\rho_0}{R\kappa^2\epsilon_0}\left(1 - (\kappa R + 1)e^{-\kappa R}\right).
+\]
+
+\item[(c)] In three dimensions, the surface integral is $4\pi R^2E(R)$ and the 
+charge enclosed by the surface is
+\begin{eqnarray*}
+\iiint_S \rho_0 e^{-\kappa r}r^2\sin\theta drd\theta d\phi
+&=& 4\pi\rho_0 \int_0^R r^2 e^{-\kappa r}dr \\
+&=& \frac{4\pi\rho_0}{\kappa^3}\left(2 - (2 + 2\kappa R + \kappa^2R^2)e^{-\kappa R}\right),
+\end{eqnarray*}
+so that
+\[
+E(R) = \frac{\rho_0}{R^2\epsilon_0\kappa^3}\left(2 - (2 + 2\kappa R + \kappa^2R^2)e^{-\kappa R}\right)
+\]
+\end{enumerate}
+
+\item[(6)] The force on a volume element $\delta v$ of $\rho(\vec{r})$ is 
+$\delta\vec{F} = \rho(\vec{r})\vec{E}(\vec{r})\delta v$. Therefore, the torque 
+on it is
+\[
+\delta\vec{N} = \vec{r} \times \delta\vec{F} = \vec{r}\times\rho(\vec{r})\vec{E}(\vec{r})\delta v
+\]
+so that
+\[
+\vec{N} = \int d^r \vec{r}\times\rho(\vec{r})\vec{E}(\vec{r}).
+\]
+The result follows immediately from 
+\[
+\vec{E}(\vec{r}) = \ke\int d^3r^\op \frac{\rho(\vec{r})(\vec{r} - \vec{r}^{\;\op})}{|\vec{r} - \vec{r}^\op|^3}.
+\]
 \end{enumerate}
 \end{document}

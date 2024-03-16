@@ -1,0 +1,254 @@
+\chapter{Relativistic Mechanics}\label{c2}
+\begin{enumerate}
+\item In the previous chapter, we argued that the expression
+\begin{equation}\label{c2e1}
+\delta t = \frac{1}{c}\int_A^B ds
+\end{equation}
+has a maximum for a particle if it is stationary. In this expression, $A$ and 
+$B$ are world points and 
+\[
+ds = \sqrt{dx^\nu dx_\nu}.
+\]
+It follows immediately that, among all particles that start their journey at 
+$A$ and end it at $B$, the expression
+\begin{equation}\label{c2e2}
+-\frac{1}{c}\int_A^B ds,
+\end{equation}
+has a minimum for the particle that is stationary.
+
+\item We also know that for a classical system, there exists an action integral
+$S$ whose value is an extremum for a path followed by the system in the 
+configuration space. It is a minimum over an infinitesiml length of the path.
+
+\item If we have to extend this idea to relativistic mechanics then the integral
+must be invariant under Lorentz transformation. Therefore, it must be a true scalar.
+One example of such an integral is given by \eqref{c2e2}. We can mildly generalise
+it to
+\begin{equation}\label{c2e3}
+S = -\alpha \int_A^B ds,
+\end{equation}
+where $\alpha$ is a constant. From the discussion around equations \eqref{c2e1}
+and \eqref{c2e3}, we infer that $\alpha > 0$.
+
+\item We would like to write the action integral for relativistic systems as
+\begin{equation}\label{c2e4}
+S = \int_{t_1}^{t_2}Ldt,
+\end{equation}
+in analogy for the classical systems. From equations \eqref{c2e3} and 
+\eqref{c2e4}, we get
+\begin{equation}\label{c2e5}
+L = -\alpha c\sqrt{1 - \frac{v^2}{c^2}},
+\end{equation}
+where
+\[
+v^i = d{x^i}{t}
+\]
+is the 3-velocity of the particle. Can we guess $\alpha$?
+
+\item As $v/c \rightarrow 0$, $L$ of \eqref{c2e5} should go over to the classical
+Lagrangian for a free particle, which is just $mv^2/2$. For small $v/c$, we can
+write \eqref{c2e5} as
+\[
+L = -\alpha c\left(1 - \frac{1}{2}\frac{v^2}{c^2}\right) = 
+-\alpha c + \frac{\alpha}{2}\frac{v^2}{c}.
+\]
+A constant term in a Lagrangian can always be ignored and we infer that
+\begin{equation}\label{c2e6}
+\alpha = mc.
+\end{equation}
+Therefore, we guess the correct form of the Lagrangian for a free relativistic
+particle to be
+\begin{equation}\label{c2e7}
+L = -mc^2\sqrt{1 - \frac{v^2}{c^2}}.
+\end{equation}
+
+\item The generalised momentum corresponding to this Lagrangian is
+\begin{equation}\label{c2e8}
+p^i = \pdt{L}{v^i} = (-mc^2)\frac{1}{2}\left(1 - \frac{v^2}{c^2}\right)^{-1/2}\frac{-2v^i}{c^2}
+= \frac{mv^i}{\sqrt{1 - v^2/c^2}}.
+\end{equation}
+If
+\begin{eqnarray}
+\beta &=& \frac{v}{c} \\ \label{c2e9}
+\gamma &=& \frac{1}{\sqrt{1 - \beta^2}} \label{c2e10}
+\end{eqnarray}
+then
+\begin{equation}\label{c2e11}
+\td{p^i}{t} = m\gamma \td{v^i}{t} + m\td{\gamma}{t}v^i.
+\end{equation}
+This equation is quite different from the one used in classical mechanics.
+
+\item The energy of the particle is
+\[
+E = p^i v_i - L = mv^2\gamma + \frac{mc^2}{\gamma} = m\gamma\left(v^2 + \frac{c^2}{\gamma^2}\right)
+\]
+so that
+\begin{equation}\label{c2e12}
+E = m\gamma\left(v^2 + c^2\left(1 - \frac{v^2}{c^2}\right)\right) 
+= mc^2\gamma
+\end{equation}
+
+\item From \eqref{c2e12} we see that the energy of the particle is not zero in
+the relativistic framework even if the particle is resting. When $v = 0$, $\gamma
+= 1$ and the particle's energy is
+\begin{equation}\label{c2e13}
+E = mc^2.
+\end{equation}
+For small velocities, we can approximate \eqref{c2e12} to
+\begin{equation}\label{c2e14}
+E = mc^2\left(1 + \frac{1}{2}\frac{v^2}{c^2} + O(\beta^4)\right) = 
+mc^2 + \frac{1}{2}mv^2 + O(\beta^4).
+\end{equation}
+
+\item Since $\beta < 1$ for material bodies, $\gamma > 1$ and hence, from 
+\eqref{c2e12} $E \ge mc^2 > 0$. Thus energy of a free particle is always positive.
+This is also true in classical mechanics for an elementary particle, that is a
+particle without internal degrees of freedom. For a composite body, in classical
+mechanics, energy can be negative and is determined to within a constant. Howwever,
+in the relativistic regime this is not so, $E > 0$ is always true.
+
+\item For a composite body at rest, the energy $E = Mc^2$ is not the same as 
+\[
+\sum_{i=1}^N m_ic^2,
+\]
+where $m_i, i = 1, \ldots, N$ are the rest masses of the constituent particles.
+The rest energy will also include the energy of interaction between the particles.
+Since 
+\[
+M \ne \sum_{i=1}^N m_ic
+\]
+conservation of mass is not true in relativistic mechanics.
+
+\item From \eqref{c2e8},
+\[
+p^2 = p_ip^i = mv^2\gamma^2
+\]
+and from \eqref{c2e12}
+\[
+E^2 = m^2c^4\gamma^2 \Rightarrow E^2 - E^2\beta^2 = m^2c^4 \Rightarrow 
+E^2 - p^2c^2  = m^2c^4,
+\]
+so that
+\begin{equation}\label{c2e15}
+E^2 = p^2c^2 + m^2c^4.
+\end{equation}
+Since $E$ is expressed in terms of $p$, we can as well write the Hamiltonian as
+\begin{equation}\label{c2e16}
+H = c\sqrt{p^2 + m^2c^2}
+\end{equation}
+
+\item Since $p^i = mv^i\gamma$ and $E = mc^2\gamma$, we also have
+\begin{equation}\label{c2e17}
+p^i = \frac{E}{c^2}v^i.
+\end{equation}
+If $v \rightarrow c$, $\gamma \rightarrow \infty$. In this limit, both $E$ and
+$p^i$ blow up unless $m = 0$. In that case, the two are related by
+\begin{equation}\label{c2e18}
+E = pc.
+\end{equation}
+
+\item From equations \eqref{c2e4} and \eqref{c2e6}, we can write the principle of
+least action as
+\begin{equation}\label{c2e19}
+\delta S = -mc\delta\int_{t_1}^{t_2} ds = 0.
+\end{equation}
+Since $ds = \sqrt{dx^\mu dx_\mu}$, 
+\begin{eqnarray*}
+\delta ds &=& \frac{1}{2}\frac{(\delta dx^\mu)dx_\mu + dx^\mu (\delta dx_\mu)}{ds} \\
+ &=& \frac{1}{2}\frac{(\delta dx^\mu)dx_\mu + dx_\mu (\delta dx^\mu)}{ds} \\
+ &=& \frac{dx_\mu(\delta dx^\mu)}{ds} \\
+ &=& u_\mu \delta(dx^\mu) \\
+ &=& u_\mu d(\delta x^\mu),
+\end{eqnarray*}
+where we used \eqref{c1e78}. Thus, equation \eqref{c2e19} becomes
+\begin{equation}\label{c2e20}
+\delta S = -mc\int_{t_1}^{t_2}u_\mu d(\delta x^\mu)
+\end{equation}
+Integrating by parts,
+\begin{equation}\label{c2e21}
+\delta S = -mc u_\mu \delta x^\mu\Big|_{t_1}^{t_2} + 
+mc\int_{t_1}^{t_2}\delta x^\mu \td{u_\mu}{s}ds.
+\end{equation}
+Since variations in trajectories vanish at the end points, the first term on the
+right hand side is zero and hence
+\begin{equation}\label{c2e22}
+\delta S = mc\int_{t_1}^{t_2}\delta x^\mu \td{u_\mu}{s}ds.
+\end{equation}
+$\delta S = 0$ for all possible variations $\delta x^\mu$ therefore implies that 
+for a free particle,
+\begin{equation}\label{c2e23}
+\td{u_\mu}{s} = 0.
+\end{equation}
+The particle travels with a uniform velocity, unsurprisingly.
+
+\item Now fix $t_1$ and let $t_2$ be varied for true trajectories, that the ones
+which occur in reality and for which \eqref{c2e23} is valid. Then we have from
+\eqref{c2e21},
+\begin{equation}\label{c2e24}
+\delta S = -mcu_\mu \delta (x^\mu)_{t_2},
+\end{equation}
+so that
+\begin{equation}\label{c2e25}
+mcu_\mu = -\pdt{S}{x^\mu}.
+\end{equation}
+The 4-vector $mc^\mu$, from equations \eqref{c1e79} to \eqref{c1e82} is
+\[
+u^\mu = \left(\gamma, \frac{v^i}{c}\gamma\right)
+\]
+so that
+\[
+mcu^\mu = \left(mc\gamma, mv^i\gamma\right) = \left(\frac{E}{c}, p^i\right)
+\]
+We define the 4-momemtum $p^\mu$ as
+\begin{equation}\label{c2e26}
+p^\mu = \left(\frac{E}{c}, p^i\right)
+\end{equation}
+so that \eqref{c2e25} becomes
+\begin{equation}\label{c2e27}
+p_\mu = -\pdt{S}{x^\mu}.
+\end{equation}
+Note that if $p^\mu$ is given by \eqref{c2e26} then
+\begin{equation}\label{c2e28}
+p_\mu = \left(\frac{E}{c}, -p^i\right).
+\end{equation}
+The transformation equations for $p^\mu$ are given by
+\begin{equation}\label{c2e29}
+\frac{E}{c} = \gamma\left(\frac{\bar{E}}{c} + \beta\bar{p}^1\right);
+p^1 = \gamma\left(\bar{p}^1 + \beta\frac{\bar{E}}{c}\right); p^2 = \bar{p}^2;
+p^3 = \bar{p}^3.
+\end{equation}
+We also have
+\begin{equation}\label{c2e30}
+p^\mu p_\mu = \frac{E^2}{c^2} - p^2 = m^2c^2.
+\end{equation}
+We now define the 4-force as 
+\begin{equation}\label{c2e31}
+g^\mu = \td{p^\mu}{s}.
+\end{equation}
+Since $ds = \sqrt{c^2(dt)^2 - dx_i dx^i}$,
+\begin{equation}\label{c2e32}
+ds = cdt\sqrt{1 - \frac{v^2}{c^2}} = \frac{c}{\gamma}dt.
+\end{equation}
+Therefore,
+\[
+g^\mu = \frac{\gamma}{c}\left(\frac{1}{c}\td{E}{t}, \td{\vec{p}}{t}\right).
+\]
+Since $E = \vec{f}\cdot\vec{v}$, we can write this as
+\begin{equation}\label{c2e33}
+g^\mu = \left(\frac{\gamma}{c^2}\vec{f}\cdot\vec{v}, \frac{\gamma}{c}\td{\vec{p}}{t}\right).
+\end{equation}
+
+\item From equations \eqref{c2e27} and \eqref{c2e30},
+\[
+\left(-\pdt{S}{x^\mu}\right)\left(-\pdt{S}{x_\mu}\right) = m^2c^2
+\]
+or
+\begin{equation}\label{c2e34}
+\pdt{S}{x^\mu}\pdt{S}{x_\mu} = g^{\mu\nu}\pdt{S}{x^\mu}\pdt{S}{x^\nu} = m^2c^2
+\end{equation}
+is the relativistic Hamilton-Jacobi equation. Expanding the sum
+\begin{equation}\label{c2e35}
+\frac{1}{c^2}\left(\pdt{S}{t}\right)^2 - \left(\pdt{S}{x}\right)^2 
+- \left(\pdt{S}{y}\right)^2 - \left(\pdt{S}{z}\right)^2 = m^2c^2.
+\end{equation}
+\end{enumerate}

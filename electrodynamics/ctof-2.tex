@@ -251,4 +251,213 @@ is the relativistic Hamilton-Jacobi equation. Expanding the sum
 \frac{1}{c^2}\left(\pdt{S}{t}\right)^2 - \left(\pdt{S}{x}\right)^2 
 - \left(\pdt{S}{y}\right)^2 - \left(\pdt{S}{z}\right)^2 = m^2c^2.
 \end{equation}
+
+\item We now consider the transformation of a distribution function in momentum
+space. If $f$ is such a function then $f(\vec{p})dp_xdp_ydp_z$ is the number of
+particles with momenta in the range $(p_x, p_y, p_z)$ to $(p_x + dp_x, p_y + dp_y,
+p_z + dp_z)$. To understand the properties of the ``volume'' element $dp_xdp_ydp_z$,
+we consider the 4-dimensional energy-momentum space whose axes determine the
+coordinates of 4-momentum $p^\mu$. From equation \eqref{c2e30}, the 4-momentum is
+a constant. Therefore, the motion of the system happens on the hypersurface with
+equation \eqref{c2e30}, that is, $p_\mu p^\mu = m^2c^2$. An element on the 
+hypersurface is a 4-vector normal to it, the way an element on the surface of a 
+3-sphere is normal to it. From equations \eqref{c1e71} and \eqref{c1e72}, this
+vector is
+\begin{equation}\label{c2e36}
+dS^\mu = -\frac{1}{6}\epsilon^{\mu\nu\rho\sigma}dS_{\nu\rho\sigma}.
+\end{equation}
+so that $dS^0 = dp_xdp_ydp_z$. Further, the way the element on the 2-surface of
+a 3-sphere at $\vec{r}$ is parallel to $\vec{r}$, $dS^\mu$ too is parallel to 
+$p^\mu$. Therefore, there exists a constant, say $k$, such that $dS^\mu = kp^\mu$.
+In particular, for $\mu = 0$, the ratio
+\begin{equation}\label{c2e37}
+\frac{dS^0}{p^0} = \frac{dp_xdp_ydp_z}{E} = k,
+\end{equation}
+is an invariant under a Lorentz transformation. The number of particles $f(\vec{p})
+dp_xdp_ydp_z$ is also an invariant. If we write
+\[
+f(\vec{p})dp_xdp_ydp_z = f(\vec{p})E\frac{dp_xdp_ydp_z}{E}
+\]
+then we see that
+\[
+f(\vec{p})dp_xdp_ydp_z = f^\op(\vec{p}^\op)dp_x^\op dp_y^\op dp_z^\op
+\]
+implies, from the invariance of $dS^0/p^0$ that
+\begin{equation}\label{c2e38}
+f^\op(\vec{p}^\op) = \frac{f(\vec{p})E}{E^\op}.
+\end{equation}
+In ``spherical'' momentum coordinates $dp_xdp_ydp_z = p^2dpdo$, where $do$ is the
+solid angle in momentum space about $p^i$. Putting this in equation \eqref{c2e37}
+we get the invariance of
+\[
+\frac{dp_xdp_ydp_z}{E} = \frac{p^2dpdo}{E} 
+\]
+Since $E^2 = p^2c^2 + m^2c4$, $EdE = c^2 pdp$, therefore,
+\[
+\frac{p^2dpdo}{E} = \frac{pdEdo}{c^2}
+\]
+is also an invariant. In particular $pdEdo$ is also invariant.
+
+\item We will now look at the distribution function over phase space. Thus,
+$f(\vec{r}, \vec{p})dxdydzdp_xdp_ydp_z$ is the number of particles in the phase
+space volume element $dxdydzdp_xdp_ydp_z$ around a point $(\vec{r}, \vec{p})$ in
+a reference frame $K$. We want to find $f^\op(\vec{r}^\op, \vec{p}^\op)$ to which
+$f$ transforms in another frame $K^\op$.
+
+Let $K_0$ be the frame in which the particles in volume element are at rest. It
+is possible to find such a frame if we choose a small enough volume element. If
+$dV_0$ is the volume of (position) space in $K_0$ then
+\begin{equation}\label{c2e39}
+dV = \frac{dV_0}{\gamma(v)}; dV^\op = \frac{dV_0}{\gamma(v^\op)}
+\end{equation}
+are the same volumes as measured in $K$ and $K^\op$ respectively. From these 
+equations we have
+\begin{equation}\label{c2e40}
+\frac{dV}{dV^\op} = \frac{\gamma(v^\op)}{\gamma(v)}.
+\end{equation}
+If $E_0, E, E^\op$ are the values of energy in the three frames then we also
+have
+\begin{equation}\label{c2e41}
+E = E_0\gamma(v); E^\op = E_0\gamma(v^\op)
+\end{equation}
+because $p_0^i = 0$. Using \eqref{c2e41} in \eqref{c2e40} we get
+\begin{equation}\label{c2e42}
+\frac{dV}{dV^\op}  = \frac{E^\op}{E}.
+\end{equation}
+From \eqref{c2e37} we also have
+\begin{equation}\label{c2e43}
+\frac{dp_xdp_ydp_z}{dp_x^\op dp_y^\op dp_z^\op} = \frac{E}{E^\op}.
+\end{equation}
+The previous two equations give
+\begin{equation}\label{c2e44}
+dVdp_xdp_ydp_z = dV^\op dp_x^\op dp_y^\op dp_z^\op
+\end{equation}
+that is, the phase space volume is invariant under a Lorentz transformation. 
+Therefore, we also have
+\begin{equation}\label{c2e45}
+f(\vec{r}, \vec{p}) = f(\vec{r}^\op, \vec{p}^\op).
+\end{equation}
+
+\item Before proceeding further, we note that for any vector $A^\mu$, the differential
+$d^4A = dA^0dA^1dA^2dA^3$ is Lorentz invariant. This is because, $d^4A^\op = 
+\det J  d^4A$, where $J$ is the Jacobian for the transformation. Since a Lorentz
+transformation is a rotation in 4-space, $\det J = 1$. We can quickly confirm it
+by writing the transformation in matrix form as
+\[
+\begin{bmatrix}x^0 \\ x^1 \\ x^2 \\ x^3\end{bmatrix} = 
+\begin{bmatrix} \gamma & \beta\gamma & 0 & 0 \\
+\beta\gamma & \gamma & 0 & 0 \\
+0 & 0 & 1 & 1 \\
+0 & 0 & 0 & 1\end{bmatrix}
+\begin{bmatrix}\bar{x}^0 \\ \bar{x}^1 \\ \bar{x}^2 \\ \bar{x}^3\end{bmatrix}.
+\]
+Clearly,
+\[
+\det J = \gamma^2(1 - \beta^2) = 1.
+\]
+
+\item We now consider the problem of writing an expression for the cross-section
+of collisions. Let a beam of particles with number density $n_1$ collide another
+beam with number density $n_2$. Then the number of collisions $d\nu$ between them
+in a time $dt$ and a volume $dV$ depends on $n_1, n_2, dV, dt$ and $v_r$, the 
+relative speed of one beam with respect to the other. Thus,
+\[
+d\nu \propto n_1n_2v_r dVdt
+\]
+or
+\begin{equation}\label{c2e46}
+d\nu = \sigma n_1n_2v_r dVdt,
+\end{equation}
+where $\sigma$ is called the collision cross section. Its dimensions are that of
+an area. Since $dVdt = d^x$, it is invariant under a Lorentz transformation.  $d\nu$
+is invariant because it is a scalar. Therefore, the quantity $\sigma v_r n_1n_2$ 
+is also an invariant.
+
+However, this expression is developed only in the frame of the reference in which
+one of the beams is stationary. In order to generalise it to an arbitrary frame,
+we surmise that equation \eqref{c2e46} is generalised to
+\begin{equation}\label{c2e47}
+d\nu = An_1n_2dVdt,
+\end{equation}
+where $A = \sigma v_r$ in the frame of reference in which one of the beams is
+stationary. 
+
+The number of particles in a volume $dV$ is $ndV$ and is invariant. In another
+frame of reference, it would be $n^\op dV^\op$. If $dV$ is the volume in measured
+in a frame in which it is at rest, $dV^\op = dV/\gamma$. Thus,
+\begin{equation}\label{c2e48}
+n^\op dV^\op = n dV \Rightarrow n^\op\frac{dV}{\gamma} = ndV \Rightarrow n^\op
+= n\gamma.
+\end{equation}
+From equation \eqref{c2e12}, 
+\begin{equation}\label{c2e49}
+n^\op = \frac{nE}{mc^2}.
+\end{equation}
+Invariance of $An_1n_2$ thus follows from that of $AE_1E_2$. The dot product of
+$p_1^\mu$ and $p_2^\mu$ is a scalar and therefore invariant. Therefore, the
+quantity
+\[
+\frac{AE_1E_2}{p_1^\mu {p_2}_\mu}
+\]
+is also an invariant. In the rest frame of beam 2, it becomes $\sigma v_r$, so that
+\begin{equation}\label{c2e50}
+A = \sigma v_r\frac{p_1^\mu {p_2}_\mu}{E_1E_2}.
+\end{equation}
+In the rest frame of particle 2, $p_2^\mu = (m_2c, 0, 0, 0)$, so that 
+\[
+p_1^\mu {p_2}_\mu = m_1\gamma(v_r) m_2 c^2 = 
+\frac{m_1m_2c^2}{\sqrt{1 - v_r^2/c^2}} \Rightarrow 1 - \frac{v_r^2}{c^2} = 
+\frac{m_1^2m_2^2c^4}{(p_1^\mu {p_2}_\mu)^2},
+\]
+or that
+\begin{equation}\label{c2e51}
+v_r = c\sqrt{1 - \frac{m_1^2m_2^2c^4}{(p_1^\mu {p_2}_\mu)^2}}.
+\end{equation}
+Now, 
+\[
+p_1^\mu {p_2}_\mu = m_1m_2\gamma(v_1)\gamma(v_2)c^2\left(1 - \frac{\vec{v}_1\cdot\vec{v}_2}{c^2}\right).
+\]
+so that
+\begin{eqnarray*}
+v_r &=& c\sqrt{1 - \frac{1}{\gamma^2(v_1)\gamma^2(v_2)\left(1 - \frac{\vec{v}_1\cdot\vec{v}_2}{c^2}\right)^2}} \\
+ &=& \frac{1}{\gamma(v_1)\gamma(v_2)\left(1 - \frac{\vec{v}_1\cdot\vec{v}_2}{c^2}\right)}
+ \sqrt{\gamma^2(v_1)\gamma^2(v_2)\left(1 - \frac{\vec{v}_1\cdot\vec{v}_2}{c^2}\right)^2 - 1} \\
+ &=& \frac{1}{\left(1 - \frac{\vec{v}_1\cdot\vec{v}_2}{c^2}\right)}
+ \sqrt{\left(1 - \frac{\vec{v}_1\cdot\vec{v}_2}{c^2}\right)^2 - \gamma^{-2}(v_1)\gamma^{-2}(v_2)} \\
+ &=& \frac{1}{\left(1 - \frac{\vec{v}_1\cdot\vec{v}_2}{c^2}\right)}
+ \sqrt{\left(1 - \frac{\vec{v}_1\cdot\vec{v}_2}{c^2}\right)^2 - \left(1 - \frac{v_1^2}{c^2}\right)
+ \left(1 - \frac{v_2^2}{c^2}\right)}
+\end{eqnarray*}
+We now simplify the notation a bit, and let
+\begin{eqnarray}
+\vec{\beta}_1 &=& \frac{\vec{v}_1}{c} \label{c2e52} \\
+\vec{\beta}_2 &=& \frac{\vec{v}_2}{c} \label{c2e53}
+\end{eqnarray}
+so that
+\begin{eqnarray*}
+v_r &=& \frac{\sqrt{(1 - \vec{\beta}_1\cdot\vec{\beta}_2)^2 - (1 - \beta_1^2 - \beta_2^2 + \beta_1^2\beta_2^2)}}
+{1 - \vec{\beta}_1\cdot\vec{\beta}_2} \\
+ &=& \frac{\sqrt{1 - 2\vec{\beta}_1\cdot\vec{\beta}_2 + \beta_1^2\beta_2^2\cos^2\theta - 
+ (1 - \beta_1^2 - \beta_2^2 + \beta_1^2\beta_2^2)}}{1 - \vec{\beta}_1\cdot\vec{\beta}_2} \\
+ &=& \frac{\sqrt{\beta_1^2 - 2\vec{\beta}_1\cdot\vec{\beta}_2 + \beta_2^2 - \beta_1^2\beta_2^2\sin^2\theta }}
+ {1 - \vec{\beta}_1\cdot\vec{\beta}_2}
+\end{eqnarray*}
+Finally, we get
+\begin{equation}\label{c2e54}
+v_r = \frac{\sqrt{(\vec{\beta}_1 - \vec{\beta}_2)^2 - (\vec{\beta}_1 \times \vec{\beta}_2)^2}}
+  {1 - \vec{\beta}_1\cdot\vec{\beta}_2}
+\end{equation}
+In terms of $\vec{\beta}_i$,
+\begin{equation}\label{c2e55}
+p_1^\mu {p_2}_\mu = m_1m_2\gamma(v_1)\gamma(v_2)c^2\left(1 - \vec{\beta}_1\cdot\vec{\beta}_2\right).
+\end{equation}
+Substituting \eqref{c2e54} and \eqref{c2e55} in \eqref{c2e50}, we get
+\begin{equation}\label{c2e56}
+A = \sigma \sqrt{(\vec{\beta}_1 - \vec{\beta}_2)^2 - (\vec{\beta}_1 \times \vec{\beta}_2)^2},
+\end{equation}
+where we also used the fact that $E_i = m_ic^2\gamma$. Therefore, equation \eqref{2.47} gives
+\begin{equation}\label{c2e57}
+d\nu = \sigma \sqrt{(\vec{\beta}_1 - \vec{\beta}_2)^2 - (\vec{\beta}_1 \times \vec{\beta}_2)^2}
+	n_1n_2dVdt.
+\end{equation}
 \end{enumerate}

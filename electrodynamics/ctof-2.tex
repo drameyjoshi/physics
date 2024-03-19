@@ -460,4 +460,62 @@ where we also used the fact that $E_i = m_ic^2\gamma$. Therefore, equation \eqre
 d\nu = \sigma \sqrt{(\vec{\beta}_1 - \vec{\beta}_2)^2 - (\vec{\beta}_1 \times \vec{\beta}_2)^2}
 	n_1n_2dVdt.
 \end{equation}
+
+\item We now consider elastic collisions between particles. Let a particle of
+mass $m_1$, energy $E_1$ and momentum $\vec{p}_1$ collide with a particle of mass
+$m_2$, energy $E_2$ and momentum $\vec{p}_2$. Let $E_1^\op, \vec{p}_1^\op$ ($E_2^\op,
+\vec{p}_2^\op$) be the energy and momenta after collision. By the conservation of 
+4-momentum,
+\begin{equation}\label{c2e58}
+p_1^\mu + p_2^\mu = p_1^{\op\mu} + p_2^{\op\mu}.
+\end{equation}
+Then $p_1^\mu + p_2^\mu - p_1^{\op\mu} = p_2^{\op\mu}$. Squaring each side, that
+is, taking a product with the covariant components of each side, we get
+\begin{equation}\label{c2e59}
+m_1^2c^2 + p_{1\mu}p_2^\mu - p_{1\mu}p_1^{\op\mu} - p_{2\mu}p_1^{\op\mu} = 0,
+\end{equation}
+where we used the fact that $p_\mu p^\mu = E^2/c^2 - p^2 = (E^2 - p^2c^2)/c^2 =
+m^2c^2$.
+Likewise, squaring $p_1^\mu + p_2^\mu - p_2^{\op\mu} = p_1^{\op\mu}$ gives
+\begin{equation}\label{c2e60}
+m_2^2c^2 + p_{1\mu}p_2^\mu - p_{1\mu}p_2^{\op\mu} - p_{2\mu}p_2^{\op\mu} = 0.
+\end{equation}
+If $m_2$ was at rest in the laboratory frame of reference then $p_2^\mu = (E_2/c,
+0)$. Using it in \eqref{c2e59} gives
+\begin{equation}\label{c2e61}
+m_1^2c^2 + \frac{E_1E_2}{c^2} - p_{1\mu}p_1^{\op\mu} - \frac{E_1^\op E_2}{c^2} = 0.
+\end{equation}
+Since $E_2 = m_2c^2$ and $p_{1\mu}p_1^{\op\mu} = E_1E_1^\op/c^2 - \vec{p}_1\cdot
+\vec{p}_1^\op$, \eqref{c2e61} becomes
+\begin{equation}\label{c2e62}
+m_1^2c^2 + m_2E_1 - E_1E_1^\op/c^2 + \vec{p}_1\cdot\vec{p}_1^\op - m_2E_1^\op = 0,
+\end{equation}
+or
+\[
+p_1p_1^\op\cos\theta_1 = E_1^\op(E_1/c^2 + m_2) - E_1m_2 - m_1^2c^2
+\]
+so that
+\begin{equation}\label{c2e63}
+\cos\theta_1 = \frac{E_1^\op(E_1/c^2 + m_2) - E_1m_2 - m_1^2c^2}{p_1p_1^\op}
+\end{equation}
+Using $p_2^\mu = (E_2/c, 0)$ in \eqref{c2e60} we get
+\[
+m_2^2c^2 + \frac{E_1E_2}{c^2} - \frac{E_1E_2^\op}{c^2} + 
+\vec{p}_1\cdot\vec{p}_2^\op - \frac{E_2E_2^\op}{c^2} = 0.
+\]
+Since $E_2 = m_2c^2$, this equation can be written as
+\[
+m_2^2c^2 + m_2E_1 - \frac{E_1E_2^\op}{c^2} + 
+\vec{p}_1\cdot\vec{p}_2^\op - m_2E_2^\op = 0.
+\]
+Reorganising it, we get
+\begin{equation}\label{c2e64}
+\cos\theta_2 = \frac{(E_2^\op - m_2c^2)(E_1/c^2 + m_2)}{p_1p_2^\op}.
+\end{equation}
+
+An experiment records $\theta_1$ and $\theta_2$ for controlled values of $E_1$
+and fixed masses $m_1$ and $m_2$. Equations \eqref{c2e63} and \eqref{c2e64}
+can be inverted, in principle, to get $E_1^\op$ and $E_2^\op$ in terms of
+the scattering angles $\theta_1$ and $\theta_2$.
+
 \end{enumerate}

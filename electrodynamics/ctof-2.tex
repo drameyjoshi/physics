@@ -518,4 +518,71 @@ and fixed masses $m_1$ and $m_2$. Equations \eqref{c2e63} and \eqref{c2e64}
 can be inverted, in principle, to get $E_1^\op$ and $E_2^\op$ in terms of
 the scattering angles $\theta_1$ and $\theta_2$.
 
+\item We will examine an elastic collision considered in the previous point in 
+the centre of mass reference frame. Here, the momenta of the two particles retain
+their magnitudes but change their directions. They rotate by an angle, say $\chi$.
+We will denote the quantities in this frame with a bar. Thus,
+\begin{equation}\label{c2e65}
+\bar{p}_{1\mu}\bar{p}_1^{\op\mu} = \frac{\bar{E}_1\bar{E}_1^\op}{c^2} - 
+\bar{\vec{p}}_1\cdot\bar{\vec{p}}+1^\op = \frac{\bar{E}_1\bar{E}_1^\op}{c^2} - 
+\bar{p}^2_1\cos\chi,
+\end{equation}
+because only the direction of momentum changes in this frame. Further, in an
+elastic collision, $\bar{E}_1 = \bar{E}_1^\op$ so that
+\begin{equation}\label{c2e66}
+\bar{p}_{1\mu}\bar{p}_1^{\op\mu} = \frac{\bar{E}_1^2}{c^2} - \bar{p}_1^2\cos\chi.
+\end{equation}
+Since $\bar{E}_1^2 = m_1^2c^4 + \bar{p}^2c^2$, 
+\begin{equation}\label{c2e67}
+\bar{p}_{1\mu}\bar{p}_1^{\op\mu} = m_1^2c^2 + \bar{p}_1^2(1 - \cos\chi).
+\end{equation}
+If the particle with mass $m_2$ was at rest in the laboratory frame,
+\begin{eqnarray}
+p_{1\mu}p_2^\mu &=& E_1m_2c^2 \label{c2e68} \\
+p_{2\mu}p_1^{\op\mu} &=& m_2c^2 E_1^\op \label{c2e69}
+\end{eqnarray}
+so that
+\begin{equation}\label{c2e70}
+m_2c^2(E_1^\op - E_1) = p_{2\mu}p_1^{\op\mu} - p_{1\mu}p_2^\mu.
+\end{equation}
+Since scalars are invariant under a transformation to centre of frame reference
+we can as well use \eqref{c2e66} to write
+\begin{equation}\label{c2e71}
+p_{1\mu}p_1^{\op\mu} = m_1^2c^2 + \bar{p}_1^2(1 - \cos\chi).
+\end{equation}
+Substituting \eqref{c2e70} and \eqref{c2e71} into \eqref{c2e59}, we get
+\begin{equation}\label{c2e72}
+E_1^\op - E_1 = -\frac{\bar{p}_1^2}{m_2c^2}(1 - \cos\chi).
+\end{equation}
+We next use the fact that $p_{1\mu}p_2^\mu = \bar{p}_{1\mu}\bar{p}_2^\mu$ so that,
+using \eqref{c2e68},
+\begin{equation}\label{c2e73}
+m_2c^2E_1 = \bar{E}_1\bar{E}_2 - \bar{\vec{p}}_1\cdot\bar{\vec{p}}_2 = 
+\bar{E}_1\bar{E}_2 + \bar{p}_1^2,
+\end{equation}
+as the two momenta are equal and opposite in the centre of mass system. Further, 
+$\bar{E}_1 = \sqrt{\bar{p}_1^2 + m_1^2c^4}, \bar{E}_2 = \sqrt{\bar{p}_2^2 + m_2^2c^4}
+= \sqrt{\bar{p}_1^2 + m_2^2c^4}$ so that equation \eqref{c2e72} becomes
+\begin{equation}\label{c2e74}
+m_2c^2E_1 - \bar{p}_1^2 = \sqrt{\bar{p}_1^2 + m_1^2c^4}\sqrt{\bar{p}_1^2 + m_2^2c^4},
+\end{equation}
+whose solution is
+\begin{equation}\label{c2e75}
+\bar{p}_1^2 = \frac{m_2c^2(E_1^2 - m_1^2c^4)}{m_1^2 + m_2^2 + 2m_2E_1}.
+\end{equation}
+Substituting \eqref{c2e75} in \eqref{c2e72} we get
+\begin{equation}\label{c2e76}
+E_1^\op = E_1 - \frac{m_2(E_1^2 - m_1^2c^4)}{m_1^2 + m_2^2 + 2m_2E_1}(1 - \cos\chi).
+\end{equation}
+This equation gives the energy of the scatterd particle in terms of its initial
+energy and angle of scattering in the centre of mass frame.
+
+Energy conservation gives us $E_1 + m_2c^2 = E_1^\op + E_2^\op$ so that
+\[
+E_2^\op = E_1 - E_1^\op - m_2c^2
+\]
+so that
+\begin{equation}\label{c2e77}
+E_2^\op = m_2c^2 + \frac{m_2(E_1^2 - m_1^2c^4)}{m_1^2 + m_2^2 + 2m_2E_1}(1 - \cos\chi).
+\end{equation}
 \end{enumerate}

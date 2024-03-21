@@ -585,4 +585,137 @@ so that
 \begin{equation}\label{c2e77}
 E_2^\op = m_2c^2 + \frac{m_2(E_1^2 - m_1^2c^4)}{m_1^2 + m_2^2 + 2m_2E_1}(1 - \cos\chi).
 \end{equation}
+
+\item Let $x^\mu$ be the world-coordinates of particle. Under an infinitesimal 
+rotation of the reference frame, the coordinates now become $x^{\op\mu}$. The two
+are so close that one can express the relation between them as
+\begin{equation}\label{c2e78}
+x^{\op\mu} = x^\mu + x_\nu\delta\Omega^{\nu\mu}.
+\end{equation}
+Since the norm of this vector remains unchanged, $x^\op_\mu x^{\op\mu} = x_\mu 
+x^\mu$. Now,
+\[
+x^\op_\mu = g_{\mu\nu}x^{\op\nu} = g_{\mu\nu}(x^\nu + x_\rho \delta\Omega^{\rho\nu})
+= x_\mu + x_\rho g_{\mu\nu}\delta\Omega^{\rho\nu},
+\]
+so that
+\begin{eqnarray*}
+x^\op_\mu x^{\op\mu} &=& (x_\mu + x_\rho g_{\mu\nu}\delta\Omega^{\rho\nu})(x^\mu + 
+x_\nu\delta\Omega^{\nu\mu}) \\
+ &=& x_\mu x^\mu + x_\mu x_\nu \delta\Omega^{\nu\mu} + x_\rho g_{\mu\nu}x^\mu 
+ \delta\Omega^{\rho\nu} \\
+ &=& x_\mu x^\mu + x_\mu x_\nu \delta\Omega^{\nu\mu} + x_\rho x_\nu\delta
+ \Omega^{\rho\nu} \\
+ &=& x_\mu x^\mu + x_\mu x_\nu \delta\Omega^{\nu\mu} + x_\mu x_\nu\delta
+ \Omega^{\mu\nu} \\
+ &=& x_\mu x^\mu + x_\mu x_\nu (\delta\Omega^{\nu\mu} + \delta \Omega^{\mu\nu}).
+\end{eqnarray*}
+Here we have ignored terms quadratic in $\delta\Omega^{\mu\nu}$.
+If $x^\op_\mu x^{\op\mu} = x_\mu x^\mu$ then we must have
+\begin{equation}\label{c2e79}
+\delta\Omega^{\nu\mu} = -\delta \Omega^{\mu\nu},
+\end{equation}
+that is, the tensor $\delta\Omega^{\mu\nu}$ us anti-symmetric.
+
+\item For an infinitesimal change of coordinates, the change in action is
+\begin{equation}\label{c2e80}
+\delta S = \sum_{a} p_{\mu a}\delta x^{\mu a},
+\end{equation}
+where we have used equations \eqref{c2e24} and \eqref{c2e27} and the summation
+is over all particles of the system. From equation \eqref{c2e78},
+\begin{equation}\label{c2e81}
+\delta S = \sum_{a} p_{\mu a}x_{\nu a}\delta\Omega^{\mu\nu}.
+\end{equation}
+The infinitesimal transformation $\delta\Omega^{\mu\nu}$ is the same for all
+particles in the system. Therefore,
+\begin{equation}\label{c2e82}
+\delta S = \delta\Omega^{\mu\nu}\sum_{a} p_{\mu a}x_{\nu a}.
+\end{equation}
+We write the tensor $p_{\mu a}x_{\nu a}$ as a sum of symmmetric and anti-symmetric
+tensors
+\begin{equation}\label{c2e83}
+p_{\mu a}x_{\nu a} = \frac{p_{\mu a}x_{\nu a} + p_{\nu a}x_{\mu a}}{2} +
+\frac{p_{\mu a}x_{\nu a} - p_{\nu a}x_{\mu a}}{2}
+\end{equation}
+Since $\delta\Omega^{\mu\nu}$ is anti-symmetric,
+\begin{eqnarray*}
+\delta\Omega^{\mu\nu}\frac{p_{\mu a}x_{\nu a} + p_{\nu a}x_{\mu a}}{2} &=&
+\frac{\delta\Omega^{\mu\nu}p_{\mu a}x_{\nu a}}{2} + 
+\frac{\delta\Omega^{\mu\nu}p_{\nu a}x_{\mu a}}{2} \\
+ &=& \frac{\delta\Omega^{\mu\nu}p_{\mu a}x_{\nu a}}{2} + 
+\frac{\delta\Omega^{\nu\mu}p_{\mu a}x_{\nu a}}{2} \\
+ &=& \frac{1}{2}(\delta\Omega^{\mu\nu} + \delta\Omega^{\nu\mu})p_{\mu a}x_{\nu a}.
+\end{eqnarray*}
+Because of the anti-symmetric nature of $\delta\Omega^{\mu\nu}$, the right hand 
+side is zero. Thus, only the anti-symmetric npart of \eqref{c2e83} survives in
+the summation over $\mu\nu$ in \eqref{c2e82}. We, therefore, write \eqref{c2e82}
+as
+\begin{equation}\label{c2e84}
+\delta S = \frac{1}{2}\delta\Omega^{\mu\nu}\sum_{a}p_{\mu a}x_{\nu a} - p_{\nu a}x_{\mu a}.
+\end{equation}
+Equivalently,
+\begin{equation}\label{c2e85}
+\delta S = \frac{1}{2}\delta\Omega_{\mu\nu}\sum_{a}p^{\mu a}x^{\nu a} - p^{\nu a}x^{\mu a}.
+\end{equation}
+The tensor
+\begin{equation}\label{c2e86}
+L^{\mu\nu} = x^{\mu}p^{\nu} - x^{\nu}p^{\mu}
+\end{equation}
+is called the angular momentum 4-tensor. Since $x^\mu = (ct, x^1, x^2, x^3), 
+p^\mu = (E/c, p^1, p^2, p^3)$,
+\[
+x^\mu p^\nu = \begin{bmatrix}tE & p^1ct & p^2ct & p^3ct \\
+x^1E/c & x^1p^1 & x^1p^2 & x^1p^3 \\
+x^2E/c & x^2p^1 & x^2p^2 & x^2p^3 \\
+x^3E/c & x^3p^1 & x^3p^2 & x^3p^3
+\end{bmatrix}
+\]
+and hence
+\[
+L^{\mu\nu} = \begin{bmatrix}tE & p^1ct & p^2ct & p^3ct \\
+x^1E/c & x^1p^1 & x^1p^2 & x^1p^3 \\
+x^2E/c & x^2p^1 & x^2p^2 & x^2p^3 \\
+x^3E/c & x^3p^1 & x^3p^2 & x^3p^3
+\end{bmatrix} - \begin{bmatrix}tE & x^1E/c & x^2E/c & x^3E/c \\
+p^1ct & x^1p^1 & x^2p^1 & x^3p^1 \\
+p^2ct & x^1p^2 & x^2p^2 & x^3p^2 \\
+p^3ct & x^1p^3 & x^2p^3 & x^3p^3
+\end{bmatrix}
+\]
+or
+\begin{equation}\label{c2e87}
+L^{\mu\nu} = \begin{bmatrix}0 & p^1ct - x^1E/c & p^2ct - x^2E/c & p^3ct - x^3E/c\\
+p^1ct - x^1E/c & 0 & x^1p^2 - x^2p^1 & x^1p^3 - x^3p^1 \\
+p^2ct - x^2E/c & x^2p^1 - x^1p^2 & 0 & x^2p^3 - x^3p^2 \\
+p^2ct - x^3E/c & x^3p^1 - x^3p^1 & x^3p^2 - x^2p^3 & 0
+\end{bmatrix}
+\end{equation}
+This tensor is very similar to the electromagnetic field tensor with the electric
+part given by the vector
+\begin{equation}\label{c2e88}
+\vec{L}_e = \vec{p}ct - \vec{x}\frac{E}{c}
+\end{equation}
+and the magnetic part by the vector
+\begin{equation}\label{c2e89}
+\vec{L}_m = -(\vec{x} \times \vec{p}).
+\end{equation}
+If $L^{\mu\nu}$ is conserved then so are $\vec{L}_e$ and $\vec{L}_m$ individually.
+For a system of multiple particles, it means that the quantity
+\begin{equation}\label{c2e90}
+\sum_a \left(\vec{p}_act - \vec{x}_a\frac{E_a}{c}\right) = \text{constant.}
+\end{equation}
+Equivalently,
+\begin{equation}\label{c2e91}
+\frac{\sum_a\vec{p}_ac^2t}{\sum_a E_a} - \frac{\sum_a\vec{x}_a E_a}{\sum E_a} = \text{constant.}
+\end{equation}
+Thus a points
+\begin{equation}\label{c2e92}
+\vec{R} = \frac{\sum_a\vec{x}_a E_a}{\sum E_a}
+\end{equation}
+travels with uniform velocity
+\begin{equation}\label{c2e93}
+\vec{V} = c^2\frac{\sum_a\vec{p}_a}{\sum_a E_a}.
+\end{equation}
+Equation \eqref{c2e92} is analogous to the centre of mass vector of classical 
+mechanics. The formula merely replaces mass in classical mechanics with energy.
 \end{enumerate}

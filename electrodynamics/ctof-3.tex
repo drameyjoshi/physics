@@ -1,0 +1,137 @@
+\chapter{Charges in Electromagnetic Fields}\label{c3}
+\begin{enumerate}
+\item Unless they are in touch with each other, particles interact with each
+other via fields.
+
+\item Disturbances in fields propagate information. It is a postulate of the 
+special theory of relativity that the changes in the state of a system are
+progagated at a finite speed not exceeding $c$, the speed of light in vacuum.
+
+\item This restriction rejects the hypothesis of an ideal rigid body in relativity.
+For suppose a force is applied to one end of a rigid body. Then in order that the
+inter-particle distance is unchanged, the force has to be propagated instantaneously
+to the other end. Therefore, in elementary analysis of the theory of relativity
+all particles are assumed to be points.
+
+\item The principle of action for a free particle is given by equation \eqref{c2e4}
+and \eqref{c2e7},
+\begin{equation}\label{c3e1}
+S = -\int_{t_1}^{t_2}mcds.
+\end{equation}
+For a particle in an electromagnetic field, the right hand side of this equation
+should be augmented with another terms that represents the interaction of the
+particle with the field. It should comprise of quantities describing the particle
+as well as the field.
+
+The particle's interaction with the field is described by a single quantity, its
+charge $e$ and the field by its 4-potential $A_\mu$. The complete action is
+\begin{equation}\label{c3e2}
+S = -\int_{t_1}^{t_2} \left(mcds + \frac{e}{c}A_\mu dx^\mu\right).
+\end{equation}
+
+The 4-potential can be written as 
+\begin{equation}\label{c3e3}
+A_\mu = (\varphi, \vec{A})
+\end{equation}
+so that we can write \eqref{c3e2} as
+\begin{equation}\label{c3e4}
+S = \int_{t_1}^{t_2}\left(-mcds - e\varphi dt + 
+\frac{e}{c}\vec{A}\cdot d\vec{x}\right).
+\end{equation}
+Since $ds = c\sqrt{1 - \beta^2}dt$ and $d\vec{x} = \vec{v}dt$,
+\begin{equation}\label{c3e5}
+S = \int_{t_1}^{t_2}\left(-mc^2\sqrt{1 - \beta^2} - e\varphi + 
+\frac{e}{c}\vec{A}\cdot\vec{v}\right)dt.
+\end{equation}
+Thus, the Lagrangian for a particle in an electromagnetic field is
+\begin{equation}\label{c3e6}
+L = -mc^2\sqrt{1 - \beta^2} - e\varphi + \frac{e}{c}\vec{A}\cdot\vec{v}
+= -mc^2\sqrt{1 - \beta^2} - e\varphi + \frac{e}{c}A^i v_i.
+\end{equation}
+From the Lagrangian, we get the generalised momentum
+\begin{equation}\label{c3e7}
+p^i = \pdt{L}{v^i} = m\gamma v^i + \frac{e}{c}A^i.
+\end{equation}
+From equation \eqref{c2e8}, the first term is just the generalised momentum for
+the Lagrangian of \eqref{c2e7}. The Hamiltonian is given be the Legendre
+transform
+\begin{eqnarray*}
+H &=& p^iv_i - L \\
+  &=& m\gamma v^iv_i + \frac{e}{c}A^iv_i + mc^2\sqrt{1 - \beta^2} + e\varphi - 
+  \frac{e}{c}A^iv_i \\
+  &=& \frac{mv^2}{\sqrt{1 - \beta^2}} + mc^2\sqrt{1 - \beta^2} + e\varphi \\
+  &=& \frac{mc^2}{\sqrt{1 - \beta^2}} + e\varphi
+\end{eqnarray*}
+or that
+\begin{equation}\label{c3e8}
+H = mc^2\gamma + e\varphi.
+\end{equation}
+Stricly speaking \eqref{c3e9} is not the correct form of the Hamiltonian because 
+it is expressed in terms of the generalised velocity. To remedy this defect, we 
+write
+\eqref{c3e9} as
+\[
+\frac{(H - e\varphi)^2}{c^2} = m^2c^2 \gamma^2.
+\]
+Now,
+\begin{equation}\label{c3e9}
+\gamma^2 = \frac{1}{1 - \beta^2} = 1 + \frac{\beta^2}{1 - \beta^2} = 
+1 + \beta^2\gamma^2
+\end{equation}
+so that
+\[
+\frac{(H - e\varphi)^2}{c^2} = m^2c^2(1 + \beta^2\gamma^2) 
+\]
+or that
+\[
+\frac{(H - e\varphi)^2}{c^2} = m^2c^2 + m^2\gamma^2 v^2,
+\]
+From \eqref{c3e7} the last term on the rhs can be written as
+\begin{equation}\label{c3e10}
+\frac{(H - e\varphi)^2}{c^2} = m^2c^2 + \left(p^i - \frac{e}{c}A^i\right)
+\left(p_i - \frac{e}{c}A_i\right)
+\end{equation}
+Thus,
+\begin{equation}\label{c3e11}
+H = e\varphi + \sqrt{m^2c^4 + c^2 
+\left(p^i - \frac{e}{c}A^i\right)\left(p_i - \frac{e}{c}A_i\right)}
+\end{equation}
+is the correct form of the Hamiltonian. For speeds small as compared to $c$,
+\[
+\sqrt{1 - \beta^2} = 1 - \frac{1}{2}\beta^2
+\]
+so that the Lagrangian of \eqref{c3e6} can be written as
+\begin{equation}\label{c3e12}
+L = \frac{1}{2}mv^2 - e\varphi + \frac{e}{c}\vec{A}\cdot\vec{v},
+\end{equation}
+where we ignored the constant terms $-mc^2$. At non-relativistic speeds, $\gamma$
+can be well-approximated by $1$ so that the generalised momentum is
+\begin{equation}\label{c3e13}
+\vec{p} = m\vec{v} + \frac{e}{c}\vec{A}
+\end{equation}
+and the Hamiltonian is
+\begin{equation}\label{c3e14}
+H = \frac{1}{2m}\left(\vec{p} - \frac{e}{c}\vec{A}\right)^2 + e\varphi.
+\end{equation}
+
+From \eqref{c2e27},
+\[
+p^\nu = g^{\mu\nu}p_\mu = -g^{\mu\nu}\pdt{S}{x^\mu}
+\]
+so that
+\[
+p^0 = -\frac{1}{c}\pdt{S}{t}, \vec{p} = \grad S
+\]
+and hence the Hamilton-Jacobi equation is, from \eqref{c3e10},
+\[
+\frac{1}{c^2}\left(\pdt{S}{t} + e\varphi\right)^2 = m^2c^2 + 
+\left(\grad S - \frac{e}{c}\vec{A}\right)^2
+\]
+where we replaced $H$ in \eqref{c3e10} with $-(1/c)\partial_t S$ because it is
+the energy of the particle. We can reexpress the relativistic Hamilton-Jacobi
+equation as 
+\begin{equation}\label{c3e15}
+\left(\grad S - \frac{e}{c}\vec{A}\right)^2 - 
+\frac{1}{c^2}\left(\pdt{S}{t} + e\varphi\right)^2 + m^2c^2 = 0.
+\end{equation}
+\end{enumerate}

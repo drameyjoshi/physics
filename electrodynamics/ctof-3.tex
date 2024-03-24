@@ -134,4 +134,93 @@ equation as
 \left(\grad S - \frac{e}{c}\vec{A}\right)^2 - 
 \frac{1}{c^2}\left(\pdt{S}{t} + e\varphi\right)^2 + m^2c^2 = 0.
 \end{equation}
+
+\item The Lagrangian of \eqref{c3e12} allows us to derive the equation of motion.
+\begin{eqnarray*}
+\grad L &=& -e\grad\varphi + \frac{e}{c}(\vec{A}\cdot\grad\vec{v} + 
+ \vec{v}\cdot\grad\vec{A} + \vec{A}\times\curl\vec{v} + \vec{v}\times\curl\vec{A})\\ 
+ &=& -e\grad\varphi + \frac{e}{c}(\vec{v}\cdot\grad\vec{A} + \vec{v}\times\curl\vec{A})\\ 
+\grad_{\vec{v}}L &=& m\vec{v} + \frac{e}{c}\vec{A}.
+\end{eqnarray*}
+The equation for $\grad L$ simplifies because $\vec{v}$ is independent of $\vec{x}$.
+\begin{equation}\label{c3e16}
+\frac{d}{dt}\left(m\vec{v} + \frac{e}{c}\vec{A}\right) = 
+-e\grad\varphi + \frac{e}{c}(\vec{v}\cdot\grad\vec{A} + \vec{v}\times\curl\vec{A})
+\end{equation}
+is the equation of motion. Now.
+\begin{equation}\label{c3e17}
+\td{\vec{A}}{t} = \pdt{\vec{A}}{t} + \vec{v}\cdot\vec{A}
+\end{equation}
+so that \eqref{c3e16} is simplified to
+\begin{equation}\label{c3e18}
+\td{\vec{p}}{t} = e\left(-\grad\varphi - \frac{1}{c}\pdt{\vec{A}}{t}\right)
++ \frac{e}{c}\vec{v}\times\curl\vec{A}
+\end{equation}
+We define
+\begin{eqnarray}
+\vec{E} &=& -\grad\varphi - \frac{1}{c}\pdt{\vec{A}}{t} \label{c3e19} \\
+\vec{B} &=& \curl\vec{A} \label{c3e20}
+\end{eqnarray}
+and call $\vec{E}$ as the electric field and $\vec{B}$ as the magnetic field. The
+quantity
+\begin{equation}\label{c3e21}
+\vec{F} = e\vec{E} + \frac{\vec{v}}{c}\times\vec{B}
+\end{equation}
+is called the Lorentz force.
+
+\item Recall that 
+\begin{equation}\label{c3e22}
+p^\mu = mcu^\mu = (mc\gamma, mv^i\gamma) = \left(\frac{E}{c}, \vec{p}\right)
+\end{equation}
+so that the energy of the particle is
+\begin{equation}\label{c3e23}
+E = mc^2\gamma
+\end{equation}
+so that
+\begin{equation}\label{c3e24}
+\td{E}{t} = mc^2\td{\gamma}{t} = 
+-\frac{mc^2}{2}\gamma^3\left(\frac{-2\vec{v}}{c^2}\cdot\td{\vec{v}}{t}\right)
+= m\gamma^3 \vec{v}\cdot\td{\vec{v}}{t}
+\end{equation}
+and
+\[
+\td{\vec{p}}{t} = m\gamma\td{\vec{v}}{t} + m\gamma^3\frac{\vec{v}}{c^2}\vec{v}\cdot\td{\vec{v}}{t} = 
+m\gamma^3\left(m\gamma^{-2}\td{\vec{v}}{t} + \frac{\vec{v}}{c^2}\vec{v}\cdot\td{\vec{v}}{t}\right)
+\]
+or, since
+\[
+\gamma = \frac{1}{\sqrt{1 - v^2/c^2}},
+\]
+we have,
+\[
+\td{\vec{p}}{t} = m\gamma^3\left(\left(1 - \frac{v^2}{c^2}\right)\td{\vec{v}}{t} + 
+\frac{\vec{v}}{c^2}\vec{v}\cdot\td{\vec{v}}{t}\right)
+\]
+Therefore,
+\begin{equation}\label{c3e25}
+\vec{v}\cdot\td{\vec{p}}{t} = m\gamma^3\left(\left(1 - \frac{v^2}{c^2}\right)\vec{v}\cdot\td{\vec{v}}{t}
++ \frac{v^2}{c^2}\vec{v}\cdot\td{\vec{v}}{t}\right) = m\gamma^3\vec{v}\cdot\td{\vec{v}}{t}
+\end{equation}
+From equations \eqref{c3e24} and \eqref{c2e25},
+\begin{equation}\label{c3e26}
+\td{E}{t} = \vec{v}\cdot\td{\vec{p}}{t}.
+\end{equation}
+If we apply it to the equation of motion \eqref{c3e18} and use the definitions 
+of the fields, we get
+\begin{equation}\label{c3e27}
+\td{E}{t} = e\vec{v}\cdot\vec{E}.
+\end{equation}
+
+Here we have used the fact that
+\begin{equation}\label{c3e28}
+\td{v^2}{t} = \td{(\vec{v}\cdot\vec{v})}{t^2} = 2\vec{v}\cdot\td{\vec{v}}{t}.
+\end{equation}
+
+\item The equation of motion
+\begin{equation}\label{c3e29}
+\td{\vec{p}}{t} = -e\vec{E} + \frac{\vec{v}}{c}\times\vec{B}
+\end{equation}
+is invariant under time reversal if we also reverse the direction of the magnetic
+field.
 \end{enumerate}
+

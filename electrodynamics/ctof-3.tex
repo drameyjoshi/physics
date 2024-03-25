@@ -222,5 +222,47 @@ Here we have used the fact that
 \end{equation}
 is invariant under time reversal if we also reverse the direction of the magnetic
 field.
+
+\item A 4-potential $A_\mu$ gives a unique combination of electric and magnetic
+fields. But the relationship is many-to-one. This is because, the potential
+\begin{equation}\label{c3e30}
+A_\mu^\op = A_\mu - \pdt{f}{x^\mu}
+\end{equation}
+results in
+\begin{eqnarray}
+\varphi^\op &=& \varphi - \frac{1}{c}\pdt{f}{t} \label{c3e31} \\
+\vec{A}^\op &=& \vec{A} + \grad f \label{c3e32}
+\end{eqnarray}
+and the fields
+\begin{eqnarray}
+\vec{E}^\op &=& -\grad{\varphi^\op} - \frac{1}{c}\pdt{\vec{A}^\op}{t} \nonumber \\
+ &=& -\grad\varphi + \frac{1}{c}\grad\pdt{f}{t} - 
+      \frac{1}{c}\pdt{\vec{A}}{t} - \frac{1}{c}\grad{\pdt{f}{t}} \nonumber \\
+ &=& -\grad\varphi - \frac{1}{c}\pdt{\vec{A}}{t} \nonumber \\
+ &=& \vec{E} \label{c3e33} \\
+\vec{B}^\op &=& \curl\vec{A}^\op \nonumber \\
+ &=& \curl\vec{A} \nonumber \\
+ &=& \vec{B} \label{c3e34}
+\end{eqnarray}
+Equation \eqref{c3e30} is called the gauge transformation and an invariance of
+functions under it is called gauge invariance. All physically meaningful quantities
+must be gauge invariant.
+
+\item If $A_\mu$ is independent of time then so are the fields. The electric field
+depends only on $\varphi$. Further, since the Lagrangian is independent of time, the
+energy of the system is a constant and it coincides with the Hamiltonian. From
+\eqref{c3e8}, it is
+\begin{equation}\label{c3e35}
+\mathcal{E} (= H) = mc^2\gamma + e\varphi.
+\end{equation} 
+The effect of the fields is just to add a term $e\varphi$ to the energy. This term
+is called the \emph{potential energy}. It is independent of $\vec{A}$ which means
+that the magnetic field has no influence on the particle's energy.
+
+If the fields are constant then one can easily verify that
+\begin{eqnarray}
+\varphi &=& -\vec{E}\cdot\vec{x} \label{c3e36} \\
+\vec{A} &=& \frac{1}{2}\vec{B} \times \vec{x} \label{c3e37}
+\end{eqnarray}
 \end{enumerate}
 

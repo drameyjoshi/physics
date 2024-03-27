@@ -264,5 +264,86 @@ If the fields are constant then one can easily verify that
 \varphi &=& -\vec{E}\cdot\vec{x} \label{c3e36} \\
 \vec{A} &=& \frac{1}{2}\vec{B} \times \vec{x} \label{c3e37}
 \end{eqnarray}
+
+\item We will now consider the motion of a charge particle in a constant electric
+field. From the equation of motion \eqref{c3e29},
+\begin{equation}\label{c3e38}
+\td{\vec{p}}{t} = e\vec{E}.
+\end{equation}
+If $\vec{E} = E\uv{x}$ then we have
+\begin{eqnarray}
+p_x(t) &=& p_x(0) + eEt \label{c3e39} \\
+p_y(t) &=& p_y(0) \label{c3e40}.
+\end{eqnarray}
+Let us choose the zero of time at an instant when $p_x(0) = 0$ and $p_y(0) = p_0$,
+the initial momentum of the particle. Since $\vec{p} = m\gamma\vec{v}$ and 
+$\mathcal{E} = mc^2$, we have 
+\begin{equation}\label{c3e41}
+\vec{v} = \frac{\vec{p}c^2}{\mathcal{E}}
+\end{equation}
+so that
+\begin{eqnarray}
+\dot{x}(t) &=& \frac{ec^2Et}{\mathcal{E}} \label{c3e42} \\
+\dot{y}(t) &=& p_0 \label{c3e43}
+\end{eqnarray}
+A particle in an electric field gains energy. Therefore, $\mathcal{E}$ is not a
+constant and hence \eqref{c3e42} cannot be integrated as is. However, we know 
+that $\mathcal{E}^2 = m^2c^4 + p^2c^2 = m^2c^4 + p_0^2c^2 + e^2E^2t^2c^2$ so that
+equation \eqref{c3e42} becomes
+\begin{equation}\label{c3e44}
+\dot{x}(t) = \frac{ec^2Et}{\sqrt{m^2c^4 + p_0^2c^2 + c^2e^2E^2t^2}}.
+\end{equation}
+and hence
+\[
+x(t) = \int \frac{ec^2Et dt}{\sqrt{m^2c^4 + p_0^2c^2 + c^2e^2E^2t^2}} + x(0).
+\]
+If $ceEt = u, dt = du/(ceE)$ and
+\[
+x(t) = \frac{1}{eE}\int\frac{u du}{\sqrt{\mathcal{E}_0^2 + u^2}} + x(0)
+\]
+If $u = \mathcal{E}_0\sinh v$, $du = \mathcal{E}_0\cosh  vdv$ and
+\begin{eqnarray*}
+x(t) &=& \frac{1}{eE}\int\frac{\mathcal{E}_0^2\sinh v\cosh v dv}{\mathcal{E}_0\cosh v} + x(0) \\
+ &=& \frac{\mathcal{E}_0}{eE}\int\sinh v dv + x(0) \\
+ &=& \frac{\mathcal{E}_0}{eE}\cosh v + x(0) \\
+ &=& \frac{1}{eE}\sqrt{\mathcal{E}_0^2 + u^2} + x(0)
+\end{eqnarray*}
+or
+\begin{equation}\label{c3e45}
+x(t) = \frac{1}{eE}\sqrt{\mathcal{E}_0^2 + e^2c^2E^2t^2} + x(0)
+\end{equation}
+Analogous to \eqref{c3e44}
+\[
+\dot{y}(t) = \frac{p_0c^2}{\sqrt{\mathcal{E}_0^2 + e^2E^2c^2t^2}}
+\]
+so that
+\[
+y(t) = \int \frac{p_0c^2}{\sqrt{\mathcal{E}_0^2 + e^2E^2c^2t^2}} dt + y(0).
+\]
+Put $ecEt = \mathcal{E}_0\sinh u$ so that $ecEdt = \mathcal{E}_0\cosh u du$
+and
+\[
+y(t) = \frac{p_0c}{eE}\int \frac{\mathcal{E}_0\cosh u du}{\mathcal{E}_0\cosh u}
+ + y(0) = \frac{p_0c}{eE} u + y(0) 
+\]
+that is
+\begin{equation}\label{c3e46}
+y(t) = \frac{p_0c}{eE} \sinh^{-1}\left(\frac{ecEt}{\mathcal{E}_0}\right) + y(0).
+\end{equation}
+We choose the origin such that $x(0) = 0, y(0) = 0$ so that from \eqref{c3e46}
+we have
+\[
+ecEt = \mathcal{E}_0\sinh\left(\frac{eEy}{p_0c}\right)
+\]
+Substituting this in \eqref{c3e45} we get the equation of the orbit
+\begin{equation}\label{c3e47}
+x(t) = \frac{\mathcal{E}_0}{eE}\cosh\left(\frac{eEy}{p_0c}\right).
+\end{equation}
+It describes a catenary symmetric about the $x$-axis. When $eEy \ll p_0c$, we
+can approximate \eqref{c3e47} as
+\begin{equation}\label{c3e47}
+x(t) = \frac{\mathcal{E}_0}{eE}\left(1 + \frac{1}{2}\frac{e^2E^2y}{p_0^2c^2}\right),
+\end{equation}
+which is an equation of a parabola.
 \end{enumerate}
 

@@ -341,9 +341,90 @@ x(t) = \frac{\mathcal{E}_0}{eE}\cosh\left(\frac{eEy}{p_0c}\right).
 \end{equation}
 It describes a catenary symmetric about the $x$-axis. When $eEy \ll p_0c$, we
 can approximate \eqref{c3e47} as
-\begin{equation}\label{c3e47}
+\begin{equation}\label{c3e48}
 x(t) = \frac{\mathcal{E}_0}{eE}\left(1 + \frac{1}{2}\frac{e^2E^2y}{p_0^2c^2}\right),
 \end{equation}
 which is an equation of a parabola.
+
+\item When a charged particle is subjected to a constant magnetic field, the
+equation of motion is
+\begin{equation}\label{c2e49}
+\td{\vec{p}}{t} = e\frac{\vec{v}}{c} \times \vec{B}.
+\end{equation}
+Once again, we use the fact that $\mathcal{E} = m\gamma c^2$ and $\vec{p} = 
+m\gamma\vec{v}$ to get
+\[
+\vec{p} = \frac{\mathcal{E}}{c^2}\vec{v}
+\]
+so that \eqref{c2e48} becomes
+\[
+\td{\vec{v}}{t} = \frac{ec}{\mathcal{E}}\vec{v} \times \vec{B}.
+\]
+In a magnetic field, the energy of a particle remains unchanges. Therefore, we 
+could pull $\mathcal{E}$ out of the derivative. Let us align the $z$ axis along
+the magnetic field so that $\vec{B} = B\uv{z}$ and $\vec{v} \times \vec{B} = 
+\uv{x}(v_yB - 0) + \uv{y}(-v_xB) + \uv{z}(0)$. Therefore,
+\begin{eqnarray*}
+\dot{v}_x(t) &=& \frac{ecB}{\mathcal{E}}v_y \\
+\dot{v}_y(t) &=& -\frac{ecB}{\mathcal{E}}v_x \\
+\dot{v}_z(t) &=& 0
+\end{eqnarray*}
+From these equations, we get
+\begin{eqnarray*}
+\ddot{v}_x(t) &=& -\omega^2 v_x \\
+\ddot{v}_y(t) &=& -\omega^2 v_y \\
+\ddot{v}_z(t) &=& 0
+\end{eqnarray*}
+where
+\begin{equation}\label{c3e50}
+\omega = \frac{ecB}{\mathcal{E}},
+\end{equation}
+is called the cyclotron frequency. At low speeds, $\gamma \approx 1$, $\mathcal{E}
+= mc^2$ and the cyclotron frequency is $(eB)/(mc)$. Note that $\omega$ is a 
+constant. We can write solutions to the differential equations of velocity
+components as
+\begin{eqnarray*}
+v_x(t) &=& A_1\omega\cos\omega t + A_2\omega\sin\omega t \\
+v_y(t) &=& A_3\omega\cos\omega t + A_4\omega\sin\omega t \\
+v_z(t) &=& v_z(0)
+\end{eqnarray*}
+here $A_1, A_2, A_3, A_4$ are the constants of integration. If the initial
+conditions are $v_x(0) = v_{\perp}, v_y(0) = 0$ then $A_1 = v_{\perp}$ and 
+$A_3 = 0$ so that
+\begin{eqnarray*}
+v_x(t) &=& v_\perp\cos\omega t + A_2\omega\sin\omega t \\
+v_y(t) &=& A_4\omega\sin\omega t \\
+v_z(t) &=& v_z(0)
+\end{eqnarray*}
+from which we get
+\begin{eqnarray*}
+x(t) &=& \frac{v_\perp}{\omega}\sin\omega t + A_2\cos\omega t \\
+y(t) &=& -A_4\cos\omega t \\
+z(t) &=& z(0) + v_z(0)t
+\end{eqnarray*}
+If $x(0) = 0, y(0) = r$ then $A_2 = 0$ and $A_4 = -r$ so that
+\begin{eqnarray}
+x(t) &=& \frac{v_\perp}{\omega}\sin\omega t \label{c3e51} \\
+y(t) &=& r\cos\omega t \label{c3e52} \\
+z(t) &=& z(0) + v_z(0)(t) \label{c3e53}
+\end{eqnarray}
+The constants $v_\perp$ and $r$ are not unrelated to each other. Using them in
+the equations of velocity components we get
+\begin{eqnarray*}
+v_x(t) &=& v_\perp\cos\omega t \\
+v_y(t) &=& -r\omega\sin\omega t
+\end{eqnarray*}
+so that $\dot{v}_x(t) = v_\perp\omega\sin\omega t$. From the equation of motion
+the right hand side is $\omega v_y = -r\omega^2\sin\omega t$ so that we get
+\begin{equation}\label{c3e54}
+v_\perp = -r\omega.
+\end{equation}
+The equations of the trajectory therefore simplify to
+\begin{eqnarray}
+x(t) &=& -r\sin\omega t \label{c3e54} \\
+y(t) &=& r\cos\omega t \label{c3e55} \\
+z(t) &=& z(0) + v_z(0)(t) \label{c3e56}
+\end{eqnarray}
+This is an equation of an helix.
 \end{enumerate}
 

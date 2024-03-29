@@ -252,5 +252,67 @@ The result follows immediately from
 \[
 \vec{E}(\vec{r}) = \ke\int d^3r^\op \frac{\rho(\vec{r})(\vec{r} - \vec{r}^{\;\op})}{|\vec{r} - \vec{r}^\op|^3}.
 \]
+
+\item[(9)] Let $S$ be a parallelpiped bounded by the planes $z = 0, z = a$ and 
+infinite in all other directions. Then, using Gauss' law
+\[
+\int_S d\vec{S}\cdot\vec{E} = \frac{Q}{\epsilon_0}.
+\]
+A parallelpiped has six faces. Of these four that are perpendicular to the $z = 0$
+plane are at an infinite distance from the charge but they are not themselves 
+infinitely large. Therefore, the flux through them will be zero. That leaves us 
+with
+\[
+\int_S d\vec{S}\cdot\vec{E} = \int_{z=0} d\vec{S}\cdot\vec{E} + \int_{z=-a}
+ d\vec{S}\cdot\vec{E}
+\]
+By symmetric, the two integrals will contribute equally, so that
+\[
+\int_S d\vec{S}\cdot\vec{E} = 2\int_{z=0} d\vec{S}\cdot\vec{E}
+\]
+from which we get
+\[
+\int_{z=0} d\vec{S}\cdot\vec{E} = \frac{Q}{2\epsilon_0}.
+\]
+
+
+\item[(10)] Green's reciprocity theorem to prove a property of harmonic functions.
+\begin{enumerate}
+\item[(a)] Choose $f = \varphi, g = 1/r$ so that the Green's reciprocity theorem gives
+\[
+\int d^3 r\left(\varphi\nabla^2\left(\frac{1}{r}\right) - \left(\frac{1}{r}\right)\nabla^2\varphi\right)
+= \int d\vec{S}\cdot\left(\varphi\grad{\left(\frac{1}{r}\right)} - \left(\frac{1}{r}\right)\grad\varphi\right).
+\]
+In a charge free region, $\nabla^2\varphi = 0$. Further, $\nabla^2(r^{-1}) = 
+-4\pi\delta(0)$ so that the left hand side is
+\[
+-4\pi\varphi(0) = \int d\vec{S}\cdot\left(\varphi\left(-\frac{\vec{r}}{r^3}\right) +
+\left(\frac{1}{r}\right)\vec{E}\right).
+\]
+For the integral on rhs choose a surface of a sphere of radius $r$ so that
+\[
+-4\pi\varphi(0) = -\frac{1}{r^2}\int d\vec{S}\cdot\varphi(r)\uv{r} +
+\int d\vec{S}\cdot\vec{E}
+\]
+The second term on the rhs is zero because there is no charge enclosed within the
+surface. Thus we have,
+\[
+\frac{1}{4\pi r^2}\int_0^\pi \sin\theta d\theta\int_0^{2\pi}d\phi\varphi(r) = \varphi(0)
+\]
+The expression on lhs is the average of $\varphi$ on a sphere of radius $r$.
+
+\item[(b)] Consider a test charge $q$ in an electrostatic field produced by static
+charges. A position $\vec{r}_0$ of $q$ is a stable point if the net field at $\vec{r}_0$
+is zero. It is stable equilibrium if the potential at it is a minimum. For sake of
+notational convenience, shift the origin to $\vec{r}_0$. If suppose it were a minimum 
+and we consider its average on a small sphere centred around it with radius $a$ then
+by the equation
+\[
+\frac{1}{4\pi a^2}\int_0^\pi \sin\theta d\theta\int_0^{2\pi}d\phi\varphi() = \varphi(0).
+\]
+This means that there are some points on the surface at which the potential has
+a value lower than it has at the origin. Therefore, the origin cannot be a stable
+equilibrium.
+\end{enumerate}
 \end{enumerate}
 \end{document}

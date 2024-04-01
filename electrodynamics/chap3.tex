@@ -1,11 +1,12 @@
 \documentclass{article}
-\usepackage{amsmath}
+\usepackage{amsmath, xcolor}
 \newcommand{\un}{\hat{n}}
 \newcommand{\uv}[1]{\hat{e}_{#1}}
 \newcommand{\grad}[1]{\nabla{#1}}
 \newcommand{\dive}[1]{\nabla\cdot\vec{#1}}
 \newcommand{\curl}[1]{\nabla\times\vec{#1}}
 \newcommand{\op}{\prime}
+\newcommand{\td}[2]{\frac{d{#1}}{d{#2}}}
 \newcommand{\pdt}[2]{\frac{\partial{#1}}{\partial{#2}}}
 \newcommand{\ke}{\frac{1}{4\pi\epsilon_0}}
 \title{Electrostatics}\label{c3}
@@ -314,5 +315,75 @@ This means that there are some points on the surface at which the potential has
 a value lower than it has at the origin. Therefore, the origin cannot be a stable
 equilibrium.
 \end{enumerate}
+
+\item[(11)] {\color{red}I accidentally solved this problem using Gaussian units.}
+Electrostatics of a charged disc. Let the disc be in the $xy$ plane with
+its centre at the origin so that its axis of symmetry coincides with the $z$-axis.
+\begin{enumerate}
+\item[(a)] At any point on the $z$ axis, consider the contribution to $\varphi$ due
+to an area element $rdrd\phi$ on the disc. It is
+\[
+d\varphi(z) = \frac{\sigma rdrd\phi}{\sqrt{z^2 + r^2}}
+\]
+so that
+\[
+\varphi(z) = \int_0^a\int_0^{2\pi}\frac{\sigma rdrd\phi}{\sqrt{z^2 + r^2}}
+= 2\pi\sigma\int_0^a \frac{rdr}{\sqrt{z^2 + r^2}}.
+\]
+Put $u^2 = z^2 + r^2$ so that $udu = rdr$ and the limits of integration go
+from $z$ to $\sqrt{z^2 + a^2}$ and
+\[
+\varphi(z) = 2\pi\sigma\int_z^{\sqrt{z^2 + a^2}} du = 2\pi\sigma(\sqrt{z^2 + a^2} - z)
+\]
+Now, 
+\[
+\sqrt{z^2 + a^2} = z\sqrt{1 + \frac{a^2}{z^2}} = z\left(1 + \frac{1}{2}\frac{a^2}{z^2}
+- \frac{1}{8}\frac{a^4}{z^4} + \cdots\right) = z + \frac{1}{2}\frac{a^2}{z}
+- \frac{1}{8}\frac{a^4}{z^3} + \cdots
+\]
+so that
+\[
+\varphi(z) = 2\pi\sigma\left(\frac{1}{2}\frac{a^2}{z} - \frac{1}{8}\frac{a^4}{z^3}
+ + \cdots\right)
+\]
+Although the expression for $\varphi$ appeared alarming at a first glance, it is 
+not so.
+
+The electric field is
+\[
+E_z = \td{\varphi}{z} = 2\pi\sigma\left(\frac{1}{2}\frac{2z}{\sqrt{z^2 + a^2}} - 1\right)
+\]
+or
+\[
+\vec{E} = 2\pi\sigma\left(\frac{z}{\sqrt{z^2 + a^2}} - 1\right)\uv{z}.
+\]
+If $q$ is the total charge on the disc, $\sigma = q/(\pi a^2)$ so that
+\[
+\vec{E} = \frac{2q}{a^2}\left(\frac{z}{\sqrt{z^2 + a^2}} - 1\right)\uv{z}.
+\]
+Now,
+\[
+\lim_{z \rightarrow \infty}\vec{E} = \uv{z}\frac{2q}{a^2}\lim_{z \rightarrow \infty}
+\left(\frac{1}{\sqrt{1 + a^2/z^2}} - 1\right) = 0.
+\]
+
+\item[(b)] A lack of symmetry makes this problem difficult. Move the origin to
+the point on the rim where potential is calculated. Align the $x$ axis so that
+the diameter from the origin is along it. The disc above the $x$ axis contributes
+equally as the one from below it. So let us focus only on the half-disc above
+the $x$ axis. Consider a line from $O$ making an angle $\theta$ with the $x$
+axis. The distance of a point on this line ranges from $0$ to $2a\cos\theta$.
+The contribution to an element on this line is
+\[
+d\varphi = \frac{\sigma rdrd\theta}{r}.
+\]
+The limits of integration are $\theta = 0$ to $\theta = \pi/2$ and for each
+$\theta$, $r$ from $0$ to $2a\cos\theta$. Thus,
+\[
+\phi = \int_0^{\pi/2}\int_0^{2a\cos\theta}\sigma dr d\theta = 2a\sigma
+\int_0^{\pi/2} \cos\theta d\theta = 2a\sigma
+\]
+\end{enumerate}
+
 \end{enumerate}
 \end{document}

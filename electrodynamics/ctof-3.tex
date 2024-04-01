@@ -16,8 +16,9 @@ all particles are assumed to be points.
 \item The principle of action for a free particle is given by equation \eqref{c2e4}
 and \eqref{c2e7},
 \begin{equation}\label{c3e1}
-S = -\int_{t_1}^{t_2}mcds.
+S = -\int_{A}^{B}mcds,
 \end{equation}
+where $A$ and $B$ are world points.
 For a particle in an electromagnetic field, the right hand side of this equation
 should be augmented with another terms that represents the interaction of the
 particle with the field. It should comprise of quantities describing the particle
@@ -26,7 +27,7 @@ as well as the field.
 The particle's interaction with the field is described by a single quantity, its
 charge $e$ and the field by its 4-potential $A_\mu$. The complete action is
 \begin{equation}\label{c3e2}
-S = -\int_{t_1}^{t_2} \left(mcds + \frac{e}{c}A_\mu dx^\mu\right).
+S = -\int_A^B \left(mcds + \frac{e}{c}A_\mu dx^\mu\right).
 \end{equation}
 
 The 4-potential can be written as 
@@ -35,7 +36,7 @@ A_\mu = (\varphi, \vec{A})
 \end{equation}
 so that we can write \eqref{c3e2} as
 \begin{equation}\label{c3e4}
-S = \int_{t_1}^{t_2}\left(-mcds - e\varphi dt + 
+S = \int_A^B\left(-mcds - e\varphi dt + 
 \frac{e}{c}\vec{A}\cdot d\vec{x}\right).
 \end{equation}
 Since $ds = c\sqrt{1 - \beta^2}dt$ and $d\vec{x} = \vec{v}dt$,
@@ -218,7 +219,7 @@ Here we have used the fact that
 
 \item The equation of motion
 \begin{equation}\label{c3e29}
-\td{\vec{p}}{t} = -e\vec{E} + \frac{\vec{v}}{c}\times\vec{B}
+\td{\vec{p}}{t} = e\left(\vec{E} + \frac{\vec{v}}{c}\times\vec{B}\right)
 \end{equation}
 is invariant under time reversal if we also reverse the direction of the magnetic
 field.
@@ -421,10 +422,178 @@ v_\perp = -r\omega.
 \end{equation}
 The equations of the trajectory therefore simplify to
 \begin{eqnarray}
-x(t) &=& -r\sin\omega t \label{c3e54} \\
-y(t) &=& r\cos\omega t \label{c3e55} \\
-z(t) &=& z(0) + v_z(0)(t) \label{c3e56}
+x(t) &=& -r\sin\omega t \label{c3e55} \\
+y(t) &=& r\cos\omega t \label{c3e56} \\
+z(t) &=& z(0) + v_z(0)(t) \label{c3e57}
 \end{eqnarray}
 This is an equation of an helix.
+
+\item Now consider a charged particle in the presence of a constant magnetic field
+$\vec{B} = B\uv{z}$ and a constant electric field $\vec{E} = E_y\uv{y} + E_z\uv{z}$.
+We restrict ourselves to non-relativistic regime so that $\vec{p} = m\vec{v}$ and
+the equation of motion \eqref{c3e29} becomes
+\begin{eqnarray}
+m\dot{v}_x &=& \frac{e}{c}v_yB \label{c3e58} \\
+m\dot{v}_y &=& eE_y - \frac{e}{c}v_xB \label{c3e59} \\
+m\dot{v}_z &=& eE_z \label{c3e60}
+\end{eqnarray}
+The last equation immediately gives
+\[
+v_z = \frac{e}{m}E_zt + v_z(0)
+\]
+and
+\begin{equation}\label{c3e61}
+z(t) = \frac{e}{2m}E_zt^2 + v_z(0)t + z(0).
+\end{equation}
+In order to solve the coupled equations \eqref{c3e57} and \eqref{c3e58}, we can 
+either differentiate them once more and decouple them or use a different trick.
+We demonstrated the former in the previous point. Here, we will use the latter.
+Let $\tilde{v} = v_x + iv_y$ so that
+\[
+m\td{\tilde{v}}{t} = \frac{e}{c}v_yB + ieE_y - \frac{e}{c}{iv_xB}
+= ieE_y -i\frac{e}{c}(B(v_x + iv_y)) = ieE_y - i\frac{eB}{c}\tilde{v}
+\]
+or
+\begin{equation}\label{c3e62}
+\td{\tilde{v}}{t} = -i\frac{eB}{mc}\tilde{v} + i\frac{e}{m}E_y,
+\end{equation}
+It can be readily integrated to
+\[
+\ln\left(\tilde{v} - \frac{eE_y}{m\omega}\right) = -i\omega t + \ln\tilde{v}(0)
+\]
+or
+\begin{equation}\label{c3e63}
+\tilde{v} = \tilde{v}(0)e^{-i\omega t} + \frac{eE_y}{m\omega},
+\end{equation}
+where we approximated \eqref{c3e50} for non-relativistic speeds. Equating the
+real and imaginary parts,
+\begin{eqnarray}
+v_x(t) &=& v_x(0)\cos\omega t  + \frac{e}{m\omega}E_y\label{c3e64} \\
+v_y(t) &=& -v_y(0)\sin\omega t \label{c3e65}
+\end{eqnarray}
+From these equations, we readily get
+\begin{eqnarray}
+\langle v_x(t) \rangle &=& \frac{e}{m\omega}E_y \label{c3e66} \\
+\langle v_y(t) \rangle &=& 0 \label{c3e67}
+\end{eqnarray}
+Thus, the motion remains bounded on the $y$ axis but not so on the other axes. 
+Equations \eqref{c3e65} and \eqref{c3e66} can be readily integrated to
+\begin{eqnarray}
+x(t) &=& \frac{v_x(0)}{\omega}\sin\omega t + \frac{e}{m\omega}E_yt + x(0) \label{c3e68} \\
+y(t) &=& \frac{v_y(0)}{\omega}\cos\omega t + y(0) \label{c3e69}
+\end{eqnarray}
+Equations \eqref{c3e61}, \eqref{c3e68} and \eqref{c3e69} are the equations of the
+trajectory.
+
+\item We derived the equations of motion in point (4) from the Lagrangian which
+was obtained after writing the principle of least action as an integral over time.
+We can, instead, apply the variational method to equation \eqref{c3e2}. Thus,
+\begin{eqnarray*}
+\delta S &=& -\delta\int_A^B\left(mcds + \frac{e}{c}A_\mu dx^\mu\right) \\
+ &=& -\int_A^B\left(mc\delta ds + \frac{e}{c}\delta(A_\mu dx^\mu)\right) \\
+ &=& -\int_A^B\left(mc\delta\sqrt{dx_\mu dx^\mu} + \frac{e}{c}(\delta(A_\mu) dx^\mu + A_\mu d\delta x^\mu)\right) \\
+ &=& -\int_A^B\left(mc\frac{1}{2}\frac{dx_\mu d\delta x^\mu + d(\delta x_\mu)dx^\mu}{ds}
+     + \frac{e}{c}(\delta(A_\mu) dx^\mu + A_\mu d\delta x^\mu)\right)
+\end{eqnarray*}
+Now $d(\delta x_\mu)dx^\mu = d(\delta x^\mu)dx_\mu = dx_\mu d(\delta x^\mu)$ so that
+\begin{equation}\label{c3e70}
+\delta S = -\int_A^B\left(mc\frac{dx_\mu d(\delta x^\mu)}{ds}
+     + \frac{e}{c}(\delta(A_\mu) dx^\mu + A_\mu d\delta x^\mu)\right)
+\end{equation}    
+Using \eqref{c1e78},
+\begin{equation}\label{c3e71}
+\delta S = -\int_A^B\left((mcu_\mu + \frac{e}{c}A_\mu)d\delta x^\mu + \frac{e}{c}\delta(A_\mu) dx^\mu\right).
+\end{equation}
+We can integrate first term by parts,
+\[
+\delta S = -\left(mcu_\mu + \frac{e}{c}A_\mu\right)\delta x^\mu\big|_A^B + 
+ \int_A^B \left(\delta x^\mu d\left(mcu_\mu + \frac{e}{c}A_\mu\right) - 
+ \frac{e}{c}\delta(A_\mu) dx^\mu\right)
+\]
+Since the variations $\delta x^\mu$ vanish at the end points,
+\[
+\delta S = \int_A^B\left(\delta x^\mu\left(mcdu_\mu + \frac{e}{c}dA_\mu\right) - 
+ \frac{e}{c}\delta(A_\mu) dx^\mu\right)
+\]
+We now write
+\[
+dA_\mu = \pdt{A_\mu}{x^\nu}dx^\nu;\; \delta A_\mu = \pdt{A_\mu}{x^\nu}\delta x^\nu dx^\mu
+\]
+so that
+\begin{eqnarray*}
+\delta S &=& \int_A^B\left(mcdu_\mu\delta x^\mu + \frac{e}{c}\pdt{A_\mu}{x^\nu}dx^\nu\delta x^\mu
+ - \frac{e}{c}\pdt{A_\mu}{x^\nu}\delta x^\nu dx^\mu\right) \\
+ &=& \int_A^B\left(mcdu_\mu\delta x^\mu + \frac{e}{c}\pdt{A_\mu}{x^\nu}dx^\nu\delta x^\mu
+ - \frac{e}{c}\pdt{A_\nu}{x^\mu}\delta x^\mu dx^\nu\right) \\
+ &=& \int_A^B\left(mcdu_\mu - \frac{e}{c}\left(\pdt{A_\nu}{x^\mu}
+ - \pdt{A_\mu}{x^\nu}\right)dx^\nu\right)\delta x^\mu \\
+ &=& \int_A^B\left(mc\td{u_\mu}{s}ds - \frac{e}{c}\left(\pdt{A_\nu}{x^\mu}
+ - \pdt{A_\mu}{x^\nu}\right)u^\nu ds\right)\delta x^\mu \\
+ &=& \int_A^B\left(mc\td{u_\mu}{s} - \frac{e}{c}\left(\pdt{A_\nu}{x^\mu}
+ - \pdt{A_\mu}{x^\nu}\right)u^\nu \right)ds\delta x^\mu
+\end{eqnarray*}
+$\delta S = 0$ implies that
+\[
+\int_A^B\left(mc\td{u_\mu}{s} - \frac{e}{c}\left(\pdt{A_\nu}{x^\mu}
+ - \pdt{A_\mu}{x^\nu}\right)u^\nu \right)ds\delta x^\mu = 0.
+\]
+Since this is true for all $\delta x^\mu = 0$,
+\[
+\int_A^B\left(mc\td{u_\mu}{s} - \frac{e}{c}\left(\pdt{A_\nu}{x^\mu}
+ - \pdt{A_\mu}{x^\nu}\right)u^\nu \right)ds = 0.
+\]
+This integral is always zero, we must have
+\begin{equation}\label{c3e72}
+mc\td{u_\mu}{s} = \frac{e}{c}\left(\pdt{A_\nu}{x^\mu} - \pdt{A_\mu}{x^\nu}\right)u^\nu
+\end{equation}
+Define the electromagnetic field tensor
+\begin{equation}\label{c3e73}
+F_{\mu\nu} = \pdt{A_\nu}{x^\mu} - \pdt{A_\mu}{x^\nu}
+\end{equation}
+so that the equation of motion becomes
+\[
+mc\td{u_\mu}{s} = \frac{e}{c}F_{\mu\nu}u^\nu.
+\]
+equivalently,
+\begin{equation}\label{c3e74}
+mc\td{u^\mu}{s} = \frac{e}{c}F^{\mu\nu}u_\nu.
+\end{equation}
+Recall that $dx^\mu = (cdt, dx^1, dx^2, dx^3)$ so that $dx_\mu = (cdt, -dx^1, 
+-dx^2, -dx^3)$. Further, $A_\mu = (\varphi, -A_1, -A_2, -A_3)$ so that the 
+components of $F_{\mu\nu}$ are
+\[
+\begin{bmatrix}
+0 & -c^{-1}\partial_t A_1 - \partial_{x^1}\varphi & -c^{-1}\partial_t A_2 - \partial_{x^2}\varphi & -c^{-1}\partial_t A_3 - \partial_{x^3}\varphi \\
+c^{-1}\partial_t A_1 - \partial_{x^1}\varphi & 0 & -\partial_{x^1}A_2+\partial_{x^2}A^1 & -\partial_{x^1}A_3+\partial_{x^3}A^3\\
+c^{-1}\partial_t A_2 - \partial_{x^2}\varphi & \partial_{x^1}A_2-\partial_{x^2}A_1 & 0 & -\partial_{x^2}A_3+\partial_{x^3}A_2\\
+c^{-1}\partial_t A_3 - \partial_{x^3}\varphi & \partial_{x^1}A_3-\partial_{x^3}A_1 & \partial_{x^3}A_2-\partial_{x^3}A_2 & 0
+\end{bmatrix}
+\]
+From equations \eqref{c3e19} and \eqref{c3e20},
+\begin{equation}\label{c3e75}
+A_{\mu\nu} = 
+\begin{bmatrix}
+0 & E_1 & E_2 & E_3 \\
+-E_1 & 0 & -B_3 & B_2\\
+-E_2 & B_3 & 0 & -B_1\\
+-E_3 & -B_2 & B_1 & 0
+\end{bmatrix}
+\end{equation}
+In order to transform this into a contravariant tensor, we use the equation
+\begin{equation}\label{c3e76}
+A^{\mu\nu} = g^{\mu\sigma}A_{\sigma\rho}g^{\rho\nu}.
+\end{equation}
+The factors are written in a manner that mimics the matrix multiplication. The matrix
+representing the metric is $\text{diag}(1, -1, -1, -1)$ so that the result is
+\begin{equation}\label{c3e77}
+A_{\mu\nu} = 
+\begin{bmatrix}
+0 & -E_1 & -E_2 & -E_3 \\
+E_1 & 0 & -B_3 & B_2\\
+E_2 & B_3 & 0 & -B_1\\
+E_3 & -B_2 & B_1 & 0
+\end{bmatrix}
+\end{equation}
+
 \end{enumerate}
 

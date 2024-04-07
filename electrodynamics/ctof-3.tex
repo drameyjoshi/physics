@@ -571,7 +571,7 @@ c^{-1}\partial_t A_3 - \partial_{x^3}\varphi & \partial_{x^1}A_3-\partial_{x^3}A
 \]
 From equations \eqref{c3e19} and \eqref{c3e20},
 \begin{equation}\label{c3e75}
-A_{\mu\nu} = 
+F_{\mu\nu} = 
 \begin{bmatrix}
 0 & E_1 & E_2 & E_3 \\
 -E_1 & 0 & -B_3 & B_2\\
@@ -581,12 +581,12 @@ A_{\mu\nu} =
 \end{equation}
 In order to transform this into a contravariant tensor, we use the equation
 \begin{equation}\label{c3e76}
-A^{\mu\nu} = g^{\mu\sigma}A_{\sigma\rho}g^{\rho\nu}.
+F^{\mu\nu} = g^{\mu\sigma}F_{\sigma\rho}g^{\rho\nu}.
 \end{equation}
 The factors are written in a manner that mimics the matrix multiplication. The matrix
 representing the metric is $\text{diag}(1, -1, -1, -1)$ so that the result is
 \begin{equation}\label{c3e77}
-A^{\mu\nu} = 
+F^{\mu\nu} = 
 \begin{bmatrix}
 0 & -E_1 & -E_2 & -E_3 \\
 E_1 & 0 & -B_3 & B_2\\
@@ -752,10 +752,71 @@ where $\vec{E}^\op = (\bar{E}_1, \bar{E}_2, \bar{E}_3)$ and $\vec{B}^\op =
 = 0$ ($\vec{E}^\op = 0$), $\vec{B}$ ($\vec{E}$) is not. Further, it is clear that
 $\vec{E}$ is perpendicular to $\vec{B}$ in both cases.
 
-\item From equations \eqref{c3e93} and \eqref{c3e94}, we have
-\begin{equation}\label{c3e95}
-\vec{E}\cdot\vec{B} = (1 + \beta^2)\vec{E}^\op\cdot\vec{B}^\op - 
-(\vec{\beta}\cdot\vec{E}^\op)(\vec{\beta}\cdot\vec{B}^\op)
+\item Suppose $\vec{E}^\op$ and $\vec{B}^\op$ are perpendicular to each other.
+If $\vec{v} = c\vec{B}^\op/E^\op$ then, from \eqref{c3e93} and \eqref{c3e94},
+\begin{eqnarray}
+\vec{E} &=& \vec{E}^\op \label{c3e95} \\
+\vec{B} &=& 0 \label{c3e96}
+\end{eqnarray}
+Similarly, if we choose $\vec{v} = c\vec{E}^\op/B^\op$, we will get $\vec{E} = 0$
+and $\vec{B} = \vec{B}^\op$. Thus, if $\vec{E}^\op$ and $\vec{B}^\op$ are 
+perpendicular to each other then one can find a frame of reference in which one
+of the fields is zero.
+
+\item For any tensor, $A^{\mu\nu}$, $A_{\mu\nu}A^{\mu\nu}$ and 
+$\epsilon^{\mu\rho\nu\sigma}A^{\mu\rho}A^{\nu\sigma}$ are scalars, and therefore
+invariants under Lorentz transformation. In the case of electromagnetic field
+tensor, the first of these is
+\[
+F_{\mu\nu}F^{\mu\nu} = -E_1^2 - E_2^2 - E_3^2 + B_3^2 + B_2^2 + B_1^2.
+\]
+Thus, the quantity 
+\begin{equation}\label{c3e97}
+B^2 - E^2
 \end{equation}
+is an invariant. To find the next invariant, we
+need the product
+\begin{eqnarray*}
+\epsilon^{\mu\rho\nu\sigma}F^{\mu\rho}F^{\nu\sigma} &=& F^{01}F^{23} - F^{01}F^{32} - F^{02}F^{13} + F^{02}F^{31} \\
+ & & F^{03}F^{12} - F^{03}F^{21} - F^{10}F^{23} + F^{10}F^{32} \\
+ & & F^{12}F^{03} - F^{12}F^{30} - F^{13}F^{02} + F^{13}F^{20} \\
+ & & F^{20}F^{13} - F^{20}F^{31} - F^{21}F^{03} + F^{21}F^{30} \\
+ & & F^{23}F^{01} - F^{23}F^{10} - F^{30}F^{12} + F^{30}F^{21} \\
+ & & F^{31}F^{02} - F^{31}F^{20} - F^{32}F^{01} + F^{32}F^{10} \\
+ &=& E_1B_1 + E_1B_1 + E_2B_2 + E_2B_2 \\
+ & & E_3B_3 + E_3B_3 + E_1B_1 + E_1B_1 \\
+ & & E_3B_3 + E_3B_3 + E_2B_2 + E_2B_2 \\
+ & & E_2B_2 + E_2B_2 + E_3B_3 + E_3B_3 \\
+ & & E_1B_1 + E_1B_1 + E_3B_3 + E_3B_3 \\
+ & & E_2B_2 + E_2B_2 + E_1B_1 + E_1B_1 \\
+ &=& 8\vec{E}\cdot\vec{B}
+\end{eqnarray*}
+Thus, \begin{equation}\label{c3e98}
+\vec{E}\cdot\vec{B}
+\end{equation}
+is another invariant.
+
+From the invariants of \eqref{c3e97} and \eqref{c3e98} we have
+\begin{enumerate}
+\item If the electric and magnetic fields are
+perpendicular to each other in one frame of reference then they are so in all 
+other inertial frames of reference.
+
+\item If $E > B$ ($E < B$) in one frame of reference then it is so in all other
+frames.
+
+\item If the angle between $\vec{E}$ and $\vec{B}$ is acute (obtuse) in one frame
+of reference then it is so in all other frames.
+
+\item If $\vec{E}\cdot\vec{B} \ne 0$ then we can find a frame of reference
+in which the electric and magnetic fields are parallel to each other. In that
+frame ${B^\op}^2 - {E^\op}^2 = B^2 - E^2$ and $\vec{E}\cdot\vec{B} = E^\op B^\op$.
+
+\item if $\vec{E}\cdot\vec{B} = 0$ and if $B^2 - E^2 > 0$ then we can find
+a frame in which $E^\op = 0$ and ${B^\op}^2 = B^2 - E^2 > 0$. Likewise, if $B^2
+- E^2 < 0$ then we can find a frame in which $B^\op = 0$ and $-{E^\op}^2 = B^2 - 
+E^2 < 0$. 
+\end{enumerate}
+
 \end{enumerate}
 

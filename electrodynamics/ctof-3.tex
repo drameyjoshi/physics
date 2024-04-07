@@ -171,15 +171,15 @@ is called the Lorentz force.
 
 \item Recall that 
 \begin{equation}\label{c3e22}
-p^\mu = mcu^\mu = (mc\gamma, mv^i\gamma) = \left(\frac{E}{c}, \vec{p}\right)
+p^\mu = mcu^\mu = (mc\gamma, mv^i\gamma) = \left(\frac{\mathcal{E}}{c}, \vec{p}\right)
 \end{equation}
 so that the energy of the particle is
 \begin{equation}\label{c3e23}
-E = mc^2\gamma
+\mathcal{E} = mc^2\gamma
 \end{equation}
 so that
 \begin{equation}\label{c3e24}
-\td{E}{t} = mc^2\td{\gamma}{t} = 
+\td{\mathcal{E}}{t} = mc^2\td{\gamma}{t} = 
 -\frac{mc^2}{2}\gamma^3\left(\frac{-2\vec{v}}{c^2}\cdot\td{\vec{v}}{t}\right)
 = m\gamma^3 \vec{v}\cdot\td{\vec{v}}{t}
 \end{equation}
@@ -204,12 +204,12 @@ Therefore,
 \end{equation}
 From equations \eqref{c3e24} and \eqref{c2e25},
 \begin{equation}\label{c3e26}
-\td{E}{t} = \vec{v}\cdot\td{\vec{p}}{t}.
+\td{\mathcal{E}}{t} = \vec{v}\cdot\td{\vec{p}}{t}.
 \end{equation}
 If we apply it to the equation of motion \eqref{c3e18} and use the definitions 
 of the fields, we get
 \begin{equation}\label{c3e27}
-\td{E}{t} = e\vec{v}\cdot\vec{E}.
+\td{\mathcal{E}}{t} = e\vec{v}\cdot\vec{E}.
 \end{equation}
 
 Here we have used the fact that
@@ -594,6 +594,168 @@ E_2 & B_3 & 0 & -B_1\\
 E_3 & -B_2 & B_1 & 0
 \end{bmatrix}
 \end{equation}
+Note that $E_i, B_i$ are not space components of a 4-vector. They should be treated
+as scalars. That is $E_i = E^i$ and $B_i = B^i$.
 
+
+\item Let us write \eqref{c3e74} in components form. Since
+\[
+u^\mu = \left(\gamma, -\frac{\gamma}{c}v^1, -\frac{\gamma}{c}v^2, -\frac{\gamma}{c}v^3\right),
+\]
+we have
+\[
+c\td{u^\mu}{s} = \left(c\td{\gamma}{s}, -\td{(\gamma v^1)}{s}, 
+-\td{(\gamma v^2)}{s}, -\td{(\gamma v^3)}{s}\right)
+\]
+and
+\[
+u^\mu = \left(\gamma, \frac{\gamma}{c}v_1, \frac{\gamma}{c}v_2, \frac{\gamma}{c}v_3\right),
+\]
+and hence
+\begin{eqnarray*}
+mc\td{\gamma}{s} &=& \frac{e}{c}(F^{00}\gamma - F^{01}\gamma \beta_1 - F^{02}\gamma \beta_2 -F^{03}\gamma \beta_3) \\
+-m\frac{d}{ds}(\gamma v^1)&=&\frac{e}{c}(F^{10}\gamma + F^{11}\gamma \beta_1 + F^{12}\gamma \beta_2 + F^{13}\gamma \beta_3) \\
+-m\frac{d}{ds}(\gamma v^2)&=&\frac{e}{c}(F^{20}\gamma + F^{21}\gamma \beta_1 + F^{22}\gamma \beta_2 + F^{23}\gamma \beta_3) \\
+-m\frac{d}{ds}(\gamma v^3)&=&\frac{e}{c}(F^{30}\gamma + F^{31}\gamma \beta_1 + F^{32}\gamma \beta_2 + F^{33}\gamma \beta_3) 
+\end{eqnarray*}
+Since $v^i = -v_i$ and $ds = cdt/\gamma$,
+\begin{eqnarray*}
+mc\td{\gamma}{t} &=& e(E_1 \beta_1 + E_2 \beta_2 + E_3 \beta_3) \\
+m\frac{d}{dt}(\gamma v^1) &=& e(E_1 + B_3 \beta_2 - B_2 \beta_3) \\
+m\frac{d}{dt}(\gamma v^2) &=& e(E_2 - B_3 \beta_1 + B_1 \beta_3) \\
+m\frac{d}{dt}(\gamma v^3) &=& e(E_3 + B_2 \beta_1 - B_1 \beta_2).
+\end{eqnarray*}
+The last three equations can be written in vector form as
+\[
+\frac{d}{dt}(m\gamma\vec{v}) = \td{\vec{p}}{t} = e(\vec{E} + \vec{\beta} \times \vec{B})
+\]
+which is indeed the same as \eqref{c3e29}. The first equation can be written as
+\[
+mc^2\td{\gamma}{t} = \frac{d}{dt}(mc^2\gamma) = \td{\mathcal{E}}{t} = e\vec{E}\cdot\vec{v}
+\]
+This is the ``relativistic'' form of the work-energy theorem of \eqref{c3e27}.
+
+\item From the equation of motion \eqref{c3e74} we also have
+\[
+mcu_\mu\td{u^\mu}{s} = \frac{e}{c}u_\mu F^{\mu\nu}u_\nu.
+\]
+The left hand side is zero because of \eqref{c1e86} while the right hand side 
+vanishes because of anti-symmetry of the electromagnetic field tensor. This means
+that the four equations of motion in the previous point are not independent.
+
+\item We go back to equation \eqref{c3e71}
+\[
+\delta S = -\int_A^B\left((mcu_\mu + \frac{e}{c}A_\mu)d\delta x^\mu + \frac{e}{c}\delta(A_\mu) dx^\mu\right).
+\]
+and its immediate consequence,
+\[
+\delta S = -\left(mcu_\mu + \frac{e}{c}A_\mu\right)\delta x^\mu\big|_A^B + 
+ \int_A^B \left(\delta x^\mu d\left(mcu_\mu + \frac{e}{c}A_\mu\right) - 
+ \frac{e}{c}\delta(A_\mu) dx^\mu\right)
+\]
+The first term is a difference of a quantity at two fixed points while the second
+one is a variation over all paths between those points. Since the variations 
+vanish at the fixed points the first term is zero while the second term, after some
+manipulations, gives the equations of motion.
+
+If we consider only the actual paths starting from the world-point $A$ and let $B$
+be any other point on it, then the second term will necessarily be zero while the 
+first one will not be zero. The equation then gives,
+\[
+\frac{\delta S}{\delta x^\mu} = -\left(mcu_\mu + \frac{e}{c}A_\mu\right).
+\]
+In the limit $\delta x^\mu \rightarrow 0$ this equation becomes
+\begin{equation}\label{c3e78}
+-\pdt{S}{x^\mu} = mcu_\mu + \frac{e}{c}A_\mu.
+\end{equation}
+From equation \eqref{c2e26}, the left hand side is the generalised momentum
+\begin{equation}\label{c3e79}
+p_\mu = mcu_\mu + \frac{e}{c}A_\mu.
+\end{equation}
+This agrees with \eqref{c3e7}.
+
+\item From equation \eqref{c1e46}, the Lorentz transformation of the 4-potential
+gives
+\begin{equation}\label{c3e80}
+\varphi = \gamma(\bar{\varphi} + \beta\bar{A}_1);
+\; A_1 = \gamma(\bar{A}_1 + \beta\bar{\varphi}); A_2 = \bar{A}_2;\; A_3 = \bar{A}_3.
+\end{equation}
+Using the solution to problem 2 in chapter \ref{c1}, we have $F^{01} = 
+\bar{F}^{01}$ (from \eqref{c1e98}) so that 
+\begin{equation*}
+E_1 = \bar{E}_1.
+\end{equation*}
+From \eqref{c1e90}
+\[
+F^{02} = \frac{\bar{F}^{02} + \beta\bar{F}^{12}}{1 - \beta^2}
+\]
+so that
+\begin{equation*}
+E_2 = \frac{\bar{E}_2 + \beta\bar{B}_3}{1 - \beta^2}.
+\end{equation*}
+From \eqref{c1e91}
+\[
+F^{03} = \frac{\bar{F}^{03} + \beta\bar{F}^{13}}{1 - \beta^2}
+\]
+so that
+\begin{equation*}
+E_3 = \frac{\bar{E}_3 - \beta\bar{B}_2}{1 - \beta^2}.
+\end{equation*}
+From \eqref{c1e93}
+\[
+F^{12} = \frac{\bar{F}^{12} + \beta\bar{F}^{02}}{1 - \beta^2}
+\]
+so that
+\begin{equation*}
+-B_3 = \frac{-\bar{B}_3 - \beta\bar{E}_2}{1 - \beta^2} \Rightarrow 
+B_3 = \frac{\bar{B}_3 + \beta\bar{E}_2}{1 - \beta^2}
+\end{equation*}
+From \eqref{c1e94}
+\[
+F^{13} = \frac{\bar{F}^{13} + \beta\bar{F}^{03}}{1 - \beta^2}
+\]
+so that
+\begin{equation*}
+B_2 = \frac{\bar{B}_2 - \beta\bar{E}_3}{1 - \beta^2}.
+\end{equation*}
+Finally, $F^{23} = \bar{F}^{23}$ implies
+\begin{equation*}
+B_1 = \bar{B}_1.
+\end{equation*}
+We collect these formulae together as
+\begin{eqnarray}
+E_1 &=& \bar{E}_1 \\ \label{c3e81}
+E_2 &=& \frac{\bar{E}_2 + \beta\bar{B}_3}{1 - \beta^2} \\ \label{c3e82}
+E_3 &=& \frac{\bar{E}_3 - \beta\bar{B}_2}{1 - \beta^2} \\ \label{c3e83}
+B_1 &=& \bar{B}_1 \\ \label{c3e84}
+B_2 &=& \frac{\bar{B}_2 - \beta\bar{E}_3}{1 - \beta^2} \\ \label{c3e85}
+B_3 &=& \frac{\bar{B}_3 + \beta\bar{E}_2}{1 - \beta^2} \label{c3e86}
+\end{eqnarray}
+
+\item At low speeds, $1 - \beta^2 \approx 1$ and the transformation equations
+become
+\begin{eqnarray}
+E_1 &=& \bar{E}_1 \\ \label{c3e87}
+E_2 &=& \bar{E}_2 + \beta\bar{B}_3 \\ \label{c3e88}
+E_3 &=& \bar{E}_3 - \beta\bar{B}_2 \\ \label{c3e89}
+B_1 &=& \bar{B}_1 \\ \label{c3e90}
+B_2 &=& \bar{B}_2 - \beta\bar{E}_3 \\ \label{c3e92}
+B_3 &=& \bar{B}_3 + \beta\bar{E}_2 \label{c3e92}
+\end{eqnarray}
+Since $\beta = v/c$ or really $v_1/c$, we can write these equations in vector form as
+\begin{eqnarray}
+\vec{E} = \vec{E}^\op + \frac{1}{c}\vec{B}^\op \times \vec{v} \label{c3e93} \\
+\vec{B} = \vec{B}^\op - \frac{1}{c}\vec{E}^\op \times \vec{v}, \label{c3e94}
+\end{eqnarray}
+where $\vec{E}^\op = (\bar{E}_1, \bar{E}_2, \bar{E}_3)$ and $\vec{B}^\op = 
+(\bar{B}_1, \bar{B}_2, \bar{B}_3)$, These equations tell that even if $\vec{B}^\op
+= 0$ ($\vec{E}^\op = 0$), $\vec{B}$ ($\vec{E}$) is not. Further, it is clear that
+$\vec{E}$ is perpendicular to $\vec{B}$ in both cases.
+
+\item From equations \eqref{c3e93} and \eqref{c3e94}, we have
+\begin{equation}\label{c3e95}
+\vec{E}\cdot\vec{B} = (1 + \beta^2)\vec{E}^\op\cdot\vec{B}^\op - 
+(\vec{\beta}\cdot\vec{E}^\op)(\vec{\beta}\cdot\vec{B}^\op)
+\end{equation}
 \end{enumerate}
 

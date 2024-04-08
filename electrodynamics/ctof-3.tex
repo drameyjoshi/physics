@@ -817,6 +817,48 @@ a frame in which $E^\op = 0$ and ${B^\op}^2 = B^2 - E^2 > 0$. Likewise, if $B^2
 - E^2 < 0$ then we can find a frame in which $B^\op = 0$ and $-{E^\op}^2 = B^2 - 
 E^2 < 0$. 
 \end{enumerate}
+\end{enumerate}
 
+\section{Problems}
+\begin{enumerate}
+\item Find the 3-acceleration of a particle in electric and magnetic fields.
+\item[Solution:] The equation of motion follows from \eqref{c3e18}, \eqref{c3e19}
+and \eqref{c3e20}. It is
+\begin{equation}\label{c3e99}
+\td{\vec{p}}{t} = e\vec{E} + e\frac{\vec{v}}{c}\times\vec{B}.
+\end{equation}
+Now, $p^i = m\gamma v^i$ and $\mathcal{E} = m\gamma c^2$ so that 
+\[
+p^i = \frac{\mathcal{E} v^i}{c^2}.
+\]
+Therefore,
+\[
+c^2\td{\vec{p}}{t} = \td{\mathcal{E}}{t}\vec{v} + \mathcal{E}\td{\vec{v}}{t}.
+\]
+From equations \eqref{c3e27} and \eqref{c3e99} we have
+\[
+ec^2\vec{E} + ec\vec{v}\times\vec{B} = e\vec{v}\cdot\vec{E}\vec{v} + \mathcal{E}\td{\vec{v}}{t}.
+\]
+or
+\[
+\td{\vec{v}}{t} = \frac{ec^2}{\mathcal{E}}
+\left(\vec{E} + \frac{\vec{v}}{c}\times\vec{B} - \frac{\vec{v}\cdot\vec{E}}{c^2}\vec{v}\right)
+= \frac{e}{m\gamma}
+\left(\vec{E} + \frac{\vec{v}}{c}\times\vec{B} - \frac{\vec{v}\cdot\vec{E}}{c^2}\vec{v}\right)
+\]
+or
+\begin{equation}\label{c3e100}
+\td{\vec{v}}{t} = \frac{e}{m}\sqrt{1 - \frac{v^2}{c^2}}
+\left(\vec{E} + \frac{\vec{v}}{c}\times\vec{B} - \frac{\vec{v}\cdot\vec{E}}{c^2}\vec{v}\right).
+\end{equation}
+In terms of $\vec{\beta}$, this equation is
+\begin{equation}\label{c3e101}
+\td{\vec{v}}{t} = \frac{e}{m}\sqrt{1 - \beta^2}
+\left(\vec{E} + \vec{\beta}\times\vec{B} - (\vec{\beta}\cdot\vec{E})\vec{\beta}\right).
+\end{equation}
+Unlike the non-relativistic case, we cannot put acceleration as the ratio of 
+force to mass. In the expression for momentum, $\gamma$ is not a constant. Instead of
+finding an expression for $d\gamma/dt$, we replace $m\gamma$ by $\mathcal{E}/c^2$
+and use the expression for $d\mathcal{E}/dt$.
 \end{enumerate}
 

@@ -80,11 +80,11 @@ This equation is quite different from the one used in classical mechanics.
 
 \item The energy of the particle is
 \[
-E = p^i v_i - L = mv^2\gamma + \frac{mc^2}{\gamma} = m\gamma\left(v^2 + \frac{c^2}{\gamma^2}\right)
+\mathcal{E} = p^i v_i - L = mv^2\gamma + \frac{mc^2}{\gamma} = m\gamma\left(v^2 + \frac{c^2}{\gamma^2}\right)
 \]
 so that
 \begin{equation}\label{c2e12}
-E = m\gamma\left(v^2 + c^2\left(1 - \frac{v^2}{c^2}\right)\right) 
+\mathcal{E} = m\gamma\left(v^2 + c^2\left(1 - \frac{v^2}{c^2}\right)\right) 
 = mc^2\gamma
 \end{equation}
 
@@ -92,22 +92,22 @@ E = m\gamma\left(v^2 + c^2\left(1 - \frac{v^2}{c^2}\right)\right)
 the relativistic framework even if the particle is resting. When $v = 0$, $\gamma
 = 1$ and the particle's energy is
 \begin{equation}\label{c2e13}
-E = mc^2.
+\mathcal{E} = mc^2.
 \end{equation}
 For small velocities, we can approximate \eqref{c2e12} to
 \begin{equation}\label{c2e14}
-E = mc^2\left(1 + \frac{1}{2}\frac{v^2}{c^2} + O(\beta^4)\right) = 
+\mathcal{E} = mc^2\left(1 + \frac{1}{2}\frac{v^2}{c^2} + O(\beta^4)\right) = 
 mc^2 + \frac{1}{2}mv^2 + O(\beta^4).
 \end{equation}
 
 \item Since $\beta < 1$ for material bodies, $\gamma > 1$ and hence, from 
-\eqref{c2e12} $E \ge mc^2 > 0$. Thus energy of a free particle is always positive.
+\eqref{c2e12} $\mathcal{E} \ge mc^2 > 0$. Thus energy of a free particle is always positive.
 This is also true in classical mechanics for an elementary particle, that is a
 particle without internal degrees of freedom. For a composite body, in classical
 mechanics, energy can be negative and is determined to within a constant. Howwever,
-in the relativistic regime this is not so, $E > 0$ is always true.
+in the relativistic regime this is not so, $\mathcal{E} > 0$ is always true.
 
-\item For a composite body at rest, the energy $E = Mc^2$ is not the same as 
+\item For a composite body at rest, the energy $\mathcal{E} = Mc^2$ is not the same as 
 \[
 \sum_{i=1}^N m_ic^2,
 \]
@@ -125,12 +125,12 @@ p^2 = p_ip^i = mv^2\gamma^2
 \]
 and from \eqref{c2e12}
 \[
-E^2 = m^2c^4\gamma^2 \Rightarrow E^2 - E^2\beta^2 = m^2c^4 \Rightarrow 
-E^2 - p^2c^2  = m^2c^4,
+\mathcal{E}^2 = m^2c^4\gamma^2 \Rightarrow E^2 - E^2\beta^2 = m^2c^4 \Rightarrow 
+\mathcal{E}^2 - p^2c^2  = m^2c^4,
 \]
 so that
 \begin{equation}\label{c2e15}
-E^2 = p^2c^2 + m^2c^4.
+\mathcal{E}^2 = p^2c^2 + m^2c^4.
 \end{equation}
 Since $E$ is expressed in terms of $p$, we can as well write the Hamiltonian as
 \begin{equation}\label{c2e16}
@@ -139,12 +139,12 @@ H = c\sqrt{p^2 + m^2c^2}
 
 \item Since $p^i = mv^i\gamma$ and $E = mc^2\gamma$, we also have
 \begin{equation}\label{c2e17}
-p^i = \frac{E}{c^2}v^i.
+p^i = \frac{\mathcal{E}}{c^2}v^i.
 \end{equation}
 If $v \rightarrow c$, $\gamma \rightarrow \infty$. In this limit, both $E$ and
 $p^i$ blow up unless $m = 0$. In that case, the two are related by
 \begin{equation}\label{c2e18}
-E = pc.
+\mathcal{E} = pc.
 \end{equation}
 
 \item From equations \eqref{c2e4}, \eqref{c2e5} and \eqref{c2e6}, we can write
@@ -197,11 +197,11 @@ u^\mu = \left(\gamma, \frac{v^i}{c}\gamma\right)
 \]
 so that
 \[
-mcu^\mu = \left(mc\gamma, mv^i\gamma\right) = \left(\frac{E}{c}, p^i\right)
+mcu^\mu = \left(mc\gamma, mv^i\gamma\right) = \left(\frac{\mathcal{E}}{c}, p^i\right)
 \]
 We define the 4-momemtum $p^\mu$ as
 \begin{equation}\label{c2e26}
-p^\mu = \left(\frac{E}{c}, p^i\right)
+p^\mu = \left(\frac{\mathcal{E}}{c}, p^i\right)
 \end{equation}
 so that \eqref{c2e25} becomes
 \begin{equation}\label{c2e27}
@@ -209,17 +209,17 @@ p_\mu = -\pdt{S}{x^\mu}.
 \end{equation}
 Note that if $p^\mu$ is given by \eqref{c2e26} then
 \begin{equation}\label{c2e28}
-p_\mu = \left(\frac{E}{c}, -p^i\right).
+p_\mu = \left(\frac{\mathcal{E}}{c}, -p^i\right).
 \end{equation}
 The transformation equations for $p^\mu$ are given by
 \begin{equation}\label{c2e29}
-\frac{E}{c} = \gamma\left(\frac{\bar{E}}{c} + \beta\bar{p}^1\right);
-p^1 = \gamma\left(\bar{p}^1 + \beta\frac{\bar{E}}{c}\right); p^2 = \bar{p}^2;
+\frac{\mathcal{E}}{c} = \gamma\left(\frac{\bar{\mathcal{E}}}{c} + \beta\bar{p}^1\right);
+p^1 = \gamma\left(\bar{p}^1 + \beta\frac{\bar{\mathcal{E}}}{c}\right); p^2 = \bar{p}^2;
 p^3 = \bar{p}^3.
 \end{equation}
 We also have
 \begin{equation}\label{c2e30}
-p^\mu p_\mu = \frac{E^2}{c^2} - p^2 = m^2c^2.
+p^\mu p_\mu = \frac{\mathcal{E}^2}{c^2} - p^2 = m^2c^2.
 \end{equation}
 We now define the 4-force as 
 \begin{equation}\label{c2e31}
@@ -231,9 +231,9 @@ ds = cdt\sqrt{1 - \frac{v^2}{c^2}} = \frac{c}{\gamma}dt.
 \end{equation}
 Therefore,
 \[
-g^\mu = \frac{\gamma}{c}\left(\frac{1}{c}\td{E}{t}, \td{\vec{p}}{t}\right).
+g^\mu = \frac{\gamma}{c}\left(\frac{1}{c}\td{\mathcal{E}}{t}, \td{\vec{p}}{t}\right).
 \]
-Since $E = \vec{f}\cdot\vec{v}$, we can write this as
+Since $\mathcal{E} = \vec{f}\cdot\vec{v}$, we can write this as
 \begin{equation}\label{c2e33}
 g^\mu = \left(\frac{\gamma}{c^2}\vec{f}\cdot\vec{v}, \frac{\gamma}{c}\td{\vec{p}}{t}\right).
 \end{equation}
@@ -271,12 +271,12 @@ a 3-sphere at $\vec{r}$ is parallel to $\vec{r}$, $dS^\mu$ too is parallel to
 $p^\mu$. Therefore, there exists a constant, say $k$, such that $dS^\mu = kp^\mu$.
 In particular, for $\mu = 0$, the ratio
 \begin{equation}\label{c2e37}
-\frac{dS^0}{p^0} = \frac{dp_xdp_ydp_z}{E} = k,
+\frac{dS^0}{p^0} = \frac{dp_xdp_ydp_z}{\mathcal{E}} = k,
 \end{equation}
 is an invariant under a Lorentz transformation. The number of particles $f(\vec{p})
 dp_xdp_ydp_z$ is also an invariant. If we write
 \[
-f(\vec{p})dp_xdp_ydp_z = f(\vec{p})E\frac{dp_xdp_ydp_z}{E}
+f(\vec{p})dp_xdp_ydp_z = f(\vec{p})\mathcal{E}\frac{dp_xdp_ydp_z}{\mathcal{E}}
 \]
 then we see that
 \[
@@ -284,17 +284,17 @@ f(\vec{p})dp_xdp_ydp_z = f^\op(\vec{p}^\op)dp_x^\op dp_y^\op dp_z^\op
 \]
 implies, from the invariance of $dS^0/p^0$ that
 \begin{equation}\label{c2e38}
-f^\op(\vec{p}^\op) = \frac{f(\vec{p})E}{E^\op}.
+f^\op(\vec{p}^\op) = \frac{f(\vec{p})\mathcal{E}}{\mathcal{E}^\op}.
 \end{equation}
 In ``spherical'' momentum coordinates $dp_xdp_ydp_z = p^2dpdo$, where $do$ is the
 solid angle in momentum space about $p^i$. Putting this in equation \eqref{c2e37}
 we get the invariance of
 \[
-\frac{dp_xdp_ydp_z}{E} = \frac{p^2dpdo}{E} 
+\frac{dp_xdp_ydp_z}{\mathcal{E}} = \frac{p^2dpdo}{\mathcal{E}} 
 \]
-Since $E^2 = p^2c^2 + m^2c4$, $EdE = c^2 pdp$, therefore,
+Since $\mathcal{E}^2 = p^2c^2 + m^2c4$, $\mathcal{E}d\mathcal{E} = c^2 pdp$, therefore,
 \[
-\frac{p^2dpdo}{E} = \frac{pdEdo}{c^2}
+\frac{p^2dpdo}{\mathcal{E}} = \frac{pd\mathcal{E}do}{c^2}
 \]
 is also an invariant. In particular $pdEdo$ is also invariant.
 
@@ -315,18 +315,18 @@ equations we have
 \begin{equation}\label{c2e40}
 \frac{dV}{dV^\op} = \frac{\gamma(v^\op)}{\gamma(v)}.
 \end{equation}
-If $E_0, E, E^\op$ are the values of energy in the three frames then we also
-have
+If $\mathcal{E}_0, \mathcal{E}, \mathcal{E}^\op$ are the values of energy in the 
+three frames then we also have
 \begin{equation}\label{c2e41}
-E = E_0\gamma(v); E^\op = E_0\gamma(v^\op)
+\mathcal{E} = \mathcal{E}_0\gamma(v); \mathcal{E}^\op = \mathcal{E}_0\gamma(v^\op)
 \end{equation}
 because $p_0^i = 0$. Using \eqref{c2e41} in \eqref{c2e40} we get
 \begin{equation}\label{c2e42}
-\frac{dV}{dV^\op}  = \frac{E^\op}{E}.
+\frac{dV}{dV^\op}  = \frac{\mathcal{E}^\op}{\mathcal{E}}.
 \end{equation}
 From \eqref{c2e37} we also have
 \begin{equation}\label{c2e43}
-\frac{dp_xdp_ydp_z}{dp_x^\op dp_y^\op dp_z^\op} = \frac{E}{E^\op}.
+\frac{dp_xdp_ydp_z}{dp_x^\op dp_y^\op dp_z^\op} = \frac{\mathcal{E}}{\mathcal{E}^\op}.
 \end{equation}
 The previous two equations give
 \begin{equation}\label{c2e44}
@@ -391,17 +391,17 @@ n^\op dV^\op = n dV \Rightarrow n^\op\frac{dV}{\gamma} = ndV \Rightarrow n^\op
 \end{equation}
 From equation \eqref{c2e12}, 
 \begin{equation}\label{c2e49}
-n^\op = \frac{nE}{mc^2}.
+n^\op = \frac{n\mathcal{E}}{mc^2}.
 \end{equation}
-Invariance of $An_1n_2$ thus follows from that of $AE_1E_2$. The dot product of
-$p_1^\mu$ and $p_2^\mu$ is a scalar and therefore invariant. Therefore, the
-quantity
+Invariance of $An_1n_2$ thus follows from that of $A\mathcal{E}_1\mathcal{E}_2$. 
+The dot product of $p_1^\mu$ and $p_2^\mu$ is a scalar and therefore invariant.
+Therefore, the quantity
 \[
-\frac{AE_1E_2}{p_1^\mu {p_2}_\mu}
+\frac{A\mathcal{E}_1\mathcal{E}_2}{p_1^\mu {p_2}_\mu}
 \]
 is also an invariant. In the rest frame of beam 2, it becomes $\sigma v_r$, so that
 \begin{equation}\label{c2e50}
-A = \sigma v_r\frac{p_1^\mu {p_2}_\mu}{E_1E_2}.
+A = \sigma v_r\frac{p_1^\mu {p_2}_\mu}{\mathcal{E}_1\mathcal{E}_2}.
 \end{equation}
 In the rest frame of particle 2, $p_2^\mu = (m_2c, 0, 0, 0)$, so that 
 \[
@@ -455,17 +455,17 @@ Substituting \eqref{c2e54} and \eqref{c2e55} in \eqref{c2e50}, we get
 \begin{equation}\label{c2e56}
 A = \sigma \sqrt{(\vec{\beta}_1 - \vec{\beta}_2)^2 - (\vec{\beta}_1 \times \vec{\beta}_2)^2},
 \end{equation}
-where we also used the fact that $E_i = m_ic^2\gamma$. Therefore, equation \eqref{2.47} gives
+where we also used the fact that $\mathcal{E}_i = m_ic^2\gamma$. Therefore, equation \eqref{2.47} gives
 \begin{equation}\label{c2e57}
 d\nu = \sigma \sqrt{(\vec{\beta}_1 - \vec{\beta}_2)^2 - (\vec{\beta}_1 \times \vec{\beta}_2)^2}
 	n_1n_2dVdt.
 \end{equation}
 
 \item We now consider elastic collisions between particles. Let a particle of
-mass $m_1$, energy $E_1$ and momentum $\vec{p}_1$ collide with a particle of mass
-$m_2$, energy $E_2$ and momentum $\vec{p}_2$. Let $E_1^\op, \vec{p}_1^\op$ ($E_2^\op,
-\vec{p}_2^\op$) be the energy and momenta after collision. By the conservation of 
-4-momentum,
+mass $m_1$, energy $\mathcal{E}_1$ and momentum $\vec{p}_1$ collide with a particle of mass
+$m_2$, energy $\mathcal{E}_2$ and momentum $\vec{p}_2$. Let $\mathcal{E}_1^\op, 
+\vec{p}_1^\op$ ($\mathcal{E}_2^\op, \vec{p}_2^\op$) be the energy and momenta after 
+collision. By the conservation of 4-momentum,
 \begin{equation}\label{c2e58}
 p_1^\mu + p_2^\mu = p_1^{\op\mu} + p_2^{\op\mu}.
 \end{equation}
@@ -474,48 +474,50 @@ is, taking a product with the covariant components of each side, we get
 \begin{equation}\label{c2e59}
 m_1^2c^2 + p_{1\mu}p_2^\mu - p_{1\mu}p_1^{\op\mu} - p_{2\mu}p_1^{\op\mu} = 0,
 \end{equation}
-where we used the fact that $p_\mu p^\mu = E^2/c^2 - p^2 = (E^2 - p^2c^2)/c^2 =
-m^2c^2$.
+where we used the fact that $p_\mu p^\mu = \mathcal{E}^2/c^2 - p^2 = 
+(\mathcal{E}^2 - p^2c^2)/c^2 = m^2c^2$.
 Likewise, squaring $p_1^\mu + p_2^\mu - p_2^{\op\mu} = p_1^{\op\mu}$ gives
 \begin{equation}\label{c2e60}
 m_2^2c^2 + p_{1\mu}p_2^\mu - p_{1\mu}p_2^{\op\mu} - p_{2\mu}p_2^{\op\mu} = 0.
 \end{equation}
-If $m_2$ was at rest in the laboratory frame of reference then $p_2^\mu = (E_2/c,
+If $m_2$ was at rest in the laboratory frame of reference then $p_2^\mu = (\mathcal{E}_2/c,
 0)$. Using it in \eqref{c2e59} gives
 \begin{equation}\label{c2e61}
-m_1^2c^2 + \frac{E_1E_2}{c^2} - p_{1\mu}p_1^{\op\mu} - \frac{E_1^\op E_2}{c^2} = 0.
+m_1^2c^2 + \frac{\mathcal{E}_1\mathcal{E}_2}{c^2} - p_{1\mu}p_1^{\op\mu} 
+- \frac{\mathcal{E}_1^\op \mathcal{E}_2}{c^2} = 0.
 \end{equation}
-Since $E_2 = m_2c^2$ and $p_{1\mu}p_1^{\op\mu} = E_1E_1^\op/c^2 - \vec{p}_1\cdot
-\vec{p}_1^\op$, \eqref{c2e61} becomes
+Since $\mathcal{E}_2 = m_2c^2$ and $p_{1\mu}p_1^{\op\mu} = 
+\mathcal{E}_1\mathcal{E}_1^\op/c^2 - \vec{p}_1\cdot\vec{p}_1^\op$, \eqref{c2e61} becomes
 \begin{equation}\label{c2e62}
-m_1^2c^2 + m_2E_1 - E_1E_1^\op/c^2 + \vec{p}_1\cdot\vec{p}_1^\op - m_2E_1^\op = 0,
+m_1^2c^2 + m_2\mathcal{E}_1 - \mathcal{E}_1\mathcal{E}_1^\op/c^2 + 
+\vec{p}_1\cdot\vec{p}_1^\op - m_2E_1^\op = 0,
 \end{equation}
 or
 \[
-p_1p_1^\op\cos\theta_1 = E_1^\op(E_1/c^2 + m_2) - E_1m_2 - m_1^2c^2
+p_1p_1^\op\cos\theta_1 = \mathcal{E}_1^\op(\mathcal{E}_1/c^2 + m_2) - E\mathcal{E}_1m_2 - m_1^2c^2
 \]
 so that
 \begin{equation}\label{c2e63}
-\cos\theta_1 = \frac{E_1^\op(E_1/c^2 + m_2) - E_1m_2 - m_1^2c^2}{p_1p_1^\op}
+\cos\theta_1 = \frac{\mathcal{E}_1^\op(\mathcal{E}_1/c^2 + m_2) - \mathcal{E}_1m_2 - m_1^2c^2}{p_1p_1^\op}
 \end{equation}
-Using $p_2^\mu = (E_2/c, 0)$ in \eqref{c2e60} we get
+Using $p_2^\mu = (\mathcal{E}_2/c, 0)$ in \eqref{c2e60} we get
 \[
-m_2^2c^2 + \frac{E_1E_2}{c^2} - \frac{E_1E_2^\op}{c^2} + 
-\vec{p}_1\cdot\vec{p}_2^\op - \frac{E_2E_2^\op}{c^2} = 0.
+m_2^2c^2 + \frac{\mathcal{E}_1\mathcal{E}_2}{c^2} - \frac{\mathcal{E}_1\mathcal{E}_2^\op}{c^2} + 
+\vec{p}_1\cdot\vec{p}_2^\op - \frac{\mathcal{E}_2\mathcal{E}_2^\op}{c^2} = 0.
 \]
-Since $E_2 = m_2c^2$, this equation can be written as
+Since $\mathcal{E}_2 = m_2c^2$, this equation can be written as
 \[
-m_2^2c^2 + m_2E_1 - \frac{E_1E_2^\op}{c^2} + 
-\vec{p}_1\cdot\vec{p}_2^\op - m_2E_2^\op = 0.
+m_2^2c^2 + m_2\mathcal{E}_1 - \frac{\mathcal{E}_1\mathcal{E}_2^\op}{c^2} + 
+\vec{p}_1\cdot\vec{p}_2^\op - m_2\mathcal{E}_2^\op = 0.
 \]
 Reorganising it, we get
 \begin{equation}\label{c2e64}
-\cos\theta_2 = \frac{(E_2^\op - m_2c^2)(E_1/c^2 + m_2)}{p_1p_2^\op}.
+\cos\theta_2 = \frac{(\mathcal{E}_2^\op - m_2c^2)(\mathcal{E}_1/c^2 + m_2)}{p_1p_2^\op}.
 \end{equation}
 
 An experiment records $\theta_1$ and $\theta_2$ for controlled values of $E_1$
 and fixed masses $m_1$ and $m_2$. Equations \eqref{c2e63} and \eqref{c2e64}
-can be inverted, in principle, to get $E_1^\op$ and $E_2^\op$ in terms of
+can be inverted, in principle, to get $\mathcal{E}_1^\op$ and $\mathcal{E}_2^\op$ in terms of
 the scattering angles $\theta_1$ and $\theta_2$.
 
 \item We will examine an elastic collision considered in the previous point in 
@@ -523,27 +525,27 @@ the centre of mass reference frame. Here, the momenta of the two particles retai
 their magnitudes but change their directions. They rotate by an angle, say $\chi$.
 We will denote the quantities in this frame with a bar. Thus,
 \begin{equation}\label{c2e65}
-\bar{p}_{1\mu}\bar{p}_1^{\op\mu} = \frac{\bar{E}_1\bar{E}_1^\op}{c^2} - 
-\bar{\vec{p}}_1\cdot\bar{\vec{p}}+1^\op = \frac{\bar{E}_1\bar{E}_1^\op}{c^2} - 
+\bar{p}_{1\mu}\bar{p}_1^{\op\mu} = \frac{\bar{\mathcal{E}}_1\bar{\mathcal{E}}_1^\op}{c^2} - 
+\bar{\vec{p}}_1\cdot\bar{\vec{p}}+1^\op = \frac{\bar{\mathcal{E}}_1\bar{\mathcal{E}}_1^\op}{c^2} - 
 \bar{p}^2_1\cos\chi,
 \end{equation}
 because only the direction of momentum changes in this frame. Further, in an
-elastic collision, $\bar{E}_1 = \bar{E}_1^\op$ so that
+elastic collision, $\bar{\mathcal{E}}_1 = \bar{\mathcal{E}}_1^\op$ so that
 \begin{equation}\label{c2e66}
-\bar{p}_{1\mu}\bar{p}_1^{\op\mu} = \frac{\bar{E}_1^2}{c^2} - \bar{p}_1^2\cos\chi.
+\bar{p}_{1\mu}\bar{p}_1^{\op\mu} = \frac{\bar{\mathcal{E}}_1^2}{c^2} - \bar{p}_1^2\cos\chi.
 \end{equation}
-Since $\bar{E}_1^2 = m_1^2c^4 + \bar{p}^2c^2$, 
+Since $\bar{\mathcal{E}}_1^2 = m_1^2c^4 + \bar{p}^2c^2$, 
 \begin{equation}\label{c2e67}
 \bar{p}_{1\mu}\bar{p}_1^{\op\mu} = m_1^2c^2 + \bar{p}_1^2(1 - \cos\chi).
 \end{equation}
 If the particle with mass $m_2$ was at rest in the laboratory frame,
 \begin{eqnarray}
-p_{1\mu}p_2^\mu &=& E_1m_2c^2 \label{c2e68} \\
-p_{2\mu}p_1^{\op\mu} &=& m_2c^2 E_1^\op \label{c2e69}
+p_{1\mu}p_2^\mu &=& \mathcal{E}_1m_2c^2 \label{c2e68} \\
+p_{2\mu}p_1^{\op\mu} &=& m_2c^2 \mathcal{E}_1^\op \label{c2e69}
 \end{eqnarray}
 so that
 \begin{equation}\label{c2e70}
-m_2c^2(E_1^\op - E_1) = p_{2\mu}p_1^{\op\mu} - p_{1\mu}p_2^\mu.
+m_2c^2(\mathcal{E}_1^\op - \mathcal{E}_1) = p_{2\mu}p_1^{\op\mu} - p_{1\mu}p_2^\mu.
 \end{equation}
 Since scalars are invariant under a transformation to centre of frame reference
 we can as well use \eqref{c2e66} to write
@@ -552,38 +554,40 @@ p_{1\mu}p_1^{\op\mu} = m_1^2c^2 + \bar{p}_1^2(1 - \cos\chi).
 \end{equation}
 Substituting \eqref{c2e70} and \eqref{c2e71} into \eqref{c2e59}, we get
 \begin{equation}\label{c2e72}
-E_1^\op - E_1 = -\frac{\bar{p}_1^2}{m_2c^2}(1 - \cos\chi).
+\mathcal{E}_1^\op - \mathcal{E}_1 = -\frac{\bar{p}_1^2}{m_2c^2}(1 - \cos\chi).
 \end{equation}
 We next use the fact that $p_{1\mu}p_2^\mu = \bar{p}_{1\mu}\bar{p}_2^\mu$ so that,
 using \eqref{c2e68},
 \begin{equation}\label{c2e73}
-m_2c^2E_1 = \bar{E}_1\bar{E}_2 - \bar{\vec{p}}_1\cdot\bar{\vec{p}}_2 = 
-\bar{E}_1\bar{E}_2 + \bar{p}_1^2,
+m_2c^2\mathcal{E}_1 = \bar{\mathcal{E}}_1\bar{\mathcal{E}}_2 - \bar{\vec{p}}_1\cdot\bar{\vec{p}}_2 = 
+\bar{\mathcal{E}}_1\bar{\mathcal{E}}_2 + \bar{p}_1^2,
 \end{equation}
 as the two momenta are equal and opposite in the centre of mass system. Further, 
-$\bar{E}_1 = \sqrt{\bar{p}_1^2 + m_1^2c^4}, \bar{E}_2 = \sqrt{\bar{p}_2^2 + m_2^2c^4}
+$\bar{\mathcal{E}}_1 = \sqrt{\bar{p}_1^2 + m_1^2c^4}, \bar{\mathcal{E}}_2 = \sqrt{\bar{p}_2^2 + m_2^2c^4}
 = \sqrt{\bar{p}_1^2 + m_2^2c^4}$ so that equation \eqref{c2e72} becomes
 \begin{equation}\label{c2e74}
-m_2c^2E_1 - \bar{p}_1^2 = \sqrt{\bar{p}_1^2 + m_1^2c^4}\sqrt{\bar{p}_1^2 + m_2^2c^4},
+m_2c^2\mathcal{E}_1 - \bar{p}_1^2 = \sqrt{\bar{p}_1^2 + m_1^2c^4}\sqrt{\bar{p}_1^2 + m_2^2c^4},
 \end{equation}
 whose solution is
 \begin{equation}\label{c2e75}
-\bar{p}_1^2 = \frac{m_2c^2(E_1^2 - m_1^2c^4)}{m_1^2 + m_2^2 + 2m_2E_1}.
+\bar{p}_1^2 = \frac{m_2c^2(\mathcal{E}_1^2 - m_1^2c^4)}{m_1^2 + m_2^2 + 2m_2\mathcal{E}_1}.
 \end{equation}
 Substituting \eqref{c2e75} in \eqref{c2e72} we get
 \begin{equation}\label{c2e76}
-E_1^\op = E_1 - \frac{m_2(E_1^2 - m_1^2c^4)}{m_1^2 + m_2^2 + 2m_2E_1}(1 - \cos\chi).
+\mathcal{E}_1^\op = \mathcal{E}_1 - 
+\frac{m_2(\mathcal{E}_1^2 - m_1^2c^4)}{m_1^2 + m_2^2 + 2m_2\mathcal{E}_1}(1 - \cos\chi).
 \end{equation}
 This equation gives the energy of the scatterd particle in terms of its initial
 energy and angle of scattering in the centre of mass frame.
 
-Energy conservation gives us $E_1 + m_2c^2 = E_1^\op + E_2^\op$ so that
+Energy conservation gives us $\mathcal{E}_1 + m_2c^2 = \mathcal{E}_1^\op + \mathcal{E}_2^\op$ so that
 \[
-E_2^\op = E_1 - E_1^\op - m_2c^2
+\mathcal{E}_2^\op = \mathcal{E}_1 - \mathcal{E}_1^\op - m_2c^2
 \]
 so that
 \begin{equation}\label{c2e77}
-E_2^\op = m_2c^2 + \frac{m_2(E_1^2 - m_1^2c^4)}{m_1^2 + m_2^2 + 2m_2E_1}(1 - \cos\chi).
+\mathcal{E}_2^\op = m_2c^2 + 
+\frac{m_2(\mathcal{E}_1^2 - m_1^2c^4)}{m_1^2 + m_2^2 + 2m_2\mathcal{E}_1}(1 - \cos\chi).
 \end{equation}
 
 \item Let $x^\mu$ be the world-coordinates of particle. Under an infinitesimal 
@@ -662,21 +666,21 @@ The tensor
 L^{\mu\nu} = x^{\mu}p^{\nu} - x^{\nu}p^{\mu}
 \end{equation}
 is called the angular momentum 4-tensor. Since $x^\mu = (ct, x^1, x^2, x^3), 
-p^\mu = (E/c, p^1, p^2, p^3)$,
+p^\mu = (\mathcal{E}/c, p^1, p^2, p^3)$,
 \[
-x^\mu p^\nu = \begin{bmatrix}tE & p^1ct & p^2ct & p^3ct \\
-x^1E/c & x^1p^1 & x^1p^2 & x^1p^3 \\
-x^2E/c & x^2p^1 & x^2p^2 & x^2p^3 \\
-x^3E/c & x^3p^1 & x^3p^2 & x^3p^3
+x^\mu p^\nu = \begin{bmatrix}t\mathcal{E} & p^1ct & p^2ct & p^3ct \\
+x^1\mathcal{E}/c & x^1p^1 & x^1p^2 & x^1p^3 \\
+x^2\mathcal{E}/c & x^2p^1 & x^2p^2 & x^2p^3 \\
+x^3\mathcal{E}/c & x^3p^1 & x^3p^2 & x^3p^3
 \end{bmatrix}
 \]
 and hence
 \[
-L^{\mu\nu} = \begin{bmatrix}tE & p^1ct & p^2ct & p^3ct \\
-x^1E/c & x^1p^1 & x^1p^2 & x^1p^3 \\
-x^2E/c & x^2p^1 & x^2p^2 & x^2p^3 \\
-x^3E/c & x^3p^1 & x^3p^2 & x^3p^3
-\end{bmatrix} - \begin{bmatrix}tE & x^1E/c & x^2E/c & x^3E/c \\
+L^{\mu\nu} = \begin{bmatrix}t\mathcal{E} & p^1ct & p^2ct & p^3ct \\
+x^1\mathcal{E}/c & x^1p^1 & x^1p^2 & x^1p^3 \\
+x^2\mathcal{E}/c & x^2p^1 & x^2p^2 & x^2p^3 \\
+x^3\mathcal{E}/c & x^3p^1 & x^3p^2 & x^3p^3
+\end{bmatrix} - \begin{bmatrix}tE & x^1\mathcal{E}/c & x^2\mathcal{E}/c & x^3\mathcal{E}/c \\
 p^1ct & x^1p^1 & x^2p^1 & x^3p^1 \\
 p^2ct & x^1p^2 & x^2p^2 & x^3p^2 \\
 p^3ct & x^1p^3 & x^2p^3 & x^3p^3
@@ -684,16 +688,16 @@ p^3ct & x^1p^3 & x^2p^3 & x^3p^3
 \]
 or
 \begin{equation}\label{c2e87}
-L^{\mu\nu} = \begin{bmatrix}0 & p^1ct - x^1E/c & p^2ct - x^2E/c & p^3ct - x^3E/c\\
-p^1ct - x^1E/c & 0 & x^1p^2 - x^2p^1 & x^1p^3 - x^3p^1 \\
-p^2ct - x^2E/c & x^2p^1 - x^1p^2 & 0 & x^2p^3 - x^3p^2 \\
-p^2ct - x^3E/c & x^3p^1 - x^3p^1 & x^3p^2 - x^2p^3 & 0
+L^{\mu\nu} = \begin{bmatrix}0 & p^1ct - x^1\mathcal{E}/c & p^2ct - x^2\mathcal{E}/c & p^3ct - x^3\mathcal{E}/c\\
+p^1ct - x^1\mathcal{E}/c & 0 & x^1p^2 - x^2p^1 & x^1p^3 - x^3p^1 \\
+p^2ct - x^2\mathcal{E}/c & x^2p^1 - x^1p^2 & 0 & x^2p^3 - x^3p^2 \\
+p^2ct - x^3\mathcal{E}/c & x^3p^1 - x^3p^1 & x^3p^2 - x^2p^3 & 0
 \end{bmatrix}
 \end{equation}
 This tensor is very similar to the electromagnetic field tensor with the electric
 part given by the vector
 \begin{equation}\label{c2e88}
-\vec{L}_e = \vec{p}ct - \vec{x}\frac{E}{c}
+\vec{L}_e = \vec{p}ct - \vec{x}\frac{\mathcal{E}}{c}
 \end{equation}
 and the magnetic part by the vector
 \begin{equation}\label{c2e89}
@@ -702,19 +706,19 @@ and the magnetic part by the vector
 If $L^{\mu\nu}$ is conserved then so are $\vec{L}_e$ and $\vec{L}_m$ individually.
 For a system of multiple particles, it means that the quantity
 \begin{equation}\label{c2e90}
-\sum_a \left(\vec{p}_act - \vec{x}_a\frac{E_a}{c}\right) = \text{constant.}
+\sum_a \left(\vec{p}_act - \vec{x}_a\frac{\mathcal{E}_a}{c}\right) = \text{constant.}
 \end{equation}
 Equivalently,
 \begin{equation}\label{c2e91}
-\frac{\sum_a\vec{p}_ac^2t}{\sum_a E_a} - \frac{\sum_a\vec{x}_a E_a}{\sum E_a} = \text{constant.}
+\frac{\sum_a\vec{p}_ac^2t}{\sum_a \mathcal{E}_a} - \frac{\sum_a\vec{x}_a \mathcal{E}_a}{\sum \mathcal{E}_a} = \text{constant.}
 \end{equation}
 Thus a points
 \begin{equation}\label{c2e92}
-\vec{R} = \frac{\sum_a\vec{x}_a E_a}{\sum E_a}
+\vec{R} = \frac{\sum_a\vec{x}_a \mathcal{E}_a}{\sum \mathcal{E}_a}
 \end{equation}
 travels with uniform velocity
 \begin{equation}\label{c2e93}
-\vec{V} = c^2\frac{\sum_a\vec{p}_a}{\sum_a E_a}.
+\vec{V} = c^2\frac{\sum_a\vec{p}_a}{\sum_a \mathcal{E}_a}.
 \end{equation}
 Equation \eqref{c2e92} is analogous to the centre of mass vector of classical 
 mechanics. The formula merely replaces mass in classical mechanics with energy.

@@ -860,5 +860,41 @@ Unlike the non-relativistic case, we cannot put acceleration as the ratio of
 force to mass. In the expression for momentum, $\gamma$ is not a constant. Instead of
 finding an expression for $d\gamma/dt$, we replace $m\gamma$ by $\mathcal{E}/c^2$
 and use the expression for $d\mathcal{E}/dt$.
+
+\item Maupertuis' principle for a particle in an electromagnetic field.
+\item[Solution:] Maupertuis' principle states that if the energy of the particle is
+conserved then 
+\[
+\delta\int\vec{p}\cdot d\vec{r} = 0,
+\]
+where $\vec{p}$ is the generalised momentum. In the case of a charged particle in
+an electromagnetic field,
+\[
+\vec{p} = m\vec{v} + \frac{e}{c}\vec{A}
+\]
+so that the variational equation becomes
+\[
+\delta\int\left(m\vec{v} + \frac{e}{c}\vec{A}\right)\cdot d\vec{r} = 0 \Rightarrow
+\delta\int m\vec{v}\cdot d\vec{r} + \frac{e}{c}\delta\int\vec{A}\cdot d\vec{r} = 0.
+\]
+The energy momentum relation for a free particle is $\mathcal{E}^2 = p^2c^2 + 
+m^2c^4$. For a free particle, $p = |m\vec{v}|$ and $\mathcal{E}$ is the kinetic
+energy so that
+\[
+|m\vec{v}|^2 = \frac{\mathcal{E}^2}{c^2} - m^2c^2.
+\]
+For a charged particle in an electromagnetic field, the kinetic energy is, $mc^2
+\gamma = \mathcal{E} - e\varphi$, according to \eqref{c3e35}. Therefore, the energy
+momentum relation is
+\[
+|m\vec{v}|^2 = \frac{(\mathcal{E} - e\varphi)^2}{c^2} - m^2c^2.
+\]
+Finally, note that $\vec{p}\cdot d\vec{r} = pdl$, where $dl$ is the length of the
+infinitesimal portion of the trajectory. This is because $d\vec{r}$ is parallel to
+the momemtum. The variational principle, thus, becomes,
+\[
+\delta\int \left(\frac{(\mathcal{E} - e\varphi)^2}{c^2} - m^2c^2\right)^{1/2}dl + 
+\frac{e}{c}\delta\int\vec{A}\cdot d\vec{r} = 0.
+\]
 \end{enumerate}
 

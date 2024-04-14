@@ -285,7 +285,7 @@ $\mathcal{E} = mc^2$, we have
 so that
 \begin{eqnarray}
 \dot{x}(t) &=& \frac{ec^2Et}{\mathcal{E}} \label{c3e42} \\
-\dot{y}(t) &=& p_0 \label{c3e43}
+\dot{y}(t) &=& \frac{c^2p_0}{\mathcal{E}} \label{c3e43}
 \end{eqnarray}
 A particle in an electric field gains energy. Therefore, $\mathcal{E}$ is not a
 constant and hence \eqref{c3e42} cannot be integrated as is. However, we know 
@@ -896,5 +896,166 @@ the momemtum. The variational principle, thus, becomes,
 \delta\int \left(\frac{(\mathcal{E} - e\varphi)^2}{c^2} - m^2c^2\right)^{1/2}dl + 
 \frac{e}{c}\delta\int\vec{A}\cdot d\vec{r} = 0.
 \]
+
+\item A charged, isotropic oscillator forced by the magnetic field.
+\item[Solution:] Consider an oscillator with natural frequency $\omega_0$ and 
+suppose that it obeys the equations of motion
+\begin{eqnarray*}
+\ddot{x} + \omega_0^2 x &=& 0 \\
+\ddot{y} + \omega_0^2 y &=& 0 \\
+\ddot{z} + \omega_0^2 z &=& 0
+\end{eqnarray*}
+Assume that the oscillator carries a charge $e$. An oscillating charge will emit
+radiation and I am not sure if the these equations remain valid. But let's assume
+that the frequency of oscillation is low enough to make radiation loss ignorable.
+(I think the radiation loss can be accounted for a friction like term.)
+
+Now suppose that there is a magnetic field in the $z$ axis. It exerts a force
+\[
+\vec{F} = \frac{e}{c}(\dot{y} B\uv{x} - \dot{x}B\uv{y})
+\]
+so that the equations of motion are modified to
+\begin{eqnarray*}
+\ddot{x} + \omega_0^2 x &=& \frac{eB}{mc}\dot{y} \\
+\ddot{y} + \omega_0^2 y &=& -\frac{eB}{mc}\dot{x}\\
+\ddot{z} + \omega_0^2 z &=& 0
+\end{eqnarray*}
+Let $\zeta = x + iy$ and write the above equations as
+\begin{eqnarray*}
+\ddot{x} + \omega_0^2 x &=& -\frac{ieB}{mc}\dot{(iy)} \\
+\ddot{y} + \omega_0^2 y &=& -i\frac{ieB}{mc}\dot{x} \\
+\ddot{(iy)} + \omega_0^2 (iy) &=& \frac{ieB}{mc}\dot{x}
+\end{eqnarray*}
+Adding the first and the third equations, we get
+\[
+\ddot{\zeta} + \frac{ieB}{mc}\zeta + \omega_0^2\zeta = 0.
+\]
+Let the trial solution be $\zeta = e^{\lambda t}$ so that 
+\[
+\lambda^2 + \frac{ieB}{mc}\lambda + \omega_0^2 = 0,
+\]
+the solution of which is
+\[
+\lambda = \left(-\frac{ieB}{mc} \pm \sqrt{-\frac{e^2B^2}{m^2c^2} - 4\omega_0^2}\right)
+\frac{1}{2} = -i\left(\frac{eB}{2mc} \pm \sqrt{\omega_0^2 + \frac{e^2B^2}{4m^2c^2}}\right).
+\]
+Therefore, the frequency of the oscillator is
+\[
+-i\lambda = \omega = \sqrt{\omega_0^2 + \frac{e^2B^2}{4m^2c^2}} \pm \frac{eB}{2mc}.
+\]
+If the field is weak, that is if
+\[
+B \ll \frac{2mc}{e},
+\]
+we can ignore the second term under the square root and
+\[
+\omega \approx \omega_0 \pm \frac{eB}{2mc}.
+\]
+
+\item Relativistic motion of a charged particle in parallel, uniform electric
+and magnetic fields.
+\item[Solution:] Let $\vec{E} = E\uv{z}, \vec{B} = B\uv{z}$ so that the equations
+of motion are
+\[
+\td{\vec{p}}{t} = eE\uv{z} + \frac{e}{c}\vec{v}\times\vec{B}
+\]
+that is,
+\begin{eqnarray}
+\td{p_x}{t} &=& \frac{e}{c}v_yB \label{c3e102} \\
+\td{p_y}{t} &=& -\frac{e}{x}v_xB \label{c3e103} \\
+\td{p_z}{t} &=& eE \label{c3e104} 
+\end{eqnarray}
+Equation \eqref{c3e104} can be readily integrated to
+\[
+p_z(t) = eEt + p_z(0).
+\]
+Since $\vec{p} = m\gamma\vec{v}$, we have
+\begin{equation}\label{c3e105} 
+v_z = \frac{eE}{m\gamma}t + \frac{p_z(0)}{m\gamma}.
+\end{equation}
+We choose $t = 0$ such that $p_z(0) = 0$ and use the relation, 
+$\mathcal{E} = m\gamma c^2$ so that
+\begin{equation}\label{c3e106}
+v_z = \frac{eEc^2}{\mathcal{E}}t.
+\end{equation} 
+From equation \eqref{c3e27},
+\[
+\td{\mathcal{E}}{t} = ev_zE
+\]
+so that, using \eqref{c3e106}, we have 
+\[
+\td{\mathcal{E}}{t} = (eEc)^2\frac{t}{\mathcal{E}} \Rightarrow
+\frac{\mathcal{E}^2}{2} = \frac{(eEct)^2}{2} + \frac{\mathcal{E}_0^2}{2},
+\]
+so that, we have
+\begin{equation}\label{c3e107}
+\mathcal{E} = \sqrt{\mathcal{E}_0^2 + (eEct)^2}.
+\end{equation}
+Substituting this in \eqref{c3e105},
+\[
+\dot{z} = c\frac{eEct}{\sqrt{\mathcal{E}_0^2 + (eEct)^2}}
+\]
+To solve this equation, put $eEct = \mathcal{E}_0\sinh u$ so that $eEcdt = 
+\mathcal{E}_0\cosh udu$ and
+\[
+dz = \frac{\mathcal{E}_0}{eE}\sinh udu \Rightarrow
+z(t) = z(0) + \frac{\mathcal{E}_0}{eE}\sinh u = z(0) + \frac{\mathcal{E}_0}{eE}
+\sqrt{1 + \frac{(eEc)^2}{\mathcal{E}_0^2}t^2}
+\]
+If $z(0) = 0$ then 
+\begin{equation}\label{c3e108}
+z(t) = \frac{\mathcal{E}_0}{eE}\sqrt{1 + \frac{(eEc)^2}{\mathcal{E}_0^2}t^2}.
+\end{equation}
+We now turn our attention to the $xy$ plane. From equations \eqref{c3e102} and
+\eqref{c3e103},
+\[
+\frac{d}{dt}(p_x + ip_y) = \frac{eB}{c}(v_y - iv_x) = -\frac{ieB}{c}(v_x + iv_y).
+\]
+Since $\vec{p} = (\mathcal{E}/c^2)\vec{v}$, the above equation becomes
+\begin{equation}\label{c3e109}
+\frac{d}{dt}(p_x + ip_y) = -\frac{ieBc}{\mathcal{E}}(p_x + ip_y).
+\end{equation}
+Now introduce a variable $\phi$ such that
+\begin{equation}\label{c3e110}
+d\phi = \frac{eBc}{\mathcal{E}}dt,
+\end{equation}
+so that the solution of \eqref{c3e109} can be written as
+\begin{equation}\label{c3e111}
+p_x + ip_y = p_t e^{-i\phi},
+\end{equation}
+where $p_t$ is a constant of integration. Putting \eqref{c3e107} in \eqref{c3e110},
+we get
+\begin{equation}\label{c3e112}
+\phi = eBc\frac{dt}{\sqrt{\mathcal{E}_0^2 + (eEct)^2}} = \frac{B}{E}\sinh^{-1}
+\left(\frac{eEct}{\mathcal{E}_0}\right),
+\end{equation}
+which can be written as
+\begin{equation}\label{c3e113}
+ct = \frac{\mathcal{E}_0}{eE}\sinh\left(\frac{E}{B}\phi\right).
+\end{equation}
+Since $\vec{p} = (\mathcal{E}/c^2)\vec{v}$, we can write \eqref{c3e111} as
+\[
+(\mathcal{E}/c^2)(v_x + iv_y) = p_t e^{-i\phi} \Rightarrow 
+(\mathcal{E}/c^2)\frac{d}{dt}(x + iy) = p_te^{-i\phi}
+\]
+From \eqref{c3e110}, we get
+\[
+d(x + iy) = \frac{cp_t}{eB}e^{-i\phi}d\phi \Rightarrow x + iy = \frac{icp_t}{eB}e^{-i\phi}
+\]
+or
+\[
+x + iy = \frac{cp_t}{eB}\sin\phi + i\frac{cp_t}{eB}\cos\phi
+\]
+from which we get
+\begin{eqnarray}
+x(\phi) &=& \frac{cp_t}{eB}\sin\phi \label{c3e114} \\
+y(\phi) &=& \frac{cp_t}{eB}\cos\phi \label{c3e115}
+\end{eqnarray}
+The equation of the trajectory is
+\begin{eqnarray}
+x(t) &=& \frac{cp_t}{eB}\sin\left(\frac{B}{E}\sinh^{-1}\left(\frac{eEct}{\mathcal{E}_0}\right)\right) \label{c3e116} \\
+y(t) &=& \frac{cp_t}{eB}\cos\left(\frac{B}{E}\sinh^{-1}\left(\frac{eEct}{\mathcal{E}_0}\right)\right) \label{c3e117} \\
+z(t) &=& \frac{\mathcal{E}_0}{eE}\sqrt{1 + \frac{(eEc)^2}{\mathcal{E}_0^2}t^2}. \label{c3e118}
+\end{eqnarray}
 \end{enumerate}
 

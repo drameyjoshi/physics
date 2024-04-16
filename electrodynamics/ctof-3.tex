@@ -349,7 +349,7 @@ which is an equation of a parabola.
 
 \item When a charged particle is subjected to a constant magnetic field, the
 equation of motion is
-\begin{equation}\label{c2e49}
+\begin{equation}\label{c3e49}
 \td{\vec{p}}{t} = e\frac{\vec{v}}{c} \times \vec{B}.
 \end{equation}
 Once again, we use the fact that $\mathcal{E} = m\gamma c^2$ and $\vec{p} = 
@@ -648,11 +648,11 @@ that the four equations of motion in the previous point are not independent.
 \delta S = -\int_A^B\left((mcu_\mu + \frac{e}{c}A_\mu)d\delta x^\mu + \frac{e}{c}\delta(A_\mu) dx^\mu\right).
 \]
 and its immediate consequence,
-\[
-\delta S = -\left(mcu_\mu + \frac{e}{c}A_\mu\right)\delta x^\mu\big|_A^B + 
- \int_A^B \left(\delta x^\mu d\left(mcu_\mu + \frac{e}{c}A_\mu\right) - 
+\begin{eqnarray*}
+\delta S &=& -\left(mcu_\mu + \frac{e}{c}A_\mu\right)\delta x^\mu\big|_A^B + \\
+  & & \int_A^B \left(\delta x^\mu d\left(mcu_\mu + \frac{e}{c}A_\mu\right) - 
  \frac{e}{c}\delta(A_\mu) dx^\mu\right)
-\]
+\end{eqnarray*}
 The first term is a difference of a quantity at two fixed points while the second
 one is a variation over all paths between those points. Since the variations 
 vanish at the fixed points the first term is zero while the second term, after some
@@ -740,12 +740,12 @@ E_2 &=& \bar{E}_2 + \beta\bar{B}_3 \\ \label{c3e88}
 E_3 &=& \bar{E}_3 - \beta\bar{B}_2 \\ \label{c3e89}
 B_1 &=& \bar{B}_1 \\ \label{c3e90}
 B_2 &=& \bar{B}_2 - \beta\bar{E}_3 \\ \label{c3e92}
-B_3 &=& \bar{B}_3 + \beta\bar{E}_2 \label{c3e92}
+B_3 &=& \bar{B}_3 + \beta\bar{E}_2 \label{c3e93}
 \end{eqnarray}
 Since $\beta = v/c$ or really $v_1/c$, we can write these equations in vector form as
 \begin{eqnarray}
-\vec{E} = \vec{E}^\op + \frac{1}{c}\vec{B}^\op \times \vec{v} \label{c3e93} \\
-\vec{B} = \vec{B}^\op - \frac{1}{c}\vec{E}^\op \times \vec{v}, \label{c3e94}
+\vec{E} = \vec{E}^\op + \frac{1}{c}\vec{B}^\op \times \vec{v} \label{c3e94} \\
+\vec{B} = \vec{B}^\op - \frac{1}{c}\vec{E}^\op \times \vec{v}, \label{c3e95}
 \end{eqnarray}
 where $\vec{E}^\op = (\bar{E}_1, \bar{E}_2, \bar{E}_3)$ and $\vec{B}^\op = 
 (\bar{B}_1, \bar{B}_2, \bar{B}_3)$, These equations tell that even if $\vec{B}^\op
@@ -755,8 +755,8 @@ $\vec{E}$ is perpendicular to $\vec{B}$ in both cases.
 \item Suppose $\vec{E}^\op$ and $\vec{B}^\op$ are perpendicular to each other.
 If $\vec{v} = c\vec{B}^\op/E^\op$ then, from \eqref{c3e93} and \eqref{c3e94},
 \begin{eqnarray}
-\vec{E} &=& \vec{E}^\op \label{c3e95} \\
-\vec{B} &=& 0 \label{c3e96}
+\vec{E} &=& \vec{E}^\op \label{c3e96} \\
+\vec{B} &=& 0 \label{c3e97}
 \end{eqnarray}
 Similarly, if we choose $\vec{v} = c\vec{E}^\op/B^\op$, we will get $\vec{E} = 0$
 and $\vec{B} = \vec{B}^\op$. Thus, if $\vec{E}^\op$ and $\vec{B}^\op$ are 
@@ -771,7 +771,7 @@ tensor, the first of these is
 F_{\mu\nu}F^{\mu\nu} = -E_1^2 - E_2^2 - E_3^2 + B_3^2 + B_2^2 + B_1^2.
 \]
 Thus, the quantity 
-\begin{equation}\label{c3e97}
+\begin{equation}\label{c3e98}
 B^2 - E^2
 \end{equation}
 is an invariant. To find the next invariant, we
@@ -791,7 +791,7 @@ need the product
  & & E_2B_2 + E_2B_2 + E_1B_1 + E_1B_1 \\
  &=& 8\vec{E}\cdot\vec{B}
 \end{eqnarray*}
-Thus, \begin{equation}\label{c3e98}
+Thus, \begin{equation}\label{c3e99}
 \vec{E}\cdot\vec{B}
 \end{equation}
 is another invariant.
@@ -824,7 +824,7 @@ E^2 < 0$.
 \item Find the 3-acceleration of a particle in electric and magnetic fields.
 \item[Solution:] The equation of motion follows from \eqref{c3e18}, \eqref{c3e19}
 and \eqref{c3e20}. It is
-\begin{equation}\label{c3e99}
+\begin{equation}\label{c3e100}
 \td{\vec{p}}{t} = e\vec{E} + e\frac{\vec{v}}{c}\times\vec{B}.
 \end{equation}
 Now, $p^i = m\gamma v^i$ and $\mathcal{E} = m\gamma c^2$ so that 
@@ -847,12 +847,12 @@ or
 \left(\vec{E} + \frac{\vec{v}}{c}\times\vec{B} - \frac{\vec{v}\cdot\vec{E}}{c^2}\vec{v}\right)
 \]
 or
-\begin{equation}\label{c3e100}
+\begin{equation}\label{c3e101}
 \td{\vec{v}}{t} = \frac{e}{m}\sqrt{1 - \frac{v^2}{c^2}}
 \left(\vec{E} + \frac{\vec{v}}{c}\times\vec{B} - \frac{\vec{v}\cdot\vec{E}}{c^2}\vec{v}\right).
 \end{equation}
 In terms of $\vec{\beta}$, this equation is
-\begin{equation}\label{c3e101}
+\begin{equation}\label{c3e102}
 \td{\vec{v}}{t} = \frac{e}{m}\sqrt{1 - \beta^2}
 \left(\vec{E} + \vec{\beta}\times\vec{B} - (\vec{\beta}\cdot\vec{E})\vec{\beta}\right).
 \end{equation}
@@ -961,21 +961,21 @@ of motion are
 \]
 that is,
 \begin{eqnarray}
-\td{p_x}{t} &=& \frac{e}{c}v_yB \label{c3e102} \\
-\td{p_y}{t} &=& -\frac{e}{x}v_xB \label{c3e103} \\
-\td{p_z}{t} &=& eE \label{c3e104} 
+\td{p_x}{t} &=& \frac{e}{c}v_yB \label{c3e103} \\
+\td{p_y}{t} &=& -\frac{e}{x}v_xB \label{c3e104} \\
+\td{p_z}{t} &=& eE \label{c3e105} 
 \end{eqnarray}
 Equation \eqref{c3e104} can be readily integrated to
 \[
 p_z(t) = eEt + p_z(0).
 \]
 Since $\vec{p} = m\gamma\vec{v}$, we have
-\begin{equation}\label{c3e105} 
+\begin{equation}\label{c3e106} 
 v_z = \frac{eE}{m\gamma}t + \frac{p_z(0)}{m\gamma}.
 \end{equation}
 We choose $t = 0$ such that $p_z(0) = 0$ and use the relation, 
 $\mathcal{E} = m\gamma c^2$ so that
-\begin{equation}\label{c3e106}
+\begin{equation}\label{c3e107}
 v_z = \frac{eEc^2}{\mathcal{E}}t.
 \end{equation} 
 From equation \eqref{c3e27},
@@ -988,10 +988,10 @@ so that, using \eqref{c3e106}, we have
 \frac{\mathcal{E}^2}{2} = \frac{(eEct)^2}{2} + \frac{\mathcal{E}_0^2}{2},
 \]
 so that, we have
-\begin{equation}\label{c3e107}
+\begin{equation}\label{c3e108}
 \mathcal{E} = \sqrt{\mathcal{E}_0^2 + (eEct)^2}.
 \end{equation}
-Substituting this in \eqref{c3e105},
+Substituting this in \eqref{c3e106},
 \[
 \dot{z} = c\frac{eEct}{\sqrt{\mathcal{E}_0^2 + (eEct)^2}}
 \]
@@ -1003,7 +1003,7 @@ z(t) = z(0) + \frac{\mathcal{E}_0}{eE}\sinh u = z(0) + \frac{\mathcal{E}_0}{eE}
 \sqrt{1 + \frac{(eEc)^2}{\mathcal{E}_0^2}t^2}
 \]
 If $z(0) = 0$ then 
-\begin{equation}\label{c3e108}
+\begin{equation}\label{c3e109}
 z(t) = \frac{\mathcal{E}_0}{eE}\sqrt{1 + \frac{(eEc)^2}{\mathcal{E}_0^2}t^2}.
 \end{equation}
 We now turn our attention to the $xy$ plane. From equations \eqref{c3e102} and
@@ -1012,25 +1012,25 @@ We now turn our attention to the $xy$ plane. From equations \eqref{c3e102} and
 \frac{d}{dt}(p_x + ip_y) = \frac{eB}{c}(v_y - iv_x) = -\frac{ieB}{c}(v_x + iv_y).
 \]
 Since $\vec{p} = (\mathcal{E}/c^2)\vec{v}$, the above equation becomes
-\begin{equation}\label{c3e109}
+\begin{equation}\label{c3e110}
 \frac{d}{dt}(p_x + ip_y) = -\frac{ieBc}{\mathcal{E}}(p_x + ip_y).
 \end{equation}
 Now introduce a variable $\phi$ such that
-\begin{equation}\label{c3e110}
+\begin{equation}\label{c3e111}
 d\phi = \frac{eBc}{\mathcal{E}}dt,
 \end{equation}
 so that the solution of \eqref{c3e109} can be written as
-\begin{equation}\label{c3e111}
+\begin{equation}\label{c3e112}
 p_x + ip_y = p_t e^{-i\phi},
 \end{equation}
 where $p_t$ is a constant of integration. Putting \eqref{c3e107} in \eqref{c3e110},
 we get
-\begin{equation}\label{c3e112}
+\begin{equation}\label{c3e113}
 \phi = eBc\frac{dt}{\sqrt{\mathcal{E}_0^2 + (eEct)^2}} = \frac{B}{E}\sinh^{-1}
 \left(\frac{eEct}{\mathcal{E}_0}\right),
 \end{equation}
 which can be written as
-\begin{equation}\label{c3e113}
+\begin{equation}\label{c3e114}
 ct = \frac{\mathcal{E}_0}{eE}\sinh\left(\frac{E}{B}\phi\right).
 \end{equation}
 Since $\vec{p} = (\mathcal{E}/c^2)\vec{v}$, we can write \eqref{c3e111} as
@@ -1048,14 +1048,14 @@ x + iy = \frac{cp_t}{eB}\sin\phi + i\frac{cp_t}{eB}\cos\phi
 \]
 from which we get
 \begin{eqnarray}
-x(\phi) &=& \frac{cp_t}{eB}\sin\phi \label{c3e114} \\
-y(\phi) &=& \frac{cp_t}{eB}\cos\phi \label{c3e115}
+x(\phi) &=& \frac{cp_t}{eB}\sin\phi \label{c3e115} \\
+y(\phi) &=& \frac{cp_t}{eB}\cos\phi \label{c3e116}
 \end{eqnarray}
 The equation of the trajectory is
 \begin{eqnarray}
-x(t) &=& \frac{cp_t}{eB}\sin\left(\frac{B}{E}\sinh^{-1}\left(\frac{eEct}{\mathcal{E}_0}\right)\right) \label{c3e116} \\
-y(t) &=& \frac{cp_t}{eB}\cos\left(\frac{B}{E}\sinh^{-1}\left(\frac{eEct}{\mathcal{E}_0}\right)\right) \label{c3e117} \\
-z(t) &=& \frac{\mathcal{E}_0}{eE}\sqrt{1 + \frac{(eEc)^2}{\mathcal{E}_0^2}t^2}. \label{c3e118}
+x(t) &=& \frac{cp_t}{eB}\sin\left(\frac{B}{E}\sinh^{-1}\left(\frac{eEct}{\mathcal{E}_0}\right)\right) \label{c3e117} \\
+y(t) &=& \frac{cp_t}{eB}\cos\left(\frac{B}{E}\sinh^{-1}\left(\frac{eEct}{\mathcal{E}_0}\right)\right) \label{c3e118} \\
+z(t) &=& \frac{\mathcal{E}_0}{eE}\sqrt{1 + \frac{(eEc)^2}{\mathcal{E}_0^2}t^2}. \label{c3e119}
 \end{eqnarray}
 \end{enumerate}
 

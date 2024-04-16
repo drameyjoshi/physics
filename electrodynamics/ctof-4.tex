@@ -1,0 +1,83 @@
+\chapter{The Electromagnetic Field Equations}\label{c4}
+\begin{enumerate}
+\item From equations \eqref{c3e19} and \eqref{c3e20} it follows that
+\begin{eqnarray}
+\curl\vec{E} &=& -\frac{1}{c}\pdt{\vec{B}}{t} \label{c4e1} \\
+\dive\vec{B} &=& 0 \label{c4e2}
+\end{eqnarray}
+These equations can be easily cast in integral form as 
+\begin{eqnarray}
+\oint\vec{E}\cdot d\vec{l} &=& -\frac{1}{c}\frac{\partial}{\partial t}\int\vec{B}\cdot d\vec{f} \label{c4e3} \\
+\oint\vec{H}\cdot d\vec{f} &=& 0 \label{c4e4}
+\end{eqnarray}
+Note that, in equation \eqref{c4e3}, the surface integral on the rhs is over the
+surface bounded by the countour along which the line integral of lhs is calculated.
+The line integral is over a closed curve but the surface integral is not over a 
+closed surface. The equation states that the circulation of the electric field
+is equal to $-1/c$ times the flux of $\vec{B}$ through the surface bound by the
+countour. On the other hand, \eqref{c4e4} tells that flux of $\vec{B}$ through
+any closed surface is zero.
+
+\item Equations \eqref{c4e1} and \eqref{c4e2} form the first pair of Maxwell
+equations. They do not describe the electromagnetic field completely because
+they involve the time derivative of $\vec{B}$ alone and not $\vec{E}$.
+
+\item It is possible to write equations \eqref{c4e1} and \eqref{c4e2} in terms
+of the electromagnetic field tensor $F_{\mu\nu}$. Since
+\[
+F_{\mu\nu} = \pdt{A_\nu}{x^\mu} - \pdt{A_\mu}{x^\nu},
+\]
+we have
+\begin{eqnarray*}
+\pdt{F_{\mu\nu}}{x^\rho} &=& \pdt{A^2_\nu}{x^\mu x^\rho} - \pdt{A^2_\mu}{x^\nu x^\rho} \\
+\pdt{F_{\nu\rho}}{x^\mu} &=& \pdt{A^2_\rho}{x^\nu x^\mu} - \pdt{A^2_\nu}{x^\rho x^\mu} \\
+\pdt{F_{\rho\mu}}{x^\nu} &=& \pdt{A^2_\mu}{x^\rho x^\nu} - \pdt{A^2_\rho}{x^\mu x^\nu}
+\end{eqnarray*}
+from which we get
+\begin{equation}\label{c4e5}
+\pdt{F_{\mu\nu}}{x^\rho} + \pdt{F_{\nu\rho}}{x^\mu} + \pdt{F_{\rho\mu}}{x^\nu} = 0.
+\end{equation}
+
+\item We will examine \eqref{c4e5} in greater details.
+\begin{enumerate}
+\item $\mu = 0, \nu = 1, \rho = 2$:
+\[
+\pdt{F_{01}}{x^2} + \pdt{F_{12}}{x^0} + \pdt{F_{20}}{x^1} = 0 \Rightarrow
+\pdt{E_y}{x} - \pdt{E_x}{y} = - \frac{1}{c}\pdt{B_z}{t}.
+\]
+
+\item $\mu = 0, \nu = 1, \rho = 3$:
+\[
+\pdt{F_{01}}{x^3} + \pdt{F_{13}}{x^0} + \pdt{F_{30}}{x^1} = 0 \Rightarrow
+\pdt{E_x}{z} - \pdt{E_z}{x} = - \frac{1}{c}\pdt{B_y}{t}.
+\]
+
+\item $\mu = 0, \nu = 2, \rho = 3$:
+\[
+\pdt{F_{02}}{x^3} + \pdt{F_{23}}{x^0} + \pdt{F_{30}}{x^2} = 0 \Rightarrow
+\pdt{E_z}{y} - \pdt{E_y}{z} = - \frac{1}{c}\pdt{B_x}{t}.
+\]
+
+\item $\mu = 1, \nu = 2, \rho = 3$:
+\[
+\pdt{F_{12}}{x^3} + \pdt{F_{23}}{x^1} + \pdt{F_{31}}{x^2} = 0 \Rightarrow
+-\pdt{B_z}{z} - \pdt{B_x}{x} - \pdt{B_y}{y} = 0.
+\]
+\end{enumerate}
+Thus, \eqref{c4e5} encodes the two Maxwell equations \eqref{c4e1} and \eqref{c4e2}.
+We also note that
+\begin{enumerate}
+\item If any two indices in \eqref{c4e5} are equal then we get the identity $0=0$.
+\item If all three indices are equal then each term on lhs of \eqref{c4e5} is
+zero.
+\item Let us examine what happens when we consider other combinations of indices.
+If we swap the values of $\mu$ and $\nu$ in case (a), that is, if $\mu = 1, \nu = 0,
+\rho = 2$ then we have
+\[
+\pdt{F_{10}}{x^2} + \pdt{F_{02}}{x^1} + \pdt{F_{21}}{x^0} = 0 \Rightarrow
+-\pdt{E_x}{y} + \pdt{E_y}{x} - \frac{1}{c}\pdt{B_z}{t} = 0,
+\]
+which is same as the conclusion of case (a). We can similarly show that all swaps
+give 
+\end{enumerate}
+\end{enumerate}

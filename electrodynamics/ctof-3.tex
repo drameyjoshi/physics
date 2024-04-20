@@ -57,7 +57,7 @@ From equation \eqref{c2e8}, the first term is just the generalised momentum for
 the Lagrangian of \eqref{c2e7}. The Hamiltonian is given be the Legendre
 transform
 \begin{eqnarray*}
-H &=& p^iv_i - L \\
+\mathcal{H} &=& p^iv_i - L \\
   &=& m\gamma v^iv_i + \frac{e}{c}A^iv_i + mc^2\sqrt{1 - \beta^2} + e\varphi - 
   \frac{e}{c}A^iv_i \\
   &=& \frac{mv^2}{\sqrt{1 - \beta^2}} + mc^2\sqrt{1 - \beta^2} + e\varphi \\
@@ -65,14 +65,14 @@ H &=& p^iv_i - L \\
 \end{eqnarray*}
 or that
 \begin{equation}\label{c3e8}
-H = mc^2\gamma + e\varphi.
+\mathcal{H} = mc^2\gamma + e\varphi.
 \end{equation}
-Stricly speaking \eqref{c3e9} is not the correct form of the Hamiltonian because 
+Stricly speaking \eqref{c3e8} is not the correct form of the Hamiltonian because 
 it is expressed in terms of the generalised velocity. To remedy this defect, we 
 write
-\eqref{c3e9} as
+\eqref{c3e8} as
 \[
-\frac{(H - e\varphi)^2}{c^2} = m^2c^2 \gamma^2.
+\frac{(\mathcal{H} - e\varphi)^2}{c^2} = m^2c^2 \gamma^2.
 \]
 Now,
 \begin{equation}\label{c3e9}
@@ -81,20 +81,20 @@ Now,
 \end{equation}
 so that
 \[
-\frac{(H - e\varphi)^2}{c^2} = m^2c^2(1 + \beta^2\gamma^2) 
+\frac{(\mathcal{H} - e\varphi)^2}{c^2} = m^2c^2(1 + \beta^2\gamma^2) 
 \]
 or that
 \[
-\frac{(H - e\varphi)^2}{c^2} = m^2c^2 + m^2\gamma^2 v^2,
+\frac{(\mathcal{H} - e\varphi)^2}{c^2} = m^2c^2 + m^2\gamma^2 v^2,
 \]
 From \eqref{c3e7} the last term on the rhs can be written as
 \begin{equation}\label{c3e10}
-\frac{(H - e\varphi)^2}{c^2} = m^2c^2 + \left(p^i - \frac{e}{c}A^i\right)
+\frac{(\mathcal{H} - e\varphi)^2}{c^2} = m^2c^2 + \left(p^i - \frac{e}{c}A^i\right)
 \left(p_i - \frac{e}{c}A_i\right)
 \end{equation}
 Thus,
 \begin{equation}\label{c3e11}
-H = e\varphi + \sqrt{m^2c^4 + c^2 
+\mathcal{H} = e\varphi + \sqrt{m^2c^4 + c^2 
 \left(p^i - \frac{e}{c}A^i\right)\left(p_i - \frac{e}{c}A_i\right)}
 \end{equation}
 is the correct form of the Hamiltonian. For speeds small as compared to $c$,
@@ -112,7 +112,7 @@ can be well-approximated by $1$ so that the generalised momentum is
 \end{equation}
 and the Hamiltonian is
 \begin{equation}\label{c3e14}
-H = \frac{1}{2m}\left(\vec{p} - \frac{e}{c}\vec{A}\right)^2 + e\varphi.
+\mathcal{H} = \frac{1}{2m}\left(\vec{p} - \frac{e}{c}\vec{A}\right)^2 + e\varphi.
 \end{equation}
 
 From \eqref{c2e27},
@@ -128,8 +128,8 @@ and hence the Hamilton-Jacobi equation is, from \eqref{c3e10},
 \frac{1}{c^2}\left(\pdt{S}{t} + e\varphi\right)^2 = m^2c^2 + 
 \left(\grad S - \frac{e}{c}\vec{A}\right)^2
 \]
-where we replaced $H$ in \eqref{c3e10} with $-(1/c)\partial_t S$ because it is
-the energy of the particle. We can reexpress the relativistic Hamilton-Jacobi
+where we replaced $\mathcal{H}$ in \eqref{c3e10} with $-(1/c)\partial_t S$ because
+it is the energy of the particle. We can reexpress the relativistic Hamilton-Jacobi
 equation as 
 \begin{equation}\label{c3e15}
 \left(\grad S - \frac{e}{c}\vec{A}\right)^2 - 
@@ -144,6 +144,7 @@ equation as
 \grad_{\vec{v}}L &=& m\vec{v} + \frac{e}{c}\vec{A}.
 \end{eqnarray*}
 The equation for $\grad L$ simplifies because $\vec{v}$ is independent of $\vec{x}$.
+Therefore, $\grad\vec{v}$ and $\curl\vec{v}$ are both zero.
 \begin{equation}\label{c3e16}
 \frac{d}{dt}\left(m\vec{v} + \frac{e}{c}\vec{A}\right) = 
 -e\grad\varphi + \frac{e}{c}(\vec{v}\cdot\grad\vec{A} + \vec{v}\times\curl\vec{A})
@@ -162,12 +163,17 @@ We define
 \vec{E} &=& -\grad\varphi - \frac{1}{c}\pdt{\vec{A}}{t} \label{c3e19} \\
 \vec{B} &=& \curl\vec{A} \label{c3e20}
 \end{eqnarray}
-and call $\vec{E}$ as the electric field and $\vec{B}$ as the magnetic field. The
+and call $\vec{E}$ the electric field and $\vec{B}$ the magnetic field. The
 quantity
 \begin{equation}\label{c3e21}
 \vec{F} = e\vec{E} + \frac{\vec{v}}{c}\times\vec{B}
 \end{equation}
-is called the Lorentz force.
+is called the Lorentz force. This equation depends on the form \eqref{c3e12} of
+the Lagrangian and \eqref{c3e13} of the momentum both of which are valid only in
+the non-relativistic limit. As a result, \eqref{c3e18} to \eqref{c3e21} are 
+applicable only in the non-relativistic limit. We derive the equation of motion
+that is valid at all speeds later in equation \eqref{c3e74}. Interestingly, the
+relativistic equation takes the same form as the non-relativistic one.
 
 \item Recall that 
 \begin{equation}\label{c3e22}
@@ -254,7 +260,7 @@ depends only on $\varphi$. Further, since the Lagrangian is independent of time,
 energy of the system is a constant and it coincides with the Hamiltonian. From
 \eqref{c3e8}, it is
 \begin{equation}\label{c3e35}
-\mathcal{E} (= H) = mc^2\gamma + e\varphi.
+\mathcal{E} (= \mathcal{H}) = mc^2\gamma + e\varphi.
 \end{equation} 
 The effect of the fields is just to add a term $e\varphi$ to the energy. This term
 is called the \emph{potential energy}. It is independent of $\vec{A}$ which means
@@ -338,12 +344,12 @@ ecEt = \mathcal{E}_0\sinh\left(\frac{eEy}{p_0c}\right)
 \]
 Substituting this in \eqref{c3e45} we get the equation of the orbit
 \begin{equation}\label{c3e47}
-x(t) = \frac{\mathcal{E}_0}{eE}\cosh\left(\frac{eEy}{p_0c}\right).
+x(y) = \frac{\mathcal{E}_0}{eE}\cosh\left(\frac{eEy}{p_0c}\right).
 \end{equation}
 It describes a catenary symmetric about the $x$-axis. When $eEy \ll p_0c$, we
 can approximate \eqref{c3e47} as
 \begin{equation}\label{c3e48}
-x(t) = \frac{\mathcal{E}_0}{eE}\left(1 + \frac{1}{2}\frac{e^2E^2y}{p_0^2c^2}\right),
+x(y) = \frac{\mathcal{E}_0}{eE}\left(1 + \frac{1}{2}\frac{e^2E^2y^2}{p_0^2c^2}\right),
 \end{equation}
 which is an equation of a parabola.
 
@@ -362,7 +368,7 @@ so that \eqref{c2e48} becomes
 \td{\vec{v}}{t} = \frac{ec}{\mathcal{E}}\vec{v} \times \vec{B}.
 \]
 In a magnetic field, the energy of a particle remains unchanges. Therefore, we 
-could pull $\mathcal{E}$ out of the derivative. Let us align the $z$ axis along
+could pull $\mathcal{E}$ out of the integral. Let us align the $z$ axis along
 the magnetic field so that $\vec{B} = B\uv{z}$ and $\vec{v} \times \vec{B} = 
 \uv{x}(v_yB - 0) + \uv{y}(-v_xB) + \uv{z}(0)$. Therefore,
 \begin{eqnarray*}
@@ -609,7 +615,7 @@ c\td{u^\mu}{s} = \left(c\td{\gamma}{s}, -\td{(\gamma v^1)}{s},
 \]
 and
 \[
-u^\mu = \left(\gamma, \frac{\gamma}{c}v_1, \frac{\gamma}{c}v_2, \frac{\gamma}{c}v_3\right),
+u_\mu = \left(\gamma, \frac{\gamma}{c}v_1, \frac{\gamma}{c}v_2, \frac{\gamma}{c}v_3\right),
 \]
 and hence
 \begin{eqnarray*}
@@ -621,9 +627,9 @@ mc\td{\gamma}{s} &=& \frac{e}{c}(F^{00}\gamma - F^{01}\gamma \beta_1 - F^{02}\ga
 Since $v^i = -v_i$ and $ds = cdt/\gamma$,
 \begin{eqnarray*}
 mc\td{\gamma}{t} &=& e(E_1 \beta_1 + E_2 \beta_2 + E_3 \beta_3) \\
-m\frac{d}{dt}(\gamma v^1) &=& e(E_1 + B_3 \beta_2 - B_2 \beta_3) \\
-m\frac{d}{dt}(\gamma v^2) &=& e(E_2 - B_3 \beta_1 + B_1 \beta_3) \\
-m\frac{d}{dt}(\gamma v^3) &=& e(E_3 + B_2 \beta_1 - B_1 \beta_2).
+m\frac{d}{dt}(\gamma v_1) &=& e(E_1 + B_3 \beta_2 - B_2 \beta_3) \\
+m\frac{d}{dt}(\gamma v_2) &=& e(E_2 - B_3 \beta_1 + B_1 \beta_3) \\
+m\frac{d}{dt}(\gamma v_3) &=& e(E_3 + B_2 \beta_1 - B_1 \beta_2).
 \end{eqnarray*}
 The last three equations can be written in vector form as
 \[

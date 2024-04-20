@@ -41,7 +41,7 @@ L = -\alpha c\sqrt{1 - \frac{v^2}{c^2}},
 \end{equation}
 where
 \[
-v^i = d{x^i}{t}
+v^i = \td{x^i}{t}
 \]
 is the 3-velocity of the particle. Can we guess $\alpha$?
 
@@ -104,7 +104,7 @@ mc^2 + \frac{1}{2}mv^2 + O(\beta^4).
 \eqref{c2e12} $\mathcal{E} \ge mc^2 > 0$. Thus energy of a free particle is always positive.
 This is also true in classical mechanics for an elementary particle, that is a
 particle without internal degrees of freedom. For a composite body, in classical
-mechanics, energy can be negative and is determined to within a constant. Howwever,
+mechanics, energy can be negative and is determined to within a constant. However,
 in the relativistic regime this is not so, $\mathcal{E} > 0$ is always true.
 
 \item For a composite body at rest, the energy $\mathcal{E} = Mc^2$ is not the same as 
@@ -125,16 +125,16 @@ p^2 = p_ip^i = mv^2\gamma^2
 \]
 and from \eqref{c2e12}
 \[
-\mathcal{E}^2 = m^2c^4\gamma^2 \Rightarrow E^2 - E^2\beta^2 = m^2c^4 \Rightarrow 
-\mathcal{E}^2 - p^2c^2  = m^2c^4,
+\mathcal{E}^2 = m^2c^4\gamma^2 \Rightarrow \mathcal{E}^2 - \mathcal{E}^2\beta^2 
+= m^2c^4 \Rightarrow \mathcal{E}^2 - p^2c^2  = m^2c^4,
 \]
 so that
 \begin{equation}\label{c2e15}
 \mathcal{E}^2 = p^2c^2 + m^2c^4.
 \end{equation}
-Since $E$ is expressed in terms of $p$, we can as well write the Hamiltonian as
+Since $\mathcal{E}$ is expressed in terms of $p$, we can as well write the Hamiltonian as
 \begin{equation}\label{c2e16}
-H = c\sqrt{p^2 + m^2c^2}
+\mathcal{H} = c\sqrt{p^2 + m^2c^2}
 \end{equation}
 
 \item Since $p^i = mv^i\gamma$ and $\mathcal{E} = mc^2\gamma$, we also have
@@ -181,8 +181,9 @@ for a free particle,
 \end{equation}
 The particle travels with a uniform velocity, unsurprisingly.
 
-\item Now fix $t_1$ and let $t_2$ be varied for true trajectories, that the ones
-which occur in reality and for which \eqref{c2e23} is valid. Then we have from
+\item Now fix $t_1$ and let $t_2$ be varied for true trajectories, that is the
+ones which occur in reality and for which \eqref{c2e23} is valid. Then we have 
+from
 \eqref{c2e21},
 \begin{equation}\label{c2e24}
 \delta S = -mcu_\mu \delta (x^\mu)_{t_2},
@@ -191,7 +192,7 @@ so that
 \begin{equation}\label{c2e25}
 mcu_\mu = -\pdt{S}{x^\mu}.
 \end{equation}
-The 4-vector $mc^\mu$, from equations \eqref{c1e79} to \eqref{c1e82} is
+The 4-vector $mcu^\mu$, from equations \eqref{c1e79} to \eqref{c1e82} is
 \[
 u^\mu = \left(\gamma, \frac{v^i}{c}\gamma\right)
 \]
@@ -292,11 +293,11 @@ we get the invariance of
 \[
 \frac{dp_xdp_ydp_z}{\mathcal{E}} = \frac{p^2dpdo}{\mathcal{E}} 
 \]
-Since $\mathcal{E}^2 = p^2c^2 + m^2c4$, $\mathcal{E}d\mathcal{E} = c^2 pdp$, therefore,
+Since $\mathcal{E}^2 = p^2c^2 + m^2c^4$, $\mathcal{E}d\mathcal{E} = c^2 pdp$, therefore,
 \[
 \frac{p^2dpdo}{\mathcal{E}} = \frac{pd\mathcal{E}do}{c^2}
 \]
-is also an invariant. In particular $pdEdo$ is also invariant.
+is also an invariant. In particular $pd\mathcal{E}do$ is also invariant.
 
 \item We will now look at the distribution function over phase space. Thus,
 $f(\vec{r}, \vec{p})dxdydzdp_xdp_ydp_z$ is the number of particles in the phase
@@ -369,9 +370,9 @@ or
 d\nu = \sigma n_1n_2v_r dVdt,
 \end{equation}
 where $\sigma$ is called the collision cross section. Its dimensions are that of
-an area. Since $dVdt = d^x$, it is invariant under a Lorentz transformation.  $d\nu$
-is invariant because it is a scalar. Therefore, the quantity $\sigma v_r n_1n_2$ 
-is also an invariant.
+an area. Since $dVdt = dx^\mu/c$, it is invariant under a Lorentz transformation. 
+$d\nu$ is invariant because it is a scalar. Therefore, the quantity $\sigma v_r 
+n_1n_2$ is also an invariant.
 
 However, this expression is developed only in the frame of the reference in which
 one of the beams is stationary. In order to generalise it to an arbitrary frame,

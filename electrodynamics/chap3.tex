@@ -385,5 +385,156 @@ $\theta$, $r$ from $0$ to $2a\cos\theta$. Thus,
 \]
 \end{enumerate}
 
+\item[12] We consider the remaining portion of the shell to be made up of 
+elementary rings centred along the line joining the centre of the shell and $P$.
+If $dq$ is the charge on one such ring then, if we align the $z$ axis so that
+the origin coincides with the centre of the shell and $P$ lies on it, then
+\[
+dE = \ke\frac{dq z}{(r^2 + z^2)^{3/2}},
+\]
+where $r$ is the radius of the ring and $z$ is the distance of $P$ from the 
+ring's centre. In terms of the radius $a$ of the shell, $r = a\sin\theta$,
+$z = a - a\cos\theta$. The shell without the cap can be constructed by letting
+$\theta$ range from $\theta_0$ to $\pi$. Thus,
+\[
+E = \ke \int_{\theta_0}^\pi \frac{a(1 - \cos\theta) dq}{(a^2\sin^2\theta + (a - a\cos\theta)^2)^{3/2}}
+= \ke \frac{1}{4a^2}\int_{\theta_0}^\pi \frac{dq}{\sin(\theta/2)}.
+\]
+Now, $dq = \sigma \times 2\pi r \times a d\theta = 2\pi a^2\sin\theta d\theta = 
+4\pi a^2\sin(\theta/2)\cos(\theta/2)$ so that
+\[
+E = \frac{\sigma}{4\epsilon_0}\int_{\theta_0}^\pi\cos\left(\frac{\theta}{2}\right)d\theta
+= \frac{\sigma}{2\epsilon_0}\int_{\theta_0/2}^{\pi/2}\cos u du = \frac{\sigma}{2\epsilon_0}
+\left(1 - \sin\left(\frac{\theta}{2}\right)\right).
+\]
+
+\item[13] Consider the potential due to a uniformly charged cube at one of its 
+corners. Let the origin be at the diagonally opposite corner. Then the expression
+for the potential is
+\[
+\phi(s) = \ke\int_0^s dx \int_0^s dy \int_0^s dz \frac{\rho}{\sqrt{x^2 + y^2 + z^2}}dxdydz.
+\]
+If the dimension of the cube is halved, the volume drops by a factor of $8$ and the
+integrand by a factor of $1/2$ (from the denominator). Therefore,
+\[
+\phi\left(\frac{s}{2}\right) = \frac{1/8}{1/2}\phi(s) = \frac{\phi(s)}{4}
+\]
+so that
+\[
+8\phi\left(\frac{s}{2}\right) = 2\phi(s).
+\]
+Thus, the potential at the centre is twice as that at the corner.
+
+\item[15] Electrostatic energy is
+\[
+U = \frac{\epsilon_0}{2}\int E^2 d^3r.
+\]
+Therefore, we need an expression for the electric field at various points in the
+charge system. There is no electric field inside the smaller sphere because there
+is no charge in it. Charge enclosed in the outer sphere is
+\[
+Q(R) = \rho \frac{4\pi}{3} (R^3 - a^3).
+\]
+At intermediate radii $a \le r \le R$, it is
+\[
+Q(r) = \rho \frac{4\pi}{3} (r^3 - a^3).
+\]
+Therefore, the electric field is
+\[
+E \times 4\pi r^2 = \frac{1}{\epsilon_0}Q(r) = \rho \frac{4\pi}{3\epsilon_0} (r^3 - a^3).
+\]
+so that
+\[
+E = \frac{\rho}{3\epsilon_0}\frac{r^3 - a^3}{r^2} \; a \le r \le R.
+\]
+For $r > R$, we have
+\[
+E = \ke\frac{Q(R)}{r^2}.
+\]
+Thus,
+\[
+\vec{E} = \begin{cases} 0 & \; 0 \le r < a \\
+ \frac{\rho}{3\epsilon_0} \frac{(r^3 - a^3)}{r^2} \uv{r} & \; a \le r \le R \\
+\ke\frac{Q(R)}{r^2} \uv{r} 
+\end{cases}
+\]
+Therefore,
+\[
+U = \frac{\epsilon_0}{2}\left(0 + 
+\iiint_a^R \frac{\rho^2}{9\epsilon_0^2}\frac{(r^3-a^3)^2}{r^4}r^2\sin\theta drd\theta d\phi +
+\iiint_R^\infty \frac{Q^2}{16\pi^2\epsilon^2}\frac{1}{r^4}r^2\sin\theta drd\theta d\phi\right)
+\]
+The $\theta$ and $\phi$ integrals can be readily evaluated,
+\[
+U = \frac{4\pi\epsilon_0}{2}\left(
+\int_a^R \frac{\rho^2}{9\epsilon_0^2}\frac{(r^3-a^3)^2}{r^2} dr +
+\int_R^\infty \frac{Q^2}{16\pi^2\epsilon_0^2}\frac{1}{r^2} dr\right).
+\]
+After evaluating the integrals,
+\[
+U = \frac{4\pi\epsilon_0}{2}\left(\frac{\rho^2}{9\epsilon_0^2}\left(
+\frac{R^5}{5} + \frac{9}{5}a^5 - a^3R^2 - \frac{a^6}{R}\right) + 
+\frac{Q^2}{16\pi^2\epsilon_0^2}\frac{1}{R}\right).
+\]
+Now,
+\[
+\rho = \frac{3Q}{4\pi(R^3 - a^3)}
+\]
+implies that
+\begin{eqnarray*}
+U &=& \frac{4\pi\epsilon_0}{2}\left(\frac{Q^2}{16\pi^2\epsilon_0^2(R^3 - a^3)^2}\left(
+\frac{R^5}{5} + \frac{9}{5}a^5 - a^3R^2 - \frac{a^6}{R}\right) + 
+\frac{Q^2}{16\pi^2\epsilon_0^2}\frac{1}{R}\right) \\
+ &=&  \frac{Q^2}{8\pi\epsilon_0R}\left(\frac{1}{(R^3 - a^3)^2}\left(
+\frac{R^6}{5} + \frac{9}{5}a^5R - a^3R^3 - a^6\right) + 1\right) 
+\end{eqnarray*}
+If $a = 0$ then
+\[
+U = \frac{Q^2}{8\pi\epsilon_0R}\frac{6}{5} = \ke\frac{3}{5}\frac{Q^2}{R}.
+\]
+In order to find the limit $a \rightarrow R$. Since,
+\[
+\lim_{a \rightarrow R}\frac{R^6 + 9a^5R - 5a^3R^3 - 5a^6}{5(R^3 - a^3)^2} = 0,
+\]
+we see that
+\[
+U = \ke\frac{1}{2}\frac{Q^2}{R}.
+\] 
+
+\item[16] The energy of interaction between spheres is
+\[
+V_E = \frac{1}{2}\int d^2r \sigma_1(r)\varphi_2(r) + \frac{1}{2}\int d^2r \sigma_2(r)\varphi_1(r),
+\]
+where $\varphi_1(\varphi_2)$ is the potential due to sphere $1(2)$ on the surface
+of sphere $2(1)$. Since the spheres are identical,
+\[
+V_E = \int d^2r \sigma_1(r)\varphi_2(r).
+\]
+Since the two spheres are well separated, the field on the surface of sphere $1$
+is as if due to as point charge $Q$ located at the centre of sphere $2$, and 
+\emph{vice versa}. Thus,
+\[
+\varphi_2 = \ke\frac{Q}{r}.
+\]
+where $r$ is the distance from $Q$. The $r$ in this equation is not the same as the
+one in the expression for $V_E$. Now,
+\[
+\sigma_1 = \frac{Q}{4\pi r^2}
+\]
+so that
+\[
+V_E = \int d^2 r \frac{Q}{4\pi r^2} \ke \frac{Q}{\sqrt{r^2 + d^2 - 2rd\cos\theta}},
+\]
+where we aligned the $z$-axis along the line joining the centres of the two spheres.
+Since the integration is over the surface of the sphere,
+\[
+V_E = \ke\frac{Q^2}{4\pi}\int_0^{2\pi}d\phi \int_0^\pi \frac{\sin\theta d\theta}{\sqrt{r^2 + d^2 - 2rd\cos\theta}},
+\]
+Let $u = r^2 + d^2 - 2rd\cos\theta$ so that $2rd\sin\theta d\theta = du$ and the 
+limits of integration go from $(r - d)^2$ to $(r + d)^2$ and
+\[
+V_E = \ke \frac{Q^2}{2}\int_{(r - d)^2}^{(r + d)^2}\frac{1}{2rd}\frac{du}{\sqrt{u}} 
+= \ke\frac{Q^2}{2}\frac{1}{rd}(d + r - d + r) = \ke\frac{Q^2}{d}.
+\]
 \end{enumerate}
 \end{document}

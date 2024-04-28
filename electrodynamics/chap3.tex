@@ -536,5 +536,76 @@ limits of integration go from $(r - d)^2$ to $(r + d)^2$ and
 V_E = \ke \frac{Q^2}{2}\int_{(r - d)^2}^{(r + d)^2}\frac{1}{2rd}\frac{du}{\sqrt{u}} 
 = \ke\frac{Q^2}{2}\frac{1}{rd}(d + r - d + r) = \ke\frac{Q^2}{d}.
 \]
+
+\item[18] There are three components to the atom's energy;
+\begin{enumerate}
+\item $E_1$, Interaction between the nucleus and the electron cloud. 
+\[
+E_1 = \int d^3r \rho_e(\vec{r})\varphi_n(\vec{r}),
+\]
+where $\varphi_n(\vec{r})$ is the potential of the nucleus and $\rho_e$ is the 
+electron density. Thus,
+\begin{eqnarray*}
+\rho_e(\vec{r}) &=& -\frac{|e|}{\pi a^2r}e^{-2r/a} \\
+\varphi_n(\vec{r}) &=& \ke\frac{|e|}{r}
+\end{eqnarray*}
+so that
+\[
+E_1 = -\frac{e^2}{4\pi\epsilon_0}\int d^3r \frac{e^{-2r/a}}{\pi a^2 r^2} = 
+-\frac{e^2}{\pi\epsilon_0 a^2}\int_0^\infty e^{-2r/a}dr = -\frac{e^2}{2\pi\epsilon_0 a}
+\]
+
+\item Self energy of the electron cloud.
+\[
+E_2 = \frac{1}{2}\int d^3r \rho_e(\vec{r})\varphi_e(\vec{r}),
+\]
+where $\varphi_e$ is the potential of the electron cloud. $\varphi_e(\vec{r})$ is
+the energy needed to bring a unit charge from infinity to $\vec{r}$ against the
+charge in the sphere centred at origin and of radius $|\vec{r}|$. If $q_e(r)$ is
+this charge then
+\[
+q_e(r) = \int_0^r 4\pi s^2\rho_e(s) = -\frac{4|e|}{a^2} \int_0^r se^{-2s/a} ds
+\]
+that is
+\[
+q_e(r) = -\frac{4|e|}{a^2}\left(\frac{a^2}{4} - \frac{a^2}{4}e^{-2r/a} - \frac{a}{2}re^{-2r/a}\right)
+\]
+or
+\[
+q_e(r) = -|e|\left(1 - e^{-2r/a} - \frac{2r}{a}e^{-2r/a}\right) = 
+|e|\left(e^{-2r/a}\left(1 + \frac{2r}{a}\right) - 1\right).
+\]
+The electric field due to $q_e(r)$ at all points outside it is
+\[
+\vec{E}_e(\vec{r}) = \ke\frac{q_e}{r^2}\uv{r} = 
+\ke\frac{|e|}{r^2}\left(e^{-2r/a}\left(1 + \frac{2r}{a}\right) - 1\right)\uv{r}.
+\]
+Therefore,
+\[
+\varphi_e(\vec{r}) = -\int_\infty^r E_e(s)ds = -\frac{|e|}{4\pi\epsilon_0}
+\int_\infty^r \left(e^{-2s/a}\left(1 + \frac{2s}{a}\right) - 1\right)\frac{ds}{s^2}
+\]
+that is,
+\[
+\varphi_e(\vec{r}) = -\frac{|e|}{4\pi\epsilon_0}\left(\frac{1}{r} - \frac{e^{-2r/a}}{r}\right).
+\]
+We can now calculate,
+\begin{eqnarray*}
+E_2 &=& \frac{|e|}{8\pi\epsilon_0}\int d^3r \frac{|e|}{\pi a^2r}e^{-2r/a}\left(\frac{1}{r} - \frac{e^{-2r/a}}{r}\right) \\
+ &=& \frac{e^2}{8\pi^2a^2\epsilon_0}\int_0^\infty 4\pi r^2 e^{-2r/a}\left(\frac{1}{r^2} - \frac{e^{-2r/a}}{r^2}\right) \\
+ &=& \frac{e^2}{2\pi a^2\epsilon_0}\int_0^\infty(e^{-2r/a} - e^{-4r/a})dr \\
+ &=& \frac{e^2}{2\pi a^2\epsilon_0}\left(\frac{a}{2} - \frac{a}{4}\right) \\
+ &=& \ke\frac{e^2}{2a}
+\end{eqnarray*}
+
+\item The self energy of the nucleus. We are asked to ignore it.
+
+Therefore, the total energy of the charge assembly is
+\[
+E = E_1 + E_2 = -2\ke\frac{e^2}{a} + \ke\frac{e^2}{2a} = -\frac{3}{2}\ke\frac{e^2}{a}.
+\]
+Ionisation energy is the negative of this quantity.
+
+\end{enumerate}
 \end{enumerate}
 \end{document}

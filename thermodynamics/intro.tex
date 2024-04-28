@@ -1,0 +1,187 @@
+\documentclass{beamer}
+\title{Key Ideas in Thermodynamics}
+\author{Amey Joshi}
+\newcommand{\dbar}{{\mathchar'26\mkern-13mu d}}
+\begin{document}
+\frame{\titlepage}
+
+\begin{frame}
+\frametitle{A thermodynamic system}
+\begin{enumerate}
+\item A portion of space which we want to study is the \emph{system} everything else is its \emph{surrounding}.
+\item The system is described in terms of a few quantities called \emph{thermodynamic variables}.
+\item Thermodynamic variables are macroscopic, directly measured and make no assumptions about the matter in the system.
+\item Two systems described by variables $(X_1, Y_1)$ and $(X_2, Y_2)$ are said to be in thermal equilibrium if the variables do
+not change when the two systems are in contact with each other.
+\item Zeroth law of thermodynamics.
+\item This leads to the idea that systems in equilibrium can be characterised by a single number called their \emph{temperature}.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Equilibrium}
+\begin{enumerate}
+\item A system is in \emph{thermodynamic equilibrium} if it is in:
+\begin{enumerate}
+\item Mechanical equilibrium, with no unbalances forces on the interior of the system.
+\item Chemical equilibrium, when there is an absence of diffusion, phase change, change in composition.
+\item Thermal equilibrium, when there is no change in thermodynamic variables when the system is separated from its surrounding
+by a diathermic wall.
+\end{enumerate}
+\item A system in thermodynamic equilibrium can be described in terms of thermodynamic variables that do not change with time.
+\item Systems not in equilibrium cannot be described by variables common to all parts of the systems. We focus on systems in 
+equilibrium.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Equation of state}
+\begin{enumerate}
+\item Usually the thermodynamics variables describing a system are not all independent. They are constrained by an equation of
+state.
+\item An example of a thermodynamic variable is the pressure $P$. A differential change in it is $dP$. In thermodynamics, $dP$
+is small compared to $P$ but very large compared to the molecular fluctuations in stress. Same is true for differential changes
+to all thermodynamic variables.
+\item An extensive thermodynamic variable's value is halved if we consider only half the system. An intensive variable's value
+remains unchanged. Volume is extensive whilr pressure is intensive.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Work}
+\begin{enumerate}
+\item When the external force acting on a system is in the same (opposite) direction as the displacement of the system, work is 
+done on (by) the system and is considered to be positive (negative). 
+\item The displacement of the system happens \emph{quasi-statically}. 
+\item For a hydrostatic system, $\dbar W = -PdV$. When $dV < 0$, work is done on the system and is positive. For a volume change
+from $V_1$ to $V_2$, the work done is
+\[
+W = -\int_{V_1}^{V_2}PdV,
+\]
+and its value depends on the path taken by the quasi-static process in the $PV$ plane. That is why, the differential work
+is an inexact differential $\dbar W$.
+
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Work}
+\begin{enumerate}
+\item In general, work done by/on a system is $\dbar W = YdX$, where $Y$ is an intensive property called the generalised
+force and $X$ is an extensive property called the generalised displacement. Their product has the dimensions of work.
+\item For a composite system, $\dbar W = Y_1dX_1 + Y_2dX_2$.
+\item It is experimentally found that adiabatic work is independent of path. We can then write
+\[
+W_{\text{adiabatic}} = -\int_{V_1}^{V_2}PdV = U_2 - U_1,
+\]
+where $U_1. U_2$ are numbers characteristic of the inital and final states.
+\item $U$ is analogous to the potential in a mechanical system and is called its \emph{internal energy}.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Heat}
+\begin{enumerate}
+\item We can change the internal energy of the system from $U_1$ to $U_2$ even without adiabatic work by bringing it in contact
+with another system at a different temperature.
+\item The energy that is transferred to the system solely because of a temperature difference and enough to compensate for the 
+change $U_2 - U_1$ in its internal energy is called \emph{heat}. This is the thermodynamic definition of heat.
+\item A calorimetric definition of heat is that which flows between two systems when they are at different temperatures.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{First law of thermodynamics}
+\begin{enumerate}
+\item $U_2 - U_1 = Q + W$. Its differential form is $dU = \dbar Q + \dbar W$. 
+\item The first law of thermodynamics introduces three important ideas:
+\begin{enumerate}
+\item The principle of conservation of energy.
+\item The existence of the internal energy function.
+\item The definition of heat at energy in transit as a result of temperature difference.
+\end{enumerate}
+\item For a hydrostatic system, $dU = \dbar Q - PdV$.
+\item The quantity $\dbar Q/dT$ is called the \emph{heat capacity}. It can be measured accurately and it plays an important
+role in checking if the internal energy derived in statistical mechanics is correct.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Second law of thermodynamics - 1}
+\begin{enumerate}
+\item If the system is a resistor immersed in flowing water, the heat caused by passage of current is transferred to the water
+and the system remains in the same state. Work done by the battery is completely converted to heat and the process can happen
+indefinitely.
+\item Can heat be completely converted to work? First law of thermodynamics will not object to this possibility. The second law 
+forbids it.
+\item  First law assures that energy is conserved. The second law dictates the direction in which it flows and the proportion
+by which it transforms between heat and work.
+\item Work is a result of orderly motion of the system. Heat manifests as disorderly motion. That is why conversion of heat
+to work is never $100\%$.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Second law of thermodynamics - 2}
+\begin{enumerate}
+\item These two formulations of the second law are equivalent:
+\begin{itemize}
+\item  Kelvin-Planck: No process is possible whose \emph{sole} result is absorption of hear from a reservoir and its conversion
+into work.
+\item Clausius: No process is possible whose \emph{sole} result is the transfer of heat from a cooler to a hotter body.
+\end{itemize}
+\item A reversible process is quasi-static and non-dissipative.
+\item All natural, spontaneous processes are irreversible. They are either not quasi-static, that is not in thermodynamic
+equilibrium, or dissipative or both.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Pfaffian differential forms}
+\begin{enumerate}
+\item One can write $\dbar Q = dU - \dbar W = dU - \sum_{i}Y_idX_i$. Such an expression is called a \emph{Pfaffian differential
+form}. In general, it is not integrable. That is, there is no function $f$ such that $df = dU - \sum_{i}Y_idX_i$.
+\item An example is $-ydx + xdy$. When integrated from $(0, 0)$ to $(1, 1)$ along the line $y = x$ we get zero. Along $y = x^2$,  
+we get $1/3$.
+\item A Pfaffian differential form in two variables can always be multiplied by a function $\phi(x, y)$ such that the result is
+integrable. $\phi(x, y)$ is called an integrating factor. (Recall the theory of ODEs.) A Pffafian differential form in more
+than two variables is, in general, not integrable.
+
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Second law of thermodynamics - 3}
+\begin{enumerate}
+\item It is a law of Nature that $\dbar Q$ for \emph{all} systems is integrable and have the same integrating factor $1/T$,
+where $T$ is the absolute temperature, provided that $\dbar Q$ is a reversible change. 
+\item This is another, more abstract, statement of the second law of thermodynamics.
+\item Thus, $\dbar Q/T$ is an exact differential and can be written as 
+\[
+dS = \frac{\dbar Q_R}{T}.
+\]
+The quantity $S$ is called the entropy. The subscript $R$ in $\dbar Q_R$ emphasises that the change is reversible.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Second law of thermodynamics - 4}
+\begin{enumerate}
+\item For a reversible change, a transfer $\dbar Q_R$ to the system from its surroundings is accompanied with a change 
+$-\dbar Q_R$ in the surroundings. Therefore, the net change in entropy of the system plus the surrounding is zero.
+\item If the heat transfer happens irreversibly, then the net change in entropy is positive.
+\item Since more natural processes are dissipative, they lead to an increase in entropy.
+\item Entropy is also a measure of energy unavailable for work. An increase in entropy is a degradation of energy.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{What I want to learn}
+\begin{enumerate}
+\item The connection between the definitions $dS = \dbar Q_R/T$ and $S = k\ln\Omega$.
+\item The statistical interpretation of inexact differentials like $\dbar W$.
+\item Equilibrium statistical mechanics is a mature discipline and these questions are satisfactorily answered. My understanding
+is faded in these areas.
+\end{enumerate}
+\end{frame}
+\end{document}

@@ -1,0 +1,136 @@
+\documentclass{beamer}
+\usepackage{bm}
+\usefonttheme[onlymath]{serif}
+\title{Electricity and Magnetism}
+\subtitle{Electrostatics - Charges and Fields \\ Day 1}
+\author{Amey Joshi}
+%\renewcommand{\vec}{\bm}
+\newcommand{\op}{{\;\prime}}
+\newcommand{\dive}{\nabla\cdot}
+\begin{document}
+\frame{\titlepage}
+
+\begin{frame}
+\frametitle{About the subject}
+\begin{enumerate}
+\item Classical E\&M deals with charges, currents and their interactions assuming that all quantities can be measured 
+simultaneously with $\infty$ precision.
+\item Quantum effects to EM fields can be ignored at least up to $10^{-10}$ cm.  There is no known upper limit of distance
+over which it is valid.
+\item Special relativity is `built in' the theory.
+The theory will be used as is in almost all areas of physics.
+\item The way mass is a basic physical quantity in gravitation, charge and magnetic dipole are the basic quantities in E\&M.
+
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Electric charge}
+\begin{enumerate}
+\item Without slipping into the tricky areas of particle physics, we will accept that:
+\begin{enumerate}
+\item Charges come in two varieties. By convention, electron's charge is negative, proton's is positive.
+\item Charge is quantised and conserved.
+\item Charge is a scalar, therefore invariant across inertial frames of reference.
+\item Electron is roughly $2000$ times lighter than proton. 
+\item All positive charge in an atom is concentrated in a nucleus that is of the sise $10^{-13}$ cm.
+\end{enumerate}
+\item Quantisation of charge is mostly irrelvant in classical E\&M. We will mostly consider macroscopic charge and current
+densities.
+\item We will not agonise over what holds an electron or a proton together.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Coulomb's law}
+\begin{enumerate}
+\item If a charge $q_1$ is at $\vec{r}_1$, $q_2$ is at $\vec{r}_2$ and both are at rest then the force on $q_2$ due to $q_1$ is
+\begin{equation}\label{e1}
+\vec{F}_2 = k\frac{q_1q_2}{|\vec{r}_2 - \vec{r}_1|^3}(\vec{r}_2 - \vec{r}_1),
+\end{equation}
+where $k$ is a constant that depends on the choice of units. Both are assumed to be point charges.
+
+\item In cgs units, $F$ is measured in dynes, $r$ in cm, $k$ is chosen to be $1$ and $q$ is measured in esu. The dimensions of esu
+are (dynes)$^{1/2}$ cm. Contrast with SI.
+
+\item From \eqref{e1} it follows that $\vec{F}_1 = -\vec{F}_2$. Newton's third law is taken care of.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Coulomb's law}
+\begin{enumerate}
+\item Electrons and protons not only have charge but also magnetic dipole moment. However, the magnetic force,
+\begin{enumerate}
+\item Decays as $r^{-4}$.
+\item Is not along $\vec{r}_2 - \vec{r}_1$.
+\item Even at a separation of $10^{-8}$ it is $10^{-4}$ times weaker than electric force. At macroscopic distances, it is 
+irrelevant.
+\end{enumerate}
+\item Internal structure of proton is ignored in classical E\&M. Elementary charges are assumed to be so localised that their
+positions can be accurately described by $\vec{r}_{1,2}$.
+\item Elementary charge is $e \approx 4.8 \times 10^{-10}$ esu ($1.6 \times 10^{-19}$ C). Thus, $1$ C is $\approx 3 \times 
+10^9$ esu.
+\item Coulomb's law obeys the principle of superposition.
+\item Solve problems 1, 2, 3 and 4 from the book. (Review 6).
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Work energy theorem}
+\begin{enumerate}
+\item From Newton's second law 
+\begin{equation}\label{e2}
+\int_A^B \vec{F}\cdot d\vec{x} = \frac{1}{2}mv_B^2 - \frac{1}{2}mv_A^2,
+\end{equation}
+where the speed of the particle is $v_A$ at point $A$ and $v_B$ at point $B$. 
+
+\item If $\vec{F}$ is a conservative force then the integral is independent of the path taken by the particle. We can then
+define a function $U$ as
+\begin{equation}\label{e3}
+U(A) = -\int_R^A \vec{F}\cdot d\vec{x},
+\end{equation}
+where $R$ is a suitable reference point.
+
+\item $U(A) + \frac{1}{2}mv_A^2 = U(B) + \frac{1}{2}mv_B^2$.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Potential energy}
+\begin{enumerate}
+\item If a charge $q$ is brought from a great distance to the vicinity of a charge $Q$ such that the distance between then
+is $r$ then we can easily show that 
+\begin{equation}\label{e4}
+U = \frac{qQ}{r}.
+\end{equation}
+\item For an assembly of $N$ charges,
+\begin{equation}\label{e5}
+U = \frac{1}{2}\sum_{i=1}^N\sum_{j=1, i \ne j}^N \frac{q_iq_j}{r_{ij}}.
+\end{equation}
+\item Solve problems 7 and 8 from the book.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Electric field and Gauss' law}
+\begin{enumerate}
+\item Electric field due to a charge density $\rho(\vec{r})$ is
+\begin{equation}\label{e6}
+\vec{E}(\vec{r})  = \int\frac{\rho(\vec{r}^\op)(\vec{r} - \vec{r}^\op)}{|\vec{r} - \vec{r}^\op|^3}dv^\op.
+\end{equation}
+\item Gauss' law is
+\begin{equation}\label{e7}
+\oint_S \vec{E}\cdot d\vec{a} = 4\pi q,
+\end{equation}
+where $q$ is the charge enclosed by the closed surface $S$. Its differential form is
+\begin{equation}\label{e8}
+\dive\vec{E} = 4\pi\rho.
+\end{equation}
+
+\item Gauss' law is useful only when the problem has a convenient symmetry.
+
+\item Solve problems 5, 9, 10, 11, 13.
+\end{enumerate}
+\end{frame}
+\end{document}

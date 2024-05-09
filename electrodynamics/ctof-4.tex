@@ -79,5 +79,106 @@ If we swap the values of $\mu$ and $\nu$ in case (a), that is, if $\mu = 1, \nu 
 \]
 which is same as the conclusion of case (a). We can similarly show that all swaps
 give 
+\[
+\curl\vec{E} = -\frac{1}{c}\pdt{\vec{H}}{t}.
+\]
 \end{enumerate}
+
+\item Now consider the expression,
+\begin{equation}\label{c4e6}
+C^\mu = \epsilon^{\mu\nu\rho\sigma}\pdt{F_{\rho\sigma}}{x^\nu}.
+\end{equation}
+Then
+\[
+C^0 = \pdt{F_{23}}{x^1} - \pdt{F_{32}}{x^1} - \pdt{F_{13}}{x^2} + \pdt{F_{31}}{x^2}
+ + \pdt{F_{12}}{x^3} - \pdt{F_{21}}{x^3}
+\]
+which, owing to anti-symmetric nature of $F_{\mu\nu}$ is
+\[
+C^0 = 2\left(\pdt{F_{23}}{x^1} + \pdt{F^{31}}{x^2} + \pdt{F_{12}}{x^3}\right)
+\]
+From equation \eqref{c4e5}, it is $C^0 = 0$. Similarly we can show that the other
+components too vanish. Therefore, equation \eqref{c4e5} is equivalent to
+\begin{equation}\label{c4e7}
+\epsilon^{\mu\nu\rho\sigma}\pdt{F_{\rho\sigma}}{x^\nu} = 0.
+\end{equation}
+
+\item We next develop the action function for a system consisting of particles
+in an electromagnetic field. From equations \eqref{c2e3} and \eqref{c2e6}, the
+action for a free particle is
+\begin{equation}\label{c4e8}
+S_m = -mc\int ds.
+\end{equation}
+If there are many particles, we can write it as
+\begin{equation}\label{c4e9}
+S_m = -\sum_i m_ic\int ds.
+\end{equation}
+The subscript `m' indicates that the action depends only of the mass of the 
+particles and therefore pertains to free particles alone. When the particles
+interact with the field, we need an additional term,
+\begin{equation}\label{c4e10}
+S_{mf} = -\sum_i \frac{e_i}{c}\int A_\mu dx^\mu.
+\end{equation}
+It is a mild generalisation of the second term on the rhs of \eqref{c3e2}.
+We need a term $S_f$ that determines the behaviour of the fields in absence of
+matter so that the action of the system is
+\begin{equation}\label{c4e11}
+S = S_m + S_{mf} + S_f.
+\end{equation}
+
+It is an experimental fact that the electromagnetic fields obey the principle of
+superposition. Therefore, the differential equations describing them must be linear.
+Since the equations are derived from the variational principle, we require that the
+integrand of the action integral must be quadratic in the field tensor. Furthermore,
+we require the action integral to be a scalar. Therefore, we also require the 
+integrand to be a scalar. The only scalar, quadratic quantity that depends on the
+field tensor alone is $F_{\mu\nu}F^{\mu\nu}$. We propose that
+\begin{equation}\label{c4e12}
+S_f = a\int F_{\mu\nu}F^{\mu\nu} d\Omega.
+\end{equation}
+
+The quantity $\epsilon^{\mu\rho\nu\sigma}F^{\mu\rho}F^{\nu\sigma}$ is not 
+considered to be part of $S_f$ because it is a pseudo-scalar. We showed in 
+\eqref{c3e98} that it is $\vec{E}\cdot\vec{H}$. Since $\vec{H}$ is an axial vector,
+the dot product is a pseudo-scalar.
+
+Equation \eqref{c3e97} gave us
+\begin{equation}\label{c4e13}
+F_{\mu\nu}F^{\mu\nu} = 2(H^2 - E^2).
+\end{equation}
+In terms of the potentials,
+\begin{equation}\label{c4e14}
+F_{\mu\nu}F^{\mu\nu} = |\curl\vec{A}|^2 - |\grad\varphi|^2 + 
+2\grad\varphi\pdt{\vec{A}}{t} - \left|\pdt{\vec{A}}{t}\right|^2.
+\end{equation}
+This shows that $F_{\mu\nu}F^{\mu\nu}$ can be made arbitrarily negative if $\vec{A}$
+can be made to vary arbitrarily quickly with $t$. In that case, we cannot minimise
+the action integral of \eqref{c4e12}. To prevent that from happening, we require
+the constant $a$ to be negative. Its value depends on our choice of units. In
+gaussian units, it is 
+\[
+a = -\frac{1}{16\pi c}
+\]
+so that the action for the field is
+\begin{equation}\label{c4e15}
+S_f = -\frac{1}{16\pi c}\int F_{\mu\nu}F^{\mu\nu} d\Omega.
+\end{equation}
+Using \eqref{c4e13},
+\begin{equation}\label{c4e16}
+S_f = \frac{1}{8\pi}\int (E^2 - H^2) dt dV,
+\end{equation}
+where we used the fact that $d\Omega = cdtdV$. We can also write it as
+\begin{equation}\label{c4e17}
+S_f = \int dt \left(\frac{1}{8\pi}\int dV (E^2 - H^2)\right) = \int dt L,
+\end{equation}
+where
+\begin{equation}\label{c4e18}
+L_f = \frac{1}{8\pi}\int dV (E^2 - H^2) = \int dV \mathcal{L}_f.
+\end{equation}
+The quantity,
+\begin{equation}\label{c4e19}
+\mathcal{L}_f = \frac{1}{8\pi}(E^2 - H^2)
+\end{equation}
+is called the Lagrangian density of the field and $L_f$ the Lagrangian of the 
+field.
 \end{enumerate}

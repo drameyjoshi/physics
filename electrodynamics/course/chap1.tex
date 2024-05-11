@@ -1,0 +1,287 @@
+\documentclass{article}
+\usepackage{amsmath, graphicx}
+\include{common}
+\title{Electrostatics - Charges and Fields}
+\author{Amey Joshi}
+\begin{document}
+\begin{enumerate}
+\item The magnitude of electric and gravitational forces are
+\begin{eqnarray}
+F_e &=& \frac{q^2}{r^2} \label{e1} \\
+F_g &=& \frac{Gm^2}{r^2} \label{e2}
+\end{eqnarray}
+where $m$ is the mass of the proton and $q$ is the charge. Therefore,
+\[
+\frac{F_e}{F_g} = \frac{q^2}{Gm^2}.
+\]
+The ratio depends only on the fundamental constants. In the case of a pair of
+protons, it is $1.235 \times 10^{36}$. An electron is roughly $2000$ times lighter
+than a proton. Therefore, the same ratio for a pair of electrons will be roughly
+a million times more, that is, the electric repulsion will be $10^{42}$ times
+stronger than the gravitational attraction.
+
+\begin{itemize}
+\item Will the ratio depend on units?
+\end{itemize}
+
+\item From the free body diagram of an electron, at equilibrium 
+\begin{equation}\label{e3}
+\frac{e^2}{r^2} = m_eg
+\end{equation}
+so that
+\begin{equation}\label{e4}
+r = \frac{e}{\sqrt{m_e g}} \approx 500 \text{ cm}.
+\end{equation}
+If a proton was to be balanced by an electron, then we would have had to place it
+closer to the electron because a heavier object is to be balanced.
+
+\item Using the free body diagram of one of the balls,
+\begin{eqnarray}
+mg &=& T\cos\theta \label{e5} \\
+\frac{q^2}{r^2} &=& T\sin\theta \label{e6}
+\end{eqnarray}
+so that
+\[
+\tan\theta = \frac{q^2}{mgr^2}.
+\]
+From the geometry of the figure, we also have $\tan\theta = 0.1$. Therefore,
+\begin{equation}\label{e7}
+q = \sqrt{mg\tan\theta}\; r = 85.73 \text{ esu}. 
+\end{equation}
+
+\item Due to symmetry of the arrangement, the force on each $q$ is the same. The
+force on any one of them is
+\[
+F = \frac{q^2}{a^2} + \frac{q^2}{a^2} + \frac{q^2}{2a^2} - \frac{2qQ}{a^2},
+\]
+so that equilibrium requires
+\begin{equation}\label{e8}
+Q = \frac{5}{4}q.
+\end{equation}
+The ratio $Q/q$ is independent of the size of the square.
+
+\item Align the axes such that the origin coincides with the centre of the semi-
+cirle and the semi-circle lies above the $x$ axis. The field due to an elementary
+charge $dq$ at $\vec{r}$ on the ring is
+\[
+d\vec{E} = \frac{dq}{r^2}\uv{r} = \frac{dq}{r^3}\vec{r}.
+\]
+
+Before solving the problem analytically, from the geometry alone, can you
+\begin{itemize}
+\item Guess the $x$-component? The $z$-component?
+\item Infer the field at the origin if the ring was full?
+\end{itemize}
+Now, $dq = \lambda Rd\theta$, $\vec{r} = R\cos\theta\uv{x} + R\sin\theta\uv{y}$ so
+that
+\[
+d\vec{E} = (R\cos\theta\uv{x} + R\sin\theta\uv{y})\frac{\lambda R d\theta}{R^3}
+\]
+and
+\begin{equation}\label{e9}
+\vec{E} = \frac{2Q}{\pi R^2}\uv{y}.
+\end{equation}
+
+\item A numerical problem.
+
+\item Align the axes such that one electron is at $(-a, 0)$ and the other at 
+$(a, 0)$. Let the proton be at $(x, 0)$. The potential energy of the arrangement
+is
+\begin{equation}\label{e10}
+U = -\frac{e^2}{x - a} - \frac{e^2}{x + a} + \frac{e^2}{2a},
+\end{equation}
+where $e$ is the electronic charge. The roots of the equation $U = 0$ are
+\begin{equation}\label{e11}
+x = (1 \pm \sqrt{5})a.
+\end{equation}
+Since distances must be positive, we drop the root $(1 - \sqrt{5})a$. Therefore,
+the proton should be placed at $x = (1 + \sqrt{5})a$.
+
+If the proton were at $(x, y)$, the locus of curve of zero potential energy is
+\begin{equation}\label{e12}
+\frac{1}{2a} = \frac{1}{\sqrt{(x - a)^2 + y^2}} + \frac{1}{\sqrt{(x + a)^2 + y^2}}.
+\end{equation}
+
+If
+\begin{equation}\label{e13}
+F(a, x, y) = \frac{1}{2a} - \frac{1}{\sqrt{(x - a)^2 + y^2}} + \frac{1}{\sqrt{(x + a)^2 + y^2}}
+\end{equation}
+then a the locus of points of zero potential energy looks like can be generated using
+\begin{verbatim}
+import numpy as np
+import matplotlib.pyplot as plt
+
+from functools import partial
+from scipy.optimize import fsolve
+
+def F(a, x, y):
+    return 1/(2 * a) - 1/np.sqrt((x - a)**2 + y**2) \
+     - 1/np.sqrt((x + a)**2 + y**2)
+
+a_curve = partial(F, 1)
+
+a = 1
+X = np.linspace(-4, 4, 1000)
+Y = []
+
+for x in X:
+    roots = fsolve(a_curve, a, x)
+    Y.append(roots[0])
+
+Xs = X.tolist()
+Xs.extend(Xs)
+Ys = Y + [-y for y in Y]
+
+plt.scatter(Xs, Ys, s = 1)
+plt.xlabel(r'$x$')
+plt.ylabel(r'$y$')
+plt.title(r'$F(a=1, x, y) = 0$')
+plt.savefig('purcell_c1p7.png')
+plt.show()
+\end{verbatim}
+
+For $a = 1$, it looks like the one shown in figure \ref{c1f1}.
+\begin{figure}
+\center
+\includegraphics[scale=0.6]{purcell_c1p7}
+\caption{Locus of points for which $U=0$.}
+\label{c1f1}
+\end{figure}
+
+\item Let $a$ be the distance between the ions. Starting from any ion, the potential
+energy is
+\[
+U = \left(-\frac{e^2}{a} - \frac{e^2}{a}\right) + \left(\frac{e^2}{2a} + \frac{e^2}{2a}\right) + \cdots
+\]
+or,
+\begin{equation}\label{e14}
+U = -2\frac{e^2}{a}\left(1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \cdots\right) 
+= -2\ln 2\frac{e^2}{a}
+\end{equation}
+
+\item By Gauss' law the electric field on a closed surface is only due to the 
+charges enclosed by the surface. Consider a portion of the sphere of radius $r$
+and let $q$ be the charge in it. Let $dq$ be the change on a thin shell with 
+radii $r$ and $r + dr$. It has a charge $dq = \rho 4\pi r^2dr$. This combination
+of charges gives rise to an energy
+\[
+dU = \frac{qdq}{r}.
+\]
+Since $q = \rho(4\pi r^3)/3$,
+\[
+dU = \frac{(4\pi\rho)^2}{3}r^4dr
+\]
+so that, the energy of a uniformly charged sphere of radius $R$ is
+\begin{equation}\label{e15}
+U = \int_0^a dU = \frac{16\pi^2\rho^2}{3}\frac{a^5}{5}.
+\end{equation}
+Since
+\[
+\rho = \frac{3Q}{4\pi a^3},
+\]
+equation \eqref{e13} becomes
+\begin{equation}\label{e16}
+U = \frac{3}{5}\frac{Q^2}{a}.
+\end{equation}
+
+\item If $m$ is the mass of an electron and if an electron is considered to be a
+sphere of radius $a$, then
+\[
+mc^2 =  \frac{3}{5}\frac{Q^2}{a}
+\]
+so that
+\begin{equation}\label{e17}
+a = \frac{3}{5}\frac{Q^2}{mc^2}
+\end{equation}
+is called the `classical electron radius'. This picture of an electron does not 
+tell what holds so the negative charge together. This question is left unanswered
+in classical physics.
+
+\item A charge of $-1$ esu is at the origin and another charge of $2$ esu is at
+$(1, 0)$. At a point $(x, 0)$, the electric field is
+\[
+\vec{E} = -\frac{1}{x^2}\uv{x} + \frac{2}{(x - 1)^2}\uv{x}
+\]
+so that $E = 0$ when
+\[
+\frac{1}{x^2} = \frac{2}{(x - 1)^2} \Rightarrow x = -1 \pm \sqrt{2}.
+\]
+For a point on the $y$ axis,
+\[
+\vec{E}(y) = -\frac{1}{y^2}\uv{y} + 2\frac{-\uv{x} + y\uv{y}}{(1 + y^2)^{3/2}} =
+\frac{2}{(1 + y^2)^{3/2}}\uv{x} + \left(\frac{2y}{(1 + y^2)^{3/2}} - \frac{1}{y^2}\right)\uv{y}.
+\]
+$\vec{E}$ will be parallel to $x$ axis if the $y$ component vanishes. That will
+happen if $2y^3 = (1 + y^2)^{3/2}$ or $4y^6 = (1 + y^2)^3 = 1 + 3y^2 + 3y^4 + y^6$,
+or
+\[
+3y^6 - 3y^4 - 3y^2 - 1 = 0.
+\]
+The only real roots of this equation are $y = \pm 1.30476603$. The roots can be
+found using
+\begin{verbatim}
+import numpy as np
+
+coeffs = [3, 0, -3, 0, -3, 0, -1]
+[r for r in np.roots(coeffs) if np.isreal(r)]
+\end{verbatim}
+
+\item Let the equilateral triangle have vertices at $(\pm a, 0)$ with positive
+ions and $(0, a\sqrt{3})$ with a negative ion. The electric field at a point
+$(x, y)$ is
+\begin{eqnarray*}
+\vec{E} &=& \uv{x}\left[\frac{x-a}{((x-a)^2+y^2)^{3/2}}+
+            \frac{x+a}{((x+a)^2+y^2)^{3/2}}-\frac{x}{(x^2+(y-a\sqrt{3})^2)^{3/2}}\right]+\\
+ & &\uv{y}\left[\frac{y}{((x-a)^2+y^2)^{3/2}}+\frac{y}{((x+a)^2+y^2)^{3/2}}-
+    \frac{y - a\sqrt{3}}{(x^2+(y-a\sqrt{3})^2)^{3/2}}\right]
+\end{eqnarray*}
+Symmetry suggests that the equilibrium point is likely to be on the $y$-axis. The
+$x$ component of the field is zero at all points on the $y$-axis. The $y$-component
+is
+\[
+E_y = \frac{2y}{(a^2+y^2)^{3/2}} - \frac{1}{(y-a\sqrt{3})^2}
+\]    
+$E_y = 0$ if $4y^2(y - a\sqrt{3})^4 = (a^2 + y^2)^3$, that is,
+\begin{equation}\label{e18}
+3y^6 - 24a\sqrt{3}y^5 + 117 a^2y^4 - 72\sqrt{3}a^3y^3 - 3a^4y^2 + (36a^4 - a^6) = 0.
+\end{equation}
+If we choose $a = 1$ then the roots of this equation are found using
+\begin{verbatim}
+import numpy as np
+
+coeffs = [3, -24*np.sqrt(3), 117, -72*np.sqrt(3), -3, 0, 35]
+[np.round(r, 4) for r in np.roots(coeffs) if np.isreal(r)]
+\end{verbatim}
+They are $y = 10.5277, 0.8501$.
+
+\item Assume that the cloud is like an infinite plane. Then $E = 2\pi\sigma$ so
+that the surface charge density on it is
+\[
+\sigma = \frac{0.1}{2\pi}\text{ esu/cm}^{2}.
+\]
+If $A$ is the area of the cloud then the volume of water in $0.25$ cm rain is
+$V = 0.25A$. If $r$ is the radius of a rain drop, then the number of rain drops
+in this volume is
+\begin{equation}\label{e19}
+N\times \frac{4\pi}{3}r^3 = 0.25A
+\end{equation}
+that is,
+\begin{equation}\label{e20}
+N = \frac{0.75A}{4\pi r^3}
+\end{equation}
+Let $q$ be the charge on each of them. Then, $Nq = \sigma A$ so that
+\begin{equation}\label{e21}
+\frac{0.75q}{4\pi r^3} = \frac{0.1}{2\pi}
+\end{equation}
+that is,
+\begin{equation}\label{e22}
+q = \frac{4}{15}r^3.
+\end{equation}
+The electric field strength at the surface of the drop has magnitude $q/r^2$, that
+is,
+\begin{equation}\label{e23}
+E = \frac{4}{15}r.
+\end{equation}
+For $r = 0.1$ cm, it is $E = 0.0267$ esu/cm$^2$.
+\end{enumerate}
+\end{document}

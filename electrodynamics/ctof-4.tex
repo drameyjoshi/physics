@@ -181,4 +181,56 @@ The quantity,
 \end{equation}
 is called the Lagrangian density of the field and $L_f$ the Lagrangian of the 
 field.
+
+\item It is convenient to introduce charge density and treat discrete charges in
+terms of it. For example,
+\begin{equation}\label{c4e20}
+\rho = \sum_a e_a\delta(\vec{r} - \vec{r}_a)
+\end{equation}
+and
+\begin{equation}\label{c4e21}
+de = \rho dV.
+\end{equation}
+From equation \eqref{c4e21} we have
+\begin{equation}\label{c4e22}
+de dx^\mu = \rho dV dx^\mu = \rho dV dt \td{x^\mu}{t}.
+\end{equation}
+We call the quantity,
+\begin{equation}\label{c4e23}
+j^\mu = \rho\td{x^\mu}{t}
+\end{equation}
+as the \emph{current density}. Clearly, as 
+\[
+\td{x^\mu}{t} = (c, \vec{v})
+\]
+we have
+\begin{equation}\label{c4e24}
+j^\mu = (\rho c, \rho\vec{v}) = (\rho c, \vec{j})
+\end{equation}
+where
+\begin{equation}\label{c4e25}
+\vec{j} = \rho\vec{v}
+\end{equation}
+is the usual current density 3-vector.
+
+\item This is a bit tricky. Consider the surface integral,
+\[
+\int j^\mu dS_\mu.
+\]
+If the surface its normal along the $x^0$ axis then $j^\mu dS_\mu = j^0 dV$ and
+\[
+\int j^\mu dS_\mu = \int j^0 dV = c\int \rho dV = ce,
+\]
+where $e$ is the total charge enclosed by the hypersurface. From this equation
+we can write
+\begin{equation}\label{c4e26}
+\int\rho dV = \frac{1}{c}\int j^\mu dS_\mu,
+\end{equation}
+where the surface integral is over a hypersurface whose normal is along the $x^0$
+axis. For an arbitrary hypersurface,
+\[
+\int j^\mu dS_\mu
+\]
+is just the sum of charges whose world lines pass through it.
+
 \end{enumerate}

@@ -229,8 +229,122 @@ we can write
 where the surface integral is over a hypersurface whose normal is along the $x^0$
 axis. For an arbitrary hypersurface,
 \[
-\int j^\mu dS_\mu
+\frac{1}{c}\int j^\mu dS_\mu
 \]
 is just the sum of charges whose world lines pass through it.
+
+\item From equations \eqref{c4e9}, \eqref{c4e10}, \eqref{c4e11} and \eqref{c4e15},
+the action of the system of charged particles in electromagnetic fields is
+\[
+S = -\sum_i m_ic\int ds - \sum_i\frac{e_i}{c}\int A_\mu dx^\mu - \frac{1}{16\pi c}
+\int F_{\mu\nu} F^{\mu\nu} d\Omega.
+\]
+The second term is
+\[
+S_{mf} = -\frac{1}{c}\sum_i e_i\left(\int A_0dx^0 + \cdot + \int A_3dx^3\right).
+\]
+For a continuous charge distribution, we replace $\sum_i e_i$ by $\int \rho dV$
+so that
+\begin{eqnarray*}
+S_{mf} &=& -\frac{1}{c}\int dV \rho\left(\int A_0dx^0 + \cdots + \int A_3dx^3\right) \\
+ &=& -\frac{1}{c}\left(\int dVdt \rho\td{x^0}{t}A_0 + \cdots + \int dVdt \rho\td{x^3}{t}A_3\right) \\
+ &=& -\frac{1}{c}\left(\int dVdt j^0A_0 + \cdots + \int dVdt j^3A_3\right)
+\end{eqnarray*}
+where we used equation \eqref{c4e23} in the last equation. Finally, we write it
+as
+\begin{equation}\label{c4e27}
+S_{mf} = -\frac{1}{c^2}\int j^\mu A_\mu d\Omega.
+\end{equation}
+Thus, the action can be written as
+\begin{equation}\label{c4e28}
+S = -\sum_i m_ic\int ds - \frac{1}{c^2}\int j^\mu A_\mu d\Omega - 
+\frac{1}{16\pi c}\int F_{\mu\nu} F^{\mu\nu} d\Omega.
+\end{equation}
+
+\item It is an experimental fact that electric charge is conserved. It is expressed
+as an equation of continuity,
+\begin{equation}\label{c4e29}
+\frac{\partial}{\partial t}\int\rho dV = -\oint \rho\vec{v}\cdot d\vec{f}.
+\end{equation}
+The left hand side, if it is positive, is the rate of increase of charge per unit
+time in the region of integration. The right hand side is the rate of inflow of
+charges in the region of integration. The negative sign is needed because $d\vec{f}$
+always points outwards so that if $\vec{v}$ points inwards then the dot product 
+is negative. To get an overall positive sign, we negate the surface integral.
+In differential form, \eqref{c4e29} is
+\begin{equation}\label{c4e30}
+\pdt{\rho}{t} + \dive\vec{j} = 0.
+\end{equation}
+We can also write it as
+\[
+\pdt{\rho}{t} + \pdt{j^1}{x^1} + \pdt{j^2}{x^2} + \pdt{j^3}{x^3} = 0.
+\]
+Since $j^\mu = (c\rho, \vec{j})$, this equation is equivalent to
+\begin{equation}\label{c4e31}
+\pdt{j^\mu}{x^\mu} = 0.
+\end{equation}
+This is the four-dimensional form of the equation of continuity.
+
+\item Recall equation \eqref{c4e26} in which
+\[
+\frac{1}{c}\int j^\mu dS_\mu
+\]
+is the total charge at a time $x^0/c$ and the integral is over a hypersurface 
+normal to the $x^0$ axis at that time. Consider the integral
+\[
+\frac{1}{c}\oint j^\mu dS_\mu,
+\]
+where the closed surface consists of the hypersurface of instant of time, a
+similar hypersurface at a later instant of time and thw two joined by surface
+parallel to $x^0$ axis far away from the charge distribution. The integral over
+this latter surface is zero because $j^\mu$ is zero on it. Therefore,
+\begin{equation}\label{c4e32}
+\frac{1}{c}\oint j^\mu dS_\mu = 0.
+\end{equation}
+Using the divergence theorem, we can transform the surface integral to a volume
+integral so that
+\[
+\frac{1}{c}\int \pdt{j^\mu}{x^\mu} = 0.
+\]
+Since this is true for any two points on the $x^0$ axis, the divergence itself
+is zero. This is another way of proving \eqref{c4e31}.
+
+\item We showed in chapter \ref{c3} that the transformation described by equation
+\eqref{c3e30},
+\[
+A_\mu^\op = A_\mu - \pdt{f}{x^\mu},
+\]
+also called the gauge transformation, leaves the fields unchanged. Let us make 
+this transformation in the second term, \eqref{c4e27}, of the action \eqref{c4e28}.
+Then,
+\[
+S_{mf} \rightarrow -\frac{1}{c^2}\int j^\mu A_\mu d\Omega + \frac{1}{c^2}
+\int j^\mu\pdt{f}{x^\mu} d\Omega.
+\]
+Now,
+\[
+\frac{\partial}{\partial x^\mu}(fj^\mu) = f\pdt{j^\mu}{x^\mu} + j^\mu\pdt{f}{x^\mu}.
+\]
+If the equation of continuity, \eqref{c4e31}, is valid then
+\begin{equation}\label{c4e33}
+\frac{\partial}{\partial x^\mu}(fj^\mu) = j^\mu\pdt{f}{x^\mu}
+\end{equation}
+and
+\[
+S_{mf} \rightarrow -\frac{1}{c^2}\int j^\mu A_\mu d\Omega + \frac{1}{c^2}
+\int \frac{\partial}{\partial x^\mu}(fj^\mu) d\Omega.
+\]
+Using divergence theorem on the second term,
+\[
+S_{mf} \rightarrow -\frac{1}{c^2}\int j^\mu A_\mu d\Omega + \frac{1}{c^2}
+\int (fj^\mu) dS_\mu.
+\]
+We can always choose the surface to be large enough that $j^\mu$ is zero on it,
+in which case, the integral vanishes. This manipulation critically depends on the
+validity of \eqref{c4e33}, which in turn depends on the equation of continuity.
+This shows that the gauge invariance of the electromagnetic fields is closely
+related to the equation of continuity, in other words, to conservation of 
+electric charge. Electric charge must be conserved if gauge invariance must be
+true.
 
 \end{enumerate}

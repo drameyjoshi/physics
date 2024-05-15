@@ -347,4 +347,167 @@ related to the equation of continuity, in other words, to conservation of
 electric charge. Electric charge must be conserved if gauge invariance must be
 true.
 
+\item In finding the equations of motion from variational principle we assumed
+that the fields are fixed while varying the generalised coordinates. Now, we will
+assume that the generalised coordinates are fixed and will vary the fields instead.
+The resulting equations are the second pair of Maxwell equations. The expression
+for total action in \eqref{c4e28} has fields only in the second and the third
+terms. Therefore,
+\begin{equation}\label{c4e34}
+\delta S = -\frac{1}{c^2}\int j^\mu \delta A_\mu d\Omega - \frac{1}{16\pi c}
+\int\delta(F_{\mu\nu}F^{\mu\nu})d\Omega.
+\end{equation}
+Now 
+\begin{eqnarray*}
+\delta(F_{\mu\nu}F^{\mu\nu}) &=& (\delta F_{\mu\nu})F^{\mu\nu} + F_{\mu\nu} (\delta F^{\mu\nu}) \\
+ &=& 2F^{\mu\nu}\delta F_{\mu\nu} \\
+ &=& 2F^{\mu\nu}\left(\pdt{\delta A_\nu}{x^\mu} - \pdt{\delta A_\mu}{x^\nu}\right) \\
+ &=& 2F^{\mu\nu}\pdt{\delta A_\nu}{x^\mu} - 2F^{\mu\nu}\pdt{\delta A_\mu}{x^\nu} \\
+ &=& 2F^{\nu\mu}\pdt{\delta A_\mu}{x^\nu} - 2F^{\mu\nu}\pdt{\delta A_\mu}{x^\nu} \\
+ &=& -2F^{\mu\nu}\pdt{\delta A_\mu}{x^\nu} - 2F^{\mu\nu}\pdt{\delta A_\mu}{x^\nu} \\
+ &=& -4F^{\mu\nu}\pdt{\delta A_\mu}{x^\nu}
+\end{eqnarray*}
+so that equation \eqref{c4e34} becomes
+\begin{equation}\label{c4e35}
+\delta S = -\frac{1}{c^2}\int j^\mu \delta A_\mu d\Omega + \frac{1}{4\pi c}
+\int F^{\mu\nu}\pdt{\delta A_\mu}{x^\nu} d\Omega
+\end{equation}
+Since 
+\[
+\frac{\partial}{\partial x^\nu}(F^{\mu\nu} \delta A_\mu) =
+F^{\mu\nu}\pdt{\delta A_\mu}{x^\nu} + \delta A_\mu\pdt{F^{\mu\nu}}{x^\nu},
+\]
+\begin{eqnarray}
+\delta S &=& -\frac{1}{c^2}\int j^\mu \delta A_\mu d\Omega + 
+\frac{1}{4\pi c}\int \frac{\partial}{\partial x^\nu}(F^{\mu\nu} \delta A_\mu) d\Omega - \nonumber \\
+ & & \frac{1}{4\pi c}\int \delta A_\mu\pdt{F^{\mu\nu}}{x^\nu} d\Omega \nonumber \\
+ &=& -\frac{1}{c}\left(\frac{1}{c}\int j^\mu \delta A_\mu d\Omega + 
+    \frac{1}{4\pi} \int\delta A_\mu\pdt{F^{\mu\nu}}{x^\nu}d\Omega\right) + \nonumber \\
+ & & \frac{1}{4\pi c}\int F^{\mu\nu}\delta A_\mu dS_\mu, \nonumber 
+\end{eqnarray}
+where we used the generalisation of Gauss' theorem to 4-dimensions to convert a
+volume integral to a surface integral. We can always choose the surface to be so
+large that there are no fields on it. As a result the last term can be ignored
+and we are left with
+\begin{equation}\label{c4e36}
+\delta S = -\frac{1}{c}\int\left(\frac{j^\mu}{c} +
+ \frac{1}{4\pi}\pdt{F^{\mu\nu}}{x^\nu}\right)\delta A_\mu d\Omega
+\end{equation}
+If $\delta S = 0$ for arbitrary variations of the fields then we must have
+\begin{equation}\label{c4e37}
+\pdt{F^{\mu\nu}}{x^\nu} = -\frac{4\pi}{c}j^\mu.
+\end{equation}
+This equation includes the remaining two Maxwell equations. For $\mu=0$, it is
+\[
+\pdt{F^{00}}{x^0} + \pdt{F^{01}}{x^1} + \pdt{F^{02}}{x^2} + \pdt{F^{03}}{x^3}
+= -\frac{4\pi}{c}j^0 = -4\pi\rho.
+\]
+From \eqref{c3e77}, $F^{01} = -E_1, F^{02} = -E_2, F^{03} = -E_3$ so that the
+above equation is
+\begin{equation}\label{c4e38}
+\dive\vec{E} = 4\pi\rho.
+\end{equation}
+For $\mu = 1$, \eqref{c4e37} becomes,
+\[
+\pdt{F^{10}}{x^0} + \pdt{F^{11}}{x^1} + \pdt{F^{12}}{x^2} + \pdt{F^{13}}{x^3}
+= -\frac{4\pi}{c}j^1 = -\frac{4\pi}{c}j^1
+\]
+that is,
+\[
+\frac{1}{c}\pdt{E_1}{t} + 0 - \pdt{H_3}{x_2} + \pdt{H_2}{x_3} = -\frac{4\pi}{c}j^1
+\]
+or
+\begin{equation}\label{c4e39}
+(\curl\vec{H})_x = \frac{4\pi}{c}j_x + \frac{1}{c}\pdt{E_x}{t}.
+\end{equation}
+The other components can be derived similarly. We thus get,
+\begin{equation}\label{c4e40}
+\curl\vec{H} = \frac{4\pi}{c}\vec{j} + \frac{1}{c}\pdt{\vec{E}}{t}.
+\end{equation}
+Equations \eqref{c4e1}, \eqref{c4e2}, \eqref{c4e38} and \eqref{c4e40}, are the
+four Maxwell equations. In terms of field vectors they are
+\begin{eqnarray*}
+\curl\vec{E} &=& -\frac{1}{c}\pdt{\vec{H}}{t} \\
+\dive\vec{H} &=& 0 \\
+\dive\vec{E} &=& 4\pi\rho \\
+\curl\vec{H} &=& \frac{4\pi}{c}\vec{j} + \frac{1}{c}\pdt{\vec{E}}{t}.
+\end{eqnarray*}
+They can be equivalently written in terms of the electromagnetic field tensor as
+equations \eqref{c4e5} and \eqref{c4e37}.
+\begin{eqnarray*}
+\pdt{F_{\mu\nu}}{x^\rho} + \pdt{F_{\nu\rho}}{x^\mu} + \pdt{F_{\rho\mu}}{x^\nu} &=& 0 \\
+\pdt{F^{\mu\nu}}{x^\nu} &=& -\frac{4\pi}{c}j^\mu
+\end{eqnarray*}
+
+\item Equation \eqref{c4e38} in integral form is
+\begin{equation}\label{c4e41}
+\oint\vec{E}\cdot d\vec{f} = 4\pi\int\rho dV.
+\end{equation}
+The total electric flux over a closed surface is equal to $4\pi$ times the total 
+charge enclosed in it. This is \emph{Gauss law}.
+
+\item Equation \eqref{c4e40} in integral form is
+\begin{equation}\label{c4e42}
+\oint\vec{H}\cdot d\vec{l} = \frac{4\pi}{c}\left(\int\vec{j}\cdot d\vec{f} + 
+\frac{1}{4\pi}\int\pdt{\vec{E}}{t}\cdot d\vec{f}\right).
+\end{equation}
+The first term in the bracket on the rhs is the true current while the second one
+is called the `displacement current'. The term,
+\[
+\frac{1}{4\pi}\pdt{\vec{E}}{t}
+\]
+is called the \emph{displacement current density}.
+
+\item From \eqref{c4e40}, one immediately gets, after taking divergence of both sides
+and using \eqref{c4e38},
+\[
+\dive\vec{j} + \pdt{\rho}{t} = 0.
+\]
+Thus the equation of continuity and charge conversation are encoded in 
+\eqref{c4e37}. It can also be easily derived taking the derivative of \eqref{c4e37}
+with respect to $x^\mu$,
+\[
+\frac{\partial^2 F^{\mu\nu}}{\partial x^\mu \partial x^\nu} = -\frac{4\pi}{c}\pdt{j^\mu}{x^\mu}.
+\]
+The lhs can be written as
+\[
+\frac{\partial^2 F^{\mu\nu}}{\partial x^\mu \partial x^\nu} = 
+\frac{\partial^2 F^{\nu\mu}}{\partial x^\nu \partial x^\mu}
+= -\frac{\partial^2 F^{\mu\nu}}{\partial x^\nu \partial x^\mu} = 
+-\frac{\partial^2 F^{\mu\nu}}{\partial x^\mu \partial x^\nu}.
+\]
+The last step follows from the equality of mixed partial derivatives and the 
+second last from the anti-symmetry of $F^{\mu\nu}$. Thus the lhs has to be zero
+so that, we have,
+\[
+\pdt{j^\mu}{x^\mu} = 0,
+\]
+which is indeed the equation of continuity, \eqref{c4e31}, in 4-vector form.
+
+\item Taking dot product of \eqref{c4e1} with $\vec{H}$ and that of \eqref{c4e40}
+with $\vec{E}$, we get
+\begin{eqnarray*}
+\vec{H}\cdot\curl\vec{E} &=& -\frac{1}{2c}\pdt{H^2}{t} \\
+\vec{E}\cdot\curl\vec{H} &=& \frac{4\pi}{c}\vec{j}\cdot\vec{E} + \frac{1}{2c}\pdt{E^2}{t}
+\end{eqnarray*}
+Subtracting the first equation from the second,
+\begin{equation}\label{c4e43}
+\vec{E}\cdot\curl\vec{H} - \vec{H}\cdot\curl\vec{E} = \frac{4\pi}{c}\vec{j}\cdot\vec{E}
++ \frac{1}{2c}\frac{\partial}{\partial t}(E^2 + H^2).
+\end{equation}
+We can rearrange it as
+\begin{equation}\label{c4e44}
+\frac{\partial}{\partial t}\left(\frac{E^2 + H^2}{8\pi}\right) = 
+-\vec{j}\cdot\vec{E} - 
+\frac{\vec{H}\cdot\curl\vec{E} - \vec{E}\cdot\curl\vec{H}}{4\pi c}.
+\end{equation}
+The \emph{Poynting vector}, is defined as
+\begin{equation}\label{c4e45}
+\vec{S} = \frac{\vec{E} \times \vec{H}}{4\pi c}
+\end{equation}
+so that \eqref{c4e44} can be written as
+\begin{equation}\label{c4e46}
+\frac{\partial}{\partial t}\left(\frac{E^2 + H^2}{8\pi}\right) = 
+-\vec{j}\cdot\vec{E} - \dive\vec{S}.
+\end{equation}
 \end{enumerate}

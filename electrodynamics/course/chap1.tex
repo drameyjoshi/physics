@@ -283,5 +283,108 @@ is,
 E = \frac{4}{15}r.
 \end{equation}
 For $r = 0.1$ cm, it is $E = 0.0267$ esu/cm$^2$.
+
+\item Let the ring be of radius $R$. Align the axes such that the origin coincides
+with the centre, the ring is in the $xy$ plane so that the $z$ axis is perpendicular
+to the ring. Before proceeding, 
+\begin{itemize}
+\item What is the field at $z = 0$?
+\item What is it at $z \rightarrow \infty$?
+\item Can you guess where the maximum will be?
+\end{itemize}
+
+Now let's do the maths. Fix a point $(0, 0, z)$ on the $z$ axis. Let a line joining
+it and a point on the ring make an angle $\alpha$ with the $z$ axis. The electric
+field due to an element of charge at that point will be along this line and make 
+and angle $\alpha$ with the $z$ axis. Its sine component will be cancelled by the
+field due to a diametrically opposite element. Therefore, it's only contribution
+will be a cosine component, aligned along the $z$ axis. Thus,
+\[
+d\vec{E} = \frac{dq}{r^2}\cos\alpha\uv{z}.
+\]
+$r^2 = z^2 + R^2$, $dq = \lambda d\theta$, where $\lambda = Q/(2\pi R)$ is the
+charge density. Thus,
+\begin{equation}\label{e24}
+\vec{E} = \frac{2\pi R\lambda}{R^2 + z^2}\cos\alpha\uv{z} = \frac{Qz}{(R^2 + z^2)^{3/2}}\uv{z}
+\end{equation}
+Therefore,
+\[
+\td{E}{z} = \frac{Q}{(R^2 + z^2)^{3/2}} - \frac{3}{2}\frac{Qz(2z)}{(R^2 + z^2)^{5/2}}
+= Q\frac{R^2 - 2z^2}{(R^2 + z^2)^{5/2}}.
+\]
+The extremum is at $z = R/\sqrt{2}$ or $\cos\alpha = z/R = 1/\sqrt{2}$ or $\alpha=
+\pi/4$.
+
+\item For a point at distance $r \le a$, consider a spherical surface whose centre
+coincides with that of the charge distribution and whose radius is $r$. If $\rho$
+is the constant charge density then the surface encloses a charge
+\[
+q(r) = \frac{4\pi}{3}r^3 \rho
+\]
+By Gauss law, 
+\[
+E \times 4\pi r^2 = 4\pi \times \frac{4\pi}{3}r^3 \rho
+\]
+so that
+\begin{equation}\label{e25}
+\vec{E} = \frac{4\pi\rho}{3}r\uv{r} = \frac{4\pi\rho}{3}\vec{r}.
+\end{equation}
+
+For a point at a distance $r > a$, the charge enclosed is a constant
+\[
+Q = \frac{4\pi\rho}{3}a^3
+\]
+and
+\begin{equation}\label{e26}
+\vec{E} = \frac{Q}{r^2}\uv{r}.
+\end{equation}
+At $r = a$, \eqref{e26} is
+\[
+\vec{E}(a) = \frac{Q}{a^3}\vec{r} = \frac{4\pi\rho}{3}\vec{r},
+\]
+which is same as \eqref{e25}.
+
+\item The field at $B$ will be radially outwards and will have a magnitude
+\[
+E = \frac{Q}{a^2},
+\]
+where
+\[
+Q = \frac{4\pi\rho}{3}a^3 - \frac{4\pi\rho}{3}\frac{a^3}{8} = 
+\frac{7}{8}\frac{4\pi\rho}{3}a^3,
+\]
+Before carving out the cavity, the field at $A$ was zero. We can consider it to
+be a sum of field in the matter in the carved out ball plus the field due to the
+rest. The field due to the carved out ball is radially outwards from the centre
+of the cavity and has magnitude 
+\[
+E_c = \frac{Q_c}{(a/2)^2} = \frac{4\pi\rho}{3}\frac{a}{2}.
+\]
+If $\vec{R}$ is the centre of the cavity then the radially outward direction at
+a point $\vec{r}$ is $\vec{r} - \vec{R}$. Thus,
+\[
+\vec{E}_c = \frac{4\pi\rho}{3}\frac{a}{2}\frac{\vec{r} - \vec{R}}{|\vec{r} - \vec{R}|}.
+\]
+If the origin is chosen to coincide with the point $A$ then
+\[
+\vec{E}_c(A) = -\frac{4\pi\rho}{3}\frac{a}{2}\hat{R}.
+\]
+
+\item When the charge is at the centre of the cube, by Gauss law,
+\[
+\oint\vec{E}\cdot d\vec{a} = 4\pi q.
+\]
+The symmetry of the cube suggests that there is an equal flux through each face.
+Therefore, through any one of them, it is
+\[
+\int\vec{E}\cdot d\vec{a} = \frac{2\pi q}{3}.
+\]
+
+When the charge is placed at a corner of a cube, assemble eight similar cubes so
+that the charge is now at the centre of them. The flux through any one of them is
+$4\pi q/8 = \pi q/2$. The field will be parallel to the faces at whose intersection
+$q$ is. Therefore, there will be no flux out of them. The remaining three faces
+are symmetric and will carry the flux equally. Therefore, the flux through any
+one of them is $\pi q/6$.
 \end{enumerate}
 \end{document}

@@ -386,5 +386,251 @@ $4\pi q/8 = \pi q/2$. The field will be parallel to the faces at whose intersect
 $q$ is. Therefore, there will be no flux out of them. The remaining three faces
 are symmetric and will carry the flux equally. Therefore, the flux through any
 one of them is $\pi q/6$.
+
+\item The field due to each plate is
+\[
+\vec{E} = \begin{cases}
+ \sigma\un & \text{ on one side.}\\
+-\sigma\un & \text{ on the other side.}
+\end{cases}
+\]
+where $\un$ is the same vector in each case.
+
+When both plates are parallel, say to the $xy$-plane, the fields in the intervening
+portion are $6 \uv{z}$ esu/cm$^{2}$ due to the lower plate and $(-4)(-\uv{z}) = 
+4\uv{z}$ esu/cm$^{2}$  due to the upper one. The net field is $10 \uv{z}$ esu/cm
+$^{2}$.
+
+When the plates are perpendicular to each other, let one of them, say the 
+positively charged one, be along the $y$ axis and the other one along the $x$
+axis. Therefore, the fields in the four quadrants are
+\[
+\vec{E} = \begin{cases}
+ 6\uv{x} - 4 \uv{y} \text{ in the 1st quadrant} \\
+-6\uv{x} - 4 \uv{y} \text{ in the 2nd quadrant} \\
+-6\uv{x} + 4 \uv{y} \text{ in the 3rd quadrant} \\
+ 6\uv{x} + 4 \uv{y} \text{ in the 4th quadrant}
+\end{cases}
+\]
+
+\item Let the infinite surface be aligned along the $y$ axis. At any point in
+the $-x$ direction, Gauss law gives,
+\[
+\oint\vec{E}\cdot d\vec{a} = 4\pi(\sigma A + \rho Ad)
+\]
+or
+\[
+\vec{E} = -4\pi(\sigma + \rho d)\uv{x}
+\]
+At $x >= d$, by similar reasoning, $\vec{E} = 4\pi(\sigma + \rho d)\uv{x}$. If
+$0 < x < d$, $\vec{E} = 4\pi(\sigma + \rho x)\uv{x}$.
+
+\item Align the $z$ axis along the cylinder's principle axis. At any point inside
+the cylinder, consider a small cylindrical surface of length $l$, coaxial
+with the charged cylinder. Since it does not enclose any charge, the electric
+field at it is zero. 
+
+For a point outside the cylinder, consider a similar gaussian surface. By symmetry,
+the field is normal to its closed surface. If the point is at a distance $s$ from
+the $z$ axis and if the cylinder has length $l$ then
+\[
+\oint\vec{E}\cdot d\vec{a} = 4\pi q \Rightarrow E(2\pi sl) = 4\pi\sigma(2\pi s_0l),
+\]
+where $s_0$ is the radius of the charged cylinder. Thus,
+\[
+E = \frac{4\pi\sigma s_0}{s}
+\]
+and
+\[
+\vec{E} = \frac{4\pi\sigma s_0}{s}\un,
+\]
+where $\un$ is the normal to the gaussian surface, directed outwards. Now, $2\pi
+\sigma s_0$ is also the charge per unit length of the cylinder. If we denote it 
+by $\lambda$, then
+\[
+\vec{E} = \frac{2\lambda}{s}\un,
+\]
+which is same as the expression for the electric field due to an infinitely long
+wire carrying a charge with uniform linear density $\lambda$.
+
+Now consider an pipe of a square cross section. The field inside continues to be
+zero for the same reason. The field outside will no longer be symmetric and flux
+integral will be slightly harder to evaluate. There are two cases:
+\begin{itemize}
+\item Points for which the normal to the charged pipe is perpendicular to one of
+the flat surfaces:
+\[
+\oint\vec{E}\cdot d\vec{a} = 4\pi q \Rightarrow Esl = 4\pi\sigma l^2 \Rightarrow
+E = \frac{4\pi\sigma l}{s},
+\]
+where the flux integral is calculated over a square pipe of ``diameter'' $2s$ and
+length $l$. The field point is at a distance $s$ from the charged pipe's axis. 
+Once again, the linear charge density can be defined as 
+\[
+\lambda = \sigma l
+\]
+so that $E = 4\pi\lambda/s$. 
+
+\item For a point along the diagonal of the charge pipe, the field will be
+\[
+\vec{E} = \begin{cases}
+\sigma(\uv{x} + \uv{y}) \text{ in the 1st quadrant.} \\
+\sigma(-\uv{x} + \uv{y}) \text{ in the 2nd quadrant.} \\
+-\sigma(\uv{x} + \uv{y}) \text{ in the 3rd quadrant.} \\
+\sigma(\uv{x} - \uv{y}) \text{ in the 4th quadrant.}
+\end{cases}
+\]
+\end{itemize}
+The field is thus \emph{not} the same as the field on a uniformly charged infinite
+wire along the $z$ axis.
+
+Some remarks:
+\begin{itemize}
+\item A similar thing happens when we consider the field outside a non-spherical
+body. The field is no longer that due to the entire charged being concentrated at 
+the origin. In fact, it has factors with power $r^{-n}$, where $n > 2$.
+\item This is true for any field for which Gauss law is valid. For example, the
+slight deviation of the sun from perfect sphere makes it field have factors other
+than those with $r^{-2}$ and they lead to measurable effects on planetary orbits.
+\end{itemize}
+
+\item The electric field at any point in the atom is
+\[
+\vec{E} = \vec{E}_e + \vec{E}_n,
+\]
+where
+\[
+\vec{E}_n = \frac{q_e}{r^2}\uv{r},
+\]
+is the nuclear electric field and $\vec{E}_e$ is the electronic electric field.
+Here we denote the electronic charge by $q_e$ because we will also see the irrational
+number $e$ in our expressions. Since,
+\[
+\int_0^\infty \rho dV = -q_e,
+\]
+we have
+\[
+\int_0^r dr \int_0^\pi d\theta \int_0^{2\pi}d\phi Cr^2\sin\theta  e^{-2r/a} = 
+4\pi C\int_0^\infty dr r^2 e^{-2r/a} = 4\pi C\frac{a^3}{4} = -q_e
+\]
+so that 
+\[
+C = -\frac{q_e}{\pi a^3}.
+\]
+Thus, the electronic charge density is
+\[
+\rho = -\frac{q_e}{\pi a^3}e^{-2r/a}.
+\]
+The charge in a sphere of radius $a$ is
+\begin{eqnarray*}
+q &=& \int_0^a dr\int_0^\pi d\theta \int_0^{2\pi}d\phi r^2\sin\theta \rho \\
+ &=& -\frac{4\pi q_e}{\pi a^3}\int_0^a r^2 e^{-2r/a}dr \\
+ &=& -\frac{4q_e}{a^3}\left(\frac{e^2 - 5}{4e^2}a^3\right) \\
+ &=& -q_e\left(\frac{e^2 - 5}{4e^2}\right)
+\end{eqnarray*}
+By Gauss law,
+\[
+E_e(4\pi a^2) = -q_e\left(\frac{e^2 - 5}{4e^2}\right)
+\]
+so that
+\[
+\vec{E} = \frac{q_e}{a^2}\left(1 - \left(\frac{e^2 - 5}{16\pi e^2}\right)\right)\uv{r}
+= 0.99357\frac{q_e}{a^2}\uv{r}.
+\]
+
+\item The electric fields due to the sheets are:
+\begin{itemize}
+\item $-(2\pi)4\uv{z}$ on the upper side and $(2\pi)4\uv{z}$ on the lower side of $A$,
+\item $(2\pi)7\uv{z}$ on the upper side and $-(2\pi)7\uv{z}$ on the lower side of $B$,
+\item $-(2\pi)3\uv{z}$ on the upper side and $(2\pi)3\uv{z}$ on the lower side of $C$,
+\end{itemize}
+where we aligned the axes such that the $z$ axis is normal to each of them.
+
+We will now compute the pressure on each sheet.
+\begin{itemize}
+\item To compute pressure on $A$, consider a small patch of area $a$ on it. The 
+total charge on the patch is $-4a$. The electric field on it is $14\pi\uv{z}$
+due to chage on $B$ and $-8\pi\uv{z}$ due to $C$, or a net field $8\pi\uv{z}$.
+Therefore, the total force is $32\pi a\uv{z}$. The electric pressure is $32\pi$
+dynes/cm$^{-2}$.
+\item The electric field on upper side of $B$ is $8\pi\uv{z}$ and on its lower 
+side it is $-6\pi\uv{z}$. For a patch of area $a$, the electric force is $56\pi a
+\uv{z}$ on the upper side and $-42\pi a\uv{z}$ on the lower side. The electric
+pressure is $14\pi$ dynes/cm$^{-2}$.
+\item Similarly, the pressure on the sheet $C$ is $18\pi$ dynes/cm$^{-2}$.
+\end{itemize}
+
+\item The electric field of the shell is
+\[
+\vec{E} = \begin{cases}
+\frac{Q}{r^2}\uv{r} & \text{ for } r \ge R \\
+0 & \text{ for } r < R.
+\end{cases}
+\]
+The energy density of the field is 
+\[
+u_E = \frac{E^2}{8\pi} = \begin{cases} \frac{Q^2}{8\pi r^4} & \text{ for } r \ge R \\
+0 & \text{ for } r < R.
+\end{cases}
+\]
+Therefore, the energy in a sphere of radius $S$ is
+\[
+\int_0^S u_EdV = \int_R^S \frac{Q^2}{8\pi r^4} = \frac{Q^2}{2}\int_R^S\frac{dr}{r^2}
+= \frac{Q^2}{2}\left(\frac{1}{R} - \frac{1}{S}\right).
+\]
+If $S = \infty$ the total energy is $Q^2/(2R)$. We what to find out $S$ for 
+which the energy is $0.9Q^2/(2R)$. Thus,
+\[
+0.9\frac{Q^2}{2R} = \frac{Q^2}{2}\left(\frac{1}{R} - \frac{1}{S}\right)
+\Rightarrow 0.9 = 1 - \frac{R}{S} \Rightarrow S = 10R.
+\]
+
+\item At the point $A$, the magnitude of the field is
+\[
+dE = \frac{dq}{x^2},
+\]
+where $dq$ is the charge between $x$ and $x + dx$. Since the charge is uniformly
+distributed, $dq = \lambda dx$, where $\lambda = Q/10$ is the linear charge density.
+Therefore,
+\[
+E = \int_3^{10}\frac{\lambda dx}{x^2} = \frac{Q}{10}\left(\frac{1}{3} - \frac{1}{10}\right)
+= \frac{7Q}{300}.
+\]
+
+At the point $B$,
+\[
+dE = \frac{dq}{r^2}\cos\theta,
+\]
+where $r$ is the distance of $B$ from an element of charge $dq$ between $x$ and
+$x + dx$ and $\theta$ is the angle between the line joining $B$ with the element
+and the perpendicular from $B$ to the rod. Thus,
+\[
+\cos\theta = \frac{L}{r}, \tan\theta = \frac{x}{L},
+\]
+$L$ being the distance of $B$ from the centre of the rod. Thus, $dx = L\sec^2\theta
+d\theta$ and
+\[
+dE = \frac{\lambda L \sec^2\theta \cos^2\theta}{L^2}\cos\theta d\theta =
+\frac{\lambda}{L}\cos\theta d\theta.
+\]
+If $\sin\alpha = a/L$, $2a$ being the length of the rod, then the limits of 
+integration are from $-\alpha$ to $\alpha$ so that
+\[
+E = \frac{\lambda}{L}(2\sin\alpha) = \frac{2a\lambda}{L^2} = \frac{Q}{L^2}.
+\]
+
+\item The magnitude of the electric field at the centre because of the two lines
+is
+\[
+E = \frac{1}{4\pi\epsilon_0}\frac{4\lambda}{r}.
+\]
+Use 
+\[
+r = \frac{3}{2}, \frac{1}{4\pi\epsilon_0} = 9 \times 10^9
+\]
+to get $\lambda = 6.25 \times 10^{-7}$ C/m. Therefore, the charge on a $1$ km
+line is $6.25 \times 10^{-4}$ C.
+
+$1$ C is a very large amount of charge.
 \end{enumerate}
 \end{document}

@@ -11,9 +11,6 @@ def derivative_theta(theta_v: np.array, t: float) -> np.array:
     theta, theta_dot = theta_v
     return [theta_dot, -g/l * theta]
 
-def next_step(t: float, td: float) -> List[float]:
-    return [t, -g/l * np.sin(t)]
-
 def show_motion(t: np.ndarray, thetas: np.ndarray) -> None:
     plt.plot(t, thetas[:, 1], 'g', label=r'$\dot{\theta}(t)$')
     plt.plot(t, thetas[:, 0], 'b', label=r'$\theta(t)$')

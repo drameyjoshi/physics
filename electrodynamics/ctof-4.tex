@@ -510,4 +510,41 @@ so that \eqref{c4e44} can be written as
 \frac{\partial}{\partial t}\left(\frac{E^2 + H^2}{8\pi}\right) = 
 -\vec{j}\cdot\vec{E} - \dive\vec{S}.
 \end{equation}
+
+\item From equation \eqref{c3e27}, we have
+\[
+\td{\mathcal{E}}{t} = e\vec{v}\cdot\vec{E}
+\]
+so that for a collection of charges, we have
+\[
+\sum_a e_a\vec{v}_a\vec{E} = \td{\mathcal{E}}{t}
+\]
+or, in the continuum limit,
+\begin{equation}\label{c4e47}
+\int\vec{j}\cdot\vec{E}dV = \td{\mathcal{E}}{t}.
+\end{equation}
+If we integrate \eqref{c4e46} over a volume, $V$, we have
+\begin{equation}\label{c4e48}
+\frac{d}{dt}\int\frac{E^2 + H^2}{8\pi}dV + 
+\int \vec{j}\cdot\vec{E}dV = -\oint d\vec{f}\cdot\vec{S}.
+\end{equation}
+If the volume of integration is so large that $\vec{S}$ is effectively zero on
+its bounding surface then, using \eqref{c4e47},
+\begin{equation}\label{c4e49}
+\frac{d}{dt}\left(\int\frac{E^2 + H^2}{8\pi}dV + \mathcal{E}\right) = 0.
+\end{equation}
+This equation suggests that for a closed system of charges and currents,
+the quantity
+\[
+\int\frac{E^2 + H^2}{8\pi}dV + \mathcal{E}
+\]
+is conserved. Since $\mathcal{E}$ is the kinetic energy of the charges,
+the integral must be the energy of the fields. We all the quantity,
+\begin{equation}\label{c4e50}
+W = \frac{E^2 + H^2}{8\pi}
+\end{equation}
+the energy density of the field. For a small enough volume for which the rhs of
+\eqref{c4e48} does not vanish, we interpret the rhs as the flux of energy escaping
+the bounding surface. The Poynting vector $\vec{S}$ is thus the flux density of
+energy passing through a surface.
 \end{enumerate}

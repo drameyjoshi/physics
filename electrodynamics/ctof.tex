@@ -3,15 +3,23 @@
 \usepackage{graphicx}
 \usepackage{tensor}
 \usepackage{hyperref}
+
 %\usepackage{eulervm, newpxtext}
 %\usepackage{xcolor}
+
+%\usepackage{bm}
+%\renewcommand{\vec}{\bm}
+%\newcommand{\uv}[1]{\bm{e}_{#1}}
+%\newcommand{\un}{\bm{n}}
+
+\newcommand{\uv}[1]{\hat{e}_{#1}}
+\newcommand{\un}{\hat{n}}
+
 \newcommand{\abs}[1]{\left\vert{#1}\right\vert}
 \newcommand{\td}[2]{\frac{d{#1}}{d{#2}}}
 \newcommand{\pdt}[2]{\frac{\partial{#1}}{\partial{#2}}}
 \newcommand{\op}{{\,\prime}}
 \newcommand{\tp}{{\,\prime\prime}}
-\newcommand{\uv}[1]{\hat{e}_{#1}}
-\newcommand{\un}{\hat{n}}
 \DeclareMathOperator{\grad}{grad}
 \DeclareMathOperator{\dive}{div}
 \DeclareMathOperator{\curl}{curl}

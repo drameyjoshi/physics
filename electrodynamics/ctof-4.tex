@@ -690,4 +690,43 @@ the constant $a$ can be chosen to be $1/c$. Thus, the correct expression for the
 \begin{equation}\label{c4e64}
 P^\nu = \frac{1}{c}\int T^{\nu\mu}dS_\mu.
 \end{equation}
+
+\item Consider the tensor
+\begin{equation}\label{c4e65}
+U^{\mu\nu} = T^{\mu\nu} + \pdt{\psi^{\mu\nu\sigma}}{x^\sigma}
+\end{equation}
+where $\psi^{\mu\nu\sigma} = -\psi^{\mu\sigma\nu}$, that is $\psi^{\mu\nu\sigma}$
+is an anti-symmetric tensor of rank 3. Because of anti-symmetry,
+\[
+\frac{\partial^2\psi^{\mu\nu\sigma}}{\partial x^\mu \partial x^\sigma} = 
+\frac{\partial^2\psi^{\mu\nu\sigma}}{\partial x^\sigma \partial x^\mu} = 
+\frac{\partial^2\psi^{\mu\sigma\nu}}{\partial x^\sigma \partial x^\mu} = 
+-\frac{\partial^2\psi^{\mu\nu\sigma}}{\partial x^\mu \partial x^\sigma}
+\]
+so that
+\begin{equation}\label{c4e66}
+\frac{\partial^2\psi^{\mu\nu\sigma}}{\partial x^\mu \partial x^\sigma} = 0.
+\end{equation}
+Now consider,
+\begin{equation}\label{c4e67}
+\int U^{\mu\nu} dS_\mu = \int T^{\mu\nu} dS_\mu + 
+\int\pdt{\psi^{\mu\nu\sigma}}{x^\sigma} dS_\mu.
+\end{equation}
+We manipulate the second term on the rhs using equation \eqref{c1e77} for an 
+anti-symmetric tensor to get
+\begin{equation}\label{c4e68}
+\int U^{\mu\nu} dS_\mu = \int T^{\mu\nu} dS_\mu + 
+\frac{1}{2}\int df^\ast_{\mu\sigma}\psi^{\mu\nu\sigma}.
+\end{equation}
+The first two integrals in \eqref{c4e68} are over three dimensional hypersurfaces,
+that is ordinary volumes while the last integral is over a two dimensional surface.
+If we let the surface be large enough that the fields on it are zero then the
+last term will vanish and we are left with
+\begin{equation}\label{c4e69}
+\int U^{\mu\nu} dS_\mu = \int T^{\mu\nu} dS_\mu,
+\end{equation}
+that is, the 4-momentum density is the same for both energy-momentum tensors. Thus
+the energy-momentum tensor is defined to withing the partial derivative of an
+anti-symmetric tensor of rank 3.
+
 \end{enumerate}

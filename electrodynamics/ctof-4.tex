@@ -656,20 +656,20 @@ perpendicular to $x^0$ at another instant of time and an arbitrary surface
 joining these hyperplanes at a great distance from the fields, then \eqref{c4e62}
 indicates that the vector
 \begin{equation}\label{c4e63}
-P^\nu = a\int T^{\nu\mu}dS_\mu,
+p^\nu = a\int T^{\nu\mu}dS_\mu,
 \end{equation}
 where $a$ is a constant, has the same value at the two instants of $x^0$ involved
-in constructing the closed surface. In other words, $P^\nu$ is a constant. For an
-appropriately chosen value of $a$, $P^\nu$ becomes the 4-momentum density of the
+in constructing the closed surface. In other words, $p^\nu$ is a constant. For an
+appropriately chosen value of $a$, $p^\nu$ becomes the 4-momentum density of the
 system.
 
 \item If $\nu = 0$, \eqref{c4e63} becomes
 \[
-P^0 = a\int T^{0\mu}dS_\mu,
+p^0 = a\int T^{0\mu}dS_\mu,
 \]
 If the integration is over the hyperplane $x^0$ then $T^{0\mu}dS_\mu = T^{00}dV$. Thus,
 \[
-P^0 = a\int T^{00}dV.
+p^0 = a\int T^{00}dV.
 \]
 Now, 
 \[
@@ -688,7 +688,7 @@ Clearly, $T^{00}$ is the energy density of the system. In analogy with \eqref{c2
 the constant $a$ can be chosen to be $1/c$. Thus, the correct expression for the 
 4-momentum density is
 \begin{equation}\label{c4e64}
-P^\nu = \frac{1}{c}\int T^{\nu\mu}dS_\mu.
+p^\nu = \frac{1}{c}\int T^{\nu\mu}dS_\mu.
 \end{equation}
 
 \item Consider the tensor
@@ -729,4 +729,50 @@ that is, the 4-momentum density is the same for both energy-momentum tensors. Th
 the energy-momentum tensor is defined to withing the partial derivative of an
 anti-symmetric tensor of rank 3.
 
+\item From equation \eqref{c2e86} the angular momentum of the field can be written
+as
+\begin{equation}\label{c4e70}
+L^{\mu\nu} = \int (x^\mu dp^\nu - x^\nu dp^\mu).
+\end{equation}
+From \eqref{c4e64}, we have $dp^\mu = T^{\mu\nu}dS_\nu$ so that we can write 
+\eqref{c4e70} as 
+\begin{equation}\label{c4e71}
+L^{\mu\nu} = \frac{1}{c}\int (x^\mu T^{\nu\rho} - x^\nu T^{\mu\rho})dS_\rho.
+\end{equation}
+If the integration is taken such that $dS_\rho$ is normal to the hypersurface of
+all space coordiates at at a certain value of $x^0$ then $L^{\mu\nu}$ is the
+angular momentum of the system at time $x^0/c$. Now,
+\[
+L^{\mu\nu}(t_1) - L^{\mu\nu}(t_2) = 
+\frac{1}{c}\oint(x^\mu T^{\nu\rho} - x^\nu T^{\mu\rho})dS_\rho,
+\]
+where the integral is over the closed hypersurface comprising of:
+\begin{itemize}
+\item The hypersurface normal to the $x^0$ axis at time $t_1$,
+\item The hypersurface normal to the $x^0$ axis at time $t_2$ and
+\item A hypersurface at a great distance from the fields joining these hyperplanes.
+\end{itemize}
+From the 4-dimensional Gauss theorem of \eqref{c1e74},
+\begin{equation}\label{c4e72}
+L^{\mu\nu}(t_1) - L^{\mu\nu}(t_2) = 
+\frac{1}{c}\int\frac{\partial}{\partial x^\rho}(x^\mu T^{\nu\rho} - x^\nu T^{\mu\rho})d\Omega.
+\end{equation}
+The integrand is
+\begin{eqnarray*}
+\frac{\partial}{\partial x^\rho}(x^\mu T^{\nu\rho} - x^\nu T^{\mu\rho}) &=&
+\tensor{\delta}{_\rho^\mu}T^{\nu\rho} + x^\mu\pdt{T^{\nu\rho}}{x^\rho} - 
+\tensor{\delta}{_\rho^\nu}T^{\mu\rho} - x^\nu\pdt{T^{\mu\rho}}{x^\rho} \\
+ &=& T^{\nu\mu} + x^\mu\pdt{T^{\nu\rho}}{x^\rho} - T^{\mu\nu} -  x^\nu\pdt{T^{\mu\rho}}{x^\rho}
+\end{eqnarray*}
+From equation \eqref{c4e61},
+\[
+\pdt{T^{\nu\rho}}{x^\rho} = 0; \;\; \pdt{T^{\mu\rho}}{x^\rho} = 0
+\]
+so that equation \eqref{c4e72} is
+\begin{equation}\label{c4e73}
+L^{\mu\nu}(t_1) - L^{\mu\nu}(t_2) = \frac{1}{c}\int (T^{\nu\mu} - T^{\mu\nu})d\Omega.
+\end{equation}
+If $L^{\mu\nu}(t_1) = L^{\mu\nu}(t_2)$ then we must have $T^{\mu\nu} = T^{\nu\mu}$. 
+
 \end{enumerate}
+

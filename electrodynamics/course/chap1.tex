@@ -72,14 +72,15 @@ Before solving the problem analytically, from the geometry alone, can you
 \item Guess the $x$-component? The $z$-component?
 \item Infer the field at the origin if the ring was full?
 \end{itemize}
-Now, $dq = \lambda Rd\theta$, $\vec{r} = R\cos\theta\uv{x} + R\sin\theta\uv{y}$ so
+Now, $dq = \lambda Rd\theta$, $\vec{r} = R\cos(\pi + \theta)\uv{x} + R\sin(\pi + \theta)\uv{y}
+= -R\cos\theta\uv{x} - R\sin\theta\uv{y}$ so
 that
 \[
-d\vec{E} = (R\cos\theta\uv{x} + R\sin\theta\uv{y})\frac{\lambda R d\theta}{R^3}
+d\vec{E} = -(R\cos\theta\uv{x} + R\sin\theta\uv{y})\frac{\lambda R d\theta}{R^3}
 \]
 and
 \begin{equation}\label{e9}
-\vec{E} = \frac{2Q}{\pi R^2}\uv{y}.
+\vec{E} = -\frac{2Q}{\pi R^2}\uv{y}.
 \end{equation}
 
 \item A numerical problem.
@@ -423,7 +424,9 @@ or
 \vec{E} = -4\pi(\sigma + \rho d)\uv{x}
 \]
 At $x >= d$, by similar reasoning, $\vec{E} = 4\pi(\sigma + \rho d)\uv{x}$. If
-$0 < x < d$, $\vec{E} = 4\pi(\sigma + \rho x)\uv{x}$.
+$0 < x < d$, $\vec{E} = 4\pi\sigma\uv{x}$. The charge inside the volume charge
+does not contribute anything. This can be seen by taking two Gaussian surfaces
+ending at the field point, one extending leftwards and the other rightwards.
 
 \item Align the $z$ axis along the cylinder's principle axis. At any point inside
 the cylinder, consider a small cylindrical surface of length $l$, coaxial
@@ -588,7 +591,7 @@ which the energy is $0.9Q^2/(2R)$. Thus,
 \item At the point $A$, the magnitude of the field is
 \[
 dE = \frac{dq}{x^2},
-\]
+\] W
 where $dq$ is the charge between $x$ and $x + dx$. Since the charge is uniformly
 distributed, $dq = \lambda dx$, where $\lambda = Q/10$ is the linear charge density.
 Therefore,
@@ -632,5 +635,35 @@ to get $\lambda = 6.25 \times 10^{-7}$ C/m. Therefore, the charge on a $1$ km
 line is $6.25 \times 10^{-4}$ C.
 
 $1$ C is a very large amount of charge.
+
+\item The contribution of the an element of charge on the semi-circle is
+\begin{eqnarray*}
+d\vec{E}_s &=& \frac{dq}{b^2}(\cos(2\pi - \theta)\uv{x} + \sin(2\pi - \theta)\uv{y}) \\
+ &=& \frac{dq}{b^2}(\cos\theta\uv{x} - \sin\theta\uv{y}) \\
+ &=& \frac{\lambda bd\theta}{b^2}(\cos\theta\uv{x} - \sin\theta\uv{y}) \\
+ &=& \frac{\lambda}{b}(\cos\theta\uv{x} - \sin\theta\uv{y})d\theta
+\end{eqnarray*}
+Therefore,
+\[
+\vec{E}_s = \int_0^\pi dE_s = -\frac{2\lambda}{b}\uv{y}.
+\]
+Note that the field makes and angle $2\pi - \theta$ with the positive $x$ axis.
+Likewise, the contribution from an element on the left arm is
+\begin{eqnarray*}
+d\vec{E}_l &=& \frac{dq}{r^2}(\cos\theta\uv{x} + \sin\theta\uv{y}) \\
+ &=& \frac{\lambda rd\theta}{r^2}(\cos\theta\uv{x} + \sin\theta\uv{y}) \\
+ &=& \frac{\lambda}{r}(\cos\theta\uv{x} + \sin\theta\uv{y})d\theta \\
+ &=& \frac{\lambda}{b}(\cos^2\theta\uv{x} + \cos\theta\sin\theta\uv{y})d\theta
+\end{eqnarray*}
+Therefore,
+\[
+\vec{E}_l = \int_0^{\pi/2} d\vec{E}_l =
+\frac{\lambda}{b}\left(\frac{\pi}{4}\uv{x} + \frac{1}{4}\uv{y}\right).
+\]
+Similarly, the field due to the right arm is
+\[
+\vec{E}_r =\frac{\lambda}{b}\left(-\frac{\pi}{4}\uv{x} + \frac{1}{4}\uv{y}\right).
+\]
+so that $\vec{E}_s + \vec{E}_l + \vec{E}_r = 0$.
 \end{enumerate}
 \end{document}

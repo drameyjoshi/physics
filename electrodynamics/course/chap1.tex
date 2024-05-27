@@ -922,6 +922,47 @@ centre is $4\pi\sigma\un - 2\pi\sigma\un = 2\pi\sigma\un$, pointing outwards.
 We can also add the zero field inside the shell to $-2\pi\sigma\un$, with $\un$
 now pointing inside the shell so that the net field is once again $2\pi\sigma\un$.
 
+\item The electric field due to the smaller sphere in the region between the
+two is
+\[
+E(r) = \frac{Q}{r^2} \;\; a \le r \le b
+\]
+so that the energy stored in the cavity is
+\[
+U = \int_a^b\int_0^\pi\int_0^{2\pi} E^2 r^2\sin\theta drd\theta d\phi =
+4\pi Q^2\left(\frac{1}{a} - \frac{1}{b}\right).
+\]
+
+\item The field just outside the bubble is
+\[
+\vec{E} = \frac{Q}{R^2}\uv{r}
+\]
+and that inside is $0$ so that the average field is
+\[
+\vec{E}_s = \frac{Q}{2R^2}\uv{r}.
+\]
+The force on the surface is 
+\[
+\vec{F} = Q\vec{E}_s = \frac{Q^2}{2R^2}\uv{r}
+\]
+and the pressure on it is 
+\[
+P = \frac{Q^2}{8\pi R^4}.
+\]
+The force on a small area $d\vec{a}$ on the upper hemisphere is 
+\[
+d\vec{f} = Pd\vec{a}
+\]
+and its projection \textbf{normal to the} $xy$ plane is 
+\[
+df = P\cos\theta d\vec{a} = PR^2\sin\theta\cos\theta d\theta d\phi
+\]
+so that the total pressure on the $xy$ plane is
+\[
+f = \int_0^{2\pi} d\phi \int_0^{\pi/2} d\theta PR^2\sin\theta\cos\theta =
+PR^2 \times 2\pi \times \frac{1}{2} = \pi R^2 P = \frac{Q^2}{8R^2}.
+\]
+This is the force exerted by the upper hemisphere on the lower one.
 
 \end{enumerate}
 \end{document}

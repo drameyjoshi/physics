@@ -142,7 +142,7 @@ plt.show()
 \end{verbatim}
 
 For $a = 1$, it looks like the one shown in figure \ref{c1f1}.
-\begin{figure}
+\begin{figure}[!ht]
 \center
 \includegraphics[scale=0.6]{purcell_c1p7}
 \caption{Locus of points for which $U=0$.}
@@ -647,23 +647,281 @@ Therefore,
 \[
 \vec{E}_s = \int_0^\pi dE_s = -\frac{2\lambda}{b}\uv{y}.
 \]
-Note that the field makes and angle $2\pi - \theta$ with the positive $x$ axis.
-Likewise, the contribution from an element on the left arm is
+The contribution of charge $dq = \lambda dy$ on the left arm of the rod is
+\[
+d\vec{E}_l = \frac{dq}{r^2}(cos\theta\uv{x} + \sin\theta\uv{y}) 
+= \frac{\lambda dy}{r^2}(cos\theta\uv{x} + \sin\theta\uv{y}).
+\]
+Since $y = r\sin\theta$, $dy = r\cos\theta d\theta$ and
+\[
+d\vec{E}_l = \frac{\lambda\cos\theta}{r}(cos\theta\uv{x} + \sin\theta\uv{y})d\theta
+= \frac{\lambda}{b}(cos\theta\uv{x} + \sin\theta\uv{y})d\theta
+\]
+so that
+\[
+\vec{E}_l = \int_0^{\pi/2}d\vec{E}_l = \frac{\lambda}{b}(\uv{x} + \uv{y})
+\]
+Similarly,
 \begin{eqnarray*}
-d\vec{E}_l &=& \frac{dq}{r^2}(\cos\theta\uv{x} + \sin\theta\uv{y}) \\
- &=& \frac{\lambda rd\theta}{r^2}(\cos\theta\uv{x} + \sin\theta\uv{y}) \\
- &=& \frac{\lambda}{r}(\cos\theta\uv{x} + \sin\theta\uv{y})d\theta \\
- &=& \frac{\lambda}{b}(\cos^2\theta\uv{x} + \cos\theta\sin\theta\uv{y})d\theta
+\vec{E}_r &=& \int_{\pi/2}^\pi \frac{\lambda}{b}(cos(\pi/2 + \theta)\uv{x} + \sin(\pi/2 +\theta)\uv{y})d\theta \\
+ &=& \int_{\pi/2}^\pi \frac{\lambda}{b}(-\sin\theta\uv{x} + \cos\pi/2\uv{y})d\theta \\
 \end{eqnarray*}
-Therefore,
+
+
+\item 
+A few points to ponder:
+\begin{itemize}
+\item Does it take energy to pluck a charge from this lattice?
+\item What if all charges were of the same size?
+\end{itemize}
+
+Consider a $3 \times 3$ lattice of alternating positive and negative charges
+with a positive charge at the centre. If the lattice is in the $xy$ plane with the
+positive charge at the origin then the potential energy of a unit charge at a point
+$(0, 0, d)$ is
 \[
-\vec{E}_l = \int_0^{\pi/2} d\vec{E}_l =
-\frac{\lambda}{b}\left(\frac{\pi}{4}\uv{x} + \frac{1}{4}\uv{y}\right).
+u_1 = -\frac{4}{\sqrt{d^2 + s^2}} + \frac{4}{\sqrt{d^2 + 2s^2}}.
 \]
-Similarly, the field due to the right arm is
+If the lattice is extended to have a size $5 \times 5$  then there is an additional
+contribution of
 \[
-\vec{E}_r =\frac{\lambda}{b}\left(-\frac{\pi}{4}\uv{x} + \frac{1}{4}\uv{y}\right).
+u_2 = -\frac{4}{\sqrt{d^2 + 3s^2}} + \frac{4}{\sqrt{d^2 + 4s^2}}.
 \]
-so that $\vec{E}_s + \vec{E}_l + \vec{E}_r = 0$.
+In general, an $(2n + 1) \times (2n + 1)$ lattice has an additional contribution
+of 
+\[
+u_n =  -\frac{4}{\sqrt{d^2 + (2n - 1)s^2}} + \frac{4}{\sqrt{d^2 + (2n)s^2}}
+\]
+over the $(2n) \times (2n)$ lattice. Thus, the total energy due to a $(2n + 1) 
+\times (2n + 1)$ is
+\[
+U_n = \sum_{k=1}^n\left(-\frac{4}{\sqrt{d^2 + (2n - 1)s^2}} + \frac{4}{\sqrt{d^2 + (2n)s^2}}\right).
+\]
+We expect $U_n$ to be negative because when the central positive charge is plucked
+from the lattice, it has an excess of negative charge which will attract the 
+plucked charge. Therefore, we will have to supply energy to take that plucked charge to
+infinity.
+
+We can examine the convergence of the series $U_n$ numerically using the code:
+\begin{verbatim}
+import matplotlib.pyplot as plt
+import numpy as np
+
+def nth_term(n: int) -> float:
+    d = 2
+    s = 1
+    x = 4*n*(1/np.sqrt(d**2 + (2*n)**2) - 1/np.sqrt(d**2 + (2*(n - 1))**2))
+    return x
+
+
+def show_plots(X: np.array,
+               contribs: np.array,
+               U: np.array) -> None:
+    plt.plot(X, U, label=r'$U(n)$')
+    plt.plot(X, contribs, label=r'$\delta U(n)$')    
+    plt.xlabel('n')
+    plt.title(r'Potential energy of 2-d lattice')
+    plt.legend(loc='best')
+    plt.savefig('purcell_c1p27.png')
+
+
+def convergence(n: int) -> None:
+    template = 'At n={0:.0e}, the additional contribution to U is {1:f}.'
+    print(template.format(n, nth_term(n)))
+
+
+def main():
+    N = 1000
+    contribs = [nth_term(n) for n in range(1, N + 1)]
+    U = np.cumsum(contribs)
+    X = [n for n in range(1, N + 1)]
+    show_plots(X, contribs, U)
+    convergence(1e6)
+    convergence(1e23)
+    
+
+if __name__ == '__main__':
+    main()
+\end{verbatim}
+\begin{figure}[!ht]
+\center
+\includegraphics[scale=0.6]{purcell_c1p27}
+\caption{Potential energy of a 2-d lattice.}
+\label{c1f2}
+\end{figure}
+The convergence is slow. However, for realistic lattice sizes the number of charges
+is of the order $10^{23}$. The contribution of additional terms at this size is 
+practically zero.
+
+\item Figure \ref{c1f3} shows a regular octahedron.
+\begin{figure}
+\center
+\includegraphics[scale=0.6]{octahedron}
+\caption{A regular octabedron.}
+\label{c1f3}
+\end{figure}
+If $a$ is the length of each side of the octahedron, the distance between $A$ and $C$
+(and $B$ and $D$) is $d\sqrt{2}$. Similarly, the distance between $E$ and $F$ is
+twice the distance between $O$ and $F$, where $O$ is the centre of the square $ABCD$.
+Distance between $A$ and $O$ is $d\sqrt{2}/2 = d/\sqrt{2}$ so that distance 
+between $O$ and $F$ is
+\[
+\sqrt{d^2 - \frac{d^2}{2}} = \frac{d}{\sqrt{2}}
+\]
+and distance between $E$ and $F$ is $d\sqrt{2}$. Thus, the distance between all 
+non-adjacent points is the same.
+
+We will, therefore, consider the following configurations:
+\begin{itemize}
+\item Positive charges at $E$ and $F$, negative charges at $A$ and $C$, a positive
+charge at $D$ and a negative charge at $B$. This arrangement tries to keep like 
+charges as far away as possible. The energy is a sum of
+\begin{table}[ht!]
+\center
+\begin{tabular}{ll}
+Positions & Energy  \\
+\hline
+AB & $1/d$ \\
+AC & $1/(d\sqrt{2})$ \\
+AD & -$1/d$ \\
+AE & -$1/d$ \\
+AF & -$1/d$ \\
+BC & $1/d$ \\
+BD & -$1/(d\sqrt{2})$ \\
+BE & -$1/d$ \\
+BF & -$1/d$ \\
+CD & -$1/d$ \\
+CE & -$1/d$ \\
+CF & -$1/d$ \\
+DE & $1/d$ \\
+DF & $1/d$ \\
+EF & $1/(d\sqrt{2})$
+\end{tabular}
+\caption{A -, B -, C -, D +, E +, F +}
+\end{table}
+so that
+\[
+U_1 = \left(-\frac{4}{d} + \frac{1}{d\sqrt{2}}\right) = \frac{e^2}{d}\left(-4 + \frac{1}{\sqrt{2}}\right)
+= -3.2929\frac{e^2}{d}.
+\]
+
+\item Positive charges are A, B, F and negative charges elsewhere.
+\begin{table}[ht!]
+\center
+\begin{tabular}{ll}
+Positions & Energy  \\
+\hline
+AB & $1/d$ \\
+AC & -$1/(d\sqrt{2})$ \\
+AD & -$1/d$ \\
+AE & -$1/d$ \\
+AF & -$1/d$ \\
+BC & -$1/d$ \\
+BD & -$1/(d\sqrt{2})$ \\
+BE & -$1/d$ \\
+BF & $1/d$ \\
+CD & $1/d$ \\
+CE & $1/d$ \\
+CF & -$1/d$ \\
+DE & $1/d$ \\
+DF & -$1/d$ \\
+EF & -$1/(d\sqrt{2})$
+\end{tabular}
+\caption{A +, B +, C -, D -, E -, F +}
+\end{table}
+so that
+\[
+U_2 = e\left(-\frac{3}{d\sqrt{2}}\right) = -2.1213\frac{e^2}{d}.
+\]
+\end{itemize}
+We can confirm that these are the only two states using the code:
+\begin{verbatim}
+import numpy as np
+import pandas as pd
+import math
+
+from itertools import combinations
+from typing import Dict, Set
+
+positions = {_ for _ in 'ABCDEF'}
+M = np.array(
+    [[0, 1, np.sqrt(2), 1, 1, 1],
+    [1, 0, 1, np.sqrt(2), 1, 1],
+    [np.sqrt(2), 1, 0, 1, 1, 1],
+    [1, np.sqrt(2), 1, 0, 1, 1],
+    [1, 1, 1, 1, 0, np.sqrt(2)],
+    [1, 1, 1, 1, np.sqrt(2), 0]])
+labels = [_ for _ in positions]
+distances = pd.DataFrame(data=M, index=labels, columns=labels)
+
+def U(positives: Set[str], negatives: Set[str]) -> float:
+    x = 0
+    for p in positives:
+        for q in positives:
+            if p != q:
+                x += 1/distances[p][q]
+
+    for n in negatives:
+        for m in negatives:
+            if n != m:
+                x += 1/distances[n][m]
+    x /= 2 # To account for double counting
+    
+    for p in positives:
+        for n in negatives:
+            if p != n:
+                x -= 1/distances[p][n]
+    # No double counting happened in the previous loops.
+
+    return x
+
+
+def config_name(positives: Set[str], negatives: Set[str]) -> str:
+    return  ''.join([_ + '+' for _ in positives]) + \
+            ''.join([_ + '-' for _ in negatives])
+
+
+def get_all_microstates() -> Dict[str, float]:
+    microstates = {}
+    for c in combinations(positions, 3):
+        positives = {_ for _ in c}
+        negatives = positions - positives    
+        name = config_name(positives, negatives)
+        microstates[name] = U(positives, negatives)
+
+    return microstates
+
+
+def show_all_microstates(ms: Dict[str, float]) -> None:
+    keys = list(ms.keys())
+    keys.sort()
+
+    for k in keys:
+        print('U({0}) = {1}'.format(k, np.round(ms[k], 4)))
+
+
+def main():
+    ms = get_all_microstates()
+    show_all_microstates(ms)
+
+
+if __name__ == '__main__':
+    main()    
+\end{verbatim}
+
+\item Very close to any point on the spherical shell, the field is $4\pi\sigma\un$,
+where $\sigma$ is the surface charge density. Note that there is no field inside
+the shell. Therefore, the Gauss law applied to a small pillbox gives,
+\[
+\oint\vec{E}\cdot d\vec{a} = 0 + EA = 4\pi\sigma A.
+\]
+To achieve the effect of a hole, we attach a patch of surface density $-\sigma$.
+The patch will have a field $\vec{E} = -2\pi\sigma\un$ where $\un$ is always the
+outward pointing normal. After placing it on the shell, the net field at its 
+centre is $4\pi\sigma\un - 2\pi\sigma\un = 2\pi\sigma\un$, pointing outwards.
+We can also add the zero field inside the shell to $-2\pi\sigma\un$, with $\un$
+now pointing inside the shell so that the net field is once again $2\pi\sigma\un$.
+
+
 \end{enumerate}
 \end{document}

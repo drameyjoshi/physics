@@ -984,5 +984,77 @@ is also zero, we get
 \frac{Q}{q} = \frac{2^{3/4}(1 + \sqrt{2})^{3/2}}{\sqrt{2}} = 
 (1 + \sqrt{2})\left(1 + \frac{1}{\sqrt{2}}\right)^{1/2} \approx 3.15432.
 \]
+
+\item Two protons are to be embedded in the electron jelly so that the net force
+on each one of them is zero. The force on a proton will be that from the electron
+jelly and the other proton. If the proton is at a distance $r$ from the centre 
+then the proton will ``feel'' the force only due to the charge within a sphere of
+radius r. Furthermore, the force will be as if the entire charge were concentrated
+at the origin. If $\rho$ is the density of the electron jelly then the force on 
+the proton is
+\[
+\vec{F}_- = \frac{e}{r^2}\rho\frac{4\pi}{3}r^3\uv{r} = \frac{4\pi\rho e}{3}r\uv{r}.
+\]
+To nullify this force, the other proton must be along the same line. If it is also
+at the same distance $r$ from the centre, but on the other side, then
+\[
+\vec{F}_+ = \frac{e^2}{4r^2}\uv{r}.
+\]
+Now 
+\[
+\rho = \frac{-2e}{4\pi/3 a^3} = -\frac{3e}{2\pi a^3}
+\]
+so that $\vec{F}_- + \vec{F}_+ = 0$ implies
+\[
+-\frac{2e^2r}{a^3} + \frac{e^2}{4r^2} = 0 \Rightarrow r = \frac{a}{2}.
+\]
+
+\item Wherever it is possible, one should prefer to work with scalar functions.
+The energy of the charge configuration is
+\[
+U(\theta) = \frac{Qq}{a} + \frac{Qq}{a} + \frac{Q^2}{2a\cos\theta} + \frac{q^2}{2a\sin\theta}
+\]
+so that
+\[
+U\op = -\frac{q^2}{2a}\frac{\cos\theta}{\sin^2\theta} + 
+\frac{Q^2}{2a}\frac{\sin\theta}{\cos^2\theta}
+\]
+and therefore, the extremum corresponds to
+\[
+\tan^3\theta = \frac{q^2}{Q^2}.
+\]
+
+\item Align the coordinates axes such that one of the protons is at the origin
+and the other is at $(0, 0, b)$. At a point $\vec{r}$, the electric fields due
+to the two protons will be
+\begin{eqnarray*}
+\vec{E}_1 &=& \frac{e}{r^2}\uv{r} \\
+\vec{E}_2 &=& \frac{e}{|\vec{r} - b\uv{z}|^3}(\vec{r} - b\uv{z})
+\end{eqnarray*}
+so that
+\[
+\vec{E}_1\cdot\vec{E}_2 = e^2\frac{r - b\cos\theta}{r^2|\vec{r} - b\uv{z}|^3}.
+\]
+Now $|\vec{r} - b\uv{z}|^2 = (\vec{r} - b\uv{z})\cdot(\vec{r} - b\uv{z}) = r^2 + 
+b^2 - 2rb\cos\theta$ so that
+\[
+\vec{E}_1\cdot\vec{E}_2 = e^2\frac{r - b\cos\theta}{r^2(r^2 + b^2 - 2rb\cos\theta)^{3/2}}.
+\]
+Let
+\begin{eqnarray*}
+I &=& \int \vec{E}_1\cdot\vec{E}_2 dv \\
+  &=& \int_0^\infty\int_0^{\pi}\int_0^{2\pi}\vec{E}_1\cdot\vec{E}_2 r^2\sin\theta drd\theta d\phi \\
+  &=& 2\pi\int_0^\infty\int_0^\pi e^2\frac{r - b\cos\theta}{(r^2 + b^2 - 2rb\cos\theta)^{3/2}}\sin\theta drd\theta
+\end{eqnarray*}
+Let $u = r^2 + b^2 - 2rb\cos\theta$ so that $du = 2(r - b\cos\theta)dr$ and then $r=0$, $u=b^2$ so that
+\begin{eqnarray*}
+I &=& 2\pi\int_{b^2}^\infty \int_0^\pi \frac{e^2}{2}\frac{du}{u^{3/2}} \sin\theta d\theta \\
+  &=& \pi e^2 \frac{2}{b}\int_0^\pi \sin\theta d\theta \\
+  &=& \frac{4\pi e^2}{b}
+\end{eqnarray*}
+so that 
+\[
+\frac{1}{4\pi}\int \vec{E}_1\cdot\vec{E}_2 dv = \frac{e^2}{b}.
+\]
 \end{enumerate}
 \end{document}

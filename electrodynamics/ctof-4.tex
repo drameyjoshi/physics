@@ -859,21 +859,64 @@ However,
 = \delta\partial_\mu A_\nu - \delta\partial_\nu A_\mu.
 \end{equation}
 so that
-\begin{equation}\label{c4e79}
-\delta\Lambda = -\frac{1}{8\pi}F^{\mu\nu}(\delta\partial_\mu A_\nu - \delta\partial_\nu A_\mu)
-\end{equation}
-Interchanging indices,
-\[
-\delta\Lambda = -\frac{1}{8\pi}F^{\nu\mu}(\delta\partial_\nu A_\mu - \delta\partial_\mu A_\nu).
-\]
-Using the anti-symmetric nature of the electromagnetic stress tensor,
+\begin{eqnarray}
+\delta\Lambda &=& -\frac{1}{8\pi}F^{\mu\nu}(\delta\partial_\mu A_\nu - \delta\partial_\nu A_\mu) \nonumber \\
+8\pi\delta\Lambda &=& -F^{\mu\nu}\delta\partial_\mu A_\nu + F^{\mu\nu}\delta\partial_\nu A_\mu \nonumber \\
+ &=& -F^{\mu\nu}\delta\partial_\mu A_\nu + F^{\nu\mu}\delta\partial_\mu A_\nu \nonumber \\
+ &=& -F^{\mu\nu}\delta\partial_\mu A_\nu - F^{\mu\nu}\delta\partial_\mu A_\nu \nonumber \\
+ &=& -2F^{\mu\nu}\delta\partial_\mu A_\nu \label{c4e79}
+\end{eqnarray}
+so that
 \begin{equation}\label{c4e80}
-\delta\Lambda = \frac{1}{8\pi}F^{\mu\nu}(\delta\partial_\nu A_\mu - \delta\partial_\mu A_\nu)
+\pdt{\Lambda}{A_{\nu;\mu}} = -\frac{1}{4\pi}F^{\mu\nu}.
 \end{equation}
-Adding \eqref{c4e79} and \eqref{c4e80}, we get
+Using this equation in \eqref{c4e59}, we get
 \begin{equation}\label{c4e81}
-\delta\Lambda = \frac{1}{4\pi}F^{\mu\nu}\delta\partial_\mu A_\nu.
+\tensor{T}{_\nu^\mu} = -\frac{1}{4\pi}A_{\alpha;\nu}F^{\mu\alpha} +
+\frac{1}{16\pi}\tensor{\delta}{_\nu^\mu} F_{\alpha\beta}F^{\alpha\beta}.
 \end{equation}
-
+Multiplying by $g^{\nu\rho}$,
+\begin{eqnarray}
+g^{\nu\rho}\tensor{T}{_\nu^\mu} &=& -\frac{1}{4\pi}g^{\nu\rho}A_{\alpha;\nu}F^{\mu\alpha} +
+\frac{1}{16\pi}g^{\nu\rho}\tensor{\delta}{_\nu^\mu} F_{\alpha\beta}F^{\alpha\beta} \nonumber \\
+T^{\rho\mu} &=& -\frac{1}{4\pi}\pdt{A_\alpha}{x_\rho}F^{\mu\alpha} + 
+\frac{1}{16\pi}\tensor{\delta}{^\rho^\mu} F_{\alpha\beta}F^{\alpha\beta} \nonumber \\
+ &=& -\frac{1}{4\pi}\pdt{A^\alpha}{x_\rho}\tensor{F}{^\mu_\alpha} + 
+\frac{1}{16\pi}\tensor{\delta}{^\rho^\mu} F_{\alpha\beta}F^{\alpha\beta} \label{c4e82}
+\end{eqnarray}
+From equation \eqref{c4e37}, after multiplying by an appropriate metric tensor,
+\[
+\pdt{\tensor{F}{^\mu_\alpha}}{x_\alpha} = -\frac{4\pi}{c}j^\mu.
+\]
+In absence of charges, it becomes
+\[
+\pdt{\tensor{F}{^\mu_\alpha}}{x_\alpha} = 0
+\]
+so that
+\begin{equation}\label{c4e83}
+\frac{1}{4\pi}\frac{\partial}{\partial x_\alpha}(A^\rho\tensor{F}{^\mu_\alpha}) = 
+\frac{1}{4\pi}\pdt{A^\rho}{x_\alpha}\tensor{F}{^\mu_\alpha}
+\end{equation}
+From equations \eqref{c4e65} and \eqref{c4e69}, we can always add a term like 
+the lhs of above equation to the stress tensor without altering its physical 
+content. We will add the term to make the stress tensor symmmetric. Thus, we 
+write \eqref{c4e82} as
+\begin{eqnarray}
+T^{\rho\mu} &=& -\frac{1}{4\pi}\pdt{A^\alpha}{x_\rho}\tensor{F}{^\mu_\alpha} + 
+\frac{1}{16\pi}\tensor{\delta}{^\rho^\mu} F_{\alpha\beta}F^{\alpha\beta} +
+\frac{1}{4\pi}\frac{\partial}{\partial x_\alpha}(A^\rho\tensor{F}{^\mu_\alpha}) \nonumber \\
+ &=& -\frac{1}{4\pi}\pdt{A^\alpha}{x_\rho}\tensor{F}{^\mu_\alpha} + 
+\frac{1}{16\pi}\tensor{\delta}{^\rho^\mu} F_{\alpha\beta}F^{\alpha\beta} +
+\frac{1}{4\pi}\pdt{A^\rho}{x_\alpha}\tensor{F}{^\mu_\alpha} \nonumber \\
+ &=& \frac{1}{4\pi}\left(\pdt{A^\rho}{x_\alpha} - \pdt{A^\alpha}{x_\rho}\right)
+ \tensor{F}{^\mu_\alpha} + 
+ \frac{1}{16\pi}\tensor{\delta}{^\rho^\mu} F_{\alpha\beta}F^{\alpha\beta} \nonumber \\
+ &=& \frac{1}{4\pi}F^{\alpha\rho}\tensor{F}{^\mu_\alpha} +
+  \frac{1}{16\pi}\tensor{\delta}{^\rho^\mu} F_{\alpha\beta}F^{\alpha\beta} \nonumber \\
+ &=& -\frac{1}{4\pi}F^{\rho\alpha}\tensor{F}{^\mu_\alpha} +
+  \frac{1}{16\pi}\tensor{\delta}{^\rho^\mu} F_{\alpha\beta}F^{\alpha\beta} \label{c4e84}
+\end{eqnarray}
+Equation \eqref{c4e84} is the appropriate form of the energy-momentum tensor for
+the electromagnetic field.
 \end{enumerate}
 

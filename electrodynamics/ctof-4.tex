@@ -774,5 +774,106 @@ L^{\mu\nu}(t_1) - L^{\mu\nu}(t_2) = \frac{1}{c}\int (T^{\nu\mu} - T^{\mu\nu})d\O
 \end{equation}
 If $L^{\mu\nu}(t_1) = L^{\mu\nu}(t_2)$ then we must have $T^{\mu\nu} = T^{\nu\mu}$. 
 
+\item We once again choose to the surface of integration in \eqref{c4e64} as the
+one whose normal is along the $x^0$ axis so that
+\[
+p^\nu = \frac{1}{c}\int T^{\nu\mu}dS_0 = \int{1}{c}\int T^{\nu 0}dV.
+\]
+Since $p^\nu$ is the 4-momentum of the system, we call $W = T^{00}$ the energy
+density and $T^{01}/c, T^{02}/c, T^{03}/c$ as the momentum density of the system.
+
+\item Consider the conservation equation \eqref{c4e61} for $\nu = 0$. It is
+\[
+\frac{1}{c}\pdt{T^{00}}{t} + \pdt{T^{0i}}{x^i} = 0.
+\]
+If we integrate it over a volume $V$, 
+\[
+\frac{1}{c}\frac{\partial}{\partial t}\int_V T^{00}dV = -\int\pdt{T^{0i}}{x^i}dV
+\]
+Using the Gauss theorem in 3-dimensions on the rhs we get
+\[
+\frac{\partial}{\partial t}\int_V T^{00}dV = -c\oint T^{0i}df_i.
+\]
+Thus, the components $cT^{0i}$ are the also the flux of energy through the closed
+surface bounding the volume $V$. In the previous point we identifier $T^{0i} = 
+cp^i$. Thus, $c^2p^i$ can be identified as components of flux of energy.
+
+\item Now consider the conservation equation \eqref{c4e62} for the space
+components,
+\[
+\frac{1}{c}\pdt{T^{0i}}{t} + \pdt{T^{ij}}{x^j} = 0.
+\]
+Repeating the manipulations in the previous point, we get
+\[
+\frac{\partial}{\partial t}\int_V \frac{T^{0i}}{c} dt = -\oint T^{ij}df_j.
+\]
+However, $T^{0i}/c = p^i$, so that
+\[
+\frac{\partial}{\partial t}\int_V p^i dt = -\oint T^{ij}df_j.
+\]
+The lhs is the rate of change of momentum in the volume. Therefore, the rhs must
+be the total force on it. The force is expressed as a surface integral. Therefore,
+we identify the integrand as the negative of the stress tensor $\sigma^{ij}$. The
+stress tensor is thus a flux of momentum. We can write the above equation as
+\begin{equation}\label{c4e74}
+\frac{\partial}{\partial t}\int_V p^i dt = \oint \sigma^{ij}df_j.
+\end{equation}
+
+$T^{ij}$ is the flux of $p^i$ through surface perpendicular to the $x^j$ axis. In
+similar vain, $\sigma^{ij}$ is the normal force on a surface perpendicular to the
+$x^i$ axis and the $i$-th component of the shear force acting in the $x^j$ 
+direction.
+
+The physical nature of the energy-momentum tensor reveals itself if we write it as
+\begin{equation}\label{c4e75}
+T^{\mu\nu} = \begin{bmatrix}
+W & p_x & p_y & p_z \\
+p_x & -\sigma_{xx} & -\sigma_{xy} & \sigma_{xz} \\
+p_y & -\sigma_{yx} & -\sigma_{yy} & \sigma_{yz} \\
+p_z & -\sigma_{zx} & -\sigma_{yy} & \sigma_{zz}
+\end{bmatrix}.
+\end{equation}
+Note that, $p_x, p_y, p_z$ are components of the 3-momentum for which we do not
+distinguish between covariant and contravariant components. Likewise for the
+components of the stress tensor in three dimensions.
+
+\item We will now apply the theory developed for a general Lagrangian density
+in points 19 onwards to the electromagnetic field for which
+\begin{equation}\label{c4e76}
+\Lambda(A^\mu) = -\frac{1}{16\pi}F^{\mu\nu}F_{\mu\nu}.
+\end{equation}
+To get an expression for the stress tensor of \eqref{c4e59}, we need the 
+derivative of $\Lambda$ with respect to 
+\[
+A_{\alpha; \mu} = \pdt{A_\alpha}{x^\mu}.
+\]
+A tedious and error prone method could be write down all $16$ terms on the rhs of
+\eqref{c4e78}. A more convenient method is to get a variation of $\Lambda$. That is,
+\begin{equation}\label{c4e77}
+\delta\Lambda = -\frac{1}{16\pi}\left((\delta F^{\mu\nu})F_{\mu\nu} + 
+F^{\mu\nu}(\delta F_{\mu\nu})\right) = -\frac{1}{8\pi}F^{\mu\nu}\delta F_{\mu\nu}.
+\end{equation}
+However,
+\begin{equation}\label{c4e78}
+\delta F_{\mu\nu} = \delta(\partial_\mu A_\nu - \partial_\nu A_\mu)
+= \delta\partial_\mu A_\nu - \delta\partial_\nu A_\mu.
+\end{equation}
+so that
+\begin{equation}\label{c4e79}
+\delta\Lambda = -\frac{1}{8\pi}F^{\mu\nu}(\delta\partial_\mu A_\nu - \delta\partial_\nu A_\mu)
+\end{equation}
+Interchanging indices,
+\[
+\delta\Lambda = -\frac{1}{8\pi}F^{\nu\mu}(\delta\partial_\nu A_\mu - \delta\partial_\mu A_\nu).
+\]
+Using the anti-symmetric nature of the electromagnetic stress tensor,
+\begin{equation}\label{c4e80}
+\delta\Lambda = \frac{1}{8\pi}F^{\mu\nu}(\delta\partial_\nu A_\mu - \delta\partial_\mu A_\nu)
+\end{equation}
+Adding \eqref{c4e79} and \eqref{c4e80}, we get
+\begin{equation}\label{c4e81}
+\delta\Lambda = \frac{1}{4\pi}F^{\mu\nu}\delta\partial_\mu A_\nu.
+\end{equation}
+
 \end{enumerate}
 

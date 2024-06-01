@@ -880,9 +880,9 @@ Multiplying by $g^{\nu\rho}$,
 g^{\nu\rho}\tensor{T}{_\nu^\mu} &=& -\frac{1}{4\pi}g^{\nu\rho}A_{\alpha;\nu}F^{\mu\alpha} +
 \frac{1}{16\pi}g^{\nu\rho}\tensor{\delta}{_\nu^\mu} F_{\alpha\beta}F^{\alpha\beta} \nonumber \\
 T^{\rho\mu} &=& -\frac{1}{4\pi}\pdt{A_\alpha}{x_\rho}F^{\mu\alpha} + 
-\frac{1}{16\pi}\tensor{\delta}{^\rho^\mu} F_{\alpha\beta}F^{\alpha\beta} \nonumber \\
+\frac{1}{16\pi}\tensor{g}{^\rho^\mu} F_{\alpha\beta}F^{\alpha\beta} \nonumber \\
  &=& -\frac{1}{4\pi}\pdt{A^\alpha}{x_\rho}\tensor{F}{^\mu_\alpha} + 
-\frac{1}{16\pi}\tensor{\delta}{^\rho^\mu} F_{\alpha\beta}F^{\alpha\beta} \label{c4e82}
+\frac{1}{16\pi}\tensor{g}{^\rho^\mu} F_{\alpha\beta}F^{\alpha\beta} \label{c4e82}
 \end{eqnarray}
 From equation \eqref{c4e37}, after multiplying by an appropriate metric tensor,
 \[
@@ -901,22 +901,155 @@ From equations \eqref{c4e65} and \eqref{c4e69}, we can always add a term like
 the lhs of above equation to the stress tensor without altering its physical 
 content. We will add the term to make the stress tensor symmmetric. Thus, we 
 write \eqref{c4e82} as
-\begin{eqnarray}
+\begin{eqnarray*}
 T^{\rho\mu} &=& -\frac{1}{4\pi}\pdt{A^\alpha}{x_\rho}\tensor{F}{^\mu_\alpha} + 
-\frac{1}{16\pi}\tensor{\delta}{^\rho^\mu} F_{\alpha\beta}F^{\alpha\beta} +
-\frac{1}{4\pi}\frac{\partial}{\partial x_\alpha}(A^\rho\tensor{F}{^\mu_\alpha}) \nonumber \\
+\frac{1}{16\pi}\tensor{g}{^\rho^\mu} F_{\alpha\beta}F^{\alpha\beta} +
+\frac{1}{4\pi}\frac{\partial}{\partial x_\alpha}(A^\rho\tensor{F}{^\mu_\alpha}) \\
  &=& -\frac{1}{4\pi}\pdt{A^\alpha}{x_\rho}\tensor{F}{^\mu_\alpha} + 
-\frac{1}{16\pi}\tensor{\delta}{^\rho^\mu} F_{\alpha\beta}F^{\alpha\beta} +
-\frac{1}{4\pi}\pdt{A^\rho}{x_\alpha}\tensor{F}{^\mu_\alpha} \nonumber \\
+\frac{1}{16\pi}\tensor{g}{^\rho^\mu} F_{\alpha\beta}F^{\alpha\beta} +
+\frac{1}{4\pi}\pdt{A^\rho}{x_\alpha}\tensor{F}{^\mu_\alpha} \\
  &=& \frac{1}{4\pi}\left(\pdt{A^\rho}{x_\alpha} - \pdt{A^\alpha}{x_\rho}\right)
  \tensor{F}{^\mu_\alpha} + 
- \frac{1}{16\pi}\tensor{\delta}{^\rho^\mu} F_{\alpha\beta}F^{\alpha\beta} \nonumber \\
+ \frac{1}{16\pi}\tensor{g}{^\rho^\mu} F_{\alpha\beta}F^{\alpha\beta} \\
  &=& \frac{1}{4\pi}F^{\alpha\rho}\tensor{F}{^\mu_\alpha} +
-  \frac{1}{16\pi}\tensor{\delta}{^\rho^\mu} F_{\alpha\beta}F^{\alpha\beta} \nonumber \\
- &=& -\frac{1}{4\pi}F^{\rho\alpha}\tensor{F}{^\mu_\alpha} +
-  \frac{1}{16\pi}\tensor{\delta}{^\rho^\mu} F_{\alpha\beta}F^{\alpha\beta} \label{c4e84}
-\end{eqnarray}
+  \frac{1}{16\pi}\tensor{g}{^\rho^\mu} F_{\alpha\beta}F^{\alpha\beta}
+\end{eqnarray*}
+so that
+\begin{equation}\label{c4e84}
+T^{\rho\mu} = \frac{1}{4\pi}\left(-F^{\rho\alpha}\tensor{F}{^\mu_\alpha} +
+\frac{1}{4}g^{\rho\mu}F_{\alpha\beta}F^{\alpha\beta}\right)
+\end{equation}
 Equation \eqref{c4e84} is the appropriate form of the energy-momentum tensor for
 the electromagnetic field.
+From equations \eqref{c3e75} and \eqref{c3e77}
+\begin{eqnarray*}
+F_{\mu\nu} &=& \begin{bmatrix} 0 & E_x & E_y & E_z \\
+-E_x & 0 & -H_z & H_y \\
+-E_y & H_z & 0 & -H_x \\
+-E_z & -H_y & H_x & 0
+\end{bmatrix} \\
+F^{\mu\nu} &=& \begin{bmatrix} 0 & -E_x & -E_y & -E_z \\
+E_x & 0 & -H_z & H_y \\
+E_y & H_z & 0 & -H_x \\
+E_z & -H_y & H_x & 0
+\end{bmatrix}
+\end{eqnarray*}
+Since $\tensor{F}{^\mu_\nu} = F^{\mu\rho}g_{\rho\nu}$,
+\begin{eqnarray}
+\tensor{F}{^\mu_\nu} &=& \begin{bmatrix} 0 & E_x & E_y & E_z \\
+-E_x & 0 & -H_z & H_y \\
+-E_y & H_z & 0 & -H_x \\
+-E_z & -H_y & H_x & 0
+\end{bmatrix}\begin{bmatrix}1 & 0 & 0 & 0 \\
+0 & -1 & 0 & 0 \\
+0 & 0 & -1 & 0 \\
+0 & 0 & 0 & -1
+\end{bmatrix} \nonumber \\
+ &=& \begin{bmatrix}0 & -E_x & -E_y & -E_z \\
+ -E_x & 0 & H_z & -H_y \\
+ -E_y & -H_z & 0 & H_x \\
+ -E_z & H_y & -H_x & 0 
+ \end{bmatrix} \label{c4e85}
+\end{eqnarray}
+so that
+\[
+F^{\rho\alpha}\tensor{F}{^\mu_\alpha} = \begin{bmatrix}
+0 & -E_x & -E_y & -E_z \\
+E_x & 0 & -H_z & H_y \\
+E_y & H_z & 0 & -H_x \\
+E_z & -H_y & H_x & 0
+\end{bmatrix}\begin{bmatrix}0 & -E_x & -E_y & -E_z \\
+ -E_x & 0 & H_z & -H_y \\
+ -E_y & -H_z & 0 & H_x \\
+ -E_z & H_y & -H_x & 0 
+ \end{bmatrix}
+\]
+or
+\begin{equation}\label{c4e86}
+F^{\rho\alpha}\tensor{F}{^\mu_\alpha} =
+\begin{bmatrix} E^2 & E_yH_z - E_zH_y & -E_xH_z + E_zH_x & E_xH_y  - E_yH_x \\
+ E_yH_z - E_zH_y & -E_x^2 + H_z^2 + H_y^2 & -E_xE_y -H_xH_y & -E_xE_z -H_xH_z \\
+ E_zH_x - E_xH_z & -E_xE_y - H_xH_y & -E_y^2 + H_z^2 + H_x^2 & -E_yE_z - H_yH_z \\
+ E_xH_y - E_yH_x & -E_xE_z -H_xH_z & -E_yE_z - H_yH_z & -E_z^2 + H_y^2 + H_x^2
+ \end{bmatrix}
+\end{equation}
+Similarly,
+\[
+F_{\mu\nu}F^{\mu\nu} = \begin{bmatrix} 0 & E_x & E_y & E_z \\
+-E_x & 0 & -H_z & H_y \\
+-E_y & H_z & 0 & -H_x \\
+-E_z & -H_y & H_x & 0
+\end{bmatrix}\begin{bmatrix} 0 & -E_x & -E_y & -E_z \\
+E_x & 0 & -H_z & H_y \\
+E_y & H_z & 0 & -H_x \\
+E_z & -H_y & H_x & 0
+\end{bmatrix}
+\]
+or
+\begin{equation}\label{c4e87}
+F^{\mu\nu}F_{\mu\nu} = 2(-E^2 + H^2).
+\end{equation}
+and
+\begin{equation}\label{c4e88}
+\frac{1}{4}F^{\mu\nu}F_{\mu\nu} = \frac{H^2}{2} - \frac{E^2}{2}.
+\end{equation}
+and \eqref{c4e84} becomes (note that the second term in \eqref{c4e84} is a 
+diagonal matrix)
+\begin{eqnarray*}
+T^{00} &=& \frac{E^2 + H^2}{2\pi} \\
+T^{01} &=& \frac{E_yH_z - E_zH_y}{4\pi} \\
+T^{02} &=& \frac{E_zH_x - E_xH_z}{4\pi} \\
+T^{03} &=& \frac{E_xH_y - E_yH_x}{4\pi} \\
+T^{11} &=& \frac{E_x^2 - E_y^2 - E_z^2 + H_x^2 - H_y^2 - H_z^2}{8\pi} \\
+T^{12} &=& -\frac{E_xE_y + H_xH_y}{4\pi} \\
+T^{13} &=& -\frac{E_xE_z + H_xH_z}{4\pi} \\
+T^{22} &=& \frac{-E_x^2 + E_y^2 - E_z^2 - H_x^2 + H_y^2 - H_z^2}{8\pi} \\
+T^{23} &=& -\frac{E_yE_z + H_yH_z}{4\pi} \\
+T^{33} &=& \frac{-E_x^2 - E_y^2 + E_z^2 - H_x^2 - H_y^2 + H_z^2}{8\pi}
+\end{eqnarray*}
+The remaining terms need not be computed because of the symmetry of $T^{\mu\nu}$.
+From \eqref{c4e50}, we observe that $T^{00} = W$, the energy density and from
+\eqref{c4e45}, $T^{0i} = S_i/c$. Further, if
+\begin{equation}\label{c4e89}
+\sigma_{ij} = \frac{1}{4\pi}\left(E_iE_j + H_iH_j - \frac{\delta_{ij}}{2}(E^2+H^2)\right).
+\end{equation}
+is the Maxwell stress tensor then
+\begin{equation}\label{c4e90}
+T^{\mu\nu} = \begin{bmatrix}
+W & S_x/c & S_y/c & S_z/c \\
+S_x/c & -\sigma_{xx} & -\sigma_{xy} & -\sigma_{xz} \\
+S_y/c & -\sigma_{yx} & -\sigma_{yy} & -\sigma_{yz} \\
+S_z/c & -\sigma_{zx} & -\sigma_{zy} & -\sigma_{zz}
+\end{bmatrix}
+\end{equation}
+
+\item Analogously to \eqref{c4e20}, we define the mass density as
+\begin{equation}\label{c4e91}
+\rho_m = \sum_a m_a\delta(\vec{r} - \vec{r}_a)
+\end{equation}
+so that the 4-momentum density is $\rho_m c u^\mu$. This is also $T^{0\mu}/c$,
+where $T^{\mu\nu}$ is the energy-momentum tensor of a system of particles. Thus,
+\begin{equation}\label{c4e92}
+T^{0\mu} = \rho_m c^2u^\mu.
+\end{equation}
+Now, $dx^\nu = (cdt, dx^1, dx^2, dx^3)$ so that
+\begin{equation}\label{c4e93}
+c = \td{x^0}{t}
+\end{equation} 
+and hence, from \eqref{c4e92}
+\begin{equation}\label{c4e94}
+T^{0\mu} = \rho_m c\td{x^\mu}{s}\td{x^0}{t}.
+\end{equation}
+We generalise this to
+\[
+T^{\mu\nu} =  \rho_m c\td{x^\mu}{s}\td{x^\nu}{t} = 
+\rho_m c\td{x^\mu}{s}\td{x^\nu}{s}\td{s}{t}
+\]
+or
+\begin{equation}\label{c4e95}
+T^{\mu\nu} = \rho_m cu^\mu u^\nu \td{s}{t}.
+\end{equation}
+This tensor is symmetric and it is the energy-momentum tensor for non-interacting
+particles.
 \end{enumerate}
 

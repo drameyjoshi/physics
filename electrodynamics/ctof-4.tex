@@ -1051,5 +1051,124 @@ T^{\mu\nu} = \rho_m cu^\mu u^\nu \td{s}{t}.
 \end{equation}
 This tensor is symmetric and it is the energy-momentum tensor for non-interacting
 particles.
+
+\item What does energy/momentum conservation mean for the tensor of \eqref{c4e95}?
+To understand that, we first write \eqref{c4e95} as
+\begin{equation}\label{c4e96}
+T^{\mu\nu} = \rho_m c u^\mu\td{x^\nu}{t}
+\end{equation}
+so that
+\begin{eqnarray*}
+\pdt{T^{\mu\nu}}{x^\nu} &=& cu^\mu\frac{\partial}{\partial x^\nu}\left(\rho_m\td{x^\nu}{t}\right)
++ \rho_m c\td{x^\nu}{t}\pdt{u^\mu}{x^\nu} \\
+ &=& cu^\mu\frac{\partial}{\partial x^\nu}\left(\rho_m\td{x^\nu}{t}\right) + \rho_m c\td{u^\mu}{t}
+\end{eqnarray*}
+The term
+\[
+\frac{\partial}{\partial x^\nu}\left(\rho_m\td{x^\nu}{t}\right)
+\]
+must vanish if the masses are conserved. In this case, since we assumed to be
+non-interacting, they are indeed conserved so that
+\begin{equation}\label{c4e97}
+\pdt{T^{\mu\nu}}{x^\nu} = \rho_m c\td{u^\mu}{t}
+\end{equation}
+
+\item We will repeat this exercise for the tensor of \eqref{c4e84}.
+\[
+T^{\rho\mu} = \frac{1}{4\pi}\left(-F^{\rho\alpha}\tensor{F}{^\mu_\alpha} +
+\frac{1}{4}g^{\rho\mu}F_{\alpha\beta}F^{\alpha\beta}\right)
+\]
+which is same as
+\[
+\tensor{T}{^\rho_\mu} = \frac{1}{4\pi}\left(-F^{\rho\alpha}F_{\mu\alpha} +
+\frac{1}{4}\tensor{g}{^\rho_\mu}F_{\alpha\beta}F^{\alpha\beta}\right).
+\]
+Therefore,
+\[
+4\pi\pdt{\tensor{T}{^\rho_\mu}}{x^\rho} = -\pdt{F^{\rho\alpha}}{x^\rho}F_{\mu\alpha}
+- F^{\rho\alpha}\pdt{F_{\mu\alpha}}{x^\rho} + \frac{1}{2}F^{\alpha\beta}\pdt{F_{\alpha\beta}}{x^\rho}
+\]
+Using \eqref{c4e5} in the last term,
+\[
+4\pi\pdt{\tensor{T}{^\rho_\mu}}{x^\rho} = -\pdt{F^{\rho\alpha}}{x^\rho}F_{\mu\alpha}
+- F^{\rho\alpha}\pdt{F_{\mu\alpha}}{x^\rho} - \frac{\tensor{g}{^\rho_\mu}}{2}
+ F^{\alpha\beta}\left(\pdt{F_{\beta\rho}}{x^\alpha} + \pdt{F_{\rho\alpha}}{x^\beta}\right)
+\]
+Using \eqref{c4e37} in the first term,
+\[
+4\pi\pdt{\tensor{T}{^\rho_\mu}}{x^\rho} = -\frac{4\pi}{c}j^\alpha F_{\mu\alpha}
+- F^{\rho\alpha}\pdt{F_{\mu\alpha}}{x^\rho} - \frac{\tensor{g}{^\rho_\mu}}{2}F^{\alpha\beta}
+\left(\pdt{F_{\beta\rho}}{x^\alpha} + \pdt{F_{\rho\alpha}}{x^\beta}\right)
+\]
+or
+\[
+4\pi\pdt{\tensor{T}{^\rho_\mu}}{x^\rho} = -\frac{4\pi}{c}j^\alpha F_{\mu\alpha}
+- F^{\rho\alpha}\pdt{F_{\mu\alpha}}{x^\rho} + \frac{\tensor{g}{^\rho_\mu}}{2}
+\left(F^{\alpha\beta}\pdt{F_{\rho\beta}}{x^\alpha} + F^{\beta\alpha}\pdt{F_{\rho\alpha}}{x^\beta}\right).
+\]
+Interchange the bound indices $\alpha$ and $\beta$ in the last term,
+\[
+4\pi\pdt{\tensor{T}{^\rho_\mu}}{x^\rho} = -\frac{4\pi}{c}j^\alpha F_{\mu\alpha}
+- F^{\rho\alpha}\pdt{F_{\mu\alpha}}{x^\rho} + \frac{\tensor{g}{^\rho_\mu}}{2}
+\left(F^{\alpha\beta}\pdt{F_{\rho\beta}}{x^\alpha} + F^{\alpha\beta}\pdt{F_{\rho\beta}}{x^\alpha}\right).
+\]
+That is,
+\[
+4\pi\pdt{\tensor{T}{^\rho_\mu}}{x^\rho} = -\frac{4\pi}{c}j^\alpha F_{\mu\alpha}
+- F^{\rho\alpha}\pdt{F_{\mu\alpha}}{x^\rho} + \tensor{g}{^\rho_\mu}
+F^{\alpha\beta}\pdt{F_{\rho\beta}}{x^\alpha}
+\]
+In the second term on the rhs, rename $\rho \rightarrow \alpha, \alpha \rightarrow
+\beta$ so that
+\[
+4\pi\pdt{\tensor{T}{^\rho_\mu}}{x^\rho} = -\frac{4\pi}{c}j^\alpha F_{\mu\alpha}
+- F^{\alpha\beta}\pdt{F_{\mu\beta}}{x^\alpha} + \tensor{g}{^\rho_\mu}
+F^{\alpha\beta}\pdt{F_{\rho\beta}}{x^\alpha}
+\]
+Since $\tensor{g}{^\rho_\mu} F_{\rho\beta} = F_{\mu\beta}$,
+\[
+4\pi\pdt{\tensor{T}{^\rho_\mu}}{x^\rho} = -\frac{4\pi}{c}j^\alpha F_{\mu\alpha}
+- F^{\alpha\beta}\pdt{F_{\mu\beta}}{x^\alpha} + F^{\alpha\beta}\pdt{F_{\mu\beta}}{x^\alpha}
+\]
+or
+\begin{equation}\label{c4e98}
+\pdt{\tensor{T}{^\rho_\mu}}{x^\rho} = -\frac{1}{c}j^\alpha F_{\mu\alpha}
+\end{equation}
+
+\item We can generalise the equation of motion \eqref{c3e74} for continua as
+\begin{equation}\label{c4e99}
+\rho_m c\td{u^\mu}{s} = \frac{\rho}{c}F^{\mu\nu}u_\nu
+\end{equation}
+that is,
+\[
+\rho_m c\td{u^\mu}{t}\td{s}{t} = \frac{\rho}{c}F^{\mu\nu}u_\nu.
+\]
+Combining this with \eqref{c4e97}, we get
+\begin{equation}\label{c4e100}
+\pdt{T^{(m)\mu\nu}}{x^\nu}\td{s}{t} = \frac{\rho}{c}F^{\mu\nu}u_\nu,
+\end{equation}
+where we added the superscript $(m)$ to differentiate the energy momentum tensor
+for a system of masses from that of the electromagnetic field. Recall that
+\[
+u^\nu = \td{x^\nu}{s} = \td{x^\nu}{t}\td{s}{t},
+\]
+so that \eqref{c4e100} becomes
+\begin{equation}\label{c4e101}
+\pdt{T^{(m)\mu\nu}}{x^\nu} = \frac{\rho}{c}F^{\mu\nu}\td{x_\nu}{t}.
+\end{equation}
+Using \eqref{c4e23},
+\begin{equation}\label{c4e102}
+\pdt{T^{(m)\mu\nu}}{x^\nu} = \frac{1}{c}F^{\mu\nu}j_\nu.
+\end{equation}
+An equivalent form of this equation is
+\begin{equation}\label{c4e103}
+\pdt{\tensor{T}{^{(m)\rho}_\mu}}{x^\rho} = \frac{1}{c}F_{\mu\alpha}j^\alpha.
+\end{equation}
+Adding equation \eqref{c4e98} and \eqref{c4e103} gives
+\begin{equation}\label{c4e104}
+\frac{\partial}{\partial x^\mu}\left(\tensor{T}{^\rho_\mu} + \tensor{T}{^{(m)\rho}_\mu}\right) = 0.
+\end{equation}
+Thus the combined energy momentum tensor $\tensor{T}{^\rho_\mu} + \tensor{T}{^{(m)\rho}_\mu}$
+satisfies the conservation equation \eqref{c4e61}.
 \end{enumerate}
 

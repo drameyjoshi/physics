@@ -1,5 +1,5 @@
 \documentclass{article}
-\usepackage{amsmath, graphicx}
+\usepackage{amsmath, graphicx, xcolor}
 \include{common}
 \title{Electrostatics - Charges and Fields}
 \author{Amey Joshi}
@@ -457,35 +457,10 @@ which is same as the expression for the electric field due to an infinitely long
 wire carrying a charge with uniform linear density $\lambda$.
 
 Now consider an pipe of a square cross section. The field inside continues to be
-zero for the same reason. The field outside will no longer be symmetric and flux
-integral will be slightly harder to evaluate. There are two cases:
-\begin{itemize}
-\item Points for which the normal to the charged pipe is perpendicular to one of
-the flat surfaces:
-\[
-\oint\vec{E}\cdot d\vec{a} = 4\pi q \Rightarrow Esl = 4\pi\sigma l^2 \Rightarrow
-E = \frac{4\pi\sigma l}{s},
-\]
-where the flux integral is calculated over a square pipe of ``diameter'' $2s$ and
-length $l$. The field point is at a distance $s$ from the charged pipe's axis. 
-Once again, the linear charge density can be defined as 
-\[
-\lambda = \sigma l
-\]
-so that $E = 4\pi\lambda/s$. 
-
-\item For a point along the diagonal of the charge pipe, the field will be
-\[
-\vec{E} = \begin{cases}
-\sigma(\uv{x} + \uv{y}) \text{ in the 1st quadrant.} \\
-\sigma(-\uv{x} + \uv{y}) \text{ in the 2nd quadrant.} \\
--\sigma(\uv{x} + \uv{y}) \text{ in the 3rd quadrant.} \\
-\sigma(\uv{x} - \uv{y}) \text{ in the 4th quadrant.}
-\end{cases}
-\]
-\end{itemize}
-The field is thus \emph{not} the same as the field on a uniformly charged infinite
-wire along the $z$ axis.
+zero for the same reason. The field will be zero inside but the field outside will
+not be depend only on $s$, the distance from the axis but will also depend on the
+azimuthal angle. Therefore, the field will \emph{not} be line a uniformly charge
+long thin wire.
 
 Some remarks:
 \begin{itemize}
@@ -496,6 +471,7 @@ the origin. In fact, it has factors with power $r^{-n}$, where $n > 2$.
 slight deviation of the sun from perfect sphere makes it field have factors other
 than those with $r^{-2}$ and they lead to measurable effects on planetary orbits.
 \end{itemize}
+
 
 \item The electric field at any point in the atom is
 \[

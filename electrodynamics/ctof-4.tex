@@ -1274,5 +1274,85 @@ masses and are
 \[
 \sum_a \int\frac{E_a^2 + H_a^2}{8\pi}dV.
 \]
+
+\item We will not examine how the energy momentum tensor looks for a continuum.
+Referring to the form in \eqref{c4e90}, in the frame of reference in which the
+continuum is at rest,
+\begin{equation}\label{c4e119}
+\sigma_{ij} = -p\delta_{ij},
+\end{equation}
+where $p$ is the pressure on the body. This equation is always true for fluids
+but is approximately true for solids. The energy momentum tensor then becomes
+\begin{equation}\label{c4e120}
+T^{\mu\nu} = \begin{bmatrix}\mathcal{E} & 0 & 0 & 0 \\
+0 & p & 0 & 0 \\
+0 & 0 & p & 0 \\
+0 & 0 & 0 & p
+\end{bmatrix}
+\end{equation}
+In the rest frame of reference, the 4-velocity of a particle is $u^\mu = (1, 0, 0, 0)$
+so that an expression of the form
+\begin{equation}\label{c4e121}
+T^{\mu\nu} = (p + \mathcal{E})u^\mu u^\nu - p\delta^{\mu\nu}
+\end{equation} 
+reduces to \eqref{c4e120} in the rest frame. In mixed components, this equation
+becomes
+\begin{equation}\label{c4e122}
+\tensor{T}{_\mu^\nu} = (p + \mathcal{E})u_\mu u^\nu - p\tensor{\delta}{_\mu^\nu}.
+\end{equation} 
+
+Now 
+\[
+u^\mu = \gamma(1, \vec{v})
+\]
+so that
+\[
+W = T^{00} = (p + \mathcal{E})u^0 u^0 - p = \gamma^2(p + \mathcal{E}) - p
+= \frac{p + \mathcal{E}}{1 - \beta^2} - p
+\]
+or
+\begin{equation}\label{c4e123}
+W = \frac{\mathcal{E} + p\beta^2}{1 - \beta^2} = \gamma(\mathcal{E} + p\beta^2).
+\end{equation}
+Similarly,
+\[
+\frac{\vec{S}}{c} = \frac{(p + \mathcal{E})\vec{\beta}}{1 - \beta^2}
+\]
+so that
+\begin{equation}\label{c4e124}
+\vec{S} = \frac{(p + \mathcal{E})\vec{v}}{1 - \beta^2}.
+\end{equation}
+The components of the stress tensor are
+\begin{equation}\label{c4e125}
+\sigma_{ij} = -\gamma(p + \mathcal{E})\beta_i\beta_j - p\delta_{ij}.
+\end{equation}
+If the velocity of the continuum is small, \eqref{c4e124} can be approximated by
+\begin{equation}
+\vec{S} = (p + \mathcal{E})\vec{v}.
+\end{equation}
+
+\item From equation \eqref{c4e122},
+\[
+\tensor{T}{_\mu^\mu} = (p + \mathcal{E})u_\mu u^\mu - 4p
+\]
+From equation \eqref{c1e84}, $u_\mu u^\mu = 1$ and since $\tensor{\delta}{_\mu^\mu} 
+= 4$, we get
+\begin{equation}\label{c4e126}
+\tensor{T}{_\mu^\mu} = \mathcal{E} - 3p.
+\end{equation}
+The inequality \eqref{c4e109} gives
+\begin{equation}\label{c4e127}
+p \le \frac{\mathcal{E}}{3}.
+\end{equation}
+Furtherm from \eqref{c4e108} and \eqref{c4e126} we have
+\begin{equation}\label{c4e128}
+\mathcal{E} - p = \sum_a m_ac^2\sqrt{1 - \beta_a^2}\delta(\vec{r} - \vec{r}_a).
+\end{equation}
+In the ultra-relativistic case, $\beta_a \rightarrow 1$ and we get the familiar
+expression for the relation between energy density and pressure of the radiation
+\begin{equation}\label{c4e129}
+p = \frac{\mathcal{E}}{3}.
+\end{equation}
+
 \end{enumerate}
 

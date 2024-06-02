@@ -1166,9 +1166,113 @@ An equivalent form of this equation is
 \end{equation}
 Adding equation \eqref{c4e98} and \eqref{c4e103} gives
 \begin{equation}\label{c4e104}
-\frac{\partial}{\partial x^\mu}\left(\tensor{T}{^\rho_\mu} + \tensor{T}{^{(m)\rho}_\mu}\right) = 0.
+\frac{\partial}{\partial x^\mu}\left(\tensor{T}{^{(f)\rho}_\mu} + \tensor{T}{^{(m)\rho}_\mu}\right) = 0.
 \end{equation}
-Thus the combined energy momentum tensor $\tensor{T}{^\rho_\mu} + \tensor{T}{^{(m)\rho}_\mu}$
-satisfies the conservation equation \eqref{c4e61}.
+Thus the combined energy momentum tensor 
+\begin{equation}\label{c4e105}
+\tensor{T}{^\rho_\mu} = \tensor{T}{^{(f)\rho}_\mu} + \tensor{T}{^{(m)\rho}_\mu}
+\end{equation}
+satisfies the conservation equation \eqref{c4e61}. We used the superscript $(f)$
+to identify the electromagnetic contribution of the tensor.
+
+\item The trace of the energy momentum tensor for a system of charged particles
+in an electromagnetic field is
+\begin{equation}\label{c4e106}
+\tensor{T}{^\mu_\mu} = \tensor{T}{^{(m)\mu}_\mu},
+\end{equation}
+because the electromagnetic field's energy momentum tensor is anti-symmetric and
+hence traceless. From \eqref{c4e95},
+\begin{equation}\label{c4e107}
+\tensor{T}{^\mu_\mu} = \rho_m cu^\mu u_\mu \td{s}{t} = \rho_m c^2\sqrt{1 - \beta^2}.
+\end{equation}
+If, instead of a continuous mass distribution, we have discrete particles,
+\begin{equation}\label{c4e108}
+\tensor{T}{^{\mu}_\mu} = \sum_a m_ac^2\sqrt{1 - \beta_a^2}\delta(\vec{r} - \vec{r}_a).
+\end{equation}
+From this equation, it is evident that
+\begin{equation}\label{c4e109}
+\tensor{T}{^\mu_\mu} \ge 0.
+\end{equation}
+
+\item From equations \eqref{c4e104} and \eqref{c4e105}, we have
+\begin{equation}\label{c4e110}
+\pdt{T^{\mu\nu}}{x^\mu} = 0.
+\end{equation}
+For the space components alone, this means
+\[
+\pdt{T^{\mu i}}{x^\mu} = 0,
+\]
+or
+\begin{equation}\label{c4e111}
+\frac{1}{c}\pdt{T^{0i}}{t} + \pdt{T^{ji}}{x^j} = 0.
+\end{equation}
+Now let's assume that this system of particles always has a small range of
+positions and momenta so that all components of $T^{\mu\nu}$ vary in a limited
+range. If we define the average of a function $f$ as
+\begin{equation}\label{c4e112}
+\bar{f} = \frac{1}{T}\int_0^T fdt
+\end{equation}
+then
+\begin{equation}\label{c4e113}
+\bar{\td{f}{t}} = \frac{1}{T} \int_0^T \td{f}{t}dt = \frac{f(T) - f(0)}{T}.
+\end{equation}
+In the limit $T \rightarrow \infty$, since the function $f$ takes finite
+values at all times,
+\begin{equation}\label{c4e114}
+\td{\bar{f}}{t} = 0.
+\end{equation}
+If we take the time-average of \eqref{c4e111}, in view of \eqref{c4e114}, we get
+\[
+\pdt{\bar{T}^{ji}}{x^j} = 0
+\]
+or equivalently,
+\begin{equation}\label{c4e115}
+\pdt{\tensor{\bar{T}}{_i^j}}{x^j} = 0.
+\end{equation}
+From this equation, we also get
+\[
+x^i\pdt{\tensor{\bar{T}}{_i^j}}{x^j} = 0.
+\]
+Integrating this equation over all space,
+\[
+\int x^i\pdt{\tensor{\bar{T}}{_i^j}}{x^j} dV = 0 \Rightarrow 
+\int \left(\frac{\partial}{\partial x^j}(x^i\tensor{\bar{T}}{_i^j}) - 
+\pdt{x^i}{x^j}\tensor{\bar{T}}{_i^j}\right)dV = 0
+\]
+The first term can be converted into a surface integral, so that
+\[
+\oint x^i\tensor{\bar{T}}{_i^j} df_j - \int \tensor{\delta}{^i_j}\tensor{\bar{T}}{_i^j} dV = 0.
+\]
+Since we assumed that the system's energy, momenta and positions vary over a 
+limited range, if we extend the surface integral beyond it then the first term
+vanishes and we are left with
+\begin{equation}\label{c4e116}
+\int \tensor{\bar{T}}{_i^i} dV = 0.
+\end{equation}
+From this equation we readily conclude that
+\begin{equation}\label{c4e117}
+\int \tensor{\bar{T}}{_\mu^\mu} dV = \int\tensor{\bar{T}}{_0^0} dV + \int\tensor{\bar{T}}{_i^i}dV =
+\int WdV = \mathcal{E}.
+\end{equation}
+From \eqref{c4e108}, we have
+\[
+\tensor{\bar{T}}{^{\mu}_\mu} = \sum_a m_ac^2\overline{\sqrt{1 - \beta_a^2}}\delta(\vec{r} - \vec{r}_a),
+\]
+so that substituting it on the extreme lhs of \eqref{c4e117} gives,
+\[
+\int \sum_a m_ac^2\overline{\sqrt{1 - \beta_a^2}}\delta(\vec{r} - \vec{r}_a) dV = \mathcal{E}.
+\]
+or
+\begin{equation}\label{c4e118}
+\sum_a m_ac^2\overline{(1 - \beta_a^2)^{1/2}} = \mathcal{E}.
+\end{equation}
+This is the relativistic generalisation of the classical virial theorem.
+
+\item The calculations in the previous point should be corrected by removing the
+``self-energy'' terms. These are the terms arising from field contributions of the
+masses and are
+\[
+\sum_a \int\frac{E_a^2 + H_a^2}{8\pi}dV.
+\]
 \end{enumerate}
 

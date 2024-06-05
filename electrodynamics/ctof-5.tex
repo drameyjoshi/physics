@@ -1,0 +1,183 @@
+\chapter{Constant electromagnetic fields}\label{c5}
+\begin{enumerate}
+\item If the fields are independent of time then they obey
+\begin{eqnarray}
+\dive\vec{E} &=& 4\pi\rho \label{c5e1} \\
+\curl\vec{E} &=& 0 \label{c5e2} \\
+\dive\vec{H} &=& 0 \label{c5e3} \\
+\curl\vec{H} &=& 4\pi\frac{\vec{J}}{c}. \label{c5e4}
+\end{eqnarray}
+The symmetry of the situation reveals itself if we note the correspondence $\vec{E}
+\mapsto \vec{H}$ and $\rho \mapsto \vec{J}/c$ and $\dive \mapsto \curl$. Equations
+\eqref{c5e2} and \eqref{c5e3} suggest that
+\begin{eqnarray}
+\vec{E} &=& -\grad\phi \label{c5e5} \\
+\vec{H} &=& \curl\vec{A} \label{c5e6}
+\end{eqnarray}
+which is understandable if we note that only the time component of $J^\mu$ 
+determines $\vec{E}$ and its space component determines $\vec{H}$. Therefore,
+only the time component of $\vec{A}^\mu$ suffices to describe the electric
+field and its space component suffices to describe the magnetic field.
+
+\item From equations \eqref{c5e1} and \eqref{c5e5} we have
+\begin{equation}\label{c5e7}
+\nabla^2\phi = -4\pi\rho.
+\end{equation}
+In region where there are no charges, the potential satisfies Laplace's equation
+\begin{equation}\label{c5e8}
+\nabla^2\phi = 0.
+\end{equation}
+This equation immediately implies that the potential function cannot have a local
+minimum or a maximum. The nature of extremum of a function of three variables is
+determined by its Hessian matrix. It is a minimum (maximum) if the Hessian matrix
+is positive (negative) definite. Since the trace of a matrix is the sum of its
+eigenvalues, we have an equivalent condition that the trace of the Hessian matrix
+is positive (negative) for an extremum to be a minimum (maximum). But the trace
+of Hessian is $\nabla^2\phi$ evaluated at the extremum. If $\phi$ is a solution
+of Laplace's equation \eqref{c5e8}, then the Hessian can never be positive or
+negative definite.
+
+\item The field of a point charge can be derived using Gauss' law. Let the point
+charge be at $\vec{r}^\op$. In order to find the field at $\vec{r}$, we consider
+a sphere centred at $\vec{r}^\op$ and passing through $\vec{r}$. As the space is
+isotropic, we expect the magnitude of $\vec{E}$ to be the same at all points on the
+sphere and its direction along $\vec{r} - \vec{r}^\op$. Therefore,
+\[
+4\pi |\vec{r} - \vec{r}^\op|^2 = q
+\]
+or
+\begin{equation}\label{c5e9}
+\vec{E} = \frac{q}{|\vec{r} - \vec{r}^\op|^3}(\vec{r} - \vec{r}^\op).
+\end{equation}
+If we define
+\begin{equation}\label{c5e10}
+\vec{R} = \vec{r} - \vec{r}^\op
+\end{equation}
+then we can write \eqref{c5e9} simply as
+\begin{equation}\label{c5e11}
+\vec{E} = \frac{q}{R^3}\vec{R} = \frac{q}{R^2}\uv{R}.
+\end{equation}
+Equation \eqref{c5e11} is \emph{Coulomb's law}. The potential of this field is
+\begin{equation}\label{c5e12}
+\phi = \frac{q}{R}.
+\end{equation}
+If there are discrete, point charges at $\vec{r}_a$ then the field due to all of 
+them is
+\begin{equation}\label{c5e13}
+\vec{E} = \sum_a \frac{q_a}{R_a^2}\uv{R_a},
+\end{equation}
+where $\vec{R}_a = \vec{r}^\op - \vec{r}$. The potential is
+\begin{equation}\label{c5e14}
+\phi = \sum_a\frac{q_a}{R_a}.
+\end{equation}
+For a continuum of charges, \eqref{c5e11} and \eqref{c5e12} generalise to
+\begin{eqnarray}
+\phi(\vec{r}) &=& \int\frac{\rho(\vec{r}^\op)}{R}dV \label{c5e15} \\
+\vec{E}(\vec{r}) &=& \int\frac{\rho(\vec{r}^\op)}{R^2}\uv{R}dV  \label{c5e16}
+\end{eqnarray}
+
+\item For a point charge, $\rho = q\delta(\vec{R})$. In this case, \eqref{c5e7}
+becomes,
+\[
+\nabla^2\phi = 4\pi q\delta(\vec{R}).
+\]
+From \eqref{c5e12}, we also have
+\begin{equation}\label{c5e17}
+\nabla^2\left(\frac{1}{R}\right) = -4\pi\delta(\vec{R}).
+\end{equation}
+
+\item In the absence of magnetic field, the energy density is
+\begin{equation}\label{c5e18}
+W = \frac{1}{8\pi}\int E^2dV.
+\end{equation}
+From \eqref{c5e5},
+\[
+W = -\frac{1}{8\pi}\int\vec{E}\cdot\grad\phi dV.
+\]
+Since $\dive(\phi\vec{E}) = \grad\phi\cdot\vec{E} + \phi\dive\vec{E}$, we have
+\begin{eqnarray*}
+W &=& \frac{1}{8\pi}\int\phi\dive\vec{E}dV - \frac{1}{8\pi}\int\dive(\phi\vec{E})dV \\
+  &=& \frac{1}{8\pi}\int\phi\dive\vec{E}dV - \frac{1}{8\pi}\oint \phi\vec{E}\cdot d\vec{f}.
+\end{eqnarray*}
+The potential goes as $O(r^{-1})$ and the field as $O(r^{-2})$ so that the surface
+integral goes as $O(r^{-1})$. If we choose a large enough surface the second 
+integral can be made as small as we desire. Thus, we have
+\[
+W = \frac{1}{8\pi}\int\phi\dive\vec{E}dV
+\]
+or using \eqref{c5e1},
+\begin{equation}\label{c5e19}
+W = \frac{1}{2}\int\rho\phi dV.
+\end{equation}
+If the charge density consists od point charges, equation \eqref{c5e19} becomes
+\begin{equation}\label{c5e20}
+W = \sum_a q_a\phi(\vec{r}_a),
+\end{equation}
+where $\phi(\vec{r}_a)$ is the potential due to all charges at the point 
+$\vec{r}_a$ where the charge $q_a$ is located. This formula immediately runs 
+into a tricky situation.
+
+\item The potential $\phi$ due to a charge $q$ at $\vec{r}^\op$ at the same point
+is infinity according to \eqref{c5e12}. As a result, from \eqref{c5e20}, a point
+charge has infinite energy and therefore an infinite mass. To avoid such an absurd
+result, we say that the laws of classical electrodynamics are not applicable at
+extremely short distances. In fact, we cannot even ask the question if the mass of
+a charge has electrodynamic origin, that is, it exists because of electrodynamic
+energy.
+
+The energy of a uniformly charged sphere of radius $s$ can be computed as follow.
+We first note that its charge density is
+\begin{equation}\label{c5e21}
+\rho = \frac{Q}{\frac{4\pi}{3}s^3}.
+\end{equation}
+The field due to a sphere of radius $r$ and a uniform charge density $\rho$ at 
+points on and outside it is as if the entire charge was concentrated at its 
+centre. If $q(r)$ is the charge in a sphere of radius $r$ then the energy
+of a charge $dq$ at a distance $r$ from it is
+\[
+dU = \frac{qdq}{r},
+\]
+where 
+\[
+q = \frac{4\pi}{3}r^3 \rho
+\]
+and $dq = 4\pi r^2 dr$. Thus,
+\[
+dU = \frac{16\pi^2}{3}\rho^2 r^4dr
+\]
+and the energy of the entire sphere is
+\begin{equation}\label{c5e22}
+U = \int_0^s dU = \frac{3}{5}\frac{Q^2}{s}.
+\end{equation}
+If we consider an elementary charge $q$ to have an infinitesimal radius $r_0$ and
+mass $m$ then if the mass has electrodynamic origin,
+\[
+mc^2 = \frac{3}{5}\frac{q^2}{s}.
+\]
+Ignoring the factor of $3/5$, the ``classical radius'' of the charge $q$ is defined
+to be
+\begin{equation}\label{c5e22}
+s = \frac{q}{m} c^2.
+\end{equation}
+
+\item Quantum effects become important at distance of the order of $\hslash/mc$. The
+ratio of this distance to the classical radius of an electron is
+\[
+\frac{\hslash}{mc}\frac{mc^2}{e^2} = \frac{\hslash c}{e^2} = \frac{1}{\alpha}
+\approx 137,
+\]
+where $\alpha$ is the fine-structure constant. Thus, quantum effects must be taken
+into account at distances much larger than the ``classical radius'' of the electron. 
+The lower limit of the applicability of classical electrodynamics is much larger 
+than the classical electron radius.
+
+\item To avoid the tricky questions of self-energy of elementary charges, we write
+the potential $\phi(\vec{r}_a)$ in equation \eqref{c5e20} as
+\begin{equation}\label{c5e23}
+\phi(\vec{r}_a) = \sum_{b \ne a} \frac{q_b}{R_{ab}},
+\end{equation}
+where $R_{ab} = |\vec{r}_a - \vec{r}_b|$.
+
+
+
+\end{enumerate}

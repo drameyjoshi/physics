@@ -1,5 +1,5 @@
 \documentclass{report}
-\usepackage{amsmath}
+\usepackage{amsmath, amssymb}
 \usepackage{graphicx}
 \usepackage{tensor}
 \usepackage{hyperref}
@@ -8,21 +8,21 @@
 %\usepackage{xcolor}
 
 \usepackage{bm}
-%\renewcommand{\vec}{\bm}
-%\newcommand{\uv}[1]{\bm{e}_{#1}}
-%\newcommand{\un}{\bm{n}}
+\renewcommand{\vec}{\bm}
+\newcommand{\uv}[1]{\hat{\bm{e}}_{#1}}
+\newcommand{\un}{\hat{\bm{n}}}
 
-\newcommand{\uv}[1]{\hat{e}_{#1}}
-\newcommand{\un}{\hat{n}}
+%\newcommand{\uv}[1]{\hat{e}_{#1}}
+%\newcommand{\un}{\hat{n}}
 
 \newcommand{\abs}[1]{\left\vert{#1}\right\vert}
 \newcommand{\td}[2]{\frac{d{#1}}{d{#2}}}
 \newcommand{\pdt}[2]{\frac{\partial{#1}}{\partial{#2}}}
 \newcommand{\op}{{\,\prime}}
 \newcommand{\tp}{{\,\prime\prime}}
-\DeclareMathOperator{\grad}{grad}
-\DeclareMathOperator{\dive}{div}
-\DeclareMathOperator{\curl}{curl}
+\DeclareMathOperator{\grad}{\nabla}
+\DeclareMathOperator{\dive}{\nabla\cdot}
+\DeclareMathOperator{\curl}{\nabla\times}
 \DeclareMathOperator{\Arg}{arg}
 \DeclareMathOperator{\re}{Re}
 \DeclareMathOperator{\im}{Im}
@@ -36,6 +36,7 @@
 \include{ctof-2}
 \include{ctof-3}
 \include{ctof-4}
+\include{ctof-5}
 \nocite{*}
 %\bibliographystyle{plain}
 %\bibliography{ctof}

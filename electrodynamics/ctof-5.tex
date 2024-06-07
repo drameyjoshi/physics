@@ -156,7 +156,7 @@ mc^2 = \frac{3}{5}\frac{q^2}{s}.
 \]
 Ignoring the factor of $3/5$, the ``classical radius'' of the charge $q$ is defined
 to be
-\begin{equation}\label{c5e22}
+\begin{equation}\label{c5e23}
 s = \frac{q}{m} c^2.
 \end{equation}
 
@@ -173,11 +173,123 @@ than the classical electron radius.
 
 \item To avoid the tricky questions of self-energy of elementary charges, we write
 the potential $\phi(\vec{r}_a)$ in equation \eqref{c5e20} as
-\begin{equation}\label{c5e23}
+\begin{equation}\label{c5e24}
 \phi(\vec{r}_a) = \sum_{b \ne a} \frac{q_b}{R_{ab}},
 \end{equation}
 where $R_{ab} = |\vec{r}_a - \vec{r}_b|$.
 
+\item We next consider the field of a charge $q$ moving with a uniform velocity
+$\vec{v}$. We align the axes such that $\vec{v} = v\uv{x}$ and call the frame
+moving with the charge $K^\op$. Let $K$ be the laboratory frame in with axes 
+parallel to those of $K^\op$ and let their origins coincide at $t = 0$. Let $P$
+be a field point with coordinates $(x^\op, y^\op, z^\op)$ in $K^\op$. Then the
+scalar potential at $P$ in $K^\op$ is
+\begin{equation}\label{c5e25}
+\phi^\op = \frac{q}{R^\op},
+\end{equation}
+where 
+\begin{equation}\label{c5e26}
+R^\op = \sqrt{{x^\op}^2 + {y^\op}^2 + {z^\op}^2}
+\end{equation}
+and the vector potential is
+\begin{equation}\label{c5e27}
+\vec{A}^\op = 0.
+\end{equation}
+Thus,
+\begin{equation}\label{c5e28}
+{A^\op}^\mu = \left(\frac{q}{R^\op}, 0, 0, 0\right).
+\end{equation}
+From \eqref{c1e46}, the 4-potential in $K$ is
+\begin{equation}\label{c5e29}
+A^\mu = \left(\gamma\frac{q}{R^\op}, \beta\gamma\frac{q}{R^\op}, 0, 0\right),
+\end{equation}
+where
+\begin{eqnarray*}
+\vec{\beta} &=& \frac{\vec{v}}{c} \\
+\gamma &=& \frac{1}{\sqrt{1 - \beta^2}}.
+\end{eqnarray*}
+However, \eqref{c5e29} is not a correct expression because we continue to have
+$R^\op$ in it. The relation between $(x, y, z)$ and $(x^\op, y^\op, z^\op)$ is
+given the Lorentz transformation
+\[
+x^\op = \gamma(x - vt) \;;\; y^\op = y \;;\; z^\op = z
+\]
+so that
+\begin{equation}\label{c5e30}
+{R^\op}^2 = \gamma^2(x - vt)^2 + (y^2 + z^2).
+\end{equation}
+We define a function $R^\ast$ of the coordinates $x, y, z$ as
+\begin{equation}\label{c5e31}
+R^\ast(x, y, z) = \sqrt{(x - vt)^2 + (1 - \beta^2)(y^2 + z^2)}
+\end{equation}
+so that
+\begin{equation}\label{c5e32}
+\frac{R^\op(x^\op, y^\op, z^\op)}{\gamma} = R^\ast(x, y, z)
+\end{equation}
+and the partial Lorentz transformation of \eqref{c5e29} can be completed to
+\begin{equation}\label{c5e33}
+A^\mu = \left(\frac{q}{R^\ast}, \beta\frac{q}{R^\ast}, 0, 0\right)
+\end{equation}
+or
+\begin{eqnarray}
+\phi(x, y, z) &=& \frac{q}{R^\ast} \label{c5e34} \\
+\vec{A}(x, y, z) &=& \frac{q\vec{v}}{cR^\ast} \label{c5e35}
+\end{eqnarray}
 
+\item The electric and magnetic fields in $K^\op$ frame are
+\begin{eqnarray}
+\vec{E}^\op &=& \frac{q}{{R^\op}^3}\vec{R}^\op \label{c5e36} \\
+\vec{H}^\op &=& 0 \label{c5e37}
+\end{eqnarray}
+We use equations \eqref{c3e81} to \eqref{c3e83} to get the electric field in the
+$K$ frame.
+\begin{eqnarray}
+E_x &=& E_x^\op \label{c5e38} \\
+E_y &=& \gamma E_y^\op \label{c5e39} \\
+E_z &=& \gamma E_z^\op \label{c5e40}
+\end{eqnarray}
+Using \eqref{c5e36} we get
+\begin{eqnarray}
+E_x &=& \frac{q}{{R^\op}^3}x^\op \label{c5e41} \\
+E_y &=& \gamma\frac{q}{{R^\op}^3}y^\op \label{c5e42} \\
+E_z &=& \gamma\frac{q}{{R^\op}^3}z^\op \label{c5e43}
+\end{eqnarray}
+These equations are not satisfactory because their rhs are written in terms of
+the primed coordinates. Using $R^\op = \gamma R^\ast$ from \eqref{c5e32} and the
+Lorentz transformation formulae
+\begin{eqnarray}
+E_x &=& \frac{q}{{R^\ast}^3}\frac{x - vt}{\gamma^2} \label{c5e44} \\
+E_y &=& \frac{q}{{R^\ast}^3}\frac{y}{\gamma^2} \label{c5e45} \\
+E_z &=& \frac{q}{{R^\ast}^3}\frac{z}{\gamma^2} \label{c5e46}
+\end{eqnarray}
+so that
+\begin{equation}\label{c5e47}
+\vec{E} = (1 - \beta^2)\frac{q}{{R^\ast}^3}\vec{R},
+\end{equation}
+where
+\begin{equation}\label{c5e48}
+\vec{R} = (x - vt)\uv{x} + y\uv{y} + z\uv{z}.
+\end{equation}
+If $\theta$ is the angle between $\vec{R}$ and $\vec{v}$ then
+\begin{equation}\label{c5e49}
+\vec{v}\cdot\vec{R} = v(x - vt) = vR\cos\theta \Rightarrow x - vt = R\cos\theta
+\end{equation}
+so that,
+\begin{equation}\label{c5e50}
+y^2 + z^2 = R^2 - (x - vt)^2 = R^2\sin^2\theta.
+\end{equation}
+From \eqref{c5e31}, \eqref{c5e49} and \eqref{c5e50} we get
+\begin{equation}\label{c5e51}
+{R^\ast}^2 = R^2\cos^2\theta + (1 - \beta^2)R^2\sin^2\theta = 
+R^2(1 - \beta^2\sin^2\theta).
+\end{equation}
+We can now write \eqref{c5e47} solely in terms of $\vec{R}$ as
+\begin{equation}\label{c5e52}
+\vec{E} = \frac{q\vec{R}}{R^3}\frac{1 - \beta^2}{(1 - \beta^2\sin^2\theta)^{3/2}}.
+\end{equation}
+Note that $\vec{R}$ is the position of the (moving) charge in $K$ frame.
 
+\item Lorentz transformation of $\vec{E}$ and $\vec{H}$ are a consequence of the
+transformation properties of the field tensor. One should use \eqref{c3e81} to
+\eqref{c3e84} instead of evaluating $-\grad\phi$ with $\phi$ given by \eqref{c5e34}.
 \end{enumerate}

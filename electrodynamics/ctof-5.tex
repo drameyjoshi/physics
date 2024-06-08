@@ -285,11 +285,120 @@ R^2(1 - \beta^2\sin^2\theta).
 \end{equation}
 We can now write \eqref{c5e47} solely in terms of $\vec{R}$ as
 \begin{equation}\label{c5e52}
-\vec{E} = \frac{q\vec{R}}{R^3}\frac{1 - \beta^2}{(1 - \beta^2\sin^2\theta)^{3/2}}.
+\vec{E} = \frac{q\vec{R}}{R^3} \frac{1 - \beta^2}{(1 - \beta^2\sin^2\theta)^{3/2}}.
 \end{equation}
 Note that $\vec{R}$ is the position of the (moving) charge in $K$ frame.
 
 \item Lorentz transformation of $\vec{E}$ and $\vec{H}$ are a consequence of the
 transformation properties of the field tensor. One should use \eqref{c3e81} to
 \eqref{c3e84} instead of evaluating $-\grad\phi$ with $\phi$ given by \eqref{c5e34}.
+That is, although
+\[
+\phi^\op = \frac{q}{R^\op} \mapsto \phi = \frac{q}{R^\ast},
+\]
+the mapping
+\[
+-\grad^\op\phi^\op \mapsto -\grad\phi
+\]
+does not hold.
+
+\item In \eqref{c5e52}, $\theta$ is the angle between the radius vector of the
+field point $\vec{R}$ and the direction of motion. The magnitude of the field
+is
+\begin{equation}\label{c5e53}
+E = \frac{q}{R^2}\frac{1 - \beta^2}{(1 - \beta^2\sin^2\theta)^{3/2}}
+\end{equation}
+Figure \ref{c5f1} shows how the magnitude of the electric field varies with 
+$\theta$ for different values of $\beta$. As the speed of the charge approaches
+$c$, the electric field gets increasingly concentrated along the directions
+perpendicular to the motion of the particle.
+\begin{figure}[!ht]
+\includegraphics[scale=0.8]{ex2}
+\caption{$E(\theta)$}
+\label{c5f1}
+\end{figure}
+For an observer in the $K$ frame, the charge in motion creates an electric current
+and therefore expects to observe magnetic field. In fact, equations \eqref{c3e84}
+to \eqref{c3e86} give
+\begin{eqnarray}
+H_x &=& 0 \label{c5e54} \\
+H_y &=& -\gamma\beta E^\op_z \label{c5e55} \\
+H_z &=& \gamma\beta E^\op_y \label{c5e56}
+\end{eqnarray}
+Since $\beta = v/c = v_x/c$, using \eqref{c5e39} and \eqref{c5e40}, we get
+\begin{eqnarray}
+H_x &=& 0 \label{c5e57} \\
+H_y &=& -\frac{1}{c}v_xE_z \label{c5e58} \\
+H_z &=& \frac{1}{c}v_xE_y. \label{c5e59}
+\end{eqnarray}
+These three equations can be combined as
+\begin{equation}\label{c5e60}
+\vec{H} = \frac{1}{c}\vec{v} \times \vec{E} = \vec{\beta} \times \vec{E}.
+\end{equation}
+
+\item We now consider the motion of a charge $q$ in the electric field produced
+by another one $Q$. Let their masses by $m$ and $M$ respectively. Assume that
+$m \ll M$ so that the charge $Q$ is almost stationary. The problem now reduces to
+studying the motion of $q$ in a potential $\phi = Q/r$.
+
+The energy of the charged particle is
+\begin{equation}\label{c5e61}
+\mathcal{E} = \sqrt{p^2c^2 + m^2c^4} + \frac{\alpha}{r},
+\end{equation}
+where
+\begin{equation}\label{c5e62}
+\alpha = qQ.
+\end{equation}
+The motion in a central field is confined to a plane. Align the coordinate axes
+such that $Q$ is at the origin and the motion happens in $xy$ plane. Furthermore,
+since the torque on the particle is zero, its angular momentum is a constant of
+motion. The particle's velocity in polar coordinates is
+\begin{equation}\label{c5e63}
+\vec{v} = \dot{r}\uv{r} + r\dot{\theta}\uv{\theta}
+\end{equation}
+so that $v^2 = \dot{r}^2 + r^2\dot{\theta}^2$. Since $\vec{L} = \vec{r} \times
+\vec{p} = m\gamma\vec{r} \times \vec{p}$, (using \eqref{c2e8}) we have $L = 
+\gamma mr^2\dot{\theta}$. We can express $v^2$ in terms of $L$ as
+\[
+v^2 = \dot{r}^2 + \frac{L^2}{m^2\gamma^2 r^2}
+\]
+so that
+\begin{equation}\label{c5e64}
+p^2 = m^2\gamma^2\dot{r}^2 + \frac{L^2}{r^2} = p_r^2 + \frac{L^2}{r^2}.
+\end{equation}
+Therefore, \eqref{c5e61} becomes
+\begin{equation}\label{c5e65}
+\mathcal{E} = c\sqrt{p_r^2 + \frac{L^2}{r^2} + m^2c^2} + \frac{\alpha}{r}.
+\end{equation}
+
+\item If $\alpha > 0$ then as $r$ increases, the rhs of \eqref{c5e64} also
+increases even if $p_r \rightarrow 0$. Since $\mathcal{E}$ is a constant of
+motion, a drop in $r$ can be compensated by a drop in $p_r$ only to a limited
+extent. This prevents the two charges from coming arbitrarily close to each 
+other.
+
+To analyse the condition $\alpha < 0$, write \eqref{c5e65} as
+\[
+\mathcal{E} = \frac{Lc}{r}\sqrt{\frac{r^2(p_r^2 + m^2c^2)}{L^2} + 1} - \frac{|\alpha|}{r}.
+\]
+so that we can approximate
+\[
+\mathcal{E} \approx \frac{Lc}{r} + \frac{cr}{2L}(p_r^2 + m^2c^2) - \frac{|\alpha|}{r}.
+\]
+for small $r$. If $Lc > |\alpha|$ then the rhs blows up as $r \rightarrow 0$. 
+Therefore, to enforce constancy of $\mathcal{E}$, $r$ cannot be permitted to
+decrease indefinitely. If $Lc < |\alpha|$, if $p_r = m\gamma\dot{r}$ can become
+indefinitely large, $r$ may be allowed to become arbitrarily small while still
+keeping $\mathcal{E}$ constant.
+
+In the non-relativistic case, we would have had
+\[
+\mathcal{E} = \frac{1}{2}mv_r^2 + \frac{L^2}{2mr^2} - \frac{|\alpha|}{r}.
+\]
+If $L \ne 0$ then the first two terms, which are always positive, rise much faster
+than the third term falls. Therefore, energy conservation does not allow the two
+charges to come arbitrarily close to each other. On the other hand, if $L = 0$, 
+then $v_r$ can rise enough to compensate the drop in the third term and still
+keep  $\mathcal{E}$ constant. Thus, the two charges can come arbitrarily close only
+if they approach to each other head-on.
 \end{enumerate}

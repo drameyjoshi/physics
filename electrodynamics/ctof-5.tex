@@ -401,4 +401,85 @@ charges to come arbitrarily close to each other. On the other hand, if $L = 0$,
 then $v_r$ can rise enough to compensate the drop in the third term and still
 keep  $\mathcal{E}$ constant. Thus, the two charges can come arbitrarily close only
 if they approach to each other head-on.
+
+\item The Hamilton-Jacobi equation \eqref{c3e15} for this problem is
+\[
+(\grad S)^2 - \frac{1}{c^2}\left(\pdt{S}{t} + \frac{\alpha}{r}\right)^2 + m^2c^2 = 0.
+\]
+Since $Q$ is stationary, $q$ experiences only the electric field and therefore 
+$\vec{A} = 0$. The gradient in plane-polar coordinates is
+\begin{equation}\label{c5e66}
+\grad S = \pdt{S}{r}\uv{r} + \frac{1}{r}\pdt{S}{\phi}
+\end{equation}
+so that the Hamilton-Jacobi equation becomes
+\begin{equation}\label{c5e67}
+\left(\pdt{S}{r}\right)^2 + \frac{1}{r^2}\left(\pdt{S}{\phi}\right)^2 - \frac{1}{c^2}
+\left(\pdt{S}{t} + \frac{\alpha}{r}\right)^2 + m^2c^2 = 0.
+\end{equation}
+or
+\[
+\left(\pdt{S}{r}\right)^2 + \frac{1}{r^2}\left(\pdt{S}{\phi}\right)^2 - \frac{1}{c^2}
+\left(\pdt{S}{t}\right)^2 + 2\frac{\alpha}{rc^2}\pdt{S}{t} + \frac{\alpha^2}{c^2r^2}
++ m^2c^2 = 0.
+\]
+This is a non-linear, first-order pde. We try a solution of the form
+\begin{equation}\label{c5e68}
+S(r, \phi, t) = -\mathcal{E}t + L\phi + f(r)
+\end{equation}
+to get
+\[
+{f^\op(r)}^2 + \frac{L^2}{r^2} - \frac{\mathcal{E}^2}{c^2} - 2\frac{\alpha\mathcal{E}}{rc^2}
++ \frac{\alpha^2}{c^2r^2} + m^2c^2 = 0.
+\]
+or
+\[
+f^\op = \sqrt{\frac{1}{c^2}\left(\mathcal{E} - \frac{\alpha}{r}\right)^2 - \frac{L^2}{r^2} 
+-m^2c^2}
+\]
+The solution, thus, is
+\begin{equation}\label{c5e69}
+S(r, \phi, t) = -\mathcal{E}t + L\phi + 
+\frac{1}{c}\int\sqrt{\left(\mathcal{E}-\frac{\alpha}{r}\right)^2-\frac{L^2c^2}{r^2} -m^2c^4}dr
+\end{equation}
+
+We will consider three cases:
+\begin{enumerate}
+\item $Lc > |\alpha|$ so that the integrand becomes,
+\begin{eqnarray*}
+\sqrt{\left(\mathcal{E}-\frac{\alpha}{r}\right)^2-\frac{L^2c^2}{r^2} -m^2c^4}
+ &=& \sqrt{\mathcal{E}^2 - 2\mathcal{E}\frac{\alpha}{r}-\frac{L^2c^2 - \alpha^2}{r^2}-m^2c^4} \\
+ &=& \frac{\sqrt{(\mathcal{E}^2-m^2c^4)r^2 -2\mathcal{E}\alpha r - (L^2c^2 - \alpha^2)}}{r} \\
+ &=& \frac{\sqrt{A^2r^2 - 2Br - C^2}}{r},
+\end{eqnarray*}
+where
+\begin{eqnarray}
+A^2 &=& \mathcal{E}^2-m^2c^4 \label{c5e70} \\
+B   &=& \mathcal{E}\alpha \label{c5e71} \\
+C^2 &=& L^2c^2 - \alpha^2 \label{c5e72}
+\end{eqnarray}
+Now,
+\begin{eqnarray}
+\int\frac{\sqrt{Ar^2 - 2Br - C^2}}{r}dr &=& \sqrt{Ar^2-2Br-C^2} - \nonumber\\
+ & & C\tan^{-1}\left(\frac{-Br^2-C^2}{C\sqrt{Ar^2-2Br-C^2}}\right) - \nonumber\\
+ & & \frac{B}{A}\tanh^{-1}\left(\frac{Ar^2 - B}{A\sqrt{Ar^2-2Br-C^2}}\right). \nonumber\\
+ \label{c5e73}
+\end{eqnarray}
+
+\item $Lc > |\alpha|$ leads to
+\begin{eqnarray}
+\int\frac{\sqrt{Ar^2 - 2Br + C^2}}{r}dr &=& \sqrt{Ar^2-2Br+C^2} - \nonumber\\
+ & & C\tan^{-1}\left(\frac{-Br^2+C^2}{C\sqrt{Ar^2-2Br+C^2}}\right) - \nonumber\\
+ & & \frac{B}{A}\tanh^{-1}\left(\frac{Ar^2-B}{A\sqrt{Ar^2-2Br+C^2}}\right). \nonumber\\
+ \label{c5e74}
+\end{eqnarray}
+
+\item $Lc = |\alpha|$, leads to
+\begin{equation}\label{c5e75}
+\int\frac{\sqrt{Ar^2 - 2Br}}{r}dr = \frac{2B}{A}\sinh^{-1}\left(A\sqrt{\frac{r}{2B}}\right) 
++ \sqrt{Ar^2 - 2Br}
+\end{equation}
+All three integrals were computed using \href{https://www.wolframalpha.com/}{Wolfram Alpha}.
+\end{enumerate}
+
+
 \end{enumerate}

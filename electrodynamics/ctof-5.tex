@@ -433,53 +433,97 @@ to get
 \]
 or
 \[
-f^\op = \sqrt{\frac{1}{c^2}\left(\mathcal{E} - \frac{\alpha}{r}\right)^2 - \frac{L^2}{r^2} 
+f^\op = \pm\sqrt{\frac{1}{c^2}\left(\mathcal{E} - \frac{\alpha}{r}\right)^2 - \frac{L^2}{r^2} 
 -m^2c^2}
 \]
 The solution, thus, is
 \begin{equation}\label{c5e69}
-S(r, \phi, t) = -\mathcal{E}t + L\phi + 
+S(r, \phi, t) = -\mathcal{E}t + L\phi \pm 
 \frac{1}{c}\int\sqrt{\left(\mathcal{E}-\frac{\alpha}{r}\right)^2-\frac{L^2c^2}{r^2} -m^2c^4}dr
 \end{equation}
-
-We will consider three cases:
-\begin{enumerate}
-\item $Lc > |\alpha|$ so that the integrand becomes,
-\begin{eqnarray*}
-\sqrt{\left(\mathcal{E}-\frac{\alpha}{r}\right)^2-\frac{L^2c^2}{r^2} -m^2c^4}
- &=& \sqrt{\mathcal{E}^2 - 2\mathcal{E}\frac{\alpha}{r}-\frac{L^2c^2 - \alpha^2}{r^2}-m^2c^4} \\
- &=& \frac{\sqrt{(\mathcal{E}^2-m^2c^4)r^2 -2\mathcal{E}\alpha r - (L^2c^2 - \alpha^2)}}{r} \\
- &=& \frac{\sqrt{A^2r^2 - 2Br - C^2}}{r},
-\end{eqnarray*}
+The trajectories are given by (find out why)
+\begin{equation}\label{c5e70}
+\pdt{S}{L} = \text{constant.}
+\end{equation}
+Differentiating \eqref{c5e69},
+\begin{equation}\label{c5e71}
+\pdt{S}{L} = \phi \mp Lc\int\frac{dr}{r\sqrt{A^2r^2 - 2Br + C^2}},
+\end{equation}
 where
 \begin{eqnarray}
-A^2 &=& \mathcal{E}^2-m^2c^4 \label{c5e70} \\
-B   &=& \mathcal{E}\alpha \label{c5e71} \\
-C^2 &=& L^2c^2 - \alpha^2 \label{c5e72}
+A^2 &=& \mathcal{E}^2 - m^2c^4 \label{c5e72} \\
+B   &=& \alpha\mathcal{E} \label{c5e73} \\
+C^2 &=& \alpha^2 - L^2c^2 \label{c5e74}
 \end{eqnarray}
-Now,
-\begin{eqnarray}
-\int\frac{\sqrt{Ar^2 - 2Br - C^2}}{r}dr &=& \sqrt{Ar^2-2Br-C^2} - \nonumber\\
- & & C\tan^{-1}\left(\frac{-Br^2-C^2}{C\sqrt{Ar^2-2Br-C^2}}\right) - \nonumber\\
- & & \frac{B}{A}\tanh^{-1}\left(\frac{Ar^2 - B}{A\sqrt{Ar^2-2Br-C^2}}\right). \nonumber\\
- \label{c5e73}
-\end{eqnarray}
-
-\item $Lc > |\alpha|$ leads to
-\begin{eqnarray}
-\int\frac{\sqrt{Ar^2 - 2Br + C^2}}{r}dr &=& \sqrt{Ar^2-2Br+C^2} - \nonumber\\
- & & C\tan^{-1}\left(\frac{-Br^2+C^2}{C\sqrt{Ar^2-2Br+C^2}}\right) - \nonumber\\
- & & \frac{B}{A}\tanh^{-1}\left(\frac{Ar^2-B}{A\sqrt{Ar^2-2Br+C^2}}\right). \nonumber\\
- \label{c5e74}
-\end{eqnarray}
-
-\item $Lc = |\alpha|$, leads to
+We now use the result
 \begin{equation}\label{c5e75}
-\int\frac{\sqrt{Ar^2 - 2Br}}{r}dr = \frac{2B}{A}\sinh^{-1}\left(A\sqrt{\frac{r}{2B}}\right) 
-+ \sqrt{Ar^2 - 2Br}
+\int\frac{dx}{x\sqrt{a^2x^2 - 2bx + c^2}} = 
+-\frac{1}{c}\tanh^{-1}\left(\frac{c^2 - bx}{c\sqrt{a^2x^2 - 2bx + c^2}}\right) +
+\text{const}.
 \end{equation}
-All three integrals were computed using \href{https://www.wolframalpha.com/}{Wolfram Alpha}.
-\end{enumerate}
+in equation \eqref{c5e71} to get
+\begin{equation}\label{c5e76}
+\phi_0 = \phi \pm \frac{Lc}{C}\tanh^{-1}\left(\frac{C^2 - Br}{C\sqrt{A^2r^2 - 2Br + C^2}}\right),
+\end{equation}
+where $\phi_0$ is a constant of integration.
 
+We consider the following cases:
+\begin{enumerate}
+\item $\alpha^2 > L^2c^2$, that is $C$ is real. Then \eqref{c5e71} can be written as
+\[
+\tanh\left(\frac{C}{Lc}(\phi_0 - \phi)\right) = \frac{C^2 - Br}{C\sqrt{A^2r^2 - 2Br + C^2}}.
+\]
+Let
+\begin{equation}\label{c5e77}
+X = \frac{C}{Lc}(\phi_0 - \phi) = \sqrt{\frac{\alpha^2}{L^2c^2} - 1}(\phi_0 - \phi)
+\end{equation}
+so that
+\begin{eqnarray*}
+\tanh^2 X &=& \frac{(C^2 - Br)^2}{C^2(A^2r^2 - 2Br + C^2)} \\
+C^2(A^2r^2 + C^2 - 2Br)\tanh^2X &=& C^4 - 2BC^2r + B^2r^2 \\
+C^2A^2r^2\tanh^2X &=& (C^4 - 2BC^2r)\sech^2X + B^2r^2 \\
+C^2A^2r^2\sinh^2X &=& C^2(C^2 - 2B^2r) + B^2r^2\cosh^2X \\
+C^2A^2r^2(\cosh^2X - 1) &=& C^2(C^2 - 2B^2r) + B^2r^2\cosh^2X \\
+(C^2A^2 - B^2)r^2\cosh^2X &=& C^2(A^2r^2 - 2B^2r + C^2)
+\end{eqnarray*}
+Now,
+\[
+A^2C^2-B^2 = (L^2c^2 -\alpha^2)m^2c^4 -\mathcal{E}^2L^2c^2
+\]
+Since we assumes $\alpha^2 > L^2c^2$, the rhs of the above equation is negative.
+Therefore, before taking the square-root, we flip the signs to get
+\begin{eqnarray*}
+(B^2 - C^2A^2)r^2\cosh^2X &=& C^2(2B^2r - A^2r^2 - C^2) \\
+\sqrt{B^2 - C^2A^2}\cosh X &=& \frac{C^2}{r}\sqrt{2\frac{B^2}{C^2}r - \frac{A^2}{C^2}r^2 - 1}
+\end{eqnarray*}
+Thus,
+\[
+\pm c\sqrt{(L\mathcal{E})^2 + m^2c^2(\alpha^2 - L^2c^2)}\cosh X = 
+\frac{C^2}{r}\sqrt{2\frac{B^2}{C^2}r - \frac{A^2}{C^2}r^2 - 1}
+\]
+Since $\cosh$ is an even function,
+\begin{eqnarray}
+\pm c\sqrt{(L\mathcal{E})^2 + m^2c^2(\alpha^2 - L^2c^2)}
+\cosh\left((\phi - \phi_0)\sqrt{\frac{\alpha^2}{L^2c^2} - 1}\right) &=& \nonumber\\
+\frac{C^2}{r}\sqrt{2\frac{B^2}{C^2}r - \frac{A^2}{C^2}r^2 - 1} \label{c5e78}
+\end{eqnarray}
+We can choose $\phi_0$ such that this equation reduces to
+\begin{equation}\label{c5e79}
+\pm c\sqrt{(L\mathcal{E})^2 + m^2c^2(\alpha^2 - L^2c^2)}
+\cosh\left((\phi - \phi_0)\sqrt{\frac{\alpha^2}{L^2c^2} - 1}\right) = \frac{C}{r}.
+\end{equation}
+This can always be done because \eqref{c5e78} is of the form
+\begin{equation}\label{c5e80}
+A\cosh(B(x_0-x)) = Cf(x).
+\end{equation}
+We can write it as
+\begin{equation}\label{c5e81}
+x_0 = x + \frac{1}{B}\cosh^{-1}\left(\frac{Cf(x)}{A}\right).
+\end{equation}
+Choose $x_0$ such that if $f(x^\op) = 1$ then
+\begin{equation}\label{c5e82}
+x_0 = x^\op + \frac{1}{B}\cosh^{-1}\left(\frac{C}{A}\right).
+\end{equation}
+\end{enumerate}
 
 \end{enumerate}

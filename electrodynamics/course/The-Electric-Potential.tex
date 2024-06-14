@@ -1,0 +1,118 @@
+\documentclass{beamer}
+\usepackage{bm}
+\include{common}
+\usefonttheme[onlymath]{serif}
+\title{Electricity and Magnetism}
+\subtitle{The Electric Potential}
+\author{Amey Joshi}
+\begin{document}
+\frame{\titlepage}
+
+\begin{frame}
+\frametitle{Line integral of the electric field}
+\begin{enumerate}
+\item The difference between
+\begin{equation}\label{e1}
+\int_a^b f(x)dx \text{ and } \int_C \vec{F}\cdot d\vec{s},
+\end{equation}
+where $a, b$ are real numbers and $C$ is a curve joining two points.
+\item If 
+\begin{equation}\label{e2}
+\vec{F} = f(r)\uv{r}
+\end{equation}
+then the line integral
+\begin{equation}\label{e3}
+\int_A^B \vec{F}\cdot d\vec{s}
+\end{equation}
+where $A$ and $B$ are points, is independent of the curve joining them. In
+particular, this is true for $f(r) = kr^{-2}$.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Line integral of the electric field}
+\begin{enumerate}
+\item An immediate consequence of the path-independence of the line integral is
+\begin{equation}\label{e4}
+\oint\vec{F}\cdot d\vec{s} = 0.
+\end{equation}
+\item A force $\vec{F}$ with this property is called \emph{conservative}.
+\item The line integral is a scalar that depends only on the two points.
+We denote it by $W(A, B)$. If $\vec{F}$ denotes a force then $W(A, B)$ is the
+work done in moving from $A$ to $B$.
+\item In particular, if $\vec{F} = q\vec{E}$ then $W(A, B)$ is the work done
+by the electric field in moving a charge from $A$ to $B$.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{The electric potential}
+\begin{enumerate}
+\item If $q = 1$, we define a scalar function,
+\begin{equation}\label{e5}
+\varphi(B, A) = -\int_A^B\vec{E}\cdot d\vec{s}
+\end{equation}
+and call it the electric potential difference between the points $A$ and $B$.
+\item One can define the gravitational potential difference analogously.
+\item In CGS units, $\varphi$ is measured in statvolt and its dimension is same
+as erg/esu or esu/cm. The definition is identical in SI and the unit is volt.
+Its dimension is same as $J/C$. 1 statvolt is $\approx 300$ V.
+\item Solve problems 1, 2, 3., 5 and 6.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Field and potential}
+From \eqref{e5} we see that
+\begin{equation}\label{e6}
+d\varphi = -\vec{E}\cdot d\vec{s}.
+\end{equation}
+We also have
+\begin{equation}\label{e7}
+d\varphi = \pdt{\varphi}{x}dx + \pdt{\varphi}{y}dy + \pdt{\varphi}{z}dz
+\end{equation}
+Now, $d\vec{s} = \uv{x}dx + \uv{y}dy + \uv{z}dz$. If we define a vector
+\begin{equation}\label{e8}
+\grad\varphi = \pdt{\varphi}{x}\uv{x} + \pdt{\varphi}{y}\uv{y} + \pdt{\varphi}{z}\uv{z}
+\end{equation}
+then \eqref{e7} can be written as $d\varphi = \grad\varphi\cdot d\vec{s}$. Comparing
+it with \eqref{e6} gives us
+\begin{equation}\label{e9}
+\vec{E} = -\grad\varphi.
+\end{equation}
+\end{frame}
+
+\begin{frame}
+\frametitle{Field and potential}
+\begin{enumerate}
+\item A vector field, in general, needs three functions for its full specification.
+\item In the special case of a field for which \eqref{e4} is valid, the three components
+are not independent of each other. In fact, such a vector field can be described
+by a single scalar field, its potential.
+\item Often times, but not always, the potential is zero at great distance from the
+charges.
+\item Show that the potential of a single charge $q$ located at the origin is
+\begin{equation}\label{e10}
+\varphi(\vec{r}) = -\frac{q}{r}.
+\end{equation}
+Generalise it the case when $q$ is located at $\vec{r}^\op$.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Field and potential}
+\begin{enumerate}
+\item The superposition principle permits us to further generalise \eqref{e10} to
+\begin{equation}\label{e11}
+\varphi(\vec{r}) = -\int\frac{\rho(\vec{r}^\op)}{|\vec{r} - \vec{r}^\op|}dv^\op.
+\end{equation}
+\item Write this equation using the Cartesian coordinates for greater clarity.
+\item \eqref{e11} is useful only if $\rho$ is localised. To confirm this, apply it
+to an infinitely long wire with a uniform charge density $\lambda$.
+\item Many times, but not always, it is easier to evaluate the integral in \eqref{e11}.
+In the case of an infinitely long wire, it is easier to get $\vec{E}$!! (Why?)
+
+\end{enumerate}
+\end{frame}
+
+\end{document}

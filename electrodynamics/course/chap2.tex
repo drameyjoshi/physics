@@ -1,0 +1,344 @@
+\documentclass{article}
+\usepackage{amsmath, graphicx, xcolor, hyperref}
+\include{common}
+\begin{document}
+\title{The Electric Potential}
+\author{Amey Joshi}
+\date{15-Jun-2024}
+\maketitle
+\begin{enumerate}
+\item Given that $\vec{E} = 6xy\uv{x} + 3(x^2 - y^2)\uv{y}$. Denote the origin 
+$(0,0,0)$ by $O$ and the point $(x_1, y_1, 0)$ by $A$. In the first case,
+\begin{equation}\label{e1}
+d\vec{s} = \uv{x}dx + \uv{y}dy
+\end{equation}
+so that the line integral is
+\begin{eqnarray}
+L_1 &=& \int_O^A\vec{E}\cdot d\vec{s} \nonumber \\
+ &=& \int_0^{x_1}3x^2\uv{y}\cdot\uv{x}dx + 
+     \int_0^{y_1}(6x_1y\uv{x} + 3(x_1^2 - y^2)\uv{y}dy)\cdot\uv{y}dy \nonumber \\
+ &=& 0 + \int_0^{y_1}(x_1^2 - y^2)dy \nonumber \\
+ &=& 3x_1^2y - y_1^3 \label{e2}
+\end{eqnarray}
+In the second case, the equation of the straight line is 
+\begin{equation}\label{e3}
+y = \frac{y_1}{x_1}x
+\end{equation}
+so that
+\[
+dy = \frac{y_1}{x_1}dx
+\]
+and
+\begin{equation}\label{e4}
+d\vec{s} = \uv{x}dx + \uv{y}dy = \uv{x}dx + \uv{y}\frac{y_1}{x_1}dx.
+\end{equation}
+Further, along the straight line,
+\begin{equation}\label{e5}
+\vec{E} = 6\frac{y_1}{x_1}x^2\uv{x} + 3\left(x^2 - \frac{y_1^2}{x_1^2}x^2\right)\uv{y}.
+\end{equation}
+so that the line integral is
+\begin{eqnarray}
+L_2 &=& \int_O^A\vec{E}\cdot d\vec{s} \nonumber \\
+ &=& \int_O^A6\frac{y_1}{x_1}x^2dx + 
+ 3\left(x^2 - \frac{y_1^2}{x_1^2}x^2\right)\frac{y_1}{x_1}dx \nonumber \\
+ &=& 2\frac{y_1}{x_1}x_1^3 + \frac{y_1}{x_1}\left(1 - \frac{y_1^2}{x_1^2}\right)x_1^3 \nonumber \\
+ &=& 3x_1^2y_1 - y_1^3 \label{e6}
+\end{eqnarray}
+In the third case, $d\vec{s} = \uv{x}dx + \uv{y}dy$ and
+\begin{eqnarray}
+L_3 &=& -\int_0^{y_1}3y^2dy + \int_0^{x_1}6xy_1dx \nonumber \\
+ &=& -y_1^3 + 3x_1^2y_1 \label{e7}
+\end{eqnarray}
+Equations \eqref{e2}, \eqref{e6} and \eqref{e7} show that the line integrals are
+the same. The potential function is
+\begin{equation}\label{e8}
+\varphi(x, y, 0) = -\int_O^{(x, y, 0)}\vec{E}\cdot d\vec{s} = -(3x^2y - y^3).
+\end{equation}
+However,
+\begin{equation}\label{e9}
+\varphi(x, y, z) = -\int_O^{(x, y, z)}\vec{E}\cdot d\vec{s} = -(3x^2y - y^3).
+\end{equation}
+is also true (why?) so that
+\[
+-\grad\varphi = 6xy\uv{x} + 3(x^2-y^2)\uv{y} = \vec{E}.
+\]
+
+\item The potential of the charge configuration is
+\begin{equation}\label{e10}
+\varphi(0, 0, z) = 12/z - 6/(z - 3)
+\end{equation}
+so that the variation of potential is as shown in figure \ref{c2f2}. It was 
+generated using
+\begin{verbatim}
+import numpy as np
+import matplotlib.pyplot as plt
+
+def varphi(z: float) -> float:
+    return 12/z - 6/(z - 3)
+    
+Z1 = np.linspace(-6, 6)
+Z2 = np.linspace(-0.1, 0.1)
+Z3 = np.linspace(2.9, 3.1)
+
+Z = np.concatenate((Z1, Z2, Z3))
+Z.sort()
+V = [varphi(z) for z in Z]
+
+plt.plot(Z, V)
+plt.xlabel(r'$z$')
+plt.ylabel(r'$\varphi(0, 0, z)$')
+plt.title('Potential due to two charges on the z-axis')
+plt.show()
+\end{verbatim}
+\begin{figure}[!ht]
+\center
+\includegraphics[scale=0.6]{purcell_c2p2}
+\caption{Problem 2}
+\label{c2f2}
+\end{figure}
+A few points to consider:
+\begin{itemize}
+\item Examine its behaviour in the regions $z < 0, z \in (0, 3)$ and $z > 3$.
+\item Why did we create three arrays $Z1, Z2, Z3$ in the code?
+\item Why did we sort the array $Z$?
+\end{itemize}
+
+\item The potential at a point in the $y$ axis is
+\begin{equation}\label{e11}
+\varphi(y) = -\frac{2}{y} + \frac{1}{\sqrt{1 + (y - 1)^2}} + \frac{1}{\sqrt{1 + (y - 1)^2}} 
+= -2\left(\frac{1}{y} - \frac{1}{\sqrt{1 + (y - 1)^2}}\right)
+\end{equation}
+Electric field $\vec{E} = -\grad\varphi$ will be zero when $d\varphi/dy = 0$. 
+A few points to note about the potential:
+\begin{itemize}
+\item The function blows up at the origin.
+\item For $y \rightarrow \pm \infty$, $\varphi(y) \rightarrow 0$.
+\item For $y < 0$, $\varphi(y) > 0$.
+\item $\varphi(0^+) = \infty, \varphi(1) = 0, \varphi(y) > 0$ for $y \in (0, 1) \cup (1, \infty)$.
+\end{itemize}
+Now,
+\[
+\td{\varphi}{z} = 2\left(\frac{1}{y^2} - \frac{(y - 1)}{(y^2 - 2y + 2)^{3/2}}\right)
+\]
+and $d\varphi/dz = 0$ implies $(y^2 - 2y + 2)^3 = y^4(y - 1)^2$. The roots of
+\[
+4 y^5 - 17 y^4 + 32 y^3 - 36 y^2 + 24 y - 8 = 0
+\]
+can be found using
+\begin{verbatim}
+np.roots([4, -17, 32, -36, 24, -8]).
+\end{verbatim}
+They are $y \approx 1.62072, 0.427249 \pm 0.974453 i, 0.887391 \pm 0.550058$. The only 
+real root is $1.62072$.
+The variation of the potential along the $y$ axis is shown in figure \ref{c2f3a} to 
+\ref{c2f3e}.
+\begin{figure}[!ht]
+\center
+\includegraphics[scale=0.75]{purcell_c2p3a}
+\caption{In range $(-2, 2)$.}
+\label{c2f3a}
+\end{figure}
+\begin{figure}[!ht]
+\center
+\includegraphics[scale=0.75]{purcell_c2p3b}
+\caption{In range $(1.5, 1.7)$.}
+\label{c2f3b}
+\end{figure}
+\begin{figure}[!ht]
+\center
+\includegraphics[scale=0.75]{purcell_c2p3c}
+\caption{In range $(0.1, 2)$.}
+\label{c2f3c}
+\end{figure}
+\begin{figure}[!ht]
+\center
+\includegraphics[scale=0.75]{purcell_c2p3d}
+\caption{In range $(-5, -0.1)$.}
+\label{c2f3d}
+\end{figure}
+\begin{figure}[!ht]
+\center
+\includegraphics[scale=0.75]{purcell_c2p3e}
+\caption{In range $(1.5, 5)$.}
+\label{c2f3e}
+\end{figure}
+
+The figures were generated using
+\begin{verbatim}
+import numpy as np
+import matplotlib.pyplot as plt
+
+def varphi(y: float) -> float:
+    return -2 * (1/y - 1/np.sqrt(1 + (y - 1)**2))
+
+def plot(ymin: float,
+         ymax: float,
+         fname: str,
+         loc: str='best',
+         show_x_axis: bool=True) -> None:
+    Y = np.linspace(ymin, ymax)
+    V = [varphi(y) for y in Y]
+    label = f'In range [{ymin}, {ymax}]'
+    plt.plot(Y, V, label=label)
+    if show_x_axis:
+        plt.hlines(y=0, xmin=ymin, xmax=ymax, color='red')
+        
+    plt.xlabel(r'$y$')
+    plt.ylabel(r'$\varphi(y)$')
+    plt.legend(loc=loc)
+    plt.savefig(fname)
+    plt.close()
+
+
+def main():
+    plot(-2, 2, 'course/purcell_c2p3a.png')
+    plot(1.5, 1.7, 'course/purcell_c2p3b.png', show_x_axis=False)   
+    plot(0.1, 2, 'course/purcell_c2p3c.png', loc='lower right')
+    plot(-5, -0.1, 'course/purcell_c2p3d.png')
+    plot(1, 5, 'course/purcell_c2p3e.png')
+
+
+if __name__ == '__main__':
+    main()
+
+\end{verbatim}
+
+\item Given the potential
+\begin{equation}\label{e11}
+\varphi(x, y, z) = \begin{cases}
+x^2 + y^2 + z^2 \text{ for } x^2 + y^2 + z^2 < a^2 \\
+-a^2 + \frac{2a^3}{\sqrt{x^2 + y^2 + z^2}} \text{ for } a^2 < x^2 + y^2 + z^2
+\end{cases}
+\end{equation}
+the electric field $\vec{E} = -\grad\varphi$ is
+\begin{equation}\label{e12}
+\vec{E} = \begin{cases} -2(x\uv{x} + y\uv{y} + z\uv{z}) \text{ for } x^2 + y^2 + z^2 < a^2 \\
+2a^3\frac{x\uv{x} + y\uv{y} + z\uv{z}}{(x^2 + y^2 + z^2)^{3/2}} \text{ for } a^2 < x^2 + y^2 + z^2
+\end{cases}
+\end{equation}
+Therefore 
+\begin{equation}\label{e13}
+\dive\vec{E} = \begin{cases} -6 \text{ for } x^2 + y^2 + z^2 < a^2 \\
+0 \text{ for } a^2 < x^2 + y^2 + z^2
+\end{cases}
+\end{equation}
+so that, by Gauss law, the charge density is,
+\begin{equation}\label{e14}
+\rho = \begin{cases} -\frac{3}{2\pi} \text{ for } x^2 + y^2 + z^2 < a^2 \\
+0 \text{ for } a^2 < x^2 + y^2 + z^2
+\end{cases}
+\end{equation}
+
+\item Let $a$ be the radius of the sphere. If $Q$ is the total charge on it then
+the potential at its surface is
+\[
+\varphi = -\frac{Q}{a}.
+\]
+If $\sigma$ is the surface charge density then $Q = 4\pi a^2\sigma$ so that
+\[
+\varphi = -4\pi a\sigma
+\]
+that is,
+\[
+\sigma = -\frac{\varphi}{4\pi a}.
+\]
+Given that $\varphi = 1000/300$ stat volt and electronic charge is $4.8 \times
+10^{-10}$ esu, 
+\[
+\sigma = \frac{10}{3}\frac{1}{4\pi a}\frac{10^{10}}{4.8} \approx 
+\frac{5.5}{a} \times 10^{-3} \times 10^{10} \approx \frac{5.5}{a} \times 10^7.
+\]
+
+\item The electric field on the surface of the earth is
+\[
+\vec{E} = \frac{1}{4\pi\epsilon_0}\frac{Q}{R^2}\uv{r}.
+\]
+Given that $R = 6.378 \times 10^6$ m,
+\[
+E \approx 9 \times 10^9 \times \frac{1}{4.078 \times 10^{13}} 
+\approx 2.21 \times 10^{-4} \text{V/m}.
+\]
+The potential at the surface is
+\[
+\varphi = \frac{1}{4\pi\epsilon_0}\frac{Q}{R} \approx 1411 \text{V}.
+\]
+
+\item The integral,
+\[
+\int_C^D\vec{E}\cdot d\vec{s} = \varphi(D) - \varphi(C).
+\]
+It is easy to get the terms on the rhs.
+\begin{eqnarray}
+\varphi(C) &=& -\frac{2}{2\sqrt{5}} + \frac{3}{5} \label{e16} \\
+\varphi(D) &=& -\frac{2}{5} + \frac{3}{2\sqrt{5}} \label{e17}
+\end{eqnarray}
+so that
+\[
+\int_C^D\vec{E}\cdot d\vec{s} = \frac{\sqrt{5} - 2}{2}.
+\]
+
+\item For the infinitely long cylinder of radius $a$ whose cross section is shown
+in figure 2.17 of the book, the electric field is normal to the curved surface of
+the cylinder. In order to get the field at a point which is at a distance $r$ from
+the cylinder's axis, align the coordinates so that $z$ axis coincides with the 
+cylinder's axis. Consider a pillbox coaxial with the cylinder and of radius $r$.
+If $r < a$, the pillbox encloses a charge $\pi r^2 h \rho$, where $h$ is the
+pillbox's height. The flux through the pillbox is $2\pi rh E$. Therefore, by
+Gauss' law,
+\[
+2\pi rh E = 4\pi (\pi r^2h \rho)
+\]
+so that
+\begin{equation}\label{e18}
+\vec{E} = 2\pi\rho \vec{r}, \text{ if } r < a.
+\end{equation}
+If $r \ge a$, a similar analysis yields
+\[
+2\pi rh E = 4\pi (\pi a^2 h \rho)
+\]
+so that
+\begin{equation}\label{e19}
+\vec{E} = 2\pi\rho \frac{a^2}{r}\uv{r}, \text{ if } r \ge a.
+\end{equation}
+We are asked to find the potential assuming $\varphi(0) = 0$. Thus, if $r < a$,
+\begin{equation}\label{e20}
+\varphi(r) = \int_0^r\vec{E}\cdot d\vec{s} = 
+\int_0^r 2\pi\rho \vec{r}^\op\cdot d\vec{r}^\op = \pi\rho r^2 \text{ if } r < a.
+\end{equation}
+If $r \ge a$,
+\begin{eqnarray}
+\varphi(r) &=& \int_0^r\vec{E}\cdot d\vec{s} \nonumber \\
+ &=& \int_0^a\vec{E}\cdot d\vec{s} + \int_a^r\vec{E}\cdot d\vec{s} \nonumber \\
+ &=& \pi\rho a^2 + 2\pi\rho a^2 \int_a^r \frac{dr^\op}{r^\op} \nonumber \\
+ &=& \pi\rho a^2 + 2\pi\rho a^2\ln\left(\frac{r}{a}\right) \nonumber \\
+ &=& \pi\rho a^2\left(1 + \ln\left(\frac{r^2}{a^2}\right)\right) \label{e21}
+\end{eqnarray}
+Note that $\varphi$ is continuous at $r = a$. So is the electric field.
+
+\item The potential at the rim is $4\sigma a$ and that on the $y$ axis is 
+\[
+\varphi(0, y, 0) = 2\pi\sigma(\sqrt{y^2 + a^2} \pm y)
+\]
+so that the point on $y$ axis where the said equipotential cuts the $y$ axis
+is given by the equation
+\[
+\pi(\sqrt{y^2 + a^2} \pm y) = 2 a.
+\]
+As expected, this equation is independent of $\sigma$. It is a purely geometrical
+fact. I cannot sketch the equipotential surface without knowing its functional 
+form. Finding $\varphi$ at an arbitrary point from the dissc is not a trivial 
+problem.
+\end{enumerate}
+
+\section{Potential of a uniformly charged disc}
+The textbook mentions that the potential at arbitrary points due to a uniformly
+charged disc can be expressed in terms of elliptic functions. We will derive the
+expresions here following the paper (\href{https://arxiv.org/pdf/2004.04540}{pre-print})\cite{bs}.
+\subsection{Arbitrary point on the disc}
+\subsection{Arbitrary point not on the disc}
+
+\begin{thebibliography}{1}
+\bibitem{bs} On the electrostatic potential and electric field of a uniformly charged disk.
+published in the European Journal of Physics 41.4 (2020): 045201
+\end{thebibliography}
+\end{document}

@@ -421,10 +421,153 @@ $\varphi(Q)$ will be equal to $\varphi(P)$ when
 \[
 \frac{\sqrt{X^2 + (Z+d)^2} + Z+d}{\sqrt{X^2 + (Z-d)^2} + Z-d} = \sqrt{3}
 \]
+In general, if $\varphi(P) = k$ then the equation of the equipotential line is
+\begin{equation}\label{e27}
+\sqrt{X^2 + (Z+d)^2} + Z+d = k\sqrt{X^2 + (Z-d)^2} + kZ - kd.
+\end{equation}
+If
+\begin{equation}\label{e28}
+\frac{X^2}{a^2 - d^2} + \frac{Z^2}{a^2} = 1
+\end{equation}
+then
+\begin{equation}\label{e29}
+X^2 = a^2 - Z^2 - d^2 + \frac{Z^2d^2}{a^2}
+\end{equation}
+and
+\[
+X^2 + (Z \pm d)^2 = a^2 + \frac{Z^2d^2}{a^2} \pm 2Zd = \left(\frac{Zd}{a} \pm a\right)^2.
+\]
+Substituting this in \eqref{e27}, we get
+\begin{equation}\label{e30}
+\frac{Zd}{a} + a + Z + d = k\left(\frac{Zd}{a} - a\right) + kZ - kd,
+\end{equation}
 that is
 \[
-\sqrt{X^2 + (Z+d)^2} + Z+d = 3\sqrt{X^2 + (Z-d)^2} + 3Z-3d
+(k + 1)(a + d) = (k - 1)Z\frac{a + d}{a} \Rightarrow a(k + 1) = (k - 1)Z.
 \]
+Thus, if
+\begin{equation}\label{e31}
+Z = \frac{k + 1}{k - 1}a,
+\end{equation}
+then the point $(X, Z)$ lies on the ellipse defined by \eqref{e28}.
+
+\item Refer to figure 2.12 of the book. We will first find the potential due to
+the shaded strip in it. Let $q$ be the charge on it, $h$ be its height and $x$
+be its distance from $P$. The potential due to a charge element $dq$ at height
+$y$ at $P$ is
+\[
+\varphi(P) = \frac{dq}{r} = \lambda\frac{dy}{\sqrt{x^2 + y^2}}
+\]
+and 
+\[
+\varphi(P) = \lambda\int_0^h\frac{dy}{\sqrt{x^2 + y^2}} = 
+\lambda\int_0^\theta\sec\psi d\psi,
+\]
+where $y = x\tan\psi$ and $\theta = \tan^{-1}(h/x)$. Thus,
+\begin{equation}\label{e32}
+\varphi(P) = \frac{q}{h}\ln|\sec\theta + \tan\theta|.
+\end{equation}
+To extend this solution to the potential due to the triangular region, let
+the strip by of height $h$ and thickness $dx$ so that the charge on it is
+$dq = \sigma hdx$ and we have
+\[
+d\varphi(P) = \sigma dx\ln|\sec\theta + \tan\theta|
+\]
+and
+\begin{equation}\label{e33}
+\varphi(P) = \int_0^b\sigma dx\ln|\sec\theta + \tan\theta| = 
+\sigma b\ln|\sec\theta + \tan\theta|.
+\end{equation}
+
+\item It is easy to check that $\curl\vec{E} = 0$.
+
+\item $\nabla^2 f \ne 0, \nabla^2 g = 0$. Further $\grad g = 2(x\uv{x} - y\uv{y})$.
+The Hessian determinant of $g$ is a constant, $-4$. Since it is negative, all extrema
+are saddle points.
+
+The function $f$, on the other hand, is an elliptic paraboloid. Since $\grad f = 
+2(x\uv{x} - y\uv{y})$, the origin $(0, 0)$ is a global extremum. The Hessian 
+determinant at $(0, 0)$ is $4$ and $g_{xx} = g_{yy} = 2 > 0$. Therefore, the 
+extremum is indeed a minimum.
+
+\item 
+\begin{enumerate}
+\item If $\vec{F} = (x + y)\uv{x} + (-x + y)\uv{y} - 2z\uv{z}$, $\dive\vec{F} = 0$
+and $\curl\vec{F} = -2\uv{x}$.
+
+\item If $\vec{G} = 2y\uv{x} + (2x + 3z)\uv{y} + 3y\uv{z}$, $\dive\vec{G} = 0$ and
+$\curl\vec{G} = 0$. Therefore, we can find a function $\varphi$ such that $\vec{G}
+= \grad\varphi$. The field $\vec{G}$ vanishes at the origin. If we assume that the
+potential also vanishes there,
+\[
+\varphi(x, y, z) = \int_{(0, 0, 0)}^{(x, y, z)} \vec{G}(x^\op, y^\op, z^\op)\cdot d\vec{s},
+\]
+along any curve joining the limits of the integral. Choose a curve composed of the
+straight lines $(0, 0, 0)$ to $(x, 0, 0)$, $(x, 0, 0)$ to $(x, y, 0)$ and $(x, y, 0)$
+to $(x, y, z)$. The field takes the forms $2x^\op\uv{y}$, $2y^\op\uv{x} + 2x\uv{y}
++ 3y^\op\uv{z}$ and $2y\uv{x} + (2x + 3z^\op)\uv{y} + 3y\uv{z}$ along the three
+lines. Then,
+\begin{eqnarray*}
+\varphi(x, y, z) &=& \int_{(0, 0, 0)}^{(x, 0, 0)}\vec{G}\cdot\uv{x}dx +
+\int_{(x, 0, 0)}^{(x, y, 0)}\vec{G}\cdot\uv{y}dy + 
+\int_{(x, y, 0)}^{(x, y, z)}\vec{G}\cdot\uv{z}dz \\
+ &=& 0 + 2x\int_{(x, 0, 0)}^{(x, y, 0)} dy^\op + 3y\int_{(x, y, 0)}^{(x, y, z)} dz^\op \\
+ &=& 2xy + 3yz.
+\end{eqnarray*}
+We confirm that $\grad\varphi = 2y\uv{x} + (2x + 3z)\uv{y} + 3y\uv{z} = \vec{G}$.
+
+\item If $\vec{H} = (x^2 - z^2)\uv{x} + 2\uv{y} + 2xz\uv{z}$ then $\dive\vec{H}
+ = 4x$ and $\curl\vec{H} = -4z\uv{y}$.
+\end{enumerate}
+
+\item Part (a) is a straightforward manipulation in Cartesian coordinates. The
+second method is superior because the proof is independent of the coordinates.
+In figure 2.16 of the book, let the volume $V$ be composed of the top portion
+$V_1$ and the bottom portion $V_2$. Let the surface $S$ be common to both.
+Then,
+\begin{eqnarray*}
+\int_V\dive\curl\vec{A}\;dv &=& \int_{V_1}\dive\curl\vec{A}\;dv + 
+  \int_{V_2}\dive\curl\vec{A}\;dv \\
+  &=& \int_{S_1}\curl\vec{A}\cdot d\vec{a} + \int_{S_2}\curl\vec{A}\cdot d\vec{a},
+\end{eqnarray*}
+where $S_1$ and $S_2$ are closed surfaces that include the outer surface and the
+one enclosed by the curve $C$ in the figure. Since they are both closed surfaces,
+\[
+\int_V\dive\curl\vec{A}\;dv = \int_{C_1}\vec{A}\cdot d\vec{s} + 
+\int_{C_2}\vec{A}\cdot d\vec{s} = 0 + 0
+\]
+Since this is true for any volume $V$, we have $\dive\curl\vec{A} = 0$.
+
+\item We have to prove the equivalence of
+\begin{equation}\label{e34}
+U = \frac{1}{8\pi}\int E^2 dv
+\end{equation}
+and
+\begin{equation}\label{e35}
+U = \frac{1}{2}\int\rho\varphi dv
+\end{equation}
+for a charge distribution of \emph{finite extent}. If $\varphi$ is the potential
+due to the distribution $\rho$,
+\[
+\int_V \dive(\varphi\grad\varphi)dv = \int_S \varphi\grad\varphi\cdot d\vec{a}.
+\]
+Choose $V$ to be very large so that on the bounding surface $S$, $\varphi$ goes
+as $r^{-1}$, $\grad\varphi$ as $r^{-2}$ and the area itself as $r^2$. Thus, if $S$
+is very far from the charge distribution, which we are assured to be of finite
+extend, then the surface integral can be made vanishingly small. Thus,
+\[
+\int_V \dive(\varphi\grad\varphi)dv = 0.
+\]
+Since $\dive(\varphi\grad\varphi) = |\grad\varphi|^2 + \varphi\nabla^2\varphi =
+E^2 - 4\pi\varphi\rho$,
+\[
+\int_V E^2 dv = 4\pi\int\rho\varphi dv
+\]
+from which the equivalence of \eqref{e34} and \eqref{e35} follows.
+
+The idea of choosing a very large volume to integrate over a function that is
+non-zero over a finite region in space so that the transformed surface integral
+is zero is very common in physics.
 \end{enumerate}
 
 \section{Potential of a uniformly charged disc}

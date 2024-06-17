@@ -1,5 +1,6 @@
 \documentclass{article}
 \usepackage{amsmath, graphicx, xcolor, hyperref}
+\usepackage{mathabx}
 \include{common}
 \begin{document}
 \title{The Electric Potential}
@@ -328,6 +329,102 @@ As expected, this equation is independent of $\sigma$. It is a purely geometrica
 fact. I cannot sketch the equipotential surface without knowing its functional 
 form. Finding $\varphi$ at an arbitrary point from the dissc is not a trivial 
 problem.
+
+\item The potential at a point on the $z$ axis is
+\[
+d\varphi(2d) = \frac{dq}{2d - z} = \lambda\frac{dz}{2d - z}
+\]
+so that
+\begin{equation}\label{e22}
+\varphi(2d) = \int_{-d}^d d\varphi(z) = -\int_{-d}^d\frac{dz}{z - 2d} = \lambda\ln 3
+\end{equation}
+For a point on the $x$ axis,
+\[
+d\varphi(x) = \frac{dq}{\sqrt{x^2 + z^2}}
+\]
+so that
+\begin{eqnarray}
+\varphi(x) &=& \lambda\int_{-d}^d\frac{dz}{\sqrt{x^2 + z^2}} \nonumber \\
+ &=& \lambda\int_{-\alpha}^\alpha \sec\theta d\theta\;\text{ where }\alpha = \tan^{-1}(d/x) \nonumber \\
+ &=& \lambda\ln|\sec\theta + \tan\theta|\Big|_{-\alpha}^\alpha \nonumber \\
+ &=& \lambda\ln\left|\frac{\sqrt{x^2 + d^2} + d}{\sqrt{x^2 + d^2} - d}\right| \label{e23}
+\end{eqnarray}
+$\varphi(z = 2d) = \varphi(x)$ implies $\sqrt{x^2 + d^2} + d = 3(\sqrt{x^2 + d^2} - d)
+\Rightarrow x = d\sqrt{3}$.
+
+\item The distance between the point $P = (3d/2, 0, d)$ and a point $(0, 0, z)$ on
+the rod is
+\begin{equation}\label{e24}
+r = \sqrt{\frac{9d^2}{4} + 0 + (d - z)^2}
+\end{equation}
+so that the potential at it due to a small charge element $dq$ at $z$ is
+\[
+d\varphi(P) = \frac{dq}{r} = 2\lambda\frac{dz}{\sqrt{9d^2 + 4(d - z)^2}}
+\]
+and 
+\[
+\varphi(P) = 2\lambda\int_{-d}^d\frac{dz}{\sqrt{9d^2 + 4(d - z)^2}}
+\]
+Let $u = 2(d - z)$ so that $du = -2dz$ and the limits of integral are from $u=4d$
+to $z = 0$ and
+\[
+\varphi(P) = -\lambda\int_{4d}^0\frac{du}{\sqrt{9d^2 + u^2}}.
+\]
+If $u = 3d\tan\theta$ then $du = 3d\sec^2\theta d\theta$ and the limit of the 
+integral are from $\alpha = \tan^{-1}(4/3)$ to $\theta = 0$.
+\[
+\varphi(P) = -\lambda\int_{\alpha}^0\sec\theta d\theta = 
+-\lambda\ln|\sec\theta + \tan\theta|\Big|_{-\alpha}^0 =
+-(0 - \lambda\ln 3) = \lambda\ln 3.
+\]
+
+We will repeat this analysis for an arbitrary point $Q = (X, 0, Z)$. Its distance 
+from a point $(0, 0, z)$ on the rod is
+\begin{equation}\label{e25}
+r = \sqrt{X^2 + (Z - z)^2}
+\end{equation}
+so that the potential at it us
+\[
+\varphi(Q) = \lambda\int_{-d}^d\frac{dz}{\sqrt{X^2 + (Z - z)^2}}
+\]
+Let $u = Z - z$ so that $du = -dz$ and the limits of the integral go from
+$Z + d$ to $Z - d$ and
+\[
+\varphi(Q) = -\lambda\int_{Z+d}^{Z-d}\frac{du}{\sqrt{X^2 + u^2}} = 
+\lambda\int_{Z-d}^{Z+d}\frac{du}{\sqrt{X^2 + u^2}}.
+\]
+If $u = X\tan\theta$, $du = X\sec^2\theta d\theta$ and the limits of the
+integral become 
+\[
+\alpha = \tan^{-1}\left(\frac{Z - d}{X}\right) \;\text{and}\;
+\beta = \tan^{-1}\left(\frac{Z + d}{X}\right).
+\]
+We then have,
+\[
+\varphi(Q) = \lambda\int_\alpha^\beta \sec\theta d\theta = 
+\lambda\ln|\sec\theta + \tan\theta|\Big|_\alpha^\beta.
+\]
+Now,
+\[
+\tan\alpha = \frac{Z-d}{X} \Rightarrow \sec\alpha=\frac{\sqrt{X^2 + (Z-d)^2}}{X}
+\]
+so that
+\[
+\varphi(Q) = \lambda\ln\left|\frac{\sqrt{X^2 + (Z+d)^2} + Z+d}{X}\right| - 
+\lambda\ln\left|\frac{\sqrt{X^2 + (Z-d)^2} + Z-d}{X}\right|
+\]
+or
+\begin{equation}\label{e26}
+\varphi(Q) = \lambda\ln\left|\frac{\sqrt{X^2 + (Z+d)^2} + Z+d}{\sqrt{X^2 + (Z-d)^2} + Z-d}\right|
+\end{equation}
+$\varphi(Q)$ will be equal to $\varphi(P)$ when
+\[
+\frac{\sqrt{X^2 + (Z+d)^2} + Z+d}{\sqrt{X^2 + (Z-d)^2} + Z-d} = \sqrt{3}
+\]
+that is
+\[
+\sqrt{X^2 + (Z+d)^2} + Z+d = 3\sqrt{X^2 + (Z-d)^2} + 3Z-3d
+\]
 \end{enumerate}
 
 \section{Potential of a uniformly charged disc}

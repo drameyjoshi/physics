@@ -568,6 +568,53 @@ from which the equivalence of \eqref{e34} and \eqref{e35} follows.
 The idea of choosing a very large volume to integrate over a function that is
 non-zero over a finite region in space so that the transformed surface integral
 is zero is very common in physics.
+
+\item We will find the potential at an arbitrary point on the axis of the cylinder.
+Align the axes such that the $z$ axis coincides with the cylinder's principal axis 
+and the origin is at a distance $b/2$ from either extremity.
+
+The potential due to a ring of charge at distance $r$ from the field point 
+$(0, 0, z_0)$ is
+\[
+d\varphi = \frac{dq}{r} = \frac{\sigma \times 2\pi adz}{\sqrt{a^2 + (z - z_0)^2}}
+\]
+and
+\[
+\varphi(z_0) = 2\pi a\sigma\int_{-b/2}^{b/2}\frac{dz}{\sqrt{a^2 + (z - z_0)^2}}.
+\]
+Let $(z - z_0) = a\tan\theta$ so that $dz = a\sec^2\theta d\theta$ and the limits
+of the integral are from
+\[
+\alpha = \tan^{-1}\left(\frac{-b-2z_0}{2a}\right)  \text{ to } 
+\beta = \tan^{-1}\left(\frac{b - 2z_0}{2a}\right).
+\]
+Therefore,
+\[
+\varphi(z_0) = 2\pi a\sigma\ln\left|\frac{\sec\beta + \tan\beta}{\sec\alpha + \tan\alpha}\right|.
+\]
+Substituting for $\alpha$ and $\beta$ we get
+\[
+\varphi(z_0) = 2\pi a\sigma\ln\left|\frac{\sqrt{4a^2 + (b - 2z_0)^2} + b - 2z_0}{\sqrt{4a^2 + (b + 2z_0)^2} + b + 2z_0}\right|
+\]
+Note that when $\tan\alpha < 0$ then so is $\sec\alpha$ so that the denominator 
+is really the sum of two negative terms whose modulus is the sum of corresponding
+positive terms. In general, we can write
+\begin{equation}\label{e36}
+\varphi(z) = 2\pi a\sigma\ln\left|\frac{\sqrt{4a^2 + (b - 2z)^2} + b - 2z}{\sqrt{4a^2 + (b + 2z)^2} + b + 2z}\right|
+\end{equation}
+Clearly,
+\begin{eqnarray*}
+\varphi(b/2) &=& 2\pi a\sigma\ln\left|\frac{a}{\sqrt{a^2+b^2} + b}\right| \\
+\varphi(0) &=& 0 \\
+\varphi(-b/2) &=& 2\pi a\sigma\ln\left|\frac{\sqrt{a^2+b^2} + b}{a}\right|
+\end{eqnarray*}
+Therefore,
+\begin{eqnarray*}
+\varphi(b/2) - \varphi(0) &=& 2\pi a\sigma\ln\left|\frac{a}{\sqrt{a^2+b^2} + b}\right| \\
+\varphi(0) - \varphi(-b/2) &=& 2\pi a\sigma\ln\left|\frac{\sqrt{a^2+b^2} + b}{a}\right| \\
+ &=& 2\pi a\sigma\ln\left|\frac{a}{\sqrt{a^2+b^2} + b}\right| \\
+ &=& \varphi(b/2) - \varphi(0)
+\end{eqnarray*}
 \end{enumerate}
 
 \section{Potential of a uniformly charged disc}

@@ -615,6 +615,192 @@ Therefore,
  &=& 2\pi a\sigma\ln\left|\frac{a}{\sqrt{a^2+b^2} + b}\right| \\
  &=& \varphi(b/2) - \varphi(0)
 \end{eqnarray*}
+From \eqref{e36}, we get
+\begin{equation}\label{e37}
+\vec{E} = 4\pi\sigma a\left(\frac{1}{\sqrt{4a^2 + (b - 2z)^2}} + \frac{1}{\sqrt{4a^2 + (b + 2z)^2}}\right).
+\end{equation}
+Figure \ref{c2f18} shows the variation of the electric field in the region around
+the cylinder. It was generated using:
+\begin{verbatim}
+import numpy as np
+import matplotlib.pyplot as plt
+
+a = 1
+b = 1
+sigma = 4/np.pi # Chosen so that 4\pi\sigma a = 1 !!
+K = 4*np.pi*sigma*a
+
+def E_field(z: float) -> float:
+    return K*((4*a**2+(b-2*z)**2)**(-1/2)+\
+              (4*a**2+(b+2*z)**2)**(-1/2))
+
+def main():
+    Z = np.linspace(-4*b, 4*b, 200)
+    E = [E_field(z) for z in Z]
+    plt.plot(Z, E)
+    plt.axvline(x=-b/2, ls='--')
+    plt.axvline(x=b/2, ls='--')
+    plt.xlabel(r'$z$')
+    plt.ylabel(r'$E(z)$')
+    plt.title('Electric field in a charged cylinder')
+    plt.savefig('course/purcell_c2p18.png')
+
+
+if __name__ == '__main__':
+    main()
+\end{verbatim}
+\begin{figure}[!ht]
+\center
+\includegraphics[scale=0.75]{purcell_c2p18}
+\caption{$E(z)$ for $a=1, b=1$. The cylinder extends from $z=-1/2$ to $z=1/2$.}
+\label{c2f18}
+\end{figure}
+
+\item When the spheres are so far apart their presence does not affect the charge
+distribution on each other we can consider them to be point charges. Let one of 
+them be centred at the origin and the other one centred at a distance $a$ on the
+$x$ axis. If one of them has a charge $q$ and the other $Q-q$ then the energy of
+the configuration is
+\[
+U(q) = \frac{q(Q - q)}{a}
+\]
+so that $aU^\op(q) = (Q - q) - q = Q - 2q$. Thus, the potential energy is minimised
+when $q = Q/2$, that is when the charges are evenly distributed.
+
+Note that this analysis is valid only when $a$ is much larger than the radii of the
+spheres.
+
+\item We first find the potential at the centre of a uniformly charged sphere.
+If $\rho$ is the charge density then at a point a distance $r$ from the centre,
+\[
+E \times 4\pi r^2 = 4\pi q_{enc} = 4\pi\rho\frac{4\pi}{3}r^2 \Rightarrow
+\vec{E} = \frac{4\pi}{3}\rho r\uv{z}.
+\]
+The potential difference between the centre and the surface of the sphere is
+\[
+\varphi(a) = -\int\vec{E}\cdot d\vec{s} = -\int_0^a \frac{4\pi}{3}\rho rdr
+= -\frac{2\pi}{3}\rho a^2.
+\]
+If $Q = 79e$ is the charge on the gold nucleus,
+\[
+\rho = \frac{3Q}{4\pi a^3}
+\]
+so that
+\[
+\varphi(a) = -\frac{Q}{2a}
+\]
+With $Q = 79e$ and $a = 6 \times 10^{-13}$ cm, $\varphi(a) = -94 800$ statvolt or
+$2.844 \times 10^{7}$ V. This is a tremendous potential difference in a structure
+as small as a gold nucleus. The enormous electric field is overpowered by the
+strong nuclear force holding the nucleus together.
+
+\item The first point to consider is whether gravity should even be mentioned in
+this problem. If each of the cube's sides is of length $2a$ and if we align the
+Cartesian coordinate axes such that the origin coincides with the centre of the
+cube and the edges of the cube are parallel to the axes then the eight vertices
+of the cube have coordinates that are a permutation of$(\pm a, \pm a, \pm a)$.
+If the electron were at a point $(x, y, z)$ then its distance from the vertices
+is $\sqrt{(x \pm a)^2 + (y \pm a)^2 + (z \pm a)^2}$ and the potential due to a
+proton is
+\[
+\frac{e}{\sqrt{(x \pm a)^2 + (y \pm a)^2 + (z \pm a)^2}}
+\]
+and the total potential is
+\[
+\varphi(x, y, z) = \sum \frac{e}{\sqrt{(x \pm a)^2 + (y \pm a)^2 + (z \pm a)^2}},
+\]
+where the summation runs over all permutations. To find the extremum of this
+potential, we find
+\[
+\grad\phi(x,y,z) = -\sum\frac{(x \pm a)\uv{x}+(y \pm a)\uv{y}+(z \pm a)\uv{z}}
+{((x \pm a)^2 + (y \pm a)^2 + (z \pm a)^2)^{3/2}}
+\]
+It is not easy to find the extremum of $\varphi$ from this expression by writing
+all terms of the sum. Instead, we note that is $x = y = z = 0$ then the denominators
+of all terms will be $3\sqrt{3}a^{3/2}$ and the numerators will all add up to zero.
+Thus, $(x = 0, y = 0, z = 0)$ is an extremum. It is also the point where the 
+electrical force due to all protons is exactly zero. In order to investigate the
+nature of this extremum, we need the Hessian determinant, each term of which is
+a sum of eight terms. Instead, we invoke a general property of Laplace's function
+which is that $\varphi$ will not have a minimum or a maximum. Therefore, in spite
+of the origin being a point of equilibrium, an electron does not stay at rest there.
+The extremum will be a saddle point and the electron will find a path to escape.
+
+\item We use the formula,
+\[
+V = \frac{1}{4\pi\epsilon_0}\frac{Q}{R},
+\] for the potential of a charged sphere so that
+\[
+Q = -\frac{0.15 \times 3 \times 10^{-7}}{9 \times 10^9} = -50 \times 10^{-14}C
+\]
+The number of electrons making up this charge is
+\[
+N = \frac{Q}{e} \approx 3 \times 10^4.
+\]
+
+\item The proton approaches to silver nucleus with an energy of $5e\times 10^6$ J,
+where $e$ is the charge on the proton. It uses this energy to climb up the 
+Coulomb potential of the silver nuclues. The closest the proton can approach a
+nucleus is when this kinetic energy is converted entirely into the potential 
+energy. If $a$ is the separation between the two,
+\[
+\frac{1}{4\pi\epsilon_0}\frac{Ze^2}{a} = 5e \times 10^6.
+\]
+Using $Z = 47$, we get $a \approx 1.3536 \times 10^{-14}$ m. The proton is halted
+roughly at a distance of ten times the nuclear radius from the centre of the
+nucleus.
+
+\item Quite straightforward.
+
+\item We can choose a convenient point on each of the curves. 
+\begin{itemize}
+\item On curve $A$, choose the point $y = 1$. The potentials due to the negative
+charges is equal to $-1/\sqrt{2} - 1/\sqrt{2}$ and that due to positive charges
+is $2 + 2/3$. Thus the total potential is $4/3 - \sqrt{2}$.
+\item Curve $B$ crosses the $x$ axis at $x = 7/2$. The potential due to the
+positive charges is
+\[
+-\frac{1}{5/2} - \frac{1}{9/2} = -\frac{2}{5} - \frac{2}{9} = -\frac{28}{45}.
+\]
+The distance from the positive charges is $\sqrt{65}/2$ so that their contribution
+is $4/\sqrt{65} + 4/\sqrt{65}$. The total potential is
+\[
+V_B = \frac{8}{\sqrt{65}} - \frac{28}{45}.
+\]
+\item Curve $C$ passes through the origin. The potential at the origin is $-1
+-1 + 2/2 + 2/2 = 0$. 
+\end{itemize}
+
+\item From equation (20) of the book, the potential at the centre of a charged
+disc of diameter $d$ is
+\[
+\varphi_D = \pi\sigma d.
+\]
+We can create a square of side $s = 2a$ by combining eight triangles of the kind
+treated in problem 12 with $a = b$. The potential due to each triangle at the 
+centre is $\sigma a \ln(1 + \sqrt{2})$ as $\theta = \pi/4$. Thus,
+\[
+\varphi_S = 8 \times \sigma a \ln(1 + \sqrt{2}) = 4s\sigma\ln(1 + \sqrt{2}).
+\]
+If $\varphi_S = \varphi_D$, we must have
+\[
+\frac{s}{d} = \frac{\pi}{4\ln(\sqrt{2} + 1)}.
+\]
+
+\item From equation (25) of the book, the potential at the rim of a disc of radius
+$r$ and surface charge density is $4\sigma r$, Now bring a charge $dq = \sigma 
+\times 2\pi rdr$ from infinity to it. The energy needed is
+\[
+dU = -4\sigma r dq = -8\pi\sigma^2 r^2 dr.
+\]
+The total energy is
+\[
+U = \int_0^a dU = -8\pi\sigma^2\frac{a^3}{3}.
+\]
+Now, $Q = \sigma \pi a^2$ so that $\sigma^2 = Q^2/(\pi^2 a^4)$ and hence
+\[
+U = -\frac{8Q^2}{3\pi a}.
+\]
 \end{enumerate}
 
 \section{Potential of a uniformly charged disc}

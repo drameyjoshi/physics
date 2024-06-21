@@ -510,19 +510,66 @@ Since $\cosh$ is an even function,
 We can choose $\phi_0$ such that this equation reduces to
 \begin{equation}\label{c5e79}
 \pm c\sqrt{(L\mathcal{E})^2 + m^2c^2(\alpha^2 - L^2c^2)}
-\cosh\left((\phi - \phi_0)\sqrt{\frac{\alpha^2}{L^2c^2} - 1}\right) = \frac{C}{r}.
+\cosh\left((\phi - \phi_0)\sqrt{\frac{\alpha^2}{L^2c^2} - 1}\right) = \frac{C^2}{r}.
 \end{equation}
 This can always be done because \eqref{c5e78} is of the form
 \begin{equation}\label{c5e80}
-A\cosh(B(x_0-x)) = Cf(x).
+A\cosh(B(x_0-x)) = C^2f(x).
 \end{equation}
 We can write it as
 \begin{equation}\label{c5e81}
-x_0 = x + \frac{1}{B}\cosh^{-1}\left(\frac{Cf(x)}{A}\right).
+x_0 = x + \frac{1}{B}\cosh^{-1}\left(\frac{C^2f(x)}{A}\right).
 \end{equation}
 Choose $x_0$ such that if $f(x^\op) = 1$ then
 \begin{equation}\label{c5e82}
-x_0 = x^\op + \frac{1}{B}\cosh^{-1}\left(\frac{C}{A}\right).
+x_0 = x^\op + \frac{1}{B}\cosh^{-1}\left(\frac{C^2}{A}\right).
+\end{equation}
+
+\item $\alpha^2 < L^2c^2$. In this case,
+\begin{eqnarray*}
+\cosh\left((\phi - \phi_0)\sqrt{\frac{\alpha^2}{L^2c^2} - 1}\right) 
+ &=& \cosh\left(i(\phi - \phi_0)\sqrt{1 - \frac{\alpha^2}{L^2c^2}}\right) \\
+ &=& \cos\left((\phi - \phi_0)\sqrt{1 - \frac{\alpha^2}{L^2c^2}}\right)
+\end{eqnarray*}
+and \eqref{c5e79} becomes
+\begin{equation}\label{c5e83}
+\pm c\sqrt{(L\mathcal{E})^2 - m^2c^2(L^2c^2 - \alpha^2)}
+\cos\left((\phi - \phi_0)\sqrt{1 - \frac{\alpha^2}{L^2c^2}}\right) = \frac{C^2}{r}.
+\end{equation}
+
+Note that, when $\phi \mapsto \phi + 2\pi$ increases by $2\pi$, 
+\begin{eqnarray*}
+\cos\left((\phi - \phi_0)\sqrt{1 - \frac{\alpha^2}{L^2c^2}}\right)  
+ &\mapsto& \cos\left((\phi - \phi_0)\sqrt{1 - \frac{\alpha^2}{L^2c^2}} + 2\pi\sqrt{1 - \frac{\alpha^2}{L^2c^2}}\right) \\
+ &\ne& \cos\left((\phi - \phi_0)\sqrt{1 - \frac{\alpha^2}{L^2c^2}}\right)
+\end{eqnarray*}
+so that the orbits described by \eqref{c5e83} are not closed curves like 
+ellipses but are rosettes.
+
+\item $\alpha^2 = L^2c^2$. In this case, \eqref{c5e71} becomes
+\begin{equation}\label{c5e84}
+\phi_0 = \phi \mp Lc\int\frac{dr}{r\sqrt{A^2r^2 - 2Br}} =  
+\phi \mp \frac{Lc}{B}\frac{\sqrt{A^2r^2 - 2Br}}{r}.
+\end{equation}
+Squaring both sides,
+\[
+(\phi - \phi_0)^2 = \frac{Lc}{B}\frac{A^2r^2 - 2Br}{r^2}
+\]
+Using the expressions for $A$ and $B$ in \eqref{c5e72} and \eqref{c5e73}, we get
+\[
+(\phi - \phi_0)^2 = \frac{L^2c^2}{\alpha^2\mathcal{E}^2}
+\frac{(\mathcal{E}^2 - m^2c^4)r^2 - 2\alpha\mathcal{E}r}{r^2}
+\]
+or
+\[
+\left(\frac{\mathcal{E}\alpha}{Lc}\right)^2(\phi - \phi_0)^2 = 
+\mathcal{E}^2 - m^2c^4 - 2\frac{\alpha\mathcal{E}}{r}
+\]
+Choosing initial conditions such that $\phi_0 = 0$, we finally get
+
+\begin{equation}\label{c5e85}
+2\frac{\alpha\mathcal{E}}{r} = \mathcal{E}^2 - m^2c^4 -
+\left(\frac{\mathcal{E}\alpha}{Lc}\right)^2\phi^2.
 \end{equation}
 \end{enumerate}
 

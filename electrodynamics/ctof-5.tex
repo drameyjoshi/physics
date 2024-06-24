@@ -573,4 +573,392 @@ Choosing initial conditions such that $\phi_0 = 0$, we finally get
 \end{equation}
 \end{enumerate}
 
+\item Consider a localised collection of discrete charges $q_a$ at locations 
+$\vec{R}_a$. The potential due to all of them at a point $\vec{R}_0$ is
+\begin{equation}\label{c5e86}
+\varphi(\vec{R}_0) = \sum_a\frac{q_a}{|\vec{R}_0 - \vec{R}_a|}.
+\end{equation}
+The rhs is a sum over $\vec{R}_a$ of functions of the form $q_af(\vec{R}_0-\vec{R}_a)$.
+We can expand them as
+\[
+f(\vec{R}_0-\vec{R}_a) = f(\vec{R}_0) - \vec{R}_a\cdot\grad f|_{\vec{R}_0}.
+\]
+Here we have ignored the higher order terms. In this case, $f(\vec{R}) = 1/\vec{R}$
+so that
+\[
+\grad f = -\frac{\vec{R}}{R^3}.
+\]
+Thus, we can write \eqref{c5e86} as
+\begin{equation}\label{c5e87}
+\varphi(\vec{R}_0) = 
+\sum_a\left(\frac{q_a}{R_0} + q_a\vec{R}_a\cdot\frac{\vec{R_0}}{R_0^3}\right).
+\end{equation}
+If
+\begin{eqnarray}
+Q &=& \sum_a q_a \label{c5e88} \\
+\vec{p} &=& \sum_a q_a\vec{R}_a \label{c5e89}
+\end{eqnarray}
+then we can write \eqref{c5e87} as
+\begin{equation}\label{c5e90}
+\varphi(\vec{R}_0) = \frac{Q}{R_0} + \frac{\vec{p}\cdot\vec{R_0}}{R_0^3}.
+\end{equation}
+$Q$ is the total charge in the collection and $\vec{p}$ is called its \emph{dipole
+moment}.
+
+\item The dipole moment depends on $\vec{R}_a$ and therefore on the choice of the
+origin. If we shift the origin to $\vec{b}$ then the new position vectors are
+$\vec{R}_a - \vec{b}$. The new dipole moment is
+\begin{equation}\label{c5e91}
+\vec{p}^\op = \sum_a q_a (\vec{R}_a - \vec{b}) = \vec{p} - Q\vec{b}.
+\end{equation}
+If $Q = 0$ then $\vec{p}^\op = \vec{p}$. 
+
+\item Let us denote the positive charges by $q_a^+$ and the negative ones by
+$-q_a^-$. Let their positions be denoted by $\vec{R}_a^+$ and $\vec{R}_a^-$
+respectively. Then,
+\begin{equation}\label{c5e92}
+\vec{p} =  \sum_a q_a^+\vec{R}_a^+ - \sum_a q_a^-\vec{R}_a^-.
+\end{equation}
+Let,
+\begin{eqnarray*}
+\vec{R}^+ &=& \frac{\sum_a q_a^+\vec{R}_a^+}{\sum_a q_a^+} \\
+\vec{R}^- &=& \frac{\sum_a q_a^-\vec{R}_a^-}{\sum_a q_a^-}
+\end{eqnarray*}
+so that \eqref{c5e92} becomes
+\begin{equation}\label{c5e93}
+\vec{p} = \left(\sum_a q_a^+\right)\vec{R}^+ - \left(\sum_a q_a^-\right)\vec{R}^-.
+\end{equation}
+If
+\begin{equation}\label{c5e94}
+\sum_a q_a^+ = \sum_a q_a^- = Q_0,
+\end{equation}
+say, then equation \eqref{c5e93} becomes
+\begin{equation}\label{c5e95}
+\vec{p} = Q_0\vec{R}^{+-},
+\end{equation}
+where
+\begin{equation}\label{c5e96}
+\vec{R}^{+-} = \vec{R}^+ - \vec{R}^-.
+\end{equation}
+This shows that if the total charge of the collection is zero then we can write 
+its dipole moment as a product of $Q_0$ the sum of its positive charges and 
+$\vec{R}^{+-}$, which can be viewed as the separation of the ``centres of masses
+`' of the charges of each kind. The term ``centre of mass'' is not inappropriate
+given the similarity of the definitions of $R^+$ and $R^-$ with that of the centre
+of mass of a collection of discrete particles.
+
+\item We have been considering the case $Q = 0$ in the previous two points. It is
+interesting and important because most macroscopic bodies are electrically neutral
+although they are composed of positive and negative charges. Continuing to analyse
+this case further, if $Q = 0$, \eqref{c5e90} simplifies to
+\begin{equation}\label{c5e97}
+\varphi(\vec{R}_0) = \frac{\vec{p}\cdot\vec{R}_0}{R_0^3}.
+\end{equation}
+The electric field at $\vec{R}_0$ is
+\begin{equation}\label{c5e98}
+\vec{E} = -\grad\varphi(\vec{R}_0) = -\grad\frac{\vec{p}\cdot\vec{R}_0}{R_0^3}.
+\end{equation}
+Now,
+\[
+\grad\frac{\vec{p}\cdot\vec{R}_0}{R_0^3} = \frac{\vec{p}}{R_0^3} - 
+\vec{p}\cdot\vec{R}_0\grad\frac{1}{R_0^3} = \frac{\vec{p}}{R_0^3} -
+\frac{3(\vec{p}\cdot\vec{R}_0)\vec{R}_0}{R_0^5}.
+\]
+If 
+\begin{equation}\label{c5e99}
+\un = \frac{\vec{R}_0}{R_0}
+\end{equation}
+then
+\begin{equation}\label{c5e100}
+\grad\frac{\vec{p}\cdot\vec{R}_0}{R_0^3} = 
+\frac{\vec{p}}{R_0^3} - \frac{3(\un\cdot\vec{p})\un}{R_0^3}
+\end{equation}
+and \eqref{c5e98} becomes
+\begin{equation}\label{c5e101}
+\vec{E} = \frac{3(\un\cdot\vec{p})\un - \vec{p}}{R_0^3}.
+\end{equation}
+The potential of a dipole varies as $R_0^{-2}$ and the field as $R_0^{-3}$.
+
+\item The Taylor expansion of $f(\vec{R}_0-\vec{R}_a)$ up to second order term is
+\begin{equation}\label{c5e102}
+f(\vec{R}_0-\vec{R}_a) = f(\vec{R}_0) - \vec{R}_a\cdot\grad f\Big|_{\vec{R}_0} +
+\frac{1}{2}\sum_{i, j}R_{ai}R_{aj}
+\frac{\partial^2 f}{\partial x_i\partial x_j}\Big|_{\vec{R}_0}.
+\end{equation}
+Here $R_{ai}, R_{aj}$ are components of of $\vec{R}_a$.
+If $f = 1/|\vec{R}_0-\vec{R}_a|$ then
+\[
+\pdt{f}{x_i} = -\frac{x_i}{R_0^3}
+\]
+and
+\[
+\frac{\partial^2 f}{\partial x_j\partial x_i} = -\frac{\delta_{ij}}{R_0^3} + 3\frac{x_ix_j}{R_0^5}
+= \frac{3x_ix_j - R_0^2\delta_{ij}}{R_0^5}.
+\]
+The second order term in Taylor expansion of the potential of \eqref{c5e86} is
+\begin{eqnarray*}
+T_2 &=& \frac{1}{2}\sum_a\sum_{ij} q_aR_{ai}R_{aj}\frac{3x_ix_j - R_0^2\delta_{ij}}{R_0^5}\Big|_{\vec{R}_0} \\
+ &=& \frac{1}{2}\sum_a\sum_{ij} q_aR_{ai}R_{aj}\frac{3R_{0i}R_{0j} - R_0^2\delta_{ij}}{R_0^5} \\
+ &=& \frac{1}{2}\sum_{ij}\sum_a q_a\frac{3R_{ai}R_{aj}R_{0i}R_{0j} - R_{ai}R_{aj}R_0^2\delta_{ij}}{R_0^5}
+\end{eqnarray*}
+Now,
+\[
+\sum_{ij}R_{ai}R_{aj}R_0^2\delta_{ij} = R_a^2R_0^2 = \sum_{ij}R_a^2\delta_{ij}R_{ai}R_{aj}
+\]
+so that
+\[
+T_2 = \frac{1}{2}\sum_{ij}R_{0i}\sum_a q_a(3R_{ai}R_{aj} - R_a^2\delta_{ij}R_{0j})\frac{1}{R_0^5}.
+\]
+We can now extend the expression in \eqref{c5e87} to
+\begin{equation}\label{c5e103}
+\varphi(R_0) = \frac{Q}{R_0} + \frac{\vec{p}\cdot\vec{R}_0}{R_0^3} + 
+\frac{1}{2}\frac{R_{0i}D_{ij}R_{0j}}{R_0^5}.
+\end{equation}
+where we have used the summation convention and
+\begin{equation}\label{c5e104}
+D_{ij} = \sum_a q_a(3R_{ai}R_{aj} - R_a^2\delta_{ij})
+\end{equation}
+is the quadrupole moment of the collection of charges. $D_{ij}$ is a symmetric,
+second-order 3-tensor. Further, it is also traceless, for
+\[
+D_{ii} = \sum_a q_a(3R_{ai}R_{ai} - R_a^2\delta_{ii}) = \sum_a q_a(3R_a^2 - 3R_a^2) = 0.
+\]
+Therefore, only five of its components are independent. Using \eqref{c5e99}, we
+can further simplify \eqref{c5e103} to
+\begin{equation}\label{c5e105}
+\varphi(R_0) = \frac{Q}{R_0} + \frac{d_in_i}{R_0^2} + 
+\frac{1}{2}\frac{n_iD_{ij}n_j}{R_0^3}.
+\end{equation}
+
+\item A symmetric axis can be diagonalised. If the charge distribution has a 
+symmetry axis then align the $z$-axis with it. The symmetry about the $z$ axis
+makes $D_{11} = D_{22}$. Further, since the trace of $D_{ij}$ is zero, we have 
+$D_{11} + D_{22} + D_{33} = 0$ or, taking since $D_{11} = D_{22}$,
+\begin{equation}\label{c5e106}
+D_{11} = D_{22} = -\frac{D_{33}}{2} = -\frac{D}{2},
+\end{equation}
+where defined $D = D_{33}$. Therefore,
+\[
+n_i D_{ij} n_j = n_1^2D_{11} + n_2^2D_{22} + n_3^2D_{33} = 
+D\left(n_3^2 - \frac{n_1^2 + n_2^2}{2}\right).
+\]
+If $\un$ has polar coordinates $(1, \phi, \theta)$ where the $z$-axis is the 
+symmetry axis of the charge distribution then $n_3 = \cos\theta, n_2 = \sin\theta
+\sin\phi, n_1 = \sin\theta\cos\phi$ and hence,
+\begin{equation}\label{c5e107}
+n_iD_{ij}n_j = \frac{D}{2}(3\cos^2\theta - 1).
+\end{equation}
+We can then write \eqref{c5e105} as
+\begin{equation}\label{c5e108}
+\varphi(R_0) = \frac{Q}{R_0} + \frac{d\cos\theta}{R_0^2} + 
+\frac{D}{4R_0^3}(3\cos^2\theta - 1)
+\end{equation}
+Since $P_1(\cos\theta) = 1, P_2(\cos\theta) = \cos\theta$ and $P_3(\cos\theta)
+= (3\cos^2\theta - 1)/2$, $P_n$ being the Legendre polynomial of order $n$, we 
+can write \eqref{c5e109} as
+\begin{equation}\label{c5e109}
+\varphi(R_0) = \frac{Q}{R_0}P_1(\cos\theta) + \frac{d}{R_0^2}P_2(\cos\theta)
++ \frac{D}{2R_0^3}P_3(\cos\theta).
+\end{equation}
+
+\item We can continue to expand the potential to get higher order terms expressed
+as multiples of Legendra polynomials using
+\begin{equation}\label{c5e110}
+\frac{1}{|\vec{R}_0 - \vec{r}|} = \frac{1}{\sqrt{R_0^2 + r^2 - 2rR_0\cos\chi}}
+= \sum_{l=0}^\infty \frac{r^l}{R_0^{l+1}}P_l(\cos\chi).
+\end{equation}
+If the spherical angles of $\vec{R}_0$ are $\Theta$ and $\Phi$ and those of
+$\vec{r}_0$ are $\theta$ and $\phi$ then
+\begin{equation}\label{c5e111}
+P_l(\cos\chi) = \sum_{m=-l}^l\frac{(l -|m|)!}{(l + |m|)!}
+P_l^{|m|}(\cos\Theta)P_l^{|m|}(\cos\theta)e^{-im(\Phi-\phi)},
+\end{equation}
+where $P_l^{|m|}$ are called the associated Legendre polynomials. We next introduce
+the spherical harmonics as
+\begin{equation}\label{c5e112}
+Y_{lm}(\theta,\phi)=(-1)^m\sqrt{\frac{2l+1}{4\pi}\frac{(l-m)!}{(l+m)!}}P_l^m(\cos\theta)e^{im\phi},
+m \ge 0
+\end{equation}
+so that we can write \eqref{c5e111} as
+\begin{equation}\label{c5e113}
+P_l(\cos\chi)=\sum_{m=-l}^l\frac{4\pi}{2l+1}Y_{lm}^\ast(\Theta,\Phi)Y_{lm}(\theta,\phi)
+\end{equation}
+and \eqref{c5e110} as
+\begin{equation}\label{c5e114}
+\frac{1}{|\vec{R}_0 - \vec{r}_a|} = \sum_{l=0}^\infty\sum_{m=-l}^l\frac{r^l}{R_0^{l+1}}
+\frac{4\pi}{2l+1}Y_{lm}^\ast(\Theta,\Phi)Y_{lm}(\theta_a,\phi_a).
+\end{equation}
+This allows us to write \eqref{c5e86} as
+\begin{eqnarray*}
+\varphi(\vec{R}_0) &=& \sum_a\frac{q_a}{|\vec{R}_0 - \vec{r}|} \\
+ &=& \sum_a q_a\sum_{l=0}^\infty\sum_{m=-l}^l\frac{r^l}{R_0^{l+1}}\frac{4\pi}{2l+1}Y_{lm}^\ast(\Theta,\Phi)
+     Y_{lm}(\theta_a,\phi_a) \\
+ &=& \sum_{l=0}^\infty\frac{1}{R_0^{l+1}}\sum_{m=-l}^l\sum_a q_ar^l\frac{4\pi}{2l+1}Y_{lm}^\ast(\Theta,\Phi)
+     Y_{lm}(\theta_a,\phi_a) \\
+ &=& \sum_{l=0}^\infty\frac{1}{R_0^{l+1}}\sum_{m=-l}^l\sqrt{\frac{4\pi}{2l+1}}Y_{lm}^\ast(\Theta,\Phi)
+     \sum_a q_ar^l\sqrt{\frac{4\pi}{2l+1}}Y_{lm}(\theta_a,\phi_a)
+\end{eqnarray*}
+Define
+\begin{equation}\label{c5e115}
+Q_m^l = \sum_a q_ar^l\sqrt{\frac{4\pi}{2l+1}}Y_{lm}(\theta_a,\phi_a)
+\end{equation}
+so that
+\begin{equation}\label{c5e116}
+\varphi(\vec{R}_0) = \sum_{l=0}^\infty\frac{1}{R_0^{l+1}}\sum_{m=-l}^l\sqrt{\frac{4\pi}{2l+1}}
+Y_{lm}^\ast(\Theta,\Phi)Q_m^l.
+\end{equation}
+For each $l$, $m$ can take $2l + 1$ values from $-l$ to $l$. They form the 
+components of the $2^l$-moment of the collection of charges.
+
+\item Now consider a collection of charges $q_a$ at positions $\vec{r}_a$ with 
+respect to an origin within the collection. Let it be exposed to an external 
+electric field which varies slowly over the extent of the collection. If $\varphi$
+is the potential of the field then the energy of the collection is
+\begin{equation}\label{c5e117}
+U = \sum_aq_a\varphi(\vec{r}_a).
+\end{equation}
+Expand $U$ about the origin so that
+\begin{equation}\label{c5e118}
+U = \sum_{n=0}^\infty U^{(n)}.
+\end{equation}
+Then 
+\begin{equation}\label{c5e119}
+U^{(0)} = \sum_a q_a\varphi(0) = Q\varphi(0).
+\end{equation}
+The first order term is
+\[
+U^{(1)} = \sum_a q_a\vec{r}_a\cdot\grad\varphi|_0 = 
+-\left(\sum_a q_a\vec{r}_a\right)\cdot\vec{E}_0,
+\]
+where $\vec{E}_0 = -\grad\varphi|_0$ is the electric field at the origin. From 
+\eqref{c5e89} we know that the term in the bracket is the dipole moment of the
+distribution so that
+\begin{equation}\label{c5e120}
+U^{(1)} = -\vec{p}\cdot\vec{E}_0,
+\end{equation}
+The force on the distribution is
+\begin{equation}\label{c5e121}
+\vec{F} = -\grad U
+\end{equation}
+so that up to the first order, the force on the distribution is
+\[
+\vec{F} = -Q\grad\varphi|_0 + \grad(\vec{p}\cdot\vec{E})|_0
+\]
+or, since $\vec{p}$ is a constant,
+\begin{equation}\label{c5e122}
+\vec{F} = Q\vec{E}_0 + (\vec{p}\cdot\grad)\vec{E}|_0.
+\end{equation}
+The torque on the collection with respect to the origin, to the lowest order term,
+is
+\begin{equation}\label{c5e123}
+\vec{N} = \sum_aq_a\vec{r_a}\times\vec{E}_0  = \vec{p}\times\vec{E}_0.
+\end{equation}
+
+\item Now consider two systems with net charge $0$ so that up to the lowest order
+the energy is of the first system is
+\begin{equation}\label{c5e124}
+U_1 = -\vec{p}_1\cdot\vec{E},
+\end{equation}
+$\vec{E}$ being the external electric field \emph{at the origin within its extent}.
+If $\vec{E}$ is due to the other system whose origin is at $\vec{R}$, then using
+\eqref{c5e101},
+\[
+\vec{E} = \frac{(3\vec{R}\cdot\vec{p}_2)\vec{R} - \vec{p}_2R^2}{R^5}
+\]
+so that
+\begin{equation}\label{c5e125}
+U_1 = \frac{(\vec{p}_1\cdot\vec{p}_2)R^2 - 3(\vec{p}_1\cdot\vec{R})(\vec{p}_2\cdot\vec{R})}{R^5}.
+\end{equation}
+
+If the second system had a net charge $Q_2$ then
+\[
+\vec{E} = -\frac{Q}{R^3}\vec{R}
+\]
+and
+\begin{equation}\label{c5e126}
+U_1 = Q\frac{\vec{p}\cdot\vec{R}}{R^3}.
+\end{equation}
+
+\item The second order term in the expansion of \eqref{c5e118} is
+\[
+U^{(2)} = \frac{1}{2}\sum_a q_a r_{ai}r_{aj}\frac{\partial^2\varphi}{\partial x_i\partial x_j}\Big|_0.
+\]
+If $\varphi = 1/R$ then
+\[
+\pdt{\varphi}{x_i} = -\frac{x_i}{R^3}
+\]
+and
+\[
+\frac{\partial^2 \varphi}{\partial x_j\partial x_i} = -\frac{\delta_{ij}}{R^3} + 3\frac{x_ix_j}{R^5}
+= \frac{3x_ix_j - R^2\delta_{ij}}{R^5}.
+\]
+so that
+\[
+U^{(2)} = \frac{1}{2}\sum_a q_a r_{ai}r_{aj}\frac{3x_ix_j - R^2\delta_{ij}}{R^5}.
+\]
+\end{enumerate}
+
+\section{Problems}
+%To do: change the equation labels.
+\begin{enumerate}
+\item Determine the quadrupole moment of a uniformly charged ellipsoid with 
+respect to its centre.
+\item[Solution:] We align the cartesian coordinate axes to coincide with the 
+principal axes of the ellipsoid. Therefore, the tensor of \eqref{c5e104} can be
+written as
+\[
+D_{xx} = \sum_a q_a(3x^2 - x^2 - y^2 - z^2) = \sum_a q_a(2x^2-y^2-z^2).
+\]
+If we generalise it to a continuous distribution, 
+\begin{equation}\label{c5e117a}
+D_{xx} = \int_V\rho(2x^2-y^2-z^2)dxdydz.
+\end{equation}
+where $V$ is the volume of the ellipsoid. If the equation of the ellipsoid is
+\begin{equation}\label{c5e118a}
+\frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{z^2}{c^2} = 1
+\end{equation}
+then introduce the transformation $x_1 = x/a, y_1 = y/b, z_1 = z/c$ so that the 
+Jacobian of transformation is $abc$ and
+\[
+D_{xx} = \rho abc\int_{V_1}\left(2a^2x_1^2 -b^2y_1^2 - c^2z_1^2\right)dx_1dy_1dz_1
+\]
+and the volume of integration $V_1$ is over $x_1^2 + y_1^2 + z_1=1$, a unit sphere. 
+Introduce spherical coordinates so that $x_1 = \sin\theta\cos\phi, y_1 = 
+\sin\theta\sin\phi, z_1 = \cos\theta$ so that
+\begin{eqnarray*}
+\frac{D_{xx}}{\rho abc}
+ &=& \int_0^\pi\int_0^{2\pi}(2a^2\sin^2\theta\cos^2\phi-b^2\sin^2\theta
+ \sin^2\phi-c^2\cos^2\theta)\sin\theta d\theta d\phi \\
+ &=& 2a^2\int_0^\pi\sin^3\theta d\theta\int_0^{2\pi}\cos^2\phi d\phi - 
+      b^2\int_0^\pi\sin^3\theta d\theta\int_0^{2\pi}\sin^2\phi d\phi - \\
+ & & c^2\int_0^\pi\sin\theta\cos^2\theta d\theta \int_0^{2\pi}d\phi \\
+ &=& 2a^2\left(\frac{4}{3}\right)\pi - b^2\left(\frac{4}{3}\right)\pi
+     - c^2\left(\frac{2}{3}\right)2\pi \\
+ &=& \frac{4\pi}{3}(2a^2-b^2-c^2)
+\end{eqnarray*}
+so that
+\[
+D_{xx} = \rho\frac{4\pi}{3}abc(2a^2-b^2-c^2)
+\]
+Since the volume of the ellipsoids is $(4\pi/3)abc$, if $Q$ is the total charge
+on the ellipsoid then
+\begin{equation}\label{c5e119a}
+D_{xx} = Q(2a^2-b^2-c^2).
+\end{equation}
+Analogous to \eqref{c5e117a} we have
+\begin{equation}\label{c5e120a}
+D_{yy} = \int_V(2y^2 - x^2 - z^2)dxdydz
+\end{equation}
+which, upon the same transformation as before, becomes
+\[
+D_{yy} = \rho abs\int_{V_1}(2b^2y_1^2 - a^2x_a^2 - c^2z_1^2)dx_1dy_1dz_1.
+\]
+This integral can be evaluated in the same way so that
+\begin{equation}\label{c5e121a}
+D_{yy} = Q(2b^2 - a^2 - c^2).
+\end{equation}
+Since the quadrupole moment tensor is traceless,
+\begin{equation}\label{c5e122a}
+D_{zz} = -D_{xx} - D_{yy} = Q(2c^2 - a^2 - b^2).
+\end{equation}
 \end{enumerate}

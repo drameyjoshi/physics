@@ -72,8 +72,8 @@ where $\vec{R}_a = \vec{r}^\op - \vec{r}$. The potential is
 \end{equation}
 For a continuum of charges, \eqref{c5e11} and \eqref{c5e12} generalise to
 \begin{eqnarray}
-\phi(\vec{r}) &=& \int\frac{\rho(\vec{r}^\op)}{R}dV \label{c5e15} \\
-\vec{E}(\vec{r}) &=& \int\frac{\rho(\vec{r}^\op)}{R^2}\uv{R}dV  \label{c5e16}
+\phi(\vec{r}) &=& \int\frac{\rho(\vec{r}^\op)}{R}dV^\op \label{c5e15} \\
+\vec{E}(\vec{r}) &=& \int\frac{\rho(\vec{r}^\op)}{R^2}\uv{R}dV^\op  \label{c5e16}
 \end{eqnarray}
 
 \item For a point charge, $\rho = q\delta(\vec{R})$. In this case, \eqref{c5e7}
@@ -883,19 +883,127 @@ U_1 = Q\frac{\vec{p}\cdot\vec{R}}{R^3}.
 \[
 U^{(2)} = \frac{1}{2}\sum_a q_a r_{ai}r_{aj}\frac{\partial^2\varphi}{\partial x_i\partial x_j}\Big|_0.
 \]
-If $\varphi = 1/R$ then
+Since $\varphi$ is a solution of the Laplace equation,
 \[
-\pdt{\varphi}{x_i} = -\frac{x_i}{R^3}
-\]
-and
-\[
-\frac{\partial^2 \varphi}{\partial x_j\partial x_i} = -\frac{\delta_{ij}}{R^3} + 3\frac{x_ix_j}{R^5}
-= \frac{3x_ix_j - R^2\delta_{ij}}{R^5}.
+\frac{\partial^2\varphi}{\partial x_i\partial x_j} = 
+(1 - \delta_{ij})\frac{\partial^2\varphi}{\partial x_i\partial x_j}
 \]
 so that
 \[
-U^{(2)} = \frac{1}{2}\sum_a q_a r_{ai}r_{aj}\frac{3x_ix_j - R^2\delta_{ij}}{R^5}.
+\frac{\partial^2\varphi}{\partial x_i\partial x_j}\Big|_0 = 
+(1 - \delta_{ij})\frac{\partial^2\varphi}{\partial x_i\partial x_j}\Big|_0
 \]
+and hence
+\begin{eqnarray*}
+U^{(2)} &=& \frac{1}{2}\sum_a q_a r_{ai}r_{aj}(1 - \delta_{ij}) \\
+ &=& \frac{1}{2}\frac{\partial^2\varphi}{\partial x_i\partial x_j}\Big|_0\sum_a q_a r_{ai}r_{aj}(1 - \delta_{ij}) \\
+ &=& \frac{1}{2}\frac{\partial^2\varphi}{\partial x_i\partial x_j}\Big|_0\sum_a q_a (r_{ai}r_{aj} - r_a^2\frac{\delta_{ij}}{3}) \\
+ &=& \frac{1}{6}\frac{\partial^2\varphi}{\partial x_i\partial x_j}\Big|_0\sum_a q_a (3r_{ai}r_{aj} - r_a^2\delta_{ij})
+\end{eqnarray*}
+Using the definition of the quadrupole moment tensor of \eqref{c5e104},
+\begin{equation}\label{c5e127}
+U^{(2)} = \frac{1}{6}\frac{\partial^2\varphi}{\partial x_i\partial x_j}\Big|_0D_{ij}
+\end{equation}
+
+\item The spherical harmonics form a complete set of basis functions. Therefore,
+one can write
+\begin{equation}\label{c5e128}
+\phi(\vec{r}) = \sum_{l=0}^\infty r^l\sum_{m=-l}^l\sqrt{\frac{4\pi}{2l+1}}a_{lm}Y_{lm}(\theta,\phi),
+\end{equation}
+where $a_{lm}$ are constants. Substituting this in equation \eqref{c5e117},
+\begin{eqnarray*}
+U &=& \sum_a q_a\sum_{l=0}^\infty r_a^l\sum_{m=-l}^l\sqrt{\frac{4\pi}{2l+1}}a_{lm}Y_{lm}(\theta,\phi) \\
+  &=& \sum_{l=0}^\infty\sum_{m=-l}^l a_{lm}\left(\sum_a q_ar_a^l\sqrt{\frac{4\pi}{2l+1}}Y_{lm}(\theta,\phi)\right)
+\end{eqnarray*}
+Using \eqref{c5e115},
+\[
+U = \sum_{l=0}^\infty\sum_{m=-l}^l a_{lm}Q_m^l.
+\]
+from which we infer that
+\begin{equation}\label{c5e129}
+U^{(l)} = \sum_{m=-l}^l a_{lm}Q_m^l.
+\end{equation}
+
+\item Consider the magnetic field produced by charges in motion over a finite
+portion of space and with momenta that also remain finite. This requirement is 
+same under which the virial theorem was proved and under which the time averages
+of time derivatives of functions is zero. Refer to definition \eqref{c4e112} 
+for the time average of a function and the proof of \eqref{c4e114} for the 
+vanishing of the time average of its derivative.
+
+For such a system, we will perform the time averaging of the Maxwell equations
+for the magnetic field to get
+\begin{eqnarray}
+\dive\ta{\vec{H}} &=& 0 \label{c5e130} \\
+\curl\ta{\vec{H}} &=& \frac{4\pi}{c}\ta{\vec{J}} \label{c5e131}
+\end{eqnarray}
+
+\item One could have got similar equations had one assumed that the fields are
+independent of time. We wrote \eqref{c5e3} and \eqref{c5e4} under the same 
+assumption. However, one cannot consider the electric field to be time independent
+of there are currents in the system. Therefore, the correct way to introduce
+constant fields in this case is to assume that the $\langle\vec{E}\rangle = 0$.
+
+\item We introduce $\langle\vec{A}\rangle$ using
+\begin{equation}\label{c5e132}
+\ta{\vec{H}} = \curl\ta{\vec{A}}.
+\end{equation}
+Substituting it in \eqref{c5e131} we get
+\begin{equation}\label{c5e133}
+\grad\dive\ta{\vec{A}} - \nabla^2\ta{\vec{A}} = \frac{4\pi}{c}\ta{\vec{J}}.
+\end{equation}
+Since the curl of a gradient is always zero, a vector potential
+\[
+\tav{A}^\op = \tav{A} + \grad\psi
+\]
+also gives the same $\tav{H}$. Now,
+\[
+\dive\tav{A}^\op = \dive\tav{A} + \nabla^2\psi.
+\]
+If we insist on choosing a $\psi$ that is a solution of the Laplace equation then
+we get $\dive\tav{A}^\op = \dive\tav{A} = 0$. Choosing
+\begin{equation}\label{c5e134}
+\dive\tav{A} = 0
+\end{equation} is equivalent of choosing $\psi$ to be a harmonic function. The 
+choice of \eqref{c5e134} is called the \emph{Coulomb gauge}.
+
+\item Under the Coulomb gauge, \eqref{c5e133} becomes
+\begin{equation}\label{c5e135}
+\nabla^2\ta{\vec{A}} = -\frac{4\pi}{c}\ta{\vec{J}}.
+\end{equation}
+Thus, $\tav{A}$ obeys the vector Poisson equation the way $\varphi$ obeys the
+scalar Poisson equation of \eqref{c5e7}. The solution of \eqref{c5e135} is similar
+to the solution \eqref{c5e15} of \eqref{c5e7}. Thus,
+\begin{equation}\label{c5e136}
+\tav{A}(\vec{r}) = \frac{1}{c}\int\frac{\tav{J}(\vec{r}^\op)}{|\vec{r} - \vec{r}^\op|}dV^\op.
+\end{equation}
+We can write the rhs of \eqref{c5e136} for discrete charges as
+\begin{equation}\label{c5e137}
+\tav{A} = \frac{1}{c}\sum_a \ta{\frac{q_a\vec{v}_a}{R_a}},
+\end{equation}
+where 
+\begin{equation}\label{c5e138}
+\vec{R}_a = \vec{r} - \vec{r}_a.
+\end{equation}
+
+\item From \eqref{c5e136}, we can immediately get
+\[
+\tav{H} = \frac{1}{c}\curl\int\frac{\tav{J}(\vec{r}^\op)}{|\vec{r} - \vec{r}^\op|}dV^\op.
+\]
+The curl is with respect to the unprimed variables. Therefore,
+\[
+\tav{H} = \frac{1}{c}\int\curl\frac{\tav{J}(\vec{r}^\op)}{|\vec{r} - \vec{r}^\op|}dV^\op
+ = \frac{1}{c}\int\grad\frac{1}{|\vec{r} - \vec{r}^\op|} \times \tav{J}(\vec{r}^\op)dV^\op,
+\]
+where we used the identity
+\begin{equation}\label{c5e139}
+\curl(f\vec{F}) = f\curl\vec{F} + \grad f \times \vec{F}.
+\end{equation}
+From this we get the \emph{Biot-Savart} law,
+\begin{equation}\label{c5e140}
+\tav{H} = \frac{1}{c}\int\frac{\tav{J}(\vec{r}^\op) \times (\vec{r} - \vec{r}^\op)}{|\vec{r} - \vec{r}^\op|^3}dV^\op.
+\end{equation}
+
 \end{enumerate}
 
 \section{Problems}

@@ -6,10 +6,9 @@
 \usepackage{xcolor}
 \usepackage{mathabx}
 
-\usepackage{bm}
-\renewcommand{\vec}{\bm}
-\newcommand{\uv}[1]{\hat{\bm{e}}_{#1}}
-\newcommand{\un}{\hat{\bm{n}}}
+\renewcommand{\vec}{\mathbf}
+\newcommand{\uv}[1]{\hat{\mathbf{e}}_{#1}}
+\newcommand{\un}{\hat{\mathbf{n}}}
 
 %\newcommand{\uv}[1]{\hat{e}_{#1}}
 %\newcommand{\un}{\hat{n}}
@@ -19,6 +18,8 @@
 \newcommand{\pdt}[2]{\frac{\partial{#1}}{\partial{#2}}}
 \newcommand{\op}{{\,\prime}}
 \newcommand{\tp}{{\,\prime\prime}}
+\newcommand{\ta}[1]{\left\langle{#1}\right\rangle}
+\newcommand{\tav}[1]{\ta{\vec{#1}}}
 \DeclareMathOperator{\grad}{grad}
 \DeclareMathOperator{\dive}{div}
 \DeclareMathOperator{\curl}{curl}

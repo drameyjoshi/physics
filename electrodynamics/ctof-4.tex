@@ -1210,61 +1210,62 @@ Now let's assume that this system of particles always has a small range of
 positions and momenta so that all components of $T^{\mu\nu}$ vary in a limited
 range. If we define the average of a function $f$ as
 \begin{equation}\label{c4e112}
-\bar{f} = \frac{1}{T}\int_0^T fdt
+\langle f \rangle = \frac{1}{T}\int_0^T fdt
 \end{equation}
 then
 \begin{equation}\label{c4e113}
-\bar{\td{f}{t}} = \frac{1}{T} \int_0^T \td{f}{t}dt = \frac{f(T) - f(0)}{T}.
+\left\langle\td{f}{t}\right\rangle = \frac{1}{T} \int_0^T \td{f}{t}dt = \frac{f(T) - f(0)}{T}.
 \end{equation}
 In the limit $T \rightarrow \infty$, since the function $f$ takes finite
 values at all times,
 \begin{equation}\label{c4e114}
-\td{\bar{f}}{t} = 0.
+\left\langle\td{f}{t}\right\rangle = 0.
 \end{equation}
 If we take the time-average of \eqref{c4e111}, in view of \eqref{c4e114}, we get
 \[
-\pdt{\bar{T}^{ji}}{x^j} = 0
+\pdt{\langle T\rangle^{ji}}{x^j} = 0
 \]
 or equivalently,
 \begin{equation}\label{c4e115}
-\pdt{\tensor{\bar{T}}{_i^j}}{x^j} = 0.
+\pdt{\tensor{\langle T \rangle}{_i^j}}{x^j} = 0.
 \end{equation}
 From this equation, we also get
 \[
-x^i\pdt{\tensor{\bar{T}}{_i^j}}{x^j} = 0.
+x^i\pdt{\tensor{\langle T \rangle}{_i^j}}{x^j} = 0.
 \]
 Integrating this equation over all space,
 \[
-\int x^i\pdt{\tensor{\bar{T}}{_i^j}}{x^j} dV = 0 \Rightarrow 
-\int \left(\frac{\partial}{\partial x^j}(x^i\tensor{\bar{T}}{_i^j}) - 
-\pdt{x^i}{x^j}\tensor{\bar{T}}{_i^j}\right)dV = 0
+\int x^i\pdt{\tensor{\langle T \rangle}{_i^j}}{x^j} dV = 0 \Rightarrow 
+\int \left(\frac{\partial}{\partial x^j}(x^i\tensor{\langle T \rangle}{_i^j}) - 
+\pdt{x^i}{x^j}\tensor{\langle T \rangle}{_i^j}\right)dV = 0
 \]
 The first term can be converted into a surface integral, so that
 \[
-\oint x^i\tensor{\bar{T}}{_i^j} df_j - \int \tensor{\delta}{^i_j}\tensor{\bar{T}}{_i^j} dV = 0.
+\oint x^i\tensor{\langle T \rangle}{_i^j} df_j - 
+\int \tensor{\delta}{^i_j}\tensor{\langle T \rangle}{_i^j} dV = 0.
 \]
 Since we assumed that the system's energy, momenta and positions vary over a 
 limited range, if we extend the surface integral beyond it then the first term
 vanishes and we are left with
 \begin{equation}\label{c4e116}
-\int \tensor{\bar{T}}{_i^i} dV = 0.
+\int \tensor{\langle T \rangle}{_i^i} dV = 0.
 \end{equation}
 From this equation we readily conclude that
 \begin{equation}\label{c4e117}
-\int \tensor{\bar{T}}{_\mu^\mu} dV = \int\tensor{\bar{T}}{_0^0} dV + \int\tensor{\bar{T}}{_i^i}dV =
+\int \tensor{\langle T \rangle}{_\mu^\mu} dV = \int\tensor{\langle T \rangle}{_0^0} dV + \int\tensor{\bar{T}}{_i^i}dV =
 \int WdV = \mathcal{E}.
 \end{equation}
 From \eqref{c4e108}, we have
 \[
-\tensor{\bar{T}}{^{\mu}_\mu} = \sum_a m_ac^2\overline{\sqrt{1 - \beta_a^2}}\delta(\vec{r} - \vec{r}_a),
+\tensor{\langle T \rangle}{^{\mu}_\mu} = \sum_a m_ac^2\langle\sqrt{1 - \beta_a^2}\rangle\delta(\vec{r} - \vec{r}_a),
 \]
 so that substituting it on the extreme lhs of \eqref{c4e117} gives,
 \[
-\int \sum_a m_ac^2\overline{\sqrt{1 - \beta_a^2}}\delta(\vec{r} - \vec{r}_a) dV = \mathcal{E}.
+\int \sum_a m_ac^2\langle\sqrt{1 - \beta_a^2}\rangle\delta(\vec{r} - \vec{r}_a) dV = \mathcal{E}.
 \]
 or
 \begin{equation}\label{c4e118}
-\sum_a m_ac^2\overline{(1 - \beta_a^2)^{1/2}} = \mathcal{E}.
+\sum_a m_ac^2\langle(1 - \beta_a^2)^{1/2}\rangle = \mathcal{E}.
 \end{equation}
 This is the relativistic generalisation of the classical virial theorem.
 

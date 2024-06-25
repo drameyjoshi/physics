@@ -1004,6 +1004,64 @@ From this we get the \emph{Biot-Savart} law,
 \tav{H} = \frac{1}{c}\int\frac{\tav{J}(\vec{r}^\op) \times (\vec{r} - \vec{r}^\op)}{|\vec{r} - \vec{r}^\op|^3}dV^\op.
 \end{equation}
 
+\item We go back to equation \eqref{c5e137} which described the vector potential
+due to a collection of charges. Choose the origin to be somewhere within the
+positions of the charges and let the field point be $\vec{R}_0$. Expanding the
+function $1/R_a$ up to the first order terms, we get
+\[
+\frac{1}{R_a} = \frac{1}{|\vec{R}_0 - \vec{r}_a|} = 
+\frac{1}{R_0} - \vec{r}_a\cdot\grad\frac{1}{R}\Big|_{R_0}
+\]
+Therefore,
+\begin{equation}\label{c5e141}
+\tav{A} = \frac{1}{c}\sum_a\frac{q_a\tav{v}_a}{R_0} - 
+\frac{1}{c}\sum_aq_a\ta{\vec{v_a}\vec{r}_a\cdot\grad\frac{1}{R}\Big|_{R_0}}.
+\end{equation}
+For a system of finite extent, $\tav{v}_a = 0$ so that
+\begin{equation}\label{c5e142}
+\tav{A} = +\frac{1}{cR_0^3}\sum_aq_a\ta{\vec{v}_a\vec{r}_a\cdot\vec{R}_0}.
+\end{equation}
+Now,
+\[
+\frac{d}{dt}\sum_a q_a\vec{r}_a(\vec{r}_a\cdot\vec{R}_0) = 
+\sum_a q_a\left(\vec{v}_a(\vec{r}_a\cdot\vec{R}_0) + \vec{r}_a(\vec{v}_a\cdot\vec{R}_0)\right)
+\]
+so that
+\[
+\frac{1}{2}\sum_a q_a \vec{v}_a(\vec{r}_a\cdot\vec{R}_0) = 
+\frac{1}{2}\frac{d}{dt}\sum_a q_a\vec{r}_a(\vec{r}_a\cdot\vec{R}_0) - 
+\frac{1}{2}\sum_a q_a \vec{r}_a(\vec{v}_a\cdot\vec{R}_0).
+\]
+and hence
+\begin{equation}\label{c5e143}
+\ta{\frac{1}{2}\sum_a q_a \vec{v}_a(\vec{r}_a\cdot\vec{R}_0)} = 
+-\ta{\frac{1}{2}\sum_a q_a \vec{r}_a(\vec{v}_a\cdot\vec{R}_0)},
+\end{equation}
+as the average of the time derivative vanishes. If we write
+\[
+\tav{A} = \frac{1}{cR_0^3}\sum_a\frac{q_a}{2}\ta{\vec{v}_a\vec{r}_a\cdot\vec{R}_0}
+ + \frac{1}{cR_0^3}\sum_a\frac{q_a}{2}\ta{\vec{v}_a\vec{r}_a\cdot\vec{R}_0}.
+\]
+and use \eqref{c5e143} for one of the factors, we get
+\begin{equation}\label{c5e144}
+\tav{A} = \frac{1}{2cR_0^3}\sum_aq_a\ta{\vec{v}_a(\vec{r}_a\cdot\vec{R}_0) - 
+\vec{r}_a(\vec{v}_a\cdot\vec{R}_0)}.
+\end{equation}
+We now introduce the magnetic dipole moment
+\begin{equation}\label{c5e145}
+\vec{m} = \frac{1}{2c}\sum_a q_a\vec{r}_a \times \vec{v}_a
+\end{equation}
+so that
+\[
+\vec{m} \times \vec{R}_0 = \frac{1}{2c}
+\sum_a q_a(\vec{v}_a(\vec{r}_a\cdot\vec{R}_0) - \vec{r}_a(\vec{v}_a\cdot\vec{R}_0))
+\]
+(Note that this is $(\vec{A} \times \vec{B})\times\vec{C}$ and not $\vec{A}\times
+(\vec{B}\times\vec{C})$.) and \eqref{c5e144} becomes
+\begin{equation}\label{c5e146}
+\tav{A} = \frac{\tav{m} \times \vec{R}_0}{R_0^3}.
+\end{equation}
+
 \end{enumerate}
 
 \section{Problems}

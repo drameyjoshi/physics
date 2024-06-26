@@ -1248,4 +1248,46 @@ Since the quadrupole moment tensor is traceless,
 \begin{equation}\label{c5e162}
 D_{zz} = -D_{xx} - D_{yy} = Q(2c^2 - a^2 - b^2).
 \end{equation}
+
+\item Find the gyromagnetic ratio of a system of two charges moving non-
+relativistically.
+\item[Solution:] The magnetic moment, like the angular momentum, depends on the
+frame of reference. Let us work in frame of reference of the centre of mass of 
+the two charges. If $\vec{r}_1$ and $\vec{r}_2$ are the positions of the two
+charges then,
+\begin{equation}\label{c5e163}
+m_1\vec{r}_1 = -m_2\vec{r}_2.
+\end{equation}
+In this frame, the two momenta are equal and opposite. That is,
+\begin{equation}\label{c5e164}
+\vec{p}_1 = -\vec{p}_2.
+\end{equation}
+Therefore, the angular momentum of the system is
+\[
+\vec{L} = m_1\vec{r}_1\times\vec{p}_1 + m_2\vec{r}_2\times\vec{p}_2 
+\]
+which, using equations \eqref{c5e163} and \eqref{c5e164} becomes
+\begin{equation}\label{c5e165}
+\vec{L} = \frac{m_1 + m_2}{m_2}\vec{r}_1 \times \vec{p}_1.
+\end{equation}
+The magnetic moment is
+\[
+\vec{m} = \frac{1}{2c}(q_1\vec{r}_1\times\vec{v}_1 + q_2\vec{r}_2\times\vec{v}_2).
+\]
+Since the motion is non-relativistic, $\vec{p}_1 = m_1\vec{v}_1$ and $\vec{p}_2
+= m_2\vec{v}_2$. Therefore,
+\[
+\vec{m} = \frac{1}{2c}\left(q_1\vec{r}_1\times\frac{\vec{p}_1}{m_1} + 
+q_2\vec{r}_2\times\frac{\vec{p}_1}{m_1}\right).
+\]
+Using \eqref{c5e163} and \eqref{c5e164} we get
+\[
+\vec{m} = \frac{1}{2c}\left(\frac{q_1}{m_1} + q_2\frac{m_1}{m_2^2}\right)\vec{r}_1\times\vec{p}_1
+= \frac{1}{2c}\left(\frac{q_1}{m_1^2} + \frac{q_2}{m_2^2}\right)m_1\vec{r}_1\times\vec{p}_1
+\]
+Substitute for $\vec{r}_1 \times \vec{p}_1$ from \eqref{c5e165} to get
+\begin{equation}\label{c5e166}
+\vec{m} = \frac{1}{2c}\left(\frac{q_1}{m_1^2} + \frac{q_2}{m_2^2}\right)\frac{m_1m_2}{m_1+m_2}\vec{L}.
+\end{equation}
+The scalar on the right hand side is the gyromagnetic ratio.
 \end{enumerate}

@@ -45,4 +45,162 @@ Taking a partial derivative of \eqref{c6e5} and recalling that we chose $\varphi
 \nabla^2\vec{E} - \frac{1}{c^2}\spdt{\vec{E}}{t} = 0.
 \end{equation}
 
+\item We can repeat this analysis using the Maxwell equations written in terms of
+the electromagnetic field tensor. From \eqref{c4e37},
+\[
+\pdt{F^{\mu\nu}}{x^\nu} = -\frac{4\pi}{c}j^\mu.
+\]
+In the absence of sources, it becomes
+\[
+\pdt{F^{\mu\nu}}{x^\nu} = 0.
+\]
+We now use the definition 
+\[
+F^{\mu\nu} = \pdt{A^\nu}{x_\mu} - \pdt{A^\mu}{x_\nu}
+\]
+to get
+\[
+\frac{\partial}{\partial x^\nu}\pdt{A^\nu}{x_\mu} - \frac{\partial}{\partial x^\mu}\pdt{A^\nu}{x_\nu} = 0
+\Rightarrow
+\frac{\partial}{\partial x_\mu}\pdt{A^\nu}{x^\nu} - \frac{\partial}{\partial x^\mu}\pdt{A^\nu}{x_\nu} = 0.
+\]
+We now choose $A^\mu$ such that
+\begin{equation}\label{c6e8}
+\pdt{A^\nu}{x^\nu} = 0.
+\end{equation}
+In terms of coordinates, it is
+\begin{equation}\label{c6e9}
+\frac{1}{c}\pdt{\varphi}{t} - \dive\vec{A} = 0.
+\end{equation}
+Equations \eqref{c6e8} and \eqref{c6e9} are called the \emph{Lorenz gauge}. Unlike
+the condition of Coulomb gauge, that of the Lorenz gauge is invariant under Lorentz 
+transformation. We are thus left with
+\begin{equation}\label{c6e10}
+\frac{\partial}{\partial x^\nu}\pdt{A^\mu}{x_\nu} = 
+g^{\nu\rho}\frac{\partial}{\partial x^\nu}\pdt{A^\mu}{x^\rho} = 0.
+\end{equation}
+It is equivalent to \eqref{c6e5}.
+
+\item The nine equations \eqref{c6e5}, \eqref{c6e6} and \eqref{c6e7} are all of
+the form
+\[
+\nabla^2 f - \frac{1}{c^2}\spdt{f}{t} = 0 \Rightarrow 
+\spdt{f}{t} - c^2\nabla^2 f = 0,
+\]
+where $f$ is one of the components of $\vec{A}, \vec{E}$ or $\vec{H}$. If the 
+function $f$ depends only on $x$ and $t$, that is, if it is independent of $y$ and
+$z$, then the solution $f$ is called a plane wave. In this case, the equation 
+simplifies to
+\begin{equation}\label{c6e11}
+\spdt{f}{t} - c^2\spdt{f}{x} = 0.
+\end{equation}
+To solve this equation, write it as
+\begin{equation}\label{c6e12}
+\left(\frac{\partial}{\partial t} - c\frac{\partial}{\partial x}\right)
+\left(\frac{\partial}{\partial t} + c\frac{\partial}{\partial x}\right)f = 0.
+\end{equation}
+Introduce the variables
+\begin{eqnarray}
+\xi &=& t - \frac{x}{c} \label{c6e13} \\
+\eta &=& t + \frac{x}{c} \label{c6e14}
+\end{eqnarray}
+so that
+\begin{eqnarray}
+\frac{\partial}{\partial t} &=& \frac{\partial}{\partial\xi} = 
+ \frac{\partial}{\partial\eta} \label{c6e15} \\
+\frac{\partial}{\partial x} &=& -\frac{1}{c}\frac{\partial}{\partial\xi} =
+\frac{1}{c}\frac{\partial}{\partial\eta} \label{c6e16}
+\end{eqnarray}
+so that
+\begin{eqnarray}
+\frac{\partial}{\partial\eta} &=& \frac{1}{2}
+	\left(\frac{\partial}{\partial t} + c\frac{\partial}{\partial x}\right) 
+	\label{c6e17} \\
+\frac{\partial}{\partial\xi} &=& \frac{1}{2}
+	\left(\frac{\partial}{\partial t} - c\frac{\partial}{\partial x}\right) 
+	\label{c6e18}
+\end{eqnarray}
+This pair of relations allows us to write \eqref{c6e12} as
+\begin{equation}\label{c6e19}
+\frac{\partial^2 f}{\partial\xi\partial\eta} = 0.
+\end{equation}
+Its solution can be written as
+\begin{equation}\label{c6e20}
+f(\xi, \eta) = f_1(\xi) + f_2(\eta).
+\end{equation}
+In terms of the original variables,
+\begin{equation}\label{c6e21}
+f(x, t) = f_1\left(t - \frac{x}{c}\right) + f_2\left(t + \frac{x}{c}\right).
+\end{equation}
+
+\item If $f_2 = 0$ then
+\[
+f(x, t) = f_1\left(t - \frac{x}{c}\right)
+\]
+Any reasonably function of $t - x/c$ is a solution of \eqref{c6e11}. For a fixed
+$x$, the value of the function changes with $t$. Likewise, for a fixed $t$, the
+function changes value with $x$. Further the value of the function is the same
+for a given value of its argument, namely, $t - x/c$ or $ct - x$. If we focus 
+our attention on one such value, we will see it travelling along the $x$ axis 
+with a speed $x/t = c$, the speed of light.
+
+If $f_1 = 0$ and $f = f_2$ then a similar interpretation is applicable except
+that a point with a certain value of $f$ travels along the negative $x$ axis
+with the speed $c$.
+
+\item How do we use this information to derive the forms of $\vec{E}$ and $\vec{H}$
+for plane waves? We will start by deriving an expression for the vector potential.
+Since the components of $\vec{A}$ individually satisfy \eqref{c6e11}, none of them
+will be functions of $y$ and $z$. Further, $\dive\vec{A} = 0$ implies that
+\[
+\pdt{A_x}{x} = 0.
+\]
+Therefore,
+\[
+\spdt{A_x}{t} - c^2\spdt{A_x}{x} = 0 \Rightarrow \spdt{A_x}{t} = 0
+\Rightarrow \pdt{A_x}{t} = \text{const.}
+\]
+This, in turn, implies that $E_x$ is a constant. If this constant is non-zero
+then it results in a constant electric field in the direction of propagation
+of the wave, also called the longitudnal direction. Being a constant, it is
+not of the form $f(t \pm x/c)$ and therefore unrelated to the electromagnetic
+wave. We can ignore it by setting $A_x = 0$. We are thus left with
+\begin{equation}\label{c6e22}
+\vec{A} = A_y(x)\uv{y} + A_z(x)\uv{z}
+\end{equation}
+and hence
+\begin{eqnarray}
+\vec{E} &=& -\frac{1}{c}\pdt{\vec{A}}{t} \label{c6e23} \\
+\vec{H} &=& \curl\vec{A} \label{c6e24}
+\end{eqnarray}
+From equation \eqref{c6e15},
+\[
+\pdt{\vec{A}}{t} = \pdt{\vec{A}}{\xi}
+\]
+so that if we denote rhs of the above equation as $\vec{A}^\op$ then equation 
+\eqref{c6e23} becomes
+\begin{equation}\label{c6e25}
+\vec{E} = -\frac{1}{c}\vec{A}^\op.
+\end{equation}
+Now,
+\begin{equation}\label{c6e26}
+\curl\vec{A} = -\uv{y}\pdt{A_z}{x} + \uv{z}\pdt{A_y}{x} = 
+\frac{1}{c}\uv{y}\pdt{A_z}{\xi} - \frac{1}{c}\uv{z}\pdt{A_y}{\xi}
+\end{equation}
+where we used \eqref{c6e16}. If $\un$ is the direction of wave propagation then
+$\un = \uv{x}$ and 
+\begin{equation}\label{c6e27}
+\un\times\vec{A}^\op = \uv{z}A^\op_y - \uv{y}A^\op_z
+\end{equation}
+and hence from \eqref{c6e26} and \eqref{c6e27} we get
+\begin{equation}\label{c6e28}
+\vec{H} = -\frac{1}{c}\un\times\vec{A}^\op.
+\end{equation}
+From \eqref{c6e25} and \eqref{c6e28} it immediately follows that
+\begin{equation}\label{c6e29}
+\vec{H} = \un\times\vec{E}.
+\end{equation}
+Thus both fields are perpendicular to $\un$, the direction of propagation. As a 
+result, the plane electromagnetic waves in vacuum are transverse in nature. 
+Equation \eqref{c6e29} also assures that magnitude of the two fields is the same.
 \end{enumerate}

@@ -1,0 +1,48 @@
+\chapter{Electromagnetic Waves}\label{c6}
+\begin{enumerate}
+\item Maxwell equations in vacuum are:
+\begin{eqnarray}
+\dive\vec{E} &=& 0 \label{c6e1} \\
+\curl\vec{E} &=& -\frac{1}{c}\pdt{\vec{H}}{t} \label{c6e2} \\
+\dive\vec{H} &=& 0 \label{c6e3} \\
+\curl\vec{H} &=& \frac{1}{c}\pdt{\vec{E}}{t} \label{c6e4}
+\end{eqnarray}
+If the fields are also time independent, then we will have $\dive\vec{E} = 0,
+\curl\vec{E} = 0, \dive\vec{H} = 0$ and $\curl\vec{H} = 0$. From equations
+\eqref{c5e16} (Coulomb's law) and \eqref{c5e140} (Biot-Savart's law), we get
+$\vec{E} = 0$ and $\tav{H} = 0$. Therefore, we assume that the fields depend
+on time.
+
+\item We will soon show that equations \eqref{c6e1} to \eqref{c6e4} have a
+non-zero solution in vacuum. That is, electromagnetic fields can exist in vacuum.
+We will also show that they satisfy the wave equation. Solutions of Maxwell
+equations in vacuum are called electromagnetic waves.
+
+\item As usual, it is easier to analyse the potentials. Let us choose them such
+that $\varphi = 0$ and $\dive\vec{A} = 0$. Equation \eqref{c6e2} becomes
+\[
+-\frac{1}{c}\curl\pdt{\vec{A}}{t} = 
+-\frac{1}{c}\frac{\partial}{\partial t}\curl\vec{A},
+\]
+an identity. While, equation \eqref{c6e4} becomes
+\[
+\curl\curl\vec{A} = -\frac{1}{c^2}\spdt{\vec{A}}{t}.
+\]
+The lhs of this equation is $\grad\dive\vec{A} - \nabla^2\vec{A}$. Since we chose
+$\dive{\vec{A}} = 0$, we get
+\begin{equation}\label{c6e5}
+\nabla^2\vec{A} - \frac{1}{c^2}\spdt{\vec{A}}{t} = 0.
+\end{equation}
+The choice $\dive{\vec{A}} = 0$ is called the Coulomb gauge and that it can be
+exercised without violating physics is explained in the point leading to 
+\eqref{c5e134}. Taking the curl of this equation gives
+\begin{equation}\label{c6e6}
+\nabla^2\vec{H} - \frac{1}{c^2}\spdt{\vec{H}}{t} = 0.
+\end{equation}
+Taking a partial derivative of \eqref{c6e5} and recalling that we chose $\varphi
+= 0$, gives
+\begin{equation}\label{c6e7}
+\nabla^2\vec{E} - \frac{1}{c^2}\spdt{\vec{E}}{t} = 0.
+\end{equation}
+
+\end{enumerate}

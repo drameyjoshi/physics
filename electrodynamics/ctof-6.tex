@@ -203,4 +203,58 @@ From \eqref{c6e25} and \eqref{c6e28} it immediately follows that
 Thus both fields are perpendicular to $\un$, the direction of propagation. As a 
 result, the plane electromagnetic waves in vacuum are transverse in nature. 
 Equation \eqref{c6e29} also assures that magnitude of the two fields is the same.
+
+\item The energy flux is
+\begin{equation}\label{c6e30}
+\vec{S} = \frac{c}{4\pi}\vec{E}\times\vec{H} = 
+\frac{c}{4\pi}\vec{E}\times(\un\times\vec{E}) = 
+\frac{c}{4\pi}E^2\un = \frac{c}{4\pi}H^2\un.
+\end{equation}
+We can as well write it as 
+\begin{equation}\label{c6e31}
+2W = \frac{c}{4\pi}(E^2 + H^2)\un
+\end{equation}
+so that
+\begin{equation}\label{c6e32}
+\vec{S} = cW\un
+\end{equation}
+where we used \eqref{c4e50}, where $W$ where is the energy density of the field.
+The components of $\vec{S}/c$ are the components 
+\[
+T^{01}, T^{02}, T^{03}
+\]
+of the energy-momentum tensor \eqref{c4e90}. We also argued in point 23 of chapter
+\ref{c4} that $T^{01}/c, T^{02}/c, T^{03}/c$ are the components of momentum 
+density of the system. Thus, we can interpret $\vec{S}/c^2$ as the momentum flux
+in the system. From \eqref{c6e32} we see that electromagnetic waves carry momentum
+in the direction of propagation.
+
+The relation between energy density and momentum density of electromagentic 
+waves is similar to that of relativistic particle of zero mass.
+
+\item If the $x$-axis is chosen to be along the direction of propagation of
+the wave then $\vec{E} = E\uv{y}$ and $\vec{H} = \uv{z}$. The components of the
+energy momentum tensor evaluated below \eqref{c4e88} are
+\begin{eqnarray}
+T^{00} &=& \frac{E^2 + H^2}{8\pi} \label{c6e33} \\
+T^{11} &=& -\frac{E^2 + H^2}{8\pi} = -\sigma_{xx} \label{c6e34},
+\end{eqnarray}
+
+\item Lorentz transformation for $W$ follows from \eqref{c1e88}.
+\begin{equation}\label{c6e35}
+W = \frac{W^\op + 2\beta S^\op_x/c + \beta^2\sigma_{xx}^\op}{1 - \beta^2}.
+\end{equation}
+If $\alpha^\op$ is the angle between $\bm{\beta}$ and the direction of 
+propagation of the wave then
+\[
+S_x^\op = cW^\op\cos\alpha^\op
+\]
+and 
+\begin{equation}\label{c6e36}
+\sigma_{xx}^\op = -W^\op\cos^2\alpha^\op,
+\end{equation}
+{\color{red}To do: justify \eqref{c6e36}} so that
+\begin{equation}\label{c6e37}
+W = \frac{W^\op(1 - \beta\cos\alpha^\op)^2}{1 - \beta^2}.
+\end{equation}
 \end{enumerate}

@@ -242,7 +242,8 @@ T^{11} &=& -\frac{E^2 + H^2}{8\pi} = -\sigma_{xx} \label{c6e34},
 
 \item Lorentz transformation for $W$ follows from \eqref{c1e88}.
 \begin{equation}\label{c6e35}
-W = \frac{W^\op + 2\beta S^\op_x/c + \beta^2\sigma_{xx}^\op}{1 - \beta^2}.
+W = \frac{W^\op + 2\beta S^\op_x/c + \beta^2T_{11}^\op}{1 - \beta^2}
+ = \frac{W^\op + 2\beta S^\op_x/c - \beta^2\sigma_{xx}^\op}{1 - \beta^2}.
 \end{equation}
 If $\alpha^\op$ is the angle between $\bm{\beta}$ and the direction of 
 propagation of the wave then
@@ -253,8 +254,157 @@ and
 \begin{equation}\label{c6e36}
 \sigma_{xx}^\op = -W^\op\cos^2\alpha^\op,
 \end{equation}
-{\color{red}To do: justify \eqref{c6e36}} so that
+{\color{red}To do: justify \eqref{c6e36}.} so that
 \begin{equation}\label{c6e37}
-W = \frac{W^\op(1 - \beta\cos\alpha^\op)^2}{1 - \beta^2}.
+W = \frac{W^\op(1 + \beta\cos\alpha^\op)^2}{1 - \beta^2}.
+\end{equation}
+
+\item A wave whose time dependence is of the form $\cos(\omega t + \alpha)$, where
+$\omega$ and $\alpha$ are constants is called a mono-chromatic wave. If $f(\vec{r},
+t)$ is the field quantity and if its time dependence of mono-chromatic then
+\begin{equation}\label{c6e38}
+\nabla^2 f = -\frac{\omega^2}{c^2} f.
+\end{equation}
+If the wave is propagating along the positive $x$ axis then $f$ is a function of
+$t - x/c$ alone. If it is also mono-chromatic then,
+\[
+f(x, t) = f_0\cos\left(\omega t - \omega\frac{x}{c} + \alpha\right) = 
+\re\left\{f_0\exp\left(-i\left(\omega t - \omega\frac{x}{c} + \alpha\right)\right)\right\}.
+\]
+The constant $\alpha$ can be absorbed in $f_0$ so that we can as well write
+\begin{equation}\label{c6e39}
+f(x, t) = \re\left\{f_0\exp\left(-i\left(\omega t - \omega\frac{x}{c}\right)\right)\right\}.
+\end{equation}
+Now,
+\[
+\cos\left(\omega t - \frac{\omega}{c}\left(x + \frac{2\pi c}{\omega}\right)\right)
+= \cos\left(\omega t - \frac{\omega}{c}x + 2\pi\right) = 
+\cos\left(\omega t - \frac{\omega}{c}x\right)
+\]
+so that the quantity
+\begin{equation}\label{c6e40}
+\lambda = \frac{2\pi c}{\omega}
+\end{equation}
+is called the \emph{wavelength}. The vector,
+\begin{equation}\label{c6e41}
+\vec{k} = \frac{\omega}{c}\un
+\end{equation}
+is called the \emph{wave-vector}. In terms of $\vec{k}$ we can generalise 
+\eqref{c6e39} to
+\begin{equation}\label{c6e42}
+f(\vec{r}, t) = \re\left\{f_0\exp\left(i\left(\vec{k}\cdot\vec{r} - \omega t\right)\right)\right\}.
+\end{equation}
+If we perform only linear operations, we can write \eqref{c6e42} as
+\begin{equation}\label{c6e43}
+f(\vec{r}, t) = f_0e^{i(\vec{k}\cdot\vec{r} - \omega t)}
+\end{equation}
+with the understanding that only the real part is physically significant.
+
+\item If, for a plane, mono-chromatic wave,
+\begin{equation}\label{c6e44}
+\vec{A}(\vec{r}, t) = \vec{A}_0e^{i(\vec{k}\cdot\vec{r} - \omega t)}
+\end{equation}
+then
+\begin{equation}\label{c6e45}
+\vec{E} = -\frac{1}{c}\pdt{\vec{A}}{t} = i\frac{\omega}{c}\vec{A} = ik\vec{A},
+\end{equation}
+where we used \eqref{c6e41} in the last step. Further,
+\begin{equation}\label{c6e46}
+\vec{H} = \curl\vec{A} = i\vec{k}\times\vec{A}.
+\end{equation}
+
+\item Let 
+\begin{equation}\label{c6e47}
+\vec{E} = \vec{E}_0 e^{i(\vec{k}\cdot\vec{r} - \omega t)},
+\end{equation}
+where
+\begin{equation}\label{c6e48}
+\vec{E}_0 = \vec{b}e^{-i\alpha}
+\end{equation}
+and
+\begin{equation}\label{c6e49}
+\vec{b} = \vec{b}_1 + i\vec{b}_2,
+\end{equation}
+so that $\vec{E}_0$ is a complex vector and $\vec{b}_1, \vec{b}_2$ are real 
+vectors. If we insist that
+\[
+|\vec{E}_0|^2 = \vec{E}_0\cdot\vec{E}_0^\ast = \vec{b}\cdot\vec{b}
+\]
+is real then
+\[
+\vec{b}\cdot\vec{b} = \vec{b}_1\cdot\vec{b}_1 - \vec{b}_2\cdot\vec{b}_2 + 
+2i\vec{b}_1\cdot\vec{b}_2
+\]
+must be real, which requires us to have
+\begin{equation}\label{c6e50}
+\vec{b}_1\cdot\vec{b}_2 = 0.
+\end{equation}
+If the wave propagates along the $x$ direction, we can choose $\vec{b}_1$ to be
+along the $y$ direction and $\vec{b}_2$ along the $z$ direction. We can then 
+write
+\begin{eqnarray}
+E_y &=& b_1\cos(\vec{k}\cdot\vec{r} - \omega t - \alpha) \label{c6e51} \\
+E_z &=& \pm b_2\sin(\vec{k}\cdot\vec{r} - \omega t - \alpha) \label{c6e52}
+\end{eqnarray}
+There is a $\sin$ factor in the second expression because of $i$ as a multiple
+in the second term of \eqref{c6e49}. We can combine \eqref{c6e51} and 
+\eqref{c6e52} to
+\begin{equation}\label{c6e53}
+\frac{E_y^2}{b_1^2} + \frac{E_z^2}{b_2^2} = 1.
+\end{equation}
+The vector $\vec{E} = \vec{E}_y\uv{y} + \vec{E}_z\uv{z}$ thus lies on the ellipse
+defined by \eqref{c6e53}. As time goes by, the tip of the vector moves along the
+ellipse. Such a wave is called \emph{elliptically polarised}. It is called \emph{
+circularly polarised} if $b_1 = b_2$ and plane polarised of one of $b_1$ or $b_2$
+is zero.
+
+\item If we introduce a 4-vector
+\begin{equation}\label{c6e54}
+k^\mu = \left(\frac{\omega}{c}, \vec{k}\right)
+\end{equation}
+then $x^\mu = (ct, \vec{r})$ implies
+\begin{equation}\label{c6e55}
+k_\mu x^\mu = \left(\frac{\omega}{c}, -\vec{k}\right)\cdot(ct, \vec{r})
+= \omega t =\vec{k}\cdot\vec{r}.
+\end{equation}
+This allows us to write the solution \eqref{c6e44} of the wave equation as 
+\begin{equation}\label{c6e56}
+\vec{A} = \vec{A}_0\exp(ik_\mu x^\mu).
+\end{equation}
+We also observe that
+\begin{equation}\label{c6e57}
+k_\mu k^\mu = \frac{\omega^2}{c^2} - k^2 = 0,
+\end{equation}
+by \eqref{c6e41}. In the pseudo-Euclidean geometry of the space-time a norm of a
+vector can be zero without the vector being zero.
+
+\item The energy-momentum tensor of the electromagnetic field of a plane wave has
+the components,
+\begin{eqnarray*}
+T^{00} &=& \frac{E^2 + H^2}{8\pi} = W \\
+T^{01} &=& \frac{E_yH_z - E_zH_y}{4\pi} = k^2A^2\\
+T^{02} &=& \frac{E_zH_x - E_xH_z}{4\pi} = 0 \\
+T^{03} &=& \frac{E_xH_y - E_yH_x}{4\pi} = 0 \\
+T^{11} &=& \frac{E_x^2 - E_y^2 - E_z^2 + H_x^2 - H_y^2 - H_z^2}{8\pi} = W \\
+T^{12} &=& -\frac{E_xE_y + H_xH_y}{4\pi} = 0\\
+T^{13} &=& -\frac{E_xE_z + H_xH_z}{4\pi} = 0\\
+T^{22} &=& \frac{-E_x^2 + E_y^2 - E_z^2 - H_x^2 + H_y^2 - H_z^2}{8\pi} = 0\\
+T^{23} &=& -\frac{E_yE_z + H_yH_z}{4\pi} = 0 \\
+T^{33} &=& \frac{-E_x^2 - E_y^2 + E_z^2 - H_x^2 - H_y^2 + H_z^2}{8\pi} = 0
+\end{eqnarray*}
+where we used the fact that $\vec{k} = k\uv{x}$, $\vec{H} = i\vec{k}\times\vec{A}
+= i(-kA_z\uv{y} + kA_y\uv{z})$, $\vec{E} = \un\times\vec{H} = \uv{x}\times\vec{H}
+= i(-kA_z\uv{z} - kA_y\uv{y})$, for a plane wave. Since, for these expressions,
+\[
+E^2 + H^2 = 2k^2A^2,
+\]
+we can write
+\begin{equation}\label{c6e58}
+T^{01} = k^2A^2 = \frac{E^2 + H^2}{8\pi} = W.
+\end{equation}
+Since $\vec{k} = k\uv{x}$, $k^\mu = (\omega/c, k, 0, 0)$ and
+\begin{equation}\label{c6e59}
+T^{00} = T^{01} = T^{11} = W \Rightarrow T^{\mu\nu} = 
+\frac{Wc^2}{\omega^2}k^\mu k^\nu
 \end{equation}
 \end{enumerate}

@@ -407,4 +407,165 @@ Since $\vec{k} = k\uv{x}$, $k^\mu = (\omega/c, k, 0, 0)$ and
 T^{00} = T^{01} = T^{11} = W \Rightarrow T^{\mu\nu} = 
 \frac{Wc^2}{\omega^2}k^\mu k^\nu
 \end{equation}
+
+\item The Lorentz transformation for $k^\mu$ is, according to \eqref{c1e46},
+\begin{eqnarray}
+k^0 &=& \gamma(\bar{k}^0 + \beta\bar{k}^1) \label{c6e60} \\
+k^1 &=& \gamma(\bar{k}^1 + \beta\bar{k}^0) \label{c6e61} \\
+k^2 &=& \bar{k}^2 \label{c6e62} \\
+k^3 &=& \bar{k}^3 \label{c6e63}
+\end{eqnarray}
+where $\bar{k}^\mu$ is the wave vector measured in a frame $\bar{K}$ moving
+at velocity $v\uv{x}/c$ with respect to $K$. From \eqref{c6e54}, $k^0 = \omega/c$
+so that \eqref{c6e60} becomes
+\begin{equation}\label{c6e64}
+\omega = \gamma(\bar{\omega} + c\bar{k}^1)
+\end{equation}
+If the wave propagates at an angle $\alpha$ with respect to the $x$ axis in 
+$\bar{K}$ frame then $\bar{k}^1 = k\cos\alpha$. Using \eqref{c6e57}, we have
+\begin{equation}\label{c6e65}
+\bar{k}^1 = \frac{\bar{\omega}}{c}\cos\alpha
+\end{equation}
+so that \eqref{c6e64} becomes
+\[
+\omega = \gamma(\bar{\omega} + \bar{\omega}\cos\alpha) = \gamma\bar{\omega}(1 + \cos\alpha)
+\]
+or
+\begin{equation}\label{c6e66}
+\bar{\omega} = \frac{\omega\sqrt{1 - \beta^2}}{1 + \cos\alpha}.
+\end{equation}
+If $\alpha = \pi/2$, $\bar{\omega} = \omega\sqrt{1 - \beta^2} < \omega$. This is 
+the relativistic red-shift.
+
+\item The spectral resolution of a wave is an expression of the wave field as a
+superposition of monochromatic waves. It can be done in two ways:
+\begin{enumerate}
+\item Express the periodic function as
+\begin{equation}\label{c6e67}
+f(t) = \sum_{n=-\infty}^\infty f_n e^{-i\omega_0 nt},
+\end{equation}
+where $\omega_0 = 2\pi/T$ and $T$ is such that $f(t + T) = f(t)$. The superposition
+is written as a sum of waves of frequency $\omega_0$ and its harmonics. We can 
+get the amplitudes $f_n$ using
+\begin{equation}\label{c6e68}
+f_n = \frac{1}{T}\int_{-T/2}^{T/2} f(t)e^{i\omega_0 nt},
+\end{equation}
+from which it is evident that
+\begin{equation}\label{c6e69}
+f_n = f_{-n}.
+\end{equation}
+The squared modulus of \eqref{c6e67} is
+\begin{equation}\label{c6e70}
+|f|^2 = \sum_{m, n = -\infty}^\infty f_n f_m^\ast e^{i\omega_0(m - n)t}.
+\end{equation}
+Since,
+\begin{equation}\label{c6e71}
+\int_{-T/2}^{T/2}e^{i\omega_0(m - n)t}dt = T\delta_{mn},
+\end{equation},
+\begin{equation}\label{c6e71}
+\overline{|f|^2} = \frac{1}{T}\int_{-T/2}^{T/2}|f|^2 dt = 
+\sum_{m, n = -\infty}^\infty f_n f_m^\ast \delta_{mn} = 
+\sum_{n=-\infty}^\infty |f_n|^2.
+\end{equation}
+In view of \eqref{c6e69} we also have
+\begin{equation}\label{c6e72}
+\overline{|f|^2} = 2\sum_{n=0}^\infty |f_n|^2.
+\end{equation}
+
+\item If $f(t) \rightarrow 0$ as $t \rightarrow \infty$, one can also write
+\begin{equation}\label{c6e73}
+f(t) = \int_{-\infty}^\infty \hat{f}(\omega) e^{-i\omega t}\frac{d\omega}{2\pi}.
+\end{equation}
+The inverse of this relation is
+\begin{equation}\label{c6e74}
+\hat{f}(\omega) = \int_{-\infty}^\infty f(t)e^{i\omega t}dt.
+\end{equation}
+From \eqref{c6e74} it is immediately evident that
+\begin{equation}\label{c6e75}
+\hat{f}^\ast(\omega) = \hat{f}(-\omega).
+\end{equation}
+From \eqref{c6e74},
+\[
+|f(t)|^2 = \frac{1}{4\pi^2}
+\iint_{-\infty}^\infty \hat{f}(\omega)\hat{f}^\ast(\omega^\op)e^{-i(\omega-\omega^\op)t}d\omega d\omega^\op
+\]
+and
+\[
+\int_{-\infty}^\infty |f(t)|^2dt = \frac{1}{4\pi^2}
+\int_{-\infty}^\infty\iint_{-\infty}^\infty \hat{f}(\omega)\hat{f}^\ast(\omega^\op)e^{-i(\omega-\omega^\op)t}d\omega d\omega^\op
+dt
+\]
+Since
+\begin{equation}\label{c6e77}
+\frac{1}{2\pi}\int_{-\infty}^\infty e^{-i(\omega - \omega^\op)}dt = \delta(\omega - \omega^\op)
+\end{equation}
+we get
+\[
+\int_{-\infty}^\infty |f(t)|^2dt = \frac{1}{2\pi}
+\iint_{-\infty}^\infty \hat{f}(\omega)\hat{f}^\ast(\omega^\op)\delta(\omega-\omega^\op)d\omega d\omega^\op
+\]
+or
+\begin{equation}\label{c6e78}
+\int_{-\infty}^\infty |f(t)|^2dt = \frac{1}{2\pi}\int_{-\infty}^\infty |\hat{f}(\omega)|^2 d\omega.
+\end{equation}
+\end{enumerate}
+
+\item A purely monochromatic wave extends all the way to infinity. There are no
+such waves. Almost monochromatic waves have a frequency in a small band around a
+certain value, say $\omega$. Unlike the pure monochromatic wave, whose amplitude
+is a constant $\vec{E}_0$, the amplitude of an approximate monochromatic wave
+is a slow varying quantity $\vec{E}_0(t)$. A pure monochromatic wave is polarised 
+because $\vec{E}_0$ is constant. An approximate monochromatic wave is said to
+be partially polarised.
+
+\item Experiments studying polarisation involve measurement of intensities of
+waves transmitted through media like a Nicol prism. Therefore, one studies the
+quadratic functions of electric field. Functions like $E_iE_j$ or $E_i^\ast
+E_j^\ast$ have a phase factor because
+\begin{equation}\label{c6e79}
+\vec{E}(t) = \vec{E}_0(t)e^{-i\omega t}.
+\end{equation}
+On the other hand, $E_iE_j^\ast$ or $E_i^\ast E_j$ will not have them. The 
+long-time averages of these quantities will typically be non-zero and will be
+easily observable in an experiment. Therefore, the polarisation properties
+of electromagnetic waves are determined by the tensor
+\begin{equation}\label{c6e80}
+J_{ij} = \overline{E_{0i}{E_{0j}^\ast}},
+\end{equation}
+where $E_{0i}$ is the $i$-th component of the amplitude vector $\vec{E}_0(t)$.
+
+\item The vector $\vec{E}$ is confined to a plane in the case of a plane 
+electromagnetic wave. If the wave propagates along the $z$ axis then the
+electric field is restricted to the $xy$-plane. Therefore, the tensor in
+equation \eqref{c6e80} has only two dimensions. If we define,
+\begin{equation}\label{c6e81}
+J = J_{ii} = \overline{\vec{E}_0\cdot\vec{E}_0^\ast}
+\end{equation}
+then it is clear that $J$ is the intensity of the wave. It is not related
+to its polarisation properties. We therefore factor it out from $J_{ij}$ and
+define the polarisation tensor
+\begin{equation}\label{c6e82}
+\rho_{ij} = \frac{J_{ij}}{J}.
+\end{equation}
+From the definition of $J_{ij}$ it is clear that
+\begin{equation}\label{c6e83}
+J_{ij} = J_{ji}^\ast \text{ and } \rho_{ij} = \rho_{ji}^\ast,
+\end{equation}
+that is, the tensors $J_{ij}$ and $\rho_{ij}$ are hermitian and their eigen-values
+are real. Note that $J$ defined in \eqref{c6e81} is also the trace of the tensor. 
+Therefore,
+\begin{equation}\label{c6e84}
+\rho_{11} + \rho_{22} = \frac{J_{11}}{J} + \frac{J_{22}}{J} = 1.
+\end{equation}
+Hermiticity of $\rho_{ij}$ requires that
+\begin{equation}\label{c6e85}
+\rho_{21} = \rho_{12}^\ast.
+\end{equation}
+Equations \eqref{c6e84} and \eqref{c6e85} suggest that the tensor $\rho_{ij}$ is
+of the form
+\begin{equation}\label{c6e86}
+\rho_{ij} = \begin{bmatrix}a & b + ic \\ b - ic & 1 - a \end{bmatrix},
+\end{equation}
+where $a, b, c \in \mathbb{R}$. This means that the polarisation state of a plane
+electromagnetic wave can be described by three real numbers.
 \end{enumerate}

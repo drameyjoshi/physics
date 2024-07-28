@@ -1,4 +1,4 @@
-\documentclass-.
+\documentclass{article}
 \usepackage{amsmath, graphicx, xcolor, hyperref}
 \usepackage{mathabx}
 \include{common}
@@ -656,19 +656,31 @@ if __name__ == '__main__':
 \label{c2f18}
 \end{figure}
 
-\item When the spheres are so far apart their presence does not affect the charge
-distribution on each other we can consider them to be point charges. Let one of 
-them be centred at the origin and the other one centred at a distance $a$ on the
-$x$ axis. If one of them has a charge $q$ and the other $Q-q$ then the energy of
-the configuration is
+\item The energy of a charge distribution $\rho$ is
 \[
-U(q) = \frac{q(Q - q)}{a}
+U = \frac{1}{2}\int\rho(\vec{r})\varphi(\vec{r})dv,
 \]
-so that $aU^\op(q) = (Q - q) - q = Q - 2q$. Thus, the potential energy is minimised
-when $q = Q/2$, that is when the charges are evenly distributed.
-
-Note that this analysis is valid only when $a$ is much larger than the radii of the
-spheres.
+where $\varphi$ is the potential due to $\rho$. In the case of a uniformly charged
+sphere, $\varphi$ is a function of $r$ alone and for a fixed $r$ it is a constant.
+Therefore,
+\[
+U(R_1) = \frac{\varphi(R_1)}{2}q_1,
+\]
+where $q_1$ is the charge on it. Therefore, the total energy is
+\[
+U = \frac{1}{2}\frac{q}{R_1}q + \frac{1}{2}\frac{Q - q}{R_2}(Q - q)
+= \frac{q^2}{2R_1} + \frac{(Q - q)^2}{2R_2}
+\]
+so that
+\[
+U^\op(q) = \frac{q}{R_1} - \frac{Q - q}{R_1}
+\]
+and the extremum is at
+\[
+q = \frac{QR_1}{R_1 + R_2}.
+\]
+Thus, $U$ is minimized when the charges are distributed as $QR_1/(R_1+R_2)$ on
+the sphere of radius $R_1$ and $QR_2/(R_1 + R_2)$ on the sphere of radius $R_2$.
 
 \item We first find the potential at the centre of a uniformly charged sphere.
 If $\rho$ is the charge density then at a point a distance $r$ from the centre,

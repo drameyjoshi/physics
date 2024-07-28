@@ -568,4 +568,136 @@ of the form
 \end{equation}
 where $a, b, c \in \mathbb{R}$. This means that the polarisation state of a plane
 electromagnetic wave can be described by three real numbers.
+
+\item We will now examine the polarisation tensor for a variety of situations:
+\begin{enumerate}
+\item In the case of pure monochromatic light, $\vec{E}_0(t)$ is the constant
+$\vec{E}_0$ and hence
+\begin{equation}\label{c6e87}
+\rho = \begin{bmatrix}|E_{01}|^2 & E_{01}E_{02}^\ast \\ 
+                      E_{01}^\ast E_{02} & |E_{02}|^2 
+       \end{bmatrix}
+\end{equation}
+In this case, 
+\begin{equation}\label{c6e88}
+\det\rho = |E_{01}|^2|E_{02}|^2 - E_{01}E_{02}^\ast E_{01}^\ast E_{02} = 0.
+\end{equation}
+This is also the case of complete polarisation.
+
+\item The other extreme is completely unpolarised light. In this case, all
+directions are equivalent and the polarisation tensor is isotropic. To ensure
+that its trace is $1$, we must have
+\begin{equation}\label{c6e89}
+\rho_{ij} = \frac{1}{2}\delta_{ij}.
+\end{equation}
+
+\item These two extremes suggest that we can define a quantity $P$ called the
+degree of polarisation as
+\begin{equation}\label{c6e90}
+\det\rho = \frac{1}{4}(1 - P^2)
+\end{equation}
+so that $P = 1$ for fully polarised, monochromatic light and $P = 0$ for 
+unpolarised light.
+\end{enumerate}
+
+\item A tensor like $\rho_{ij}$ can be split into a symmetric and an anti-symmetric
+part such that
+\begin{equation}\label{c6e91}
+\rho_{ij} = S_{ij} + A_{ij},
+\end{equation}
+where
+\begin{eqnarray}
+S_{ij} &=& \frac{1}{2}(\rho_{ij} + \rho{ji}) \label{c6e92} \\
+A_{ij} &=& \frac{1}{2}(\rho_{ij} - \rho{ji}). \label{c6e93}
+\end{eqnarray} 
+The hermiticity of $\rho$ results in 
+\begin{equation}\label{c6e94}
+A_{ij} = \begin{bmatrix}0 & \rho_{12} - \rho_{21} \\
+-(\rho_{21} - \rho_{12}) & 0
+\end{bmatrix} = (\rho_{12} - \rho_{12}^\ast)\begin{bmatrix}0 & 1 \\ -1 & 0 \end{bmatrix}
+\end{equation}
+Now, $(\rho_{12} - \rho_{12}^\ast)$ is pure imaginary. Let 
+\begin{equation}\label{c6e95}
+A = i(\rho_{12} - \rho_{12}^\ast)
+\end{equation}
+so that we can write \eqref{c6e91} as
+\begin{equation}\label{c6e96}
+\rho_{ij} = S_{ij} - \frac{i}{2}Ae_{ij},
+\end{equation}
+where
+\begin{equation}\label{c6e97}
+e_{ij} = \begin{bmatrix}0 & 1 \\ -1 & 0 \end{bmatrix}
+\end{equation}
+is the fully anti-symmetric tensor.
+\begin{enumerate}
+\item For a circularly polarised wave, $b_1 = b_2$ in \eqref{c6e53} so that from
+equations \eqref{c6e51} and \eqref{c6e52} we get $E_{02} = \pm i E_{01}$. The 
+polarisation tensor is
+\begin{equation}\label{c6e98}
+\rho_{ij} = \begin{bmatrix}|E_{01}|^2 & \mp i |E_{01}|^2 \\
+\pm i |E_{01}|^2 & |E_{01}|^2
+\end{bmatrix}\frac{1}{|E_{01}|^2} = \frac{1}{2}\delta_{ij} - \frac{\pm i}{2}e_{ij}
+\end{equation}
+so that $S_{ij} = \delta_{ij}/2$ and $A = \pm 1$.
+
+\item If the wave is linearly polarised, one of $b_1$ or $b_2$ in \eqref{c6e53}
+is zero. From equations \eqref{c6e51} and \eqref{c6e52} it is evident that we can
+write $\vec{E}_0$ as a real vector. Therefore, $A = 0$.
+
+\item This suggests that the constant $A$ can be viewed as a degree of circularity
+in the polarisation. $A \in [-1, 1]$, taking extreme values for left and right 
+circular polarised waves and middle value for plane polarised ones.
+\end{enumerate}
+
+\item A real symmmetric matrix $S_{ij}$ can be diagonalised. Let $\lambda_1$ and
+$\lambda_2$ be the two eigenvalues and let the corresponding eigenvectors 
+correspond to directions $\un^{(1)}$ and $\un^{(2)}$. Then we can write
+\begin{equation}\label{c6e99}
+S_{ij} = \lambda_1 n^{(1)}_in^{(1)}_j + \lambda_2 n^{(2)}_in^{(2)}_j,
+\end{equation}
+and $0 \le \lambda_1, \lambda_1 \le 1$. Each of the two terms is a product of
+quantities related to one of the eigen-vectors. If $A = 0$, then $\rho_{ij} = 
+S_{ij}$, which means that each term of $\rho_{ij}$ is a sum of two terms, each
+one of which being a product of one of the two eigen-vectors. The two parts can
+be treated as independent of each other. Such a wave is called \emph{incoherent}.
+
+\item Let $\phi$ be the angle between $\un^{(1)}$ and the $x$-axis. Then we can 
+write
+\begin{eqnarray}
+\un^{(1)} &=& (\cos\phi, \sin\phi) \label{c6e100} \\
+\un^{(2)} &=& (-\sin\phi, \cos\phi) \label{c6e101}
+\end{eqnarray}
+If $\lambda_1 > \lambda_2$, let
+\begin{equation}\label{c6e102}
+l = \lambda_1 - \lambda_2 > 0.
+\end{equation}
+The matrix $S$ can now be written as
+\begin{equation}\label{c6e103}
+S = \frac{1}{2}\begin{bmatrix}
+1 + l\cos(2\phi) & l\sin(2\phi) \\
+l\sin(2\phi) & 1 - l\cos(2\phi)
+\end{bmatrix}
+\end{equation}
+The three numbers $A, l$ and $\phi$ describe the polarisation state of the wave.
+One can replace them with
+\begin{eqnarray}
+\xi_1 &=& l\sin(2\phi) \label{c6e104} \\
+\xi_2 &=& A \label{c6e105} \\
+\xi_3 &=& l\cos(2\phi) \label{c6e106}
+\end{eqnarray}
+so that the polarisation tensor can be written as
+\begin{equation}\label{c6e107}
+\rho = \frac{1}{2}\begin{bmatrix}
+1 + \xi_3 & \xi_1 - i\xi_2 \\
+\xi_1 + i\xi_2 & 1 - \xi_3
+\end{bmatrix}.
+\end{equation}
+The three numbers $\xi_1, \xi_2, \xi_3$ are called Stokes parameters. In this form,
+\begin{equation}\label{c6e108}
+\det\rho = \frac{1}{4}(1 - \xi_1^2 - \xi_2^2 - \xi_3^2),
+\end{equation}
+so that the degree of polarisation $P$ defined in \eqref{c6e90} becomes
+\begin{equation}\label{c6e109}
+P = \sqrt{\xi_1^2 + \xi_2^2 + \xi_3^2}.
+\end{equation}
 \end{enumerate}

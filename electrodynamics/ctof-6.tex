@@ -913,13 +913,75 @@ Putting \eqref{c6e136} and \eqref{c6e137} in \eqref{c6e130} we get
 Thus the total energy of the confined field is the sum of energies corresponding
 to harmonic oscillator described by \eqref{c6e122}.
 
-\item From \eqref{c6e126} and \eqref{c6e127}, the total momentum of the system is
+\item Before proceeding, we summarise what we have done so far. We described the
+electromagnetic field in Coulomb gauge with $\varphi = 0$. The fields $\vec{E}$ 
+and $\vec{H}$ were described in terms of a continuous function $\vec{A}$ of $t$
+and $\vec{r}$. We then expressed $\vec{A}$ as a triple Fourier series in with
+Fourier coefficients $\vec{A}_\vec{k}$, which turned out to be harmonic functions
+with frequenct $ck$ and amplitudes $\vec{a}_\vec{k}$. Effectively, we expressed
+$\vec{E}$ and $\vec{H}$ in terms of discrete quantities $\vec{a}_\vec{k}$. We will
+now transform $\vec{a}_\vec{k}$ into canonically conjugate variables.
+
+\item Define variables $\vec{Q}_\vec{k}$ and $\vec{P}_\vec{k}$ such that
+\begin{eqnarray}
+\vec{Q}_\vec{k} &=& \sqrt{\frac{V}{4\pi c^2}}(\vec{a}_\vec{k} + \vec{a}_\vec{k}^\ast) \label{c6e139} \\
+\vec{P}_\vec{k} &=& -i\omega_\vec{k}\sqrt{\frac{V}{4\pi c^2}}(\vec{a}_\vec{k} - \vec{a}_\vec{k}^\ast) \label{c6e140}
+\end{eqnarray}
+so that
 \begin{eqnarray*}
-& & \frac{c}{4\pi}\frac{-i}{c}\sum_{\vec{k}}\sum_{\vec{k}^\op}
-\dot{\vec{A}}_\vec{k}(t) \times (\vec{k}^\op \times \vec{A}^\ast_{\vec{k}^\op})
-\int_V e^{i(\vec{k} - \vec{k}^\op)\cdot\vec{r}}dv \\
-&=& \frac{-i}{4\pi}\sum_{\vec{k}}\dot{\vec{A}}_\vec{k}(t) \times (\vec{k} \times \vec{A}^\ast_{\vec{k}}) \\
-&=& \frac{-i}{4\pi}\sum_\vec{k}(\vec{k}(\dot{\vec{A}}_\vec{k}(t)\cdot\vec{A}^\ast_{\vec{k}}) -
-\vec{A}^\ast_{\vec{k}}(\vec{k}\cdot\dot{\vec{A}}_\vec{k}(t))
+Q_\vec{k}^2 &=& \vec{Q}_\vec{k} \cdot \vec{Q}_\vec{k}^\ast \\
+ &=& \frac{V}{4\pi c^2}(\vec{a}_\vec{k} + \vec{a}_\vec{k}^\ast)\cdot(\vec{a}_\vec{k} + \vec{a}_\vec{k}^\ast) \\
+ &=& \frac{V}{4\pi c^2}(a_\vec{k}^2 + 2\vec{a}_\vec{k}\cdot\vec{a}_\vec{k}^\ast + {a_\vec{k}^\ast}^2)
+\end{eqnarray*}
+and
+\[
+P_\vec{k}^2 = -\omega_\vec{k}^2\frac{V}{4\pi c^2}(a_\vec{k}^2 - 2\vec{a}_\vec{k}\cdot\vec{a}_\vec{k}^\ast + {a_\vec{k}^\ast}^2).
+\]
+Therefore,
+\[
+P_\vec{k}^2 + \omega_\vec{k}^2Q_\vec{k}^2 = \omega_\vec{k}^2\frac{V}{\pi c^2}\vec{a}_\vec{k}\cdot\vec{a}_\vec{k}^\ast
+\]
+and
+\[
+\frac{1}{2}(P_\vec{k}^2 + \omega_\vec{k}^2Q_\vec{k}^2) = \omega_\vec{k}^2\frac{V}{2\pi c^2}|\vec{a}_\vec{k}^2
+\]
+Comparing this with \eqref{c6e138} allows us to call this expression $\mathcal{E}_\vec{k}$,
+the energy of the oscillator corresponding to the term $\vec{A}_\vec{k}$. Thus,
+we can write the Hamiltonian of the field as
+\begin{equation}\label{c6e141}
+\mathcal{H} = \sum_\vec{k}\mathcal{H}_\vec{k} = 
+\sum_\vec{k}\frac{1}{2}(P_\vec{k}^2 + \omega_\vec{k}^2Q_\vec{k}^2)
+\end{equation}
+
+\item The canonical equations are
+\begin{eqnarray}
+\pdt{\mathcal{H}}{\vec{P}_\vec{k}} &=& \dot{\vec{Q}}_\vec{k} \Rightarrow 
+ \vec{P}_\vec{k} = \dot{\vec{Q}}_\vec{k} \label{c6e142} \\
+\pdt{\mathcal{H}}{\vec{Q}_\vec{k}} &=& -\dot{\vec{P}}_\vec{k} \Rightarrow
+ \omega_\vec{k}^2\vec{Q}_\vec{k} = -\dot{\vec{P}}_\vec{k} \label{c6e143}
+\end{eqnarray}
+Substituting \eqref{c6e142} in \eqref{c6e143} gives the equation of motion
+\begin{equation}\label{c6e144}
+\ddot{\vec{Q}}_\vec{k} + \omega_\vec{k}^2\vec{Q}_\vec{k} = 0.
+\end{equation}
+
+\item We can write the Hamiltonian in \eqref{c6e141} as
+\[
+\mathcal{H}_\vec{k} = \sum_j\frac{1}{2}(P_{\vec{k},j}^2 + \omega^2_\vec{k}Q_{\vec{k},j}^2)
+\]
+which is a sum of three Hamiltonians, one each along a cartesian axis. This 
+allows us to imagine the field to be made up of independent harmonic oscillators.
+
+\item If we know $\vec{Q}_\vec{k}$ we can get $\vec{P}_\vec{k}$ by differentiation
+with respect to $t$. Knowing these immediately gives us
+\begin{eqnarray*}
+\vec{a}_\vec{k} &=& \frac{i}{k}\sqrt{\frac{\pi}{V}}(\vec{P}_\vec{k} - i\omega_\vec{k}\vec{Q}_\vec{k}) \label{c6e145} \\
+\vec{a}_\vec{k}^\ast &=& \frac{-i}{k}\sqrt{\frac{\pi}{V}}(\vec{P}_\vec{k} + i\omega_\vec{k}\vec{Q}_\vec{k}) \label{c6e146} \\
+\vec{A} &=& 2\sqrt{\frac{\pi}{V}}\sum_\vec{k}
+     \frac{ck\vec{Q}_\vec{k}\cos(\vec{k}\cdot\vec{r}) - \vec{P}_\vec{k}\sin(\vec{k}\cdot\vec{r})}{k} \label{c6e147} \\
+\vec{E} &=& -2\sqrt{\frac{\pi}{V}}\sum_\vec{k}
+     \frac{ck\vec{Q}_\vec{k}\sin(\vec{k}\cdot\vec{r}) + \vec{P}_\vec{k}\cos(\vec{k}\cdot\vec{r})}{k} \label{c6e148} \\
+\vec{H} &=& -2\sqrt{\frac{\pi}{V}}\sum_\vec{k}
+     \frac{ck\vec{k} \times \vec{Q}_\vec{k}\sin(\vec{k}\cdot\vec{r}) + \vec{k} \times \vec{P}_\vec{k}\cos(\vec{k}\cdot\vec{r})}{k} \label{c6e148}
 \end{eqnarray*}
 \end{enumerate}

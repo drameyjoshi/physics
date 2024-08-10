@@ -1,0 +1,160 @@
+\documentclass{article}
+\usepackage{amsmath, graphicx, xcolor, hyperref}
+\usepackage{mathabx}
+\include{common}
+\begin{document}
+%\include{common}
+\title{Electric Fields Around Conductors}
+\author{Amey Joshi}
+\date{10-Aug-2024}
+\maketitle
+\begin{enumerate}
+\item A charge $q_b$ in one of the cavities results in a lining up of a charge
+$-q_b$ on its inner side, which in turn is compensated by a charge $q_b$ on the
+surface of the sphere. Likewise, the charge $q_c$ in another cavity will result
+in additional charge $q_c$ on the sphere. Thus, the total charge on the surface
+is $q_b + q_c$.
+
+$q_b$ will not experience any force from the induced charges because it is at the
+centre. Likewise for $q_c$.
+
+The net charge $q_b + q_c$ on the sphere's surface will depend on the location 
+and size of the two cavities. In general, it will not be uniformly distributed.
+Therefore the force between $q_d$ and the sphere will not have $r^{-2}$ contribution
+alone. However, if $r$ is much large than the radius of the sphere, the force
+between them is
+\[
+\frac{q_d(q_b + q_c)}{r^2}.
+\]
+
+\item There is no negative mass. Therefore no compensating gravitational fields
+can be set up.
+
+\item Let the charge $q$ be at a height $h$ above the plane. Consider the plane
+$z = h$. Of all the lines of force emerging from $q$, half of them will never 
+cross $z = h$ and the remaining half will initially start their journey upwards
+and eventually turn down to meet the plane. All the lines, put together, will
+result in a charge $-q$ on the plane. The lines starting below the plane will
+result in a charge $-q/2$ on the plane. From equation (8) in the book, the surface
+charge density is
+\[
+\sigma = -\frac{qh}{2\pi(r^2 + h^2)^{3/2}}
+\]
+If the charge $-q/2$ is induced in a region of radius $R$ from the origin, then
+\[
+-\frac{q}{2} = \int_0^R\int_0^{2\pi}\sigma rdrd\theta
+\]
+Therefore,
+\[
+-\frac{q}{2} = -\int_0^R\int_0^{2\pi}\frac{qh}{2\pi(r^2 + h^2)^{3/2}} rdrd\theta
+\Rightarrow
+\frac{1}{2h} = \int_0^R \frac{2rdr}{(r^2 + h^2)^{3/2}}
+\]
+Let $x^2 = r^2 + h^2$ so that $2xdx = 2rdr$. The limits of the integral go from
+$h$ to $\sqrt{R^2 + h^2}$. Thus,
+\[
+\frac{1}{2h} = 2\int_h^{\sqrt{R^2+h^2}} x^{-2}dx = 
+-2\left(\frac{1}{\sqrt{R^2+h^2}} - \frac{1}{h}\right)
+\]
+or
+\[
+\frac{1}{4h} = \frac{1}{h} - \frac{1}{\sqrt{R^2+h^2}} \Rightarrow
+\frac{3}{4h} = \frac{1}{\sqrt{R^2+h^2}} \Rightarrow
+9(R^2 + h^2) = 16h^2
+\]
+so that
+\[
+R = \frac{h\sqrt{7}}{3}.
+\]
+
+\item The solution is quite difficult without the method of images. If $\sigma_+$
+and $\sigma_-$ are the surface charge densities on the plate due to $Q$ at height
+$10$ and $-Q$ at height $z$ then
+\begin{eqnarray*}
+\sigma_+ &=& -\frac{10Q}{2\pi(r^2 + 100)^{3/2}} \\
+\sigma_- &=& +\frac{zQ}{2\pi(r^2 + z^2)^{3/2}}
+\end{eqnarray*}
+so that the net density is
+\[
+\sigma = \frac{Q}{2\pi}\left(\frac{z}{(r^2 + z^2)^{3/2}} - \frac{10}{(r^2 + 100)^{3/2}}\right)
+\]
+Finding the force due to such a charge distribution is quite challenging. Instead
+we note that the electric field likes are exactly due to the charges $Q, -Q, +Q, -Q$
+at locations $z = 10, z, -z, -10$. Thus, the force on the charge $-Q$ at $z$ is
+\[
+F = \frac{Q^2}{(10 - z)^2} - \frac{Q^2}{4z^2} + \frac{Q^2}{(10 + z)^2}.
+\]
+$F = 0$ when
+\[
+\frac{1}{(10 - z)^2} + \frac{1}{(10 + z)^2} = \frac{1}{4z^2}
+\Rightarrow 7z^4 + 1000z^2 - 10000 = 0.
+\]
+We can find the roots using
+\begin{verbatim}
+import numpy as np
+p = np.array([7, 0, 1000, 0, -10000])
+
+[np.real(z) for z in np.roots(p) \ 
+if np.isreal(z) & (np.real(z) > 0)]
+\end{verbatim}
+The only positive root is $z = 3.0633$ cm.
+
+\item Align the $z$ axis to be perpendicular to the conducting plane and let the
+two charges be on it. When the charge $Q$ is moved, its mirror charge $-Q$ also
+retreats by the same amount so that the distance between then is $2z$ and the force
+between them is
+\[
+\vec{F} = -\frac{Q^2}{4z^2}\uv{z}.
+\]
+and the work done in pulling them apart is
+\[
+dW = \frac{Q^2}{4z^2}dz
+\]
+so that
+\[
+W = \int_h^\infty dW = \frac{Q^2}{4h}.
+\]
+The image charge is fictitious and it is introduced only to solve a problem. The
+force due to it is same as that due to the charge induced on the plane and it is
+this latter charge which is the true physical charge. It adjusts itself as the 
+charge $Q$ retreats away from the plane.
+
+The answer $Q^2/(2h)$ assumes that work is also done in pulling the image charge
+to infinity. However, we do not have to worry about it.
+
+\item This problem too will be hard to solve without using the idea of image
+charges. If the wire has a uniform charge density $\lambda$ then its image will
+be another wire with charge density $-\lambda$ below the earth's surface. The 
+field due to the true/real wire at the earth's surface is
+\[
+\vec{E}_r = -\frac{\lambda}{2\pi h}\uv{z}.
+\]
+That due to the `image' wire is
+\[
+\vec{E}_i = -\frac{\lambda}{2\pi h}\uv{z}
+\]
+so that the net field is
+\[
+\vec{E} = -\frac{\lambda}{\pi h}\uv{z}.
+\]
+
+\item The charges on $A$ and $B$ are induced by those in $C$ and $D$. When $C$ 
+and $D$ are shorted, the charges on them with neutralise each other.
+
+\item Let $\sigma_1$ be the surface density on the upper side and $\sigma_2$ be
+it on the lower side of the plate. The compensating densities of opposite side 
+are induced on the outer plates. We first have
+\[
+\sigma_1 + \sigma_2 = 10.
+\]
+The potential difference between the central plate and the upper plate will be
+\[
+V_u = 5E_u = 5\sigma_1
+\]
+while that between the central and the lower plate will be $V_d = 8\sigma_2$.
+Since the upper and the lower plates are connected by a conducting wire, they
+are at the same potential. Therefore, $5\sigma_1 = 8\sigma_2$. Using this in
+$\sigma_1 + \sigma_2 = 10$ gives, $\sigma_2 = 50/13$ and $\sigma_1 = 80/13$
+esu per square cm.
+\end{enumerate}
+\end{document}

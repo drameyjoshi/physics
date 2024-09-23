@@ -1,0 +1,107 @@
+\chapter{The propagation of light}\label{c7}
+\begin{enumerate}
+\item A plane wave is the one for which the fields are a function only of $t - x/c$
+is they are propagating along the $x$ axis. Its direction of propagation and amplitude
+are the same everywhere.
+
+\item Oftentimes, one can treat arbitrary waves as plane waves in a small enough
+region of space. This is possible only if the amplitude and direction remain 
+practically the same over a single wavelength. It this is indeed true then one 
+can introduce the idea of a \emph{wave surface} or a \emph{wave front}. It is an
+imaginary surface at all points of which the wave has a constant phase. Wave fronts
+of plane waves are indeed planes.
+
+In a tiny region of space a wave propagates along the normal to the wave front.
+The normals of consecutive wave fronts create a \emph{ray}. Alternatively, a ray
+is a curve whose tangent at every point coincides with the normal to the wave
+front.
+
+\item When the dimensions of the region of interest are large compared to the
+wavelength, we can study the propagation of waves by paying attention only to
+the rays. This is the domain of \emph{geometrical optics}. It is an approximation
+in which we ignore the wave properties and consider only rays. Geometrical optics
+works best for waves whose wavelengths are very small.
+
+\item If $f$ is any quantity describing the wave then for a plane monochromatic 
+wave,
+\begin{equation}\label{c7e1}
+f = a\exp(-i(k_\mu x^\mu + \alpha)),
+\end{equation}
+where $\alpha$ is the constant phase of the wave. The 4-vector $k^\mu$ is defined
+by equation \eqref{c6e54}. Strictly speaking, we should have written \eqref{c7e1}
+as
+\[
+f = a\re{\exp(-i(k_\mu x^\mu + \alpha))},
+\]
+but we will now assume that every equation with complex exponentials is 
+interpreted by ignoring its imaginary part.
+
+If 
+\begin{equation}\label{c7e2}
+\Psi = -k_\mu x^\mu + \alpha
+\end{equation}
+then $f = a\exp(i\Psi)$. It is called the \emph{eikonal}.
+
+\item If we are dealing with waves whose wave fronts are not planes then their
+amplitude is a function of $x^\mu$ and the expression for $\Psi$ is not as 
+simple as in \eqref{c7e2}.
+
+\item Whatever be the form of $\Psi$, the approximation of geometrical optics
+is applicable only if $\Psi$ is practically constant over a single wave-length, or
+\begin{equation}\label{c7e3}
+\frac{\lambda}{\Psi} \rightarrow 0.
+\end{equation} 
+In regions whose extent is of the order of magnitude of $\lambda$, one can write
+the eikonal as 
+\begin{equation}\label{c7e4}
+\Psi = \Psi(0) + x^\mu\pdt{\Psi}{x^\mu}.
+\end{equation}
+Comparing with \eqref{c7e5}, we see that
+\begin{equation}\label{c7e5}
+k_\mu = -\pdt{\Psi}{x^\mu}.
+\end{equation}
+From \eqref{c6e57}, $k_\mu k^\mu = 0$ so that we also have
+\begin{equation}\label{c7e6}
+\pdt{\Psi}{x^\mu}\pdt{\Psi}{x_\mu} = 0.
+\end{equation}
+Equation \eqref{c7e6} is called the \emph{eikonal equation}.
+
+\item Since $f = a\exp(i\Psi)$ satisfies the wave equation, 
+\[
+\frac{\partial^2 f}{\partial x_\mu \partial x^\mu} = 0.
+\]
+Now,
+\[
+\pdt{f}{x_\mu} = \pdt{a}{x_\mu}\exp(i\Psi) + ia\exp(i\Psi)\pdt{\Psi}{x^\mu} =
+\pdt{a}{x_\mu}\exp(i\Psi) + if\pdt{\Psi}{x_\mu}
+\]
+so that
+\begin{eqnarray*}
+\frac{\partial^2 f}{\partial x_\mu \partial x^\mu} &=& 
+    \frac{\partial^2 a}{\partial x_\mu \partial x^\mu}e^{i\Psi} + 
+    i\pdt{a}{x_\mu}\exp(i\Psi)\pdt{\Psi}{x^\mu} + i\pdt{f}{x^\mu}\pdt{\Psi}{x^\mu} + \\
+ & & if\frac{\partial^2 \Psi}{\partial x_\mu \partial x^\mu} \\
+ &=& \frac{\partial^2 a}{\partial x_\mu \partial x^\mu}e^{i\Psi} + 
+    2i\pdt{a}{x_\mu}\exp(i\Psi)\pdt{\Psi}{x^\mu} -f\pdt{\Psi}{x^\mu}\pdt{\Psi}{x_\mu} + \\
+ & &  if\frac{\partial^2 \Psi}{\partial x_\mu \partial x^\mu}
+\end{eqnarray*}
+The real and imaginary parts of this quantity should vanish independently. 
+Therefore,
+\begin{eqnarray}
+\frac{1}{a}\frac{\partial^2 a}{\partial x_\mu \partial x^\mu} &=& 
+  \pdt{\Psi}{x^\mu}\pdt{\Psi}{x_\mu} \label{c7e7} \\
+\frac{2}{a}\pdt{a}{x_\mu}\exp(i\Psi)\pdt{\Psi}{x^\mu} &=& 
+\frac{\partial^2 \Psi}{\partial x_\mu \partial x^\mu} \label{c7e8} 
+\end{eqnarray}
+In the domain of geometrical optics we also assume that the second derivative of
+$a$ with respect to $x^\mu$ can be ignored so that the first of the previous pair
+of equations gives the eikonal equation.
+
+The book mentions that largeness of $\Psi$ leads one to that conclusion but I 
+unable to see it that way.
+
+Alternatively, since a small patch of an arbitrary wave front can be considered
+to be a plane, and since for a plane wave $a$ is constant, the eikonal equation
+follows immediately from \eqref{c7e7}.
+
+\end{enumerate}

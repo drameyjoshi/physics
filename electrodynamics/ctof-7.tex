@@ -104,4 +104,78 @@ Alternatively, since a small patch of an arbitrary wave front can be considered
 to be a plane, and since for a plane wave $a$ is constant, the eikonal equation
 follows immediately from \eqref{c7e7}.
 
+\item We can expand the eikonal equation \eqref{c7e6} as
+\[
+\frac{1}{c^2}\left(\pdt{f}{t}\right)^2 - \left(\pdt{f}{x}\right)^2 - 
+\left(\pdt{f}{y}\right)^2 - \left(\pdt{f}{z}\right)^2 = 0
+\]
+and compare it with the Hamilton-Jacobi equation \eqref{c2e35}
+\[
+\frac{1}{c^2}\left(\pdt{S}{t}\right)^2 - \left(\pdt{S}{x}\right)^2 
+- \left(\pdt{S}{y}\right)^2 - \left(\pdt{S}{z}\right)^2 = m^2c^2
+\]
+to suspect an analogy between the action $S$ of point particle with the eikonal
+$f$ of a ray and the ray itself being a massless point particle. We also recall
+that the action is related to the Hamiltonian and the momemtum as (refer to
+\eqref{c2e27}),
+\begin{eqnarray}
+\mathcal{H} &=& -\pdt{S}{t} \label{c7e9} \\
+\vec{p} &=& \pdt{S}{\vec{r}} \label{c7e10}
+\end{eqnarray}
+If we expand \eqref{c7e4} and \eqref{c7e2} we get
+\begin{eqnarray*}
+\Psi &=& \Psi(0) + t\pdt{\Psi}{t} - \vec{r}\cdot\pdt{\Psi}{\vec{r}} \\
+\Psi &=& \alpha - \omega t + \vec{r}\cdot\vec{k}
+\end{eqnarray*}
+Comparing the rhs of previous two equations we get
+\begin{eqnarray}
+\omega &=& -\pdt{\Psi}{t} \label{c7e11} \\
+\vec{k} &=& \pdt{\Psi}{\vec{r}} \label{c7e12}
+\end{eqnarray}
+Comparing the pair of equations \eqref{c7e9} and \eqref{c7e10} with the pair
+\eqref{c7e11} and \eqref{c7e12} we extend the analogy $\Psi \leftrightarrow S$
+to $\omega \leftrightarrow \mathcal{H}$ and $\vec{k} \leftrightarrow \vec{p}$.
+It was left to the development of quantum mechanics to transform this analogy
+into fundamental equations of physics.
+
+\item Hamilton equations for the particles are
+\begin{eqnarray*}
+\dot{\vec{p}} &=& -\pdt{\mathcal{H}}{\vec{r}} \\
+\dot{\vec{r}} &=& +\pdt{\mathcal{H}}{\vec{p}}.
+\end{eqnarray*}
+Their analogues to geometrical optics are
+\begin{eqnarray}
+\dot{\vec{k}} &=& -\pdt{\omega}{\vec{r}} \label{c7e13} \\
+\dot{\vec{r}} &=& +\pdt{\omega}{\vec{k}} \label{c7e14}
+\end{eqnarray}
+In vacuum, $\omega = ck$ so that the first equation gives $\dot{\vec{k}} = 0$ 
+while the second one gives $\vec{v} = \dot{\vec{r}} = c\un$, $\un$ being a unit
+vector in the direction of propagation of the ray. Neither of these results are 
+surprising but the analogy is quite effective when extended to propagation of light
+in material media.
+
+\item From the analogy $\omega \leftrightarrow \mathcal{H}$ and $\vec{k} 
+\leftrightarrow \vec{p}$, we can write the Lagrangian for a ray as
+\[
+\mathcal{L} = \vec{k}\cdot\pdt{\omega}{\vec{k}} - \omega.
+\]
+However, $\omega = ck$ gives $\mathcal{L} = 0$ identically. Therefore, we cannot
+extend the principle of least action for particles in the form
+\[
+\delta\int Ldt = 0
+\]
+to geometrical optics. However, when the energy of a particle is constant the
+principle of least action is equivalent to Maupertuis principle
+\[
+\delta\int\vec{p}d\vec{q} = 0.
+\]
+The analogue of Maupertuis principle to geometrical optics is
+\begin{equation}\label{c7e15}
+\delta\int\vec{k}\cdot d\vec{l} = 0.
+\end{equation}
+In vacuum, $\omega\un = c\vec{k}$ so that the equation simplifies to
+\begin{equation}\label{c7e16}
+\delta\int dl = 0,
+\end{equation}
+which is Euler's principle of least time.
 \end{enumerate}

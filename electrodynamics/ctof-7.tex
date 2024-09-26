@@ -178,4 +178,42 @@ In vacuum, $\omega\un = c\vec{k}$ so that the equation simplifies to
 \delta\int dl = 0,
 \end{equation}
 which is Euler's principle of least time.
+
+\item Geometrical optics deals only with rays. It considers the propagation of a
+bundle or a pencil of rays. The rays determine the direction of propagation and 
+give no information about the intensity. If rays start from a certain region then
+after a certain duration $\delta t$ the points $c\delta t$ away from the starting
+region define a surface called the wave-front. An infinitesimal portion of the
+wave-front has two principal radii of curvatures, say $R_1$ and $R_2$. In general,
+they are not the same. Therefore, the points on two principle circles of curvature
+appear to emerge from different points. This is the cause of the aberration of
+astigmatism.
+
+The area of the wave-front is proportional to $R_1R_2$ while the intensity is
+inversely proportional to it. Thus,
+\begin{equation}\label{c7e17}
+I \propto \frac{1}{R_1R_2}.
+\end{equation}
+
+Note that this formula, in particular the two radii of curvature, describe only 
+the chosen infinitesimal surface. Therefore \eqref{c7e17} is not applicable to
+areas illuminated by a different pencil of rays.
+
+The intensity of light is proportional to the squared modulus of the field.
+Therefore, the field itself is given by
+\begin{equation}\label{c7e18}
+f \propto \frac{1}{\sqrt{R_1R_2}} e^{ikR},
+\end{equation}
+where $R$ is any one of $R_1$ or $R_2$. Since $R_1$ and $R_2$ are fixed, the only
+difference between the formulae using them is the constant phase $\exp(ik(R_1-R_2))$,
+which can be readily absorbed in the constant of proportionality.
+
+In the special case of the two radii of curvature being the same, the wavefront
+is a sector of a sphere and two centres of curvature coincide. 
+
+$I$ blows up with either $R_1$ or $R_2$ vanish. Therefore the centres of curvature
+are points of infinite intensity. The locus of all centres of curvatures define a
+caustic surface. Refer to \href{https://physics.stackexchange.com/a/256561/10236}
+{a StackExchange answer} for an excellent explanation of the how caustics are 
+formed and the rays are tangential to it.
 \end{enumerate}

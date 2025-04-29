@@ -958,4 +958,54 @@ $L/\gamma$ in each direction so that the total time is
 \]
 where $\delta t = 2L/c$ is the time measured in the frame in which the clock
 is at rest. This equation is once again the same as \eqref{c1e29}.
+
+\item Superliminal motion \cite{pg}
+\item[Solution] Consider an observer at $O$ watching a body travelling from
+point $B$ to point $C$ with velocity $\vec{v}$. 
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\coordinate [label=left:{$O$}] (O) at (0, 0);
+\coordinate [label=left:{$A$}] (A) at (0, 4);
+\coordinate [label=left:{$B$}] (B) at (0, 5);
+\coordinate [label=right:{$C$}] (C) at (1, 4);
+
+\draw (O)--(B)--(C)--cycle;
+\draw (A)--(C);
+
+\tkzLabelAngle(C,O,A){$\phi$};
+\tkzLabelAngle[pos=0.4](A,B,C){$\theta$};
+\end{tikzpicture}
+\caption{Apparent speed of a moving object.}
+\end{figure}
+
+Let the body emit a signal at time $t_1$ when it is at $B$ and another one at
+time $t_2$ when it is at $C$. Let the observer receive these signals at times
+$t_1^\op$ and $t_2^\op$ respectively. If the signal travels at the speed of
+light,
+\begin{eqnarray}
+t_1^\op &=& t_1 + d(O, B)c \label{c1e105} \\
+t_2^\op &=& t_1 + d(O, C)c. \label{c1e106}
+\end{eqnarray}
+If $\delta t = t_2 - t_1$ then the distance $d(B, C) = v\delta t$, where $v$
+is the speed of the emitter. The observer sees the body move from point $A$
+to point $C$, a distance of $v\delta t\sin\theta$ in a time $\delta t^\op =
+t_2^\op - t_1^\op$. Let $d(O, A)=D$. Then $d(O, B) = D + v\cos\theta\delta t$.
+If $\phi$ is very small then $d(O, A) \approx d(O, C)$. Equations \eqref{c1e105}
+and \eqref{c1e106} become
+\begin{eqnarray}
+t_1^\op &=& t_1 + Dc + v\cos\theta\delta t/c \label{c1e107} \\
+t_2^\op &=& t_2 + Dc \label{c1e108}
+\end{eqnarray}
+so that $\delta t^\op = \delta t(1  + vc\cos\theta)$. The speed apparent to
+the observer is 
+\begin{equation}\label{c1e109}
+v_a = \frac{v\sin\theta}{1 + (v/c)\cos\theta}.
+\end{equation}
+$v_a$ will exceed $c$ if
+\[
+v\sin\theta > c + v\cos\theta \Rightarrow v(\sin\theta - \cos\theta) > c
+\Rightarrow \sin\theta - \cos\theta > \frac{c}{v},
+\]
+which can happen if $\pi/2 < \theta < \pi$.
 \end{enumerate}

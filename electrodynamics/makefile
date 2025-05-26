@@ -3,11 +3,11 @@ LATEXMK = latexmk
 RM = rm -f
 
 # Targets
-all: ra.dvi
+all: ctof.pdf
 
 # Rules
-%.dvi: *.tex
-	$(LATEXMK) -dvi -M -MP -MF $*.d $*
+%.pdf: ctof*.tex
+	$(LATEXMK) -pdf -M -MP -MF $*.d $*
 
 mostlyclean:
 	$(LATEXMK) -silent -c
@@ -18,5 +18,5 @@ clean: mostlyclean
 	$(RM) *.run.xml *.synctex.gz
 	$(RM) *.d
 
-.PHONY: all clean doc mostlyclean dvi
+.PHONY: all clean doc mostlyclean pdf
 

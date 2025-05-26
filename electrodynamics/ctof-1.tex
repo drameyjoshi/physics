@@ -668,7 +668,7 @@ $d\vec{f} = d\vec{r} \times d\vec{r}^\op$. An integral of the form
  & & \int A^3(dx_3dx_2^\op - dx_2dx_3^\op).
 \end{eqnarray*}
 The components of $d\vec{f}$ are expressible in terms of an anti-symmetric 
-tensor bsing \eqref{c1e59}, that is
+tensor using \eqref{c1e59}, that is
 \begin{equation}\label{c1e68}
 df_\alpha = \frac{1}{2}\epsilon_{\alpha\beta\gamma}df^{\beta\gamma} = 
 \frac{1}{2}\epsilon_{\alpha\beta\gamma}(dx^\beta d{x^\op}^\gamma - 
@@ -724,8 +724,9 @@ It is a scalar.
 \end{equation}
 We manipulate the right hand side as
 \begin{eqnarray*}
-\int df^{\mu\nu}\pdt{A_{c}}{x^\mu} &=& \frac{1}{2}\left(\int df^{\mu\nu}\pdt{A_{c}}{x^\mu} +
-\int df^{\mu\nu}\pdt{A_{c}}{x^\mu}\right) \\
+\int df^{\mu\nu}\pdt{A_{c}}{x^\mu} &=& 
+ \frac{1}{2}\left(\int df^{\mu\nu}\pdt{A_{c}}{x^\mu} +
+ \int df^{\mu\nu}\pdt{A_{c}}{x^\mu}\right) \\
 &=& \frac{1}{2}\left(\int df^{\mu\nu}\pdt{A_{c}}{x^\mu} + 
     \int df^{c a}\pdt{A_{a}}{x^c}\right) \\
 &=& \frac{1}{2}\left(\int df^{\mu\nu}\pdt{A_{c}}{x^\mu} - 
@@ -737,7 +738,7 @@ where used the anti-symmetric nature of $df^{\mu\nu}$ as it is obvious from
 \int df^{\mu\nu}\pdt{A_{c}}{x^\mu} = 
 \frac{1}{2}\int df^{\mu\nu}\left(\pdt{A_{c}}{x^\mu} - \pdt{A_{a}}{x^c}\right)
 \]
-so that we can as well write \eqref{c1e74} as
+so that we can as well write \eqref{c1e75} as
 \begin{equation}\label{c1e76}
 \oint A_\mu dx^\mu = \frac{1}{2}\int df^{\mu\nu}
 \left(\pdt{A_{c}}{x^\mu} - \pdt{A_{a}}{x^c}\right)
@@ -751,33 +752,34 @@ type
 \end{equation}
 \end{enumerate}
 
-\item The 4-velocity of a particle is
-\begin{equation}\label{c1e78}b^\mu = \td{x^\mu}{s},
+\item The 4-velocity of a particle, as defined in \cite{ll2}, is
+\begin{equation}\label{c1e78}
+b^\mu = \td{x^\mu}{s}.
 \end{equation}
-where
-\[
-ds = \sqrt{dt^2 - dx^2 - dy^2 - dz^2} = dt\sqrt{1 - \frac{v^2}{c^2}},
-\]
-and
-\[
-v = \left(\td{x}{t}, \td{y}{t}, \td{z}{t}\right)
-\]
-is the ordinary velocity of the particle. Thus,
+Other books, for example \cite{pg}, define it as 
+\begin{equation}\label{c1e79}
+u^\mu = \td{x^\mu}{\tau},
+\end{equation}
+where $d\tau$ is the proper time differential. In the frame of reference in
+which the particle is at rest, $ds = cd\tau$, making the two definitions 
+differ by a universal constant. If we use the natural units, the two vectors
+have same components. However, $b^\mu$ is always dimensionless while $u^\mu$
+is not. Since, in natural units, $ds = dt/\gamma$, we have
 \begin{eqnarray}
-b^0&=&\frac{dt}{ds} = \gamma \label{c1e79}\\
-b^1&=&\frac{dx}{ds} = \gamma v_x \label{c1e80} \\
-b^2&=&\frac{dy}{ds} = \gamma v_x \label{c1e81} \\
-b^3&=&\frac{dz}{ds} = \gamma v_x. \label{c1e82}
+b^0&=&\frac{dt}{ds} = \gamma \label{c1e80}\\
+b^1&=&\frac{dx}{ds} = \gamma v_x \label{c1e81} \\
+b^2&=&\frac{dy}{ds} = \gamma v_y \label{c1e82} \\
+b^3&=&\frac{dz}{ds} = \gamma v_z. \label{c1e83}
 \end{eqnarray}
-We can as well write
-\begin{equation}\label{c1e83}
-b^\mu = \gamma(1, \vec{v}) 
-\end{equation}
-It is interesting to note that the 4-velocity is a dimensionless quantity. It
-is clearer when we explicitly write $c$ in \eqref{c1e83} to get $b^\mu = \gamma(
-1, \vec{v}{c})$. Furthermore,
+We can as well write $b^\mu = \gamma(1, \vec{v})$. 4-velocity defined as 
+$b^\mu = dx^\mu/d\tau$ is a covariant quantity (not a covariant vector!) 
+because $dx^\mu$ is so and $d\tau$ is invariant. We need physically significant 
+quantities to be covariant. ($dt$, on the other hand is not covariant. It is 
+not even a scalar.)
+
+Frthermore,
 \begin{equation}\label{c1e84}
-b^\mu u_\mu = \td{x^\mu}{s}\td{x_\mu}{s} = \frac{dx^\mu dx_\mu}{ds^2} = 1,
+b^\mu b_\mu = \td{x^\mu}{s}\td{x_\mu}{s} = \frac{dx^\mu dx_\mu}{ds^2} = 1,
 \end{equation}
 because by definition $ds^2 = dx^\mu dx_\mu$. The magnitude of $u^\mu$ is always
 unity. We also define the 4-acceleration as
@@ -786,7 +788,8 @@ w^\mu = \td{u^\mu}{s}
 \end{equation}
 Differentiating \eqref{c1e84} with respect to $s$ we get
 \begin{equation}\label{c1e86}
-w^\mu u_\mu + u^\mu w_\mu = 0 \Rightarrow w^\mu u_\mu + u_\mu w^\mu = 0 \Rightarrow w^\mu u_\mu = 0.
+w^\mu u_\mu + u^\mu w_\mu = 0 \Rightarrow w^\mu u_\mu + u_\mu w^\mu = 0 
+\Rightarrow w^\mu u_\mu = 0.
 \end{equation}
 Thus, the 4-acceleration is always perpendicular to the 4-velocity.
 \end{enumerate}

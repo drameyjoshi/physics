@@ -9,6 +9,9 @@ all: ctof.pdf
 %.pdf: ctof*.tex
 	$(LATEXMK) -pdf -M -MP -MF $*.d $*
 
+%.bbl: ctof.bib
+	bibtex $*
+
 mostlyclean:
 	$(LATEXMK) -silent -c
 	$(RM) *.bbl

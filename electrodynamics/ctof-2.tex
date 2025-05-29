@@ -21,9 +21,9 @@ $S$ whose value is an extremum for a path followed by the system in the
 configuration space. It is a minimum over an infinitesimal length of the path.
 
 \item If we have to extend this idea to relativistic mechanics then the integral
-must be invariant under Lorentz transformation. Therefore, it must be a true scalar.
-One example of such an integral is given by \eqref{c2e2}. We can mildly generalise
-it to
+must be invariant under Lorentz transformation. Therefore, it must be a true 
+scalar. One example of such an integral is given by \eqref{c2e2}. We can mildly 
+generalise it to
 \begin{equation}\label{c2e3}
 S = -\alpha \int_A^B ds,
 \end{equation}
@@ -45,9 +45,9 @@ v^i = \td{x^i}{t}
 \]
 is the 3-velocity of the particle. Can we guess $\alpha$?
 
-\item As $v/c \rightarrow 0$, $L$ of \eqref{c2e5} should go over to the classical
-Lagrangian for a free particle, which is just $mv^2/2$. For small $v/c$, we can
-write \eqref{c2e5} as
+\item As $v/c \rightarrow 0$, $L$ of \eqref{c2e5} should go over to the 
+classical Lagrangian for a free particle, which is just $mv^2/2$. For small 
+$v/c$, we can write \eqref{c2e5} as
 \[
 L = -\alpha c\left(1 - \frac{1}{2}\frac{v^2}{c^2}\right) = 
 -\alpha c + \frac{\alpha}{2}\frac{v^2}{c}.
@@ -64,9 +64,14 @@ L = -mc^2\sqrt{1 - \frac{v^2}{c^2}}.
 
 \item The generalised momentum corresponding to this Lagrangian is
 \begin{equation}\label{c2e8}
-p^i = \pdt{L}{v^i} = (-mc^2)\frac{1}{2}\left(1 - \frac{v^2}{c^2}\right)^{-1/2}\frac{-2v^i}{c^2}
-= \frac{mv^i}{\sqrt{1 - v^2/c^2}}.
+p_i = \pdt{L}{v^i} = (-mc^2)\frac{1}{2}\left(1 - \frac{v^2}{c^2}\right)^{-1/2}
+\frac{-2v_i}{c^2} = \frac{mv_i}{\sqrt{1 - v^2/c^2}}.
 \end{equation}
+Note that $v^2 = v_iv^i = \eta_{ij}v^jv^i$ so that
+\[
+\frac{\partial}{\partial v^i}v^2 = \eta_{ij}(\delta_{ij}v^i + v^j) = \eta_{ij}
+(v^j + v^j) = 2v_i.
+\]
 If
 \begin{eqnarray}
 \vec\beta &=& \frac{\vec{v}}{c} \\ \label{c2e9}

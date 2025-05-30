@@ -7,22 +7,22 @@ other via fields.
 special theory of relativity that the changes in the state of a system are
 progagated at a finite speed not exceeding $c$, the speed of light in vacuum.
 
-\item This restriction rejects the hypothesis of an ideal rigid body in relativity.
-For suppose a force is applied to one end of a rigid body. Then in order that the
-inter-particle distance is unchanged, the force has to be propagated instantaneously
-to the other end. Therefore, in elementary analysis of the theory of relativity
-all particles are assumed to be points.
+\item This restriction rejects the hypothesis of an ideal rigid body in 
+relativity. For suppose a force is applied to one end of a rigid body. Then in 
+order that the inter-particle distance is unchanged, the force has to be 
+propagated instantaneously to the other end. Therefore, in elementary analysis 
+of the theory of relativity all particles are assumed to be points.
 
-\item The principle of action for a free particle is given by equation \eqref{c2e4}
-and \eqref{c2e7},
+\item The principle of action for a free particle is given by equation 
+\eqref{c2e4} and \eqref{c2e7},
 \begin{equation}\label{c3e1}
 S = -\int_{A}^{B}mcds,
 \end{equation}
 where $A$ and $B$ are world points.
 For a particle in an electromagnetic field, the right hand side of this equation
 should be augmented with another terms that represents the interaction of the
-particle with the field. It should comprise of quantities describing the particle
-as well as the field.
+particle with the field. It should comprise of quantities describing the 
+particle as well as the field.
 
 The particle's interaction with the field is described by a single quantity, its
 charge $e$ and the field by its 4-potential $A_\mu$. The complete action is
@@ -67,7 +67,7 @@ or that
 \begin{equation}\label{c3e8}
 \mathcal{H} = mc^2\gamma + e\varphi.
 \end{equation}
-Stricly speaking \eqref{c3e8} is not the correct form of the Hamiltonian because 
+Stricly speaking \eqref{c3e8} is not the correct form of the Hamiltonian because
 it is expressed in terms of the generalised velocity. To remedy this defect, we 
 write
 \eqref{c3e8} as
@@ -89,7 +89,8 @@ or that
 \]
 From \eqref{c3e7} the last term on the rhs can be written as
 \begin{equation}\label{c3e10}
-\frac{(\mathcal{H} - e\varphi)^2}{c^2} = m^2c^2 + \left(p^i - \frac{e}{c}A^i\right)
+\frac{(\mathcal{H} - e\varphi)^2}{c^2} = m^2c^2 + 
+\left(p^i - \frac{e}{c}A^i\right)
 \left(p_i - \frac{e}{c}A_i\right)
 \end{equation}
 Thus,
@@ -97,7 +98,8 @@ Thus,
 \mathcal{H} = e\varphi + \sqrt{m^2c^4 + c^2 
 \left(p^i - \frac{e}{c}A^i\right)\left(p_i - \frac{e}{c}A_i\right)}
 \end{equation}
-is the correct form of the Hamiltonian. For speeds small as compared to $c$,
+is the correct form of the Hamiltonian. For speeds small as compared to the
+speed of light,
 \[
 \sqrt{1 - \beta^2} = 1 - \frac{1}{2}\beta^2
 \]
@@ -105,14 +107,15 @@ so that the Lagrangian of \eqref{c3e6} can be written as
 \begin{equation}\label{c3e12}
 L = \frac{1}{2}mv^2 - e\varphi + \frac{e}{c}\vec{A}\cdot\vec{v},
 \end{equation}
-where we ignored the constant terms $-mc^2$. At non-relativistic speeds, $\gamma$
-can be well-approximated by $1$ so that the generalised momentum is
+where we ignored the constant terms $-mc^2$. At non-relativistic speeds, 
+$\gamma$ can be well-approximated by $1$ so that the generalised momentum is
 \begin{equation}\label{c3e13}
 \vec{p} = m\vec{v} + \frac{e}{c}\vec{A}
 \end{equation}
 and the Hamiltonian is
 \begin{equation}\label{c3e14}
-\mathcal{H} = \frac{1}{2m}\left(\vec{p} - \frac{e}{c}\vec{A}\right)^2 + e\varphi.
+\mathcal{H} = \frac{1}{2m}\left(\vec{p} - \frac{e}{c}\vec{A}\right)^2 + 
+e\varphi.
 \end{equation}
 
 From \eqref{c2e27},
@@ -121,33 +124,37 @@ p^\nu = g^{\mu\nu}p_\mu = -g^{\mu\nu}\pdt{S}{x^\mu}
 \]
 so that
 \[
-p^0 = -\frac{1}{c}\pdt{S}{t}, \vec{p} = \grad S
+p^0 = -\frac{1}{c}\pdt{S}{t},\;\vec{p} = \grad S
 \]
 and hence the Hamilton-Jacobi equation is, from \eqref{c3e10},
 \[
 \frac{1}{c^2}\left(\pdt{S}{t} + e\varphi\right)^2 = m^2c^2 + 
 \left(\grad S - \frac{e}{c}\vec{A}\right)^2
 \]
-where we replaced $\mathcal{H}$ in \eqref{c3e10} with $-(1/c)\partial_t S$ because
-it is the energy of the particle. We can reexpress the relativistic Hamilton-Jacobi
-equation as 
+where we replaced $\mathcal{H}$ in \eqref{c3e10} with $-\partial_t S$ 
+because it is the energy of the particle and $p^0 = \mathcal{E}/c$. We can 
+reexpress the relativistic Hamilton-Jacobi equation as 
 \begin{equation}\label{c3e15}
 \left(\grad S - \frac{e}{c}\vec{A}\right)^2 - 
 \frac{1}{c^2}\left(\pdt{S}{t} + e\varphi\right)^2 + m^2c^2 = 0.
 \end{equation}
 
-\item The Lagrangian of \eqref{c3e12} allows us to derive the equation of motion.
+\item The Lagrangian of \eqref{c3e12} allows us to derive the equation of 
+motion.
 \begin{eqnarray*}
 \grad L &=& -e\grad\varphi + \frac{e}{c}(\vec{A}\cdot\grad\vec{v} + 
- \vec{v}\cdot\grad\vec{A} + \vec{A}\times\curl\vec{v} + \vec{v}\times\curl\vec{A})\\ 
- &=& -e\grad\varphi + \frac{e}{c}(\vec{v}\cdot\grad\vec{A} + \vec{v}\times\curl\vec{A})\\ 
+ \vec{v}\cdot\grad\vec{A} + \vec{A}\times\curl\vec{v} + 
+ \vec{v}\times\curl\vec{A})\\ 
+ &=& -e\grad\varphi + \frac{e}{c}(\vec{v}\cdot\grad\vec{A} + 
+ \vec{v}\times\curl\vec{A})\\ 
 \grad_{\vec{v}}L &=& m\vec{v} + \frac{e}{c}\vec{A}.
 \end{eqnarray*}
-The equation for $\grad L$ simplifies because $\vec{v}$ is independent of $\vec{x}$.
-Therefore, $\grad\vec{v}$ and $\curl\vec{v}$ are both zero.
+The equation for $\grad L$ simplifies because $\vec{v}$ is independent of 
+$\vec{x}$.  Therefore, $\grad\vec{v}$ and $\curl\vec{v}$ are both zero.
 \begin{equation}\label{c3e16}
 \frac{d}{dt}\left(m\vec{v} + \frac{e}{c}\vec{A}\right) = 
--e\grad\varphi + \frac{e}{c}(\vec{v}\cdot\grad\vec{A} + \vec{v}\times\curl\vec{A})
+-e\grad\varphi + \frac{e}{c}(\vec{v}\cdot\grad\vec{A} + 
+\vec{v}\times\curl\vec{A})
 \end{equation}
 is the equation of motion. Now.
 \begin{equation}\label{c3e17}
@@ -177,7 +184,8 @@ relativistic equation takes the same form as the non-relativistic one.
 
 \item Recall that 
 \begin{equation}\label{c3e22}
-p^\mu = mcu^\mu = (mc\gamma, mv^i\gamma) = \left(\frac{\mathcal{E}}{c}, \vec{p}\right)
+p^\mu = mcu^\mu = (mc\gamma, mv^i\gamma) = \left(\frac{\mathcal{E}}{c}, 
+\vec{p}\right)
 \end{equation}
 so that the energy of the particle is
 \begin{equation}\label{c3e23}
@@ -191,8 +199,11 @@ so that
 \end{equation}
 and
 \[
-\td{\vec{p}}{t} = m\gamma\td{\vec{v}}{t} + m\gamma^3\frac{\vec{v}}{c^2}\vec{v}\cdot\td{\vec{v}}{t} = 
-m\gamma^3\left(m\gamma^{-2}\td{\vec{v}}{t} + \frac{\vec{v}}{c^2}\vec{v}\cdot\td{\vec{v}}{t}\right)
+\td{\vec{p}}{t} = 
+m\gamma\td{\vec{v}}{t} + 
+m\gamma^3\frac{\vec{v}}{c^2}\vec{v}\cdot\td{\vec{v}}{t} = 
+m\gamma^3\left(m\gamma^{-2}\td{\vec{v}}{t} + 
+\frac{\vec{v}}{c^2}\vec{v}\cdot\td{\vec{v}}{t}\right)
 \]
 or, since
 \[
@@ -200,15 +211,18 @@ or, since
 \]
 we have,
 \[
-\td{\vec{p}}{t} = m\gamma^3\left(\left(1 - \frac{v^2}{c^2}\right)\td{\vec{v}}{t} + 
+\td{\vec{p}}{t} = m\gamma^3\left(
+\left(1 - \frac{v^2}{c^2}\right)\td{\vec{v}}{t} + 
 \frac{\vec{v}}{c^2}\vec{v}\cdot\td{\vec{v}}{t}\right)
 \]
 Therefore,
 \begin{equation}\label{c3e25}
-\vec{v}\cdot\td{\vec{p}}{t} = m\gamma^3\left(\left(1 - \frac{v^2}{c^2}\right)\vec{v}\cdot\td{\vec{v}}{t}
-+ \frac{v^2}{c^2}\vec{v}\cdot\td{\vec{v}}{t}\right) = m\gamma^3\vec{v}\cdot\td{\vec{v}}{t}
+\vec{v}\cdot\td{\vec{p}}{t} = 
+m\gamma^3\left(\left(1 - \frac{v^2}{c^2}\right)\vec{v}\cdot\td{\vec{v}}{t} + 
+\frac{v^2}{c^2}\vec{v}\cdot\td{\vec{v}}{t}\right) = 
+m\gamma^3\vec{v}\cdot\td{\vec{v}}{t}
 \end{equation}
-From equations \eqref{c3e24} and \eqref{c2e25},
+From equations \eqref{c3e24} and \eqref{c3e25},
 \begin{equation}\label{c3e26}
 \td{\mathcal{E}}{t} = \vec{v}\cdot\td{\vec{p}}{t}.
 \end{equation}
@@ -223,12 +237,16 @@ Here we have used the fact that
 \td{v^2}{t} = \td{(\vec{v}\cdot\vec{v})}{t^2} = 2\vec{v}\cdot\td{\vec{v}}{t}.
 \end{equation}
 
+Equation \eqref{c3e27} suggests that the energy of a system of charged 
+particles changes only because of the electric field. The magnetic field does 
+not change the energy.
+
 \item The equation of motion
 \begin{equation}\label{c3e29}
 \td{\vec{p}}{t} = e\left(\vec{E} + \frac{\vec{v}}{c}\times\vec{H}\right)
 \end{equation}
-is invariant under time reversal if we also reverse the direction of the magnetic
-field.
+is invariant under time reversal if we also reverse the direction of the 
+magnetic field.
 
 \item A 4-potential $A_\mu$ gives a unique combination of electric and magnetic
 fields. But the relationship is many-to-one. This is because, the potential
@@ -242,7 +260,8 @@ results in
 \end{eqnarray}
 and the fields
 \begin{eqnarray}
-\vec{E}^\op &=& -\grad{\varphi^\op} - \frac{1}{c}\pdt{\vec{A}^\op}{t} \nonumber \\
+\vec{E}^\op &=& 
+	-\grad{\varphi^\op} - \frac{1}{c}\pdt{\vec{A}^\op}{t} \nonumber \\
  &=& -\grad\varphi + \frac{1}{c}\grad\pdt{f}{t} - 
       \frac{1}{c}\pdt{\vec{A}}{t} - \frac{1}{c}\grad{\pdt{f}{t}} \nonumber \\
  &=& -\grad\varphi - \frac{1}{c}\pdt{\vec{A}}{t} \nonumber \\
@@ -252,8 +271,8 @@ and the fields
  &=& \vec{H} \label{c3e34}
 \end{eqnarray}
 Equation \eqref{c3e30} is called the gauge transformation and an invariance of
-functions under it is called gauge invariance. All physically meaningful quantities
-must be gauge invariant.
+functions under it is called gauge invariance. All physically meaningful 
+quantities must be gauge invariant.
 
 \item If $A_\mu$ is independent of time then so are the fields. $\varphi$
 influences only the electric field Further, since the Lagrangian is 
@@ -263,9 +282,9 @@ with the Hamiltonian. From
 \begin{equation}\label{c3e35}
 \mathcal{E} (= \mathcal{H}) = mc^2\gamma + e\varphi.
 \end{equation} 
-The effect of the fields is just to add a term $e\varphi$ to the energy. This term
-is called the \emph{potential energy}. It is independent of $\vec{A}$ which means
-that the magnetic field has no influence on the particle's energy.
+The effect of the fields is just to add a term $e\varphi$ to the energy. This 
+term is called the \emph{potential energy}. It is independent of $\vec{A}$ 
+which means that the magnetic field has no influence on the particle's energy.
 
 If the fields are constant then one can easily verify that
 \begin{eqnarray}
@@ -273,8 +292,8 @@ If the fields are constant then one can easily verify that
 \vec{A} &=& \frac{1}{2}\vec{H} \times \vec{x} \label{c3e37}
 \end{eqnarray}
 
-\item We will now consider the motion of a charge particle in a constant electric
-field. From the equation of motion \eqref{c3e29},
+\item We will now consider the motion of a charge particle in a constant 
+electric field. From the equation of motion \eqref{c3e29},
 \begin{equation}\label{c3e38}
 \td{\vec{p}}{t} = e\vec{E}.
 \end{equation}
@@ -283,7 +302,7 @@ If $\vec{E} = E\uv{x}$ then we have
 p_x(t) &=& p_x(0) + eEt \label{c3e39} \\
 p_y(t) &=& p_y(0) \label{c3e40}.
 \end{eqnarray}
-Let us choose the zero of time at an instant when $p_x(0) = 0$ and $p_y(0) = p_0$,
+Let us choose the zero of time at an instant when $p_x(0)=0$ and $p_y(0)=p_0$,
 the initial momentum of the particle. Since $\vec{p} = m\gamma\vec{v}$ and 
 $\mathcal{E} = m\gamma c^2$, we have 
 \begin{equation}\label{c3e41}
@@ -296,8 +315,8 @@ so that
 \end{eqnarray}
 A particle in an electric field gains energy. Therefore, $\mathcal{E}$ is not a
 constant and hence \eqref{c3e42} cannot be integrated as is. However, we know 
-that $\mathcal{E}^2 = m^2c^4 + p^2c^2 = m^2c^4 + p_0^2c^2 + e^2E^2t^2c^2$ so that
-equation \eqref{c3e42} becomes
+that $\mathcal{E}^2 = m^2c^4 + p^2c^2 = m^2c^4 + p_0^2c^2 + e^2E^2t^2c^2$ so 
+that equation \eqref{c3e42} becomes
 \begin{equation}\label{c3e44}
 \dot{x}(t) = \frac{ec^2Et}{\sqrt{m^2c^4 + p_0^2c^2 + c^2e^2E^2t^2}}.
 \end{equation}
@@ -311,7 +330,9 @@ x(t) = \frac{1}{eE}\int\frac{u du}{\sqrt{\mathcal{E}_0^2 + u^2}} + x(0)
 \]
 If $u = \mathcal{E}_0\sinh v$, $du = \mathcal{E}_0\cosh  vdv$ and
 \begin{eqnarray*}
-x(t) &=& \frac{1}{eE}\int\frac{\mathcal{E}_0^2\sinh v\cosh v dv}{\mathcal{E}_0\cosh v} + x(0) \\
+x(t) &=& 
+ \frac{1}{eE}\int\frac{\mathcal{E}_0^2\sinh v\cosh v dv}
+ 	{\mathcal{E}_0\cosh v} + x(0) \\
  &=& \frac{\mathcal{E}_0}{eE}\int\sinh v dv + x(0) \\
  &=& \frac{\mathcal{E}_0}{eE}\cosh v + x(0) \\
  &=& \frac{1}{eE}\sqrt{\mathcal{E}_0^2 + u^2} + x(0)
@@ -350,7 +371,8 @@ x(y) = \frac{\mathcal{E}_0}{eE}\cosh\left(\frac{eEy}{p_0c}\right).
 It describes a catenary symmetric about the $x$-axis. When $eEy \ll p_0c$, we
 can approximate \eqref{c3e47} as
 \begin{equation}\label{c3e48}
-x(y) = \frac{\mathcal{E}_0}{eE}\left(1 + \frac{1}{2}\frac{e^2E^2y^2}{p_0^2c^2}\right),
+x(y) = \frac{\mathcal{E}_0}{eE}
+	\left(1 + \frac{1}{2}\frac{e^2E^2y^2}{p_0^2c^2}\right),
 \end{equation}
 which is an equation of a parabola.
 
@@ -387,10 +409,10 @@ where
 \begin{equation}\label{c3e50}
 \omega = \frac{ecH}{\mathcal{E}},
 \end{equation}
-is called the cyclotron frequency. At low speeds, $\gamma \approx 1$, $\mathcal{E}
-= mc^2$ and the cyclotron frequency is $(eH)/(mc)$. Note that $\omega$ is a 
-constant. We can write solutions to the differential equations of velocity
-components as
+is called the cyclotron frequency. At low speeds, $\gamma \approx 1$, 
+$\mathcal{E} = mc^2$ and the cyclotron frequency is $(eH)/(mc)$. Note that 
+$\omega$ is a constant. We can write solutions to the differential equations 
+of velocity components as
 \begin{eqnarray*}
 v_x(t) &=& A_1\omega\cos\omega t + A_2\omega\sin\omega t \\
 v_y(t) &=& A_3\omega\cos\omega t + A_4\omega\sin\omega t \\
@@ -435,10 +457,10 @@ z(t) &=& z(0) + v_z(0)(t) \label{c3e57}
 \end{eqnarray}
 This is an equation of an helix.
 
-\item Now consider a charged particle in the presence of a constant magnetic field
-$\vec{H} = H\uv{z}$ and a constant electric field $\vec{E} = E_y\uv{y} + E_z\uv{z}$.
-We restrict ourselves to non-relativistic regime so that $\vec{p} = m\vec{v}$ and
-the equation of motion \eqref{c3e29} becomes
+\item Now consider a charged particle in the presence of a constant magnetic 
+field $\vec{H} = H\uv{z}$ and a constant electric field $\vec{E} = E_y\uv{y} + 
+E_z\uv{z}$. We restrict ourselves to non-relativistic regime so that $\vec{p} 
+= m\vec{v}$ and the equation of motion \eqref{c3e29} becomes
 \begin{eqnarray}
 m\dot{v}_x &=& \frac{e}{c}v_yH \label{c3e58} \\
 m\dot{v}_y &=& eE_y - \frac{e}{c}v_xH \label{c3e59} \\
@@ -486,51 +508,62 @@ From these equations, we readily get
 Thus, the motion remains bounded on the $y$ axis but not so on the other axes. 
 Equations \eqref{c3e65} and \eqref{c3e66} can be readily integrated to
 \begin{eqnarray}
-x(t) &=& \frac{v_x(0)}{\omega}\sin\omega t + \frac{e}{m\omega}E_yt + x(0) \label{c3e68} \\
+x(t) &=& 
+	\frac{v_x(0)}{\omega}\sin\omega t + \frac{e}{m\omega}E_yt + x(0) 
+	\label{c3e68} \\
 y(t) &=& \frac{v_y(0)}{\omega}\cos\omega t + y(0) \label{c3e69}
 \end{eqnarray}
-Equations \eqref{c3e61}, \eqref{c3e68} and \eqref{c3e69} are the equations of the
-trajectory.
+Equations \eqref{c3e61}, \eqref{c3e68} and \eqref{c3e69} are the equations of 
+the trajectory.
 
 \item We derived the equations of motion in point (4) from the Lagrangian which
-was obtained after writing the principle of least action as an integral over time.
-We can, instead, apply the variational method to equation \eqref{c3e2}. Thus,
+was obtained after writing the principle of least action as an integral over 
+time. We can, instead, apply the variational method to equation \eqref{c3e2}. 
+Thus,
 \begin{eqnarray*}
 \delta S &=& -\delta\int_A^B\left(mcds + \frac{e}{c}A_\mu dx^\mu\right) \\
  &=& -\int_A^B\left(mc\delta ds + \frac{e}{c}\delta(A_\mu dx^\mu)\right) \\
- &=& -\int_A^B\left(mc\delta\sqrt{dx_\mu dx^\mu} + \frac{e}{c}(\delta(A_\mu) dx^\mu + A_\mu d\delta x^\mu)\right) \\
- &=& -\int_A^B\left(mc\frac{1}{2}\frac{dx_\mu d\delta x^\mu + d(\delta x_\mu)dx^\mu}{ds}
+ &=& -\int_A^B\left(mc\delta\sqrt{dx_\mu dx^\mu} + 
+ 	\frac{e}{c}(\delta(A_\mu) dx^\mu + A_\mu d\delta x^\mu)\right) \\
+ &=& -\int_A^B\left(mc\frac{1}{2}
+ 	\frac{dx_\mu d\delta x^\mu + d(\delta x_\mu)dx^\mu}{ds}
      + \frac{e}{c}(\delta(A_\mu) dx^\mu + A_\mu d\delta x^\mu)\right)
 \end{eqnarray*}
-Now $d(\delta x_\mu)dx^\mu = d(\delta x^\mu)dx_\mu = dx_\mu d(\delta x^\mu)$ so that
+Now $d(\delta x_\mu)dx^\mu = d(\delta x^\mu)dx_\mu = dx_\mu d(\delta x^\mu)$ so 
+that
 \begin{equation}\label{c3e70}
 \delta S = -\int_A^B\left(mc\frac{dx_\mu d(\delta x^\mu)}{ds}
      + \frac{e}{c}(\delta(A_\mu) dx^\mu + A_\mu d\delta x^\mu)\right)
 \end{equation}    
 Using \eqref{c1e78},
 \begin{equation}\label{c3e71}
-\delta S = -\int_A^B\left((mcu_\mu + \frac{e}{c}A_\mu)d\delta x^\mu + \frac{e}{c}\delta(A_\mu) dx^\mu\right).
+\delta S = -\int_A^B\left((mcu_\mu + \frac{e}{c}A_\mu)d\delta x^\mu + 
+\frac{e}{c}\delta(A_\mu) dx^\mu\right).
 \end{equation}
 We can integrate first term by parts,
 \[
-\delta S = -\left(mcu_\mu + \frac{e}{c}A_\mu\right)\delta x^\mu\big|_A^B + 
+\delta S = -\left(mcu_\mu + \frac{e}{c}A_\mu\right)\delta x^\mu\Big|_A^B + 
  \int_A^B \left(\delta x^\mu d\left(mcu_\mu + \frac{e}{c}A_\mu\right) - 
  \frac{e}{c}\delta(A_\mu) dx^\mu\right)
 \]
 Since the variations $\delta x^\mu$ vanish at the end points,
 \[
-\delta S = \int_A^B\left(\delta x^\mu\left(mcdu_\mu + \frac{e}{c}dA_\mu\right) - 
- \frac{e}{c}\delta(A_\mu) dx^\mu\right)
+\delta S = \int_A^B\left(\delta x^\mu\left(mcdu_\mu + \frac{e}{c}dA_\mu\right) 
+- \frac{e}{c}\delta(A_\mu) dx^\mu\right)
 \]
 We now write
 \[
-dA_\mu = \pdt{A_\mu}{x^\nu}dx^\nu;\; \delta A_\mu = \pdt{A_\mu}{x^\nu}\delta x^\nu dx^\mu
+dA_\mu = \pdt{A_\mu}{x^\nu}dx^\nu;\; \delta A_\mu = 
+\pdt{A_\mu}{x^\nu}\delta x^\nu 
 \]
 so that
 \begin{eqnarray*}
-\delta S &=& \int_A^B\left(mcdu_\mu\delta x^\mu + \frac{e}{c}\pdt{A_\mu}{x^\nu}dx^\nu\delta x^\mu
+\delta S &=& 
+	\int_A^B\left(mcdu_\mu\delta x^\mu + 
+	\frac{e}{c}\pdt{A_\mu}{x^\nu}dx^\nu\delta x^\mu
  - \frac{e}{c}\pdt{A_\mu}{x^\nu}\delta x^\nu dx^\mu\right) \\
- &=& \int_A^B\left(mcdu_\mu\delta x^\mu + \frac{e}{c}\pdt{A_\mu}{x^\nu}dx^\nu\delta x^\mu
+ &=& \int_A^B\left(mcdu_\mu\delta x^\mu + 
+ 	\frac{e}{c}\pdt{A_\mu}{x^\nu}dx^\nu\delta x^\mu
  - \frac{e}{c}\pdt{A_\nu}{x^\mu}\delta x^\mu dx^\nu\right) \\
  &=& \int_A^B\left(mcdu_\mu - \frac{e}{c}\left(\pdt{A_\nu}{x^\mu}
  - \pdt{A_\mu}{x^\nu}\right)dx^\nu\right)\delta x^\mu \\
@@ -551,7 +584,8 @@ Since this is true for all $\delta x^\mu = 0$,
 \]
 This integral is always zero, we must have
 \begin{equation}\label{c3e72}
-mc\td{u_\mu}{s} = \frac{e}{c}\left(\pdt{A_\nu}{x^\mu} - \pdt{A_\mu}{x^\nu}\right)u^\nu
+mc\td{u_\mu}{s} = 
+\frac{e}{c}\left(\pdt{A_\nu}{x^\mu} - \pdt{A_\mu}{x^\nu}\right)u^\nu
 \end{equation}
 Define the electromagnetic field tensor
 \begin{equation}\label{c3e73}
@@ -570,10 +604,16 @@ Recall that $dx^\mu = (cdt, dx^1, dx^2, dx^3)$ so that $dx_\mu = (cdt, -dx^1,
 components of $F_{\mu\nu}$ are
 \[
 \begin{bmatrix}
-0 & -c^{-1}\partial_t A_1 - \partial_{x^1}\varphi & -c^{-1}\partial_t A_2 - \partial_{x^2}\varphi & -c^{-1}\partial_t A_3 - \partial_{x^3}\varphi \\
-c^{-1}\partial_t A_1 - \partial_{x^1}\varphi & 0 & -\partial_{x^1}A_2+\partial_{x^2}A^1 & -\partial_{x^1}A_3+\partial_{x^3}A^3\\
-c^{-1}\partial_t A_2 - \partial_{x^2}\varphi & \partial_{x^1}A_2-\partial_{x^2}A_1 & 0 & -\partial_{x^2}A_3+\partial_{x^3}A_2\\
-c^{-1}\partial_t A_3 - \partial_{x^3}\varphi & \partial_{x^1}A_3-\partial_{x^3}A_1 & \partial_{x^3}A_2-\partial_{x^3}A_2 & 0
+0 & -c^{-1}\partial_t A_1 - \partial_{x^1}\varphi & 
+-c^{-1}\partial_t A_2 - \partial_{x^2}\varphi & 
+`-c^{-1}\partial_t A_3 - \partial_{x^3}\varphi \\
+c^{-1}\partial_t A_1 - \partial_{x^1}\varphi & 0 & 
+-\partial_{x^1}A_2+\partial_{x^2}A^1 & -\partial_{x^1}A_3+\partial_{x^3}A^3\\
+c^{-1}\partial_t A_2 - \partial_{x^2}\varphi & 
+\partial_{x^1}A_2-\partial_{x^2}A_1 & 0 & 
+-\partial_{x^2}A_3+\partial_{x^3}A_2\\
+c^{-1}\partial_t A_3 - \partial_{x^3}\varphi & 
+\partial_{x^1}A_3-\partial_{x^3}A_1 & \partial_{x^3}A_2-\partial_{x^3}A_2 & 0
 \end{bmatrix}
 \]
 From equations \eqref{c3e19} and \eqref{c3e20},
@@ -590,8 +630,9 @@ In order to transform this into a contravariant tensor, we use the equation
 \begin{equation}\label{c3e76}
 F^{\mu\nu} = g^{\mu\sigma}F_{\sigma\rho}g^{\rho\nu}.
 \end{equation}
-The factors are written in a manner that mimics the matrix multiplication. The matrix
-representing the metric is $\text{diag}(1, -1, -1, -1)$ so that the result is
+The factors are written in a manner that mimics the matrix multiplication. The 
+matrix representing the metric is $\text{diag}(1, -1, -1, -1)$ so that the 
+result is
 \begin{equation}\label{c3e77}
 F^{\mu\nu} = 
 \begin{bmatrix}
@@ -601,13 +642,15 @@ E_2 & H_3 & 0 & -H_1\\
 E_3 & -H_2 & H_1 & 0
 \end{bmatrix}
 \end{equation}
-Note that $E_i, H_i$ are not space components of a 4-vector. They should be treated
-as scalars. That is $E_i = E^i$ and $H_i = H^i$.
+Note that $E_i, H_i$ are not space components of a 4-vector. They should be 
+treated as scalars. That is $E_i = E^i$ and $H_i = H^i$.
 
 
 \item Let us write \eqref{c3e74} in components form. Since
 \[
-u^\mu = \left(\gamma, -\frac{\gamma}{c}v^1, -\frac{\gamma}{c}v^2, -\frac{\gamma}{c}v^3\right),
+u^\mu = 
+\left(\gamma, -\frac{\gamma}{c}v^1, -\frac{\gamma}{c}v^2, 
+-\frac{\gamma}{c}v^3\right),
 \]
 we have
 \[
@@ -616,14 +659,19 @@ c\td{u^\mu}{s} = \left(c\td{\gamma}{s}, -\td{(\gamma v^1)}{s},
 \]
 and
 \[
-u_\mu = \left(\gamma, \frac{\gamma}{c}v_1, \frac{\gamma}{c}v_2, \frac{\gamma}{c}v_3\right),
+u_\mu = \left(\gamma, \frac{\gamma}{c}v_1, \frac{\gamma}{c}v_2, 
+\frac{\gamma}{c}v_3\right),
 \]
 and hence
 \begin{eqnarray*}
-mc\td{\gamma}{s} &=& \frac{e}{c}(F^{00}\gamma - F^{01}\gamma \beta_1 - F^{02}\gamma \beta_2 -F^{03}\gamma \beta_3) \\
--m\frac{d}{ds}(\gamma v^1)&=&\frac{e}{c}(F^{10}\gamma + F^{11}\gamma \beta_1 + F^{12}\gamma \beta_2 + F^{13}\gamma \beta_3) \\
--m\frac{d}{ds}(\gamma v^2)&=&\frac{e}{c}(F^{20}\gamma + F^{21}\gamma \beta_1 + F^{22}\gamma \beta_2 + F^{23}\gamma \beta_3) \\
--m\frac{d}{ds}(\gamma v^3)&=&\frac{e}{c}(F^{30}\gamma + F^{31}\gamma \beta_1 + F^{32}\gamma \beta_2 + F^{33}\gamma \beta_3) 
+mc\td{\gamma}{s} &=& \frac{e}{c}(F^{00}\gamma - F^{01}\gamma \beta_1 - 
+F^{02}\gamma \beta_2 -F^{03}\gamma \beta_3) \\
+-m\frac{d}{ds}(\gamma v^1)&=&\frac{e}{c}(F^{10}\gamma + F^{11}\gamma \beta_1 +
+F^{12}\gamma \beta_2 + F^{13}\gamma \beta_3) \\
+-m\frac{d}{ds}(\gamma v^2)&=&\frac{e}{c}(F^{20}\gamma + F^{21}\gamma \beta_1 + 
+F^{22}\gamma \beta_2 + F^{23}\gamma \beta_3) \\
+-m\frac{d}{ds}(\gamma v^3)&=&\frac{e}{c}(F^{30}\gamma + F^{31}\gamma \beta_1 + 
+F^{32}\gamma \beta_2 + F^{33}\gamma \beta_3) 
 \end{eqnarray*}
 Since $v^i = -v_i$ and $ds = cdt/\gamma$,
 \begin{eqnarray*}
@@ -634,11 +682,13 @@ m\frac{d}{dt}(\gamma v_3) &=& e(E_3 + H_2 \beta_1 - H_1 \beta_2).
 \end{eqnarray*}
 The last three equations can be written in vector form as
 \[
-\frac{d}{dt}(m\gamma\vec{v}) = \td{\vec{p}}{t} = e(\vec{E} + \bm{\beta} \times \vec{H})
+\frac{d}{dt}(m\gamma\vec{v}) = \td{\vec{p}}{t} = 
+e(\vec{E} + \vec{\beta} \times \vec{H})
 \]
 which is indeed the same as \eqref{c3e29}. The first equation can be written as
 \[
-mc^2\td{\gamma}{t} = \frac{d}{dt}(mc^2\gamma) = \td{\mathcal{E}}{t} = e\vec{E}\cdot\vec{v}
+mc^2\td{\gamma}{t} = \frac{d}{dt}(mc^2\gamma) = 
+\td{\mathcal{E}}{t} = e\vec{E}\cdot\vec{v}
 \]
 This is the ``relativistic'' form of the work-energy theorem of \eqref{c3e27}.
 
@@ -647,27 +697,29 @@ This is the ``relativistic'' form of the work-energy theorem of \eqref{c3e27}.
 mcu_\mu\td{u^\mu}{s} = \frac{e}{c}u_\mu F^{\mu\nu}u_\nu.
 \]
 The left hand side is zero because of \eqref{c1e86} while the right hand side 
-vanishes because of anti-symmetry of the electromagnetic field tensor. This means
-that the four equations of motion in the previous point are not independent.
+vanishes because of anti-symmetry of the electromagnetic field tensor. This 
+means that the four equations of motion in the previous point are not 
+independent.
 
 \item We go back to equation \eqref{c3e71}
 \[
-\delta S = -\int_A^B\left((mcu_\mu + \frac{e}{c}A_\mu)d\delta x^\mu + \frac{e}{c}\delta(A_\mu) dx^\mu\right).
+\delta S = -\int_A^B\left((mcu_\mu + \frac{e}{c}A_\mu)d\delta x^\mu + 
+\frac{e}{c}\delta(A_\mu) dx^\mu\right).
 \]
 and its immediate consequence,
 \begin{eqnarray*}
-\delta S &=& -\left(mcu_\mu + \frac{e}{c}A_\mu\right)\delta x^\mu\big|_A^B + \\
+\delta S &=& -\left(mcu_\mu + \frac{e}{c}A_\mu\right)\delta x^\mu\Big|_A^B + \\
   & & \int_A^B \left(\delta x^\mu d\left(mcu_\mu + \frac{e}{c}A_\mu\right) - 
  \frac{e}{c}\delta(A_\mu) dx^\mu\right)
 \end{eqnarray*}
-The first term is a difference of a quantity at two fixed points while the second
-one is a variation over all paths between those points. Since the variations 
-vanish at the fixed points the first term is zero while the second term, after some
-manipulations, gives the equations of motion.
+The first term is a difference of a quantity at two fixed points while the 
+second one is a variation over all paths between those points. Since the 
+variations vanish at the fixed points the first term is zero while the second 
+term, after some manipulations, gives the equations of motion.
 
-If we consider only the actual paths starting from the world-point $A$ and let $H$
-be any other point on it, then the second term will necessarily be zero while the 
-first one will not be zero. The equation then gives,
+If we consider only the actual paths starting from the world-point $A$ and let 
+$H$ be any other point on it, then the second term will necessarily be zero 
+while the first one will not be zero. The equation then gives,
 \[
 \frac{\delta S}{\delta x^\mu} = -\left(mcu_\mu + \frac{e}{c}A_\mu\right).
 \]
@@ -685,7 +737,8 @@ This agrees with \eqref{c3e7}.
 gives
 \begin{equation}\label{c3e80}
 \varphi = \gamma(\bar{\varphi} + \beta\bar{A}_1);
-\; A_1 = \gamma(\bar{A}_1 + \beta\bar{\varphi}); A_2 = \bar{A}_2;\; A_3 = \bar{A}_3.
+\; A_1 = \gamma(\bar{A}_1 + \beta\bar{\varphi}); A_2 = \bar{A}_2;\; 
+A_3 = \bar{A}_3.
 \end{equation}
 Using the solution to problem 2 in chapter \ref{c1}, we have $F^{01} = 
 \bar{F}^{01}$ (from \eqref{c1e98}) so that 
@@ -749,15 +802,16 @@ H_1 &=& \bar{H}_1 \\ \label{c3e90}
 H_2 &=& \bar{H}_2 - \beta\bar{E}_3 \\ \label{c3e92}
 H_3 &=& \bar{H}_3 + \beta\bar{E}_2 \label{c3e93}
 \end{eqnarray}
-Since $\beta = v/c$ or really $v_1/c$, we can write these equations in vector form as
+Since $\beta = v/c$ or really $v_1/c$, we can write these equations in vector 
+form as
 \begin{eqnarray}
 \vec{E} = \vec{E}^\op + \frac{1}{c}\vec{H}^\op \times \vec{v} \label{c3e94} \\
 \vec{H} = \vec{H}^\op - \frac{1}{c}\vec{E}^\op \times \vec{v}, \label{c3e95}
 \end{eqnarray}
 where $\vec{E}^\op = (\bar{E}_1, \bar{E}_2, \bar{E}_3)$ and $\vec{H}^\op = 
-(\bar{H}_1, \bar{H}_2, \bar{H}_3)$, These equations tell that even if $\vec{H}^\op
-= 0$ ($\vec{E}^\op = 0$), $\vec{H}$ ($\vec{E}$) is not. Further, it is clear that
-$\vec{E}$ is perpendicular to $\vec{H}$ in both cases.
+(\bar{H}_1, \bar{H}_2, \bar{H}_3)$, These equations tell that even if 
+$\vec{H}^\op = 0$ ($\vec{E}^\op = 0$), $\vec{H}$ ($\vec{E}$) is not. Further, 
+it is clear that $\vec{E}$ is perpendicular to $\vec{H}$ in both cases.
 
 \item Suppose $\vec{E}^\op$ and $\vec{H}^\op$ are perpendicular to each other.
 If $\vec{v} = c\vec{H}^\op/E^\op$ then, from \eqref{c3e93} and \eqref{c3e94},
@@ -765,8 +819,8 @@ If $\vec{v} = c\vec{H}^\op/E^\op$ then, from \eqref{c3e93} and \eqref{c3e94},
 \vec{E} &=& \vec{E}^\op \label{c3e96} \\
 \vec{H} &=& 0 \label{c3e97}
 \end{eqnarray}
-Similarly, if we choose $\vec{v} = c\vec{E}^\op/H^\op$, we will get $\vec{E} = 0$
-and $\vec{H} = \vec{H}^\op$. Thus, if $\vec{E}^\op$ and $\vec{H}^\op$ are 
+Similarly, if we choose $\vec{v} = c\vec{E}^\op/H^\op$, we will get $\vec{E} = 
+0$ and $\vec{H} = \vec{H}^\op$. Thus, if $\vec{E}^\op$ and $\vec{H}^\op$ are 
 perpendicular to each other then one can find a frame of reference in which one
 of the fields is zero.
 
@@ -784,7 +838,8 @@ H^2 - E^2
 is an invariant. To find the next invariant, we
 need the product
 \begin{eqnarray*}
-\epsilon^{\mu\rho\nu\sigma}F^{\mu\rho}F^{\nu\sigma} &=& F^{01}F^{23} - F^{01}F^{32} - F^{02}F^{13} + F^{02}F^{31} \\
+\epsilon^{\mu\rho\nu\sigma}F^{\mu\rho}F^{\nu\sigma} &=& 
+	 F^{01}F^{23} - F^{01}F^{32} - F^{02}F^{13} + F^{02}F^{31} \\
  & & F^{03}F^{12} - F^{03}F^{21} - F^{10}F^{23} + F^{10}F^{32} \\
  & & F^{12}F^{03} - F^{12}F^{30} - F^{13}F^{02} + F^{13}F^{20} \\
  & & F^{20}F^{13} - F^{20}F^{31} - F^{21}F^{03} + F^{21}F^{30} \\
@@ -803,7 +858,7 @@ Thus, \begin{equation}\label{c3e99}
 \end{equation}
 is another invariant.
 
-From the invariants of \eqref{c3e97} and \eqref{c3e98} we have
+From the invariants of \eqref{c3e98} and \eqref{c3e99} we have
 \begin{enumerate}
 \item If the electric and magnetic fields are
 perpendicular to each other in one frame of reference then they are so in all 
@@ -812,25 +867,26 @@ other inertial frames of reference.
 \item If $E > H$ ($E < H$) in one frame of reference then it is so in all other
 frames.
 
-\item If the angle between $\vec{E}$ and $\vec{H}$ is acute (obtuse) in one frame
-of reference then it is so in all other frames.
+\item If the angle between $\vec{E}$ and $\vec{H}$ is acute (obtuse) in one 
+frame of reference then it is so in all other frames.
 
 \item If $\vec{E}\cdot\vec{H} \ne 0$ then we can find a frame of reference
 in which the electric and magnetic fields are parallel to each other. In that
-frame ${H^\op}^2 - {E^\op}^2 = H^2 - E^2$ and $\vec{E}\cdot\vec{H} = E^\op H^\op$.
+frame ${H^\op}^2 - {E^\op}^2 = H^2 - E^2$ and $\vec{E}\cdot\vec{H} = E^\op 
+H^\op$.
 
 \item if $\vec{E}\cdot\vec{H} = 0$ and if $H^2 - E^2 > 0$ then we can find
 a frame in which $E^\op = 0$ and ${H^\op}^2 = H^2 - E^2 > 0$. Likewise, if $H^2
-- E^2 < 0$ then we can find a frame in which $H^\op = 0$ and $-{E^\op}^2 = H^2 - 
-E^2 < 0$. 
+- E^2 < 0$ then we can find a frame in which $H^\op = 0$ and $-{E^\op}^2 = 
+H^2 - E^2 < 0$. 
 \end{enumerate}
 \end{enumerate}
 
 \section{Problems}
 \begin{enumerate}
 \item Find the 3-acceleration of a particle in electric and magnetic fields.
-\item[Solution:] The equation of motion follows from \eqref{c3e18}, \eqref{c3e19}
-and \eqref{c3e20}. It is
+\item[Solution:] The equation of motion follows from \eqref{c3e18}, 
+\eqref{c3e19} and \eqref{c3e20}. It is
 \begin{equation}\label{c3e100}
 \td{\vec{p}}{t} = e\vec{E} + e\frac{\vec{v}}{c}\times\vec{H}.
 \end{equation}
@@ -844,45 +900,52 @@ c^2\td{\vec{p}}{t} = \td{\mathcal{E}}{t}\vec{v} + \mathcal{E}\td{\vec{v}}{t}.
 \]
 From equations \eqref{c3e27} and \eqref{c3e99} we have
 \[
-ec^2\vec{E} + ec\vec{v}\times\vec{H} = e\vec{v}\cdot\vec{E}\vec{v} + \mathcal{E}\td{\vec{v}}{t}.
+ec^2\vec{E} + ec\vec{v}\times\vec{H} = 
+e\vec{v}\cdot\vec{E}\vec{v} + \mathcal{E}\td{\vec{v}}{t}.
 \]
 or
 \[
 \td{\vec{v}}{t} = \frac{ec^2}{\mathcal{E}}
-\left(\vec{E} + \frac{\vec{v}}{c}\times\vec{H} - \frac{\vec{v}\cdot\vec{E}}{c^2}\vec{v}\right)
+\left(\vec{E} + \frac{\vec{v}}{c}\times\vec{H} - 
+\frac{\vec{v}\cdot\vec{E}}{c^2}\vec{v}\right)
 = \frac{e}{m\gamma}
-\left(\vec{E} + \frac{\vec{v}}{c}\times\vec{H} - \frac{\vec{v}\cdot\vec{E}}{c^2}\vec{v}\right)
+\left(\vec{E} + \frac{\vec{v}}{c}\times\vec{H} - 
+\frac{\vec{v}\cdot\vec{E}}{c^2}\vec{v}\right)
 \]
 or
 \begin{equation}\label{c3e101}
 \td{\vec{v}}{t} = \frac{e}{m}\sqrt{1 - \frac{v^2}{c^2}}
-\left(\vec{E} + \frac{\vec{v}}{c}\times\vec{H} - \frac{\vec{v}\cdot\vec{E}}{c^2}\vec{v}\right).
+\left(\vec{E} + \frac{\vec{v}}{c}\times\vec{H} - 
+\frac{\vec{v}\cdot\vec{E}}{c^2}\vec{v}\right).
 \end{equation}
-In terms of $\bm{\beta}$, this equation is
+In terms of $\vec{\beta}$, this equation is
 \begin{equation}\label{c3e102}
 \td{\vec{v}}{t} = \frac{e}{m}\sqrt{1 - \beta^2}
-\left(\vec{E} + \bm{\beta}\times\vec{H} - (\bm{\beta}\cdot\vec{E})\bm{\beta}\right).
+\left(\vec{E} + 
+\vec{\beta}\times\vec{H} - (\vec{\beta}\cdot\vec{E})\vec{\beta}\right).
 \end{equation}
 Unlike the non-relativistic case, we cannot put acceleration as the ratio of 
-force to mass. In the expression for momentum, $\gamma$ is not a constant. Instead of
-finding an expression for $d\gamma/dt$, we replace $m\gamma$ by $\mathcal{E}/c^2$
-and use the expression for $d\mathcal{E}/dt$.
+force to mass. In the expression for momentum, $\gamma$ is not a constant. 
+Instead of finding an expression for $d\gamma/dt$, we replace $m\gamma$ by 
+$\mathcal{E}/c^2$ and use the expression for $d\mathcal{E}/dt$.
 
 \item Maupertuis' principle for a particle in an electromagnetic field.
-\item[Solution:] Maupertuis' principle states that if the energy of the particle is
-conserved then 
+\item[Solution:] Maupertuis' principle states that if the energy of the 
+particle is conserved then 
 \[
 \delta\int\vec{p}\cdot d\vec{r} = 0,
 \]
-where $\vec{p}$ is the generalised momentum. In the case of a charged particle in
-an electromagnetic field,
+where $\vec{p}$ is the generalised momentum. In the case of a charged particle 
+in an electromagnetic field,
 \[
 \vec{p} = m\vec{v} + \frac{e}{c}\vec{A}
 \]
 so that the variational equation becomes
 \[
-\delta\int\left(m\vec{v} + \frac{e}{c}\vec{A}\right)\cdot d\vec{r} = 0 \Rightarrow
-\delta\int m\vec{v}\cdot d\vec{r} + \frac{e}{c}\delta\int\vec{A}\cdot d\vec{r} = 0.
+\delta\int\left(m\vec{v} + \frac{e}{c}\vec{A}\right)\cdot d\vec{r} = 0 
+\Rightarrow
+\delta\int m\vec{v}\cdot d\vec{r} + \frac{e}{c}\delta\int\vec{A}\cdot d\vec{r} 
+= 0.
 \]
 The energy momentum relation for a free particle is $\mathcal{E}^2 = p^2c^2 + 
 m^2c^4$. For a free particle, $p = |m\vec{v}|$ and $\mathcal{E}$ is the kinetic
@@ -891,16 +954,17 @@ energy so that
 |m\vec{v}|^2 = \frac{\mathcal{E}^2}{c^2} - m^2c^2.
 \]
 For a charged particle in an electromagnetic field, the kinetic energy is, $mc^2
-\gamma = \mathcal{E} - e\varphi$, according to \eqref{c3e35}. Therefore, the energy
-momentum relation is
+\gamma = \mathcal{E} - e\varphi$, according to \eqref{c3e35}. Therefore, the 
+energy momentum relation is
 \[
 |m\vec{v}|^2 = \frac{(\mathcal{E} - e\varphi)^2}{c^2} - m^2c^2.
 \]
-Finally, note that $\vec{p}\cdot d\vec{r} = pdl$, where $dl$ is the length of the
-infinitesimal portion of the trajectory. This is because $d\vec{r}$ is parallel to
-the momemtum. The variational principle, thus, becomes,
+Finally, note that $\vec{p}\cdot d\vec{r} = pdl$, where $dl$ is the length of 
+the infinitesimal portion of the trajectory. This is because $d\vec{r}$ is 
+parallel to the momemtum. The variational principle, thus, becomes,
 \[
-\delta\int \left(\frac{(\mathcal{E} - e\varphi)^2}{c^2} - m^2c^2\right)^{1/2}dl + 
+\delta\int 
+\left(\frac{(\mathcal{E} - e\varphi)^2}{c^2} - m^2c^2\right)^{1/2}dl + 
 \frac{e}{c}\delta\int\vec{A}\cdot d\vec{r} = 0.
 \]
 
@@ -913,9 +977,10 @@ suppose that it obeys the equations of motion
 \ddot{z} + \omega_0^2 z &=& 0
 \end{eqnarray*}
 Assume that the oscillator carries a charge $e$. An oscillating charge will emit
-radiation and I am not sure if the these equations remain valid. Hut let's assume
-that the frequency of oscillation is low enough to make radiation loss ignorable.
-(I think the radiation loss can be accounted for a friction like term.)
+radiation and I am not sure if the these equations remain valid. But let's 
+assume that the frequency of oscillation is low enough to make radiation loss 
+ignorable. (I think the radiation loss can be accounted for a friction like 
+term.)
 
 Now suppose that there is a magnetic field in the $z$ axis. It exerts a force
 \[
@@ -943,12 +1008,15 @@ Let the trial solution be $\zeta = e^{\lambda t}$ so that
 \]
 the solution of which is
 \[
-\lambda = \left(-\frac{ieH}{mc} \pm \sqrt{-\frac{e^2H^2}{m^2c^2} - 4\omega_0^2}\right)
-\frac{1}{2} = -i\left(\frac{eH}{2mc} \pm \sqrt{\omega_0^2 + \frac{e^2H^2}{4m^2c^2}}\right).
+\lambda = 
+\left(-\frac{ieH}{mc} \pm \sqrt{-\frac{e^2H^2}{m^2c^2} - 4\omega_0^2}\right)
+\frac{1}{2} = -i\left(\frac{eH}{2mc} \pm 
+\sqrt{\omega_0^2 + \frac{e^2H^2}{4m^2c^2}}\right).
 \]
 Therefore, the frequency of the oscillator is
 \[
--i\lambda = \omega = \sqrt{\omega_0^2 + \frac{e^2H^2}{4m^2c^2}} \pm \frac{eH}{2mc}.
+-i\lambda = \omega = \sqrt{\omega_0^2 + \frac{e^2H^2}{4m^2c^2}} \pm 
+\frac{eH}{2mc}.
 \]
 If the field is weak, that is if
 \[
@@ -961,8 +1029,8 @@ we can ignore the second term under the square root and
 
 \item Relativistic motion of a charged particle in parallel, uniform electric
 and magnetic fields.
-\item[Solution:] Let $\vec{E} = E\uv{z}, \vec{H} = H\uv{z}$ so that the equations
-of motion are
+\item[Solution:] Let $\vec{E} = E\uv{z}, \vec{H} = H\uv{z}$ so that the 
+equations of motion are
 \[
 \td{\vec{p}}{t} = eE\uv{z} + \frac{e}{c}\vec{v}\times\vec{H}
 \]
@@ -972,7 +1040,7 @@ that is,
 \td{p_y}{t} &=& -\frac{e}{x}v_xH \label{c3e104} \\
 \td{p_z}{t} &=& eE \label{c3e105} 
 \end{eqnarray}
-Equation \eqref{c3e104} can be readily integrated to
+Equation \eqref{c3e105} can be readily integrated to
 \[
 p_z(t) = eEt + p_z(0).
 \]
@@ -1016,7 +1084,8 @@ z(t) = \frac{\mathcal{E}_0}{eE}\sqrt{1 + \frac{(eEc)^2}{\mathcal{E}_0^2}t^2}.
 We now turn our attention to the $xy$ plane. From equations \eqref{c3e102} and
 \eqref{c3e103},
 \[
-\frac{d}{dt}(p_x + ip_y) = \frac{eH}{c}(v_y - iv_x) = -\frac{ieH}{c}(v_x + iv_y).
+\frac{d}{dt}(p_x + ip_y) = \frac{eH}{c}(v_y - iv_x) = 
+-\frac{ieH}{c}(v_x + iv_y).
 \]
 Since $\vec{p} = (\mathcal{E}/c^2)\vec{v}$, the above equation becomes
 \begin{equation}\label{c3e110}
@@ -1030,8 +1099,8 @@ so that the solution of \eqref{c3e109} can be written as
 \begin{equation}\label{c3e112}
 p_x + ip_y = p_t e^{-i\phi},
 \end{equation}
-where $p_t$ is a constant of integration. Putting \eqref{c3e107} in \eqref{c3e110},
-we get
+where $p_t$ is a constant of integration. Putting \eqref{c3e107} in 
+\eqref{c3e110}, we get
 \begin{equation}\label{c3e113}
 \phi = eHc\frac{dt}{\sqrt{\mathcal{E}_0^2 + (eEct)^2}} = \frac{H}{E}\sinh^{-1}
 \left(\frac{eEct}{\mathcal{E}_0}\right),
@@ -1047,7 +1116,8 @@ Since $\vec{p} = (\mathcal{E}/c^2)\vec{v}$, we can write \eqref{c3e111} as
 \]
 From \eqref{c3e110}, we get
 \[
-d(x + iy) = \frac{cp_t}{eH}e^{-i\phi}d\phi \Rightarrow x + iy = \frac{icp_t}{eH}e^{-i\phi}
+d(x + iy) = \frac{cp_t}{eH}e^{-i\phi}d\phi \Rightarrow x + iy = 
+\frac{icp_t}{eH}e^{-i\phi}
 \]
 or
 \[
@@ -1060,9 +1130,15 @@ y(\phi) &=& \frac{cp_t}{eH}\cos\phi \label{c3e116}
 \end{eqnarray}
 The equation of the trajectory is
 \begin{eqnarray}
-x(t) &=& \frac{cp_t}{eH}\sin\left(\frac{H}{E}\sinh^{-1}\left(\frac{eEct}{\mathcal{E}_0}\right)\right) \label{c3e117} \\
-y(t) &=& \frac{cp_t}{eH}\cos\left(\frac{H}{E}\sinh^{-1}\left(\frac{eEct}{\mathcal{E}_0}\right)\right) \label{c3e118} \\
-z(t) &=& \frac{\mathcal{E}_0}{eE}\sqrt{1 + \frac{(eEc)^2}{\mathcal{E}_0^2}t^2}. \label{c3e119}
+x(t) &=& 
+\frac{cp_t}{eH}\sin\left(
+\frac{H}{E}\sinh^{-1}\left(\frac{eEct}{\mathcal{E}_0}\right)\right) 
+\label{c3e117} \\
+y(t) &=& \frac{cp_t}{eH}\cos\left(
+\frac{H}{E}\sinh^{-1}\left(\frac{eEct}{\mathcal{E}_0}\right)\right) 
+\label{c3e118} \\
+z(t) &=& \frac{\mathcal{E}_0}{eE}\sqrt{1 + \frac{(eEc)^2}
+{\mathcal{E}_0^2}t^2}. \label{c3e119}
 \end{eqnarray}
 \end{enumerate}
 

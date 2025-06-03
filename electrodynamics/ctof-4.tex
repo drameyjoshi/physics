@@ -7,16 +7,17 @@
 \end{eqnarray}
 These equations can be easily cast in integral form as 
 \begin{eqnarray}
-\oint\vec{E}\cdot d\vec{l} &=& -\frac{1}{c}\frac{\partial}{\partial t}\int\vec{H}\cdot d\vec{f} \label{c4e3} \\
+\oint\vec{E}\cdot d\vec{l} &=& -\frac{1}{c}
+	\frac{\partial}{\partial t}\int\vec{H}\cdot d\vec{f} \label{c4e3} \\
 \oint\vec{H}\cdot d\vec{f} &=& 0 \label{c4e4}
 \end{eqnarray}
 Note that, in equation \eqref{c4e3}, the surface integral on the rhs is over the
-surface bounded by the countour along which the line integral of lhs is calculated.
-The line integral is over a closed curve but the surface integral is not over a 
-closed surface. The equation states that the circulation of the electric field
-is equal to $-1/c$ times the flux of $\vec{H}$ through the surface bound by the
-countour. On the other hand, \eqref{c4e4} tells that flux of $\vec{H}$ through
-any closed surface is zero.
+surface bounded by the countour along which the line integral of lhs is 
+calculated. The line integral is over a closed curve but the surface integral 
+is not over a closed surface. The equation states that the circulation of 
+the electric field is equal to $-1/c$ times the flux of $\vec{H}$ through 
+the surface bound by the countour. On the other hand, \eqref{c4e4} tells that 
+flux of $\vec{H}$ through any closed surface is zero.
 
 \item Equations \eqref{c4e1} and \eqref{c4e2} form the first pair of Maxwell
 equations. They do not describe the electromagnetic field completely because
@@ -29,13 +30,17 @@ F_{\mu\nu} = \pdt{A_\nu}{x^\mu} - \pdt{A_\mu}{x^\nu},
 \]
 we have
 \begin{eqnarray*}
-\pdt{F_{\mu\nu}}{x^\rho} &=& \pdt{A^2_\nu}{x^\mu x^\rho} - \pdt{A^2_\mu}{x^\nu x^\rho} \\
-\pdt{F_{\nu\rho}}{x^\mu} &=& \pdt{A^2_\rho}{x^\nu x^\mu} - \pdt{A^2_\nu}{x^\rho x^\mu} \\
-\pdt{F_{\rho\mu}}{x^\nu} &=& \pdt{A^2_\mu}{x^\rho x^\nu} - \pdt{A^2_\rho}{x^\mu x^\nu}
+\pdt{F_{\mu\nu}}{x^\rho} &=& 
+\pdt{A^2_\nu}{x^\mu x^\rho} - \pdt{A^2_\mu}{x^\nu x^\rho} \\
+\pdt{F_{\nu\rho}}{x^\mu} &=& 
+\pdt{A^2_\rho}{x^\nu x^\mu} - \pdt{A^2_\nu}{x^\rho x^\mu} \\
+\pdt{F_{\rho\mu}}{x^\nu} &=& 
+\pdt{A^2_\mu}{x^\rho x^\nu} - \pdt{A^2_\rho}{x^\mu x^\nu}
 \end{eqnarray*}
 from which we get
 \begin{equation}\label{c4e5}
-\pdt{F_{\mu\nu}}{x^\rho} + \pdt{F_{\nu\rho}}{x^\mu} + \pdt{F_{\rho\mu}}{x^\nu} = 0.
+\pdt{F_{\mu\nu}}{x^\rho} + \pdt{F_{\nu\rho}}{x^\mu} + 
+\pdt{F_{\rho\mu}}{x^\nu} = 0.
 \end{equation}
 
 \item We will examine \eqref{c4e5} in greater details.
@@ -64,21 +69,23 @@ from which we get
 -\pdt{H_z}{z} - \pdt{H_x}{x} - \pdt{H_y}{y} = 0.
 \]
 \end{enumerate}
-Thus, \eqref{c4e5} encodes the two Maxwell equations \eqref{c4e1} and \eqref{c4e2}.
+Thus, \eqref{c4e5} encodes the two Maxwell equations \eqref{c4e1} and 
+\eqref{c4e2}.
 We also note that
 \begin{enumerate}
-\item If any two indices in \eqref{c4e5} are equal then we get the identity $0=0$.
+\item If any two indices in \eqref{c4e5} are equal then we get the identity 
+$0=0$.
 \item If all three indices are equal then each term on lhs of \eqref{c4e5} is
 zero.
-\item Let us examine what happens when we consider other combinations of indices.
-If we swap the values of $\mu$ and $\nu$ in case (a), that is, if $\mu = 1, \nu = 0,
-\rho = 2$ then we have
+\item Let us examine what happens when we consider other combinations of 
+indices. If we swap the values of $\mu$ and $\nu$ in case (a), that is, if 
+$\mu = 1, \nu = 0, \rho = 2$ then we have
 \[
 \pdt{F_{10}}{x^2} + \pdt{F_{02}}{x^1} + \pdt{F_{21}}{x^0} = 0 \Rightarrow
 -\pdt{E_x}{y} + \pdt{E_y}{x} - \frac{1}{c}\pdt{H_z}{t} = 0,
 \]
-which is same as the conclusion of case (a). We can similarly show that all swaps
-give 
+which is same as the conclusion of case (a). We can similarly show that all 
+swaps give 
 \[
 \curl\vec{E} = -\frac{1}{c}\pdt{\vec{H}}{t}.
 \]
@@ -90,15 +97,15 @@ C^\mu = \epsilon^{\mu\nu\rho\sigma}\pdt{F_{\rho\sigma}}{x^\nu}.
 \end{equation}
 Then
 \[
-C^0 = \pdt{F_{23}}{x^1} - \pdt{F_{32}}{x^1} - \pdt{F_{13}}{x^2} + \pdt{F_{31}}{x^2}
- + \pdt{F_{12}}{x^3} - \pdt{F_{21}}{x^3}
+C^0 = \pdt{F_{23}}{x^1} - \pdt{F_{32}}{x^1} - \pdt{F_{13}}{x^2} + 
+\pdt{F_{31}}{x^2} + \pdt{F_{12}}{x^3} - \pdt{F_{21}}{x^3}
 \]
 which, owing to anti-symmetric nature of $F_{\mu\nu}$ is
 \[
-C^0 = 2\left(\pdt{F_{23}}{x^1} + \pdt{F^{31}}{x^2} + \pdt{F_{12}}{x^3}\right)
+C^0 = 2\left(\pdt{F_{23}}{x^1} + \pdt{F_{31}}{x^2} + \pdt{F_{12}}{x^3}\right)
 \]
-From equation \eqref{c4e5}, it is $C^0 = 0$. Similarly we can show that the other
-components too vanish. Therefore, equation \eqref{c4e5} is equivalent to
+From equation \eqref{c4e5}, it is $C^0 = 0$. Similarly we can show that the 
+other components too vanish. Therefore, equation \eqref{c4e5} is equivalent to
 \begin{equation}\label{c4e7}
 \epsilon^{\mu\nu\rho\sigma}\pdt{F_{\rho\sigma}}{x^\nu} = 0.
 \end{equation}
@@ -127,20 +134,21 @@ S = S_m + S_{mf} + S_f.
 \end{equation}
 
 It is an experimental fact that the electromagnetic fields obey the principle of
-superposition. Therefore, the differential equations describing them must be linear.
-Since the equations are derived from the variational principle, we require that the
-integrand of the action integral must be quadratic in the field tensor. Furthermore,
-we require the action integral to be a scalar. Therefore, we also require the 
-integrand to be a scalar. The only scalar, quadratic quantity that depends on the
-field tensor alone is $F_{\mu\nu}F^{\mu\nu}$. We propose that
+superposition. Therefore, the differential equations describing them must be 
+linear.  Since the equations are derived from the variational principle, we 
+require that the integrand of the action integral must be quadratic in the field
+tensor. Furthermore, we require the action integral to be a scalar. Therefore, 
+we also require the integrand to be a scalar. The only scalar, quadratic 
+quantity that depends on the field tensor alone is $F_{\mu\nu}F^{\mu\nu}$. 
+We propose that
 \begin{equation}\label{c4e12}
 S_f = a\int F_{\mu\nu}F^{\mu\nu} d\Omega.
 \end{equation}
 
 The quantity $\epsilon^{\mu\rho\nu\sigma}F^{\mu\rho}F^{\nu\sigma}$ is not 
 considered to be part of $S_f$ because it is a pseudo-scalar. We showed in 
-\eqref{c3e98} that it is $\vec{E}\cdot\vec{H}$. Since $\vec{H}$ is an axial vector,
-the dot product is a pseudo-scalar.
+\eqref{c3e98} that it is $\vec{E}\cdot\vec{H}$. Since $\vec{H}$ is an axial 
+vector, the dot product is a pseudo-scalar.
 
 Equation \eqref{c3e97} gave us
 \begin{equation}\label{c4e13}
@@ -151,11 +159,11 @@ In terms of the potentials,
 F_{\mu\nu}F^{\mu\nu} = |\curl\vec{A}|^2 - |\grad\varphi|^2 + 
 2\grad\varphi\pdt{\vec{A}}{t} - \left|\pdt{\vec{A}}{t}\right|^2.
 \end{equation}
-This shows that $F_{\mu\nu}F^{\mu\nu}$ can be made arbitrarily negative if $\vec{A}$
-can be made to vary arbitrarily quickly with $t$. In that case, we cannot minimise
-the action integral of \eqref{c4e12}. To prevent that from happening, we require
-the constant $a$ to be negative. Its value depends on our choice of units. In
-gaussian units, it is 
+This shows that $F_{\mu\nu}F^{\mu\nu}$ can be made arbitrarily negative if 
+$\vec{A}$ can be made to vary arbitrarily quickly with $t$. In that case, we 
+cannot minimise the action integral of \eqref{c4e12}. To prevent that from 
+happening, we require the constant $a$ to be negative. Its value depends on 
+our choice of units. In gaussian units, it is 
 \[
 a = -\frac{1}{16\pi c}
 \]
@@ -226,17 +234,19 @@ we can write
 \begin{equation}\label{c4e26}
 \int\rho dV = \frac{1}{c}\int j^\mu dS_\mu,
 \end{equation}
-where the surface integral is over a hypersurface whose normal is along the $x^0$
-axis. For an arbitrary hypersurface,
+where the surface integral is over a hypersurface whose normal is along the 
+$x^0$ axis. For an arbitrary hypersurface,
 \[
 \frac{1}{c}\int j^\mu dS_\mu
 \]
 is just the sum of charges whose world lines pass through it.
 
-\item From equations \eqref{c4e9}, \eqref{c4e10}, \eqref{c4e11} and \eqref{c4e15},
-the action of the system of charged particles in electromagnetic fields is
+\item From equations \eqref{c4e9}, \eqref{c4e10}, \eqref{c4e11} and 
+\eqref{c4e15}, the action of the system of charged particles in 
+electromagnetic fields is
 \[
-S = -\sum_i m_ic\int ds - \sum_i\frac{e_i}{c}\int A_\mu dx^\mu - \frac{1}{16\pi c}
+S = -\sum_i m_ic\int ds - 
+\sum_i\frac{e_i}{c}\int A_\mu dx^\mu - \frac{1}{16\pi c}
 \int F_{\mu\nu} F^{\mu\nu} d\Omega.
 \]
 The second term is
@@ -246,8 +256,10 @@ S_{mf} = -\frac{1}{c}\sum_i e_i\left(\int A_0dx^0 + \cdot + \int A_3dx^3\right).
 For a continuous charge distribution, we replace $\sum_i e_i$ by $\int \rho dV$
 so that
 \begin{eqnarray*}
-S_{mf} &=& -\frac{1}{c}\int dV \rho\left(\int A_0dx^0 + \cdots + \int A_3dx^3\right) \\
- &=& -\frac{1}{c}\left(\int dVdt \rho\td{x^0}{t}A_0 + \cdots + \int dVdt \rho\td{x^3}{t}A_3\right) \\
+S_{mf} &=& -\frac{1}{c}\int dV \rho\left(\int A_0dx^0 + \cdots + 
+\int A_3dx^3\right) \\
+ &=& -\frac{1}{c}\left(\int dVdt \rho\td{x^0}{t}A_0 + \cdots + 
+ \int dVdt \rho\td{x^3}{t}A_3\right) \\
  &=& -\frac{1}{c}\left(\int dVdt j^0A_0 + \cdots + \int dVdt j^3A_3\right)
 \end{eqnarray*}
 where we used equation \eqref{c4e23} in the last equation. Finally, we write it
@@ -261,17 +273,17 @@ S = -\sum_i m_ic\int ds - \frac{1}{c^2}\int j^\mu A_\mu d\Omega -
 \frac{1}{16\pi c}\int F_{\mu\nu} F^{\mu\nu} d\Omega.
 \end{equation}
 
-\item It is an experimental fact that electric charge is conserved. It is expressed
-as an equation of continuity,
+\item It is an experimental fact that electric charge is conserved. It is 
+expressed as an equation of continuity,
 \begin{equation}\label{c4e29}
 \frac{\partial}{\partial t}\int\rho dV = -\oint \rho\vec{v}\cdot d\vec{f}.
 \end{equation}
-The left hand side, if it is positive, is the rate of increase of charge per unit
-time in the region of integration. The right hand side is the rate of inflow of
-charges in the region of integration. The negative sign is needed because $d\vec{f}$
-always points outwards so that if $\vec{v}$ points inwards then the dot product 
-is negative. To get an overall positive sign, we negate the surface integral.
-In differential form, \eqref{c4e29} is
+The left hand side, if it is positive, is the rate of increase of charge per 
+unit time in the region of integration. The right hand side is the rate of 
+inflow of charges in the region of integration. The negative sign is needed 
+because $d\vec{f}$ always points outwards so that if $\vec{v}$ points inwards 
+then the dot product is negative. To get an overall positive sign, we negate 
+the surface integral. In differential form, \eqref{c4e29} is
 \begin{equation}\label{c4e30}
 \pdt{\rho}{t} + \dive\vec{j} = 0.
 \end{equation}
@@ -309,21 +321,23 @@ integral so that
 Since this is true for any two points on the $x^0$ axis, the divergence itself
 is zero. This is another way of proving \eqref{c4e31}.
 
-\item We showed in chapter \ref{c3} that the transformation described by equation
+\item We showed in chapter \ref{c3} that the transformation described by 
+equation
 \eqref{c3e30},
 \[
 A_\mu^\op = A_\mu - \pdt{f}{x^\mu},
 \]
 also called the gauge transformation, leaves the fields unchanged. Let us make 
-this transformation in the second term, \eqref{c4e27}, of the action \eqref{c4e28}.
-Then,
+this transformation in the second term, \eqref{c4e27}, of the action 
+\eqref{c4e28}.  Then,
 \[
 S_{mf} \rightarrow -\frac{1}{c^2}\int j^\mu A_\mu d\Omega + \frac{1}{c^2}
 \int j^\mu\pdt{f}{x^\mu} d\Omega.
 \]
 Now,
 \[
-\frac{\partial}{\partial x^\mu}(fj^\mu) = f\pdt{j^\mu}{x^\mu} + j^\mu\pdt{f}{x^\mu}.
+\frac{\partial}{\partial x^\mu}(fj^\mu) = f\pdt{j^\mu}{x^\mu} + 
+j^\mu\pdt{f}{x^\mu}.
 \]
 If the equation of continuity, \eqref{c4e31}, is valid then
 \begin{equation}\label{c4e33}
@@ -340,31 +354,36 @@ S_{mf} \rightarrow -\frac{1}{c^2}\int j^\mu A_\mu d\Omega + \frac{1}{c^2}
 \int (fj^\mu) dS_\mu.
 \]
 We can always choose the surface to be large enough that $j^\mu$ is zero on it,
-in which case, the integral vanishes. This manipulation critically depends on the
-validity of \eqref{c4e33}, which in turn depends on the equation of continuity.
-This shows that the gauge invariance of the electromagnetic fields is closely
-related to the equation of continuity, in other words, to conservation of 
-electric charge. Electric charge must be conserved if gauge invariance must be
-true.
+in which case, the integral vanishes. This manipulation critically depends on 
+the validity of \eqref{c4e33}, which in turn depends on the equation of 
+continuity.  This shows that the gauge invariance of the electromagnetic 
+fields is closely related to the equation of continuity, in other words, to 
+conservation of electric charge. Electric charge must be conserved if gauge 
+invariance must be true.
 
 \item In finding the equations of motion from variational principle we assumed
-that the fields are fixed while varying the generalised coordinates. Now, we will
-assume that the generalised coordinates are fixed and will vary the fields instead.
-The resulting equations are the second pair of Maxwell equations. The expression
-for total action in \eqref{c4e28} has fields only in the second and the third
-terms. Therefore,
+that the fields are fixed while varying the generalised coordinates. Now, we 
+will assume that the generalised coordinates are fixed and will vary the fields
+instead. The resulting equations are the second pair of Maxwell equations. The 
+expression for total action in \eqref{c4e28} has fields only in the second and 
+the third terms. Therefore,
 \begin{equation}\label{c4e34}
 \delta S = -\frac{1}{c^2}\int j^\mu \delta A_\mu d\Omega - \frac{1}{16\pi c}
 \int\delta(F_{\mu\nu}F^{\mu\nu})d\Omega.
 \end{equation}
 Now 
 \begin{eqnarray*}
-\delta(F_{\mu\nu}F^{\mu\nu}) &=& (\delta F_{\mu\nu})F^{\mu\nu} + F_{\mu\nu} (\delta F^{\mu\nu}) \\
+\delta(F_{\mu\nu}F^{\mu\nu}) &=& (\delta F_{\mu\nu})F^{\mu\nu} + 
+F_{\mu\nu} (\delta F^{\mu\nu}) \\
  &=& 2F^{\mu\nu}\delta F_{\mu\nu} \\
- &=& 2F^{\mu\nu}\left(\pdt{\delta A_\nu}{x^\mu} - \pdt{\delta A_\mu}{x^\nu}\right) \\
- &=& 2F^{\mu\nu}\pdt{\delta A_\nu}{x^\mu} - 2F^{\mu\nu}\pdt{\delta A_\mu}{x^\nu} \\
- &=& 2F^{\nu\mu}\pdt{\delta A_\mu}{x^\nu} - 2F^{\mu\nu}\pdt{\delta A_\mu}{x^\nu} \\
- &=& -2F^{\mu\nu}\pdt{\delta A_\mu}{x^\nu} - 2F^{\mu\nu}\pdt{\delta A_\mu}{x^\nu} \\
+ &=& 2F^{\mu\nu}\left(\pdt{\delta A_\nu}{x^\mu} - 
+ \pdt{\delta A_\mu}{x^\nu}\right) \\
+ &=& 2F^{\mu\nu}\pdt{\delta A_\nu}{x^\mu} - 
+ 	2F^{\mu\nu}\pdt{\delta A_\mu}{x^\nu} \\
+ &=& 2F^{\nu\mu}\pdt{\delta A_\mu}{x^\nu} - 
+ 	2F^{\mu\nu}\pdt{\delta A_\mu}{x^\nu} \\
+ &=& -2F^{\mu\nu}\pdt{\delta A_\mu}{x^\nu} - 
+ 	2F^{\mu\nu}\pdt{\delta A_\mu}{x^\nu} \\
  &=& -4F^{\mu\nu}\pdt{\delta A_\mu}{x^\nu}
 \end{eqnarray*}
 so that equation \eqref{c4e34} becomes
@@ -379,10 +398,12 @@ F^{\mu\nu}\pdt{\delta A_\mu}{x^\nu} + \delta A_\mu\pdt{F^{\mu\nu}}{x^\nu},
 \]
 \begin{eqnarray}
 \delta S &=& -\frac{1}{c^2}\int j^\mu \delta A_\mu d\Omega + 
-\frac{1}{4\pi c}\int \frac{\partial}{\partial x^\nu}(F^{\mu\nu} \delta A_\mu) d\Omega - \nonumber \\
- & & \frac{1}{4\pi c}\int \delta A_\mu\pdt{F^{\mu\nu}}{x^\nu} d\Omega \nonumber \\
+\frac{1}{4\pi c}\int \frac{\partial}{\partial x^\nu}(F^{\mu\nu} \delta A_\mu) 
+d\Omega - \nonumber \\
+ & & \frac{1}{4\pi c}\int\delta A_\mu\pdt{F^{\mu\nu}}{x^\nu}d\Omega\nonumber \\
  &=& -\frac{1}{c}\left(\frac{1}{c}\int j^\mu \delta A_\mu d\Omega + 
-    \frac{1}{4\pi} \int\delta A_\mu\pdt{F^{\mu\nu}}{x^\nu}d\Omega\right) + \nonumber \\
+    \frac{1}{4\pi} \int\delta A_\mu\pdt{F^{\mu\nu}}{x^\nu}d\Omega\right) + 
+	\nonumber \\
  & & \frac{1}{4\pi c}\int F^{\mu\nu}\delta A_\mu dS_\mu, \nonumber 
 \end{eqnarray}
 where we used the generalisation of Gauss' theorem to 4-dimensions to convert a
@@ -414,7 +435,8 @@ For $\mu = 1$, \eqref{c4e37} becomes,
 \]
 that is,
 \[
-\frac{1}{c}\pdt{E_1}{t} + 0 - \pdt{H_3}{x_2} + \pdt{H_2}{x_3} = -\frac{4\pi}{c}j^1
+\frac{1}{c}\pdt{E^1}{t} + 0 - \pdt{H^3}{x_2} + \pdt{H^2}{x_3} = 
+-\frac{4\pi}{c}j^1
 \]
 or
 \begin{equation}\label{c4e39}
@@ -435,7 +457,8 @@ four Maxwell equations. In terms of field vectors they are
 They can be equivalently written in terms of the electromagnetic field tensor as
 equations \eqref{c4e5} and \eqref{c4e37}.
 \begin{eqnarray*}
-\pdt{F_{\mu\nu}}{x^\rho} + \pdt{F_{\nu\rho}}{x^\mu} + \pdt{F_{\rho\mu}}{x^\nu} &=& 0 \\
+\pdt{F_{\mu\nu}}{x^\rho} + \pdt{F_{\nu\rho}}{x^\mu} + 
+\pdt{F_{\rho\mu}}{x^\nu} &=& 0 \\
 \pdt{F^{\mu\nu}}{x^\nu} &=& -\frac{4\pi}{c}j^\mu
 \end{eqnarray*}
 
@@ -443,7 +466,7 @@ equations \eqref{c4e5} and \eqref{c4e37}.
 \begin{equation}\label{c4e41}
 \oint\vec{E}\cdot d\vec{f} = 4\pi\int\rho dV.
 \end{equation}
-The total electric flux over a closed surface is equal to $4\pi$ times the total 
+The total electric flux over a closed surface is equal to $4\pi$ times the total
 charge enclosed in it. This is \emph{Gauss law}.
 
 \item Equation \eqref{c4e40} in integral form is
@@ -451,23 +474,24 @@ charge enclosed in it. This is \emph{Gauss law}.
 \oint\vec{H}\cdot d\vec{l} = \frac{4\pi}{c}\left(\int\vec{j}\cdot d\vec{f} + 
 \frac{1}{4\pi}\int\pdt{\vec{E}}{t}\cdot d\vec{f}\right).
 \end{equation}
-The first term in the bracket on the rhs is the true current while the second one
-is called the `displacement current'. The term,
+The first term in the bracket on the rhs is the true current while the second 
+one is called the `displacement current'. The term,
 \[
 \frac{1}{4\pi}\pdt{\vec{E}}{t}
 \]
 is called the \emph{displacement current density}.
 
-\item From \eqref{c4e40}, one immediately gets, after taking divergence of both sides
-and using \eqref{c4e38},
+\item From \eqref{c4e40}, one immediately gets, after taking divergence of both 
+sides and using \eqref{c4e38},
 \[
 \dive\vec{j} + \pdt{\rho}{t} = 0.
 \]
 Thus the equation of continuity and charge conversation are encoded in 
-\eqref{c4e37}. It can also be easily derived taking the derivative of \eqref{c4e37}
-with respect to $x^\mu$,
+\eqref{c4e37}. It can also be easily derived taking the derivative of 
+\eqref{c4e37} with respect to $x^\mu$,
 \[
-\frac{\partial^2 F^{\mu\nu}}{\partial x^\mu \partial x^\nu} = -\frac{4\pi}{c}\pdt{j^\mu}{x^\mu}.
+\frac{\partial^2 F^{\mu\nu}}{\partial x^\mu \partial x^\nu} = 
+-\frac{4\pi}{c}\pdt{j^\mu}{x^\mu}.
 \]
 The lhs can be written as
 \[
@@ -484,15 +508,17 @@ so that, we have,
 \]
 which is indeed the equation of continuity, \eqref{c4e31}, in 4-vector form.
 
-\item Taking dot product of \eqref{c4e1} with $\vec{H}$ and that of \eqref{c4e40}
-with $\vec{E}$, we get
+\item Taking dot product of \eqref{c4e1} with $\vec{H}$ and that of 
+\eqref{c4e40} with $\vec{E}$, we get
 \begin{eqnarray*}
 \vec{H}\cdot\curl\vec{E} &=& -\frac{1}{2c}\pdt{H^2}{t} \\
-\vec{E}\cdot\curl\vec{H} &=& \frac{4\pi}{c}\vec{j}\cdot\vec{E} + \frac{1}{2c}\pdt{E^2}{t}
+\vec{E}\cdot\curl\vec{H} &=& \frac{4\pi}{c}\vec{j}\cdot\vec{E} + 
+\frac{1}{2c}\pdt{E^2}{t}
 \end{eqnarray*}
 Subtracting the first equation from the second,
 \begin{equation}\label{c4e43}
-\vec{E}\cdot\curl\vec{H} - \vec{H}\cdot\curl\vec{E} = \frac{4\pi}{c}\vec{j}\cdot\vec{E}
+\vec{E}\cdot\curl\vec{H} - \vec{H}\cdot\curl\vec{E} = 
+\frac{4\pi}{c}\vec{j}\cdot\vec{E}
 + \frac{1}{2c}\frac{\partial}{\partial t}(E^2 + H^2).
 \end{equation}
 We can rearrange it as
@@ -544,9 +570,9 @@ the integral must be the energy of the fields. We all the quantity,
 W = \frac{E^2 + H^2}{8\pi}
 \end{equation}
 the energy density of the field. For a small enough volume for which the rhs of
-\eqref{c4e48} does not vanish, we interpret the rhs as the flux of energy escaping
-the bounding surface. The Poynting vector $\vec{S}$ is thus the flux density of
-energy passing through a surface.
+\eqref{c4e48} does not vanish, we interpret the rhs as the flux of energy 
+escaping the bounding surface. The Poynting vector $\vec{S}$ is thus the flux 
+density of energy passing through a surface.
 
 \item Consider an arbitrary relativistic field with generalised coordinates 
 $q_\alpha$ and described by a Lagrangian density,
@@ -569,16 +595,18 @@ to simplify our expressions. A variation of the action is
 \end{equation}
 Now,
 \[
-\frac{\partial}{\partial x^\mu}\left(\pdt{\Lambda}{q_{\alpha;\mu}} \delta q_\alpha\right) = 
-\pdt{\Lambda}{q_{\alpha;\mu}}\delta q_{\alpha;\mu} + \delta q_\alpha\frac{\partial}
+\frac{\partial}{\partial x^\mu}\left(\pdt{\Lambda}{q_{\alpha;\mu}} 
+\delta q_\alpha\right) = 
+\pdt{\Lambda}{q_{\alpha;\mu}}\delta q_{\alpha;\mu} + 
+\delta q_\alpha\frac{\partial}
 {\partial x^\mu}\pdt{\Lambda}{q_{\alpha;\mu}}
 \]
 so that \eqref{c4e53} becomes,
 \begin{equation}\label{c4e54}
 \delta S = \frac{1}{c}\int\left(\left(\pdt{\Lambda}{q_\alpha} - \frac{\partial}
 {\partial x^\mu}\pdt{\Lambda}{q_{\alpha;\mu}}\right)\delta q_\alpha +
-\frac{\partial}{\partial x^\mu}\left(\pdt{\Lambda}{q_{\alpha;\mu}} \delta q_\alpha
-\right)\right)d\Omega.
+\frac{\partial}{\partial x^\mu}\left(\pdt{\Lambda}{q_{\alpha;\mu}} 
+\delta q_\alpha \right)\right)d\Omega.
 \end{equation}
 The second term in the integrand is a 4-divergence. The volume integral of a 4-
 divergence can be written as a surface integral. If we choose the surface large 
@@ -591,11 +619,13 @@ left with
 Since this equation is true for all variations $\delta q_\alpha$, we have the 
 Euler-Lagrange equations
 \begin{equation}\label{c4e56}
-\pdt{\Lambda}{q_\alpha} = \frac{\partial}{\partial x^\mu}\pdt{\Lambda}{q_{\alpha;\mu}}
+\pdt{\Lambda}{q_\alpha} = \frac{\partial}{\partial x^\mu}
+\pdt{\Lambda}{q_{\alpha;\mu}}
 \end{equation}
 Recall that $\Lambda$ is a function of $q_\alpha$ and $q_{\alpha;\mu}$ so that
 \[
-d\Lambda = \pdt{\Lambda}{q_\alpha}dq_\alpha + \pdt{\Lambda}{q_{\alpha;\mu}}dq_{\alpha;\mu}
+d\Lambda = \pdt{\Lambda}{q_\alpha}dq_\alpha + 
+\pdt{\Lambda}{q_{\alpha;\mu}}dq_{\alpha;\mu}
 \]
 and
 \begin{equation}\label{c4e57}
@@ -604,8 +634,10 @@ and
 \end{equation}
 Since,
 \[
-\pdt{q_{\alpha;\mu}}{x^\nu} = \frac{\partial^2 q_\alpha}{\partial x^\mu \partial x^\nu}
-= \frac{\partial^2 q_\alpha}{\partial x^\nu \partial x^\mu} =\pdt{q_{\alpha;\nu}}{x^\mu},
+\pdt{q_{\alpha;\mu}}{x^\nu} = 
+\frac{\partial^2 q_\alpha}{\partial x^\mu \partial x^\nu}
+= \frac{\partial^2 q_\alpha}{\partial x^\nu \partial x^\mu} =
+\pdt{q_{\alpha;\nu}}{x^\mu},
 \]
 equation \eqref{c4e57} becomes
 \[
@@ -614,9 +646,11 @@ equation \eqref{c4e57} becomes
 \]
 Using the Euler-Lagrange equation \eqref{c4e56} in the first term on the rhs,
 \[
-\pdt{\Lambda}{x^\nu} = \frac{\partial}{\partial x^\mu}\pdt{\Lambda}{q_{\alpha;\mu}}
+\pdt{\Lambda}{x^\nu} = \frac{\partial}{\partial x^\mu}
+\pdt{\Lambda}{q_{\alpha;\mu}}
 q_{\alpha;\nu} + \pdt{\Lambda}{q_{\alpha;\mu}}\pdt{q_{\alpha;\nu}}{x^\mu} =
-\frac{\partial}{\partial x^\mu}\left(\pdt{\Lambda}{q_{\alpha;\mu}}q_{\alpha;\nu}\right)
+\frac{\partial}{\partial x^\mu}
+\left(\pdt{\Lambda}{q_{\alpha;\mu}}q_{\alpha;\nu}\right)
 \]
 We can write the lhs as
 \[
@@ -626,7 +660,8 @@ We can write the lhs as
 so that we have
 \begin{equation}\label{c4e58}
 \frac{\partial}{\partial x^\mu}
-\left(\pdt{\Lambda}{q_{\alpha;\mu}}q_{\alpha;\nu} - \delta^\mu_\nu \Lambda\right) = 0.
+\left(\pdt{\Lambda}{q_{\alpha;\mu}}q_{\alpha;\nu} - 
+\delta^\mu_\nu \Lambda\right) = 0.
 \end{equation}
 If
 \begin{equation}\label{c4e59}
@@ -637,8 +672,8 @@ then we can write \eqref{c4e58} as
 \begin{equation}\label{c4e60}
 \pdt{\tensor{T}{_\nu^\mu}}{x^\mu} = 0.
 \end{equation}
-Since $T^{\nu\mu} = g^{\mu\nu}\tensor{T}{_\nu^\mu}$ and $g^{\mu\nu}$ being a constant tensor,
-equation \eqref{c4e60} can also be written as
+Since $T^{\nu\mu} = g^{\mu\nu}\tensor{T}{_\nu^\mu}$ and $g^{\mu\nu}$ being a 
+constant tensor, equation \eqref{c4e60} can also be written as
 \begin{equation}\label{c4e61}
 \pdt{T^{\nu\mu}}{x^\mu} = 0.
 \end{equation}
@@ -653,21 +688,22 @@ equation \eqref{c4e61} also gives us
 If we choose the surface to be such that it is composed of a hyperplane 
 perpendicular to $x^0$ at one instant of time, another hyperplane 
 perpendicular to $x^0$ at another instant of time and an arbitrary surface
-joining these hyperplanes at a great distance from the fields, then \eqref{c4e62}
-indicates that the vector
+joining these hyperplanes at a great distance from the fields, then 
+\eqref{c4e62} indicates that the vector
 \begin{equation}\label{c4e63}
 p^\nu = a\int T^{\nu\mu}dS_\mu,
 \end{equation}
-where $a$ is a constant, has the same value at the two instants of $x^0$ involved
-in constructing the closed surface. In other words, $p^\nu$ is a constant. For an
-appropriately chosen value of $a$, $p^\nu$ becomes the 4-momentum density of the
-system.
+where $a$ is a constant, has the same value at the two instants of $x^0$ 
+involved in constructing the closed surface. In other words, $p^\nu$ is a 
+constant. For an appropriately chosen value of $a$, $p^\nu$ becomes the 
+4-momentum density of the system.
 
 \item If $\nu = 0$, \eqref{c4e63} becomes
 \[
 p^0 = a\int T^{0\mu}dS_\mu,
 \]
-If the integration is over the hyperplane $x^0$ then $T^{0\mu}dS_\mu = T^{00}dV$. Thus,
+If the integration is over the hyperplane $x^0$ then $T^{0\mu}dS_\mu = 
+T^{00}dV$. Thus,
 \[
 p^0 = a\int T^{00}dV.
 \]
@@ -682,11 +718,12 @@ q_{\alpha; 0} = \pdt{q_\alpha}{x^0} = \frac{1}{c}\dot{q}_\alpha
 \]
 so that
 \[
-T^{00} = \dot{q}_\alpha\pdt{\Lambda}{\dot{q}_\alpha} - \tensor{\delta}{_0^0} \Lambda.
+T^{00} = \dot{q}_\alpha\pdt{\Lambda}{\dot{q}_\alpha} - 
+\tensor{\delta}{_0^0} \Lambda.
 \]
-Clearly, $T^{00}$ is the energy density of the system. In analogy with \eqref{c2e26},
-the constant $a$ can be chosen to be $1/c$. Thus, the correct expression for the 
-4-momentum density is
+Clearly, $T^{00}$ is the energy density of the system. In analogy with 
+\eqref{c2e26}, the constant $a$ can be chosen to be $1/c$. Thus, the correct 
+expression for the 4-momentum density is
 \begin{equation}\label{c4e64}
 p^\nu = \frac{1}{c}\int T^{\nu\mu}dS_\mu.
 \end{equation}
@@ -695,7 +732,7 @@ p^\nu = \frac{1}{c}\int T^{\nu\mu}dS_\mu.
 \begin{equation}\label{c4e65}
 U^{\mu\nu} = T^{\mu\nu} + \pdt{\psi^{\mu\nu\sigma}}{x^\sigma}
 \end{equation}
-where $\psi^{\mu\nu\sigma} = -\psi^{\mu\sigma\nu}$, that is $\psi^{\mu\nu\sigma}$
+where $\psi^{\mu\nu\sigma}=-\psi^{\mu\sigma\nu}$, that is $\psi^{\mu\nu\sigma}$
 is an anti-symmetric tensor of rank 3. Because of anti-symmetry,
 \[
 \frac{\partial^2\psi^{\mu\nu\sigma}}{\partial x^\mu \partial x^\sigma} = 
@@ -718,19 +755,19 @@ anti-symmetric tensor to get
 \int U^{\mu\nu} dS_\mu = \int T^{\mu\nu} dS_\mu + 
 \frac{1}{2}\int df^\ast_{\mu\sigma}\psi^{\mu\nu\sigma}.
 \end{equation}
-The first two integrals in \eqref{c4e68} are over three dimensional hypersurfaces,
-that is ordinary volumes while the last integral is over a two dimensional surface.
-If we let the surface be large enough that the fields on it are zero then the
-last term will vanish and we are left with
+The first two integrals in \eqref{c4e68} are over three dimensional 
+hypersurfaces, that is ordinary volumes while the last integral is over a two 
+dimensional surface. If we let the surface be large enough that the fields on 
+it are zero then the last term will vanish and we are left with
 \begin{equation}\label{c4e69}
 \int U^{\mu\nu} dS_\mu = \int T^{\mu\nu} dS_\mu,
 \end{equation}
-that is, the 4-momentum density is the same for both energy-momentum tensors. Thus
-the energy-momentum tensor is defined to withing the partial derivative of an
-anti-symmetric tensor of rank 3.
+that is, the 4-momentum density is the same for both energy-momentum tensors. 
+Thus the energy-momentum tensor is defined to withing the partial derivative of 
+an anti-symmetric tensor of rank 3.
 
-\item From equation \eqref{c2e86} the angular momentum of the field can be written
-as
+\item From equation \eqref{c2e86} the angular momentum of the field can be 
+written as
 \begin{equation}\label{c4e70}
 L^{\mu\nu} = \int (x^\mu dp^\nu - x^\nu dp^\mu).
 \end{equation}
@@ -750,19 +787,22 @@ where the integral is over the closed hypersurface comprising of:
 \begin{itemize}
 \item The hypersurface normal to the $x^0$ axis at time $t_1$,
 \item The hypersurface normal to the $x^0$ axis at time $t_2$ and
-\item A hypersurface at a great distance from the fields joining these hyperplanes.
+\item A hypersurface at a great distance from the fields joining these 
+hyperplanes.
 \end{itemize}
 From the 4-dimensional Gauss theorem of \eqref{c1e74},
 \begin{equation}\label{c4e72}
 L^{\mu\nu}(t_1) - L^{\mu\nu}(t_2) = 
-\frac{1}{c}\int\frac{\partial}{\partial x^\rho}(x^\mu T^{\nu\rho} - x^\nu T^{\mu\rho})d\Omega.
+\frac{1}{c}\int\frac{\partial}{\partial x^\rho}(x^\mu T^{\nu\rho} - 
+x^\nu T^{\mu\rho})d\Omega.
 \end{equation}
 The integrand is
 \begin{eqnarray*}
 \frac{\partial}{\partial x^\rho}(x^\mu T^{\nu\rho} - x^\nu T^{\mu\rho}) &=&
 \tensor{\delta}{_\rho^\mu}T^{\nu\rho} + x^\mu\pdt{T^{\nu\rho}}{x^\rho} - 
 \tensor{\delta}{_\rho^\nu}T^{\mu\rho} - x^\nu\pdt{T^{\mu\rho}}{x^\rho} \\
- &=& T^{\nu\mu} + x^\mu\pdt{T^{\nu\rho}}{x^\rho} - T^{\mu\nu} -  x^\nu\pdt{T^{\mu\rho}}{x^\rho}
+ &=& T^{\nu\mu} + x^\mu\pdt{T^{\nu\rho}}{x^\rho} - T^{\mu\nu} - 
+ x^\nu\pdt{T^{\mu\rho}}{x^\rho}
 \end{eqnarray*}
 From equation \eqref{c4e61},
 \[
@@ -770,17 +810,20 @@ From equation \eqref{c4e61},
 \]
 so that equation \eqref{c4e72} is
 \begin{equation}\label{c4e73}
-L^{\mu\nu}(t_1) - L^{\mu\nu}(t_2) = \frac{1}{c}\int (T^{\nu\mu} - T^{\mu\nu})d\Omega.
+L^{\mu\nu}(t_1) - L^{\mu\nu}(t_2) = \frac{1}{c}\int (T^{\nu\mu} - 
+T^{\mu\nu})d\Omega.
 \end{equation}
-If $L^{\mu\nu}(t_1) = L^{\mu\nu}(t_2)$ then we must have $T^{\mu\nu} = T^{\nu\mu}$. 
+If $L^{\mu\nu}(t_1) = L^{\mu\nu}(t_2)$ then we must have $T^{\mu\nu} = 
+T^{\nu\mu}$. 
 
 \item We once again choose to the surface of integration in \eqref{c4e64} as the
 one whose normal is along the $x^0$ axis so that
 \[
-p^\nu = \frac{1}{c}\int T^{\nu\mu}dS_0 = \int{1}{c}\int T^{\nu 0}dV.
+p^\nu = \frac{1}{c}\int T^{\nu\mu}dS_0 = \int\frac{1}{c}\int T^{\nu 0}dV.
 \]
 Since $p^\nu$ is the 4-momentum of the system, we call $W = T^{00}$ the energy
-density and $T^{01}/c, T^{02}/c, T^{03}/c$ as the momentum density of the system.
+density and $T^{01}/c, T^{02}/c, T^{03}/c$ as the momentum density of the 
+system.
 
 \item Consider the conservation equation \eqref{c4e61} for $\nu = 0$. It is
 \[
@@ -794,9 +837,10 @@ Using the Gauss theorem in 3-dimensions on the rhs we get
 \[
 \frac{\partial}{\partial t}\int_V T^{00}dV = -c\oint T^{0i}df_i.
 \]
-Thus, the components $cT^{0i}$ are the also the flux of energy through the closed
-surface bounding the volume $V$. In the previous point we identifier $T^{0i} = 
-cp^i$. Thus, $c^2p^i$ can be identified as components of flux of energy.
+Thus, the components $cT^{0i}$ are the also the flux of energy through the 
+closed surface bounding the volume $V$. In the previous point we identifier 
+$T^{0i} = cp^i$. Thus, $c^2p^i$ can be identified as components of flux of 
+energy.
 
 \item Now consider the conservation equation \eqref{c4e62} for the space
 components,
@@ -812,25 +856,27 @@ However, $T^{0i}/c = p^i$, so that
 \frac{\partial}{\partial t}\int_V p^i dt = -\oint T^{ij}df_j.
 \]
 The lhs is the rate of change of momentum in the volume. Therefore, the rhs must
-be the total force on it. The force is expressed as a surface integral. Therefore,
-we identify the integrand as the negative of the stress tensor $\sigma^{ij}$. The
-stress tensor is thus a flux of momentum. We can write the above equation as
+be the total force on it. The force is expressed as a surface integral. 
+Therefore, we identify the integrand as the negative of the stress tensor 
+$\sigma^{ij}$. The stress tensor is thus a flux of momentum. We can write the 
+above equation as
 \begin{equation}\label{c4e74}
 \frac{\partial}{\partial t}\int_V p^i dt = \oint \sigma^{ij}df_j.
 \end{equation}
 
-$T^{ij}$ is the flux of $p^i$ through surface perpendicular to the $x^j$ axis. In
-similar vain, $\sigma^{ij}$ is the normal force on a surface perpendicular to the
-$x^i$ axis and the $i$-th component of the shear force acting in the $x^j$ 
+$T^{ij}$ is the flux of $p^i$ through surface perpendicular to the $x^j$ axis. 
+In similar vain, $\sigma^{ij}$ is the normal force on a surface perpendicular to
+the $x^i$ axis and the $i$-th component of the shear force acting in the $x^j$ 
 direction.
 
-The physical nature of the energy-momentum tensor reveals itself if we write it as
+The physical nature of the energy-momentum tensor reveals itself if we write 
+it as
 \begin{equation}\label{c4e75}
 T^{\mu\nu} = \begin{bmatrix}
 W & p_x & p_y & p_z \\
-p_x & -\sigma_{xx} & -\sigma_{xy} & \sigma_{xz} \\
-p_y & -\sigma_{yx} & -\sigma_{yy} & \sigma_{yz} \\
-p_z & -\sigma_{zx} & -\sigma_{yy} & \sigma_{zz}
+p_x & -\sigma_{xx} & -\sigma_{xy} & -\sigma_{xz} \\
+p_y & -\sigma_{yx} & -\sigma_{yy} & -\sigma_{yz} \\
+p_z & -\sigma_{zx} & -\sigma_{yy} & -\sigma_{zz}
 \end{bmatrix}.
 \end{equation}
 Note that, $p_x, p_y, p_z$ are components of the 3-momentum for which we do not
@@ -847,11 +893,13 @@ derivative of $\Lambda$ with respect to
 \[
 A_{\alpha; \mu} = \pdt{A_\alpha}{x^\mu}.
 \]
-A tedious and error prone method could be write down all $16$ terms on the rhs of
-\eqref{c4e78}. A more convenient method is to get a variation of $\Lambda$. That is,
+A tedious and error prone method could be write down all $16$ terms on the rhs 
+of \eqref{c4e78}. A more convenient method is to get a variation of $\Lambda$. 
+That is,
 \begin{equation}\label{c4e77}
 \delta\Lambda = -\frac{1}{16\pi}\left((\delta F^{\mu\nu})F_{\mu\nu} + 
-F^{\mu\nu}(\delta F_{\mu\nu})\right) = -\frac{1}{8\pi}F^{\mu\nu}\delta F_{\mu\nu}.
+F^{\mu\nu}(\delta F_{\mu\nu})\right) = 
+-\frac{1}{8\pi}F^{\mu\nu}\delta F_{\mu\nu}.
 \end{equation}
 However,
 \begin{equation}\label{c4e78}
@@ -860,10 +908,14 @@ However,
 \end{equation}
 so that
 \begin{eqnarray}
-\delta\Lambda &=& -\frac{1}{8\pi}F^{\mu\nu}(\delta\partial_\mu A_\nu - \delta\partial_\nu A_\mu) \nonumber \\
-8\pi\delta\Lambda &=& -F^{\mu\nu}\delta\partial_\mu A_\nu + F^{\mu\nu}\delta\partial_\nu A_\mu \nonumber \\
- &=& -F^{\mu\nu}\delta\partial_\mu A_\nu + F^{\nu\mu}\delta\partial_\mu A_\nu \nonumber \\
- &=& -F^{\mu\nu}\delta\partial_\mu A_\nu - F^{\mu\nu}\delta\partial_\mu A_\nu \nonumber \\
+\delta\Lambda &=& -\frac{1}{8\pi}F^{\mu\nu}(\delta\partial_\mu A_\nu - 
+	\delta\partial_\nu A_\mu) \nonumber \\
+8\pi\delta\Lambda &=& -F^{\mu\nu}\delta\partial_\mu A_\nu + 
+	F^{\mu\nu}\delta\partial_\nu A_\mu \nonumber \\
+ &=& -F^{\mu\nu}\delta\partial_\mu A_\nu + F^{\nu\mu}\delta\partial_\mu 
+ 	A_\nu \nonumber \\
+ &=& -F^{\mu\nu}\delta\partial_\mu A_\nu - F^{\mu\nu}\delta\partial_\mu A_\nu 
+ \nonumber \\
  &=& -2F^{\mu\nu}\delta\partial_\mu A_\nu \label{c4e79}
 \end{eqnarray}
 so that
@@ -877,12 +929,15 @@ Using this equation in \eqref{c4e59}, we get
 \end{equation}
 Multiplying by $g^{\nu\rho}$,
 \begin{eqnarray}
-g^{\nu\rho}\tensor{T}{_\nu^\mu} &=& -\frac{1}{4\pi}g^{\nu\rho}A_{\alpha;\nu}F^{\mu\alpha} +
-\frac{1}{16\pi}g^{\nu\rho}\tensor{\delta}{_\nu^\mu} F_{\alpha\beta}F^{\alpha\beta} \nonumber \\
+g^{\nu\rho}\tensor{T}{_\nu^\mu} &=& -\frac{1}{4\pi}g^{\nu\rho}A_{\alpha;\nu}
+F^{\mu\alpha} +
+\frac{1}{16\pi}g^{\nu\rho}\tensor{\delta}{_\nu^\mu} F_{\alpha\beta}
+F^{\alpha\beta} \nonumber \\
 T^{\rho\mu} &=& -\frac{1}{4\pi}\pdt{A_\alpha}{x_\rho}F^{\mu\alpha} + 
 \frac{1}{16\pi}\tensor{g}{^\rho^\mu} F_{\alpha\beta}F^{\alpha\beta} \nonumber \\
  &=& -\frac{1}{4\pi}\pdt{A^\alpha}{x_\rho}\tensor{F}{^\mu_\alpha} + 
-\frac{1}{16\pi}\tensor{g}{^\rho^\mu} F_{\alpha\beta}F^{\alpha\beta} \label{c4e82}
+\frac{1}{16\pi}\tensor{g}{^\rho^\mu} F_{\alpha\beta}F^{\alpha\beta} 
+\label{c4e82}
 \end{eqnarray}
 From equation \eqref{c4e37}, after multiplying by an appropriate metric tensor,
 \[
@@ -894,8 +949,8 @@ In absence of charges, it becomes
 \]
 so that
 \begin{equation}\label{c4e83}
-\frac{1}{4\pi}\frac{\partial}{\partial x_\alpha}(A^\rho\tensor{F}{^\mu_\alpha}) = 
-\frac{1}{4\pi}\pdt{A^\rho}{x_\alpha}\tensor{F}{^\mu_\alpha}
+\frac{1}{4\pi}\frac{\partial}{\partial x_\alpha}(A^\rho\tensor{F}{^\mu_\alpha}) 
+= \frac{1}{4\pi}\pdt{A^\rho}{x_\alpha}\tensor{F}{^\mu_\alpha}
 \end{equation}
 From equations \eqref{c4e65} and \eqref{c4e69}, we can always add a term like 
 the lhs of above equation to the stress tensor without altering its physical 
@@ -904,7 +959,8 @@ write \eqref{c4e82} as
 \begin{eqnarray*}
 T^{\rho\mu} &=& -\frac{1}{4\pi}\pdt{A^\alpha}{x_\rho}\tensor{F}{^\mu_\alpha} + 
 \frac{1}{16\pi}\tensor{g}{^\rho^\mu} F_{\alpha\beta}F^{\alpha\beta} +
-\frac{1}{4\pi}\frac{\partial}{\partial x_\alpha}(A^\rho\tensor{F}{^\mu_\alpha}) \\
+\frac{1}{4\pi}\frac{\partial}{\partial x_\alpha}(A^\rho
+\tensor{F}{^\mu_\alpha}) \\
  &=& -\frac{1}{4\pi}\pdt{A^\alpha}{x_\rho}\tensor{F}{^\mu_\alpha} + 
 \frac{1}{16\pi}\tensor{g}{^\rho^\mu} F_{\alpha\beta}F^{\alpha\beta} +
 \frac{1}{4\pi}\pdt{A^\rho}{x_\alpha}\tensor{F}{^\mu_\alpha} \\
@@ -967,11 +1023,12 @@ E_z & -H_y & H_x & 0
 or
 \begin{equation}\label{c4e86}
 F^{\rho\alpha}\tensor{F}{^\mu_\alpha} =
-\begin{bmatrix} E^2 & E_yH_z - E_zH_y & -E_xH_z + E_zH_x & E_xH_y  - E_yH_x \\
- E_yH_z - E_zH_y & -E_x^2 + H_z^2 + H_y^2 & -E_xE_y -H_xH_y & -E_xE_z -H_xH_z \\
- E_zH_x - E_xH_z & -E_xE_y - H_xH_y & -E_y^2 + H_z^2 + H_x^2 & -E_yE_z - H_yH_z \\
- E_xH_y - E_yH_x & -E_xE_z -H_xH_z & -E_yE_z - H_yH_z & -E_z^2 + H_y^2 + H_x^2
- \end{bmatrix}
+\begin{bmatrix} 
+E^2 & E_yH_z - E_zH_y & -E_xH_z + E_zH_x & E_xH_y  - E_yH_x \\
+E_yH_z - E_zH_y & -E_x^2 + H_z^2 + H_y^2 & -E_xE_y -H_xH_y & -E_xE_z -H_xH_z \\
+E_zH_x-E_xH_z & -E_xE_y - H_xH_y & -E_y^2 + H_z^2 + H_x^2 & -E_yE_z - H_yH_z \\
+E_xH_y - E_yH_x & -E_xE_z -H_xH_z & -E_yE_z - H_yH_z & -E_z^2 + H_y^2 + H_x^2
+\end{bmatrix}
 \end{equation}
 Similarly,
 \[
@@ -1007,11 +1064,12 @@ T^{22} &=& \frac{-E_x^2 + E_y^2 - E_z^2 - H_x^2 + H_y^2 - H_z^2}{8\pi} \\
 T^{23} &=& -\frac{E_yE_z + H_yH_z}{4\pi} \\
 T^{33} &=& \frac{-E_x^2 - E_y^2 + E_z^2 - H_x^2 - H_y^2 + H_z^2}{8\pi}
 \end{eqnarray*}
-The remaining terms need not be computed because of the symmetry of $T^{\mu\nu}$.
-From \eqref{c4e50}, we observe that $T^{00} = W$, the energy density and from
-\eqref{c4e45}, $T^{0i} = S_i/c$. Further, if
+The remaining terms need not be computed because of the symmetry of 
+$T^{\mu\nu}$. From \eqref{c4e50}, we observe that $T^{00} = W$, the energy 
+density and from \eqref{c4e45}, $T^{0i} = S_i/c$. Further, if
 \begin{equation}\label{c4e89}
-\sigma_{ij} = \frac{1}{4\pi}\left(E_iE_j + H_iH_j - \frac{\delta_{ij}}{2}(E^2+H^2)\right).
+\sigma_{ij} = \frac{1}{4\pi}\left(E_iE_j + H_iH_j - 
+\frac{\delta_{ij}}{2}(E^2+H^2)\right).
 \end{equation}
 is the Maxwell stress tensor then
 \begin{equation}\label{c4e90}
@@ -1049,19 +1107,22 @@ or
 \begin{equation}\label{c4e95}
 T^{\mu\nu} = \rho_m cu^\mu u^\nu \td{s}{t}.
 \end{equation}
-This tensor is symmetric and it is the energy-momentum tensor for non-interacting
-particles.
+This tensor is symmetric and it is the energy-momentum tensor for 
+non-interacting particles.
 
-\item What does energy/momentum conservation mean for the tensor of \eqref{c4e95}?
+\item What does energy/momentum conservation mean for the tensor of 
+\eqref{c4e95}?
 To understand that, we first write \eqref{c4e95} as
 \begin{equation}\label{c4e96}
 T^{\mu\nu} = \rho_m c u^\mu\td{x^\nu}{t}
 \end{equation}
 so that
 \begin{eqnarray*}
-\pdt{T^{\mu\nu}}{x^\nu} &=& cu^\mu\frac{\partial}{\partial x^\nu}\left(\rho_m\td{x^\nu}{t}\right)
+\pdt{T^{\mu\nu}}{x^\nu} &=& cu^\mu\frac{\partial}{\partial x^\nu}
+	\left(\rho_m\td{x^\nu}{t}\right)
 + \rho_m c\td{x^\nu}{t}\pdt{u^\mu}{x^\nu} \\
- &=& cu^\mu\frac{\partial}{\partial x^\nu}\left(\rho_m\td{x^\nu}{t}\right) + \rho_m c\td{u^\mu}{t}
+ &=& cu^\mu\frac{\partial}{\partial x^\nu}\left(\rho_m\td{x^\nu}{t}\right) + 
+ \rho_m c\td{u^\mu}{t}
 \end{eqnarray*}
 The term
 \[
@@ -1085,32 +1146,38 @@ which is same as
 \]
 Therefore,
 \[
-4\pi\pdt{\tensor{T}{^\rho_\mu}}{x^\rho} = -\pdt{F^{\rho\alpha}}{x^\rho}F_{\mu\alpha}
-- F^{\rho\alpha}\pdt{F_{\mu\alpha}}{x^\rho} + \frac{1}{2}F^{\alpha\beta}\pdt{F_{\alpha\beta}}{x^\rho}
+4\pi\pdt{\tensor{T}{^\rho_\mu}}{x^\rho} = -\pdt{F^{\rho\alpha}}{x^\rho}
+F_{\mu\alpha} - F^{\rho\alpha}\pdt{F_{\mu\alpha}}{x^\rho} + 
+\frac{1}{2}F^{\alpha\beta}\pdt{F_{\alpha\beta}}{x^\rho}
 \]
 Using \eqref{c4e5} in the last term,
 \[
-4\pi\pdt{\tensor{T}{^\rho_\mu}}{x^\rho} = -\pdt{F^{\rho\alpha}}{x^\rho}F_{\mu\alpha}
+4\pi\pdt{\tensor{T}{^\rho_\mu}}{x^\rho} = -\pdt{F^{\rho\alpha}}{x^\rho}
+F_{\mu\alpha}
 - F^{\rho\alpha}\pdt{F_{\mu\alpha}}{x^\rho} - \frac{\tensor{g}{^\rho_\mu}}{2}
- F^{\alpha\beta}\left(\pdt{F_{\beta\rho}}{x^\alpha} + \pdt{F_{\rho\alpha}}{x^\beta}\right)
+ F^{\alpha\beta}
+ \left(\pdt{F_{\beta\rho}}{x^\alpha} + \pdt{F_{\rho\alpha}}{x^\beta}\right)
 \]
 Using \eqref{c4e37} in the first term,
 \[
 4\pi\pdt{\tensor{T}{^\rho_\mu}}{x^\rho} = -\frac{4\pi}{c}j^\alpha F_{\mu\alpha}
-- F^{\rho\alpha}\pdt{F_{\mu\alpha}}{x^\rho} - \frac{\tensor{g}{^\rho_\mu}}{2}F^{\alpha\beta}
+- F^{\rho\alpha}\pdt{F_{\mu\alpha}}{x^\rho} - \frac{\tensor{g}{^\rho_\mu}}{2}
+F^{\alpha\beta}
 \left(\pdt{F_{\beta\rho}}{x^\alpha} + \pdt{F_{\rho\alpha}}{x^\beta}\right)
 \]
 or
 \[
 4\pi\pdt{\tensor{T}{^\rho_\mu}}{x^\rho} = -\frac{4\pi}{c}j^\alpha F_{\mu\alpha}
 - F^{\rho\alpha}\pdt{F_{\mu\alpha}}{x^\rho} + \frac{\tensor{g}{^\rho_\mu}}{2}
-\left(F^{\alpha\beta}\pdt{F_{\rho\beta}}{x^\alpha} + F^{\beta\alpha}\pdt{F_{\rho\alpha}}{x^\beta}\right).
+\left(F^{\alpha\beta}\pdt{F_{\rho\beta}}{x^\alpha} + F^{\beta\alpha}
+\pdt{F_{\rho\alpha}}{x^\beta}\right).
 \]
 Interchange the bound indices $\alpha$ and $\beta$ in the last term,
 \[
 4\pi\pdt{\tensor{T}{^\rho_\mu}}{x^\rho} = -\frac{4\pi}{c}j^\alpha F_{\mu\alpha}
 - F^{\rho\alpha}\pdt{F_{\mu\alpha}}{x^\rho} + \frac{\tensor{g}{^\rho_\mu}}{2}
-\left(F^{\alpha\beta}\pdt{F_{\rho\beta}}{x^\alpha} + F^{\alpha\beta}\pdt{F_{\rho\beta}}{x^\alpha}\right).
+\left(F^{\alpha\beta}\pdt{F_{\rho\beta}}{x^\alpha} + 
+F^{\alpha\beta}\pdt{F_{\rho\beta}}{x^\alpha}\right).
 \]
 That is,
 \[
@@ -1118,8 +1185,8 @@ That is,
 - F^{\rho\alpha}\pdt{F_{\mu\alpha}}{x^\rho} + \tensor{g}{^\rho_\mu}
 F^{\alpha\beta}\pdt{F_{\rho\beta}}{x^\alpha}
 \]
-In the second term on the rhs, rename $\rho \rightarrow \alpha, \alpha \rightarrow
-\beta$ so that
+In the second term on the rhs, rename $\rho \rightarrow \alpha, \alpha 
+\rightarrow \beta$ so that
 \[
 4\pi\pdt{\tensor{T}{^\rho_\mu}}{x^\rho} = -\frac{4\pi}{c}j^\alpha F_{\mu\alpha}
 - F^{\alpha\beta}\pdt{F_{\mu\beta}}{x^\alpha} + \tensor{g}{^\rho_\mu}
@@ -1128,7 +1195,8 @@ F^{\alpha\beta}\pdt{F_{\rho\beta}}{x^\alpha}
 Since $\tensor{g}{^\rho_\mu} F_{\rho\beta} = F_{\mu\beta}$,
 \[
 4\pi\pdt{\tensor{T}{^\rho_\mu}}{x^\rho} = -\frac{4\pi}{c}j^\alpha F_{\mu\alpha}
-- F^{\alpha\beta}\pdt{F_{\mu\beta}}{x^\alpha} + F^{\alpha\beta}\pdt{F_{\mu\beta}}{x^\alpha}
+- F^{\alpha\beta}\pdt{F_{\mu\beta}}{x^\alpha} + F^{\alpha\beta}
+\pdt{F_{\mu\beta}}{x^\alpha}
 \]
 or
 \begin{equation}\label{c4e98}
@@ -1166,7 +1234,8 @@ An equivalent form of this equation is
 \end{equation}
 Adding equation \eqref{c4e98} and \eqref{c4e103} gives
 \begin{equation}\label{c4e104}
-\frac{\partial}{\partial x^\mu}\left(\tensor{T}{^{(f)\rho}_\mu} + \tensor{T}{^{(m)\rho}_\mu}\right) = 0.
+\frac{\partial}{\partial x^\mu}\left(\tensor{T}{^{(f)\rho}_\mu} + 
+\tensor{T}{^{(m)\rho}_\mu}\right) = 0.
 \end{equation}
 Thus the combined energy momentum tensor 
 \begin{equation}\label{c4e105}
@@ -1183,11 +1252,13 @@ in an electromagnetic field is
 because the electromagnetic field's energy momentum tensor is anti-symmetric and
 hence traceless. From \eqref{c4e95},
 \begin{equation}\label{c4e107}
-\tensor{T}{^\mu_\mu} = \rho_m cu^\mu u_\mu \td{s}{t} = \rho_m c^2\sqrt{1 - \beta^2}.
+\tensor{T}{^\mu_\mu} = \rho_m cu^\mu u_\mu \td{s}{t} = 
+\rho_m c^2\sqrt{1 - \beta^2}.
 \end{equation}
 If, instead of a continuous mass distribution, we have discrete particles,
 \begin{equation}\label{c4e108}
-\tensor{T}{^{\mu}_\mu} = \sum_a m_ac^2\sqrt{1 - \beta_a^2}\delta(\vec{r} - \vec{r}_a).
+\tensor{T}{^{\mu}_\mu} = \sum_a m_ac^2\sqrt{1 - \beta_a^2}\delta(\vec{r} - 
+\vec{r}_a).
 \end{equation}
 From this equation, it is evident that
 \begin{equation}\label{c4e109}
@@ -1214,7 +1285,8 @@ range. If we define the average of a function $f$ as
 \end{equation}
 then
 \begin{equation}\label{c4e113}
-\left\langle\td{f}{t}\right\rangle = \frac{1}{T} \int_0^T \td{f}{t}dt = \frac{f(T) - f(0)}{T}.
+\left\langle\td{f}{t}\right\rangle = \frac{1}{T} \int_0^T \td{f}{t}dt = 
+\frac{f(T) - f(0)}{T}.
 \end{equation}
 In the limit $T \rightarrow \infty$, since the function $f$ takes finite
 values at all times,
@@ -1252,16 +1324,19 @@ vanishes and we are left with
 \end{equation}
 From this equation we readily conclude that
 \begin{equation}\label{c4e117}
-\int \tensor{\langle T \rangle}{_\mu^\mu} dV = \int\tensor{\langle T \rangle}{_0^0} dV + \int\tensor{\bar{T}}{_i^i}dV =
+\int \tensor{\langle T \rangle}{_\mu^\mu} dV = 
+\int\tensor{\langle T \rangle}{_0^0} dV + \int\tensor{\bar{T}}{_i^i}dV =
 \int WdV = \mathcal{E}.
 \end{equation}
 From \eqref{c4e108}, we have
 \[
-\tensor{\langle T \rangle}{^{\mu}_\mu} = \sum_a m_ac^2\langle\sqrt{1 - \beta_a^2}\rangle\delta(\vec{r} - \vec{r}_a),
+\tensor{\langle T \rangle}{^{\mu}_\mu} = 
+\sum_a m_ac^2\langle\sqrt{1 - \beta_a^2}\rangle\delta(\vec{r} - \vec{r}_a),
 \]
 so that substituting it on the extreme lhs of \eqref{c4e117} gives,
 \[
-\int \sum_a m_ac^2\langle\sqrt{1 - \beta_a^2}\rangle\delta(\vec{r} - \vec{r}_a) dV = \mathcal{E}.
+\int \sum_a m_ac^2
+\langle\sqrt{1 - \beta_a^2}\rangle\delta(\vec{r} - \vec{r}_a) dV = \mathcal{E}.
 \]
 or
 \begin{equation}\label{c4e118}
@@ -1270,13 +1345,13 @@ or
 This is the relativistic generalisation of the classical virial theorem.
 
 \item The calculations in the previous point should be corrected by removing the
-``self-energy'' terms. These are the terms arising from field contributions of the
-masses and are
+``self-energy'' terms. These are the terms arising from field contributions of 
+the masses and are
 \[
 \sum_a \int\frac{E_a^2 + H_a^2}{8\pi}dV.
 \]
 
-\item We will not examine how the energy momentum tensor looks for a continuum.
+\item We will now examine how the energy momentum tensor looks for a continuum.
 Referring to the form in \eqref{c4e90}, in the frame of reference in which the
 continuum is at rest,
 \begin{equation}\label{c4e119}
@@ -1291,15 +1366,16 @@ T^{\mu\nu} = \begin{bmatrix}\mathcal{E} & 0 & 0 & 0 \\
 0 & 0 & 0 & p
 \end{bmatrix}
 \end{equation}
-In the rest frame of reference, the 4-velocity of a particle is $u^\mu = (1, 0, 0, 0)$
-so that an expression of the form
+In the rest frame of reference, the 4-velocity of a particle is $u^\mu = 
+(1, 0, 0, 0)$ so that an expression of the form
 \begin{equation}\label{c4e121}
 T^{\mu\nu} = (p + \mathcal{E})u^\mu u^\nu - p\delta^{\mu\nu}
 \end{equation} 
 reduces to \eqref{c4e120} in the rest frame. In mixed components, this equation
 becomes
 \begin{equation}\label{c4e122}
-\tensor{T}{_\mu^\nu} = (p + \mathcal{E})u_\mu u^\nu - p\tensor{\delta}{_\mu^\nu}.
+\tensor{T}{_\mu^\nu} = (p + \mathcal{E})u_\mu u^\nu - 
+p\tensor{\delta}{_\mu^\nu}.
 \end{equation} 
 
 Now 
@@ -1317,7 +1393,7 @@ W = \frac{\mathcal{E} + p\beta^2}{1 - \beta^2} = \gamma(\mathcal{E} + p\beta^2).
 \end{equation}
 Similarly,
 \[
-\frac{\vec{S}}{c} = \frac{(p + \mathcal{E})\bm{\beta}}{1 - \beta^2}
+\frac{\vec{S}}{c} = \frac{(p + \mathcal{E})\vec{\beta}}{1 - \beta^2}
 \]
 so that
 \begin{equation}\label{c4e124}
@@ -1336,8 +1412,8 @@ If the velocity of the continuum is small, \eqref{c4e124} can be approximated by
 \[
 \tensor{T}{_\mu^\mu} = (p + \mathcal{E})u_\mu u^\mu - 4p
 \]
-From equation \eqref{c1e84}, $u_\mu u^\mu = 1$ and since $\tensor{\delta}{_\mu^\mu} 
-= 4$, we get
+From equation \eqref{c1e84}, $u_\mu u^\mu = 1$ and since $\tensor{\delta}
+{_\mu^\mu} = 4$, we get
 \begin{equation}\label{c4e126}
 \tensor{T}{_\mu^\mu} = \mathcal{E} - 3p.
 \end{equation}

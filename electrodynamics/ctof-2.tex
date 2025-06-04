@@ -261,7 +261,8 @@ g^\mu = \left(\frac{\gamma}{c^2}\vec{f}\cdot\vec{v},
 \]
 or
 \begin{equation}\label{c2e34}
-\pdt{S}{x^\mu}\pdt{S}{x_\mu} = g^{\mu\nu}\pdt{S}{x^\mu}\pdt{S}{x^\nu} = m^2c^2
+\pdt{S}{x^\mu}\pdt{S}{x_\mu} = \eta^{\mu\nu}\pdt{S}{x^\mu}\pdt{S}{x^\nu} 
+= m^2c^2
 \end{equation}
 is the relativistic Hamilton-Jacobi equation. Expanding the sum
 \begin{equation}\label{c2e35}
@@ -656,15 +657,15 @@ Since the norm of this vector remains unchanged, $x^\op_\mu x^{\op\mu} = x_\mu
 x^\mu$. Now,
 \[
 x^\op_\mu = 
-g_{\mu\nu}x^{\op\nu} = g_{\mu\nu}(x^\nu + x_\rho \delta\Omega^{\rho\nu})
-= x_\mu + x_\rho g_{\mu\nu}\delta\Omega^{\rho\nu},
+\eta_{\mu\nu}x^{\op\nu} = \eta_{\mu\nu}(x^\nu + x_\rho \delta\Omega^{\rho\nu})
+= x_\mu + x_\rho \eta_{\mu\nu}\delta\Omega^{\rho\nu},
 \]
 so that
 \begin{eqnarray*}
 x^\op_\mu x^{\op\mu} &=& 
- (x_\mu + x_\rho g_{\mu\nu}\delta\Omega^{\rho\nu})(x^\mu + 
+ (x_\mu + x_\rho \eta_{\mu\nu}\delta\Omega^{\rho\nu})(x^\mu + 
 x_\nu\delta\Omega^{\nu\mu}) \\
- &=& x_\mu x^\mu + x_\mu x_\nu \delta\Omega^{\nu\mu} + x_\rho g_{\mu\nu}x^\mu 
+ &=& x_\mu x^\mu + x_\mu x_\nu \delta\Omega^{\nu\mu} + x_\rho \eta_{\mu\nu}x^\mu 
  \delta\Omega^{\rho\nu} \\
  &=& x_\mu x^\mu + x_\mu x_\nu \delta\Omega^{\nu\mu} + x_\rho x_\nu\delta
  \Omega^{\rho\nu} \\

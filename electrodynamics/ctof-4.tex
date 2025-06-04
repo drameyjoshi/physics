@@ -177,7 +177,7 @@ S_f = \frac{1}{8\pi}\int (E^2 - H^2) dt dV,
 \end{equation}
 where we used the fact that $d\Omega = cdtdV$. We can also write it as
 \begin{equation}\label{c4e17}
-S_f = \int dt \left(\frac{1}{8\pi}\int dV (E^2 - H^2)\right) = \int dt L,
+S_f = \int dt \left(\frac{1}{8\pi}\int dV (E^2 - H^2)\right) = \int dt L_f,
 \end{equation}
 where
 \begin{equation}\label{c4e18}
@@ -251,16 +251,20 @@ S = -\sum_i m_ic\int ds -
 \]
 The second term is
 \[
-S_{mf} = -\frac{1}{c}\sum_i e_i\left(\int A_0dx^0 + \cdot + \int A_3dx^3\right).
+S_{mf} = -\frac{1}{c}\sum_i e_i\left(\int A_0dx^0 + \cdots + 
+\int A_3dx^3\right).
 \]
 For a continuous charge distribution, we replace $\sum_i e_i$ by $\int \rho dV$
 so that
 \begin{eqnarray*}
 S_{mf} &=& -\frac{1}{c}\int dV \rho\left(\int A_0dx^0 + \cdots + 
 \int A_3dx^3\right) \\
- &=& -\frac{1}{c}\left(\int dVdt \rho\td{x^0}{t}A_0 + \cdots + 
+ &=& -\frac{1}{c}\left(\int dVdx^0 \frac{\rho c}{c}A_0 + \cdots + 
  \int dVdt \rho\td{x^3}{t}A_3\right) \\
- &=& -\frac{1}{c}\left(\int dVdt j^0A_0 + \cdots + \int dVdt j^3A_3\right)
+ &=& -\frac{1}{c}\left(\int dVdx^0 \frac{\rho c}{c}A_0 + \cdots + 
+ \int dVdx^0 \frac{\rho}{c}\td{x^3}{t}A_3\right) \\
+ &=& -\frac{1}{c^2}\left(\int d\Omega j^0A_0 + \cdots + 
+ 	\int d\Omega j^3A_3\right)
 \end{eqnarray*}
 where we used equation \eqref{c4e23} in the last equation. Finally, we write it
 as
@@ -672,8 +676,8 @@ then we can write \eqref{c4e58} as
 \begin{equation}\label{c4e60}
 \pdt{\tensor{T}{_\nu^\mu}}{x^\mu} = 0.
 \end{equation}
-Since $T^{\nu\mu} = g^{\mu\nu}\tensor{T}{_\nu^\mu}$ and $g^{\mu\nu}$ being a 
-constant tensor, equation \eqref{c4e60} can also be written as
+Since $T^{\nu\mu} = \eta^{\mu\nu}\tensor{T}{_\nu^\mu}$ and $\eta^{\mu\nu}$ 
+being a constant tensor, equation \eqref{c4e60} can also be written as
 \begin{equation}\label{c4e61}
 \pdt{T^{\nu\mu}}{x^\mu} = 0.
 \end{equation}
@@ -709,10 +713,10 @@ p^0 = a\int T^{00}dV.
 \]
 Now, 
 \[
-T^{00} = g^{00}\tensor{T}{_0^0} = q_{\alpha;0}\pdt{\Lambda}{q_{\alpha;0}} - 
+T^{00} = \eta^{00}\tensor{T}{_0^0} = q_{\alpha;0}\pdt{\Lambda}{q_{\alpha;0}} - 
 \tensor{\delta}{_0^0} \Lambda
 \]
-as $g^{00} = 1$. Furthermore, 
+as $\eta^{00} = 1$. Furthermore, 
 \[
 q_{\alpha; 0} = \pdt{q_\alpha}{x^0} = \frac{1}{c}\dot{q}_\alpha
 \]
@@ -721,7 +725,8 @@ so that
 T^{00} = \dot{q}_\alpha\pdt{\Lambda}{\dot{q}_\alpha} - 
 \tensor{\delta}{_0^0} \Lambda.
 \]
-Clearly, $T^{00}$ is the energy density of the system. In analogy with 
+The rhs of this equation is a Legendre transformation. Therefore, it is the
+Hamiltonian density or the energy density of the system. In analogy with 
 \eqref{c2e26}, the constant $a$ can be chosen to be $1/c$. Thus, the correct 
 expression for the 4-momentum density is
 \begin{equation}\label{c4e64}
@@ -763,7 +768,7 @@ it are zero then the last term will vanish and we are left with
 \int U^{\mu\nu} dS_\mu = \int T^{\mu\nu} dS_\mu,
 \end{equation}
 that is, the 4-momentum density is the same for both energy-momentum tensors. 
-Thus the energy-momentum tensor is defined to withing the partial derivative of 
+Thus the energy-momentum tensor is defined to within the partial derivative of 
 an anti-symmetric tensor of rank 3.
 
 \item From equation \eqref{c2e86} the angular momentum of the field can be 
@@ -927,12 +932,12 @@ Using this equation in \eqref{c4e59}, we get
 \tensor{T}{_\nu^\mu} = -\frac{1}{4\pi}A_{\alpha;\nu}F^{\mu\alpha} +
 \frac{1}{16\pi}\tensor{\delta}{_\nu^\mu} F_{\alpha\beta}F^{\alpha\beta}.
 \end{equation}
-Multiplying by $g^{\nu\rho}$,
+Multiplying by $\eta^{\nu\rho}$,
 \begin{eqnarray}
-g^{\nu\rho}\tensor{T}{_\nu^\mu} &=& -\frac{1}{4\pi}g^{\nu\rho}A_{\alpha;\nu}
-F^{\mu\alpha} +
-\frac{1}{16\pi}g^{\nu\rho}\tensor{\delta}{_\nu^\mu} F_{\alpha\beta}
-F^{\alpha\beta} \nonumber \\
+\eta^{\nu\rho}\tensor{T}{_\nu^\mu} &=& 
+	-\frac{1}{4\pi}\eta^{\nu\rho}A_{\alpha;\nu} F^{\mu\alpha} +
+	\frac{1}{16\pi}\eta^{\nu\rho}\tensor{\delta}{_\nu^\mu} F_{\alpha\beta}
+	F^{\alpha\beta} \nonumber \\
 T^{\rho\mu} &=& -\frac{1}{4\pi}\pdt{A_\alpha}{x_\rho}F^{\mu\alpha} + 
 \frac{1}{16\pi}\tensor{g}{^\rho^\mu} F_{\alpha\beta}F^{\alpha\beta} \nonumber \\
  &=& -\frac{1}{4\pi}\pdt{A^\alpha}{x_\rho}\tensor{F}{^\mu_\alpha} + 
@@ -973,7 +978,7 @@ T^{\rho\mu} &=& -\frac{1}{4\pi}\pdt{A^\alpha}{x_\rho}\tensor{F}{^\mu_\alpha} +
 so that
 \begin{equation}\label{c4e84}
 T^{\rho\mu} = \frac{1}{4\pi}\left(-F^{\rho\alpha}\tensor{F}{^\mu_\alpha} +
-\frac{1}{4}g^{\rho\mu}F_{\alpha\beta}F^{\alpha\beta}\right)
+\frac{1}{4}\eta^{\rho\mu}F_{\alpha\beta}F^{\alpha\beta}\right)
 \end{equation}
 Equation \eqref{c4e84} is the appropriate form of the energy-momentum tensor for
 the electromagnetic field.
@@ -1137,7 +1142,7 @@ non-interacting, they are indeed conserved so that
 \item We will repeat this exercise for the tensor of \eqref{c4e84}.
 \[
 T^{\rho\mu} = \frac{1}{4\pi}\left(-F^{\rho\alpha}\tensor{F}{^\mu_\alpha} +
-\frac{1}{4}g^{\rho\mu}F_{\alpha\beta}F^{\alpha\beta}\right)
+\frac{1}{4}\eta^{\rho\mu}F_{\alpha\beta}F^{\alpha\beta}\right)
 \]
 which is same as
 \[

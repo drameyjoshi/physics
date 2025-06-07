@@ -824,7 +824,7 @@ T^{\nu\mu}$.
 \item We once again choose to the surface of integration in \eqref{c4e64} as the
 one whose normal is along the $x^0$ axis so that
 \[
-p^\nu = \frac{1}{c}\int T^{\nu\mu}dS_0 = \int\frac{1}{c}\int T^{\nu 0}dV.
+p^\nu = \frac{1}{c}\int T^{\nu\mu}dS_0 = \frac{1}{c}\int T^{\nu 0}dV.
 \]
 Since $p^\nu$ is the 4-momentum of the system, we call $W = T^{00}$ the energy
 density and $T^{01}/c, T^{02}/c, T^{03}/c$ as the momentum density of the 
@@ -843,7 +843,7 @@ Using the Gauss theorem in 3-dimensions on the rhs we get
 \frac{\partial}{\partial t}\int_V T^{00}dV = -c\oint T^{0i}df_i.
 \]
 Thus, the components $cT^{0i}$ are the also the flux of energy through the 
-closed surface bounding the volume $V$. In the previous point we identifier 
+closed surface bounding the volume $V$. In the previous point we identified 
 $T^{0i} = cp^i$. Thus, $c^2p^i$ can be identified as components of flux of 
 energy.
 
@@ -1330,8 +1330,8 @@ vanishes and we are left with
 From this equation we readily conclude that
 \begin{equation}\label{c4e117}
 \int \tensor{\langle T \rangle}{_\mu^\mu} dV = 
-\int\tensor{\langle T \rangle}{_0^0} dV + \int\tensor{\bar{T}}{_i^i}dV =
-\int WdV = \mathcal{E}.
+\int\tensor{\langle T \rangle}{_0^0} dV + 
+\int\tensor{\langle T \rangle}{_i^i}dV = \int WdV = \mathcal{E}.
 \end{equation}
 From \eqref{c4e108}, we have
 \[
@@ -1383,7 +1383,8 @@ becomes
 p\tensor{\delta}{_\mu^\nu}.
 \end{equation} 
 
-Now 
+Since \eqref{c4e121} reduces to \eqref{c4e120} in the rest frame, we assume 
+that it is always true and apply it when
 \[
 u^\mu = \gamma(1, \vec{v})
 \]
@@ -1428,7 +1429,8 @@ p \le \frac{\mathcal{E}}{3}.
 \end{equation}
 Furtherm from \eqref{c4e108} and \eqref{c4e126} we have
 \begin{equation}\label{c4e128}
-\mathcal{E} - p = \sum_a m_ac^2\sqrt{1 - \beta_a^2}\delta(\vec{r} - \vec{r}_a).
+\mathcal{E} - 3p = 
+\sum_a m_ac^2\sqrt{1 - \beta_a^2}\delta(\vec{r} - \vec{r}_a).
 \end{equation}
 In the ultra-relativistic case, $\beta_a \rightarrow 1$ and we get the familiar
 expression for the relation between energy density and pressure of the radiation

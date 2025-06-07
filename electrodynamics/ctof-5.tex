@@ -7,9 +7,9 @@
 \dive\vec{H} &=& 0 \label{c5e3} \\
 \curl\vec{H} &=& 4\pi\frac{\vec{J}}{c}. \label{c5e4}
 \end{eqnarray}
-The symmetry of the situation reveals itself if we note the correspondence $\vec{E}
-\mapsto \vec{H}$ and $\rho \mapsto \vec{J}/c$ and $\dive \mapsto \curl$. Equations
-\eqref{c5e2} and \eqref{c5e3} suggest that
+The symmetry of the situation reveals itself if we note the correspondence 
+$\vec{E} \mapsto \vec{H}$ and $\rho \mapsto \vec{J}/c$ and $\dive \mapsto 
+\curl$. Equations \eqref{c5e2} and \eqref{c5e3} suggest that
 \begin{eqnarray}
 \vec{E} &=& -\grad\phi \label{c5e5} \\
 \vec{H} &=& \curl\vec{A} \label{c5e6}
@@ -27,21 +27,21 @@ In region where there are no charges, the potential satisfies Laplace's equation
 \begin{equation}\label{c5e8}
 \nabla^2\phi = 0.
 \end{equation}
-This equation immediately implies that the potential function cannot have a local
-minimum or a maximum. The nature of extremum of a function of three variables is
-determined by its Hessian matrix. It is a minimum (maximum) if the Hessian matrix
-is positive (negative) definite. Since the trace of a matrix is the sum of its
-eigenvalues, we have an equivalent condition that the trace of the Hessian matrix
-is positive (negative) for an extremum to be a minimum (maximum). But the trace
-of Hessian is $\nabla^2\phi$ evaluated at the extremum. If $\phi$ is a solution
-of Laplace's equation \eqref{c5e8}, then the Hessian can never be positive or
-negative definite.
+This equation immediately implies that the potential function cannot have a 
+local minimum or a maximum. The nature of extremum of a function of three 
+variables is determined by its Hessian matrix. It is a minimum (maximum) if 
+the Hessian matrix is positive (negative) definite. Since the trace of a matrix 
+is the sum of its eigenvalues, we have an equivalent condition that the trace 
+of the Hessian matrix is positive (negative) for an extremum to be a minimum 
+(maximum). But the trace of Hessian is $\nabla^2\phi$ evaluated at the 
+extremum. If $\phi$ is a solution of Laplace's equation \eqref{c5e8}, then the 
+Hessian can never be positive or negative definite.
 
 \item The field of a point charge can be derived using Gauss' law. Let the point
 charge be at $\vec{r}^\op$. In order to find the field at $\vec{r}$, we consider
 a sphere centred at $\vec{r}^\op$ and passing through $\vec{r}$. As the space is
-isotropic, we expect the magnitude of $\vec{E}$ to be the same at all points on the
-sphere and its direction along $\vec{r} - \vec{r}^\op$. Therefore,
+isotropic, we expect the magnitude of $\vec{E}$ to be the same at all points 
+on the sphere and its direction along $\vec{r} - \vec{r}^\op$. Therefore,
 \[
 4\pi |\vec{r} - \vec{r}^\op|^2 = q
 \]
@@ -61,8 +61,8 @@ Equation \eqref{c5e11} is \emph{Coulomb's law}. The potential of this field is
 \begin{equation}\label{c5e12}
 \phi = \frac{q}{R}.
 \end{equation}
-If there are discrete, point charges at $\vec{r}_a$ then the field due to all of 
-them is
+If there are discrete, point charges at $\vec{r}_a$ then the field due to all 
+of them is
 \begin{equation}\label{c5e13}
 \vec{E} = \sum_a \frac{q_a}{R_a^2}\uv{R_a},
 \end{equation}
@@ -73,7 +73,7 @@ where $\vec{R}_a = \vec{r}^\op - \vec{r}$. The potential is
 For a continuum of charges, \eqref{c5e11} and \eqref{c5e12} generalise to
 \begin{eqnarray}
 \phi(\vec{r}) &=& \int\frac{\rho(\vec{r}^\op)}{R}dV^\op \label{c5e15} \\
-\vec{E}(\vec{r}) &=& \int\frac{\rho(\vec{r}^\op)}{R^2}\uv{R}dV^\op  \label{c5e16}
+\vec{E}(\vec{r}) &=& \int\frac{\rho(\vec{r}^\op)}{R^2}\uv{R}dV^\op\label{c5e16}
 \end{eqnarray}
 
 \item For a point charge, $\rho = q\delta(\vec{R})$. In this case, \eqref{c5e7}
@@ -96,12 +96,14 @@ W = -\frac{1}{8\pi}\int\vec{E}\cdot\grad\phi dV.
 \]
 Since $\dive(\phi\vec{E}) = \grad\phi\cdot\vec{E} + \phi\dive\vec{E}$, we have
 \begin{eqnarray*}
-W &=& \frac{1}{8\pi}\int\phi\dive\vec{E}dV - \frac{1}{8\pi}\int\dive(\phi\vec{E})dV \\
-  &=& \frac{1}{8\pi}\int\phi\dive\vec{E}dV - \frac{1}{8\pi}\oint \phi\vec{E}\cdot d\vec{f}.
+W &=& 
+\frac{1}{8\pi}\int\phi\dive\vec{E}dV - \frac{1}{8\pi}\int\dive(\phi\vec{E})dV \\
+ &=& \frac{1}{8\pi}\int\phi\dive\vec{E}dV - 
+ \frac{1}{8\pi}\oint \phi\vec{E}\cdot d\vec{f}.
 \end{eqnarray*}
-The potential goes as $O(r^{-1})$ and the field as $O(r^{-2})$ so that the surface
-integral goes as $O(r^{-1})$. If we choose a large enough surface the second 
-integral can be made as small as we desire. Thus, we have
+The potential goes as $O(r^{-1})$ and the field as $O(r^{-2})$ so that the 
+surface integral goes as $O(r^{-1})$. If we choose a large enough surface the 
+second integral can be made as small as we desire. Thus, we have
 \[
 W = \frac{1}{8\pi}\int\phi\dive\vec{E}dV
 \]
@@ -109,7 +111,7 @@ or using \eqref{c5e1},
 \begin{equation}\label{c5e19}
 W = \frac{1}{2}\int\rho\phi dV.
 \end{equation}
-If the charge density consists od point charges, equation \eqref{c5e19} becomes
+If the charge density consists of point charges, equation \eqref{c5e19} becomes
 \begin{equation}\label{c5e20}
 W = \sum_a q_a\phi(\vec{r}_a),
 \end{equation}
@@ -117,23 +119,23 @@ where $\phi(\vec{r}_a)$ is the potential due to all charges at the point
 $\vec{r}_a$ where the charge $q_a$ is located. This formula immediately runs 
 into a tricky situation.
 
-\item The potential $\phi$ due to a charge $q$ at $\vec{r}^\op$ at the same point
-is infinity according to \eqref{c5e12}. As a result, from \eqref{c5e20}, a point
-charge has infinite energy and therefore an infinite mass. To avoid such an absurd
-result, we say that the laws of classical electrodynamics are not applicable at
-extremely short distances. In fact, we cannot even ask the question if the mass of
-a charge has electrodynamic origin, that is, it exists because of electrodynamic
-energy.
+\item The potential $\phi$ due to a charge $q$ at $\vec{r}^\op$ at the same 
+point is infinity according to \eqref{c5e12}. As a result, from \eqref{c5e20}, 
+a point charge has infinite energy and therefore an infinite mass. To avoid 
+such an absurd result, we say that the laws of classical electrodynamics are not
+applicable at extremely short distances. In fact, we cannot even ask the 
+question if the mass of a charge has electrodynamic origin, that is, it exists 
+because of electrodynamic energy.
 
-The energy of a uniformly charged sphere of radius $s$ can be computed as follow.
-We first note that its charge density is
+The energy of a uniformly charged sphere of radius $s$ can be computed as 
+follow.  We first note that its charge density is
 \begin{equation}\label{c5e21}
 \rho = \frac{Q}{\frac{4\pi}{3}s^3}.
 \end{equation}
 The field due to a sphere of radius $r$ and a uniform charge density $\rho$ at 
 points on and outside it is as if the entire charge was concentrated at its 
 centre. If $q(r)$ is the charge in a sphere of radius $r$ then the energy
-of a charge $dq$ at a distance $r$ from it is
+of a charge shell $dq$ at a distance $r$ from it is
 \[
 dU = \frac{qdq}{r},
 \]
@@ -141,7 +143,7 @@ where
 \[
 q = \frac{4\pi}{3}r^3 \rho
 \]
-and $dq = 4\pi r^2 dr$. Thus,
+and $dq = 4\pi r^2 \rho dr$. Thus,
 \[
 dU = \frac{16\pi^2}{3}\rho^2 r^4dr
 \]
@@ -149,41 +151,40 @@ and the energy of the entire sphere is
 \begin{equation}\label{c5e22}
 U = \int_0^s dU = \frac{3}{5}\frac{Q^2}{s}.
 \end{equation}
-If we consider an elementary charge $q$ to have an infinitesimal radius $r_0$ and
-mass $m$ then if the mass has electrodynamic origin,
+If we consider an elementary charge $q$ to have an infinitesimal radius $r_0$ 
+and mass $m$ then if the mass has electrodynamic origin,
 \[
-mc^2 = \frac{3}{5}\frac{q^2}{s}.
+mc^2 = \frac{3}{5}\frac{q^2}{r_0}.
 \]
-Ignoring the factor of $3/5$, the ``classical radius'' of the charge $q$ is defined
-to be
+Ignoring the factor of $3/5$, the ``classical radius'' of the charge $q$ is 
+defined to be
 \begin{equation}\label{c5e23}
-s = \frac{q}{m} c^2.
+r_0 = \frac{q^2}{mc^2}.
 \end{equation}
 
-\item Quantum effects become important at distance of the order of $\hslash/mc$. The
-ratio of this distance to the classical radius of an electron is
+\item Quantum effects become important at distance of the order of $\hslash/mc$.
+The ratio of this distance to the classical radius of an electron is
 \[
 \frac{\hslash}{mc}\frac{mc^2}{e^2} = \frac{\hslash c}{e^2} = \frac{1}{\alpha}
 \approx 137,
 \]
-where $\alpha$ is the fine-structure constant. Thus, quantum effects must be taken
-into account at distances much larger than the ``classical radius'' of the electron. 
-The lower limit of the applicability of classical electrodynamics is much larger 
-than the classical electron radius.
+where $\alpha$ is the fine-structure constant. Thus, quantum effects must be 
+taken into account at distances much larger than the ``classical radius'' of 
+the electron.  The lower limit of the applicability of classical electrodynamics
+is much larger than the classical electron radius.
 
-\item To avoid the tricky questions of self-energy of elementary charges, we write
-the potential $\phi(\vec{r}_a)$ in equation \eqref{c5e20} as
+\item To avoid the tricky questions of self-energy of elementary charges, we 
+write the potential $\phi(\vec{r}_a)$ in equation \eqref{c5e20} as
 \begin{equation}\label{c5e24}
 \phi(\vec{r}_a) = \sum_{b \ne a} \frac{q_b}{R_{ab}},
 \end{equation}
 where $R_{ab} = |\vec{r}_a - \vec{r}_b|$.
 
 \item We next consider the field of a charge $q$ moving with a uniform velocity
-$\vec{v}$. We align the axes such that $\vec{v} = v\uv{x}$ and call the frame
-moving with the charge $K^\op$. Let $K$ be the laboratory frame in with axes 
-parallel to those of $K^\op$ and let their origins coincide at $t = 0$. Let $P$
-be a field point with coordinates $(x^\op, y^\op, z^\op)$ in $K^\op$. Then the
-scalar potential at $P$ in $K^\op$ is
+$\vec{v}$ in a laboratory frame $K$. Let the charge be at the origin of the 
+frame $K^\op$.  We align the axes such that $\vec{v} = v\uv{x}$. Let their 
+origins coincide at $t = 0$. Let $P$ be a field point with coordinates $(x^\op,
+y^\op, z^\op)$ in $K^\op$. Then the scalar potential at $P$ in $K^\op$ is
 \begin{equation}\label{c5e25}
 \phi^\op = \frac{q}{R^\op},
 \end{equation}
@@ -205,7 +206,7 @@ A^\mu = \left(\gamma\frac{q}{R^\op}, \beta\gamma\frac{q}{R^\op}, 0, 0\right),
 \end{equation}
 where
 \begin{eqnarray*}
-\bm{\beta} &=& \frac{\vec{v}}{c} \\
+\vec{\beta} &=& \frac{\vec{v}}{c} \\
 \gamma &=& \frac{1}{\sqrt{1 - \beta^2}}.
 \end{eqnarray*}
 However, \eqref{c5e29} is not a correct expression because we continue to have
@@ -285,22 +286,33 @@ R^2(1 - \beta^2\sin^2\theta).
 \end{equation}
 We can now write \eqref{c5e47} solely in terms of $\vec{R}$ as
 \begin{equation}\label{c5e52}
-\vec{E} = \frac{q\vec{R}}{R^3} \frac{1 - \beta^2}{(1 - \beta^2\sin^2\theta)^{3/2}}.
+\vec{E} = \frac{q\vec{R}}{R^3} 
+\frac{1 - \beta^2}{(1 - \beta^2\sin^2\theta)^{3/2}}.
 \end{equation}
 Note that $\vec{R}$ is the position of the (moving) charge in $K$ frame.
 
-\item Lorentz transformation of $\vec{E}$ and $\vec{H}$ are a consequence of the
-transformation properties of the field tensor. One should use \eqref{c3e81} to
-\eqref{c3e84} instead of evaluating $-\grad\phi$ with $\phi$ given by \eqref{c5e34}.
-That is, although
+\item We got the expressions for $\vec{E}$ and $\vec{H}$ using the Lorentz
+transformation of the field tensor. However, we could have as well derived them
+from the potentials \eqref{c5e34} and \eqref{c5e35}. The electric field is
 \[
-\phi^\op = \frac{q}{R^\op} \mapsto \phi = \frac{q}{R^\ast},
+\vec{E} = -\grad\phi - \frac{1}{c}\pdt{\vec{A}}{t}.
 \]
-the mapping
+Since 
 \[
--\grad^\op\phi^\op \mapsto -\grad\phi
+\grad\frac{1}{R^\ast} = -\frac{1}{{R^\ast}^3}((x-vt)\uv{x} + (1 - \beta^2)
+(y\uv{y} + z\uv{z}))
 \]
-does not hold.
+and 
+\[
+-\frac{1}{c}\pdt{A_x}{t} = -q\beta^2\frac{x - vt}{{R^\ast}^3},
+\]
+the expression \eqref{c5e47} for $\vec{E}$ follows immediately. We can also 
+take the curl of \eqref{c5e35} to get
+\[
+\vec{H} = \frac{qv}{c\gamma^2 {R^\ast}^3}(-z\uv{y} + y\uv{z})
+= \frac{1}{c}\vec{v} \times \vec{E}.
+\]
+It agrees with the equation \eqref{c5e60}.
 
 \item In \eqref{c5e52}, $\theta$ is the angle between the radius vector of the
 field point $\vec{R}$ and the direction of motion. The magnitude of the field
@@ -317,9 +329,9 @@ perpendicular to the motion of the particle.
 \caption{$E(\theta)$}
 \label{c5f1}
 \end{figure}
-For an observer in the $K$ frame, the charge in motion creates an electric current
-and therefore expects to observe magnetic field. In fact, equations \eqref{c3e84}
-to \eqref{c3e86} give
+For an observer in the $K$ frame, the charge in motion creates an electric 
+current and therefore expects to observe magnetic field. In fact, equations 
+\eqref{c3e84} to \eqref{c3e86} give
 \begin{eqnarray}
 H_x &=& 0 \label{c5e54} \\
 H_y &=& -\gamma\beta E^\op_z \label{c5e55} \\
@@ -333,13 +345,13 @@ H_z &=& \frac{1}{c}v_xE_y. \label{c5e59}
 \end{eqnarray}
 These three equations can be combined as
 \begin{equation}\label{c5e60}
-\vec{H} = \frac{1}{c}\vec{v} \times \vec{E} = \bm{\beta} \times \vec{E}.
+\vec{H} = \frac{1}{c}\vec{v} \times \vec{E} = \vec{\beta} \times \vec{E}.
 \end{equation}
 
 \item We now consider the motion of a charge $q$ in the electric field produced
 by another one $Q$. Let their masses by $m$ and $M$ respectively. Assume that
-$m \ll M$ so that the charge $Q$ is almost stationary. The problem now reduces to
-studying the motion of $q$ in a potential $\phi = Q/r$.
+$m \ll M$ so that the charge $Q$ is almost stationary. The problem now reduces 
+to studying the motion of $q$ in a potential $\phi = Q/r$.
 
 The energy of the charged particle is
 \begin{equation}\label{c5e61}
@@ -350,14 +362,14 @@ where
 \alpha = qQ.
 \end{equation}
 The motion in a central field is confined to a plane. Align the coordinate axes
-such that $Q$ is at the origin and the motion happens in $xy$ plane. Furthermore,
-since the torque on the particle is zero, its angular momentum is a constant of
-motion. The particle's velocity in polar coordinates is
+such that $Q$ is at the origin and the motion happens in $xy$ plane. 
+Furthermore, since the torque on the particle is zero, its angular momentum is 
+a constant of motion. The particle's velocity in polar coordinates is
 \begin{equation}\label{c5e63}
 \vec{v} = \dot{r}\uv{r} + r\dot{\theta}\uv{\theta}
 \end{equation}
 so that $v^2 = \dot{r}^2 + r^2\dot{\theta}^2$. Since $\vec{L} = \vec{r} \times
-\vec{p} = m\gamma\vec{r} \times \vec{p}$, (using \eqref{c2e8}) we have $L = 
+\vec{p} = m\gamma\vec{r} \times \vec{v}$, (using \eqref{c2e8}) we have $L = 
 \gamma mr^2\dot{\theta}$. We can express $v^2$ in terms of $L$ as
 \[
 v^2 = \dot{r}^2 + \frac{L^2}{m^2\gamma^2 r^2}
@@ -379,11 +391,13 @@ other.
 
 To analyse the condition $\alpha < 0$, write \eqref{c5e65} as
 \[
-\mathcal{E} = \frac{Lc}{r}\sqrt{\frac{r^2(p_r^2 + m^2c^2)}{L^2} + 1} - \frac{|\alpha|}{r}.
+\mathcal{E} = \frac{Lc}{r}\sqrt{\frac{r^2(p_r^2 + m^2c^2)}{L^2} + 1} - 
+\frac{|\alpha|}{r}.
 \]
 so that we can approximate
 \[
-\mathcal{E} \approx \frac{Lc}{r} + \frac{cr}{2L}(p_r^2 + m^2c^2) - \frac{|\alpha|}{r}.
+\mathcal{E} \approx \frac{Lc}{r} + \frac{cr}{2L}(p_r^2 + m^2c^2) - 
+\frac{|\alpha|}{r}.
 \]
 for small $r$. If $Lc > |\alpha|$ then the rhs blows up as $r \rightarrow 0$. 
 Therefore, to enforce constancy of $\mathcal{E}$, $r$ cannot be permitted to
@@ -395,16 +409,17 @@ In the non-relativistic case, we would have had
 \[
 \mathcal{E} = \frac{1}{2}mv_r^2 + \frac{L^2}{2mr^2} - \frac{|\alpha|}{r}.
 \]
-If $L \ne 0$ then the first two terms, which are always positive, rise much faster
-than the third term falls. Therefore, energy conservation does not allow the two
-charges to come arbitrarily close to each other. On the other hand, if $L = 0$, 
-then $v_r$ can rise enough to compensate the drop in the third term and still
-keep  $\mathcal{E}$ constant. Thus, the two charges can come arbitrarily close only
-if they approach to each other head-on.
+If $L \ne 0$ then the first two terms, which are always positive, rise much 
+faster than the third term falls. Therefore, energy conservation does not allow 
+the two charges to come arbitrarily close to each other. On the other hand, if 
+$L = 0$, then $v_r$ can rise enough to compensate the drop in the third term and
+still keep  $\mathcal{E}$ constant. Thus, the two charges can come arbitrarily 
+close only if they approach to each other head-on.
 
 \item The Hamilton-Jacobi equation \eqref{c3e15} for this problem is
 \[
-(\grad S)^2 - \frac{1}{c^2}\left(\pdt{S}{t} + \frac{\alpha}{r}\right)^2 + m^2c^2 = 0.
+(\grad S)^2 - \frac{1}{c^2}\left(\pdt{S}{t} + \frac{\alpha}{r}\right)^2 
++ m^2c^2 = 0.
 \]
 Since $Q$ is stationary, $q$ experiences only the electric field and therefore 
 $\vec{A} = 0$. The gradient in plane-polar coordinates is
@@ -413,14 +428,15 @@ $\vec{A} = 0$. The gradient in plane-polar coordinates is
 \end{equation}
 so that the Hamilton-Jacobi equation becomes
 \begin{equation}\label{c5e67}
-\left(\pdt{S}{r}\right)^2 + \frac{1}{r^2}\left(\pdt{S}{\phi}\right)^2 - \frac{1}{c^2}
-\left(\pdt{S}{t} + \frac{\alpha}{r}\right)^2 + m^2c^2 = 0.
+\left(\pdt{S}{r}\right)^2 + \frac{1}{r^2}\left(\pdt{S}{\phi}\right)^2 - 
+\frac{1}{c^2} \left(\pdt{S}{t} + \frac{\alpha}{r}\right)^2 + m^2c^2 = 0.
 \end{equation}
 or
 \[
-\left(\pdt{S}{r}\right)^2 + \frac{1}{r^2}\left(\pdt{S}{\phi}\right)^2 - \frac{1}{c^2}
-\left(\pdt{S}{t}\right)^2 + 2\frac{\alpha}{rc^2}\pdt{S}{t} + \frac{\alpha^2}{c^2r^2}
-+ m^2c^2 = 0.
+\left(\pdt{S}{r}\right)^2 + \frac{1}{r^2}\left(\pdt{S}{\phi}\right)^2 - 
+\frac{1}{c^2}
+\left(\pdt{S}{t}\right)^2 + 2\frac{\alpha}{rc^2}\pdt{S}{t} + 
+\frac{\alpha^2}{c^2r^2} + m^2c^2 = 0.
 \]
 This is a non-linear, first-order pde. We try a solution of the form
 \begin{equation}\label{c5e68}
@@ -428,24 +444,29 @@ S(r, \phi, t) = -\mathcal{E}t + L\phi + f(r)
 \end{equation}
 to get
 \[
-{f^\op(r)}^2 + \frac{L^2}{r^2} - \frac{\mathcal{E}^2}{c^2} - 2\frac{\alpha\mathcal{E}}{rc^2}
-+ \frac{\alpha^2}{c^2r^2} + m^2c^2 = 0.
+{f^\op(r)}^2 + \frac{L^2}{r^2} - \frac{\mathcal{E}^2}{c^2} - 
+2\frac{\alpha\mathcal{E}}{rc^2} + \frac{\alpha^2}{c^2r^2} + m^2c^2 = 0.
 \]
 or
 \[
-f^\op = \pm\sqrt{\frac{1}{c^2}\left(\mathcal{E} - \frac{\alpha}{r}\right)^2 - \frac{L^2}{r^2} 
--m^2c^2}
+f^\op = \pm\sqrt{\frac{1}{c^2}\left(\mathcal{E} - \frac{\alpha}{r}\right)^2 - 
+\frac{L^2}{r^2} -m^2c^2}
 \]
 The solution, thus, is
 \begin{equation}\label{c5e69}
 S(r, \phi, t) = -\mathcal{E}t + L\phi \pm 
-\frac{1}{c}\int\sqrt{\left(\mathcal{E}-\frac{\alpha}{r}\right)^2-\frac{L^2c^2}{r^2} -m^2c^4}dr
+\frac{1}{c}\int\sqrt{\left(\mathcal{E}-\frac{\alpha}{r}\right)^2-
+\frac{L^2c^2}{r^2} -m^2c^4}dr
 \end{equation}
-The trajectories are given by (find out why)
+The trajectories are given by: 
 \begin{equation}\label{c5e70}
 \pdt{S}{L} = \text{constant.}
 \end{equation}
-Differentiating \eqref{c5e69},
+(Recall that in the Hamilton-Jacobi formalism, $S$ completely describes the
+system. The constants of motion, say $\alpha_i$ parametrise the solutions.
+The derivatives $\partial{S}/\partial{\alpha_i}$ yield generalised coordinates
+along the solution manifold. That it, they describe the path of the system in
+the phase space.) Differentiating \eqref{c5e69},
 \begin{equation}\label{c5e71}
 \pdt{S}{L} = \phi \mp Lc\int\frac{dr}{r\sqrt{A^2r^2 - 2Br + C^2}},
 \end{equation}
@@ -463,19 +484,23 @@ We now use the result
 \end{equation}
 in equation \eqref{c5e71} to get
 \begin{equation}\label{c5e76}
-\phi_0 = \phi \pm \frac{Lc}{C}\tanh^{-1}\left(\frac{C^2 - Br}{C\sqrt{A^2r^2 - 2Br + C^2}}\right),
+\phi_0 = \phi \pm \frac{Lc}{C}\tanh^{-1}\left(\frac{C^2 - Br}{C\sqrt{A^2r^2 - 
+2Br + C^2}}\right),
 \end{equation}
 where $\phi_0$ is a constant of integration.
 
 We consider the following cases:
 \begin{enumerate}
-\item $\alpha^2 > L^2c^2$, that is $C$ is real. Then \eqref{c5e71} can be written as
+\item $\alpha^2 > L^2c^2$, that is $C$ is real. Then \eqref{c5e71} can be 
+written as
 \[
-\tanh\left(\frac{C}{Lc}(\phi_0 - \phi)\right) = \frac{C^2 - Br}{C\sqrt{A^2r^2 - 2Br + C^2}}.
+\tanh\left(\frac{C}{Lc}(\phi_0 - \phi)\right) = \frac{C^2 - Br}{C\sqrt{A^2r^2 
+- 2Br + C^2}}.
 \]
 Let
 \begin{equation}\label{c5e77}
-X = \frac{C}{Lc}(\phi_0 - \phi) = \sqrt{\frac{\alpha^2}{L^2c^2} - 1}(\phi_0 - \phi)
+X = \frac{C}{Lc}(\phi_0 - \phi) = \sqrt{\frac{\alpha^2}{L^2c^2} - 1}
+(\phi_0 - \phi)
 \end{equation}
 so that
 \begin{eqnarray*}
@@ -494,7 +519,8 @@ Since we assumes $\alpha^2 > L^2c^2$, the rhs of the above equation is negative.
 Therefore, before taking the square-root, we flip the signs to get
 \begin{eqnarray*}
 (B^2 - C^2A^2)r^2\cosh^2X &=& C^2(2B^2r - A^2r^2 - C^2) \\
-\sqrt{B^2 - C^2A^2}\cosh X &=& \frac{C^2}{r}\sqrt{2\frac{B^2}{C^2}r - \frac{A^2}{C^2}r^2 - 1}
+\sqrt{B^2 - C^2A^2}\cosh X &=& \frac{C^2}{r}
+\sqrt{2\frac{B^2}{C^2}r - \frac{A^2}{C^2}r^2 - 1}
 \end{eqnarray*}
 Thus,
 \[
@@ -504,13 +530,15 @@ Thus,
 Since $\cosh$ is an even function,
 \begin{eqnarray}
 \pm c\sqrt{(L\mathcal{E})^2 + m^2c^2(\alpha^2 - L^2c^2)}
-\cosh\left((\phi - \phi_0)\sqrt{\frac{\alpha^2}{L^2c^2} - 1}\right) &=& \nonumber\\
+\cosh\left((\phi - \phi_0)\sqrt{\frac{\alpha^2}{L^2c^2} - 1}\right) &=& 
+\nonumber\\
 \frac{C^2}{r}\sqrt{2\frac{B^2}{C^2}r - \frac{A^2}{C^2}r^2 - 1} \label{c5e78}
 \end{eqnarray}
 We can choose $\phi_0$ such that this equation reduces to
 \begin{equation}\label{c5e79}
 \pm c\sqrt{(L\mathcal{E})^2 + m^2c^2(\alpha^2 - L^2c^2)}
-\cosh\left((\phi - \phi_0)\sqrt{\frac{\alpha^2}{L^2c^2} - 1}\right) = \frac{C^2}{r}.
+\cosh\left((\phi - \phi_0)\sqrt{\frac{\alpha^2}{L^2c^2} - 1}\right) = 
+\frac{C^2}{r}.
 \end{equation}
 This can always be done because \eqref{c5e78} is of the form
 \begin{equation}\label{c5e80}
@@ -534,13 +562,15 @@ x_0 = x^\op + \frac{1}{B}\cosh^{-1}\left(\frac{C^2}{A}\right).
 and \eqref{c5e79} becomes
 \begin{equation}\label{c5e83}
 \pm c\sqrt{(L\mathcal{E})^2 - m^2c^2(L^2c^2 - \alpha^2)}
-\cos\left((\phi - \phi_0)\sqrt{1 - \frac{\alpha^2}{L^2c^2}}\right) = \frac{C^2}{r}.
+\cos\left((\phi - \phi_0)\sqrt{1 - \frac{\alpha^2}{L^2c^2}}\right) = 
+\frac{C^2}{r}.
 \end{equation}
 
 Note that, when $\phi \mapsto \phi + 2\pi$ increases by $2\pi$, 
 \begin{eqnarray*}
 \cos\left((\phi - \phi_0)\sqrt{1 - \frac{\alpha^2}{L^2c^2}}\right)  
- &\mapsto& \cos\left((\phi - \phi_0)\sqrt{1 - \frac{\alpha^2}{L^2c^2}} + 2\pi\sqrt{1 - \frac{\alpha^2}{L^2c^2}}\right) \\
+ &\mapsto& \cos\left((\phi - \phi_0)\sqrt{1 - \frac{\alpha^2}{L^2c^2}} + 
+ 2\pi\sqrt{1 - \frac{\alpha^2}{L^2c^2}}\right) \\
  &\ne& \cos\left((\phi - \phi_0)\sqrt{1 - \frac{\alpha^2}{L^2c^2}}\right)
 \end{eqnarray*}
 so that the orbits described by \eqref{c5e83} are not closed curves like 
@@ -578,13 +608,14 @@ $\vec{R}_a$. The potential due to all of them at a point $\vec{R}_0$ is
 \begin{equation}\label{c5e86}
 \varphi(\vec{R}_0) = \sum_a\frac{q_a}{|\vec{R}_0 - \vec{R}_a|}.
 \end{equation}
-The rhs is a sum over $\vec{R}_a$ of functions of the form $q_af(\vec{R}_0-\vec{R}_a)$.
+The rhs is a sum over $\vec{R}_a$ of functions of the form $q_af
+(\vec{R}_0-\vec{R}_a)$.
 We can expand them as
 \[
 f(\vec{R}_0-\vec{R}_a) = f(\vec{R}_0) - \vec{R}_a\cdot\grad f|_{\vec{R}_0}.
 \]
-Here we have ignored the higher order terms. In this case, $f(\vec{R}) = 1/\vec{R}$
-so that
+Here we have ignored the higher order terms. In this case, $f(\vec{R}) = 
+1/\vec{R}$ so that
 \[
 \grad f = -\frac{\vec{R}}{R^3}.
 \]
@@ -602,8 +633,8 @@ then we can write \eqref{c5e87} as
 \begin{equation}\label{c5e90}
 \varphi(\vec{R}_0) = \frac{Q}{R_0} + \frac{\vec{p}\cdot\vec{R_0}}{R_0^3}.
 \end{equation}
-$Q$ is the total charge in the collection and $\vec{p}$ is called its \emph{dipole
-moment}.
+$Q$ is the total charge in the collection and $\vec{p}$ is called its 
+\emph{dipole moment}.
 
 \item The dipole moment depends on $\vec{R}_a$ and therefore on the choice of the
 origin. If we shift the origin to $\vec{b}$ then the new position vectors are
@@ -934,23 +965,24 @@ vanishing of the time average of its derivative.
 For such a system, we will perform the time averaging of the Maxwell equations
 for the magnetic field to get
 \begin{eqnarray}
-\dive\ta{\vec{H}} &=& 0 \label{c5e130} \\
-\curl\ta{\vec{H}} &=& \frac{4\pi}{c}\ta{\vec{J}} \label{c5e131}
+\dive\vec{\ta{H}} &=& 0 \label{c5e130} \\
+\curl\vec{\ta{H}} &=& \frac{4\pi}{c}\vec{\ta{J}} \label{c5e131}
 \end{eqnarray}
 
 \item One could have got similar equations had one assumed that the fields are
 independent of time. We wrote \eqref{c5e3} and \eqref{c5e4} under the same 
-assumption. However, one cannot consider the electric field to be time independent
-of there are currents in the system. Therefore, the correct way to introduce
-constant fields in this case is to assume that the $\langle\vec{E}\rangle = 0$.
+assumption. However, one cannot consider the electric field to be time 
+independent of there are currents in the system. Therefore, the correct way to 
+introduce constant fields in this case is to assume that the $\langle\vec{E}
+\rangle = 0$.
 
 \item We introduce $\langle\vec{A}\rangle$ using
 \begin{equation}\label{c5e132}
-\ta{\vec{H}} = \curl\ta{\vec{A}}.
+\vec{\ta{H}} = \curl\vec{\ta{A}}.
 \end{equation}
 Substituting it in \eqref{c5e131} we get
 \begin{equation}\label{c5e133}
-\grad\dive\ta{\vec{A}} - \nabla^2\ta{\vec{A}} = \frac{4\pi}{c}\ta{\vec{J}}.
+\grad\dive\vec{\ta{A}} - \nabla^2\vec{\ta{A}} = \frac{4\pi}{c}\vec{\ta{J}}.
 \end{equation}
 Since the curl of a gradient is always zero, a vector potential
 \[
@@ -960,8 +992,8 @@ also gives the same $\tav{H}$. Now,
 \[
 \dive\tav{A}^\op = \dive\tav{A} + \nabla^2\psi.
 \]
-If we insist on choosing a $\psi$ that is a solution of the Laplace equation then
-we get $\dive\tav{A}^\op = \dive\tav{A} = 0$. Choosing
+If we insist on choosing a $\psi$ that is a solution of the Laplace equation 
+then we get $\dive\tav{A}^\op = \dive\tav{A} = 0$. Choosing
 \begin{equation}\label{c5e134}
 \dive\tav{A} = 0
 \end{equation} is equivalent of choosing $\psi$ to be a harmonic function. The 
@@ -969,13 +1001,14 @@ choice of \eqref{c5e134} is called the \emph{Coulomb gauge}.
 
 \item Under the Coulomb gauge, \eqref{c5e133} becomes
 \begin{equation}\label{c5e135}
-\nabla^2\ta{\vec{A}} = -\frac{4\pi}{c}\ta{\vec{J}}.
+\nabla^2\vec{\ta{A}} = -\frac{4\pi}{c}\vec{\ta{J}}.
 \end{equation}
 Thus, $\tav{A}$ obeys the vector Poisson equation the way $\varphi$ obeys the
-scalar Poisson equation of \eqref{c5e7}. The solution of \eqref{c5e135} is similar
-to the solution \eqref{c5e15} of \eqref{c5e7}. Thus,
+scalar Poisson equation of \eqref{c5e7}. The solution of \eqref{c5e135} is 
+similar to the solution \eqref{c5e15} of \eqref{c5e7}. Thus,
 \begin{equation}\label{c5e136}
-\tav{A}(\vec{r}) = \frac{1}{c}\int\frac{\tav{J}(\vec{r}^\op)}{|\vec{r} - \vec{r}^\op|}dV^\op.
+\tav{A}(\vec{r}) = \frac{1}{c}\int
+\frac{\tav{J}(\vec{r}^\op)}{|\vec{r} - \vec{r}^\op|}dV^\op.
 \end{equation}
 We can write the rhs of \eqref{c5e136} for discrete charges as
 \begin{equation}\label{c5e137}
@@ -988,12 +1021,15 @@ where
 
 \item From \eqref{c5e136}, we can immediately get
 \[
-\tav{H} = \frac{1}{c}\curl\int\frac{\tav{J}(\vec{r}^\op)}{|\vec{r} - \vec{r}^\op|}dV^\op.
+\tav{H} = \frac{1}{c}\curl\int\frac{\tav{J}(\vec{r}^\op)}{|\vec{r} - 
+\vec{r}^\op|}dV^\op.
 \]
 The curl is with respect to the unprimed variables. Therefore,
 \[
-\tav{H} = \frac{1}{c}\int\curl\frac{\tav{J}(\vec{r}^\op)}{|\vec{r} - \vec{r}^\op|}dV^\op
- = \frac{1}{c}\int\grad\frac{1}{|\vec{r} - \vec{r}^\op|} \times \tav{J}(\vec{r}^\op)dV^\op,
+\tav{H} = \frac{1}{c}\int
+\curl\frac{\tav{J}(\vec{r}^\op)}{|\vec{r} - \vec{r}^\op|}dV^\op
+ = \frac{1}{c}\int
+ \grad\frac{1}{|\vec{r} - \vec{r}^\op|} \times \tav{J}(\vec{r}^\op)dV^\op,
 \]
 where we used the identity
 \begin{equation}\label{c5e139}
@@ -1001,7 +1037,8 @@ where we used the identity
 \end{equation}
 From this we get the \emph{Biot-Savart} law,
 \begin{equation}\label{c5e140}
-\tav{H} = \frac{1}{c}\int\frac{\tav{J}(\vec{r}^\op) \times (\vec{r} - \vec{r}^\op)}{|\vec{r} - \vec{r}^\op|^3}dV^\op.
+\tav{H} = \frac{1}{c}\int\frac{\tav{J}(\vec{r}^\op) \times 
+(\vec{r} - \vec{r}^\op)}{|\vec{r} - \vec{r}^\op|^3}dV^\op.
 \end{equation}
 
 \item We go back to equation \eqref{c5e137} which described the vector potential
@@ -1024,7 +1061,8 @@ For a system of finite extent, $\tav{v}_a = 0$ so that
 Now,
 \[
 \frac{d}{dt}\sum_a q_a\vec{r}_a(\vec{r}_a\cdot\vec{R}_0) = 
-\sum_a q_a\left(\vec{v}_a(\vec{r}_a\cdot\vec{R}_0) + \vec{r}_a(\vec{v}_a\cdot\vec{R}_0)\right)
+\sum_a q_a\left(\vec{v}_a(\vec{r}_a\cdot\vec{R}_0) + 
+\vec{r}_a(\vec{v}_a\cdot\vec{R}_0)\right)
 \]
 so that
 \[
@@ -1039,7 +1077,8 @@ and hence
 \end{equation}
 as the average of the time derivative vanishes. If we write
 \[
-\tav{A} = \frac{1}{cR_0^3}\sum_a\frac{q_a}{2}\ta{\vec{v}_a\vec{r}_a\cdot\vec{R}_0}
+\tav{A} = \frac{1}{cR_0^3}
+\sum_a\frac{q_a}{2}\ta{\vec{v}_a\vec{r}_a\cdot\vec{R}_0}
  + \frac{1}{cR_0^3}\sum_a\frac{q_a}{2}\ta{\vec{v}_a\vec{r}_a\cdot\vec{R}_0}.
 \]
 and use \eqref{c5e143} for one of the factors, we get
@@ -1054,10 +1093,11 @@ We now introduce the magnetic dipole moment
 so that
 \[
 \vec{m} \times \vec{R}_0 = \frac{1}{2c}
-\sum_a q_a(\vec{v}_a(\vec{r}_a\cdot\vec{R}_0) - \vec{r}_a(\vec{v}_a\cdot\vec{R}_0))
+\sum_a q_a(\vec{v}_a(\vec{r}_a\cdot\vec{R}_0) - 
+\vec{r}_a(\vec{v}_a\cdot\vec{R}_0))
 \]
-(Note that this is $(\vec{A} \times \vec{B})\times\vec{C}$ and not $\vec{A}\times
-(\vec{B}\times\vec{C})$.) and \eqref{c5e144} becomes
+(Note that this is $(\vec{A} \times \vec{B})\times\vec{C}$ and not $\vec{A}
+\times (\vec{B}\times\vec{C})$.) and \eqref{c5e144} becomes
 \begin{equation}\label{c5e146}
 \tav{A} = \frac{\tav{m} \times \vec{R}_0}{R_0^3}.
 \end{equation}
@@ -1065,8 +1105,10 @@ so that
 \item Using \eqref{c5e146}, we can calculate
 \begin{eqnarray*}
 \tav{H} &=& \curl\left(\tav{m} \times \frac{\vec{R_0}}{R_0^3}\right) \\
- &=& \frac{\vec{R_0}}{R_0^3}\cdot\grad\tav{m} - \tav{m}\cdot\grad\frac{\vec{R_0}}{R_0^3} + \\
- & & \tav{m}\dive\left(\frac{\vec{R_0}}{R_0^3}\right) - \frac{\vec{R_0}}{R_0^3}\dive\tav{m}
+ &=& \frac{\vec{R_0}}{R_0^3}\cdot\grad\tav{m} - 
+  \tav{m}\cdot\grad\frac{\vec{R_0}}{R_0^3} + \\
+ & & \tav{m}\dive\left(\frac{\vec{R_0}}{R_0^3}\right) - 
+  \frac{\vec{R_0}}{R_0^3}\dive\tav{m}
 \end{eqnarray*}
 $\tav{m}$ is a function of $\vec{r}_a$ alone. Therefore, its derivatives are all
 zero and
@@ -1076,15 +1118,17 @@ zero and
 \end{equation}
 Now,
 \begin{eqnarray*}
-\dive\left(\frac{\vec{R_0}}{R_0^3}\right) &=& \frac{3}{R_0^3} - \vec{R}_0\cdot\grad R_0^{-3} \\
+\dive\left(\frac{\vec{R_0}}{R_0^3}\right) &=& 
+\frac{3}{R_0^3} - \vec{R}_0\cdot\grad R_0^{-3} \\
  &=& \frac{3}{R_0^3} - 3\frac{R_0^2}{R_0^5} \\
  &=& 0
 \end{eqnarray*}
 so that
 \begin{eqnarray*}
 \tav{H} &=& -\tav{m}\cdot\grad\frac{\vec{R_0}}{R_0^3} \\
- &=& -\left(\ta{m}_x\frac{\partial}{\partial X} + \ta{m}_y\frac{\partial}{\partial Y} + 
-     \ta{m}_z\frac{\partial}{\partial Z}\right)\frac{\vec{R_0}}{R_0^3} \\
+ &=& -\left(\ta{m}_x\frac{\partial}{\partial X} + 
+  \ta{m}_y\frac{\partial}{\partial Y} + 
+  \ta{m}_z\frac{\partial}{\partial Z}\right)\frac{\vec{R_0}}{R_0^3} \\
  &=& \frac{\tav{m}}{R_0^3} - \frac{3\vec{R}_0(\tav{m}\cdot\vec{R}_0)}{R_0^5}.
 \end{eqnarray*}
 If $\un$ is a unit vector along $\vec{R}_0$ then
@@ -1094,15 +1138,15 @@ If $\un$ is a unit vector along $\vec{R}_0$ then
 
 \item The definition of the magnetic dipole moment vector is very similar to the
 angular momentum of a collection of masses $m_a$ at positions $\vec{r}_a$ and 
-moving with velocity $\vec{v}_a$. The role of mass $m_a$ is played by $q_a/(2c)$.
-If $q_a/m_a = \alpha$, that is, if the charge to mass ratio of all charges is the
-same then,
+moving with velocity $\vec{v}_a$. The role of mass $m_a$ is played by 
+$q_a/(2c)$.  If $q_a/m_a = \alpha$, that is, if the charge to mass ratio of all 
+charges is the same then,
 \begin{equation}\label{c5e149}
 \tav{m} = \frac{\alpha}{2c}\sum_a m_a\vec{r}_a \times \vec{v}_a = 
 \frac{\alpha}{2c}\vec{L}.
 \end{equation}
-The ratio of magnetic moment and angular momentum is thus a constant. It is called
-the \emph{gyromagnetic ratio}.
+The ratio of magnetic moment and angular momentum is thus a constant. It is 
+called the \emph{gyromagnetic ratio}.
 
 \item If the collection of charges is in a constant, uniform magnetic field then
 the force on them is
@@ -1110,17 +1154,21 @@ the force on them is
 \vec{F} = \sum_a q_a\frac{\vec{v}_a}{c}\times\vec{H} = 
 \frac{d}{dt}\sum_a q_a\frac{\vec{r}_a}{c}\times\vec{H}.
 \]
-As the force is expressed as a time derivative, its average under the assumptions
-we have made so far is $0$. The torque on the collection is
+As the force is expressed as a time derivative, its average under the 
+assumptions we have made so far is $0$. The torque on the collection is
 \begin{equation}\label{c5e150}
-\vec{N} = \sum_a q_a\vec{r}_a \times \left(\frac{\vec{v}_a}{c}\times\vec{H}\right).
+\vec{N} = \sum_a q_a\vec{r}_a \times 
+\left(\frac{\vec{v}_a}{c}\times\vec{H}\right).
 \end{equation}
 It cannot be expressed as a time derivative and therefore its average may not
 vanish. We can write it as
 \begin{eqnarray*}
-\vec{N} &=& \sum_a\frac{q_a}{c}(\vec{v}_a(\vec{r}_a\cdot\vec{H}) - \vec{H}(\vec{r}_a\cdot\vec{v}_a)) \\
- &=& \sum_a\frac{q_a}{c}\left(\vec{v}_a(\vec{r}_a\cdot\vec{H}) - \vec{H}\left(\vec{r}_a\cdot\td{\vec{r}_a}{t}\right)\right) \\
-  &=& \sum_a\frac{q_a}{c}\left(\vec{v}_a(\vec{r}_a\cdot\vec{H}) - \frac{\vec{H}}{2}\td{r_a^2}{t}\right)
+\vec{N} &=& \sum_a\frac{q_a}{c}(\vec{v}_a(\vec{r}_a\cdot\vec{H}) - 
+ \vec{H}(\vec{r}_a\cdot\vec{v}_a)) \\
+ &=& \sum_a\frac{q_a}{c}\left(\vec{v}_a(\vec{r}_a\cdot\vec{H}) - 
+  \vec{H}\left(\vec{r}_a\cdot\td{\vec{r}_a}{t}\right)\right) \\
+ &=& \sum_a\frac{q_a}{c}\left(\vec{v}_a(\vec{r}_a\cdot\vec{H}) - 
+ \frac{\vec{H}}{2}\td{r_a^2}{t}\right)
 \end{eqnarray*}
 Taking the time average gives us
 \begin{equation}\label{c5e151}
@@ -1129,7 +1177,8 @@ Taking the time average gives us
 We repeat the manipulations we did to get \eqref{c5e144} from \eqref{c5e142} by 
 starting with
 \[
-\frac{d}{dt}(\vec{r}_a(\vec{r}_a\cdot\vec{H}) = \vec{v}_a(\vec{r}_a\cdot\vec{H}) + \vec{r}_a(\vec{v}_a\cdot\vec{H})
+\frac{d}{dt}(\vec{r}_a(\vec{r}_a\cdot\vec{H}) = 
+\vec{v}_a(\vec{r}_a\cdot\vec{H}) + \vec{r}_a(\vec{v}_a\cdot\vec{H})
 \]
 so that, upon taking the time derivative, we get
 \begin{equation}\label{c5e152}
@@ -1137,30 +1186,32 @@ so that, upon taking the time derivative, we get
 \end{equation}
 so that
 \begin{eqnarray}
-\tav{N} &=& \sum_a\frac{q_a}{c}\ta{\vec{v}_a(\vec{r}_a\cdot\vec{H})} \nonumber \\
+\tav{N} &=& \sum_a\frac{q_a}{c}\ta{\vec{v}_a(\vec{r}_a\cdot\vec{H})}\nonumber\\
  &=& \sum_a\frac{q_a}{2c}\ta{\vec{v}_a(\vec{r}_a\cdot\vec{H})} + 
  \sum_a\frac{q_a}{2c}\ta{\vec{v}_a(\vec{r}_a\cdot\vec{H})} \nonumber \\
  &=& \sum_a\frac{q_a}{2c}\ta{\vec{v}_a(\vec{r}_a\cdot\vec{H})} - 
  \sum_a\frac{q_a}{2c}\ta{\vec{r}_a(\vec{v}_a\cdot\vec{H})} \nonumber \\
- &=& \frac{1}{2c}\sum_a q_a(\ta{\vec{v}_a(\vec{r}_a\cdot\vec{H})} - \ta{\vec{r}_a(\vec{v}_a\cdot\vec{H})}) 
+ &=& \frac{1}{2c}\sum_a q_a(\ta{\vec{v}_a(\vec{r}_a\cdot\vec{H})} - 
+ \ta{\vec{r}_a(\vec{v}_a\cdot\vec{H})}) 
  \nonumber \\
  &=& \tav{m} \times \tav{H}. \label{c5e153}
 \end{eqnarray}
 
 \item The canonical momentum of a charged particle in an electromagnetic field 
-has a term $q\vec{A}\cdot\vec{v}/c$ in addition to the $m\vec{v}$. For a constant 
-magnetic field, using \eqref{c3e37}, we observe that
+has a term $q\vec{A}\cdot\vec{v}/c$ in addition to the $m\vec{v}$. For a 
+constant magnetic field, using \eqref{c3e37}, we observe that
 \begin{equation}\label{c5e154}
-\frac{q}{c}\vec{A}\cdot\vec{v} = \frac{q}{2c}(\vec{H} \times \vec{r})\cdot\vec{v} = 
+\frac{q}{c}\vec{A}\cdot\vec{v} = 
+\frac{q}{2c}(\vec{H} \times \vec{r})\cdot\vec{v} = 
 \frac{q}{2c}(\vec{r}\times\vec{v})\cdot\vec{H} = \vec{m}\cdot\vec{H}.
 \end{equation}
 Thus, the additional term is indeed the potential energy of the magnetic dipole
 in a constant magnetic field. The analogous term for an electric dipole is 
 $\vec{p}\cdot\vec{E}$.
 
-\item Consider a collection of charges all having the same magnitude $q$ and mass
-$m$. If $\vec{r}_a$ and $\vec{v}_a$ describe their positions and velocities then
-its aaverage ngular momentum is
+\item Consider a collection of charges all having the same magnitude $q$ and 
+mass $m$. If $\vec{r}_a$ and $\vec{v}_a$ describe their positions and 
+velocities then its average angular momentum is
 \[
 \tav{L} = m\sum_a\ta{\vec{r}_a \times \vec{v}_a}
 \]
@@ -1170,19 +1221,20 @@ and its magnetic dipole moment is
 \]
 From equation \eqref{c5e153}
 \[
-\td{\tav{L}}{t} = \frac{q}{2c}\sum_a\ta{\vec{r}_a \times \vec{v}_a} \times \vec{H}
+\td{\tav{L}}{t} = \frac{q}{2c}\sum_a\ta{\vec{r}_a \times \vec{v}_a} \times 
+\vec{H}
 \]
 Let
 \begin{equation}\label{c5e155}
-\bm{\Omega} = \frac{q}{2mc}\vec{H}
+\vec{\Omega} = \frac{q}{2mc}\vec{H}
 \end{equation}
 then 
 \begin{equation}\label{c5e156}
-\td{\tav{L}}{t} = \tav{L} \times \bm{\Omega} = -\bm{\Omega} \times \tav{L}.
+\td{\tav{L}}{t} = \tav{L} \times \vec{\Omega} = -\vec{\Omega} \times \tav{L}.
 \end{equation}
 Thus the $\tav{L}$ rotates in a magnetic field as if the system itself rotates
-with an angular velocity $\bm{\Omega}$. Its magnitude is called the \emph{Larmor
-frequency}.
+with an angular velocity $\vec{\Omega}$. Its magnitude is called the 
+\emph{Larmor frequency}.
 \end{enumerate}
 
 \section{Problems}
@@ -1207,10 +1259,11 @@ where $V$ is the volume of the ellipsoid. If the equation of the ellipsoid is
 then introduce the transformation $x_1 = x/a, y_1 = y/b, z_1 = z/c$ so that the 
 Jacobian of transformation is $abc$ and
 \[
-D_{xx} = \rho abc\int_{V_1}\left(2a^2x_1^2 -b^2y_1^2 - c^2z_1^2\right)dx_1dy_1dz_1
+D_{xx} = 
+\rho abc\int_{V_1}\left(2a^2x_1^2 -b^2y_1^2 - c^2z_1^2\right)dx_1dy_1dz_1
 \]
-and the volume of integration $V_1$ is over $x_1^2 + y_1^2 + z_1=1$, a unit sphere. 
-Introduce spherical coordinates so that $x_1 = \sin\theta\cos\phi, y_1 = 
+and the volume of integration $V_1$ is over $x_1^2 + y_1^2 + z_1=1$, a unit 
+sphere. Introduce spherical coordinates so that $x_1 = \sin\theta\cos\phi, y_1 =
 \sin\theta\sin\phi, z_1 = \cos\theta$ so that
 \begin{eqnarray*}
 \frac{D_{xx}}{\rho abc}
@@ -1272,7 +1325,8 @@ which, using equations \eqref{c5e163} and \eqref{c5e164} becomes
 \end{equation}
 The magnetic moment is
 \[
-\vec{m} = \frac{1}{2c}(q_1\vec{r}_1\times\vec{v}_1 + q_2\vec{r}_2\times\vec{v}_2).
+\vec{m} = \frac{1}{2c}(q_1\vec{r}_1\times\vec{v}_1 + 
+q_2\vec{r}_2\times\vec{v}_2).
 \]
 Since the motion is non-relativistic, $\vec{p}_1 = m_1\vec{v}_1$ and $\vec{p}_2
 = m_2\vec{v}_2$. Therefore,
@@ -1282,12 +1336,15 @@ q_2\vec{r}_2\times\frac{\vec{p}_1}{m_1}\right).
 \]
 Using \eqref{c5e163} and \eqref{c5e164} we get
 \[
-\vec{m} = \frac{1}{2c}\left(\frac{q_1}{m_1} + q_2\frac{m_1}{m_2^2}\right)\vec{r}_1\times\vec{p}_1
-= \frac{1}{2c}\left(\frac{q_1}{m_1^2} + \frac{q_2}{m_2^2}\right)m_1\vec{r}_1\times\vec{p}_1
+\vec{m} = \frac{1}{2c}\left(\frac{q_1}{m_1} + 
+ q_2\frac{m_1}{m_2^2}\right)\vec{r}_1\times\vec{p}_1
+= \frac{1}{2c}\left(\frac{q_1}{m_1^2} + 
+\frac{q_2}{m_2^2}\right)m_1\vec{r}_1\times\vec{p}_1
 \]
 Substitute for $\vec{r}_1 \times \vec{p}_1$ from \eqref{c5e165} to get
 \begin{equation}\label{c5e166}
-\vec{m} = \frac{1}{2c}\left(\frac{q_1}{m_1^2} + \frac{q_2}{m_2^2}\right)\frac{m_1m_2}{m_1+m_2}\vec{L}.
+\vec{m} = \frac{1}{2c}\left(\frac{q_1}{m_1^2} + 
+\frac{q_2}{m_2^2}\right)\frac{m_1m_2}{m_1+m_2}\vec{L}.
 \end{equation}
 The scalar on the right hand side is the gyromagnetic ratio.
 \end{enumerate}

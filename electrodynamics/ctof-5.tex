@@ -66,7 +66,7 @@ of them is
 \begin{equation}\label{c5e13}
 \vec{E} = \sum_a \frac{q_a}{R_a^2}\uv{R_a},
 \end{equation}
-where $\vec{R}_a = \vec{r}^\op - \vec{r}$. The potential is
+where $\vec{R}_a = \vec{r}_a - \vec{r}$. The potential is
 \begin{equation}\label{c5e14}
 \phi = \sum_a\frac{q_a}{R_a}.
 \end{equation}
@@ -113,7 +113,7 @@ W = \frac{1}{2}\int\rho\phi dV.
 \end{equation}
 If the charge density consists of point charges, equation \eqref{c5e19} becomes
 \begin{equation}\label{c5e20}
-W = \sum_a q_a\phi(\vec{r}_a),
+W = \frac{1}{2}\sum_a q_a\phi(\vec{r}_a),
 \end{equation}
 where $\phi(\vec{r}_a)$ is the potential due to all charges at the point 
 $\vec{r}_a$ where the charge $q_a$ is located. This formula immediately runs 
@@ -128,7 +128,7 @@ question if the mass of a charge has electrodynamic origin, that is, it exists
 because of electrodynamic energy.
 
 The energy of a uniformly charged sphere of radius $s$ can be computed as 
-follow.  We first note that its charge density is
+follows.  We first note that its charge density is
 \begin{equation}\label{c5e21}
 \rho = \frac{Q}{\frac{4\pi}{3}s^3}.
 \end{equation}
@@ -211,7 +211,7 @@ where
 \end{eqnarray*}
 However, \eqref{c5e29} is not a correct expression because we continue to have
 $R^\op$ in it. The relation between $(x, y, z)$ and $(x^\op, y^\op, z^\op)$ is
-given the Lorentz transformation
+given by the Lorentz transformation
 \[
 x^\op = \gamma(x - vt) \;;\; y^\op = y \;;\; z^\op = z
 \]
@@ -291,29 +291,6 @@ We can now write \eqref{c5e47} solely in terms of $\vec{R}$ as
 \end{equation}
 Note that $\vec{R}$ is the position of the (moving) charge in $K$ frame.
 
-\item We got the expressions for $\vec{E}$ and $\vec{H}$ using the Lorentz
-transformation of the field tensor. However, we could have as well derived them
-from the potentials \eqref{c5e34} and \eqref{c5e35}. The electric field is
-\[
-\vec{E} = -\grad\phi - \frac{1}{c}\pdt{\vec{A}}{t}.
-\]
-Since 
-\[
-\grad\frac{1}{R^\ast} = -\frac{1}{{R^\ast}^3}((x-vt)\uv{x} + (1 - \beta^2)
-(y\uv{y} + z\uv{z}))
-\]
-and 
-\[
--\frac{1}{c}\pdt{A_x}{t} = -q\beta^2\frac{x - vt}{{R^\ast}^3},
-\]
-the expression \eqref{c5e47} for $\vec{E}$ follows immediately. We can also 
-take the curl of \eqref{c5e35} to get
-\[
-\vec{H} = \frac{qv}{c\gamma^2 {R^\ast}^3}(-z\uv{y} + y\uv{z})
-= \frac{1}{c}\vec{v} \times \vec{E}.
-\]
-It agrees with the equation \eqref{c5e60}.
-
 \item In \eqref{c5e52}, $\theta$ is the angle between the radius vector of the
 field point $\vec{R}$ and the direction of motion. The magnitude of the field
 is
@@ -347,6 +324,29 @@ These three equations can be combined as
 \begin{equation}\label{c5e60}
 \vec{H} = \frac{1}{c}\vec{v} \times \vec{E} = \vec{\beta} \times \vec{E}.
 \end{equation}
+
+\item We got the expressions for $\vec{E}$ and $\vec{H}$ using the Lorentz
+transformation of the field tensor. However, we could have as well derived them
+from the potentials \eqref{c5e34} and \eqref{c5e35}. The electric field is
+\[
+\vec{E} = -\grad\phi - \frac{1}{c}\pdt{\vec{A}}{t}.
+\]
+Since 
+\[
+\grad\frac{1}{R^\ast} = -\frac{1}{{R^\ast}^3}((x-vt)\uv{x} + (1 - \beta^2)
+(y\uv{y} + z\uv{z}))
+\]
+and 
+\[
+-\frac{1}{c}\pdt{A_x}{t} = -q\beta^2\frac{x - vt}{{R^\ast}^3},
+\]
+the expression \eqref{c5e47} for $\vec{E}$ follows immediately. We can also 
+take the curl of \eqref{c5e35} to get
+\[
+\vec{H} = \frac{qv}{c\gamma^2 {R^\ast}^3}(-z\uv{y} + y\uv{z})
+= \frac{1}{c}\vec{v} \times \vec{E}.
+\]
+It agrees with the equation \eqref{c5e60}.
 
 \item We now consider the motion of a charge $q$ in the electric field produced
 by another one $Q$. Let their masses by $m$ and $M$ respectively. Assume that
@@ -383,7 +383,7 @@ Therefore, \eqref{c5e61} becomes
 \mathcal{E} = c\sqrt{p_r^2 + \frac{L^2}{r^2} + m^2c^2} + \frac{\alpha}{r}.
 \end{equation}
 
-\item If $\alpha > 0$ then as $r$ increases, the rhs of \eqref{c5e64} also
+\item If $\alpha > 0$ then as $r$ decreases, the rhs of \eqref{c5e64} also
 increases even if $p_r \rightarrow 0$. Since $\mathcal{E}$ is a constant of
 motion, a drop in $r$ can be compensated by a drop in $p_r$ only to a limited
 extent. This prevents the two charges from coming arbitrarily close to each 
@@ -499,8 +499,8 @@ written as
 \]
 Let
 \begin{equation}\label{c5e77}
-X = \frac{C}{Lc}(\phi_0 - \phi) = \sqrt{\frac{\alpha^2}{L^2c^2} - 1}
-(\phi_0 - \phi)
+X = \frac{C}{Lc}(\phi_0 - \phi) = (\phi_0 - \phi)
+\sqrt{\frac{\alpha^2}{L^2c^2} - 1}
 \end{equation}
 so that
 \begin{eqnarray*}
@@ -636,8 +636,9 @@ then we can write \eqref{c5e87} as
 $Q$ is the total charge in the collection and $\vec{p}$ is called its 
 \emph{dipole moment}.
 
-\item The dipole moment depends on $\vec{R}_a$ and therefore on the choice of the
-origin. If we shift the origin to $\vec{b}$ then the new position vectors are
+\item The dipole moment depends on $\vec{R}_a$ and therefore on the choice of 
+the origin. If we shift the origin to $\vec{b}$ then the new position vectors 
+are
 $\vec{R}_a - \vec{b}$. The new dipole moment is
 \begin{equation}\label{c5e91}
 \vec{p}^\op = \sum_a q_a (\vec{R}_a - \vec{b}) = \vec{p} - Q\vec{b}.
@@ -657,7 +658,8 @@ Let,
 \end{eqnarray*}
 so that \eqref{c5e92} becomes
 \begin{equation}\label{c5e93}
-\vec{p} = \left(\sum_a q_a^+\right)\vec{R}^+ - \left(\sum_a q_a^-\right)\vec{R}^-.
+\vec{p} = \left(\sum_a q_a^+\right)\vec{R}^+ - 
+\left(\sum_a q_a^-\right)\vec{R}^-.
 \end{equation}
 If
 \begin{equation}\label{c5e94}
@@ -675,13 +677,13 @@ This shows that if the total charge of the collection is zero then we can write
 its dipole moment as a product of $Q_0$ the sum of its positive charges and 
 $\vec{R}^{+-}$, which can be viewed as the separation of the ``centres of masses
 `' of the charges of each kind. The term ``centre of mass'' is not inappropriate
-given the similarity of the definitions of $R^+$ and $R^-$ with that of the centre
-of mass of a collection of discrete particles.
+given the similarity of the definitions of $R^+$ and $R^-$ with that of the 
+centre of mass of a collection of discrete particles.
 
-\item We have been considering the case $Q = 0$ in the previous two points. It is
-interesting and important because most macroscopic bodies are electrically neutral
-although they are composed of positive and negative charges. Continuing to analyse
-this case further, if $Q = 0$, \eqref{c5e90} simplifies to
+\item We have been considering the case $Q = 0$ in the previous two points. It 
+is interesting and important because most macroscopic bodies are electrically 
+neutral although they are composed of positive and negative charges. Continuing 
+to analyse this case further, if $Q = 0$, \eqref{c5e90} simplifies to
 \begin{equation}\label{c5e97}
 \varphi(\vec{R}_0) = \frac{\vec{p}\cdot\vec{R}_0}{R_0^3}.
 \end{equation}
@@ -710,7 +712,8 @@ and \eqref{c5e98} becomes
 \end{equation}
 The potential of a dipole varies as $R_0^{-2}$ and the field as $R_0^{-3}$.
 
-\item The Taylor expansion of $f(\vec{R}_0-\vec{R}_a)$ up to second order term is
+\item The Taylor expansion of $f(\vec{R}_0-\vec{R}_a)$ up to second order term 
+is
 \begin{equation}\label{c5e102}
 f(\vec{R}_0-\vec{R}_a) = f(\vec{R}_0) - \vec{R}_a\cdot\grad f\Big|_{\vec{R}_0} +
 \frac{1}{2}\sum_{i, j}R_{ai}R_{aj}
@@ -723,22 +726,27 @@ If $f = 1/|\vec{R}_0-\vec{R}_a|$ then
 \]
 and
 \[
-\frac{\partial^2 f}{\partial x_j\partial x_i} = -\frac{\delta_{ij}}{R_0^3} + 3\frac{x_ix_j}{R_0^5}
-= \frac{3x_ix_j - R_0^2\delta_{ij}}{R_0^5}.
+\frac{\partial^2 f}{\partial x_j\partial x_i} = -\frac{\delta_{ij}}{R_0^3} + 
+3\frac{x_ix_j}{R_0^5} = \frac{3x_ix_j - R_0^2\delta_{ij}}{R_0^5}.
 \]
 The second order term in Taylor expansion of the potential of \eqref{c5e86} is
 \begin{eqnarray*}
-T_2 &=& \frac{1}{2}\sum_a\sum_{ij} q_aR_{ai}R_{aj}\frac{3x_ix_j - R_0^2\delta_{ij}}{R_0^5}\Big|_{\vec{R}_0} \\
- &=& \frac{1}{2}\sum_a\sum_{ij} q_aR_{ai}R_{aj}\frac{3R_{0i}R_{0j} - R_0^2\delta_{ij}}{R_0^5} \\
- &=& \frac{1}{2}\sum_{ij}\sum_a q_a\frac{3R_{ai}R_{aj}R_{0i}R_{0j} - R_{ai}R_{aj}R_0^2\delta_{ij}}{R_0^5}
+T_2 &=& \frac{1}{2}\sum_a\sum_{ij} q_aR_{ai}R_{aj}
+	\frac{3x_ix_j - R_0^2\delta_{ij}}{R_0^5}\Big|_{\vec{R}_0} \\
+ &=& \frac{1}{2}\sum_a\sum_{ij} q_aR_{ai}R_{aj}\frac{3R_{0i}R_{0j} - 
+ 	R_0^2\delta_{ij}}{R_0^5} \\
+ &=& \frac{1}{2}\sum_{ij}\sum_a q_a
+  \frac{3R_{ai}R_{aj}R_{0i}R_{0j} - R_{ai}R_{aj}R_0^2\delta_{ij}}{R_0^5}
 \end{eqnarray*}
 Now,
 \[
-\sum_{ij}R_{ai}R_{aj}R_0^2\delta_{ij} = R_a^2R_0^2 = \sum_{ij}R_a^2\delta_{ij}R_{ai}R_{aj}
+\sum_{ij}R_{ai}R_{aj}R_0^2\delta_{ij} = R_a^2R_0^2 = 
+\sum_{ij}R_a^2\delta_{ij}R_{ai}R_{aj}
 \]
 so that
 \[
-T_2 = \frac{1}{2}\sum_{ij}R_{0i}\sum_a q_a(3R_{ai}R_{aj} - R_a^2\delta_{ij}R_{0j})\frac{1}{R_0^5}.
+T_2 = \frac{1}{2}\sum_{ij}R_{0i}\sum_a 
+q_a(3R_{ai}R_{aj} - R_a^2\delta_{ij}R_{0j})\frac{1}{R_0^5}.
 \]
 We can now extend the expression in \eqref{c5e87} to
 \begin{equation}\label{c5e103}
@@ -752,7 +760,8 @@ D_{ij} = \sum_a q_a(3R_{ai}R_{aj} - R_a^2\delta_{ij})
 is the quadrupole moment of the collection of charges. $D_{ij}$ is a symmetric,
 second-order 3-tensor. Further, it is also traceless, for
 \[
-D_{ii} = \sum_a q_a(3R_{ai}R_{ai} - R_a^2\delta_{ii}) = \sum_a q_a(3R_a^2 - 3R_a^2) = 0.
+D_{ii} = \sum_a q_a(3R_{ai}R_{ai} - R_a^2\delta_{ii}) = 
+\sum_a q_a(3R_a^2 - 3R_a^2) = 0.
 \]
 Therefore, only five of its components are independent. Using \eqref{c5e99}, we
 can further simplify \eqref{c5e103} to
@@ -774,8 +783,8 @@ n_i D_{ij} n_j = n_1^2D_{11} + n_2^2D_{22} + n_3^2D_{33} =
 D\left(n_3^2 - \frac{n_1^2 + n_2^2}{2}\right).
 \]
 If $\un$ has polar coordinates $(1, \phi, \theta)$ where the $z$-axis is the 
-symmetry axis of the charge distribution then $n_3 = \cos\theta, n_2 = \sin\theta
-\sin\phi, n_1 = \sin\theta\cos\phi$ and hence,
+symmetry axis of the charge distribution then $n_3 = \cos\theta, n_2 = 
+\sin\theta \sin\phi, n_1 = \sin\theta\cos\phi$ and hence,
 \begin{equation}\label{c5e107}
 n_iD_{ij}n_j = \frac{D}{2}(3\cos^2\theta - 1).
 \end{equation}
@@ -792,8 +801,8 @@ can write \eqref{c5e109} as
 + \frac{D}{2R_0^3}P_3(\cos\theta).
 \end{equation}
 
-\item We can continue to expand the potential to get higher order terms expressed
-as multiples of Legendra polynomials using
+\item We can continue to expand the potential to get higher order terms 
+expressed as multiples of Legendre polynomials using
 \begin{equation}\label{c5e110}
 \frac{1}{|\vec{R}_0 - \vec{r}|} = \frac{1}{\sqrt{R_0^2 + r^2 - 2rR_0\cos\chi}}
 = \sum_{l=0}^\infty \frac{r^l}{R_0^{l+1}}P_l(\cos\chi).
@@ -804,29 +813,34 @@ $\vec{r}_0$ are $\theta$ and $\phi$ then
 P_l(\cos\chi) = \sum_{m=-l}^l\frac{(l -|m|)!}{(l + |m|)!}
 P_l^{|m|}(\cos\Theta)P_l^{|m|}(\cos\theta)e^{-im(\Phi-\phi)},
 \end{equation}
-where $P_l^{|m|}$ are called the associated Legendre polynomials. We next introduce
-the spherical harmonics as
+where $P_l^{|m|}$ are called the associated Legendre polynomials. We next 
+introduce the spherical harmonics as
 \begin{equation}\label{c5e112}
-Y_{lm}(\theta,\phi)=(-1)^m\sqrt{\frac{2l+1}{4\pi}\frac{(l-m)!}{(l+m)!}}P_l^m(\cos\theta)e^{im\phi},
-m \ge 0
+Y_{lm}(\theta,\phi)=(-1)^m\sqrt{\frac{2l+1}{4\pi}\frac{(l-m)!}{(l+m)!}}
+P_l^m(\cos\theta)e^{im\phi}, m \ge 0
 \end{equation}
 so that we can write \eqref{c5e111} as
 \begin{equation}\label{c5e113}
-P_l(\cos\chi)=\sum_{m=-l}^l\frac{4\pi}{2l+1}Y_{lm}^\ast(\Theta,\Phi)Y_{lm}(\theta,\phi)
+P_l(\cos\chi)=
+\sum_{m=-l}^l\frac{4\pi}{2l+1}Y_{lm}^\ast(\Theta,\Phi)Y_{lm}(\theta,\phi)
 \end{equation}
 and \eqref{c5e110} as
 \begin{equation}\label{c5e114}
-\frac{1}{|\vec{R}_0 - \vec{r}_a|} = \sum_{l=0}^\infty\sum_{m=-l}^l\frac{r^l}{R_0^{l+1}}
+\frac{1}{|\vec{R}_0 - \vec{r}_a|} = 
+\sum_{l=0}^\infty\sum_{m=-l}^l\frac{r^l}{R_0^{l+1}}
 \frac{4\pi}{2l+1}Y_{lm}^\ast(\Theta,\Phi)Y_{lm}(\theta_a,\phi_a).
 \end{equation}
 This allows us to write \eqref{c5e86} as
 \begin{eqnarray*}
 \varphi(\vec{R}_0) &=& \sum_a\frac{q_a}{|\vec{R}_0 - \vec{r}|} \\
- &=& \sum_a q_a\sum_{l=0}^\infty\sum_{m=-l}^l\frac{r^l}{R_0^{l+1}}\frac{4\pi}{2l+1}Y_{lm}^\ast(\Theta,\Phi)
+ &=& \sum_a q_a\sum_{l=0}^\infty\sum_{m=-l}^l
+ 	\frac{r^l}{R_0^{l+1}}\frac{4\pi}{2l+1}Y_{lm}^\ast(\Theta,\Phi)
      Y_{lm}(\theta_a,\phi_a) \\
- &=& \sum_{l=0}^\infty\frac{1}{R_0^{l+1}}\sum_{m=-l}^l\sum_a q_ar^l\frac{4\pi}{2l+1}Y_{lm}^\ast(\Theta,\Phi)
+ &=& \sum_{l=0}^\infty\frac{1}{R_0^{l+1}}\sum_{m=-l}^l\sum_a 
+ 	q_ar^l\frac{4\pi}{2l+1}Y_{lm}^\ast(\Theta,\Phi)
      Y_{lm}(\theta_a,\phi_a) \\
- &=& \sum_{l=0}^\infty\frac{1}{R_0^{l+1}}\sum_{m=-l}^l\sqrt{\frac{4\pi}{2l+1}}Y_{lm}^\ast(\Theta,\Phi)
+ &=& \sum_{l=0}^\infty\frac{1}{R_0^{l+1}}\sum_{m=-l}^l
+ 	\sqrt{\frac{4\pi}{2l+1}}Y_{lm}^\ast(\Theta,\Phi)
      \sum_a q_ar^l\sqrt{\frac{4\pi}{2l+1}}Y_{lm}(\theta_a,\phi_a)
 \end{eqnarray*}
 Define
@@ -835,16 +849,16 @@ Q_m^l = \sum_a q_ar^l\sqrt{\frac{4\pi}{2l+1}}Y_{lm}(\theta_a,\phi_a)
 \end{equation}
 so that
 \begin{equation}\label{c5e116}
-\varphi(\vec{R}_0) = \sum_{l=0}^\infty\frac{1}{R_0^{l+1}}\sum_{m=-l}^l\sqrt{\frac{4\pi}{2l+1}}
-Y_{lm}^\ast(\Theta,\Phi)Q_m^l.
+\varphi(\vec{R}_0) = \sum_{l=0}^\infty\frac{1}{R_0^{l+1}}\sum_{m=-l}^l
+\sqrt{\frac{4\pi}{2l+1}} Y_{lm}^\ast(\Theta,\Phi)Q_m^l.
 \end{equation}
 For each $l$, $m$ can take $2l + 1$ values from $-l$ to $l$. They form the 
 components of the $2^l$-moment of the collection of charges.
 
 \item Now consider a collection of charges $q_a$ at positions $\vec{r}_a$ with 
 respect to an origin within the collection. Let it be exposed to an external 
-electric field which varies slowly over the extent of the collection. If $\varphi$
-is the potential of the field then the energy of the collection is
+electric field which varies slowly over the extent of the collection. If 
+$\varphi$ is the potential of the field then the energy of the collection is
 \begin{equation}\label{c5e117}
 U = \sum_aq_a\varphi(\vec{r}_a).
 \end{equation}
@@ -879,26 +893,28 @@ or, since $\vec{p}$ is a constant,
 \begin{equation}\label{c5e122}
 \vec{F} = Q\vec{E}_0 + (\vec{p}\cdot\grad)\vec{E}|_0.
 \end{equation}
-The torque on the collection with respect to the origin, to the lowest order term,
-is
+The torque on the collection with respect to the origin, to the lowest order 
+term, is
 \begin{equation}\label{c5e123}
 \vec{N} = \sum_aq_a\vec{r}_a\times\vec{E}_0  = \vec{p}\times\vec{E}_0.
 \end{equation}
 
-\item Now consider two systems with net charge $0$ so that up to the lowest order
-the energy is of the first system is
+\item Now consider two systems with net charge $0$ so that up to the lowest 
+order the energy is of the first system is
 \begin{equation}\label{c5e124}
 U_1 = -\vec{p}_1\cdot\vec{E},
 \end{equation}
-$\vec{E}$ being the external electric field \emph{at the origin within its extent}.
-If $\vec{E}$ is due to the other system whose origin is at $\vec{R}$, then using
+$\vec{E}$ being the external electric field \emph{at the origin within its 
+extent}. If $\vec{E}$ is due to the other system whose origin is at $\vec{R}$, 
+then using
 \eqref{c5e101},
 \[
 \vec{E} = \frac{(3\vec{R}\cdot\vec{p}_2)\vec{R} - \vec{p}_2R^2}{R^5}
 \]
 so that
 \begin{equation}\label{c5e125}
-U_1 = \frac{(\vec{p}_1\cdot\vec{p}_2)R^2 - 3(\vec{p}_1\cdot\vec{R})(\vec{p}_2\cdot\vec{R})}{R^5}.
+U_1 = \frac{(\vec{p}_1\cdot\vec{p}_2)R^2 - 3(\vec{p}_1\cdot\vec{R})
+(\vec{p}_2\cdot\vec{R})}{R^5}.
 \end{equation}
 
 If the second system had a net charge $Q_2$ then
@@ -912,7 +928,8 @@ U_1 = Q\frac{\vec{p}\cdot\vec{R}}{R^3}.
 
 \item The second order term in the expansion of \eqref{c5e118} is
 \[
-U^{(2)} = \frac{1}{2}\sum_a q_a r_{ai}r_{aj}\frac{\partial^2\varphi}{\partial x_i\partial x_j}\Big|_0.
+U^{(2)} = \frac{1}{2}\sum_a q_a r_{ai}r_{aj}\frac{\partial^2\varphi}
+{\partial x_i\partial x_j}\Big|_0.
 \]
 Since $\varphi$ is a solution of the Laplace equation,
 \[
@@ -927,24 +944,31 @@ so that
 and hence
 \begin{eqnarray*}
 U^{(2)} &=& \frac{1}{2}\sum_a q_a r_{ai}r_{aj}(1 - \delta_{ij}) \\
- &=& \frac{1}{2}\frac{\partial^2\varphi}{\partial x_i\partial x_j}\Big|_0\sum_a q_a r_{ai}r_{aj}(1 - \delta_{ij}) \\
- &=& \frac{1}{2}\frac{\partial^2\varphi}{\partial x_i\partial x_j}\Big|_0\sum_a q_a (r_{ai}r_{aj} - r_a^2\frac{\delta_{ij}}{3}) \\
- &=& \frac{1}{6}\frac{\partial^2\varphi}{\partial x_i\partial x_j}\Big|_0\sum_a q_a (3r_{ai}r_{aj} - r_a^2\delta_{ij})
+ &=& \frac{1}{2}\frac{\partial^2\varphi}{\partial x_i\partial x_j}\Big|_0
+ 	\sum_a q_a r_{ai}r_{aj}(1 - \delta_{ij}) \\
+ &=& \frac{1}{2}\frac{\partial^2\varphi}{\partial x_i\partial x_j}\Big|_0
+ 	\sum_a q_a (r_{ai}r_{aj} - r_a^2\frac{\delta_{ij}}{3}) \\
+ &=& \frac{1}{6}\frac{\partial^2\varphi}{\partial x_i\partial x_j}\Big|_0
+ 	\sum_a q_a (3r_{ai}r_{aj} - r_a^2\delta_{ij})
 \end{eqnarray*}
 Using the definition of the quadrupole moment tensor of \eqref{c5e104},
 \begin{equation}\label{c5e127}
-U^{(2)} = \frac{1}{6}\frac{\partial^2\varphi}{\partial x_i\partial x_j}\Big|_0D_{ij}
+U^{(2)} = \frac{1}{6}\frac{\partial^2\varphi}{\partial x_i\partial x_j}\Big|_0
+D_{ij}
 \end{equation}
 
 \item The spherical harmonics form a complete set of basis functions. Therefore,
 one can write
 \begin{equation}\label{c5e128}
-\phi(\vec{r}) = \sum_{l=0}^\infty r^l\sum_{m=-l}^l\sqrt{\frac{4\pi}{2l+1}}a_{lm}Y_{lm}(\theta,\phi),
+\phi(\vec{r}) = \sum_{l=0}^\infty r^l\sum_{m=-l}^l
+\sqrt{\frac{4\pi}{2l+1}}a_{lm}Y_{lm}(\theta,\phi),
 \end{equation}
 where $a_{lm}$ are constants. Substituting this in equation \eqref{c5e117},
 \begin{eqnarray*}
-U &=& \sum_a q_a\sum_{l=0}^\infty r_a^l\sum_{m=-l}^l\sqrt{\frac{4\pi}{2l+1}}a_{lm}Y_{lm}(\theta,\phi) \\
-  &=& \sum_{l=0}^\infty\sum_{m=-l}^l a_{lm}\left(\sum_a q_ar_a^l\sqrt{\frac{4\pi}{2l+1}}Y_{lm}(\theta,\phi)\right)
+U &=& \sum_a q_a\sum_{l=0}^\infty r_a^l\sum_{m=-l}^l
+	\sqrt{\frac{4\pi}{2l+1}}a_{lm}Y_{lm}(\theta,\phi) \\
+  &=& \sum_{l=0}^\infty\sum_{m=-l}^l a_{lm}
+  \left(\sum_a q_ar_a^l\sqrt{\frac{4\pi}{2l+1}}Y_{lm}(\theta,\phi)\right)
 \end{eqnarray*}
 Using \eqref{c5e115},
 \[
@@ -972,7 +996,7 @@ for the magnetic field to get
 \item One could have got similar equations had one assumed that the fields are
 independent of time. We wrote \eqref{c5e3} and \eqref{c5e4} under the same 
 assumption. However, one cannot consider the electric field to be time 
-independent of there are currents in the system. Therefore, the correct way to 
+independent as there are currents in the system. Therefore, the correct way to 
 introduce constant fields in this case is to assume that the $\langle\vec{E}
 \rangle = 0$.
 

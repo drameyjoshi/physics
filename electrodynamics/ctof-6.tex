@@ -19,7 +19,8 @@ We will also show that they satisfy the wave equation. Solutions of Maxwell
 equations in vacuum are called electromagnetic waves.
 
 \item As usual, it is easier to analyse the potentials. Let us choose them such
-that $\varphi = 0$ and $\dive\vec{A} = 0$. Equation \eqref{c6e2} becomes
+that $\varphi = 0$ and $\dive\vec{A} = 0$. Equation \eqref{c6e2} becomes, after
+expressing the electric field in terms of the potentials,
 \[
 -\frac{1}{c}\curl\pdt{\vec{A}}{t} = 
 -\frac{1}{c}\frac{\partial}{\partial t}\curl\vec{A},
@@ -60,9 +61,11 @@ F^{\mu\nu} = \pdt{A^\nu}{x_\mu} - \pdt{A^\mu}{x_\nu}
 \]
 to get
 \[
-\frac{\partial}{\partial x^\nu}\pdt{A^\nu}{x_\mu} - \frac{\partial}{\partial x^\mu}\pdt{A^\nu}{x_\nu} = 0
+\frac{\partial}{\partial x^\nu}\pdt{A^\nu}{x_\mu} - 
+\frac{\partial}{\partial x^\mu}\pdt{A^\mu}{x_\nu} = 0
 \Rightarrow
-\frac{\partial}{\partial x_\mu}\pdt{A^\nu}{x^\nu} - \frac{\partial}{\partial x^\mu}\pdt{A^\nu}{x_\nu} = 0.
+\frac{\partial}{\partial x_\mu}\pdt{A^\nu}{x^\nu} - 
+\frac{\partial}{\partial x^\mu}\pdt{A^\mu}{x_\nu} = 0.
 \]
 We now choose $A^\mu$ such that
 \begin{equation}\label{c6e8}
@@ -72,12 +75,12 @@ In terms of coordinates, it is
 \begin{equation}\label{c6e9}
 \frac{1}{c}\pdt{\varphi}{t} - \dive\vec{A} = 0.
 \end{equation}
-Equations \eqref{c6e8} and \eqref{c6e9} are called the \emph{Lorenz gauge}. Unlike
-the condition of Coulomb gauge, that of the Lorenz gauge is invariant under Lorentz 
-transformation. We are thus left with
+Equations \eqref{c6e8} and \eqref{c6e9} are called the \emph{Lorenz gauge}. 
+Unlike the condition of Coulomb gauge, that of the Lorenz gauge is invariant 
+under Lorentz transformation. We are thus left with
 \begin{equation}\label{c6e10}
-\frac{\partial}{\partial x^\nu}\pdt{A^\mu}{x_\nu} = 
-g^{\nu\rho}\frac{\partial}{\partial x^\nu}\pdt{A^\mu}{x^\rho} = 0.
+\frac{\partial}{\partial x^\mu}\pdt{A^\mu}{x_\nu} = 
+g^{\mu\rho}\frac{\partial}{\partial x^\nu}\pdt{A^\mu}{x^\rho} = 0.
 \end{equation}
 It is equivalent to \eqref{c6e5}.
 
@@ -88,9 +91,9 @@ the form
 \spdt{f}{t} - c^2\nabla^2 f = 0,
 \]
 where $f$ is one of the components of $\vec{A}, \vec{E}$ or $\vec{H}$. If the 
-function $f$ depends only on $x$ and $t$, that is, if it is independent of $y$ and
-$z$, then the solution $f$ is called a plane wave. In this case, the equation 
-simplifies to
+function $f$ depends only on $x$ and $t$, that is, if it is independent of $y$ 
+and $z$, then the solution $f$ is called a plane wave. In this case, the 
+equation simplifies to
 \begin{equation}\label{c6e11}
 \spdt{f}{t} - c^2\spdt{f}{x} = 0.
 \end{equation}
@@ -137,7 +140,7 @@ f(x, t) = f_1\left(t - \frac{x}{c}\right) + f_2\left(t + \frac{x}{c}\right).
 \[
 f(x, t) = f_1\left(t - \frac{x}{c}\right)
 \]
-Any reasonably function of $t - x/c$ is a solution of \eqref{c6e11}. For a fixed
+Any reasonable function of $t - x/c$ is a solution of \eqref{c6e11}. For a fixed
 $x$, the value of the function changes with $t$. Likewise, for a fixed $t$, the
 function changes value with $x$. Further the value of the function is the same
 for a given value of its argument, namely, $t - x/c$ or $ct - x$. If we focus 
@@ -148,10 +151,11 @@ If $f_1 = 0$ and $f = f_2$ then a similar interpretation is applicable except
 that a point with a certain value of $f$ travels along the negative $x$ axis
 with the speed $c$.
 
-\item How do we use this information to derive the forms of $\vec{E}$ and $\vec{H}$
-for plane waves? We will start by deriving an expression for the vector potential.
-Since the components of $\vec{A}$ individually satisfy \eqref{c6e11}, none of them
-will be functions of $y$ and $z$. Further, $\dive\vec{A} = 0$ implies that
+\item How do we use this information to derive the forms of $\vec{E}$ and 
+$\vec{H}$ for plane waves? We will start by deriving an expression for the vector
+potential. Since the components of $\vec{A}$ individually satisfy \eqref{c6e11}, 
+none of them will be functions of $y$ and $z$. Further, $\dive\vec{A} = 0$ 
+implies that
 \[
 \pdt{A_x}{x} = 0.
 \]
@@ -223,30 +227,33 @@ The components of $\vec{S}/c$ are the components
 \[
 T^{01}, T^{02}, T^{03}
 \]
-of the energy-momentum tensor \eqref{c4e90}. We also argued in point 23 of chapter
-\ref{c4} that $T^{01}/c, T^{02}/c, T^{03}/c$ are the components of momentum 
-density of the system. Thus, we can interpret $\vec{S}/c^2$ as the momentum flux
-in the system. From \eqref{c6e32} we see that electromagnetic waves carry momentum
-in the direction of propagation.
+of the energy-momentum tensor \eqref{c4e90}. We also argued in point 23 of 
+chapter \ref{c4} that $T^{01}/c, T^{02}/c, T^{03}/c$ are the components of 
+momentum density of the system. Thus, we can interpret $\vec{S}/c^2$ as the 
+momentum flux in the system. From \eqref{c6e32} we see that electromagnetic waves
+carry momentum in the direction of propagation.
 
 The relation between energy density and momentum density of electromagentic 
 waves is similar to that of relativistic particle of zero mass.
 
 \item If the $x$-axis is chosen to be along the direction of propagation of
-the wave then $\vec{E} = E\uv{y}$ and $\vec{H} = \uv{z}$. The components of the
+the wave then $\vec{E} = E\uv{y}$ and $\vec{H} = H\uv{z}$. The components of the
 energy momentum tensor evaluated below \eqref{c4e88} are
 \begin{eqnarray}
 T^{00} &=& \frac{E^2 + H^2}{8\pi} \label{c6e33} \\
 T^{11} &=& -\frac{E^2 + H^2}{8\pi} = -\sigma_{xx} \label{c6e34},
 \end{eqnarray}
+All other components vanish.
 
 \item Lorentz transformation for $W$ follows from \eqref{c1e88}.
 \begin{equation}\label{c6e35}
 W = \frac{W^\op + 2\beta S^\op_x/c + \beta^2T_{11}^\op}{1 - \beta^2}
  = \frac{W^\op + 2\beta S^\op_x/c - \beta^2\sigma_{xx}^\op}{1 - \beta^2}.
 \end{equation}
-If $\alpha^\op$ is the angle between $\bm{\beta}$ and the direction of 
-propagation of the wave then
+Let $\alpha^\op$ is the angle between the $x^\op$ and the direction of 
+propagation of the wave $\un$. Since $\vec{\beta}$ is along the $x^\op$ axis,
+$\alpha^\op$ is also the angle between $\vec{\beta}$ and $\un$. Therefore,
+using \eqref{c6e32}, we get
 \[
 S_x^\op = cW^\op\cos\alpha^\op
 \]
@@ -254,14 +261,15 @@ and
 \begin{equation}\label{c6e36}
 \sigma_{xx}^\op = -W^\op\cos^2\alpha^\op,
 \end{equation}
-{\color{red}To do: justify \eqref{c6e36}.} so that
+so that
 \begin{equation}\label{c6e37}
 W = \frac{W^\op(1 + \beta\cos\alpha^\op)^2}{1 - \beta^2}.
 \end{equation}
 
-\item A wave whose time dependence is of the form $\cos(\omega t + \alpha)$, where
-$\omega$ and $\alpha$ are constants is called a mono-chromatic wave. If $f(\vec{r},
-t)$ is the field quantity and if its time dependence of mono-chromatic then
+\item A wave whose time dependence is of the form $\cos(\omega t + \alpha)$, 
+where $\omega$ and $\alpha$ are constants is called a mono-chromatic wave. If 
+$f(\vec{r}, t)$ is the field quantity and if its time dependence is 
+mono-chromatic then
 \begin{equation}\label{c6e38}
 \nabla^2 f = -\frac{\omega^2}{c^2} f.
 \end{equation}
@@ -269,15 +277,18 @@ If the wave is propagating along the positive $x$ axis then $f$ is a function of
 $t - x/c$ alone. If it is also mono-chromatic then,
 \[
 f(x, t) = f_0\cos\left(\omega t - \omega\frac{x}{c} + \alpha\right) = 
-\re\left\{f_0\exp\left(-i\left(\omega t - \omega\frac{x}{c} + \alpha\right)\right)\right\}.
+\re\left\{f_0\exp\left(-i\left(\omega t - \omega\frac{x}{c} + 
+\alpha\right)\right)\right\}.
 \]
 The constant $\alpha$ can be absorbed in $f_0$ so that we can as well write
 \begin{equation}\label{c6e39}
-f(x, t) = \re\left\{f_0\exp\left(-i\left(\omega t - \omega\frac{x}{c}\right)\right)\right\}.
+f(x, t) = \re\left\{f_0\exp\left(-i\left(\omega t - 
+\omega\frac{x}{c}\right)\right)\right\}.
 \end{equation}
 Now,
 \[
-\cos\left(\omega t - \frac{\omega}{c}\left(x + \frac{2\pi c}{\omega}\right)\right)
+\cos\left(\omega t - \frac{\omega}{c}
+\left(x + \frac{2\pi c}{\omega}\right)\right)
 = \cos\left(\omega t - \frac{\omega}{c}x + 2\pi\right) = 
 \cos\left(\omega t - \frac{\omega}{c}x\right)
 \]
@@ -292,7 +303,8 @@ is called the \emph{wavelength}. The vector,
 is called the \emph{wave-vector}. In terms of $\vec{k}$ we can generalise 
 \eqref{c6e39} to
 \begin{equation}\label{c6e42}
-f(\vec{r}, t) = \re\left\{f_0\exp\left(i\left(\vec{k}\cdot\vec{r} - \omega t\right)\right)\right\}.
+f(\vec{r}, t) = \re\left\{f_0\exp\left(i\left(\vec{k}\cdot\vec{r} - 
+\omega t\right)\right)\right\}.
 \end{equation}
 If we perform only linear operations, we can write \eqref{c6e42} as
 \begin{equation}\label{c6e43}
@@ -352,11 +364,11 @@ in the second term of \eqref{c6e49}. We can combine \eqref{c6e51} and
 \begin{equation}\label{c6e53}
 \frac{E_y^2}{b_1^2} + \frac{E_z^2}{b_2^2} = 1.
 \end{equation}
-The vector $\vec{E} = \vec{E}_y\uv{y} + \vec{E}_z\uv{z}$ thus lies on the ellipse
-defined by \eqref{c6e53}. As time goes by, the tip of the vector moves along the
-ellipse. Such a wave is called \emph{elliptically polarised}. It is called \emph{
-circularly polarised} if $b_1 = b_2$ and plane polarised of one of $b_1$ or $b_2$
-is zero.
+The vector $\vec{E} = \vec{E}_y\uv{y} + \vec{E}_z\uv{z}$ thus lies on the 
+ellipse defined by \eqref{c6e53}. As time goes by, the tip of the vector moves 
+along the ellipse by following equations \eqref{c6e51} and \eqref{c6e52}. Such 
+a wave is called \emph{elliptically polarised}. It is called \emph{circularly 
+polarised} if $b_1 = b_2$ and plane polarised of one of $b_1$ or $b_2$ is zero.
 
 \item If we introduce a 4-vector
 \begin{equation}\label{c6e54}
@@ -378,8 +390,8 @@ k_\mu k^\mu = \frac{\omega^2}{c^2} - k^2 = 0,
 by \eqref{c6e41}. In the pseudo-Euclidean geometry of the space-time a norm of a
 vector can be zero without the vector being zero.
 
-\item The energy-momentum tensor of the electromagnetic field of a plane wave has
-the components,
+\item The energy-momentum tensor of the electromagnetic field of a plane wave 
+has the components,
 \begin{eqnarray*}
 T^{00} &=& \frac{E^2 + H^2}{8\pi} = W \\
 T^{01} &=& \frac{E_yH_z - E_zH_y}{4\pi} = k^2A^2\\
@@ -392,8 +404,9 @@ T^{22} &=& \frac{-E_x^2 + E_y^2 - E_z^2 - H_x^2 + H_y^2 - H_z^2}{8\pi} = 0\\
 T^{23} &=& -\frac{E_yE_z + H_yH_z}{4\pi} = 0 \\
 T^{33} &=& \frac{-E_x^2 - E_y^2 + E_z^2 - H_x^2 - H_y^2 + H_z^2}{8\pi} = 0
 \end{eqnarray*}
-where we used the fact that $\vec{k} = k\uv{x}$, $\vec{H} = i\vec{k}\times\vec{A}
-= i(-kA_z\uv{y} + kA_y\uv{z})$, $\vec{E} = \un\times\vec{H} = \uv{x}\times\vec{H}
+where we used the fact that $\vec{k} = k\uv{x}$, $\vec{H} = 
+i\vec{k}\times\vec{A} = i(-kA_z\uv{y} + kA_y\uv{z})$, $\vec{E} = 
+\un\times\vec{H} = \uv{x}\times\vec{H}
 = i(-kA_z\uv{z} - kA_y\uv{y})$, for a plane wave. Since, for these expressions,
 \[
 E^2 + H^2 = 2k^2A^2,
@@ -416,10 +429,10 @@ k^2 &=& \bar{k}^2 \label{c6e62} \\
 k^3 &=& \bar{k}^3 \label{c6e63}
 \end{eqnarray}
 where $\bar{k}^\mu$ is the wave vector measured in a frame $\bar{K}$ moving
-at velocity $v\uv{x}/c$ with respect to $K$. From \eqref{c6e54}, $k^0 = \omega/c$
+at velocity $v\uv{x}/c$ with respect to $K$. From \eqref{c6e54}, $k^0=\omega/c$
 so that \eqref{c6e60} becomes
 \begin{equation}\label{c6e64}
-\omega = \gamma(\bar{\omega} + c\bar{k}^1)
+\omega = \gamma(\bar{\omega} + v\bar{k}^1)
 \end{equation}
 If the wave propagates at an angle $\alpha$ with respect to the $x$ axis in 
 $\bar{K}$ frame then $\bar{k}^1 = k\cos\alpha$. Using \eqref{c6e57}, we have
@@ -428,14 +441,19 @@ $\bar{K}$ frame then $\bar{k}^1 = k\cos\alpha$. Using \eqref{c6e57}, we have
 \end{equation}
 so that \eqref{c6e64} becomes
 \[
-\omega = \gamma(\bar{\omega} + \bar{\omega}\cos\alpha) = \gamma\bar{\omega}(1 + \cos\alpha)
+\omega = \gamma(\bar{\omega} + \beta\bar{\omega}\cos\alpha) = 
+\gamma\bar{\omega}(1 + \beta\cos\alpha)
 \]
 or
 \begin{equation}\label{c6e66}
-\bar{\omega} = \frac{\omega\sqrt{1 - \beta^2}}{1 + \cos\alpha}.
+\bar{\omega} = \frac{\omega\sqrt{1 - \beta^2}}{1 + \beta\cos\alpha}.
 \end{equation}
-If $\alpha = \pi/2$, $\bar{\omega} = \omega\sqrt{1 - \beta^2} < \omega$. This is 
-the relativistic red-shift.
+If $\alpha = \pi/2$, $\bar{\omega} = \omega\sqrt{1 - \beta^2} < \omega$. This 
+is the relativistic red-shift. On the other hand, if 
+\[
+\alpha > \cos^{-1}(\sqrt{1 - \beta^2} - 1)
+\]
+then $\bar{\omega} > \omega$ and we have the relativistic blue shift.
 
 \item The spectral resolution of a wave is an expression of the wave field as a
 superposition of monochromatic waves. It can be done in two ways:
@@ -444,9 +462,9 @@ superposition of monochromatic waves. It can be done in two ways:
 \begin{equation}\label{c6e67}
 f(t) = \sum_{n=-\infty}^\infty f_n e^{-i\omega_0 nt},
 \end{equation}
-where $\omega_0 = 2\pi/T$ and $T$ is such that $f(t + T) = f(t)$. The superposition
-is written as a sum of waves of frequency $\omega_0$ and its harmonics. We can 
-get the amplitudes $f_n$ using
+where $\omega_0 = 2\pi/T$ and $T$ is such that $f(t + T) = f(t)$. The 
+superposition is written as a sum of waves of frequency $\omega_0$ and its 
+harmonics. We can get the amplitudes $f_n$ using
 \begin{equation}\label{c6e68}
 f_n = \frac{1}{T}\int_{-T/2}^{T/2} f(t)e^{i\omega_0 nt},
 \end{equation}
@@ -463,13 +481,13 @@ Since,
 \int_{-T/2}^{T/2}e^{i\omega_0(m - n)t}dt = T\delta_{mn},
 \end{equation},
 \begin{equation}\label{c6e71a}
-\overline{|f|^2} = \frac{1}{T}\int_{-T/2}^{T/2}|f|^2 dt = 
+\overline{|f|}^2 = \frac{1}{T}\int_{-T/2}^{T/2}|f|^2 dt = 
 \sum_{m, n = -\infty}^\infty f_n f_m^\ast \delta_{mn} = 
 \sum_{n=-\infty}^\infty |f_n|^2.
 \end{equation}
 In view of \eqref{c6e69} we also have
 \begin{equation}\label{c6e72}
-\overline{|f|^2} = 2\sum_{n=0}^\infty |f_n|^2.
+\overline{|f|}^2 = 2\sum_{n=0}^\infty |f_n|^2.
 \end{equation}
 
 \item If $f(t) \rightarrow 0$ as $t \rightarrow \infty$, one can also write
@@ -487,26 +505,30 @@ From \eqref{c6e74} it is immediately evident that
 From \eqref{c6e74},
 \[
 |f(t)|^2 = \frac{1}{4\pi^2}
-\iint_{-\infty}^\infty \hat{f}(\omega)\hat{f}^\ast(\omega^\op)e^{-i(\omega-\omega^\op)t}d\omega d\omega^\op
+\iint_{-\infty}^\infty \hat{f}(\omega)\hat{f}^\ast(\omega^\op)
+e^{-i(\omega-\omega^\op)t}d\omega d\omega^\op
 \]
 and
 \[
 \int_{-\infty}^\infty |f(t)|^2dt = \frac{1}{4\pi^2}
-\int_{-\infty}^\infty\iint_{-\infty}^\infty \hat{f}(\omega)\hat{f}^\ast(\omega^\op)e^{-i(\omega-\omega^\op)t}d\omega d\omega^\op
-dt
+\int_{-\infty}^\infty\iint_{-\infty}^\infty \hat{f}(\omega)
+\hat{f}^\ast(\omega^\op)e^{-i(\omega-\omega^\op)t}d\omega d\omega^\op dt
 \]
 Since
 \begin{equation}\label{c6e77}
-\frac{1}{2\pi}\int_{-\infty}^\infty e^{-i(\omega - \omega^\op)t}dt = \delta(\omega - \omega^\op)
+\frac{1}{2\pi}\int_{-\infty}^\infty e^{-i(\omega - \omega^\op)t}dt = 
+\delta(\omega - \omega^\op)
 \end{equation}
 we get
 \[
 \int_{-\infty}^\infty |f(t)|^2dt = \frac{1}{2\pi}
-\iint_{-\infty}^\infty \hat{f}(\omega)\hat{f}^\ast(\omega^\op)\delta(\omega-\omega^\op)d\omega d\omega^\op
+\iint_{-\infty}^\infty \hat{f}(\omega)\hat{f}^\ast(\omega^\op)
+\delta(\omega-\omega^\op)d\omega d\omega^\op
 \]
 or
 \begin{equation}\label{c6e78}
-\int_{-\infty}^\infty |f(t)|^2dt = \frac{1}{2\pi}\int_{-\infty}^\infty |\hat{f}(\omega)|^2 d\omega.
+\int_{-\infty}^\infty |f(t)|^2dt = 
+\frac{1}{2\pi}\int_{-\infty}^\infty |\hat{f}(\omega)|^2 d\omega.
 \end{equation}
 \end{enumerate}
 
@@ -514,9 +536,9 @@ or
 such waves. Almost monochromatic waves have a frequency in a small band around a
 certain value, say $\omega$. Unlike the pure monochromatic wave, whose amplitude
 is a constant $\vec{E}_0$, the amplitude of an approximate monochromatic wave
-is a slow varying quantity $\vec{E}_0(t)$. A pure monochromatic wave is polarised 
-because $\vec{E}_0$ is constant. An approximate monochromatic wave is said to
-be partially polarised.
+is a slow varying quantity $\vec{E}_0(t)$. A pure monochromatic wave is 
+polarised because $\vec{E}_0$ is constant. An approximate monochromatic wave is 
+said to be partially polarised.
 
 \item Experiments studying polarisation involve measurement of intensities of
 waves transmitted through media like a Nicol prism. Therefore, one studies the
@@ -551,9 +573,9 @@ From the definition of $J_{ij}$ it is clear that
 \begin{equation}\label{c6e83}
 J_{ij} = J_{ji}^\ast \text{ and } \rho_{ij} = \rho_{ji}^\ast,
 \end{equation}
-that is, the tensors $J_{ij}$ and $\rho_{ij}$ are hermitian and their eigen-values
-are real. Note that $J$ defined in \eqref{c6e81} is also the trace of the tensor. 
-Therefore,
+that is, the tensors $J_{ij}$ and $\rho_{ij}$ are hermitian and their eigen-
+values are real. Note that $J$ defined in \eqref{c6e81} is also the trace of the
+tensor. Therefore,
 \begin{equation}\label{c6e84}
 \rho_{11} + \rho_{22} = \frac{J_{11}}{J} + \frac{J_{22}}{J} = 1.
 \end{equation}
@@ -566,8 +588,8 @@ of the form
 \begin{equation}\label{c6e86}
 \rho_{ij} = \begin{bmatrix}a & b + ic \\ b - ic & 1 - a \end{bmatrix},
 \end{equation}
-where $a, b, c \in \mathbb{R}$. This means that the polarisation state of a plane
-electromagnetic wave can be described by three real numbers.
+where $a, b, c \in \mathbb{R}$. This means that the polarisation state of a 
+plane electromagnetic wave can be described by three real numbers.
 
 \item We will now examine the polarisation tensor for a variety of situations:
 \begin{enumerate}
@@ -600,21 +622,22 @@ so that $P = 1$ for fully polarised, monochromatic light and $P = 0$ for
 unpolarised light.
 \end{enumerate}
 
-\item A tensor like $\rho_{ij}$ can be split into a symmetric and an anti-symmetric
-part such that
+\item A tensor like $\rho_{ij}$ can be split into a symmetric and an 
+anti-symmetric part such that
 \begin{equation}\label{c6e91}
 \rho_{ij} = S_{ij} + A_{ij},
 \end{equation}
 where
 \begin{eqnarray}
-S_{ij} &=& \frac{1}{2}(\rho_{ij} + \rho{ji}) \label{c6e92} \\
-A_{ij} &=& \frac{1}{2}(\rho_{ij} - \rho{ji}). \label{c6e93}
+S_{ij} &=& \frac{1}{2}(\rho_{ij} + \rho_{ji}) \label{c6e92} \\
+A_{ij} &=& \frac{1}{2}(\rho_{ij} - \rho_{ji}). \label{c6e93}
 \end{eqnarray} 
 The hermiticity of $\rho$ results in 
 \begin{equation}\label{c6e94}
 A_{ij} = \begin{bmatrix}0 & \rho_{12} - \rho_{21} \\
 -(\rho_{21} - \rho_{12}) & 0
-\end{bmatrix} = (\rho_{12} - \rho_{12}^\ast)\begin{bmatrix}0 & 1 \\ -1 & 0 \end{bmatrix}
+\end{bmatrix} = (\rho_{12} - \rho_{12}^\ast)
+\begin{bmatrix}0 & 1 \\ -1 & 0 \end{bmatrix}
 \end{equation}
 Now, $(\rho_{12} - \rho_{12}^\ast)$ is pure imaginary. Let 
 \begin{equation}\label{c6e95}
@@ -636,17 +659,19 @@ polarisation tensor is
 \begin{equation}\label{c6e98}
 \rho_{ij} = \begin{bmatrix}|E_{01}|^2 & \mp i |E_{01}|^2 \\
 \pm i |E_{01}|^2 & |E_{01}|^2
-\end{bmatrix}\frac{1}{|E_{01}|^2} = \frac{1}{2}\delta_{ij} - \frac{\pm i}{2}e_{ij}
+\end{bmatrix}\frac{1}{|E_{01}|^2} = 
+\frac{1}{2}\delta_{ij} - \frac{\pm i}{2}e_{ij}
 \end{equation}
 so that $S_{ij} = \delta_{ij}/2$ and $A = \pm 1$.
 
 \item If the wave is linearly polarised, one of $b_1$ or $b_2$ in \eqref{c6e53}
-is zero. From equations \eqref{c6e51} and \eqref{c6e52} it is evident that we can
-write $\vec{E}_0$ as a real vector. Therefore, $A = 0$.
+is zero. From equations \eqref{c6e51} and \eqref{c6e52} it is evident that we 
+can write $\vec{E}_0$ as a real vector. Therefore, $A = 0$.
 
-\item This suggests that the constant $A$ can be viewed as a degree of circularity
-in the polarisation. $A \in [-1, 1]$, taking extreme values for left and right 
-circular polarised waves and middle value for plane polarised ones.
+\item This suggests that the constant $A$ can be viewed as a degree of 
+circularity in the polarisation. $A \in [-1, 1]$, taking extreme values for 
+left and right circular polarised waves and middle value for plane polarised 
+ones.
 \end{enumerate}
 
 \item A real symmmetric matrix $S_{ij}$ can be diagonalised. Let $\lambda_1$ and
@@ -655,12 +680,18 @@ correspond to directions $\un^{(1)}$ and $\un^{(2)}$. Then we can write
 \begin{equation}\label{c6e99}
 S_{ij} = \lambda_1 n^{(1)}_in^{(1)}_j + \lambda_2 n^{(2)}_in^{(2)}_j,
 \end{equation}
-and $0 \le \lambda_1, \lambda_1 \le 1$. Each of the two terms is a product of
-quantities related to one of the eigen-vectors. If $A = 0$, then $\rho_{ij} = 
-S_{ij}$, which means that each term of $\rho_{ij}$ is a sum of two terms, each
-one of which being a product of one of the two eigen-vectors. The two parts can
-be treated as independent of each other. Such a wave is called \emph{incoherent}.
-
+and $0 \le \lambda_1, \lambda_1 \le 1$. This equation follows from the 
+similarity transform, $S = N\Lambda N^T$, where $\Lambda = \diag(\lambda_1,
+\lambda_2)$ and 
+\[
+N = [\un^{(1)}, \un^{(2)}]
+\]
+is the matrix whose columns are the (normalised) eigen-vectors. Each of the 
+two terms is a product of quantities related to one of the eigen-vectors. If
+$A = 0$, then $\rho_{ij} = S_{ij}$, which means that each term of $\rho_{ij}$ 
+is a sum of two terms, each one of which being a product of one of the two 
+eigen-vectors. The two parts can be treated as independent of each other. Such 
+a wave is called \emph{incoherent}.
 \item Let $\phi$ be the angle between $\un^{(1)}$ and the $x$-axis. Then we can 
 write
 \begin{eqnarray}

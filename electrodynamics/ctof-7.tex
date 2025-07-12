@@ -312,21 +312,87 @@ dn_x^\op &=& -\frac{n_y^\op}{n_x^\op}dn_y^\op -
 \end{eqnarray}
 so that 
 \begin{eqnarray}
-d\chi &=& -\left(y - \frac{n_y}{n_x}\right) dn_y 
-  -\left(z - \frac{n_z}{n_x}\right) dn_z \nonumber \\
- & & -\left(y^\op - \frac{n_y^\op}{n_x^\op}\right) dn_y^\op 
-  -\left(z^\op - \frac{n_z^\op}{n_x^\op}\right) dn_z^\op \label{c7e26}
+d\chi &=& -\left(y - \frac{n_y}{n_x}x\right) dn_y 
+  -\left(z - \frac{n_z}{n_x}x\right) dn_z \nonumber \\
+ & & -\left(y^\op - \frac{n_y^\op}{n_x^\op}x\right) dn_y^\op 
+  -\left(z^\op - \frac{n_z^\op}{n_x^\op}x\right) dn_z^\op \label{c7e26}
 \end{eqnarray}
 From these equations, it follows that
 \begin{eqnarray}
-\pdt{\chi}{n_y} &=& -\left(y - \frac{n_y}{n_x}\right) \label{c7e27} \\
-\pdt{\chi}{n_z} &=& -\left(z - \frac{n_z}{n_x}\right) \label{c7e28} \\
-\pdt{\chi}{n_y^\op} &=& -\left(y-\frac{n_y^\op}{n_x^\op}\right) \label{c7e28}\\
-\pdt{\chi}{n_z^\op} &=& -\left(z-\frac{n_z^\op}{n_x^\op}\right) \label{c7e29}
+\pdt{\chi}{n_y} &=& -\left(y - \frac{n_y}{n_x}x\right) \label{c7e27} \\
+\pdt{\chi}{n_z} &=& -\left(z - \frac{n_z}{n_x}x\right) \label{c7e28} \\
+\pdt{\chi}{n_y^\op} &=& \left(y-\frac{n_y^\op}{n_x^\op}x\right) \label{c7e29}\\
+\pdt{\chi}{n_z^\op} &=& \left(z-\frac{n_z^\op}{n_x^\op}x\right) \label{c7e30}
 \end{eqnarray}
 The angular eikonal $\chi$ depends on the properties of the optical system. For
 fixed values of $\un$ and $\un^\op$ these are equations of straight lines. They
 are the incident and refracted rays. Equations \eqref{c7e27} to \eqref{c7e29}
 determine the path of light ray passing through an optical system described by
 the angular eikonal $\chi$.
+
+\item A bundle of rays passing through a single point is said to be 
+homocentric. In general, a homocentric bundle ceases to be so after passing 
+through an optical system except in the trivial case of a plane mirror. A
+homocentric bundle remains approximately homocentric for sufficiently narrow
+beam travelling close to a particular line for a given optical system. This 
+line is called the \emph{optic axis} and the rays travelling close to it are
+called \emph{paraxial rays}.
+
+\item Even arbitrarily narrow bundles of rays are not homocentric, in general.
+Consider an infinitesimally small wave surface of an arbitrarily narrow bundle
+of rays. In general, it will have two radii of curvature and will be crossed by
+two principle circles. Rays passing through each of them will pass through its
+centre of curvature. Only when the wave surface is spherical will two centres of
+curvature merge and the bundle of rays be homocentric.
+
+\item A surface of revolution about the optic axis will have identical radii of
+curvature for points on the axis. This follows from the smoothness of the
+surface of revolution. A smooth surface will approximately a paraboloid in the 
+neighbourhood of the optic axis. By symmetry, the two radii of curvature will be
+equal. This fact can be rigorously proved using the techniques of differential
+geometry.
+
+\item We will now use equations \eqref{c7e27} to \eqref{c7e30} for determining
+image formation by paraxial rays. For sake of definiteness, let us align the $x$
+axis along the optic axis. Since the rays are almost along the optic axis, the
+$x$ component of $\un$ and $\un^\op$ are very large as compared to the other
+components. We can, therefore, expand $\chi$ around the origin. Since $\chi$ has
+to describe a system symmetric about the $x$ axis, it must be even-powered in its
+arguments. To lowest order in the arguments, we can express $\chi$ as
+\begin{equation}\label{c7e31}
+\chi = \text{const.} + \frac{g}{2}(n_y^2 + n_z^2) + f(n_yn_y^\op+n_zn_z^\op)
++ \frac{h}{2}({n_y^\op}^2 + {n_z^\op}^2).
+\end{equation}
+Substituting it in equations \eqref{c7e27} to \eqref{c7e30}, we get
+\begin{eqnarray*}
+y &=& n_y\left(\frac{x}{n_x} - g\right) - fn_y^\op \\
+z &=& n_z\left(\frac{x}{n_x} - g\right) - fn_z^\op \\
+y^\op &=& n_y^\op\left(\frac{x^\op}{n_x^\op} + h\right) + fn_y \\
+z^\op &=& n_z^\op\left(\frac{x^\op}{n_x^\op} + h\right) + fn_z
+\end{eqnarray*}
+The component $n_x^\op \approx 1$ for a lens and $\approx -1$ for a 
+mirror. If we consider the optical system to be a lens then the above equations 
+become
+\begin{eqnarray}
+y &=& n_y(x - g) - fn_y^\op \label{c7e32} \\
+z &=& n_z(x - g) - fn_z^\op \label{c7e33} \\
+y^\op &=& n_y^\op(x^\op + h) + fn_y \label{c7e34} \\
+z^\op &=& n_z^\op(x^\op + h) + fn_z \label{c7e35}
+\end{eqnarray}
+
+\item Consider a homocentric bundle of rays starting from $(x, y, z)$ and
+converging at $(x^\op, y^\op, z^\op)$ after passing through the optical system.
+If the group of equations \eqref{c7e32} to \eqref{c7e35} were independent then
+we would get exactly one $n_y, n_z, n_y^\op, n_z^\op$ which would describe only
+one ray and not a whole bundle of them. In order to accommodate the entire
+bundle we assume that the equations are not independent. That is, we assume that
+the ratio of coefficients of like terms are equal. This gives us,
+\begin{equation}\label{c7e36}
+\frac{x - g}{f} = -\frac{f}{x^\op + h} = \frac{y}{y^\op} = \frac{z}{z^\op}
+\end{equation}
+one consequence of which is
+\begin{equation}\label{c7e37}
+(x - g)(x^\op + h) = -f^2.
+\end{equation}
+
 \end{enumerate}

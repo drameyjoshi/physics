@@ -143,13 +143,13 @@ into fundamental equations of physics.
 
 \item Hamilton equations for the particles are
 \begin{eqnarray*}
-\dot{\vec{p}} &=& -\pdt{\mathcal{H}}{\vec{r}} \\
-\dot{\vec{r}} &=& +\pdt{\mathcal{H}}{\vec{p}}.
+\td{\vec{p}}{t} &=& -\pdt{\mathcal{H}}{\vec{r}} \\
+\td{\vec{r}}{t} &=& +\pdt{\mathcal{H}}{\vec{p}}.
 \end{eqnarray*}
 Their analogues to geometrical optics are
 \begin{eqnarray}
-\dot{\vec{k}} &=& -\pdt{\omega}{\vec{r}} \label{c7e13} \\
-\dot{\vec{r}} &=& +\pdt{\omega}{\vec{k}} \label{c7e14}
+\td{\vec{k}}{t} &=& -\pdt{\omega}{\vec{r}} \label{c7e13} \\
+\td{\vec{r}}{t} &=& +\pdt{\omega}{\vec{k}} \label{c7e14}
 \end{eqnarray}
 In vacuum, $\omega = ck$ so that the first equation gives $\dot{\vec{k}} = 0$ 
 while the second one gives $\vec{v} = \dot{\vec{r}} = c\un$, $\un$ being a unit
@@ -187,10 +187,10 @@ bundle or a pencil of rays. The rays determine the direction of propagation and
 give no information about the intensity. If rays start from a certain region then
 after a certain duration $\delta t$ the points $c\delta t$ away from the starting
 region define a surface called the wave-front. An infinitesimal portion of the
-wave-front has two principal radii of curvatures, say $R_1$ and $R_2$. In general,
-they are not the same. Therefore, the points on two principle circles of curvature
-appear to emerge from different points. This is the cause of the aberration of
-astigmatism.
+wave-front has two principal radii of curvatures, say $R_1$ and $R_2$. In 
+general, they are not the same. Therefore, the points on two principle circles 
+of curvature appear to emerge from different points. This is the cause of the 
+aberration of astigmatism.
 
 The area of the wave-front is proportional to $R_1R_2$ while the intensity is
 inversely proportional to it. Thus,
@@ -208,15 +208,125 @@ Therefore, the field itself is given by
 f \propto \frac{1}{\sqrt{R_1R_2}} e^{ikR},
 \end{equation}
 where $R$ is any one of $R_1$ or $R_2$. Since $R_1$ and $R_2$ are fixed, the only
-difference between the formulae using them is the constant phase $\exp(ik(R_1-R_2))$,
-which can be readily absorbed in the constant of proportionality.
+difference between the formulae using them is the constant phase 
+$\exp(ik(R_1-R_2))$, which can be readily absorbed in the constant of 
+proportionality.
 
 In the special case of the two radii of curvature being the same, the wavefront
 is a sector of a sphere and two centres of curvature coincide. 
 
-$I$ blows up with either $R_1$ or $R_2$ vanish. Therefore the centres of curvature
-are points of infinite intensity. The locus of all centres of curvatures define a
-caustic surface. Refer to \href{https://physics.stackexchange.com/a/256561/10236}
-{a StackExchange answer} for an excellent explanation of the how caustics are 
-formed and the rays are tangential to it.
+$I$ blows up with either $R_1$ or $R_2$ vanish. Therefore the centres of 
+curvature are points of infinite intensity. The locus of all centres of 
+curvatures define a caustic surface. Refer to 
+\href{https://physics.stackexchange.com/a/256561/10236}{a StackExchange answer} 
+for an excellent explanation of the how caustics are formed and the rays are 
+tangential to it.
+
+\item \emph{Optical systems} are transparent bodies through which light travels.
+In general, the direction of travel is changed when light passes through optical
+systems. The laws governing the change of direction of rays are similar to those
+governing the change of direction of particles when they pass through 
+electromagnetic (and gravitational) fields.
+
+\item We observed in point 7 above that the eikonal equation \eqref{c7e6} is
+equivalent to \eqref{c7e7} with lhs zero (which is probably the reason why the 
+differential equation $|\nabla u|^2 = 1$ is called the eikonal equation). Thus,
+the eikonal $\Psi$ satisfies
+\[
+\pdt{\Psi}{x^\mu}\pdt{\Psi}{x_\mu} = 0
+\]
+or
+\[
+\frac{1}{c^2}\left(\pdt{\Psi}{t}\right)^2 - \left(\pdt{\Psi}{x}\right)^2 - 
+\left(\pdt{\Psi}{y}\right)^2 - \left(\pdt{\Psi}{z}\right)^2 = 0.
+\]
+For a monochromatic wave, $\Psi = -\omega t + \psi_0(\vec{r})$ so that
+\[
+\pdt{\Psi}{t} = \omega
+\]
+and hence the eikonal equation becomes
+\[
+\frac{\omega^2}{c^2} = |\nabla\psi_0|^2.
+\]
+Define $\psi = c\psi_0/\omega$ so that the eikonal equation for monochromatic
+ray becomes
+\begin{equation}\label{c7e19}
+|\nabla\psi|^2 = 1.
+\end{equation}
+The solution of \eqref{c7e19} gives the eikonal $\psi$. The negative gradient 
+of the eikonal gives the direction of motion. This fact follows from the 
+observation that the eikonal of a plane, monochromatic wave is $\omega t - 
+\vec{k}\cdot\vec{r}$, whose gradient is $-\vec{k}$.
+
+\item The eikonal is the phase of the rays passing through a definite point.
+While studying optical systems one is more interested in the rays passing
+through a pair of points. The corresponding eikonal is $\psi(\vec{r}, 
+\vec{r}^\op)$ and it is the phase difference of the ray between the points
+$\vec{r}$ and $\vec{r}^\op$. For a fixed $\vec{r}^\op$, the eikonal $\psi
+(\vec{r}, \vec{r}^\op)$ describes all rays passing through $\vec{r}^\op$. Since
+the eikonal must satisfy \eqref{c7e19}, we must have
+\begin{equation}\label{c7e20}
+|\nabla\psi|^2 = 1 \text{ and } |\nabla^\op\psi|^2 = 1,
+\end{equation}
+where $\nabla^\op$ denotes gradient with respect to the primed coordinates. 
+The direction of rays getting out of $\vec{r}$ is $-\nabla\psi$ and that of
+rays getting into $\vec{r}^\op$ is $-(-\nabla^\op\psi) = \nabla^\op\psi$. The
+eikonal equation guarantees that these vectors have unit magnitude. They may,
+therefore, be denoted as $\un$ and $\un^\op$ respectively.
+
+\item The four vectors $\vec{r}, \vec{r}^\op, \un, \un^\op$ are related by
+the requirement that $\un$ and $\un^\op$ are gradients of a certain function
+of $\vec{r}$ and $\vec{r}^\op$ which also satisfy equations \eqref{c7e20}. In
+order to obtain a relation between the four vectors it is convenient to 
+introduce another function $\chi$, called the \emph{angular eikonal}, which is
+a Legendre transform of $\psi$. Since $\psi$ is a function of $\vec{r}$ and
+$\vec{r}^\op$,
+\begin{eqnarray*}
+d\psi &=& \nabla\psi\cdot d\vec{r} + \nabla^\op\psi\cdot d\vec{r}^\op \\
+ &=& -\un\cdot d\vec{r} + \un\cdot d\vec{r}^\op \\
+ &=& -d(\un\cdot d\vec{r}) + \vec{r}\cdot d\un + d(\un\cdot d\vec{r}^\op) -
+     \vec{r}^\op d\un^\op
+\end{eqnarray*}
+so that
+\[
+d(\psi + \un\cdot\vec{r} - \un^\op\cdot\vec{r}^\op) = 
+\vec{r}\cdot d\un - \vec{r}^\op d\un^\op.
+\]
+The function,
+\begin{equation}\label{c7e21}
+\chi(\un, \un^\op) = \psi + \un\cdot\vec{r} - \un^\op\cdot\vec{r}^\op
+\end{equation}
+is the angular eikonal. The function $\chi$ is not required to satisfy any
+differential equation. However, its arguments have to be of unit magnitude.
+Therefore, the six variables on which it depends are not independent and two
+of them can be expressed in terms of others as
+\begin{eqnarray}
+n_x &=& \sqrt{1 - n_y^2 - n_z^2} \label{c7e22} \\
+n_x^\op &=& \sqrt{1 - {n_y^\op}^2 - {n_z^\op}^2} \label{c7e23}.
+\end{eqnarray}
+From these equations we have
+\begin{eqnarray}
+dn_x &=& -\frac{n_y}{n_x}dn_y - \frac{n_z}{n_x}dn_z \label{c7e24} \\
+dn_x^\op &=& -\frac{n_y^\op}{n_x^\op}dn_y^\op - 
+              \frac{n_z^\op}{n_x^\op}dn_z^\op \label{c7e25}
+\end{eqnarray}
+so that 
+\begin{eqnarray}
+d\chi &=& -\left(y - \frac{n_y}{n_x}\right) dn_y 
+  -\left(z - \frac{n_z}{n_x}\right) dn_z \nonumber \\
+ & & -\left(y^\op - \frac{n_y^\op}{n_x^\op}\right) dn_y^\op 
+  -\left(z^\op - \frac{n_z^\op}{n_x^\op}\right) dn_z^\op \label{c7e26}
+\end{eqnarray}
+From these equations, it follows that
+\begin{eqnarray}
+\pdt{\chi}{n_y} &=& -\left(y - \frac{n_y}{n_x}\right) \label{c7e27} \\
+\pdt{\chi}{n_z} &=& -\left(z - \frac{n_z}{n_x}\right) \label{c7e28} \\
+\pdt{\chi}{n_y^\op} &=& -\left(y-\frac{n_y^\op}{n_x^\op}\right) \label{c7e28}\\
+\pdt{\chi}{n_z^\op} &=& -\left(z-\frac{n_z^\op}{n_x^\op}\right) \label{c7e29}
+\end{eqnarray}
+The angular eikonal $\chi$ depends on the properties of the optical system. For
+fixed values of $\un$ and $\un^\op$ these are equations of straight lines. They
+are the incident and refracted rays. Equations \eqref{c7e27} to \eqref{c7e29}
+determine the path of light ray passing through an optical system described by
+the angular eikonal $\chi$.
 \end{enumerate}

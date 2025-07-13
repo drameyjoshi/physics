@@ -405,7 +405,7 @@ We now choose the respective foci as the origins for the object and the image
 regions. The new coordinates $(X, Y, Z)$ and $(X^\op, Y^\op, Z^\op)$ are related
 to the old coordinates as
 \begin{equation}\label{c7e38}
-X = x - g, Y = y, Z = z, X^\op = x + h, Y^\op = y, Z^\op = z.
+X = x - g, Y = y, Z = z, X^\op = x^\op + h, Y^\op = y^\op, Z^\op = z^\op.
 \end{equation}
 In terms of these coordinates, equations \eqref{c7e36} become
 \begin{equation}\label{c7e39}
@@ -430,4 +430,36 @@ where we used the first and the third terms in \eqref{c7e39} to get the last
 equality. This shows that it is impossible to get an undistorted image through
 an optical system. There is always a distortion in the way the image is 
 magnified in the two directions.
+
+\item If $X = f$ then from equation \eqref{c7e40}, $X^\op = -f$. Thus, a bundle
+of rays crossing the optic axis at $X = f$ crosses it again at $X^\op = -f$.
+The pair of points $X$ and $X^\op$ are called the principal points. In the
+old coordinate system, these points are $x = f + g$ and $x^\op = -f + h$ (refer
+to \eqref{c7e38}) respectively.
+
+\item If we measure the coordinates of the object and the image from the
+principal points, that is if $\xi = X - f$ is the position of the object and
+$\xi^\op = X^\op + f$ that of the image then from \eqref{c7e40},
+\[
+(\xi + f)(\xi^\op - f) = -f^2 \Rightarrow \xi\xi^\op - f\xi + f\xi^\op = 0
+\]
+from which we get
+\begin{equation}\label{c7e42}
+\frac{1}{\xi} - \frac{1}{\xi^\op} = -\frac{1}{f}.
+\end{equation}
+
+\item We continue to work in a setup in which light travels from right to left.
+If $f > 0$ and if $X > f$, that is the object is in front of the focus so that
+$\xi > 0$ then from the portion
+\[
+\frac{X}{f} = \frac{Y}{Y^\op}
+\]
+of \eqref{c7e39} we see that $Y^\op/Y > 0$, that is, the image is erect. Such
+an optical system is said to be \emph{converging}. Under the same setup, if
+$f < 0$ then $Y^\op/Y < 0$, that is, the image is inverted and the optical 
+system is said to be diverging.
+
+\item I do not understand the discussion of the case in which $f, g, h$ are all
+infinite. Equation \eqref{c7e31} does not make sense and neither do the 
+equations that follow from it. 
 \end{enumerate}

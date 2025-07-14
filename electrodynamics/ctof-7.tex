@@ -459,7 +459,39 @@ an optical system is said to be \emph{converging}. Under the same setup, if
 $f < 0$ then $Y^\op/Y < 0$, that is, the image is inverted and the optical 
 system is said to be diverging.
 
-\item I do not understand the discussion of the case in which $f, g, h$ are all
-infinite. Equation \eqref{c7e31} does not make sense and neither do the 
-equations that follow from it. 
+\item We start with \eqref{c7e37} and approximate it when $f, g, h$ are very 
+large.
+\[
+x(x^\op +h) - g(x^\op + h) = -f^2
+\]
+When $h$ is very large, $x^\op + h \approx h$ so that
+\[
+hx - gx^\op - gh \approx -f^2
+\]
+so that
+\begin{equation}\label{c7e43}
+x^\op \approx \frac{h}{g}x + \frac{f^2 - gh}{g}.
+\end{equation}
+Let
+\begin{equation}\label{c7e44}
+\alpha^2 = h/g; \beta = (f^2 - gh)/g.
+\end{equation}
+so that \eqref{c7e43} becomes
+\begin{equation}\label{c7e45}
+x^\op = \alpha^2x + \beta.
+\end{equation}
+Since
+\[
+\td{x^\op}{x} = \alpha^2,
+\]
+we have from \eqref{c7e41}
+\[
+\frac{y^\op}{y} = \frac{z^\op}{z} = \pm\alpha.
+\]
+Using transformations in \eqref{c7e38} we can easily show that
+\begin{equation}\label{c7e46}
+\td{X^\op}{X} = \alpha^2; \frac{Y^\op}{Y}=\pm\alpha;\frac{Z^\op}{Z}=\pm\alpha;
+\end{equation}
+The longitudinal and transverse magnifications are constants. Such an image
+formation is called \emph{telescopic}.
 \end{enumerate}

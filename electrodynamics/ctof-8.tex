@@ -1,0 +1,40 @@
+\chapter{The field of moving charges}\label{c8}
+\begin{enumerate}
+\item We will consider the situation in which electromagnetic fields vary in the
+presence of charges and currents. Since
+\[
+\pdt{F^{\mu\nu}}{x^\nu} = -\frac{4\pi}{c}J^\mu,
+\]
+after using the definition of the field tensor in terms of the potentials,
+\[
+F^{\mu\nu} = \pdt{A^\nu}{x_\mu} - \pdt{A^\mu}{x_\nu},
+\]
+we get
+\[
+\frac{\partial}{\partial x_\mu}\left(\pdt{A^\nu}{x^\nu}\right) - 
+\frac{\partial^2 A^\mu}{\partial x^\nu \partial x_\nu} = -\frac{4\pi}{c}J^\mu
+\]
+We now use the Lorentz gauge condition
+\[
+\pdt{A^\nu}{x^\nu} = 0
+\]
+to get
+\begin{equation}\label{c8e1}
+\frac{\partial^2 A^\mu}{\partial x^\nu \partial x_\nu} = \frac{4\pi}{c}J^\mu.
+\end{equation}
+In terms of the d'Alembertian, we can write it as
+\begin{equation}\label{c8e2}
+\Box A^\mu = \frac{4\pi}{c}J^\mu.
+\end{equation}
+Since
+\[
+\Box = \frac{1}{c^2}\frac{\partial^2}{\partial t^2} - \nabla^2,
+\]
+equations \eqref{c8e1} and \eqref{c8e2} are equivalent to
+\begin{eqnarray}
+\nabla^2\phi - \frac{1}{c^2}\spdt{\phi}{t} &=& -4\pi\rho \label{c8e3} \\
+\nabla^2\vec{A} - \frac{1}{c^2}\spdt{\vec{A}}{t} &=& 
+-\frac{4\pi}{c}\vec{J}. \label{c8e4}
+\end{eqnarray}
+These are wave equations with source terms.
+\end{enumerate}

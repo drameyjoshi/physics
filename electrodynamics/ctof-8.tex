@@ -37,4 +37,229 @@ equations \eqref{c8e1} and \eqref{c8e2} are equivalent to
 -\frac{4\pi}{c}\vec{J}. \label{c8e4}
 \end{eqnarray}
 These are wave equations with source terms.
+
+\item The solution of an inhomogeneous differential equation is the sum of the
+solution of the corresponding homogeneous equation and a particular integral.
+The homogenous equation gives fields due to charges and currents `external' to
+the sytem while the particular integral gives fields due to those in the system
+described by the rhs of equation \eqref{c8e1}. 
+
+\item The equations \eqref{c8e3} and \eqref{c8e4} are linear. Therefore, we can
+split their rhs into parts, compute the particular integral for each one of them
+and add them to get the particular integral of the entire distribution of charge
+and current density.
+
+Consider a tiny region of charge density and choose the origin to lie in it. If
+it contains a charge $q$ then the charge density only due to it can be expressed
+as 
+\begin{equation}\label{c8e5}
+\rho = q\delta(\vec{r}).
+\end{equation}
+Recall that the dimension of the delta function of a 3-vector is $L^{-3}$. Upon
+substitution in \eqref{c8e3} we get
+\[
+\nabla^2\phi - \frac{1}{c^2}\spdt{\phi}{t} = -4\pi q\delta(\vec{r}).
+\]
+Outside the small region surrounding the origin, this equation is 
+\[
+\nabla^2\phi - \frac{1}{c^2}\spdt{\phi}{t} = 0
+\]
+and the field $\phi$ is produced because of charge at the origin. The field is
+spherically symmetric and hence $\phi$ is a function of $r$ and $t$ alone. If
+\begin{equation}\label{c8e6}
+\phi(r, t) = \frac{\chi(r, t)}{r}
+\end{equation}
+then, after expressing $\nabla^2$ in spherical polar coordinates, we get
+\begin{equation}\label{c8e7}
+\spdt{\chi}{r} - \frac{1}{c^2}\spdt{\chi}{t} = 0,
+\end{equation}
+whose solution we know can be written as
+\begin{equation}\label{c8e8}
+\chi(r, t) = f_1\left(t - \frac{r}{c}\right) + f_2\left(t + \frac{r}{c}\right),
+\end{equation}
+where $f_1$ and $f_2$ are arbitrary functions. $f_1$ is the contribution of the
+source at time $t$ as it was at time $t - r/c$ while $f_2$ is the contribution
+of the source as it would be at a time $t + r/c$ in the future. Since future 
+does not determine the present, we choose $f_2$ to be zero and write 
+\eqref{c8e6} as 
+\begin{equation}\label{c8e9}
+\phi(r, t) = \frac{\chi(t - r/c)}{r}.
+\end{equation}
+We still do not know the form of $\chi$. Very close to the origin, $\phi$ must
+look like the potential due to a the charge at the origin. If we write 
+\begin{equation}\label{c8e10}
+\delta q = q\delta(\vec{r})
+\end{equation}
+then
+\begin{equation}\label{c8e11}
+\phi(r, t) = \frac{\delta q (t - r/c)}{r}.
+\end{equation}
+so that the contribution due to all charges is
+\begin{equation}\label{c8e12}
+\phi(r, t)=\int \frac{1}{r}\rho\left(\vec{r}^\op, t - \frac{r}{c}\right)dv^\op.
+\end{equation}
+This is the particular integral of \eqref{c8e3}. The potential at the field 
+point $\vec{r}$ at a time $t$ depends on the source at $\vec{r}$ as it was at 
+a time $t - r/c$. The general solution of \eqref{c8e3} is
+\begin{equation}\label{c8e13}
+\phi(r, t) = \int\frac{1}{r}\rho\left(\vec{r}^\op, t - \frac{r}{c}\right)dv^\op
+ + \phi_0(r, t),
+\end{equation}
+where $\phi_0(r, t)$ is the solution of the homogeneous equation and represents
+the contribution of the `external' charges and currents. The complete solution 
+of equation \eqref{c8e4} is, likewise,
+\begin{equation}\label{c8e14}
+\vec{A}(r, t) = 
+\int\frac{1}{r}\vec{J}\left(\vec{r}^\op, t - \frac{r}{c}\right)dv^\op
+ + \vec{A}_0(r, t).
+\end{equation}
+
+\item We now apply the ideas of the previous section to find the potentials
+due to a charged particle moving along an arbitrary trajectory $\vec{r}_s(t)$,
+where the subecript `s' stands for the source of the fields. Let the fields be
+measured at a point $\vec{r}$ at time $t$. Since light travels at a finite 
+speed, the field at $\vec{r}$ at time $t$ will depend on the source as it was
+a time when light from it started and reached the field point at $t$. If 
+\begin{equation}\label{c8e15}
+\vec{R}(t) = \vec{r} - \vec{r}_s(t)
+\end{equation}
+then the fields at time $t$ will depend on the sources at a time $t_r < t$ 
+given by
+\begin{equation}\label{c8e16}
+t_r + \frac{R(t_r)}{c} = t.
+\end{equation}
+This equation suggests that $t_r$ is really an implicit function of $R$ and $t$.
+It is called the \emph{retarded time}.
+
+In the frame of reference in which the charged particle is at rest at time
+$t_rt$ the potentials at the field point are
+\begin{equation}\label{c8e17}
+\phi(\vec{r}, t) = \frac{q}{R(t_r)}, \vec{A}(\vec{r}, t) = 0.
+\end{equation}
+Note that we are not saying $t = t_r$. In this frame, we can only calculate the
+potential at the field point at a future time $t = t_r + R(t_r)/c$.
+
+Using \eqref{c8e16} we can write $R(t_r)$ as
+\begin{equation}\label{c8e18}
+\phi(\vec{r}, t) = \frac{q}{c(t - t_r)}=q\frac{\gamma c}{c(t - t_r)(\gamma c)}.
+\end{equation}
+The purpose for the $\gamma c$ factor in numerator and denominator is to give
+us the hint that the expression $v^\mu/(R_\mu v^\mu)$ will be the correct
+covariant generalisation of $1/(c(t - t_r)$. Thus, we claim that the 4-potential
+due to the charged particle in an arbitrary inertial frame of reference is
+\begin{equation}\label{c8e19}
+A^\mu = q\frac{v^\mu}{R_\mu v^\mu},
+\end{equation}
+where
+\begin{equation}\label{c8e20}
+v^\mu = \gamma(c, \vec{v})
+\end{equation}
+is the 4-velocity of the particle and
+\begin{equation}\label{c8e21}
+R^\mu = (c(t - t_r), \vec{R}).
+\end{equation}
+In the frame of reference in which the charged particle is momentarily at rest,
+the 4-velocity is $v^\mu = \gamma(c, 0)$ and \eqref{c8e19} reduces to the pair
+\eqref{c8e18}. Since 
+\[
+R_\mu v^\mu = \gamma(c^2(t - t_r) - \vec{R}\cdot\vec{v}) = \gamma c(c(t-t_r) 
+- \vec{R}\cdot\vec{\beta}) = \gamma c(R - \vec{R}\cdot\vec{\beta}),
+\]
+we can write \eqref{c8e18} in the more familiar form
+\begin{eqnarray}
+\phi(\vec{r}, t) &=& \frac{q}{R - \vec{R}\cdot\vec{\beta}} \label{c8e22} \\
+\vec{A}(\vec{r}, t) &=& \frac{q\vec{\beta}}{R - \vec{R}\cdot\vec{\beta}}.
+\label{c8e23}
+\end{eqnarray}
+We also note that
+\begin{equation}\label{c8e24}
+\vec{A}(\vec{r}, t) = \vec{\beta}\phi(\vec{r}, t).
+\end{equation}
+The quantities $R$ and $\vec{\beta}$ on the rhs of \eqref{c8e22} and 
+\eqref{c8e23} are calculated at time $t_r$. The potential in \eqref{c8e19} and
+equivalently in \eqref{c8e22} and \eqref{c8e23} are called 
+\emph{Lienard-Wiechart potentials}.
+
+\item In order to compute the electric and magnetic fields due to the moving
+charge from the Lienard-Wiechart potentials, we need a derivatives of $t_r$ and
+$R$. We start with the derivative of $t_r$ with respect to $t$. $t_r$ is 
+implicitly defined as a function or $\vec{r}$ and $t$ in \eqref{c8e16}. We
+differentiate it with respect to $t$ to get
+\begin{eqnarray*}
+\td{t_r}{t} + \frac{1}{c}\td{R}{t} &=& 1 \\
+\td{t_r}{t} + \frac{1}{c}\td{R}{t_r}\td{t_r}{t} &=& 1.
+\end{eqnarray*}
+Now, $R = |\vec{r} - \vec{r}_s(t_r)| = \sqrt{r^2-2\vec{r}\cdot\vec{r}_s+r_s^2}$
+so that
+\[
+\td{R}{t_r} = \frac{1}{2R}\left(-2\vec{r}\cdot\vec{v} + \td{r_s^2}{t}\right).
+\]
+Since $r_s^2 = \vec{r}_s\cdot\vec{r}_s$, the last term on rhs is $2\vec{r}_s
+\cdot\vec{v}$. Here, the derivative of $\vec{r}_s$ with respect to $t$ is the
+velocity $\vec{v}$ of the charged particle. Therefore,
+\[
+\td{R}{t_r} = \frac{-1}{2R}2(\vec{r} - \vec{r}_s)\cdot\vec{v} = 
+-\frac{\vec{R}\cdot\vec{v}}{R}.
+\]
+and hence
+\[
+\td{t_r}{t} - \frac{\vec{R}\cdot\vec{\beta}}{R}\td{t_r}{t} = 1
+\]
+leading to
+\begin{equation}\label{c8e25}
+\td{t_r}{r} = \frac{1}{1 - \un_s\cdot\vec{\beta}},
+\end{equation}
+where
+\begin{equation}\label{c8e26}
+\un_s = \frac{\vec{R}}{R}
+\end{equation}
+is the unit vector along $\vec{R}$.
+
+\item Taking the gradient of equation \eqref{c8e16}, we get
+\begin{equation}\label{c8e27}
+\grad t_r + \frac{1}{c}\grad R(t_r) = 0.
+\end{equation}
+Now,
+\begin{eqnarray*}
+\grad R &=& \hat{e}_i\frac{\partial}{\partial x_i}|\vec{r} - \vec{r}_s| \\
+ &=& \frac{\hat{e}_i}{2|\vec{r}-\vec{r}_s|}\frac{\partial}{\partial x_i}
+ [(x_j - x_{sj})(x_j - x_{sj})] \\
+ &=& \frac{\hat{e}_i}{2|\vec{r}-\vec{r}_s|}2(x_j - x_{sj})
+ \frac{\partial}{\partial x_i}(x_j - x_{sj}) \\
+ &=& \frac{\hat{e}_i(x_j - x_{sj})}{|\vec{r}-\vec{r}_s|}\left(\delta_{ij} - 
+ \pdt{x_{sj}}{x_i}\right) \\
+ &=& \frac{\hat{e}_i(x_j - x_{sj})}{|\vec{r}-\vec{r}_s|}\left(\delta_{ij} - 
+ \pdt{x_{sj}}{t_r}\pdt{t_r}{x_i}\right) \\
+ &=& \un_s - \frac{1}{|\vec{r} - \vec{r}_s|}\left\{(x_j - x_{sj})v_j\right\}
+ \left\{\hat{e}_i\pdt{t_r}{x_i}\right\} \\
+ &=& \un_s - \frac{(\vec{r} - \vec{r}_s)\cdot\vec{v}}{|\vec{r} - \vec{r}_s|}
+ \grad t_r \\
+ &=& \un_s - \un_s\cdot\vec{v} \grad t_r.
+\end{eqnarray*}
+Substituting this in equation \eqref{c8e27} gives
+\begin{equation}\label{c8e28}
+\grad t_r = -\frac{\un_s}{c(1 - \un_s\cdot\vec{\beta})}.
+\end{equation}
+From equation \eqref{c8e27} we also have $\grad R(t_r) = -c\grad t_r$ so that
+\begin{equation}\label{c8e29}
+\grad R(t_r) = \frac{\un_s}{1 - \un_s\cdot\vec{\beta}}.
+\end{equation}
+
+
+\item We also have
+\[
+\td{R}{t_r} = \frac{d}{dt}|\vec{r} - \vec{r}_s| = 
+\frac{d}{dt}\sqrt{(\vec{r} - \vec{r}_s)\cdot(\vec{r} - \vec{r}_s)}
+= \frac{\vec{r} - \vec{r}_s}{|\vec{r} - \vec{r}_s|}\cdot(-\vec{v})
+= -\un_s\cdot\vec{v}
+\]
+so that
+\[
+\td{R}{t} = \td{R}{t_r}\td{t_r}{t}
+\]
+gives
+\begin{equation}\label{c8e30}
+\td{R}{t} = -\frac{\un_s\cdot\vec{v}}{(1 - \un_s\cdot\vec{\beta})}
+\end{equation}
+where we used \eqref{c8e25} for $dt_r/dt$.
 \end{enumerate}

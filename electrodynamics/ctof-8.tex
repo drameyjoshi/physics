@@ -207,7 +207,7 @@ and hence
 \]
 leading to
 \begin{equation}\label{c8e25}
-\td{t_r}{r} = \frac{1}{1 - \un_s\cdot\vec{\beta}},
+\td{t_r}{t} = \frac{1}{1 - \un_s\cdot\vec{\beta}},
 \end{equation}
 where
 \begin{equation}\label{c8e26}
@@ -262,4 +262,130 @@ gives
 \td{R}{t} = -\frac{\un_s\cdot\vec{v}}{(1 - \un_s\cdot\vec{\beta})}
 \end{equation}
 where we used \eqref{c8e25} for $dt_r/dt$.
+
+\item We will summarise all the derivatives we have found so far, calculate a 
+few more and introduce symbols to ease calculation of fields. The factor $R - 
+\vec{\beta}\cdot\vec{R}$ appears quite often. Using \eqref{c8e26} we can write
+it as $S = RK$. Thus,
+\begin{subequations}
+\begin{eqnarray}
+S &=& R - \vec{R}\cdot\vec{\beta} = RK \label{c8e31a} \\
+K &=& 1 - \un_s\cdot\vec{\beta} \label{c8e31b}
+\end{eqnarray}
+\end{subequations}
+Therefore,
+\begin{subequations}
+\begin{eqnarray}
+\pdt{t_r}{t} &=& \frac{1}{K} \label{c8e32a} \\
+\pdt{\vec{R}}{t} &=& -\frac{\vec{v}}{K} \label{c8e32b} \\
+\pdt{R}{t} &=& -\frac{\un_s\cdot\vec{v}}{K} \label{c8e32c} \\
+\pdt{\un_s}{t} &=& \frac{\un(\un\cdot\vec{v}) - \vec{n}}{RK} \label{c8e32d} \\
+\pdt{\vec{\beta}}{t} &=& \frac{\vec{a}}{cK} \label{c8e32e} \\
+\pdt{S}{t} &=& \frac{-c\un\cdot\vec{v} + v^2 - \vec{R}\cdot\vec{a}}{cK}
+\label{c8e32f} \\
+\grad t_r &=& -\frac{\un_s}{cK} \label{c8e32g} \\
+\grad R &=& -\frac{\un_s}{K} \label{c8e32h} 
+\end{eqnarray}
+\end{subequations}
+Here 
+\[
+\vec{a} = \td{\vec{v}}{t_r}
+\]
+is the accelaration of the particle. If dot denotes the derivative with respect
+to $t_r$ then $\vec{a} = \dot{\vec{v}} = \dot{\vec{\beta}}/c.$
+
+\item We will test these derivatives by checking whether the Lorenz gauge 
+condition holds good.
+Since $\phi = q/S$,
+\[
+\pdt{\phi}{t} = \frac{1}{K}\pdt{\phi}{t_r} = -\frac{q}{KS^2}\pdt{S}{t_r}
+= -\frac{q}{KS^2}\left(\pdt{R}{t_r} - \vec{R}\cdot\pdt{\vec{\beta}}{t_r} - 
+\pdt{\vec{R}}{t_r}\cdot\vec{\beta}\right)
+\]
+Substituting for the derivatives,
+\[
+\pdt{\phi}{t} = -\frac{q}{R^2K^3}\left(-\vec{n}_s\cdot\vec{v} - 
+\frac{\vec{R}\cdot\vec{a}}{c} + \vec{v}\cdot\vec{\beta}\right)
+\]
+and hence
+\begin{equation}\label{c8e33}
+\frac{1}{c}\pdt{\phi}{t} = -\frac{q}{R^2K^3}\left(-\vec{n}_s\cdot\vec{\beta} +
+\beta^2 - \frac{\vec{R}\cdot\dot{\vec{\beta}}}{c}\right).
+\end{equation}
+
+Since $\vec{A} = q\vec{\beta}/S$, 
+\[
+\dive\vec{A} = -\frac{q}{S^2}\left(\grad{S}\cdot\vec{\beta} - S\dive\vec{\beta}
+\right).
+\]
+Now,
+\[
+\dive\vec{\beta} = \pdt{\beta_i}{x_i} = \pdt{\beta_i}{t_r}\pdt{t_r}{x_i} =
+\grad{t_r}\cdot\dot{\vec{\beta}} = -\frac{\un_s\cdot\dot{\vec{\beta}}}{cK}
+\]
+so that
+\[
+\dive\vec{A} = -\frac{q}{S^2}\left(\grad{S}\cdot\vec{\beta} +
+\frac{S}{cK}\un_s\cdot\dot{\vec{\beta}}\right).
+\]
+The calculation of $\grad S$ is a little tricky. Since $S = R - \vec{R}\cdot
+\vec{\beta}$, $\grad S = \grad R - \grad(\vec{R}\cdot\vec{\beta})$. Using
+\eqref{c8e32h}, we get
+\begin{equation}\label{c8e34}
+\grad S = \frac{\un_s}{K} - \grad((\vec{r} - \vec{r}_s)\cdot\vec{\beta})
+= \frac{\un_s}{K} - \grad(\vec{r}\cdot\vec{\beta}) + \grad(\vec{r}_s\cdot
+\vec{\beta})
+\end{equation}
+The second term on the rhs is
+\[
+\grad(\vec{r}\cdot\vec{\beta}) = \hat{e}_j\frac{\partial}{\partial x_j}
+(x_i\beta_i) = \hat{e}_j\left(\delta_{ij}\beta_i + x_i\pdt{\beta_i}{t_r}
+\pdt{t_r}{x_i}\right)
+\]
+so that
+\begin{equation}\label{c8e35}
+\grad(\vec{r}\cdot\vec{\beta}) = \vec{\beta} + (\vec{r}\cdot\dot{\vec{\beta}})
+\grad t_r = \vec{\beta} - \frac{\un_s}{cK}(\vec{r}\cdot\dot{\vec{\beta}}).
+\end{equation}
+The third term on the rhs of \eqref{c8e34} is a gradient of a function of 
+$\vec{r}_s$ alone so that we can write it as
+\begin{equation}\label{c8e36}
+\grad(\vec{r}_s\cdot\vec{\beta}) = \grad t_r \frac{d}{dt_r}(\vec{r}_s\cdot
+\vec{\beta}) = -\frac{\un_s}{cK}(\vec{v}\cdot\vec{\beta} + \vec{r}_s\cdot
+\dot{\vec{\beta}}).
+\end{equation}
+Substituting \eqref{c8e36} and \eqref{c8e35} in \eqref{c8e34}, we get
+\[
+\grad{S} = \frac{\un_s}{K} - \vec{\beta} + \frac{\un_s}{cK}(\vec{r} - \vec{r}_s)
+\cdot\dot{\vec{\beta}} - \frac{\un_s}{K}\beta^2
+\]
+so that
+\begin{equation}\label{c8e37}
+\grad{S} = \frac{\un_s}{K} - \vec{\beta} + 
+\frac{\un_s}{cK}\vec{R} \cdot\dot{\vec{\beta}} - \frac{\un_s}{K}\beta^2
+\end{equation}
+Putting everything together,
+\begin{eqnarray*}
+\dive\vec{A} &=& -\frac{q}{S^2}\left(\frac{\un_s\cdot\vec{\beta}}{K} - \beta^2
++ \frac{\un_s\cdot\vec{\beta}}{cK}\vec{R}\cdot\dot{\vec{\beta}} - 
+\frac{\un_s\cdot\vec{\beta}}{K}\beta^2 + \frac{S}{cK}\un_s\cdot\dot{\vec{\beta}}
+\right) \\
+ &=& -\frac{q}{S^2}\left(\frac{\un_s\cdot\vec{\beta}}{K} - \frac{\beta^2}{K}
+ + \frac{\vec{R}\cdot\vec{\beta}}{cK}\un_s\cdot\dot{\vec{\beta}} + 
+ \frac{S}{cK}\un_s\cdot\dot{\vec{\beta}} \right) \\
+ &=& -\frac{q}{S^2}\left(\frac{\un_s\cdot\vec{\beta}}{K} - \frac{\beta^2}{K}
+ + \frac{R}{cK}\un_s\cdot\dot{\vec{\beta}} \right) \\
+ &=& -\frac{q}{S^2}\left(\frac{\un_s\cdot\vec{\beta}}{K} - \frac{\beta^2}{K}
+ + \frac{\vec{R}\cdot\dot{\vec{\beta}}}{cK}\right) 
+\end{eqnarray*}
+or
+\begin{equation}\label{c8e38}
+\dive\vec{A} = -\frac{q}{S^2K}\left(\un_s\cdot\vec{\beta} - \beta^2 +
+\frac{\vec{R}\cdot\dot{\vec{\beta}}}{c}\right).
+\end{equation}
+From equations \eqref{c8e33} and \eqref{c8e38} one confirms that
+\[
+\frac{1}{c}\pdt{\phi}{t} = -\dive\vec{A},
+\]
+which is just the Lorenz gauge condition.
 \end{enumerate}

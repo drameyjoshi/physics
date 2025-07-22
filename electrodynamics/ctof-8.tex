@@ -388,4 +388,59 @@ From equations \eqref{c8e33} and \eqref{c8e38} one confirms that
 \frac{1}{c}\pdt{\phi}{t} = -\dive\vec{A},
 \]
 which is just the Lorenz gauge condition.
+
+\item We next calculate the electric field. Since $\phi = q/S$,
+\[
+\grad\phi = -\frac{q}{S^2}\grad S.
+\]
+From \eqref{c8e37},
+\begin{equation}\label{c8e39}
+-\grad\phi = \frac{q}{S^2}\left(\frac{\un_s}{K} - \vec{\beta} + 
+\frac{\vec{R}\cdot\dot{\vec{\beta}}}{cK} - \frac{\un_s}{K}\beta^2\right)
+\end{equation}
+Since $\vec{A} = q\vec{\beta}/S$,
+\[
+\pdt{\vec{A}}{t} = \frac{1}{K}\pdt{\vec{A}}{t_r} = 
+-\frac{q}{S^2}\pdt{S}{t_r}\vec{\beta} + \frac{q}{SK}\dot{\vec{\beta}}
+\]
+so that
+\begin{equation}\label{c8e40}
+\vec{E} = \frac{q}{S^2K}\left[
+\un_s\left(1 - \beta^2 + \frac{\vec{R}\cdot\dot{\vec{\beta}}}{c}\right) +
+\vec{\beta}\left(\beta^2 - \un_s\cdot\vec{\beta} - 
+    \frac{\vec{R}\cdot\dot{\vec{\beta}}}{c} - K\right) - 
+\frac{RK}{c}\dot{\vec{\beta}}\right]
+\end{equation}
+Using the relations $\vec{R} = R\un_s, K = (1 - \un_s\cdot\vec{\beta}), S = RK$
+we can transform the above equation as
+\begin{eqnarray*}
+\vec{E} &=& \frac{q}{R^2K^3}\left[\frac{\vec{R}}{R} - \frac{\vec{R}\beta^2}{R}
+ + \frac{\vec{R}(\vec{R}\cdot\dot{\vec{\beta}})}{Rc} + \beta^2\vec{\beta} - \right.\\
+ & & \left.\frac{(\vec{R}\cdot\vec{\beta})\vec{\beta}}{R} - 
+     \frac{(\vec{R}\cdot\dot{\vec{\beta}})\vec{\beta}}{c} - 
+     \frac{(R - \vec{R}\cdot\vec{\beta})\vec{\beta}}{R} - 
+     \frac{(R - \vec{R}\cdot\vec{\beta})\dot{\vec{\beta}}}{c}\right]
+\end{eqnarray*}
+The terms $(\vec{R}\cdot\vec{\beta})\vec{\beta}/R$ cancel and we combine 
+\begin{eqnarray*}
+\frac{\vec{R}(\vec{R}\cdot\dot{\vec{\beta}})}{Rc} - 
+\frac{R^2\dot{\vec{\beta}}}{Rc} &=& 
+\frac{\vec{R}\times(\vec{R}\times\dot{\vec{\beta}})}{Rc} \\
+\frac{(\vec{R}\cdot\vec{\beta})\dot{\vec{\beta}}}{c} - 
+\frac{(\vec{R}\cdot\dot{\vec{\beta}})\vec{\beta}}{c} &=&
+\frac{\vec{R}\times(\dot{\vec{\beta}}\times\vec{\beta})}{c}
+\end{eqnarray*}
+to get
+\[
+\vec{E} = \frac{q}{R^2K^3}\left[\vec{R}{R} - \frac{\vec{R}\beta^2}{R} -
+\beta^2\vec{\beta} - \vec{\beta} + 
+\frac{\vec{R}\times(\vec{R}\times\dot{\vec{\beta})}}{Rc} + 
+\frac{\vec{R}\times(\dot{\vec{\beta}}\times\vec{\beta})}{c}\right]
+\]
+so that we finally get
+\begin{equation}
+\vec{E} = \frac{q}{R^2K^3}\left\{\frac{(1-\beta^2)(\vec{R}-\vec{\beta}R)}{R} +
+\frac{\vec{R}\times[(\vec{R} - \vec{\beta}R)\times\dot{\vec{\beta}}]}{Rc}
+\right\}
+\end{equation}
 \end{enumerate}

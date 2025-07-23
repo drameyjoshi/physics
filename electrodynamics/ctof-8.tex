@@ -443,4 +443,39 @@ so that we finally get
 \frac{\vec{R}\times[(\vec{R} - \vec{\beta}R)\times\dot{\vec{\beta}}]}{Rc}
 \right\}
 \end{equation}
+
+\item We will now calculate the magnetic field. Since $\vec{A} = q\beta/S$,
+\[
+\curl\vec{A} = -\frac{q}{S^2}\grad S \times \vec{\beta} + 
+\frac{q}{S}\curl\vec{\beta},
+\]
+which, upon using \eqref{c8e37}, leads to
+\begin{equation}\label{c8e42}
+\vec{H} = \frac{q}{R^2K^3}(\un_s\times\vec{\beta})
+\left(\beta^2 - 1 - \frac{\vec{R}\cdot\dot{\vec{\beta}}}{c}\right) -
+\frac{q}{RK^2}\left(\un_s \times \frac{\dot{\vec{\beta}}}{c}\right)
+\end{equation}
+where we used the relation
+\[
+\curl\dot{\vec{\beta}} = \hat{e}_i\pdt{\dot{\beta}_k}{x_j} =
+\hat{e}_i\pdt{t_r}{x_j}\pdt{\dot{\beta}_k}{t_r} = 
+\grad{t_r}\times\dot{\vec{\beta}}.
+\]
+Since $K = 1 - \un_s\cdot\vec{\beta}$, we can simplify \eqref{c8e40} as
+\[
+\vec{E} = \frac{q}{S^2K}\left[
+\un_s\left(1 - \beta^2 + \frac{\vec{R}\cdot\dot{\vec{\beta}}}{c}\right) +
+\vec{\beta}\left(\beta^2 - 1 - \frac{\vec{R}\cdot\dot{\vec{\beta}}}{c}\right)- 
+\frac{RK}{c}\dot{\vec{\beta}}\right]
+\]
+so that
+\[
+\un_s \times \vec{E} = \frac{q}{R^2K^3}\left[
+\left(\beta^2 - 1 - \frac{\vec{R}\cdot\dot{\vec{\beta}}}{c}\right)
+(\un\times\vec{\beta}) - \frac{RK}{c}(\un\times\dot{\vec{\beta}})\right].
+\]
+Comparing this with \eqref{c8e42} gives
+\begin{equation}\label{c8e43}
+\vec{H} = \un_s \times \vec{E}.
+\end{equation}
 \end{enumerate}

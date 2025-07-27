@@ -92,25 +92,30 @@ look like the potential due to a the charge at the origin. If we write
 \end{equation}
 then
 \begin{equation}\label{c8e11}
-\phi(r, t) = \frac{\delta q (t - r/c)}{r}.
+\phi(\vec{r}, t) = \frac{\delta q (t - r/c)}{r}.
 \end{equation}
 so that the contribution due to all charges is
 \begin{equation}\label{c8e12}
-\phi(r, t)=\int \frac{1}{r}\rho\left(\vec{r}^\op, t - \frac{r}{c}\right)dv^\op.
+\phi(\vec{r}, t)=
+\int \frac{1}{r}\rho\left(\vec{r}^\op, t - \frac{r}{c}\right)dv^\op.
 \end{equation}
 This is the particular integral of \eqref{c8e3}. The potential at the field 
 point $\vec{r}$ at a time $t$ depends on the source at $\vec{r}$ as it was at 
-a time $t - r/c$. The general solution of \eqref{c8e3} is
+a time $t - r/c$. So far we assumed that the sources are at the origin. If they
+are not then the potential at $\vec{r}$ at time $t$ will depend on the sources
+at $\vec{R} = \vec{r} - \vec{r}^\op$ at time $t_r$ given by $t_r + R/c = t_r$. 
+The general solution of \eqref{c8e3} is
 \begin{equation}\label{c8e13}
-\phi(r, t) = \int\frac{1}{r}\rho\left(\vec{r}^\op, t - \frac{r}{c}\right)dv^\op
+\phi(\vec{r}, t) = 
+\int\frac{1}{r}\rho\left(\vec{r}^\op, t - \frac{R}{c}\right)dv^\op
  + \phi_0(r, t),
 \end{equation}
 where $\phi_0(r, t)$ is the solution of the homogeneous equation and represents
 the contribution of the `external' charges and currents. The complete solution 
 of equation \eqref{c8e4} is, likewise,
 \begin{equation}\label{c8e14}
-\vec{A}(r, t) = 
-\int\frac{1}{r}\vec{J}\left(\vec{r}^\op, t - \frac{r}{c}\right)dv^\op
+\vec{A}(\vec{r}, t) = 
+\int\frac{1}{r}\vec{J}\left(\vec{r}^\op, t - \frac{R}{c}\right)dv^\op
  + \vec{A}_0(r, t).
 \end{equation}
 
@@ -478,4 +483,14 @@ Comparing this with \eqref{c8e42} gives
 \begin{equation}\label{c8e43}
 \vec{H} = \un_s \times \vec{E}.
 \end{equation}
+
+\item Of the two terms in \eqref{c8e41}, the first term depends on velocity
+and the second one on acceleration. For large $R$, the first term vanishes as
+$1/R^2$ while the second one as $1/R$. We will see in the next chapter that the
+second one is related to radiation by accelerated charges. 
+
+\item I did not find anything noteworthy in the section on the spectral
+resolution of the retarded potentials.
+
+\item
 \end{enumerate}

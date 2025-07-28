@@ -32,7 +32,7 @@ Since
 \]
 equations \eqref{c8e1} and \eqref{c8e2} are equivalent to
 \begin{eqnarray}
-\nabla^2\phi - \frac{1}{c^2}\spdt{\phi}{t} &=& -4\pi\rho \label{c8e3} \\
+\nabla^2\varphi - \frac{1}{c^2}\spdt{\varphi}{t} &=& -4\pi\rho \label{c8e3} \\
 \nabla^2\vec{A} - \frac{1}{c^2}\spdt{\vec{A}}{t} &=& 
 -\frac{4\pi}{c}\vec{J}. \label{c8e4}
 \end{eqnarray}
@@ -58,16 +58,17 @@ as
 Recall that the dimension of the delta function of a 3-vector is $L^{-3}$. Upon
 substitution in \eqref{c8e3} we get
 \[
-\nabla^2\phi - \frac{1}{c^2}\spdt{\phi}{t} = -4\pi q\delta(\vec{r}).
+\nabla^2\varphi - \frac{1}{c^2}\spdt{\varphi}{t} = -4\pi q\delta(\vec{r}).
 \]
 Outside the small region surrounding the origin, this equation is 
 \[
-\nabla^2\phi - \frac{1}{c^2}\spdt{\phi}{t} = 0
+\nabla^2\varphi - \frac{1}{c^2}\spdt{\varphi}{t} = 0
 \]
-and the field $\phi$ is produced because of charge at the origin. The field is
-spherically symmetric and hence $\phi$ is a function of $r$ and $t$ alone. If
+and the field $\varphi$ is produced because of charge at the origin. The field 
+is spherically symmetric and hence $\varphi$ is a function of $r$ and $t$ alone. 
+If
 \begin{equation}\label{c8e6}
-\phi(r, t) = \frac{\chi(r, t)}{r}
+\varphi(r, t) = \frac{\chi(r, t)}{r}
 \end{equation}
 then, after expressing $\nabla^2$ in spherical polar coordinates, we get
 \begin{equation}\label{c8e7}
@@ -83,20 +84,20 @@ of the source as it would be at a time $t + r/c$ in the future. Since future
 does not determine the present, we choose $f_2$ to be zero and write 
 \eqref{c8e6} as 
 \begin{equation}\label{c8e9}
-\phi(r, t) = \frac{\chi(t - r/c)}{r}.
+\varphi(r, t) = \frac{\chi(t - r/c)}{r}.
 \end{equation}
-We still do not know the form of $\chi$. Very close to the origin, $\phi$ must
-look like the potential due to a the charge at the origin. If we write 
+We still do not know the form of $\chi$. Very close to the origin, $\varphi$ 
+must look like the potential due to a the charge at the origin. If we write 
 \begin{equation}\label{c8e10}
 \delta q = q\delta(\vec{r})
 \end{equation}
 then
 \begin{equation}\label{c8e11}
-\phi(\vec{r}, t) = \frac{\delta q (t - r/c)}{r}.
+\varphi(\vec{r}, t) = \frac{\delta q (t - r/c)}{r}.
 \end{equation}
 so that the contribution due to all charges is
 \begin{equation}\label{c8e12}
-\phi(\vec{r}, t)=
+\varphi(\vec{r}, t)=
 \int \frac{1}{r}\rho\left(\vec{r}^\op, t - \frac{r}{c}\right)dv^\op.
 \end{equation}
 This is the particular integral of \eqref{c8e3}. The potential at the field 
@@ -106,16 +107,16 @@ are not then the potential at $\vec{r}$ at time $t$ will depend on the sources
 at $\vec{R} = \vec{r} - \vec{r}^\op$ at time $t_r$ given by $t_r + R/c = t_r$. 
 The general solution of \eqref{c8e3} is
 \begin{equation}\label{c8e13}
-\phi(\vec{r}, t) = 
-\int\frac{1}{r}\rho\left(\vec{r}^\op, t - \frac{R}{c}\right)dv^\op
- + \phi_0(r, t),
+\varphi(\vec{r}, t) = 
+\int\frac{1}{R}\rho\left(\vec{r}^\op, t - \frac{R}{c}\right)dv^\op
+ + \varphi_0(r, t),
 \end{equation}
-where $\phi_0(r, t)$ is the solution of the homogeneous equation and represents
-the contribution of the `external' charges and currents. The complete solution 
-of equation \eqref{c8e4} is, likewise,
+where $\varphi_0(r, t)$ is the solution of the homogeneous equation and 
+represents the contribution of the `external' charges and currents. The 
+complete solution of equation \eqref{c8e4} is, likewise,
 \begin{equation}\label{c8e14}
 \vec{A}(\vec{r}, t) = 
-\int\frac{1}{r}\vec{J}\left(\vec{r}^\op, t - \frac{R}{c}\right)dv^\op
+\int\frac{1}{R}\vec{J}\left(\vec{r}^\op, t - \frac{R}{c}\right)dv^\op
  + \vec{A}_0(r, t).
 \end{equation}
 
@@ -139,14 +140,14 @@ It is called the \emph{retarded time}.
 In the frame of reference in which the charged particle is at rest at time
 $t_rt$ the potentials at the field point are
 \begin{equation}\label{c8e17}
-\phi(\vec{r}, t) = \frac{q}{R(t_r)}, \vec{A}(\vec{r}, t) = 0.
+\varphi(\vec{r}, t) = \frac{q}{R(t_r)}, \vec{A}(\vec{r}, t) = 0.
 \end{equation}
 Note that we are not saying $t = t_r$. In this frame, we can only calculate the
 potential at the field point at a future time $t = t_r + R(t_r)/c$.
 
 Using \eqref{c8e16} we can write $R(t_r)$ as
 \begin{equation}\label{c8e18}
-\phi(\vec{r}, t) = \frac{q}{c(t - t_r)}=q\frac{\gamma c}{c(t - t_r)(\gamma c)}.
+\varphi(\vec{r}, t)=\frac{q}{c(t - t_r)}=q\frac{\gamma c}{c(t - t_r)(\gamma c)}.
 \end{equation}
 The purpose for the $\gamma c$ factor in numerator and denominator is to give
 us the hint that the expression $v^\mu/(R_\mu v^\mu)$ will be the correct
@@ -172,13 +173,13 @@ R_\mu v^\mu = \gamma(c^2(t - t_r) - \vec{R}\cdot\vec{v}) = \gamma c(c(t-t_r)
 \]
 we can write \eqref{c8e18} in the more familiar form
 \begin{eqnarray}
-\phi(\vec{r}, t) &=& \frac{q}{R - \vec{R}\cdot\vec{\beta}} \label{c8e22} \\
+\varphi(\vec{r}, t) &=& \frac{q}{R - \vec{R}\cdot\vec{\beta}} \label{c8e22} \\
 \vec{A}(\vec{r}, t) &=& \frac{q\vec{\beta}}{R - \vec{R}\cdot\vec{\beta}}.
 \label{c8e23}
 \end{eqnarray}
 We also note that
 \begin{equation}\label{c8e24}
-\vec{A}(\vec{r}, t) = \vec{\beta}\phi(\vec{r}, t).
+\vec{A}(\vec{r}, t) = \vec{\beta}\varphi(\vec{r}, t).
 \end{equation}
 The quantities $R$ and $\vec{\beta}$ on the rhs of \eqref{c8e22} and 
 \eqref{c8e23} are calculated at time $t_r$. The potential in \eqref{c8e19} and
@@ -301,21 +302,21 @@ to $t_r$ then $\vec{a} = \dot{\vec{v}} = \dot{\vec{\beta}}/c.$
 
 \item We will test these derivatives by checking whether the Lorenz gauge 
 condition holds good.
-Since $\phi = q/S$,
+Since $\varphi = q/S$,
 \[
-\pdt{\phi}{t} = \frac{1}{K}\pdt{\phi}{t_r} = -\frac{q}{KS^2}\pdt{S}{t_r}
+\pdt{\varphi}{t} = \frac{1}{K}\pdt{\varphi}{t_r} = -\frac{q}{KS^2}\pdt{S}{t_r}
 = -\frac{q}{KS^2}\left(\pdt{R}{t_r} - \vec{R}\cdot\pdt{\vec{\beta}}{t_r} - 
 \pdt{\vec{R}}{t_r}\cdot\vec{\beta}\right)
 \]
 Substituting for the derivatives,
 \[
-\pdt{\phi}{t} = -\frac{q}{R^2K^3}\left(-\vec{n}_s\cdot\vec{v} - 
+\pdt{\varphi}{t} = -\frac{q}{R^2K^3}\left(-\vec{n}_s\cdot\vec{v} - 
 \frac{\vec{R}\cdot\vec{a}}{c} + \vec{v}\cdot\vec{\beta}\right)
 \]
 and hence
 \begin{equation}\label{c8e33}
-\frac{1}{c}\pdt{\phi}{t} = -\frac{q}{R^2K^3}\left(-\vec{n}_s\cdot\vec{\beta} +
-\beta^2 - \frac{\vec{R}\cdot\dot{\vec{\beta}}}{c}\right).
+\frac{1}{c}\pdt{\varphi}{t} = -\frac{q}{R^2K^3}\left(-\vec{n}_s\cdot\vec{\beta}
++ \beta^2 - \frac{\vec{R}\cdot\dot{\vec{\beta}}}{c}\right).
 \end{equation}
 
 Since $\vec{A} = q\vec{\beta}/S$, 
@@ -390,17 +391,17 @@ or
 \end{equation}
 From equations \eqref{c8e33} and \eqref{c8e38} one confirms that
 \[
-\frac{1}{c}\pdt{\phi}{t} = -\dive\vec{A},
+\frac{1}{c}\pdt{\varphi}{t} = -\dive\vec{A},
 \]
 which is just the Lorenz gauge condition.
 
-\item We next calculate the electric field. Since $\phi = q/S$,
+\item We next calculate the electric field. Since $\varphi = q/S$,
 \[
-\grad\phi = -\frac{q}{S^2}\grad S.
+\grad\varphi = -\frac{q}{S^2}\grad S.
 \]
 From \eqref{c8e37},
 \begin{equation}\label{c8e39}
--\grad\phi = \frac{q}{S^2}\left(\frac{\un_s}{K} - \vec{\beta} + 
+-\grad\varphi = \frac{q}{S^2}\left(\frac{\un_s}{K} - \vec{\beta} + 
 \frac{\vec{R}\cdot\dot{\vec{\beta}}}{cK} - \frac{\un_s}{K}\beta^2\right)
 \end{equation}
 Since $\vec{A} = q\vec{\beta}/S$,
@@ -420,7 +421,8 @@ Using the relations $\vec{R} = R\un_s, K = (1 - \un_s\cdot\vec{\beta}), S = RK$
 we can transform the above equation as
 \begin{eqnarray*}
 \vec{E} &=& \frac{q}{R^2K^3}\left[\frac{\vec{R}}{R} - \frac{\vec{R}\beta^2}{R}
- + \frac{\vec{R}(\vec{R}\cdot\dot{\vec{\beta}})}{Rc} + \beta^2\vec{\beta} - \right.\\
+ + \frac{\vec{R}(\vec{R}\cdot\dot{\vec{\beta}})}{Rc} 
+ + \beta^2\vec{\beta} - \right.\\
  & & \left.\frac{(\vec{R}\cdot\vec{\beta})\vec{\beta}}{R} - 
      \frac{(\vec{R}\cdot\dot{\vec{\beta}})\vec{\beta}}{c} - 
      \frac{(R - \vec{R}\cdot\vec{\beta})\vec{\beta}}{R} - 
@@ -443,7 +445,7 @@ to get
 \frac{\vec{R}\times(\dot{\vec{\beta}}\times\vec{\beta})}{c}\right]
 \]
 so that we finally get
-\begin{equation}
+\begin{equation}\label{c8e41}
 \vec{E} = \frac{q}{R^2K^3}\left\{\frac{(1-\beta^2)(\vec{R}-\vec{\beta}R)}{R} +
 \frac{\vec{R}\times[(\vec{R} - \vec{\beta}R)\times\dot{\vec{\beta}}]}{Rc}
 \right\}
@@ -492,5 +494,85 @@ second one is related to radiation by accelerated charges.
 \item I did not find anything noteworthy in the section on the spectral
 resolution of the retarded potentials.
 
-\item
+\item In classical mechanics, the Lagrangian of a system of particles is a 
+function of the positions and velocities of the particles. This form implicity
+assumes that the change in the position and velocity of one particle affects 
+all others instantaneously. Therefore, this form of the Lagrangian is not fully
+correct in the classical theory of fields. The Lagrangian must include at the
+degrees of freedom of the field as well.
+
+\item We will develop a fully rigorous classical Lagrangian later. For now, we
+will enchance the form we wrote in classical mechanics to include 
+electromagnetic interactions when the particles move at speeds small as compared
+to $c$. The Lagrangian for a charged particle in an electromagnetic field 
+described by $A^\mu = (\varphi, \vec{A})$ is given by \eqref{c3e6} as 
+\[
+L = mc^2\sqrt{1 - \beta^2} - q\varphi - \frac{q}{c}\vec{A}\cdot\vec{v}.
+\]
+In an assembly of charged particles, the Lagrangian of a single particle with
+charge $q_a$ due to all others is of the same form,
+\begin{equation}\label{c8e44}
+L_a = m_ac^2\sqrt{1 - \beta_a^2} - q_a\varphi - 
+\frac{q_a}{c}\vec{A}\cdot\vec{v_a}.
+\end{equation}
+Let us assume that there are no `external' charges and currents so that we can
+drop the second term on the rhs of \eqref{c8e13} and \eqref{c8e14} and hence
+\begin{eqnarray*}
+\varphi(\vec{r}, t) &=& \int\frac{1}{R}\rho
+\left(\vec{r}^\op, t - \frac{R}{c}\right)dV^\op \\
+\vec{A}(\vec{r}, t) &=& \int\frac{1}{R}\vec{J}
+\left(\vec{r}^\op, t - \frac{R}{c}\right)dV^\op 
+\end{eqnarray*}
+If the speed of particles is small as compared to $c$, they do not move 
+significantly in the it takes for light to travel from their position to where
+$q_a$ is. We, therefore, expand the integrands in the above equations about
+$t$ and ignore terms in cubic and higher powers in $1/c$. Starting with the
+scalar potential,
+\[
+\rho\left(\vec{r}^\op, t - \frac{R}{c}\right) = \rho(\vec{r}^\op) -
+\frac{R}{c}\pdt{\rho}{t} + \frac{R^2}{c^2}\spdt{\rho}{t}
+\]
+so that
+\begin{eqnarray*}
+\varphi(\vec{r}, t) &=& \int\frac{\rho(\vec{r}^\op)}{R}dV^\op - \frac{1}{c}
+\frac{\partial}{\partial t}\int\rho(\vec{r}^\op)dV^\op + \frac{1}{c^2}
+\frac{\partial^2}{\partial t^2}\int R\rho(\vec{r}^\op)dV^\op \\
+\vec{A}(\vec{r}, t) &=& \frac{1}{c}\int\frac{\vec{J}(\vec{r}^\op)}{R}dV^\op - 
+\frac{1}{c^2}\frac{\partial}{\partial t}\int\vec{J}(\vec{r}^\op)dV^\op 
+\end{eqnarray*}
+Because of the overall factor $1/c$ in the expression for $\vec{A}$ we do not
+go beyond the first derivative term on the rhs. For a localised charge 
+distribution,
+\[
+\int\rho(\vec{r}^\op)dV^\op
+\]
+is the total charge. Since it is a constant, its time derivative is zero. As
+a result, the second term in the rhs of $\varphi$ vanishes. This also means that
+the net current in the region where the charges are is zero. That is,
+\[
+\int\vec{J}(\vec{r}^\op)dV^\op = 0.
+\]
+The expressions for the potentials simplify to
+\begin{eqnarray}
+\varphi(\vec{r}, t) &=& \int\frac{\rho(\vec{r}^\op)}{R}dV^\op + \frac{1}{c^2}
+\frac{\partial^2}{\partial t^2}\int R\rho(\vec{r}^\op)dV^\op \label{c8e45} \\
+\vec{A}(\vec{r}, t) &=& \frac{1}{c}\int\frac{\vec{J}(\vec{r}^\op)}{R}dV^\op
+\label{c8e46}
+\end{eqnarray}
+For a point charge, these expressions become
+\begin{eqnarray}
+\varphi(\vec{r}, t) &=& \frac{q}{R} + \frac{q}{2c^2}\spdt{R}{t} \label{c8e47}\\
+\vec{A}(\vec{r}, t) &=& \frac{q\vec{v}}{cR} \label{c8e48}
+\end{eqnarray}
+Introducing a gauge function
+\begin{equation}\label{c8e49}
+f = \frac{q}{2c}\pdt{R}{t},
+\end{equation}
+the potentials in \eqref{c8e47} and \eqref{c8e48} are equivalent to
+\begin{eqnarray}
+\varphi^\op &=& \varphi - \frac{1}{c}\pdt{f}{t} = \frac{q}{R} \label{c8e50} \\
+\vec{A}^\op &=& \vec{A} - \grad{f} = \frac{q\vec{v}}{cR} + \frac{q}{2c}\grad
+\pdt{R}{t} \label{c8e51}
+\end{eqnarray}
+
 \end{enumerate}

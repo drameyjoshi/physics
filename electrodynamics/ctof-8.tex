@@ -575,4 +575,74 @@ the potentials in \eqref{c8e47} and \eqref{c8e48} are equivalent to
 \pdt{R}{t} \label{c8e51}
 \end{eqnarray}
 
+Since
+\[
+\grad\pdt{R}{t} = \frac{\partial}{\partial t}\grad{R},
+\]
+we will start with evaluating $\grad R$. Recall that $\vec{R} = \vec{r} - 
+\vec{r}^\op$ so that $R = |\vec{r} - \vec{r}^\op|$ and
+\[
+\grad R = \hat{e}_i\frac{\partial}{\partial x_i}
+\sqrt{\sum_{j=1}^3(x_j - x_j^\op)^2} = 
+\frac{\hat{e}_i}{2R}2(x_j-x_j^\op)\delta_{ij} = \frac{\vec{R}}{R} = \un,
+\]
+where $\un$ is the unit vector from the source point to the field point. Its
+partial derivatibe with respect to time is
+\[
+\pdt{\un}{t} = \frac{\dot{\vec{R}}}{R} - \frac{\vec{R}\dot{R}}{R^2}.
+\]
+Note that the field point is fixed. $\vec{R}$ changes because the source point
+moves. Therefore, $-\dot{\vec{R}}$ is the velocity $\vec{v}$ of the source 
+point. Further more, since $R^2 = \vec{R}\cdot\vec{R}$, $2R\dot{R} = 2\vec{R}
+\cdot\dot{\vec{R}}$ or $R\dot{R} = -\vec{R}\cdot\vec{v}$ so that
+\begin{equation}\label{c8e52}
+\pdt{\un}{t} = -\frac{\vec{v}}{R} + \frac{\vec{R}}{R^3}(\vec{R}\cdot\vec{v})
+= \frac{\un(\un\cdot\vec{v}) - \vec{v}}{R}
+\end{equation}
+Therefore, \eqref{c8e51} can be written as
+\begin{equation}\label{c8e53}
+\vec{A}^\op = q\frac{\vec{v} + \un(\un\cdot\vec{v})}{2cR}.
+\end{equation}
+
+\item In an assembly of charges, the potentials felt by the charge $q_a$ are
+\begin{eqnarray*}
+\phi &=& \sum_{b \ne a} \frac{q_b}{R_{ab}} \\
+\vec{A}&=&\sum_{b \ne a} 
+q_b\frac{\vec{v}_b+\un_{ab}(\un_{ab}\cdot\vec{v}_b)}{2cR_{ab}}
+\end{eqnarray*}
+The Lagrangian \eqref{c8e41} becomes
+\[
+L_a = -m_ac^2\sqrt{1 - \beta_a^2} - \sum_{b \ne a}\frac{q_aq_b}{R_{ab}} - 
+\sum_{b \ne a} \frac{q_aq_b}{2c^2R_{ab}}(\vec{v}_a\cdot\vec{v}_b + 
+(\un_{ab}\cdot\vec{v}_a) (\un_{ab}\cdot\vec{v}_b))
+\]
+Up to quadratic order in $v/c$, the Lagrangian is
+\begin{equation}\label{c8e54}
+L_a = \frac{m_av_a^2}{2}+\frac{m_av_a^4}{8c^2}-\sum_{b \ne a}\frac{q_aq_b}{R_{ab}}- 
+\sum_{b \ne a} \frac{q_aq_b}{2c^2R_{ab}}(\vec{v}_a\cdot\vec{v}_b + 
+(\un_{ab}\cdot\vec{v}_a)(\un_{ab}\cdot\vec{v}_b))
+\end{equation}
+where we ignored the constant term $m_ac^2$. The Lagrangian for the entire 
+assembly is
+\begin{eqnarray*}
+L &=& \sum_a\frac{m_av_a^2}{2} + \sum_a\frac{m_av_a^4}{8c^2} - \nonumber \\
+ & & \sum_{ab, b \ne a}\frac{q_aq_b}{2R_{ab}} -  
+\sum_{ab, b \ne a} \frac{q_aq_b}{4c^2R_{ab}}(\vec{v}_a\cdot\vec{v}_b + 
+(\un_{ab}\cdot\vec{v}_a)(\un_{ab}\cdot\vec{v}_b)).\label{c8e55}
+\end{eqnarray*}
+We introduced a factor of $1/2$ in the sums over $a$ and $b$ to avoid double
+counting. Thus, the Lagrangian of the entire system is not the sum of the 
+Lagrangians of the individual particles. The expression of \eqref{c8e55} is 
+called the Darwin Lagrangian.
+
+\item The Hamiltonian of the system is
+\begin{eqnarray*}
+H &=& \sum_a\frac{p_a^2}{2m_a} + \sum_a\frac{p_a^4}{8c^2m_a^3} - \nonumber \\
+ & & \sum_{ab, b \ne a}\frac{q_aq_b}{2R_{ab}} -  
+\sum_{ab, b \ne a} \frac{q_aq_b}{4c^2m_am_bR_{ab}}(\vec{p}_a\cdot\vec{p}_b + 
+(\un_{ab}\cdot\vec{p_a})(\un_{ab}\cdot\vec{p_b})).\label{c8e55}
+\end{eqnarray*}
+Since the Hamiltonian of the assembly is not the sum of Hamiltonians of the
+constituent particles, the system is not extensive and the usual techniques of
+thermodynamics cannot be applied without due care.
 \end{enumerate}
